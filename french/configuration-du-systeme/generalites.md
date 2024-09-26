@@ -38,7 +38,7 @@ Choix de la disposition du clavier virtuel parmis QWERTY, QWERTZ et AZERTY.
 
 #### Luminosité
 
-Ajustement de la luminosité de l'écran en utilisant le curser. Les options sont accessibles par un appui long sur le champ ou sur [Enter] lorsque le champ est en surbrillance. 3 choix possibles pour les réglages de luminosité : minimum / maximun ou une source ( pot / curseur ).
+Ajustement de la luminosité de l'écran en utilisant le curseur. Les options sont accessibles par un appui long sur le champ ou sur [Enter] lorsque le champ est en surbrillance. 3 choix possibles pour les réglages de luminosité : minimum / maximun ou une source ( pot / curseur ).
 
 NB: si Luminosité (pour le rétroéclairage activé) = « Luminosité veille » (pour le rétroéclairage désactivé), l'écran tactile reste actif.
 
@@ -110,7 +110,7 @@ Les fichiers correspondants se trouvent dans les dossiers suivants :
 
 Fichiers audio de l'utilisateur
 
-Les fichiers audios de l'utilisateur proposés par la fonction spéciale « Lire séquence » doivent être stockés dans les répertoires suivants :
+Les fichiers audios de l'utilisateur proposés par la fonction spéciale « Lire audio » doivent être stockés dans les répertoires suivants :
 
 * /audio/fr/femme pour la voix "femme"
 * /audio/fr/homme pour la voix "homme"
