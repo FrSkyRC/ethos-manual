@@ -61,7 +61,7 @@
     * [Étape 3. Créez un nouveau modèle](Tutoriels-de-programmation/Exemple-d-helicoptere-flybarless-basique/Etape-3-Creez-un-nouveau-modele.md)
     * [Étape 4. Examiner et configurer les mixages](Tutoriels-de-programmation/Exemple-d-helicoptere-flybarless-basique/Etape-4-Examiner-et-configurer-les-mixages.md)
     * [Étape 5. Configuration FBL](Tutoriels-de-programmation/Exemple-d-helicoptere-flybarless-basique/Etape-5-Configuration-FBL.md)
-  * [Section « Comment faire »](Tutoriels-de-programmation/Section-Comment-faire.md)
+  * [Section « Comment faire »](Tutoriels-de-programmation/Section-Comment-faire/Section-Comment-faire.md)
     * [1. Comment configurer un avertissement de tension de batterie](Tutoriels-de-programmation/Section-Comment-faire/1-Comment-configurer-un-avertissement-de-tension-de-batterie-faible.md)
     * [2. Comment configurer un avertissement de capacité de batterie à l'aide d'un ESC Neuron](Tutoriels-de-programmation/Section-Comment-faire/2-Comment-configurer-un-avertissement-de-capacite-de-batterie-à-l'aide-d'un-ESC-Neuron.md)
     * [3. Comment configurer un avertissement de capacité de batterie à l'aide d'un capteur calculé](Tutoriels-de-programmation/Section-Comment-faire/3-Comment-configurer-un-avertissement-de-capacite-de-batterie-à-l'aide-d'un-capteur-calcule.md)
