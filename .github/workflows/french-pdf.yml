@@ -33,14 +33,15 @@ jobs:
         fc-cache -fv
 
     - name: Build the PDF
-      run: python ./french/forge/pdf.py
+      run: python ./forge/pdf.py
+      working-directory: ./french
 
     - name: Upload to release
       uses: xresloader/upload-to-github-release@v1.6.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-          file: ./ethos-french-manual.pdf
+          file: ./french/ethos-french-manual.pdf
           update_latest_release: true
           overwrite: true
     
