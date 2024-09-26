@@ -7,7 +7,7 @@ Réécriture en cours du manuel, avec pour objectifs :
 * une fabrication automatique du PDF à chaque ajout / correction
 
 Lien vers la doc en ligne :
-[Manuel en français de Ethos](https://ethos-5.gitbook.io/manuel-en-francais-de-ethos)
+[Manuel en français Ethos](https://frsky-rc.gitbook.io/manuel-francais-ethos)
 
 Lien vers la doc PDF :
-[Manuel en français de Ethos](https://github.com/bsongis/ethos-french-manual/releases/download/1.5.12/ethos-french-manual.pdf)
+[Manuel en français Ethos](https://github.com/frsky-rc/ethos-manual/releases/download/1.5.12/ethos-french-manual.pdf)
