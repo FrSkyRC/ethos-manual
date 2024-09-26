@@ -33,7 +33,7 @@ jobs:
         fc-cache -fv
 
     - name: Build the PDF
-      run: python ./forge/pdf.py
+      run: python forge/pdf.py
       working-directory: ./french
 
     - name: Upload to release
