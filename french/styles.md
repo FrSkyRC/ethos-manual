@@ -1,5 +1,5 @@
 ---
-title: Manuel français de Ethos 1.5.12
+title: Manuel français de Ethos 1.5.15
 subtitle: Traduction de la doc anglaise écrite par Lothar Thole
 lang: fr
 tags: [FrSky, Ethos]
