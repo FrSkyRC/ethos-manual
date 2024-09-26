@@ -6,7 +6,7 @@
 
 ### Tension radio
 
-La « Tensio radio » affiche la tension actuelle de la batterie. Cette valeur peut-être étalonnée en cas d'écart constaté avec un multimètre. L'appui du le champ correspondant permet le réglage. La batterie LIPO 2S de la radio chargée sera de l'ordre de 8,4V.
+La « Tension radio » affiche la tension actuelle de la batterie. Cette valeur peut-être étalonnée en cas d'écart constaté avec un multimètre. L'appui du le champ correspondant permet le réglage. La batterie LIPO 2S de la radio chargée sera de l'ordre de 8,4V.
 
 ### Alerte tension basse
 
