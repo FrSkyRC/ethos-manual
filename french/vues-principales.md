@@ -4,13 +4,13 @@ Ethos permet à l'utilisateur une grande flexibilité dans l'affichage de diffé
 
 Les vues principales partagent normalement les barres supérieure et inférieure, mais d'autres options sont possibles, voire même configurables par l'utilisateur. Reportez vous à la section Configurer les écrans pour plus de détails sur la configuration des affichages et la programmation LUA.
 
-![Exemple de vue principale](assets/mainview.png)
+![Exemple de vue principale](./assets/mainview.png)
 
 ## La barre supérieure
 
 La barre supérieure affiche le nom du modèle sur la gauche, ainsi que la phase de vol active si les phases de vol sont utilisées.
 
-![Barre supérieure](assets/topbar.png)
+![Barre supérieure](./assets/topbar.png)
 
 Sur la droite se trouvent des icônes pour :
 
@@ -36,7 +36,7 @@ Les détails relatifs à l'avertissement sont affichés dans la page Système / 
 
 ## La barre inférieure
 
-![Barre inférieure](assets/bottombar.png)
+![Barre inférieure](./assets/bottombar.png)
 
 La barre inférieure comporte quatre icones pour accéder aux fonctions suivantes, de gauche à droite :&#x20;
 
