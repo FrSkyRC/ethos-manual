@@ -1,6 +1,10 @@
-name: PDF Generation
+name: French PDF generation
 
-on: [workflow_dispatch, push]
+on: 
+  workflow_dispatch:
+  push:
+      paths:
+        - french/**
 
 jobs:
   build:
@@ -25,11 +29,11 @@ jobs:
     - name: Install needed fonts
       run: |
         mkdir $HOME/.fonts
-        cp ./forge/fonts/* $HOME/.fonts/
+        cp ./french/forge/fonts/* $HOME/.fonts/
         fc-cache -fv
 
     - name: Build the PDF
-      run: python ./forge/pdf.py
+      run: python ./french/forge/pdf.py
 
     - name: Upload to release
       uses: xresloader/upload-to-github-release@v1.6.0
