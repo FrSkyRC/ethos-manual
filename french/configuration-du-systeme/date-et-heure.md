@@ -14,7 +14,7 @@ Affichage des secondes de l'heure lorsque l'option est activée.
 
 ### Date
 
-Réglage de la date du jour. Sauvegardée grâce à l'horloge temps réél interne (RTC). La date sera utilisée lors de la création des enregistrements des données.
+Réglage de la date du jour. Sauvegardée grâce à l'horloge temps réél interne (RTC). La date sera utilisée lors des enregistrements des données.
 
 ### Heure
 
