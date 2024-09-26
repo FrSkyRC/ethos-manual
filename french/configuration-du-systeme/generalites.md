@@ -1,23 +1,22 @@
-## Généralités
+## Général
 
-![Icône Général](../.gitbook/assets/system-icon-general.png)
-![Paramètres généraux](../.gitbook/assets/system-general.png)
+![Icône Général](../assets/system-icon-general.png)
 
 Les éléments suivants peuvent être configurés ici :
 
-* Attributs de l'écran LCD
+* Affichage
 * Les paramètres audio
 * Les réglages vario
-* Les paramètres de retour haptique
+* Les paramètres de retour vibreur
 * La barre d'outils supérieure
 
-**Attributs d'affichage**
+### Affichage
 
-Les attributs de l'écran LCD peuvent être configurés ici.
+![Paramètres d'affichage](../assets/system-general.png)
 
-**Langue**
+#### Langue
 
-Les langues suivantes sont prises en charge pour les menus d'affichage :
+Les langues suivantes sont prises en charge pour les menus de la radio :
 
 * English
 * 中文
@@ -25,7 +24,7 @@ Les langues suivantes sont prises en charge pour les menus d'affichage :
 * Deutsch
 * Español
 * Français
-* עִברִית
+* עִברִי*
 * Italiano
 * Nederlands
 * Norsk
@@ -33,276 +32,186 @@ Les langues suivantes sont prises en charge pour les menus d'affichage :
 * Polish
 * Português
 
-**Clavier**
+#### Clavier
 
-Permet de choisir entre les dispositions de clavier virtuel QWERTY, QWERTZ et AZERTY.
+Choix de la disposition du clavier virtuel parmis QWERTY, QWERTZ et AZERTY.
 
-**Luminosité**
+#### Luminosité
 
-Utilisez le curseur pour contrôler la luminosité de l'écran, de gauche à droite pour régler la luminosité de sombre à clair. Appuyez longuement sur \[ENT\] pour afficher les options permettant d'utiliser une source ou de la régler au minimum ou au maximum.
+Ajustement de la luminosité de l'écran en utilisant le curser. Les options sont accessibles par un appui long sur le champ ou sur [Enter] lorsque le champ est en surbrillance. 3 choix possibles pour les réglages de luminosité : minimum / maximun ou une source ( pot / curseur ).
 
-Veuillez noter que si Luminosité (pour le rétroéclairage activé) = « Luminosité du mode veille » (pour le rétroéclairage désactivé), l'écran tactile reste actif.
+NB: si Luminosité (pour le rétroéclairage activé) = « Luminosité veille » (pour le rétroéclairage désactivé), l'écran tactile reste actif.
 
-**Option potentiomètre**
+Exemple pour l'utilisation d'un potentiomètre pour régler la luminosité de l'écran :
 
-![Menu pour la luminosité](../.gitbook/assets/system-general-brightness-menu.png)
+![Menu pour la luminosité](../assets/system-general-brightness-menu.png)
 
-Appuyez sur « Utiliser une source », puis sélectionnez un potentiomètre à utiliser comme contrôle de la luminosité.
+Appuyez sur « Utilisation source », puis sélectionnez un potentiomètre à utiliser comme contrôle de la luminosité.
 
-![Utilisation d'un potentiomètre pour la luminosité](../.gitbook/assets/system-general-brightness-slider.png)
+![Utilisation d'un potentiomètre pour la luminosité](../assets/system-general-brightness-slider.png)
 
 L'exemple ci-dessus montre que la luminosité est contrôlée via le potentiomètre sur le côté droit de la radio.
 
-**Mise en veille**
+#### Activation (de l'écran après la mise en veille)
 
-![Options de mise en veille](../.gitbook/assets/system-general-sleep.png)
+![Activation de la mise en veille](../assets/system-general-sleep.png)
 
-Le rétroéclairage de l'écran peut être réveillé de l'état de veille conformément à une ou plusieurs des options suivantes :
+L'activation de l'écran suite à la mise en veille est possible selon les options ci-dessous :
 
-_**Toujours**_
+* Toujours : pas de mise en veille.
+* Manches : activation lors d'action sur un manche ou une touche.
+* Inters : activation lors d'action sur un inter ou une touche.
+* Gyro : activation lors d'utilisation du gyro de la radio ( inclinaison ) ou action sur une touche.
 
-Le rétroéclairage reste allumé en permanence.
+NB : plusieurs options peuvent être sélectionnées simultanément.
 
-_**Manches**_
+#### Mise en veille
 
-Le rétroéclairage s'allume lorsque vous actionnez des manches ou des touches.
+Durée d'inactivité avant la mise en veille de l'écran. Si « Toujours » est activé dans les options activation, ce paramètre n'est pas modifiable.
 
-_**Inters**_
+#### Luminosité veille
 
-Le rétroéclairage s'allume lorsque des interrupteurs ou des touches sont actionnés.
+![Luminosité en veille](../assets/system-general-sleep-brightness.png)
 
-**Gyro**
+Ajustement de la luminosité de l'écran en mode veille. Les options sont identiques au règlages de luminosité en début de chapitre.
 
-Le rétroéclairage s'allume lorsque vous inclinez la radio ou lorsque vous actionnez les touches.
+NB : Luminosité (pour le rétroéclairage activé) = « Luminosité du mode veille » (pour le rétroéclairage désactivé), l'écran tactile reste actif.
 
-Notez que plusieurs options peuvent être activées.
+#### Mode sombre
 
-_**Veille**_
+Choix entre les modes clair ou sombre de l'affichage.
 
-Durée d'inactivité avant la désactivation du rétroéclairage. Lorsque vous sélectionnez « Toujours » comme option d'affichage « Réveil », l'option Veille est grisée.
+#### Couleur de surbrillance
 
-**Luminosité du mode veille**
+Choix de la couleur de surbrillance des champs sélectionnés. La valeur par défaut est jaune (#F8B038).
 
-![Luminosité en veille](../.gitbook/assets/system-general-sleep-brightness.png)
+### Emplacement de stockage (X18(S), XE(S) et X20 Pro/R/RS)
 
-Utilisez le curseur pour contrôler la luminosité de l'écran en mode veille, de gauche à droite pour régler la luminosité de sombre à clair.
+![Emplacement stockage](../assets/system-general-storage.png)
 
-Veuillez noter que si Luminosité (pour le rétroéclairage activé) = « Luminosité du mode veille » (pour le rétroéclairage désactivé), l'écran tactile reste actif.
+Les radios X18(S), XE(S) et X20 Pro/R/RS disposent d'une carte eMMC (MultiMediaCard intégrée) de 8 Go qui est un périphérique de stockage composé d'une mémoire flash NAND et d'un simple contrôleur de stockage. Le système ETHOS sélectionne par défaut le stockage eMMC (Radio), ce qui rend l'utilisation de la carte SD facultative. Cependant, l'utilisateur peut choisir d'utiliser une carte SD pour l'un ou l'autre des répertoires utilisateurs.
 
-_**Mode sombre**_
+Si le choix se porte sur l'utilisaton de la carte SD, tous les fichiers et dossiers copiés sur la carte SD avant d'effectuer la sélection. Il en va de même pour l'audio et les bitmaps.
 
-Permet de choisir entre les modes clair et sombre pour l'affichage.
+### Audio
 
-**Couleur de surbrillance**
+![Audio](../assets/system-general-audio.png)
 
-Permet de sélectionner la couleur de surbrillance à utiliser dans l'affichage. La valeur par défaut est jaune (#F8B038).
+Un choix de 3 voix est à votre disposition, une voix principale et deux voix secondaires.
 
-**Emplacement de stockage (X18 et X20 Pro/R/RS)**
+La voix "Voix 1 (Princ.)" est la voix principale. Elle est utilisée pour toutes les annonces système Ethos.
 
-![](../.gitbook/assets/6 (2).jpeg)
+Par défaut, pour le français, vous avez le choix entre une voix féminin et une voix masculine. Dans l'exemple ci-dessus, la voix féminine a été sélectionnée comme voix principale.
 
-Les radios X18 et X20 Pro/R/RS disposent d'une carte eMMC (MultiMediaCard intégrée) de 8 Go qui est un périphérique de stockage composé d'une mémoire flash NAND et d'un simple contrôleur de stockage. Le système ETHOS sélectionne par défaut le stockage eMMC, ce qui rend l'utilisation de la carte SD facultative. Cependant, l'utilisateur peut choisir l'utilisation du stockage eMMC ou utiliser une carte SD en option ou une combinaison des deux.
+Les fichiers correspondants se trouvent dans les dossiers suivants :
 
-Veuillez-vous référer à l'écran de sélection de l'emplacement de stockage ci-dessus. Si le système et les modèles sont déplacés vers la carte SD, ces dossiers et fichiers doivent être copiés sur la carte SD avant d'effectuer la sélection. Il en va de même pour l'audio et les bitmaps.
-
-**Paramètres audio**
-
-![](<../.gitbook/assets/7 (1).png>)(fr)
-
-**Langue audio**
-
-Permet de sélectionner la langue des annonces vocales.
-
-**Choix des voix**
-
-La fonction de système multi-voix offre la possibilité de choisir parmi différents ensembles de voix dans une langue donnée.
-
-Voice 1 (main)
-
-La voix principale est utilisée pour toutes les annonces système qui font partie du système d'exploitation Ethos. Par défaut, pour le français, vous avez le choix entre une voix féminin et une voix masculine. Ces packs ne couvrent que les annonces système.
-
-Dans l'exemple ci-dessus, la voix féminine a été sélectionnée comme 'Voix 1 (principale)'.
-
-Les fichiers se trouvent dans les dossiers suivants :
-
-audio/_fr/femme/system_\
-_audio/fr/homme/system_
+* /audio/fr/femme/system pour la voix "femme"
+* /audio/fr/homme/system pour la voix "homme"
 
 Fichiers audio de l'utilisateur
 
-Les fichiers audios de l'utilisateur peuvent être installés pour être utilisés avec la fonction spéciale « Lire audio » (auparavant « Lire la piste » et « Lire la séquence »). Leur emplacement doit être :
+Les fichiers audios de l'utilisateur proposés par la fonction spéciale « Lire séquence » doivent être stockés dans les répertoires suivants :
 
-_Audio/fr/femme_ ou\
-_audio/fr/homme_
+* /audio/fr/femme pour la voix "femme"
+* /audio/fr/homme pour la voix "homme"
 
-Voix 2 et 3
+Des packs de voix alternatives peuvent être installés en tant que "Voix" 2 ou "Voix 3".
 
-Des packs de voix alternatives peuvent être installés en tant que Voice 2 ou 3.
+Pour garantir la sortie vocale appropriée pour "Voix 2" ou "Voix 3", vous devrez ajouter vos fichiers audio personnalisés dans une structure de dossiers similaire à celles standard présentées ci-dessus. Par exemple, si vous utilisiez TTS et une voix appelée Susan, votre structure de dossiers serait la suivante :
 
-Pour garantir la sortie vocale appropriée pour Voice 2 ou 3, vous devrez ajouter vos fichiers audio personnalisés à une structure de dossiers similaire à celles standard présentées ci-dessus sous Voice 1. Par exemple, si vous utilisiez TTS et une voix appelée Susan, votre structure de dossiers serait la suivante :
+* /audio/fr/Susan pour les fichiers audio de l'utilisateur
+* /audio/fr/Susan/system pour les fichiers audio système
 
-_audio/fr/Susan_ pour les fichiers audio de l'utilisateur
+Veuillez noter que chaque voix doit avoir un dossier /system, contenant les fichiers audio nécessaires pour les annonces système et du chrono. Une liste des fichiers audio système fournis en standard est incluse sous forme de fichier .csv avec chaque version audio.
 
-_audio/fr/Susan/système_ pour les fichiers audio du système de remplacement
+Utilisez le curseur de "Volume principal" pour contrôler le volume audio. Un appui long sur \[ENT] permet d'utiliser un potentiomètre (comme pour la luminosité écran). Les bips aident au réglage du volume.
 
-Veuillez noter que chaque voix doit avoir un dossier /system, contenant les fichiers audio nécessaires pour les annonces de la valeur de jeu et de le chrono. Notez qu'une liste des fichiers audio système fournis en standard est incluse sous forme de fichier .csv avec chaque version audio.
+Les modes audio permettent de contrôler quand les annonces seront jouées automatiquement par Ethos :
 
-Vous pouvez ensuite choisir la voix à utiliser pour chaque chrono et la fonction spéciale « Lire audio ». Si vous le souhaitez, vous pouvez attribuer une voix personnalisée en tant que voix 1 (principale) si vous souhaitez remplacer les annonces système par la vôtre.
+![Modes audio](../assets/system-general-audio-modes.png)
 
-Voice par ‘défaut’
+* Silencieux : Pas d'audio. Notez qu'une alerte sera émise au démarrage si la vérification du « mode silencieux » dans Système / Alertes est activée
 
-Pour éviter les problèmes de conversion à partir de la version 1.4.X, une voix par défaut est également installée. Lors de l'installation/de la mise à niveau, si la voix audio du système 1 (voix principale) n'a pas déjà été définie, alors 'Voix 1 (principale)' sera définie sur 'default', car il est certain que le dossier existe.
+* Alarmes uniquement : Seules les alarmes seront jouées
 
-Les fichiers se trouvent dans ce dossier:
+* Par défaut : Les sons sont activés.
 
-a_udio/fr/default/system_
+* Fréquent : Bips d'erreur lors de dépassement des valeurs maximale ou minimale sur les nombres modifiables
 
-Fichiers audios de l'utilisateur
+* Toujours : Bips lors de la navigation en plus des sons du mode « Fréquent ».
 
-Certains fichiers audios personnalisés couramment demandés sont fournis pour être utilisés avec la fonction spéciale « Lire audio » (auparavant « Lire la piste » et « Lire la séquence »). Leur emplacement est :
-
-_audio/fr/default/_
-
-_D'autres fichiers audio utilisateur personnalisés peuvent être ajoutés à ce dossier si l'utilisateur souhaite continuer à utiliser cette voix par défaut._
-
-**Volume principal**
-
-Utilisez le curseur pour contrôler le volume audio. Un appui long sur \[ENT] permet d'utiliser un potentiomètre. Les bips pendant le réglage aident à juger du volume.
-
-**Mode audio**
-
-![](<../.gitbook/assets/8 (1).png>)(fr)
-
-**Silencieux**
-
-Pas d'audio. Notez qu'une alerte sera émise au démarrage si la vérification du « mode silencieux » dans Système / Alertes est activée.
-
-_**Alarmes uniquement**_
-
-Seules les alarmes seront émises sur l'audio.
-
-_**Par défaut**_
-
-Les sons sont activés.
-
-**Fréquent**
-
-Il y aura également des bips d'erreur lorsque vous tenterez de dépasser la valeur maximale ou minimale sur les nombres modifiables.
-
-**Toujours**
-
-En plus des sons dans « Souvent », il y aura également des bips lorsque le menu est navigué.
-
-**Bluetooth (X20S/HD/Pro/R/RS)**
+#### Bluetooth (X20S/HD/Pro/R/RS)
 
 Les modèles X20S, HD et X20 Pro/R/RS disposent d'un mode audio supplémentaire pour relayer l'audio vers un appareil Bluetooth comme un casque.
 
-![](<../.gitbook/assets/9 (3).jpeg>)
+![Bluetooth audio](../assets/system-general-audio-bluetooth.png)
 
-Appuyez sur « Rechercher des appareils ».
+Appuyez sur « Chercher périphériques ».
 
-![](<../.gitbook/assets/10 (1).jpeg>)
+![Message d'attente de périphériques](../assets/system-general-audio-bluetooth-searching.png)
 
-Le message « En attente d'appareils » s'affiche. Allumez votre appareil Bluetooth et placez-le en mode d'appairage.
+Le message « En attente périphériques ... » s'affiche. Allumez votre appareil Bluetooth et placez-le en mode d'appairage. Une fois le périphérique Bluetooth trouvé, son nom s'affiche. Sélectionner le périphériqe détecté.
 
-![](<../.gitbook/assets/11 (4).jpeg>)
+![Choix de périphérique Bluetooth](../assets/system-general-audio-bluetooth-device-selected.png)
 
-Une fois le périphérique Bluetooth trouvé, son nom s'affiche. Touchez-le pour sélectionner l'appareil.
+Le message « Connexion en cours » s'affiche.
 
-![](<../.gitbook/assets/12 (4).jpeg>)
+![Message d'attente de l'appareil](../assets/system-general-audio-bluetooth-connecting.png)
 
-Le message « En attente de l'appareil » s'affiche.
+Lorsque la radio et l'appareil sont couplés, le message « Périphérique Bluetooth connecté » s'affiche. Appuyez sur OK.
 
-![](<../.gitbook/assets/13 (3).jpeg>)
+![Appareil Bluetooth connecté](../assets/system-general-audio-bluetooth-connected.png)
 
-Lorsque la radio et l'appareil sont couplés, le message « Appareil Bluetooth connecté » s'affiche. Appuyez sur OK.
-
-![](<../.gitbook/assets/14 (2).jpeg>)
-
-L'écran Bluetooth s'affichera à nouveau.
-
-**Mise en sourdine du haut-parleur**
+#### Couper haut-parleur
 
 Pour couper le son du haut-parleur du système (par exemple lors de l'utilisation d'un écouteur BT), sélectionnez l'option Toujours allumée, ou activée uniquement lorsque la télémétrie est active, ou contrôlée par une source telle qu'un inter ou toute autre condition.
 
-Le système se souvient de l'appareil Bluetooth. Pour un fonctionnement normal, allumez la radio, puis l'appareil Bluetooth. L'appareil Bluetooth se connectera, ce qui prendra quelques secondes pour que la sourdine du haut-parleur s'active à nouveau.
+Le système se souvient du périphérique Bluetooth. Pour un fonctionnement normal, allumez la radio, et ensuite le périphérique Bluetooth. Ce dernier se connectera, ce qui prendra quelques secondes pour que la coupure haut-parleur s'active à nouveau.
 
-**Vario**
+### Vario
 
-![](../.gitbook/assets/15.png)
+![Vario](../assets/system-general-audio-vario.png)
 
-Les caractéristiques audio des tonalités vario peuvent être configurées ici.
+Les caractéristiques audio des tonalités vario peuvent être configurées ici :
 
-_**Volume**_
+* Volume : volume relatif du vario
+* Tonalité zéro : fréquence de la tonalité lorsque le taux de montée est nul
+* Tonalité max : fréquence de la tonalité à la vitesse de montée maximale
+* Répétition : délai entre les bips à la tonalité zéro
 
-Le volume relatif de la tonalité vario.
+Reportez-vous au capteur VSpeed dans Télémétrie et à la fonction spéciale "Vario" pour d'autres paramètres Vario.
 
-_**Tonalité zéro**_
+### Vibreur
 
-La tonalité lorsque le taux de montée est nul.
+![Vibreur](../assets/system-general-haptic.png)
 
-_**Tonalité max**_
+* Intensité: intensité des vibrations.
+* Mode : modes (similaires aux modes audio ci-dessus) 
 
-La tonalité à la vitesse de montée maximale.
+### Barre infos supérieure
 
-_**Répétition**_
+![Barre infos sup.](../assets/system-general-topbar.png)
 
-Le délai entre les bips à la tonalité zéro.
+* Affichage numérique : Choix de l'affichage en mode numérique des infos dans la barre supérieure ( tension radio, etc..).
 
-Reportez-vous au capteur VSpeed dans Télémétrie et à la fonction spéciale Lire vario pour d'autres paramètres Vario.
+* RSSI numérique :  Choix de l'affichage en mode numérique des RSSI 2.4Ghz et 900 Mhz.
 
-**Vibration**
+### Choix modèle au démarrage
 
-![](../.gitbook/assets/16.png)
+![Choix modèle au démarrage](../assets/system-general-model-start.png)
 
-_**Intensité**_
-
-Utilisez le curseur pour contrôler l'intensité des vibrations haptiques.
-
-_**Mode**_
-
-![](<../.gitbook/assets/17 (1).jpeg>)
-
-Similaire au mode audio ci-dessus.
-
-**Barre d'infos sup**
-
-![](<../.gitbook/assets/18 (1).jpeg>)
-
-_**Tension numérique (volts)**_
-
-L'état de la batterie dans la barre d'outils supérieure peut être modifié à partir de l'affichage de la barre par défaut pour afficher la tension de la batterie radio sous forme de valeur numérique à la place.
-
-_**RSSI numérique**_
-
-De même, l'état RSSI peut être modifié d'un affichage à barres à une valeur numérique pour 2,4G et 900M.
-
-**Sélectionnez le modèle à la mise sous tension**
-
-![](<../.gitbook/assets/19 (1).jpeg>)
-
-Lorsque cette option est activée, l'écran de sélection du modèle s'affiche à la mise sous tension, de sorte qu'un modèle peut être choisi avant que les alertes de la liste de contrôle du modèle précédemment sélectionné ne s'affichent. Cela évite d'avoir à annuler les alertes de la liste de contrôle avant de sélectionner un autre modèle.
+Le choix du modèle au démarrage peut-être systématisé à chaque mise en route de la radio. L'écran de sélection du modèle s'affiche à la mise sous tension, de sorte qu'un modèle peut être choisi avant que les alertes de la liste de contrôle du modèle précédemment sélectionné ne s'affichent. Cela évite d'avoir à annuler les alertes de la checklist avant de sélectionner un autre modèle.
 
 Par défaut, le dernier modèle utilisé dans la session précédente est mis en surbrillance pour la sélection.
 
-**Présélection du mode USB**
+### Mode USB par défaut
 
-![](<../.gitbook/assets/20 (1).jpeg>)
+![Présélection du mode USB](../assets/system-general-usb.png)
 
-Les présélections suivantes sont disponibles lorsque la radio est connectée à un PC via un câble USB :
+Choix par l'utilisateur du mode USB par défaut lors de la connextion de la radio à un PC :
 
-_**Non défini**_
-
-Si 'Non défini', une boîte de dialogue apparaîtra au moment de la connexion pour qu'une sélection soit effectuée à ce moment-là.
-
-_**Joystick**_
-
-Lors de la connexion, la radio entrera automatiquement en mode joystick pour une utilisation avec un simulateur RC.
-
-_**Ethos Suite**_
-
-Lors de la connexion, la radio entrera automatiquement en « mode Ethos » pour la communication avec Ethos Suite. Veuillez-vous référer au mode Ethos dans la section Ethos Suite.
-
-_**Série**_
-
-Lors de la connexion, la radio entrera automatiquement en mode série, dans lequel les traces de débogage Lua sont envoyées à USB-série s'il y en a. La vitesse de transmission est de 115200 bps. Un pilote de port COM virtuel Windows approprié peut être trouvé [ici](https://www.st.com/en/development-tools/stsw-stm32102.html).
+* Non défini : Une boîte de dialogue apparaîtra au moment de la connexion proposera le choix à l'utilisateur.
+* Joystick : Mode Joystick pour l'utilisation avec un simulateur RC.
+* Ethos Suite : Mode ETHOS pour l'utilisation avec ETHOS SUITE pour les mises à jour et sauvegarde de la radio.
+  NB: Référez-vous à la section Ethos Suite.
+* Série : Mode série pour l'utilisation de la radio en mode débuggage. les données seront transmises au PC. La vitesse de transmission est de 115200 bps. Un pilote de port COM virtuel Windows approprié peut être trouvé [ici](https://www.st.com/en/development-tools/stsw-stm32102.html).

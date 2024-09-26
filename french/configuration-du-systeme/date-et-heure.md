@@ -1,38 +1,37 @@
-## Date et heure
+## Date / Heure
 
-![Icône Date et heure](../.gitbook/assets/system-icon-date.png)
-![Date et heure](../.gitbook/assets/system-date.png)
+![Icône Date et heure](../assets/system-icon-date.png)
 
-Les paramètres de date et d'heure sont les suivants :
+![Date et heure](../assets/system-date.png)
 
-**Délai de 24 heures**
+### Format horaire 24h
 
-L'horloge s'affiche au format 24 heures lorsqu'elle est activée.
+Affichage de l'heure au format 12h ou 24h. le format est 24h lorsque l'option est activée.
 
-**Affichage des secondes**
+### Affichage des secondes
 
-L'horloge affichera les secondes lorsqu'elle sera activée.
+Affichage des secondes de l'heure lorsque l'option est activée.
 
-**Date**
+### Date
 
-Doit être défini sur la date du jour. Ceci est utilisé dans les journaux.
+Réglage de la date du jour. Sauvegardée grâce à l'horloge temps réél interne (RTC). La date sera utilisée lors de la création des enregistrements des données.
 
-**Heure**
+### Heure
 
-Doit être réglé sur l'heure actuelle. Ceci est utilisé dans les journaux.
+Réglage de l'heure actuelle. Comme la date, elle sera utilisée lors des enregistrements de données.
 
-**Fuseau horaire**
+### Fuseau horaire
 
-Permet de configurer le fuseau horaire de l'utilisateur.
+Configuration de fuseau horaire de l'utilisateur.
 
-**Ajuster la vitesse RTC**
+### Calibrage RTC
 
-L'horloge en temps réel peut être calibrée pour compenser toute dérive de l'horloge, jusqu'à 41 secondes par jour.
+L'horloge en temps réel (RTC) nécessite une calibration pour compenser une dérive de l'horloge pouvant atteindre 41 secondes par jour.
 
-Pour l'étalonnage, calculez combien de secondes votre horloge gagne ou perd en 24 heures.
+Pour la calibration, calculez combien de secondes votre horloge gagne ou perd en 24 heures.
 
-Réglez la valeur d'étalonnage sur 12 fois ce nombre de secondes, ce qui la rend négative si votre horloge est rapide et positive si elle est lente. Pour une meilleure précision, vous pouvez ensuite vérifier si votre horloge est précise et ajuster légèrement la valeur d'étalonnage. La valeur d'étalonnage réelle peut être réglée entre -500 et +500.
+Réglez cette valeur de calibration sur 12 fois ce nombre de secondes, valeur négative si votre horloge est plus rapide et positive si plus lente. Pour une meilleure précision, il sera peut-être nécessaire d'ajuster ce paramètre. La plage de valeur de calibration est -500 / +500.
 
-**Réglage automatique à partir du GPS**
+### Auto depuis GPS
 
-Lorsqu'elle est activée, l'heure et la date seront automatiquement réglées à partir des données du capteur GPS à distance.
+Lorsqu'elle est activée, l'heure et la date seront automatiquement réglées à partir des données du capteur GPS si ce dernier est installé.

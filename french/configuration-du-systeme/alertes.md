@@ -1,26 +1,27 @@
 ## Alertes
 
-![Icône Alertes](../.gitbook/assets/system-icon-alerts.png)
-![Gestionnaire des alertes](<../.gitbook/assets/system-alerts.png>)
+![Icône Alertes](../assets/system-icon-alerts.png)
 
 Les alertes système sont les suivantes :
 
-### Mode silencieux
+![Gestionnaire des alertes](<../assets/system-alerts.png>)
 
-Une alerte « Mode silencieux » sera émise au démarrage lorsque la vérification « Mode silencieux » est activée et que le « Mode audio » a été réglé sur Silencieux en mode Système / Général / Audio
+### Silencieux
 
-### Tension principale
+Une alerte « Mode silencieux » est émise au démarrage lorsque la vérification « Mode silencieux » est activée et que le « Mode audio » a été réglé sur Silencieux en mode Système / Général / Audio
 
-Une alerte vocale « La batterie de la radio est faible » est émise lorsque la vérification de la « Tension principale » est activée et que la batterie de la radio principale est inférieure au seuil défini dans le paramètre « Basse tension » dans Système / Batterie.
+### Tension radio
+
+Une alerte vocale « Batterie radio faible » est émise lorsque la vérification de la « Tension radio » est activée et que la batterie de la radio principale est inférieure au seuil défini dans le paramètre « Alerte tension basse » dans Système / Batterie. Il est conseillé de se poser rapidement dans le cas d'un vol.
 
 ### Tension pile RTC
 
-Une alerte vocale « La batterie RTC est faible » sera émise lorsque la vérification de la « tension RTC » est activée et que la pile bouton RTC est inférieure à 2,5 V, le seuil de batterie RTC par défaut. Il peut être éteint jusqu'à ce que la batterie RTC ait été remplacée, mais ne doit pas être laissé éteint indéfiniment. Le temps réel est utilisé dans l'enregistrement des données, et une heure invalide entraînera des difficultés dans la lecture des journaux, en particulier pour distinguer les sessions de vol.
+Une alerte vocale « Batterie RTC faible » est émise lorsque la vérification de la « Tension pile RTC » est activée et que la pile bouton RTC est inférieure à 2,5 V, le seuil de batterie RTC par défaut (non définissable). L'alerte peut être désactivée mais il est conseillé de changer la pile RTC rapidement (pile CR2020). En effet, le système a besoin des infos de temps pour l'enregistrement des données et une heure invalide rendra difficile l'analyse de ses données (jour et heure de vol par exemple).
 
-### Avertissement de conflit de capteur
+### conflit capteurs
 
-La détection des conflits de capteurs peut être désactivée. Cela ne devrait être nécessaire que si vous avez des capteurs qui ne répondent pas à la spécification S.Port.
+La détection des conflits de capteurs peut être désactivée. Cela peut s'avérer nécessaire que si vous avez des capteurs qui ne répondent pas à la spécification S.Port de FrSky ou bien des capteurs avec des conflits d'identification.
 
 ### Inactivité
 
-Une alerte vocale « Radio inactive » sera émise lorsque la radio n'a pas été utilisée pendant plus longtemps que la durée « Inactivité », ainsi qu'une vibration au cas où le volume de la radio serait complètement baissé. La valeur par défaut est de 10 minutes.
+Une alerte vocale « Radio inactive » est émise lorsque la radio n'a pas été utilisée pendant plus longtemps que la durée « Inactivité », ainsi qu'une vibration au cas où le volume de la radio serait complètement baissé. La valeur par défaut est de 10 minutes.

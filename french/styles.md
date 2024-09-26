@@ -1,5 +1,5 @@
 ---
-title: Manuel français de Ethos 1.5.10
+title: Manuel français de Ethos 1.5.12
 subtitle: Traduction de la doc anglaise écrite par Lothar Thole
 lang: fr
 tags: [FrSky, Ethos]
@@ -11,7 +11,7 @@ papersize: a4
 documentoptions: twoside
 
 # Styles
-fontsize: 12pt
+fontsize: 10pt
 colorlinks: true
 linkcolor: Blue
 citecolor: MidnightBlue
@@ -30,7 +30,7 @@ monofontoptions: Scale=.8
 toc: true
 toc-depth: 1
 lof: true
-lot: true
+# lot: true
 tblPrefix: tab
 lolTitle: Liste des extraits de code
 listingtitle: Extrait de code
@@ -46,6 +46,14 @@ header-includes:
   \usepackage{xltxtra}
   \let\tex\TeX
   \renewcommand{\TeX}{\tex\xspace}
+  \usepackage{float}
+  \let\origfigure\figure
+  \let\endorigfigure\endfigure
+  \renewenvironment{figure}[1][2] {
+    \expandafter\origfigure\expandafter[H]
+  } {
+    \endorigfigure
+  }
 ---
 
 <!-- \listoflistings -->

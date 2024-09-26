@@ -1,0 +1,5 @@
+## Exemple de configuration radio initiale
+
+Cette section introductive décrit les étapes initiales de la configuration de la radio elle-même, avant de programmer des modèles spécifiques. Une fois terminé, n'importe lequel des exemples de programmation des sections suivantes peut être suivi.
+
+Remarque : Ces exemples ne sont pas de nature « livre de recettes ». Ils supposent que l'utilisateur a une compréhension de base du vocabulaire des modèles radiocommandés et qu'il est familier avec la navigation dans la structure du menu Ethos. Si, à tout moment, vous êtes confus, veuillez consulter les sections précédentes de ce manuel pour vous rafraîchir la mémoire. En particulier, Veuillez-vous référer à la section Interface utilisateur et navigation pour vous familiariser avec l'interface utilisateur de la radio, afin que vous puissiez trouver facilement la page de configuration dont vous avez besoin.

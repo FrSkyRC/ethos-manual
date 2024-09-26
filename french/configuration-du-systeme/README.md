@@ -1,45 +1,47 @@
 # Configuration du système
 
-Le menu « Configuration du système » est utilisé pour configurer les parties du matériel du système radio qui sont communes à tous les modèles, et est accessible en sélectionnant l'onglet Engrenage en bas de l'écran. À l'inverse, la configuration spécifique au modèle est effectuée dans le menu Modèle, auquel vous pouvez accéder en sélectionnant l'onglet Avion en bas de l'écran.
+Configuration des paramètres de la radio communs à tous les modèles. Accessible en appuyant sur l'icone "Engrenage" en bas à droite de l'écran, ou en appuyant sur le bouton \[SYS]. La configuration spécifique d'un modèle est effectuée via l'icone "Avion",en bas à gauche de l'écran ou via le bouton \[MDL].
 
-_Veuillez noter que les paramètres permettant de déterminer si le module RF interne ou externe est utilisé sont spécifiques au modèle, ils sont donc gérés dans la section « Système RF » du menu Modèle._
+NB: La configuration du système HF étant spécifique à chaque modèle, reportez-vous à la section correspondante "Système RF"» du menu Modèle.
 
-![Menu système](../.gitbook/assets/system-icon-filemanager.png)
+![Menu système](../assets/system-icon-filemanager.png)
 
-Dans le programme de configuration du système, appuyez sur une vignette pour configurer la section sélectionnée ou utilisez le sélecteur rotatif pour déplacer la surbrillance vers la vignette souhaitée, puis appuyez sur Entrée. Vous pouvez balayer vers la gauche pour accéder à la deuxième page de fonctions ou utiliser le sélecteur rotatif pour déplacer la surbrillance vers la deuxième page.
+Sur la page de "Système", appuyez sur l'icone pour configurer la section sélectionnée ou utilisez le sélecteur rotatif pour déplacer la surbrillance vers l'icone souhaitée, puis appuyez sur Entrée. Un balayage vers la gauche de l'écran permet l'accès à la seconde page de configuration ou utiliser le sélecteur rotatif pour déplacer la surbrillance vers la deuxième page.
 
-**Gestionnaire de fichiers**
+**Fichiers**
 
-Le gestionnaire de fichiers permet de gérer les fichiers et d'accéder au micrologiciel flash au module RF interne, au S.Port externe, à l'OTA (Over The Air) et aux modules externes.
+Accès au gestionnaire de fichiers des espaces de stockage de la radio (Carte SD , FLASH, etc..)
 
 **Alertes**
 
-Configuration du mode silencieux, des tensions de la batterie radio et RTC, des conflits de capteurs et des alertes d'inactivité.
+Activation / désactivation des différentes alertes surveillées par ETHOS (Configuration du mode silencieux, des tensions de la batterie radio et RTC, des conflits de capteurs et temps d'inactivité de la radio).
 
-**Date et heure**
+**Date / heure**
 
-Configuration de l'horloge système et des options d'affichage de l'heure.
+Configuration de la date et horloge système et des options associées .
 
-**Généralités**
+**Général**
 
-Pour configurer le style de menu, la langue du système et les attributs de l'écran LCD tels que la luminosité et le rétroéclairage, ainsi que les modes et paramètres audio, vario et haptique. De plus, les options de la barre d'outils supérieure, la sélection du modèle à la mise sous tension et la présélection du mode USB peuvent être configurées.
+Configuration de l'écran LCD (luminosité, rétroéclairage, couleurs, etc..) , de la langue des menus, des paramètres audio (langue, voix), du vario et des vibreurs, des options de la barre supérieure, du choix du modèle à la mise sous tension et du mode USB par défaut lors de la connexion à un PC.
 
 **Batterie**
 
-Configuration des paramètres de gestion de la batterie.
+Configuration des valeurs / des plages de valeurs déclenchant les alertes sur les différentes batteries de la radio.
 
 **Matériel**
 
-Cette section permet de vérifier les périphériques d'entrée physiques matériels, ainsi que l'étalonnage des entrées analogiques et du gyroscope. Il permet également de modifier les affectations des inters et de définir les fonctions du bouton d'accueil.
+Configuration matériel de la radio avec le choix du type de potentiomètres/ Interrupteurs avec leur affectation.
+Etalonnage et vérification du bon fonctionnement du matériel et calibration du gyroscope interne de la radio.
+Configuration des raccourcis des touches de la radio [DISP / MDL / SYS].
 
 **Manches**
 
-Configuration du mode manches et de l'ordre des voies par défaut. Les 4 manches peuvent également être renommées.
+Configuration du mode de la radio (Mode1, 2, 3 ou 4) ainsi que l'ordre des voies par défaut. Les 4 manches peuvent également être renommées par l'utilisateur.
 
 **Capteurs**
 
-Outils de configuration d'appareils tels que les capteurs, les récepteurs, la suite de gaz, les servos et les émetteurs vidéo.
+Configuration des capteurs et accessoires natifs FrSKY, des récepteurs avec gyros FrSky, des servos Frsky et émetteurs vidéo.
 
 **Info**
 
-Informations système pour la version du micrologiciel, les types de cardans et les modules RF.
+Informations des versions firmware de la radio, son temps d'utilisation, du module RF interne, des récepteurs, des éventuelles erreurs sur des scripts lua ou autres (saturation mémoire, etc..) et du type de manches installé.

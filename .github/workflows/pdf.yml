@@ -1,0 +1,42 @@
+name: PDF Generation
+
+on: [workflow_dispatch, push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions: write-all
+
+    steps:
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install needed packages
+      run: |
+        sudo apt-get update
+        sudo apt-get install pandoc texlive-fonts-recommended texlive-fonts-extra texlive-lang-french texlive-lang-chinese texlive-xetex
+
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install needed fonts
+      run: |
+        mkdir $HOME/.fonts
+        cp ./forge/fonts/* $HOME/.fonts/
+        fc-cache -fv
+
+    - name: Build the PDF
+      run: python ./forge/pdf.py
+
+    - name: Upload to release
+      uses: xresloader/upload-to-github-release@v1.6.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+          file: ./ethos-french-manual.pdf
+          update_latest_release: true
+          overwrite: true
+    
