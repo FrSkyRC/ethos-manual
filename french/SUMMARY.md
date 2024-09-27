@@ -74,3 +74,10 @@
     * [10. Comment configurer une courbe de compensation des volets réglable en vol](Tutoriels-de-programmation/Section-Comment-faire/10-Comment-configurer-une-courbe-de-compensation-des-volets-reglable-en-vol.md)
 
 * [Ethos Suite](ethos-suite/README.md)
+  * [Aperçu](ethos-suite/apercu.md)
+  * [Procédure de migration vers Ethos Suite](ethos-suite/procedure-migration-vers-ethos-suite.md)
+  * [Opération](ethos-suite/operation/README.md)
+    * [Section d'accueil](ethos-suite/operation/section-accueil.md)
+    * [Section Radio](ethos-suite/operation/section-radio.md)
+    * [Section Outils](ethos-suite/operation/section-outils.md)
+    * [Section Autres](ethos-suite/operation/section-autres.md)

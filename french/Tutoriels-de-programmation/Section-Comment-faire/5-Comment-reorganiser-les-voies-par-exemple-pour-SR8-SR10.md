@@ -12,7 +12,7 @@ Votre modèle actuel peut avoir un ordre de canal AAETRFF (APGDFF).
 - CH6 Volet1 (Droit) CH7 Volet2 (Gauche) CH8 Retracts.
 
 Les récepteurs stabilisés FrSky ont un ordre de voies AETRAE (APGDAE) défini comme suit :
-- Ch1 Aileron1 (Droit) CH2 Profondeur
+- CH1 Aileron1 (Droit) CH2 Profondeur
 - CH3 Accélérateur
 - CH4 Gouvernail
 - CH5 Aileron2 (Gauche) ou AUX1
