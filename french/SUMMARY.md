@@ -72,3 +72,5 @@
     * [8. Comment tester la configuration d'un récepteur redondant](Tutoriels-de-programmation/Section-Comment-faire/8-Comment-tester-la-configuration-d'un-recepteur-redondant.md)
     * [9. Comment mettre en place une liste de contrôle de texte définie par l'utilisateur](Tutoriels-de-programmation/Section-Comment-faire/9-Comment-mettre-en-place-une-liste-de-controle-de-texte-definie-par-l-utilisateur.md)
     * [10. Comment configurer une courbe de compensation des volets réglable en vol](Tutoriels-de-programmation/Section-Comment-faire/10-Comment-configurer-une-courbe-de-compensation-des-volets-reglable-en-vol.md)
+
+* [Ethos Suite](ethos-suite/README.md)
