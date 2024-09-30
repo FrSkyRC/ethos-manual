@@ -10,4 +10,4 @@ Lien vers la doc en ligne :
 [Manuel en français Ethos](https://frsky-rc.gitbook.io/manuel-francais-ethos)
 
 Lien vers la doc PDF :
-[Manuel en français Ethos](https://github.com/FrSkyRC/ethos-manual/releases/tag/1.5.15/ethos-french-manual.pdf)
+[Manuel en français Ethos](https://github.com/FrSkyRC/ethos-manual/releases/download/1.5.15/ethos-french-manual.pdf)
