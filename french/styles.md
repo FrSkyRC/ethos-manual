@@ -4,6 +4,7 @@ subtitle: Traduction de la doc anglaise écrite par Lothar Thole
 lang: fr
 tags: [FrSky, Ethos]
 date: \today
+geometry: margin=2cm
 papersize: a4
 
 # Modèle
