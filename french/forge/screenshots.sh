@@ -1,4 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+set -e
+
+cd "$(dirname "$0")"
 
 ETHOS='/mnt/c/Program Files (x86)/FrSky/Ethos'
 
