@@ -59,7 +59,7 @@ simulator.screenshot("../assets/system-filemanager-flash-TD-ISRM.png")
 simulator.pressKey(KEY_RTN) -- close the menu
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
+simulator.turnRotaryEncoder(1)
 simulator.screenshot("../assets/system-filemanager-flash-OTA.png")
 simulator.pressKey(KEY_RTN) -- close the menu
 simulator.turnRotaryEncoder(-4)
