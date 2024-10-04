@@ -238,8 +238,8 @@ simulator.turnRotaryEncoder(-1)
 simulator.screenshot("../assets/system-info-factory-reset.png")
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("../assets/system-info-factory-reset-confirm.png")
-simulator.pressKey(KEY_RTN) -- canncel
-simulator.turnRotaryEncoder(-1)
+simulator.pressKey(KEY_RTN) -- cancel
+simulator.turnRotaryEncoder(-2)
 simulator.screenshot("../assets/system-info-internal-module.png")
 
 simulator.pressKey(KEY_RTN)
