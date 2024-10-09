@@ -1,8 +1,8 @@
 ## Matériel
 
-![Icône Matériel](../assets/system-icon-hardware.png)
-
 Permet de tester toutes les entrées, d'effectuer l'étalonnage analogique et gyroscopique, et de définir les types de inters ainsi que les raccourcis des touches.
+
+![Icône Matériel](../assets/system-icon-hardware.png)
 
 ![Matériel](../assets/system-hardware.png)
 
