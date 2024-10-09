@@ -94,7 +94,7 @@ La X20 Pro AW n'a pas cette option, car les 2 vibreurs sont montés en usine.
 
 ![Vérif. analogique X20S](../assets/system-hardware-adc-check-x20s.png)
 
-Cette page affiche les valeurs de conversion analogique-numérique (CAN) pour les entrées analogiques lues par le processeur.
+Cette page affiche les valeurs de conversion analogique-numérique (CAN) des entrées analogiques lues par le processeur.
 
 1. Manche gauche horizontal
 2. Manche gauche vertical
