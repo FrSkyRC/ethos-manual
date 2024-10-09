@@ -50,7 +50,7 @@ Les radios X20 Pro/R/RS peuvent accueillir deux potentiomètres supplémentaires
 
 ![Configuration switches](../assets/system-hardware-switches.png)
 
-Le "Délai détection position centrale" garantit que la position centrale de l'interrupteur sur les interrupteurs à trois voies ne soit pas détectée lorsque l'interrupteur est basculé de la position haut à la position basse en un seul mouvement, et vice versa. Il ne doit être détecté que lorsque l'interrupteur s'arrête en position médiane. La valeur par défaut a été modifiée à 0 ms pour s'adapter aux récepteurs stabilisés FrSky lors de la détection de l'auto-vérification sur CH12.
+Le "Délai détection position centrale" garantit que la position centrale de l'interrupteur sur les interrupteurs à trois voies ne soit pas détectée lorsque l'interrupteur est basculé de la position haut à la position basse en un seul mouvement, et vice versa. Il ne doit être détecté que lorsque l'interrupteur s'arrête en position médiane. La valeur par défaut est 0 ms afin de s'adapter aux récepteurs stabilisés FrSky lors de la détection de l'auto-vérification sur CH12.
 
 Les inters SA à SJ peuvent être définis comme suit :
 
