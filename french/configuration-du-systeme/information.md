@@ -26,7 +26,7 @@ Date et heure de la version du firmware.
 
 ### Utilisation radio
 
-Durée d'utilisation de la radio depuis la mise en service de la radio ou une réinitialisation d'usine.
+Durée d'utilisation de la radio depuis la mise en service de la radio ou une réinitialisation d'usine. La remise à zéro est possible en appuyant sur réinit.
 
 ### Erreurs
 
