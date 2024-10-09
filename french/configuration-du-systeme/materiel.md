@@ -22,9 +22,9 @@ Les radios X18 ont également les trims supplémentaires T5 et T6 :
 
 ### Calibration analogique
 
-![Calibrage manches / potentiomètres](../assets/system-hardware-analogs-calibration.png)
-
 La calibration analogique est nécessaire pour définir les centres et limites de positions de chaque manche / potentiomètre ou curseur.Il est automatiquement exécuté à la première mise en service de la radio. Il doit être répété après le remplacement d'un manche, d'un potentiomètre ou d'un curseur.
+
+![Calibrage manches / potentiomètres](../assets/system-hardware-analogs-calibration.png)
 
 ### Calibration gyros
 
