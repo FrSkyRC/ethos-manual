@@ -8,9 +8,9 @@ Permet de tester toutes les entrées, d'effectuer l'étalonnage analogique et gy
 
 ### Vérification matériel
 
-![Vérification du matériel / X20S](../assets/system-hardware-check.png)
-
 La vérification du matériel permet de vérifier le fonctionnement de toutes les entrées.
+
+![Vérification du matériel / X20S](../assets/system-hardware-check.png)
 
 Les radios X20 Pro/R/RS ont en plus les deux boutons-poussoirs à verrouillage K et L sur les épaulements arrière, ainsi que les trims supplémentaires T5 et T6 :
 
@@ -28,9 +28,9 @@ La calibration analogique est nécessaire pour définir les centres et limites d
 
 ### Calibration gyros
 
-![Calibrage gyros](../assets/system-hardware-gyro-calibration.png)
-
 La calibration gyroscopique peut être effectué de manière à ce que les sorties du capteur gyroscopique réagissent correctement à l'inclinaison de la radio. Il est automatiquement exécuté à la première mise en service de la radio. Par exemple, la position de « niveau » de la radio serait l'angle auquel vous tenez normalement la radio.
+
+![Calibrage gyros](../assets/system-hardware-gyro-calibration.png)
 
 ### Filtre analogique
 
