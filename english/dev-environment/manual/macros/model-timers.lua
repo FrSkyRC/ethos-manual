@@ -73,15 +73,18 @@ simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER) -- select invert
 simulator.pressKey(KEY_RTN) -- back to stop cond
 simulator.screenshot("../assets/model-timer1-edit-stop.png") -- stop condition
-simulator.turnRotaryEncoder(4)
+simulator.turnRotaryEncoder(5)
 simulator.screenshot("../assets/model-timer1-add-action.png") -- add audio action
 
 simulator.pressKey(KEY_ENTER) -- add action
+simulator.screenshot("../assets/model-timer1-action-countdown.png") -- add audio action
 simulator.pressKey(KEY_RTN) -- accept countdown
+
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER) -- add action
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER) 
+simulator.screenshot("../assets/model-timer1-action-type-select.png") -- add audio action
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER) -- select beep countdown
 simulator.pressKey(KEY_RTN) -- accept beep countdown
@@ -140,7 +143,7 @@ simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(-3)
 simulator.screenshot("../assets/model-timer2-edit.png")
-simulator.turnRotaryEncoder(8)
+simulator.turnRotaryEncoder(9)
 simulator.pressKey(KEY_ENTER) -- add action
 simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER) -- edit start
@@ -181,11 +184,12 @@ simulator.pressKey(KEY_RTN)
 simulator.screenshot("../assets/model-timer2-actions-summary.png")
 simulator.pressKey(KEY_RTN, 1)
 simulator.pressKey(KEY_DISP)
-simulator.turnRotaryEncoder(7)
+simulator.turnRotaryEncoder(9)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_PAGE)
+simulator.sleep(130) -- wait for timer 2 to time out 
 simulator.screenshot("../assets/model-timers-widget.png")
 simulator.pressKey(KEY_RTN, 1)

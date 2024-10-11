@@ -1,7 +1,7 @@
 dofile("common.lua")
 
 -- model must have only default FM0
-simulator.loadModel("rarebear.bin")
+simulator.loadModel("blank.bin")
 
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_MDL)

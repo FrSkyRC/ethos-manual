@@ -45,3 +45,10 @@ simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(3)
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("../assets/system-info-x20pro.png")
+simulator.pressKey(KEY_RTN, 1) -- home
+simulator.pressKey(KEY_MDL) 
+simulator.turnRotaryEncoder(7) -- trims
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(31)
+simulator.turnRotaryEncoder(-6)
+simulator.screenshot("../assets/model-trims-pro-t5-t6.png") -- add trim

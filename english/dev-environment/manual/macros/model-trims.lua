@@ -55,10 +55,15 @@ simulator.pressKey(KEY_RTN)
 
 simulator.turnRotaryEncoder(1) 
 simulator.pressKey(KEY_ENTER) -- edit trim mode
-simulator.turnRotaryEncoder(2)
+simulator.turnRotaryEncoder(-1) 
+simulator.screenshot("../assets/model-trims-mode-elevator-edit-behaviour-unplugged.png") -- select offset + default
+simulator.turnRotaryEncoder(2) 
+simulator.screenshot("../assets/model-trims-mode-elevator-edit-behaviour-equal.png") -- select offset + default
+
+simulator.turnRotaryEncoder(1)
 simulator.screenshot("../assets/model-trims-mode-elevator-edit-behaviour-offset.png") -- select offset + default
 simulator.pressKey(KEY_ENTER) -- Offset + default
-
+simulator.screenshot("../assets/model-trims-mode-elevator-custom-speed.png")
 simulator.turnRotaryEncoder(1) -- back on trim
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(-1)  
@@ -73,13 +78,16 @@ simulator.turnRotaryEncoder(4)
 simulator.pressKey(KEY_ENTER) -- select thermal
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+
 simulator.turnRotaryEncoder(1) 
 simulator.pressKey(KEY_ENTER) -- edit trim mode
-simulator.turnRotaryEncoder(2)
-
+simulator.screenshot("../assets/model-trims-mode-elevator-custom-select.png")
+simulator.turnRotaryEncoder(4)
+simulator.screenshot("../assets/model-trims-mode-elevator-custom-select-2.png")
+simulator.turnRotaryEncoder(-2)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) 
-simulator.screenshot("../assets/model-trims-mode-elevator-custom.png")
+simulator.screenshot("../assets/model-trims-mode-elevator-custom-speed-thermal.png")
 -- end elevator
 simulator.turnRotaryEncoder(5)
 simulator.pressKey(KEY_ENTER)-- model/trims

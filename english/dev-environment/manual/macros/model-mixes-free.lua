@@ -1,5 +1,6 @@
 dofile("common.lua")
 
+-- model must have no free mix, this macro starts from scratch
 simulator.loadModel("rarebear.bin")
 
 simulator.pressKey(KEY_ENTER)
@@ -24,7 +25,7 @@ simulator.turnRotaryEncoder(1)
 simulator.screenshot("../assets/model-mix-free-select-edit.png")
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("../assets/model-mix-free-edit.png")
-simulator.turnRotaryEncoder(6) -- down to add action
+simulator.turnRotaryEncoder(7) -- down to add action
 simulator.screenshot("../assets/model-mix-free-add-action.png")
 simulator.turnRotaryEncoder(-3) -- up to source
 simulator.pressKey(KEY_ENTER)
@@ -84,8 +85,9 @@ simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- scroll to edit select
 simulator.screenshot("../assets/model-mix-free-actions-weight-edit-select.png")
 simulator.pressKey(KEY_ENTER) -- enter edit mode
-
-simulator.turnRotaryEncoder(4)
+simulator.turnRotaryEncoder(1)
+simulator.screenshot("../assets/model-mix-free-actions-weight-active-condition.png")
+simulator.turnRotaryEncoder(3)
 simulator.screenshot("../assets/model-mix-free-actions-weight-add-weight.png")
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_ENTER)
@@ -138,7 +140,9 @@ simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- down to curve type
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("../assets/model-mix-free-actions-curve-type.png")
-simulator.turnRotaryEncoder(1)
+simulator.turnRotaryEncoder(2)
+simulator.screenshot("../assets/model-mix-free-actions-curve-cv1-select.png")
+simulator.turnRotaryEncoder(-1)
 simulator.screenshot("../assets/model-mix-free-actions-curve-expo-select.png")
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- to expo value
