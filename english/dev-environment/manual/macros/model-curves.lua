@@ -57,18 +57,49 @@ simulator.screenshot("../assets/model-curves-fn-barf.png")
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_RTN)
-simulator.turnRotaryEncoder(-1)
+simulator.turnRotaryEncoder(-1) -- back to type
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(1) -- 
+simulator.pressKey(KEY_ENTER) -- select custom
+-- simulator.screenshot("../assets/model-curves-custom5.png")
+-- attach curve to a mix so that Input option appears
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN) -- back to models
+simulator.turnRotaryEncoder(-9)
+simulator.pressKey(KEY_ENTER) -- back to mixes
+simulator.turnRotaryEncoder(2)
+simulator.pressKey(KEY_ENTER) -- to elevator
+simulator.turnRotaryEncoder(1)
+simulator.pressKey(KEY_ENTER) -- edit
+simulator.turnRotaryEncoder(3) -- 
+simulator.pressKey(KEY_ENTER) -- select curve
+-- simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(2) -- select curve1
+simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN) --back to models
+simulator.turnRotaryEncoder(9)
+simulator.pressKey(KEY_ENTER) -- go to curves
+simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
-simulator.screenshot("../assets/model-curves-custom5.png")
+-- simulator.screenshot("./screenshot1.png")
 simulator.turnRotaryEncoder(5)
-simulator.pressKey(KEY_ENTER)
+simulator.screenshot("../assets/model-curves-custom5.png")
+
+simulator.turnRotaryEncoder(5)
+simulator.pressKey(KEY_ENTER) -- open points edit
 simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.touch(389, 445)
-simulator.touch(386, 445)
-simulator.turnRotaryEncoder(-7)
+simulator.pressKey(KEY_ENTER) -- edit -100 point
+simulator.touch(389, 445) -- 1%
+simulator.touch(386, 445) --10%
+simulator.turnRotaryEncoder(-10)
 simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
@@ -127,41 +158,41 @@ simulator.loadModel("zCurves.bin")
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_MDL)
 simulator.turnRotaryEncoder(13)
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) -- curves
 simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) -- select cv1
 simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) -- edit cv1
 simulator.screenshot("../assets/model-curves-expo.png")
 simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) -- cv2
 simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(9)
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) -- edit cv2
+simulator.turnRotaryEncoder(10)
+simulator.pressKey(KEY_ENTER) -- edit points
 simulator.turnRotaryEncoder(5)
 simulator.turnRotaryEncoder(-2)
 simulator.screenshot("../assets/model-curves-custom-easy-off.png")
 simulator.pressKey(KEY_PAGE)
 simulator.pressKey(KEY_PAGE)
 simulator.turnRotaryEncoder(3)
-simulator.screenshot("./screenshot3.png")
+simulator.screenshot("./screenshot3.png") -- wait for bug fix cannot scroll
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) -- cv3
 simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) -- edit cv3
 simulator.turnRotaryEncoder(4)
 simulator.screenshot("../assets/model-curves-fn-offset-var.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) -- cv4
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(9)
+simulator.turnRotaryEncoder(10)
 simulator.pressKey(KEY_ENTER)
 -- simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(5)

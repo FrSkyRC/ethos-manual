@@ -1,7 +1,7 @@
 dofile("common.lua")
 
 -- model must have only default FM0
-simulator.loadModel("blank.bin")
+simulator.loadModel("zBlank.bin")
 
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_MDL)
