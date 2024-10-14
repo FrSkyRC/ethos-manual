@@ -177,7 +177,7 @@ simulator.screenshot("../assets/model-curves-custom-easy-off.png")
 simulator.pressKey(KEY_PAGE)
 simulator.pressKey(KEY_PAGE)
 simulator.turnRotaryEncoder(3)
-simulator.screenshot("./screenshot3.png") -- wait for bug fix cannot scroll
+-- simulator.screenshot("./screenshot3.png") -- wait for bug fix cannot scroll
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(1)
