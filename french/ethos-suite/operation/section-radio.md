@@ -161,3 +161,23 @@ Cliquez sur Actualiser la liste pour rafraîchir la liste des modèles.
 
 img
 
+Sélectionnez les composants que vous souhaitez sauvegarder, c'est-à-dire
+• Audio
+• Scripts
+• Captures d'écran
+• Bitmaps système
+• Modèles (inclut les fichiers texte de la liste de contrôle définis par l'utilisateur et stockés dans le dossier Modèles)
+• Langue
+• Bitmaps utilisateur
+• Journaux
+• Paramètres du système
+
+
+img
+
+
+img
+
+
+img
+
