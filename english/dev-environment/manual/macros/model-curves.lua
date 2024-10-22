@@ -138,19 +138,7 @@ simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(-1)
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("../assets/model-curves-custom5-2-smooth.png")
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN) --
-simulator.pressKey(KEY_RTN) -- retun to models
-simulator.turnRotaryEncoder(1) -- to vars
-simulator.screenshot("../assets/model-icon-vars.png")
-simulator.pressKey(KEY_ENTER)
-simulator.screenshot("../assets/model-vars-add.png")
-simulator.turnRotaryEncoder(1) -- to vars
-simulator.pressKey(KEY_ENTER)
-simulator.screenshot("../assets/model-vars-edit.png")
 simulator.pressKey(KEY_RTN, 1)
-
 
 simulator.loadModel("zCurves.bin")
 

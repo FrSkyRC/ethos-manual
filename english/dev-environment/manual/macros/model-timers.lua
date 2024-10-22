@@ -97,8 +97,8 @@ simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(3)
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(-9)
-simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(-10) 
+simulator.pressKey(KEY_ENTER) -- select timpu.wav
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 simulator.screenshot("../assets/model-timer1-actions-summary.png")
@@ -176,7 +176,7 @@ simulator.pressKey(KEY_ENTER) -- enter mins
 simulator.pressKey(KEY_RTN) -- accept time
 simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER) -- edit file
-simulator.turnRotaryEncoder(-9)
+simulator.turnRotaryEncoder(-10)
 simulator.pressKey(KEY_ENTER) -- select timup.wav
 -- simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)

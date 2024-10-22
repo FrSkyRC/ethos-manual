@@ -26,5 +26,5 @@ simulator.pressKey(KEY_ENTER)
 simulator.screenshot("../assets/model-vars-add.png")
 simulator.turnRotaryEncoder(1) -- to vars
 simulator.pressKey(KEY_ENTER)
-simulator.screenshot("../assets/model-vars-edit.png")
+-- simulator.screenshot("../assets/model-vars-edit.png")
 simulator.pressKey(KEY_RTN, 1)
