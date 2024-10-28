@@ -5,31 +5,31 @@ simulator.pressKey(KEY_ENTER) -- Ack the checklist warnings
 simulator.pressKey(KEY_MDL) -- Model page
 simulator.screenshot("../assets/model-menu.png")
 
-simulator.turnRotaryEncoder(1) -- File manager selected
+simulator.turnRotaryEncoder(1) -- Model select
 simulator.screenshot("../assets/model-icon-modelselect.png")
 simulator.pressKey(KEY_ENTER)
-simulator.touch(758, 91)
-simulator.touch(86, 351)
-simulator.touch(76, 405)
-simulator.touch(599, 301)
-simulator.touch(279, 304)
-simulator.touch(754, 303)
-simulator.touch(719, 354)
-simulator.touch(81, 356)
-simulator.touch(556, 405)
-simulator.touch(198, 306)
+simulator.touch(758, 91) -- add cat
+simulator.touch(86, 351) -- shift
+simulator.touch(76, 405) -- A
+simulator.touch(599, 301) -- i
+simulator.touch(279, 304) --r
+simulator.touch(754, 303) --p
+simulator.touch(719, 354) --l
+simulator.touch(81, 356) --a
+simulator.touch(556, 405) --n
+simulator.touch(198, 306) --e
 simulator.screenshot("../assets/model-modelselect-create-airplane-folder.png")
-simulator.touch(461, 191)
-simulator.touch(756, 80)
-simulator.touch(393, 348)
-simulator.touch(57, 402)
-simulator.touch(715, 355)
-simulator.touch(600, 300)
-simulator.touch(233, 351)
-simulator.touch(186, 304)
-simulator.touch(279, 302)
-simulator.touch(450, 184)
-simulator.touch(751, 79)
+simulator.touch(461, 191) -- Enter
+simulator.touch(756, 80) --add cat
+simulator.touch(393, 348) --G
+simulator.touch(57, 402) --shift
+simulator.touch(715, 355) --l
+simulator.touch(600, 300) --i
+simulator.touch(233, 351) --d
+simulator.touch(186, 304) --e
+simulator.touch(279, 302) --r
+simulator.touch(450, 184) -- Enter
+simulator.touch(751, 79) -- add cat
 simulator.touch(476, 350)
 simulator.touch(60, 405)
 simulator.touch(198, 303)

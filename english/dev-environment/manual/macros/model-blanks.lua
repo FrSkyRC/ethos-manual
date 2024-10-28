@@ -19,12 +19,10 @@ simulator.screenshot("../assets/model-sf-add.png")
 simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER)
-
-
-simulator.screenshot("../assets/model-icon-vars.png")
+-- simulator.screenshot("../assets/model-icon-vars.png")
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("../assets/model-vars-add.png")
-simulator.turnRotaryEncoder(1) -- to vars
-simulator.pressKey(KEY_ENTER)
+-- simulator.turnRotaryEncoder(1) -- to vars
+-- simulator.pressKey(KEY_ENTER)
 -- simulator.screenshot("../assets/model-vars-edit.png")
 simulator.pressKey(KEY_RTN, 1)
