@@ -113,4 +113,7 @@ lotharthole@192-168-1-2 ethos % cd manual
 lotharthole@192-168-1-2 manual % sh cpimages.sh
 
 
- 
+Language differences
+1. DE and ES have their own radio .bin files due to language setting
+2. The Extra fwexample.bin models have different Timer names
+3. The DE model-select.lua has German category names

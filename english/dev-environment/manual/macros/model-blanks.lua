@@ -2,7 +2,7 @@ dofile("common.lua")
 
 -- for the blank shots
 
-simulator.loadModel("zBlank.bin")
+simulator.loadModel("zNewModel.bin")
 -- load user defined checklist
 simulator.sleep(1) -- wait for checklist to load
 simulator.screenshot("../assets/model-checklist-user-checklist.png")
@@ -25,4 +25,15 @@ simulator.screenshot("../assets/model-vars-add.png")
 -- simulator.turnRotaryEncoder(1) -- to vars
 -- simulator.pressKey(KEY_ENTER)
 -- simulator.screenshot("../assets/model-vars-edit.png")
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_DISP)
+-- simulator.screenshot("../assets/display-home.png")
+simulator.turnRotaryEncoder(2)
+simulator.pressKey(KEY_ENTER)
+simulator.screenshot("../assets/display-change-source.png")
+simulator.pressKey(KEY_RTN)
+simulator.turnRotaryEncoder(6)
+simulator.screenshot("../assets/display-home.png")
 simulator.pressKey(KEY_RTN, 1)

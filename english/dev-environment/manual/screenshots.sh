@@ -33,7 +33,25 @@ rm -r models/multirotor
 
 "${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-trims.lua
 
-"${ETHOS}/X20S/simulator.exe"   --read-only  --no-gui --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-curves.lua
+"${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-curves.lua
+
+"${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-checklist.lua
+
+"${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-blanks.lua
+
+"${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-lsw.lua
+
+"${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-sf.lua
+
+"${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-vars.lua
+
+"${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-trainer.lua
+
+"${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-chview.lua
+
+"${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --documents-directory ./sd/documents --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/display.lua
+
+
 
 "${ETHOS}/X18S/simulator.exe" --read-only --no-gui --no-audio --radio-settings ./x18s-en.bin --sd-directory ./sd --flash-directory ./flash --radio-directory ./sd --exec ./macros/x18s.lua
 
