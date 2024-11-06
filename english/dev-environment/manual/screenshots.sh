@@ -51,7 +51,7 @@ rm -r models/multirotor
 
 "${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --documents-directory ./sd/documents --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/display.lua
 
-
+"${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --documents-directory ./sd/documents --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-lua.lua
 
 "${ETHOS}/X18S/simulator.exe" --read-only --no-gui --no-audio --radio-settings ./x18s-en.bin --sd-directory ./sd --flash-directory ./flash --radio-directory ./sd --exec ./macros/x18s.lua
 
