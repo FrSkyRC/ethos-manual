@@ -1,7 +1,7 @@
 -- 2024-12-03 change scroll from 8 to 9 in category to skip over gyro switch
 
---dofile("common.lua")
-simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
+dofile("common.lua")
+--simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("blaster.bin")
 

@@ -1,7 +1,7 @@
 -- 2024-12-02 LT edit due to documents folder added in sd/
 
---dofile("common.lua")
-simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
+dofile("common.lua")
+--simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("fwexample.bin")
 simulator.pressKey(KEY_ENTER) -- Ack the checklist warnings

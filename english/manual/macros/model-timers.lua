@@ -1,7 +1,7 @@
 -- 2024-12-03 simulator.setSwitch(0, 1) -- set switch A to mid for thr active
 
---dofile("common.lua")
-simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
+dofile("common.lua")
+--simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("rarebear.bin")
 
