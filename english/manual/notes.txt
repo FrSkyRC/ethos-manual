@@ -6,6 +6,9 @@ To run the screenshot bash scripts for the EN manual
 Run cmd as admin
 Bash
 cd /mnt/c/gittestmanual/manual
+cd /mnt/c/gittestmanualde/manual
+cd /mnt/c/gittestmanuales/manual
+
 cd /mnt/c/Users/lotharthole/manual (old)
 
 
