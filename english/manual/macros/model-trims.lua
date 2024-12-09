@@ -1,4 +1,7 @@
-dofile("common.lua")
+--2024-12-03 9) due to gyro switch category added
+
+--dofile("common.lua")
+simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("blaster.bin")
 
@@ -44,7 +47,7 @@ simulator.turnRotaryEncoder(-1)
 simulator.pressKey(KEY_ENTER) -- add condiition
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER) --- select cat
-simulator.turnRotaryEncoder(8)
+simulator.turnRotaryEncoder(9) -- 2024-12-03 from 8 to 9 due to gyro switch added
 simulator.pressKey(KEY_ENTER) -- select fm
 simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER) -- select mode
@@ -69,8 +72,8 @@ simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(-1)  
 simulator.pressKey(KEY_ENTER) -- select cond
 simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER) -- select act
-simulator.turnRotaryEncoder(8)
+simulator.pressKey(KEY_ENTER) -- select cat
+simulator.turnRotaryEncoder(9) -- 2024-12-03 from 8 to 9 due to gyro switch added
 simulator.pressKey(KEY_ENTER) -- select fm
 simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER) -- select mode

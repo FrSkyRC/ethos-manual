@@ -1,8 +1,15 @@
+--2024-12-04 change adcValue() to setAnalog()
+-- 0 = STICK_LEFT_HORIZONTAL (Rudder)
+-- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
+-- 2 = STICK_RIGHT_VERTICAL (Elevator)
+-- 3 = STICK_RIGHT_HORIZONTAL (Aileron)
+
 dofile("common.lua")
+--simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("fwexample.bin")
 simulator.pressKey(KEY_ENTER) -- Ack the checklist warnings
-simulator.adcValue(ANALOG_STICK_THROTTLE, 100)
+simulator.setAnalog(1, 100)
 simulator.pressKey(KEY_ENTER, 0.6) -- Contextual menu
 simulator.screenshot("../assets/resetmenu.png") -- Reset menu
 simulator.pressKey(KEY_RTN)

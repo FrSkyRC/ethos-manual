@@ -1,4 +1,5 @@
-dofile("common.lua")
+--dofile("common.lua")
+simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 -- model must have no free mix, this macro starts from scratch
 simulator.loadModel("rarebear.bin")
@@ -290,5 +291,19 @@ simulator.screenshot("../assets/model-mix-free-actions-slow-edit.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 simulator.screenshot("../assets/model-mix-free-actions-slow-summary.png")
-
+-- add new trim action
+simulator.turnRotaryEncoder(1)
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(2)
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(4)
+simulator.screenshot("../assets/model-mix-free-actions-type-trim.png")
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(1)
+simulator.pressKey(KEY_ENTER)
+simulator.screenshot("../assets/model-mix-free-actions-trim-edit.png")
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.screenshot("../assets/model-mix-free-actions-trim-summary.png")
 simulator.pressKey(KEY_RTN, 1) -- return home

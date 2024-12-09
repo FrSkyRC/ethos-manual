@@ -1,10 +1,11 @@
-dofile("common.lua")
+--dofile("common.lua")
+simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 -- simulator.loadModel("extra.bin")
 -- model must have ail mix with 3 weight rates and no expo
 simulator.loadModel("rarebear.bin")
 
-simulator.adcValue(ANALOG_LAST_SLIDER, (50.0 * 100 / 1024))
+simulator.setAnalog(ANALOG_LAST_SLIDER, 50)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_MDL)
 -- set up a flight mode

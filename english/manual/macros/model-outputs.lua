@@ -1,10 +1,17 @@
-dofile("common.lua")
+--2024-12-04 change adcValue() to setAnalog()
+-- 0 = STICK_LEFT_HORIZONTAL (Rudder)
+-- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
+-- 2 = STICK_RIGHT_VERTICAL (Elevator)
+-- 3 = STICK_RIGHT_HORIZONTAL (Aileron)
+
+--dofile("common.lua")
+simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("zBalance.bin")
 
 
-simulator.adcValue(ANALOG_STICK_THROTTLE, -100)
-simulator.adcValue(ANALOG_STICK_ELEVATOR, 30)
+simulator.setAnalog(1, -100)
+simulator.setAnalog(2, 30)
 simulator.pressKey(KEY_MDL)
 simulator.pressKey(KEY_MDL)
 simulator.turnRotaryEncoder(5)
@@ -49,7 +56,7 @@ simulator.turnRotaryEncoder(-2)
 simulator.screenshot("../assets/model-outputs-balance-select.png")
 simulator.pressKey(KEY_RTN, 1)
 --start os balance section
-simulator.adcValue(ANALOG_STICK_THROTTLE, 40)
+simulator.setAnalog(1, 40)
 simulator.pressKey(KEY_MDL)
 simulator.turnRotaryEncoder(5)
 simulator.pressKey(KEY_ENTER)

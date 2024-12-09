@@ -1,12 +1,18 @@
-dofile("common.lua")
+-- 2024-12-03 simulator.setSwitch(0, 1) -- set switch A to mid for thr active
+
+--dofile("common.lua")
+simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("rarebear.bin")
 
+
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_MDL)
+simulator.setSwitch(0, 1) -- enable thr on swotch SA so timer 1 runs
 simulator.turnRotaryEncoder(6)
 simulator.screenshot("../assets/model-icon-timers.png")
 simulator.pressKey(KEY_ENTER)
+simulator.setSwitch(0, 1) -- set switch A to mid for thr active
 simulator.screenshot("../assets/model-timers.png")
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
@@ -191,5 +197,6 @@ simulator.pressKey(KEY_RTN, 1)
 -- simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_PAGE)
 simulator.sleep(120) -- wait for timer 2 to time out 
+simulator.pressKey(KEY_RTN) -- wake up screen
 simulator.screenshot("../assets/model-timers-widget.png")
 simulator.pressKey(KEY_RTN, 1)

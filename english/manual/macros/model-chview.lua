@@ -1,11 +1,18 @@
+--2024-12-04 change adcValue() to setAnalog()
+-- 0 = STICK_LEFT_HORIZONTAL (Rudder)
+-- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
+-- 2 = STICK_RIGHT_VERTICAL (Elevator)
+-- 3 = STICK_RIGHT_HORIZONTAL (Aileron)
+
 dofile("common.lua")
+--simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("blaster.bin")
 
-simulator.adcValue(ANALOG_STICK_THROTTLE, -70)
---simulator.adcValue(ANALOG_LAST_SLIDER, (-0.0 * 100 / 1024))
-simulator.adcValue(ANALOG_LAST_SLIDER, -1024)
-simulator.adcValue(ANALOG_STICK_ELEVATOR, -10)
+simulator.setAnalog(1, -70)
+--simulator.setAnalog(ANALOG_LAST_SLIDER, (-0.0 * 100 / 1024))
+simulator.setAnalog(ANALOG_LAST_SLIDER, -1024)
+simulator.setAnalog(2, -10)
 simulator.sleep(1) -- wait for adc values
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_MDL)

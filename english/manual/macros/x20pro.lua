@@ -1,4 +1,5 @@
-dofile("common.lua")
+--dofile("common.lua")
+simulator.setDateTime({year=2024, month=12, day=7, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("rarebear.bin")
 simulator.pressKey(KEY_ENTER) -- Ack the checklist warnings
@@ -93,7 +94,9 @@ simulator.touch(714, 353)
 simulator.touch(240, 351)
 simulator.pressKey(KEY_RTN)
 simulator.screenshot("../assets/model-sf-x20pro-play-text.png")
-
+--
+--remove below due to new x20proaw.lua
+--[[
 simulator.turnRotaryEncoder(-4)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(-2)
@@ -102,3 +105,4 @@ simulator.turnRotaryEncoder(5)
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("../assets/model-sf-haptic-x20proaw.png")
 simulator.pressKey(KEY_RTN, 1) -- home
+]]--

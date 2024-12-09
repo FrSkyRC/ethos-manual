@@ -1,8 +1,9 @@
 dofile("common.lua")
+--simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("rarebear.bin")
 simulator.setSwitch(0, 2)
-simulator.adcValue(ANALOG_LAST_SLIDER, (70.0 * 100 / 1024))
+simulator.setAnalog(ANALOG_LAST_SLIDER, 70)
 
 simulator.sleep(1) -- wait for checklist to load
 simulator.screenshot("../assets/model-checklist-at_start.png")

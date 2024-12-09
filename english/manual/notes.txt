@@ -5,22 +5,58 @@ To run the screenshot bash scripts for the EN manual
 ----------------------------------------------------
 Run cmd as admin
 Bash
-cd /mnt/c/Users/lotharthole/manual
+cd /mnt/c/gittestmanual/manual
+cd /mnt/c/Users/lotharthole/manual (old)
+
+
 sh screenshots.sh -- full set
 or
 sh sysmenu.sh -- runs sysmenu.lua (uses fwexample.bin)
+sh proshots.sh -- for the x20 pro screenshots --runsx20pro.lua (uses rarebear.bin)
 sh mainui.sh -- for mainviews and user interface screenshots -- runs mainview.lua and user-interface.lua (uses fwexample.bin)
-sh proshots.sh -- for the x20 pro screenshots (uses oxalys.bin exclusive to pro)
-sh x18s-shots.sh -- for the x18s screenshots (uses fwexample.bin)
+sh modelselect -- for model select section -- runs model-select.lua (uses rarebear.bin)
+sh modeledit.sh -- for model/edit section --runs model-edit.lua (uses fwexample.bin) -- relies on Extra model
+sh modelfm.sh -- for model/flight modes section runs model-fm.lua (uses zBlank.bin) with blank fm
+sh modelmixes.sh -- for model/mixes first section --runs model-mixes.lua (uses rarebear.bin)
+sh modelmixesfree.sh -- for model mixes - free mix --runs model-mixes-free.lua (uses rarebear.bin)
+sh modeloutputs.sh -- for model outputs --runs model-outputs.lua (uses )
+sh modeltimers.sh -- for model timers --runs model-timers.lua (uses rarebear.bin)
+sh modeltrims.sh -- for model trims --runs model-trims.lua (uses blaster.bin for offset trims) 
+sh modelcurves.sh -- for model curves --runs model-curves.lua  
+sh modelchecklist.sh -- runs model-checklist.lua 
+sh modelblanks.sh --runs model-blanks.lua 
+sh modellsw.sh -- runs model-lsw.lua 
+sh modelsf.sh --runs model-sf.lua 
+sh modelvars.sh --runs model-vars.lua 
+sh modeltrainer.sh --runs  model-trainer.lua 
+sh modelchview.sh --runs model-chview.lua 
+sh display.sh --runs display.lua 
+sh modellua.sh --runs model-lua.lua 
+sh x18s.sh --runs x18s.lua 
+sh trainer.sh --runs trainer-take-back.lua 
+sh proawshots.sh --runs x20proaw.lua
 
-sh modelselect -- for model select section (uses rarebear.bin)
-sh modeledit.sh -- for model/edit section (uses fwexample.bin) -- relies on Extra model
-sh modelfm.sh -- for model/flight modes section (uses zBlank.bin) with blank fm
-sh modelmixes.sh -- for model/mixes first section (uses rarebear.bin)
-sh modelmixesfree.sh -- for model mixes - free mix (uses rarebear.bin)
-sh modeltimers.sh -- for model timers (uses rarebear.bin)
-sh modeltrims.sh -- for model trims (uses blaster.bin for offset trims) 
-sh modelcurves.sh -- for model  curves 
+sh toolbars.sh --runs toolbars.lua (*** Note must be last because it generates a lua error ****)
+
+
+
+changes_log.txt 
+common.lua 
+
+
+To be done:
+model-rf.lua 
+
+
+
+
+
+
+
+
+
+
+
 
 -- To edit models: (from Bash window)
 -- "C:\Program Files (x86)\FrSky\Ethos\X20S\simulator.exe" --radio-settings x20s-en.bin

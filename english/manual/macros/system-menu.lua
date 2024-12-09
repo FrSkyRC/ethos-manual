@@ -1,4 +1,7 @@
-dofile("common.lua")
+-- 2024-12-02 LT edit due to documents folder added in sd/
+
+--dofile("common.lua")
+simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("fwexample.bin")
 simulator.pressKey(KEY_ENTER) -- Ack the checklist warnings
@@ -7,10 +10,10 @@ simulator.pressKey(KEY_SYS) -- System page
 simulator.turnRotaryEncoder(1) -- File manager selected
 simulator.screenshot("../assets/system-icon-filemanager.png")
 simulator.pressKey(KEY_ENTER)
-if system.getVersion()["board"] == "X20PRO" then
-    simulator.screenshot("../assets/system-filemanager-radio.png")
-    simulator.pressKey(KEY_PAGE)
-end    
+-- if system.getVersion()["board"] == "X20PRO" then
+--     simulator.screenshot("../assets/system-filemanager-radio.png")
+--     simulator.pressKey(KEY_PAGE)
+-- end    
 simulator.screenshot("../assets/system-filemanager-sd.png")
 simulator.pressKey(KEY_ENTER) -- enter inside [audio]
 simulator.turnRotaryEncoder(1)
@@ -40,7 +43,7 @@ simulator.screenshot("../assets/system-filemanager-bitmaps.png")
 simulator.turnRotaryEncoder(-1)
 simulator.pressKey(KEY_ENTER) -- back inside [bitmaps]
 simulator.pressKey(KEY_ENTER) -- back inside [SD:]
-simulator.turnRotaryEncoder(2)
+simulator.turnRotaryEncoder(3) -- skip docs 2024-12-02
 simulator.pressKey(KEY_ENTER) -- enter inside [firmware]
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
@@ -64,7 +67,7 @@ simulator.screenshot("../assets/system-filemanager-flash-OTA.png")
 simulator.pressKey(KEY_RTN) -- close the menu
 simulator.turnRotaryEncoder(-4)
 simulator.pressKey(KEY_ENTER) -- back inside [SD:]
-simulator.turnRotaryEncoder(4)
+simulator.turnRotaryEncoder(5) -- skip dics 2024-12-02
 simulator.pressKey(KEY_ENTER, 0.6) -- [Enter Long] on models
 simulator.turnRotaryEncoder(1)
 simulator.screenshot("../assets/system-filemanager-bluetooth-receive.png")

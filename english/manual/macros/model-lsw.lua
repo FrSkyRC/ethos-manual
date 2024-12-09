@@ -1,5 +1,7 @@
+-- 2024-12-03 change simulator.setSwitch(0, 1) to simulator.setSwitch(1, 1) to avoide conflict with Thr Cut on sw SA
 
 dofile("common.lua")
+--simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("rarebear.bin")
 
@@ -9,11 +11,11 @@ simulator.turnRotaryEncoder(11)
 simulator.screenshot("../assets/model-icon-lsw.png")
 simulator.pressKey(KEY_ENTER)
 
-simulator.setSwitch(0, 1)
+simulator.setSwitch(1, 1)
 simulator.sleep(1) -- wait for checklist to load
 simulator.screenshot("../assets/model-lsw-confirm-lsw-true.png")
 simulator.pressKey(KEY_ENTER)
-simulator.setSwitch(0, 0)
+simulator.setSwitch(1, 0)
 simulator.sleep(1) -- wait for checklist to load
 simulator.screenshot("../assets/model-lsw-confirm-lsw-false.png")
 simulator.pressKey(KEY_ENTER)

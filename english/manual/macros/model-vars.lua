@@ -1,4 +1,7 @@
-dofile("common.lua")
+-- 2024-12-03 change scroll from 8 to 9 in category to skip over gyro switch
+
+--dofile("common.lua")
+simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("blaster.bin")
 
@@ -59,7 +62,7 @@ simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(8)
+simulator.turnRotaryEncoder(9) -- 2024-12-03 change 8 to 9 to skip over gyro switch
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER)
@@ -78,7 +81,7 @@ simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(8)
+simulator.turnRotaryEncoder(9) -- 2024-12-03 change 8 to 9 to skip over gyro switch
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER)
@@ -122,7 +125,7 @@ simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(7)
+simulator.turnRotaryEncoder(8) -- 2024-12-03 change 7 to 8 to skip over gyro switch
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER)
