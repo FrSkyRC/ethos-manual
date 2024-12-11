@@ -1,4 +1,5 @@
 -- 2024-12-03 change simulator.setSwitch(0, 1) to simulator.setSwitch(1, 1) to avoide conflict with Thr Cut on sw SA
+-- 2024-12-11 work-around for encoder skipping
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -143,24 +144,29 @@ simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(-1)
 simulator.screenshot("../assets/model-lsw-edge-during-gt0-rising-edge.png")
 simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) -- back on rising edge
 simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN) -- triple dash on 2nd param
 simulator.turnRotaryEncoder(-1)
 simulator.pressKey(KEY_ENTER)
 simulator.touch(390, 439)
 simulator.touch(40, 443)
-simulator.turnRotaryEncoder(-2)
+simulator.turnRotaryEncoder(-2) --- reduce from 5s to 3s
 simulator.pressKey(KEY_RTN)
 simulator.screenshot("../assets/model-lsw-edge-during-eq0.png")
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(-1)
+simulator.turnRotaryEncoder(-1) -- reduce from 3s to 2s
 simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(30)
+simulator.pressKey(KEY_ENTER) -- edit 2nd param
+-- simulator.turnRotaryEncoder(30) -- 2024-12-11
+simulator.touch(391, 444) -- increase steps
+simulator.turnRotaryEncoder(3)
 simulator.pressKey(KEY_RTN)
 simulator.screenshot("../assets/model-lsw-edge-during-gt0.png")
+
+--simulator.pressKey(KEY_RTN)
+--simulator.screenshot("../assets/model-lsw-edge-during-gt0.png")
 
 simulator.turnRotaryEncoder(-3)
 

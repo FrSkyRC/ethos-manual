@@ -5,6 +5,8 @@ To run the screenshot bash scripts for the EN manual
 ----------------------------------------------------
 Run cmd as admin
 Bash
+cd /mnt/c/Github/ethos-manual/english/manual
+
 cd /mnt/c/gittestmanual/manual
 cd /mnt/c/gittestmanualde/manual
 cd /mnt/c/gittestmanuales/manual
@@ -111,7 +113,13 @@ lotharthole@192-168-1-2 ethos % cd manual
 lotharthole@192-168-1-2 manual % sh cpimages.sh
 
 
-Language differences
+Language differences:
 1. DE and ES have their own radio .bin files due to language setting
 2. The Extra fwexample.bin models have different Timer names
 3. The DE model-select.lua has German category names
+
+Screens with telemetry sources:
+source-sensor-maxi
+Vfr in timer play value
+RSSI Min in the Value widget example
+RSSI Max in Sensor options p19
