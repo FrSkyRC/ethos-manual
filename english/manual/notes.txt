@@ -6,6 +6,8 @@ To run the screenshot bash scripts for the EN manual
 Run cmd as admin
 Bash
 cd /mnt/c/Github/ethos-manual/english/manual
+cd /mnt/c/Github/ethos-manual/german/manual
+cd /mnt/c/Github/ethos-manual/spanish/manual
 
 cd /mnt/c/gittestmanual/manual
 cd /mnt/c/gittestmanualde/manual
