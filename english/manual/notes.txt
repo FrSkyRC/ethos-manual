@@ -119,6 +119,7 @@ Language differences:
 1. DE and ES have their own radio .bin files due to language setting
 2. The Extra fwexample.bin models have different Timer names
 3. The DE model-select.lua has German category names
+4. zblank.bin calls up the zblank.md checklist file
 
 Screens with telemetry sources:
 source-sensor-maxi
