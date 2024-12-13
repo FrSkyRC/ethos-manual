@@ -5,45 +5,70 @@ To run the screenshot bash scripts for the EN manual
 ----------------------------------------------------
 Run cmd as admin
 Bash
-cd /mnt/c/Users/lotharthole/manual
+cd /mnt/c/Github/ethos-manual/english/manual
+cd /mnt/c/Github/ethos-manual/german/manual
+cd /mnt/c/Github/ethos-manual/spanish/manual
+
+cd /mnt/c/gittestmanual/manual
+cd /mnt/c/gittestmanualde/manual
+cd /mnt/c/gittestmanuales/manual
+
+cd /mnt/c/Users/lotharthole/manual (old)
+
+
 sh screenshots.sh -- full set
 or
 sh sysmenu.sh -- runs sysmenu.lua (uses fwexample.bin)
+sh proshots.sh -- for the x20 pro screenshots --runsx20pro.lua (uses rarebear.bin)
 sh mainui.sh -- for mainviews and user interface screenshots -- runs mainview.lua and user-interface.lua (uses fwexample.bin)
-sh proshots.sh -- for the x20 pro screenshots (uses oxalys.bin exclusive to pro)
-sh x18s-shots.sh -- for the x18s screenshots (uses fwexample.bin)
+sh modelselect -- for model select section -- runs model-select.lua (uses rarebear.bin)
+sh modeledit.sh -- for model/edit section --runs model-edit.lua (uses fwexample.bin) -- relies on Extra model
+sh modelfm.sh -- for model/flight modes section runs model-fm.lua (uses zBlank.bin) with blank fm
+sh modelmixes.sh -- for model/mixes first section --runs model-mixes.lua (uses rarebear.bin)
+sh modelmixesfree.sh -- for model mixes - free mix --runs model-mixes-free.lua (uses rarebear.bin)
+sh modeloutputs.sh -- for model outputs --runs model-outputs.lua (uses )
+sh modeltimers.sh -- for model timers --runs model-timers.lua (uses rarebear.bin)
+sh modeltrims.sh -- for model trims --runs model-trims.lua (uses blaster.bin for offset trims) 
+sh modelcurves.sh -- for model curves --runs model-curves.lua  
+sh modelchecklist.sh -- runs model-checklist.lua 
+sh modelblanks.sh --runs model-blanks.lua 
+sh modellsw.sh -- runs model-lsw.lua 
+sh modelsf.sh --runs model-sf.lua 
+sh modelvars.sh --runs model-vars.lua 
+sh modeltrainer.sh --runs  model-trainer.lua 
+sh modelchview.sh --runs model-chview.lua 
+sh display.sh --runs display.lua 
+sh modellua.sh --runs model-lua.lua 
+sh x18s.sh --runs x18s.lua 
+sh trainer.sh --runs trainer-take-back.lua 
+sh proawshots.sh --runs x20proaw.lua
 
-sh modelselect -- for model select section (uses rarebear.bin)
-sh modeledit.sh -- for model/edit section (uses fwexample.bin) -- relies on Extra model
-sh modelfm.sh -- for model/flight modes section (uses zBlank.bin) with blank fm
-sh modelmixes.sh -- for model/mixes first section (uses rarebear.bin)
-sh modelmixesfree.sh -- for model mixes - free mix (uses rarebear.bin)
-sh modeltimers.sh -- for model timers (uses rarebear.bin)
-sh modeltrims.sh -- for model trims (uses blaster.bin for offset trims) 
-sh modelcurves.sh -- for model  curves 
+sh toolbars.sh --runs toolbars.lua (*** Note must be last because it generates a lua error ****)
 
--- To edit models: (from Bash window)
--- "C:\Program Files (x86)\FrSky\Ethos\X20S\simulator.exe" --radio-settings x20s-en.bin
--- "/mnt/c/Program Files (x86)\FrSky\Ethos\X20S\simulator.exe" --radio-settings x20s-en.bin
+Lua scripts
+common.lua is in all macros
 
-To run the screenshot bash scripts for the model select section only
---------------------------------------------------------------------
-Run cmd as admin
-Bash
-cd /mnt/c/Users/lotharthole/manual-model
-sh modelselect -- for model select section, it switches the model folder
 
-or manually
-run setman-model, then
-simman-model
+To be done:
+model-rf.lua 
+
 
 To run sim for manual manually to allow editing of models etc
 -------------------------------------------------------------
 From cmd window
 Run cmd as admin
 setman - to set up the folder
-simman - to run sim 
-simmanro - to run sim in read only mode
+simman - to run X20S sim 
+simmanro - to run X20S sim in read only mode
+
+simmanpro - to run X20PRO sim 
+simmanro - to run X20PRO sim in read only mode
+
+simman - to run X20PROAW sim 
+simmanro - to run X20PROAW sim in read only mode
+
+simman - to run X20S sim 
+simmanro - to run X20S sim in read only mode
 
 1. For screenshots.sh (or sysmenu, mainui, proshots individually)
 Rename model to Example in Model/edit
@@ -75,29 +100,6 @@ Nightly build warning is removed, simulator can be considered as safe to fly
 --exec option added to execute a lua script as a macro
 
 
-
-
-
-
-
-"C:\Program Files (x86)\FrSky\Ethos\X20S\simulator.exe" --exec .\scripts\UIandNav.lua --radio-settings x20s-en.bin                                                                                        
-
-
-"C:\Program Files (x86)\FrSky\Ethos\X20S\simulator.exe" --exec .\scripts\keyboard.lua --radio-settings x20s-en.bin --no-gui --no-audio
-
-"C:\Program Files (x86)\FrSky\Ethos\X20S\simulator.exe" --exec .\scripts\keyboard.lua --radio-settings x20s-en.bin
-
-"C:\Program Files (x86)\FrSky\Ethos\X20S\simulator.exe" --exec .\scripts\trim_test.lua --radio-settings x20s-en.bin --no-write
-
-"C:\Program Files (x86)\FrSky\Ethos\X20S\simulator.exe" --exec .\scripts\mixer_test.lua --radio-settings x20s-en.bin --no-write
-
-
-
-C:\Users\lotharthole\AppData\Local\VirtualStore\Program Files (x86)\FrSky\Ethos\X20S\models
-
-
-
-
 Changes for Bertrand
 1. topbar.bin : change model name to Katana
 2. fwexample.bin : remains as model 'Extra'
@@ -113,7 +115,13 @@ lotharthole@192-168-1-2 ethos % cd manual
 lotharthole@192-168-1-2 manual % sh cpimages.sh
 
 
-Language differences
+Language differences:
 1. DE and ES have their own radio .bin files due to language setting
 2. The Extra fwexample.bin models have different Timer names
 3. The DE model-select.lua has German category names
+
+Screens with telemetry sources:
+source-sensor-maxi
+Vfr in timer play value
+RSSI Min in the Value widget example
+RSSI Max in Sensor options p19
