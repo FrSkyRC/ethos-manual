@@ -55,7 +55,8 @@ To run sim for manual manually to allow editing of models etc
 -------------------------------------------------------------
 From cmd window
 Run cmd as admin
-setman - to set up the folder
+--setman - to set up the folder (old)
+setman-gittest - to set up the folder at c:\gittest\manual
 simman - to run X20S sim 
 simmanro - to run X20S sim in read only mode
 
