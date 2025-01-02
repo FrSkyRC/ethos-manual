@@ -78,14 +78,15 @@ simulator.pressKey(KEY_ENTER)
 simulator.screenshot("../assets/model-modelselect-model-wizard-airplane.png")
 simulator.pressKey(KEY_PAGE)
 simulator.screenshot("../assets/model-modelselect-model-wizard-rx.png")
-simulator.pressKey(KEY_PAGE)
-simulator.pressKey(KEY_PAGE)
-simulator.pressKey(KEY_PAGE)
-simulator.pressKey(KEY_PAGE)
-simulator.pressKey(KEY_PAGE)
-simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE) -- engine
+simulator.pressKey(KEY_PAGE) -- ailerons and flaps
+simulator.pressKey(KEY_PAGE) -- tail
+simulator.pressKey(KEY_PAGE) -- elevator and rudder
+simulator.pressKey(KEY_PAGE) -- channels reassignment
+simulator.screenshot("../assets/model-modelselect-model-wizard-ch-reassignment.png")
+simulator.pressKey(KEY_PAGE) -- enter name
 simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) -- go into edit name
 simulator.touch(513, 302)
 simulator.touch(68, 399)
 simulator.touch(715, 351)
