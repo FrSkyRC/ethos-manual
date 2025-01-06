@@ -125,3 +125,15 @@ source-sensor-maxi
 Vfr in timer play value
 RSSI Min in the Value widget example
 RSSI Max in Sensor options p19
+
+
+
+Sim commands
+simulator.setSwitch(3, 2) -- set switch SD down as trainer switch
+-- 0 = STICK_LEFT_HORIZONTAL (Rudder)
+-- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
+-- 2 = STICK_RIGHT_VERTICAL (Elevator)
+-- 3 = STICK_RIGHT_HORIZONTAL (Aileron)
+simulator.setAnalog(1, -100) -- set thr to -100
+simulator.setAnalog(ANALOG_LAST_SLIDER, -100)
+simulator.sleep(1) -- wait 

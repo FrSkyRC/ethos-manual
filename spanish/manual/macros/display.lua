@@ -172,9 +172,14 @@ simulator.screenshot("../assets/display-main-view.png")
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("../assets/display-widget-config-options.png")
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-
-
-
-simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_RTN,1)
+-- get glider mixes library screenshot
+simulator.pressKey(KEY_MDL)
+simulator.turnRotaryEncoder(4)
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(1)
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(2)
+simulator.pressKey(KEY_ENTER)
+simulator.screenshot("../assets/model-mixes-library-glider.png")
+simulator.pressKey(KEY_RTN, 1)

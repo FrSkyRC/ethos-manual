@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# note the lines with gui enabled must be left on, the sim does not run properly (it skips) if gui is turned off on these
+
 ETHOS='/mnt/c/Program Files (x86)/FrSky/Ethos'
 
 "${ETHOS}/X20S/simulator.exe"   --read-only --no-gui  --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/system-menu.lua
@@ -63,7 +65,7 @@ rm -r 'scripts/demo source'
 
 "${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/trainer-take-back.lua
 
-"${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/basic-example.lua
+"${ETHOS}/X20S/simulator.exe"   --read-only --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/basic-example.lua
 
 "${ETHOS}/X18S/simulator.exe" --read-only --no-gui --no-audio --radio-settings ./x18s-en.bin --sd-directory ./sd --flash-directory ./flash --radio-directory ./sd --exec ./macros/x18s.lua
 
