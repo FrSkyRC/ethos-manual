@@ -24,19 +24,19 @@ sh modeledit.sh -- for model/edit section --runs model-edit.lua (uses fwexample.
 sh modelfm.sh -- for model/flight modes section runs model-fm.lua (uses zBlank.bin) with blank fm
 sh modelmixes.sh -- for model/mixes first section --runs model-mixes.lua (uses rarebear.bin)
 sh modelmixesfree.sh -- for model mixes - free mix --runs model-mixes-free.lua (uses rarebear.bin)
-sh modeloutputs.sh -- for model outputs --runs model-outputs.lua (uses )
+sh modeloutputs.sh -- for model outputs --runs model-outputs.lua (uses zBalanace.bin)
 sh modeltimers.sh -- for model timers --runs model-timers.lua (uses rarebear.bin)
 sh modeltrims.sh -- for model trims --runs model-trims.lua (uses blaster.bin for offset trims) 
-sh modelcurves.sh -- for model curves --runs model-curves.lua  
-sh modelchecklist.sh -- runs model-checklist.lua 
-sh modelblanks.sh --runs model-blanks.lua 
-sh modellsw.sh -- runs model-lsw.lua 
-sh modelsf.sh --runs model-sf.lua 
-sh modelvars.sh --runs model-vars.lua 
-sh modeltrainer.sh --runs  model-trainer.lua 
-sh modelchview.sh --runs model-chview.lua 
-sh display.sh --runs display.lua 
-sh modellua.sh --runs model-lua.lua 
+sh modelcurves.sh -- for model curves --runs model-curves.lua  (uses zblank.bin)
+sh modelchecklist.sh -- runs model-checklist.lua (uses rarebear.bin)
+sh modelblanks.sh --runs model-blanks.lua (uses zblank.bin) 
+sh modellsw.sh -- runs model-lsw.lua (uses rarebear.bin)
+sh modelsf.sh --runs model-sf.lua (uses rarebear.bin) 
+sh modelvars.sh --runs model-vars.lua (uses blaster.bin) 
+sh modeltrainer.sh --runs  model-trainer.lua (uses rarebear.bin) 
+sh modelchview.sh --runs model-chview.lua (uses blaster.bin) 
+sh display.sh --runs display.lua (uses geronimo.bin)
+sh modellua.sh --runs model-lua.lua  (uses rarebear.bin)
 sh x18s.sh --runs x18s.lua 
 sh trainer.sh --runs trainer-take-back.lua 
 sh proawshots.sh --runs x20proaw.lua
