@@ -117,7 +117,8 @@ lotharthole@192-168-1-2 manual % sh cpimages.sh
 Language differences:
 1. DE and ES have their own radio .bin files due to language setting
 2. The Extra fwexample.bin models have different Timer names
-3. The DE model-select.lua has German category names
+3. The DE model-select.lua has German category names, and scrolls down 4 to the Segler category
+3a. The DE screenshots.sh deletes German folders
 4. zblank.bin calls up the zblank.md checklist file
 
 Screens with telemetry sources:
