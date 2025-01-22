@@ -1,4 +1,5 @@
 dofile("common.lua")
+--simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("rarebear.bin") -- relies on many models
 simulator.pressKey(KEY_ENTER) -- Ack the checklist warnings
@@ -8,28 +9,26 @@ simulator.screenshot("../assets/model-menu.png")
 simulator.turnRotaryEncoder(1) -- Model select
 simulator.screenshot("../assets/model-icon-modelselect.png")
 simulator.pressKey(KEY_ENTER)
-
-simulator.touch(764, 85) -- add cat
-simulator.touch(321, 350) --F
-simulator.touch(67, 403) --shift
-simulator.touch(714, 352) --l
-simulator.touch(513, 306) --u
-simulator.touch(400, 346) --g
-simulator.touch(163, 401) --z
-simulator.touch(197, 305) --e
-simulator.touch(517, 303) --u
-simulator.touch(397, 354) --g
+simulator.touch(758, 91) -- add cat
+simulator.touch(86, 351) -- shift
+simulator.touch(76, 405) -- A
+simulator.touch(599, 301) -- i
+simulator.touch(279, 304) --r
+simulator.touch(754, 303) --p
+simulator.touch(719, 354) --l
+simulator.touch(81, 356) --a
+simulator.touch(556, 405) --n
+simulator.touch(198, 306) --e
 simulator.screenshot("../assets/model-modelselect-create-airplane-folder.png")
 simulator.touch(461, 191) -- Enter
-simulator.touch(751, 83) -- add cat
-simulator.touch(166, 350) --S
-simulator.touch(61, 403) --shift
-simulator.touch(197, 308) --e
-simulator.touch(396, 359) --g
-simulator.touch(716, 356) --l
-simulator.touch(205, 303) --e
-simulator.touch(280, 302) --r
-
+simulator.touch(756, 80) --add cat
+simulator.touch(393, 348) --G
+simulator.touch(57, 402) --shift
+simulator.touch(715, 355) --l
+simulator.touch(600, 300) --i
+simulator.touch(233, 351) --d
+simulator.touch(186, 304) --e
+simulator.touch(279, 302) --r
 simulator.touch(450, 184) -- Enter
 simulator.touch(751, 79) -- add cat
 simulator.touch(476, 350)
@@ -65,7 +64,7 @@ simulator.touch(525, 319)
 simulator.turnRotaryEncoder(3)
 simulator.screenshot("../assets/model-modelselect-folder-change-select.png")
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(4) -- different for DE, was 2 for EN
+simulator.turnRotaryEncoder(2)
 simulator.screenshot("../assets/model-modelselect-folder-change-glider.png")
 -- simulator.pressKey(KEY_ENTER) -- don't actually move 
 -- simulator.touch(84, 80)
@@ -116,7 +115,7 @@ simulator.pressKey(KEY_PAGE)
 simulator.pressKey(KEY_PAGE)
 simulator.pressKey(KEY_PAGE)
 simulator.pressKey(KEY_PAGE)
-simulator.turnRotaryEncoder(14)
+simulator.turnRotaryEncoder(15)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(3)
 simulator.pressKey(KEY_ENTER)
