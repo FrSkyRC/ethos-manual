@@ -66,8 +66,10 @@ simulator.screenshot("../assets/model-modelselect-folder-change-select.png")
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(2)
 simulator.screenshot("../assets/model-modelselect-folder-change-glider.png")
-simulator.pressKey(KEY_ENTER)
-simulator.touch(84, 80)
+-- simulator.pressKey(KEY_ENTER) -- don't actually move 
+-- simulator.touch(84, 80)
+simulator.pressKey(KEY_RTN) -- escape from model options
+simulator.pressKey(KEY_PAGE) -- page to airplane cat
 simulator.screenshot("../assets/model-modelselect-folder-airplane-select.png")
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(2)
