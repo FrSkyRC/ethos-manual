@@ -106,6 +106,8 @@ simulator.pressKey(KEY_ENTER)
 -- simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_PAGE)
 simulator.screenshot("../assets/model-modelselect-model-wizard-ultimate.png")
+-- The next section is necessary because we are in read only mode and the above did not really create the Ultimate model
+-- so we go the the existing Ultimate for the last screenshots 
 simulator.pressKey(KEY_RTN, 1)
 simulator.pressKey(KEY_MDL)
 simulator.turnRotaryEncoder(1)

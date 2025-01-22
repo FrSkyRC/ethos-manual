@@ -19,7 +19,7 @@ or
 sh sysmenu.sh -- runs sysmenu.lua (uses fwexample.bin)
 sh proshots.sh -- for the x20 pro screenshots --runsx20pro.lua (uses rarebear.bin)
 sh mainui.sh -- for mainviews and user interface screenshots -- runs mainview.lua and user-interface.lua (uses fwexample.bin)
-sh modelselect -- for model select section -- runs model-select.lua (uses rarebear.bin)
+sh modelselect -- for model select section -- runs model-select.lua (uses rarebear.bin and also relies on ultimate 60.bin)
 sh modeledit.sh -- for model/edit section --runs model-edit.lua (uses fwexample.bin) -- relies on Extra model
 sh modelfm.sh -- for model/flight modes section runs model-fm.lua (uses zBlank.bin) with blank fm
 sh modelmixes.sh -- for model/mixes first section --runs model-mixes.lua (uses rarebear.bin)
