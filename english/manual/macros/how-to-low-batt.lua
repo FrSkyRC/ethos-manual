@@ -70,9 +70,9 @@ simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER) -- edit delay before active
 simulator.touch(391, 447)
 simulator.turnRotaryEncoder(4)
-simulator.screenshot("../assets/how-to-low-batt-lsw-battlow-lipo-lowest.png")
-simulator.pressKey(KEY_RTN)
 
+simulator.pressKey(KEY_RTN)
+simulator.screenshot("../assets/how-to-low-batt-lsw-battlow-lipo-lowest.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 simulator.screenshot("../assets/how-to-low-batt-lsw-summary.png")
