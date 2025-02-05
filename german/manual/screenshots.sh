@@ -71,7 +71,10 @@ rm -r 'scripts/demo source'
 
 "${ETHOS}/X20S/simulator.exe"   --read-only --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/heli-example.lua
 
-"${ETHOS}/X20S/simulator.exe"   --read-only ==no-gui --no-audio --documents-directory ./sd/documents --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/how-to-low-batt.lua
+"${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --documents-directory ./sd/documents --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/how-to-low-batt.lua
+
+"${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --documents-directory ./sd/documents --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/how-to-consumption.lua
+
 
 "${ETHOS}/X18S/simulator.exe" --read-only --no-gui --no-audio --radio-settings ./x18s-en.bin --sd-directory ./sd --flash-directory ./flash --radio-directory ./sd --exec ./macros/x18s.lua
 
