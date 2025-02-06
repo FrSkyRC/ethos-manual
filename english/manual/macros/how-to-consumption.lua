@@ -76,7 +76,7 @@ simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
-simulator.screenshot("../assets/how-to-consumption-sensor-edit.png")
+simulator.screenshot("../assets/how-to-consumption-sensor-edit2.png")
 simulator.pressKey(KEY_RTN, 1)
 -- simulator.pressKey(KEY_RTN)
 -- end of create calc sensor, start of LSW
