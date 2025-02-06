@@ -127,6 +127,13 @@ simulator.touch(388, 445)
 simulator.touch(392, 443)
 simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_RTN)
+
+simulator.turnRotaryEncoder(1)
+simulator.pressKey(KEY_ENTER)
+simulator.touch(389, 449)
+simulator.turnRotaryEncoder(-1)
+simulator.pressKey(KEY_RTN)
+
 simulator.screenshot("../assets/how-to-consumption-lsw-delta200mAh.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
