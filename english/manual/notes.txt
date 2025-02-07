@@ -40,6 +40,8 @@ sh modellua.sh --runs model-lua.lua  (uses rarebear.bin)
 sh x18s.sh --runs x18s.lua 
 sh trainer.sh --runs trainer-take-back.lua 
 sh proawshots.sh --runs x20proaw.lua
+sh howto1.sh -- runs how-to-low-batt.lua (uses katana.bin)
+sh howto3.sh -- runs how-to-consumption.lua (uses katana.bin)
 
 sh toolbars.sh --runs toolbars.lua (*** Note must be last because it generates a lua error ****)
 
