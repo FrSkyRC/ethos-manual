@@ -37,9 +37,9 @@ sh modeltrainer.sh --runs  model-trainer.lua (uses rarebear.bin)
 sh modelchview.sh --runs model-chview.lua (uses blaster.bin) 
 sh display.sh --runs display.lua (uses geronimo.bin)
 sh modellua.sh --runs model-lua.lua  (uses rarebear.bin)
-sh x18s.sh --runs x18s.lua 
-sh trainer.sh --runs trainer-take-back.lua 
-sh proawshots.sh --runs x20proaw.lua
+sh x18s.sh --runs x18s.lua (uses fwexample.bin)
+sh trainer.sh --runs trainer-take-back.lua (use oxalys.bin)
+sh proawshots.sh --runs x20proaw.lua (uses fwexample.bin)
 sh howto1.sh -- runs how-to-low-batt.lua (uses katana.bin)
 sh howto3.sh -- runs how-to-consumption.lua (uses katana.bin)
 
@@ -104,7 +104,7 @@ Nightly build warning is removed, simulator can be considered as safe to fly
 Changes for Bertrand
 1. topbar.bin : change model name to Katana
 2. fwexample.bin : remains as model 'Extra'
-3. oxalys.bin : is a clone of fwexample.bin for X20Pro
+3. oxalys.bin : is a clone of fwexample.bin ??
 4. rarebear.bin : used for model macros
 5. weasel.bin used for model/select since not visible in select screen
 
