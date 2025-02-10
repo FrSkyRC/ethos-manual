@@ -1,0 +1,34 @@
+2024-12-01 replace --dofile("common.lua") in all macros due to lua::path error
+with 
+    --dofile("common.lua")
+    simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
+
+2024-12-02 replace simulator.adcValue() with simulator.setAnalog()
+
+2024-12-02 repeat above for x18s.lua and x20pro.lua
+
+2024-12-03 edit system-menu.lua due to documents folder added in sd/
+
+2024-12-03 edit model-trims.lua due to gyro switch category added
+
+2024-12-03 edit model-vars.lua : change scroll from 8 to 9 in category to skip over gyro switch
+
+2024-12-03 edit model-blanks.lua : chnage model from zNewModel.bin to zblank.bin ; copy geronimo.md to zblank.md and move it to the models folder
+
+2024-12-03 edit model-timers.lua : simulator.setSwitch(0, 1) -- set switch A to mid for thr active
+
+2024-12-03 edit model-lsw.lua : -- 2024-12-03 change simulator.setSwitch(0, 1) to simulator.setSwitch(1, 1) to avoide conflict with Thr Cut on sw SA
+
+2024-12-04 edit display.lua : --2024-12-04 change adcValue() to setAnalog()
+
+2024-12-04 edit mainview.lua : -- 2024-12-04 change adcValue() to setAnalog()
+
+2024-12-04 edit user-interface.lua: --2024-12-04 change adcValue() to setAnalog()
+
+2024-12-04 edit model-chview.lua: --2024-12-04 change adcValue() to setAnalog()
+
+2024-12-04 edit model-outputs.lua: --2024-12-04 change adcValue() to setAnalog()
+
+2024-12-06 edit system-menu.lua to remove the x20pro bit
+
+2024-12-07 edit model-mixes-free.lua to add the new trim action
