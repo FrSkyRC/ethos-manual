@@ -1,14 +1,14 @@
 ## Checklist Demo
 
-The Checklist can be created by the user using a Markdown editor for enhanced text or a simple text editor for plain text.
+La Checklist può essere creata dall'utente usando un editor Markdown per testo potenziato o un semplice Edito di testo
 
-Enhanced examples:
+Esempi Potenziati / Enhanced:
 
 ## Emphasis
 
-**this is bold text**
+**questo è un testo in grassetto**
 
-*this is italic text*
+*questo in italico*
 
 - check 1
 - check 2
