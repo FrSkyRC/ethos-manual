@@ -8,7 +8,7 @@ Bash
 cd /mnt/c/Github/ethos-manual/english/manual
 cd /mnt/c/Github/ethos-manual/german/manual
 cd /mnt/c/Github/ethos-manual/spanish/manual
-cd /mnt/c/Github/ethos-manual/italian_lt/manual
+cd /mnt/c/Github/ethos-manual/italian/manual
 
 cd /mnt/c/gittest/manual
 
