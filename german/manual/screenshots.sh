@@ -10,7 +10,7 @@ ETHOS='/mnt/c/Program Files (x86)/FrSky/Ethos'
 
 "${ETHOS}/X20S/simulator.exe"   --read-only --no-gui  --no-audio --radio-settings ./x20s-en.bin --exec ./macros/mainview.lua
 
-"${ETHOS}/X20S/simulator.exe"   --read-only --no-gui  --no-audio --radio-settings ./x20s-en.bin --exec ./macros/user-interface.lua
+"${ETHOS}/X20S/simulator.exe"   --read-only --no-audio --radio-settings ./x20s-en.bin --exec ./macros/user-interface.lua
 
 
 #"${ETHOS}/X20S/simulator.exe"   --read-only --no-gui  --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-menu.lua
@@ -77,7 +77,7 @@ rm -r 'scripts/demo source'
 
 "${ETHOS}/X20S/simulator.exe"   --read-only --no-audio --documents-directory ./sd/documents --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/how-to-butterfly.lua
 
-"${ETHOS}/X20S/simulator.exe"   --read-only --no-audio --documents-directory ./sd/documents --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/how-to-in-flight-comp.lua
+"${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --documents-directory ./sd/documents --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/how-to-in-flight-comp.lua
 
 
 "${ETHOS}/X18S/simulator.exe" --read-only --no-gui --no-audio --radio-settings ./x18s-en.bin --sd-directory ./sd --flash-directory ./flash --radio-directory ./sd --exec ./macros/x18s.lua
