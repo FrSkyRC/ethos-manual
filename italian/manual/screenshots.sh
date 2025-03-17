@@ -35,6 +35,8 @@ rm -r models/multirotor
 
 "${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-trims.lua
 
+"${ETHOS}/X20S/simulator.exe"   --read-only --no-audio --documents-directory ./sd/documents --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/telemetry.lua
+
 "${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-curves.lua
 
 "${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-checklist.lua
