@@ -248,7 +248,14 @@ simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- cursor on thr mix
 simulator.screenshot("../assets/tut-fw-eg-mixes-thr-edit.png")
-simulator.turnRotaryEncoder(4) -- cursor to thr cut
+--simulator.turnRotaryEncoder(4) -- cursor to thr cut
+simulator.turnRotaryEncoder(3) -- cursor to low pos trim
+simulator.pressKey(KEY_ENTER) -- set low pos trim On
+simulator.sleep(1) -- wait for sim
+simulator.screenshot("../assets/tut-fw-eg-mixes-thr-low-pos-trim.png")
+simulator.pressKey(KEY_ENTER) -- set low pos trim Off
+
+simulator.turnRotaryEncoder(1) -- cursor to thr cur
 simulator.pressKey(KEY_ENTER) -- open thr cut section
 simulator.turnRotaryEncoder(1) -- cursor to active cond
 simulator.pressKey(KEY_ENTER)
@@ -276,11 +283,13 @@ simulator.sleep(1) -- wait for sim
 simulator.turnRotaryEncoder(3) -- scroll back to Sticky
 simulator.screenshot("../assets/tut-fw-eg-mixes-thr-cut-sticky-on.png")
 simulator.pressKey(KEY_ENTER) -- set Sticky Off
-simulator.turnRotaryEncoder(-3) -- scroll to low pos trim
-simulator.pressKey(KEY_ENTER) -- set low pos trim On
-simulator.screenshot("../assets/tut-fw-eg-mixes-thr-low-pos-trim.png")
-simulator.pressKey(KEY_ENTER) -- set low pos trim Off
-simulator.turnRotaryEncoder(6) -- scroll down to thr hold
+-- simulator.turnRotaryEncoder(-3) -- scroll to low pos trim
+-- simulator.pressKey(KEY_ENTER) -- set low pos trim On
+-- simulator.sleep(1) -- wait for sim
+-- simulator.screenshot("../assets/tut-fw-eg-mixes-thr-low-pos-trim.png")
+-- simulator.pressKey(KEY_ENTER) -- set low pos trim Off
+-- imulator.turnRotaryEncoder(6) -- scroll down to thr hold
+simulator.turnRotaryEncoder(3) -- scroll down to thr hold
 simulator.pressKey(KEY_ENTER) -- open thr hold
 -- back to old section
 simulator.turnRotaryEncoder(1) -- scroll to active cond
