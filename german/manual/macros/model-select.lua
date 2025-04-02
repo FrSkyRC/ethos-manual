@@ -108,6 +108,8 @@ simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(-3)
 simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(-1) -- scroll back to name
+simulator.screenshot("../assets/model-modelselect-model-wizard-name.png")
 -- simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_PAGE)
 simulator.screenshot("../assets/model-modelselect-model-wizard-ultimate.png")
