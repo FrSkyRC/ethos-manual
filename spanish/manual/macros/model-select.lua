@@ -81,9 +81,13 @@ simulator.screenshot("../assets/model-modelselect-model-wizard-airplane.png")
 simulator.pressKey(KEY_PAGE)
 simulator.screenshot("../assets/model-modelselect-model-wizard-rx.png")
 simulator.pressKey(KEY_PAGE) -- engine
+simulator.screenshot("../assets/model-modelselect-model-wizard-engine.png")
 simulator.pressKey(KEY_PAGE) -- ailerons and flaps
+simulator.screenshot("../assets/model-modelselect-model-wizard-ail-and-flaps.png")
 simulator.pressKey(KEY_PAGE) -- tail
+simulator.screenshot("../assets/model-modelselect-model-wizard-tail.png")
 simulator.pressKey(KEY_PAGE) -- elevator and rudder
+simulator.screenshot("../assets/model-modelselect-model-wizard-ele-and-rudder.png")
 simulator.pressKey(KEY_PAGE) -- channels reassignment
 simulator.screenshot("../assets/model-modelselect-model-wizard-ch-reassignment.png")
 simulator.pressKey(KEY_PAGE) -- enter name
@@ -106,6 +110,8 @@ simulator.pressKey(KEY_ENTER)
 -- simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_PAGE)
 simulator.screenshot("../assets/model-modelselect-model-wizard-ultimate.png")
+-- The next section is necessary because we are in read only mode and the above did not really create the Ultimate model
+-- so we go the the existing Ultimate for the last screenshots 
 simulator.pressKey(KEY_RTN, 1)
 simulator.pressKey(KEY_MDL)
 simulator.turnRotaryEncoder(1)

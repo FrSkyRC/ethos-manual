@@ -82,9 +82,13 @@ simulator.screenshot("../assets/model-modelselect-model-wizard-airplane.png")
 simulator.pressKey(KEY_PAGE)
 simulator.screenshot("../assets/model-modelselect-model-wizard-rx.png")
 simulator.pressKey(KEY_PAGE) -- engine
+simulator.screenshot("../assets/model-modelselect-model-wizard-engine.png")
 simulator.pressKey(KEY_PAGE) -- ailerons and flaps
+simulator.screenshot("../assets/model-modelselect-model-wizard-ail-and-flaps.png")
 simulator.pressKey(KEY_PAGE) -- tail
+simulator.screenshot("../assets/model-modelselect-model-wizard-tail.png")
 simulator.pressKey(KEY_PAGE) -- elevator and rudder
+simulator.screenshot("../assets/model-modelselect-model-wizard-ele-and-rudder.png")
 simulator.pressKey(KEY_PAGE) -- channels reassignment
 simulator.screenshot("../assets/model-modelselect-model-wizard-ch-reassignment.png")
 simulator.pressKey(KEY_PAGE) -- enter name
