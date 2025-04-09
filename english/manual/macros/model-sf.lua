@@ -1,3 +1,5 @@
+-- 2025-04-07 select vfr and vfrlow line 49 and 69 due to sim sensor and audio file changes
+
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
@@ -45,7 +47,10 @@ simulator.screenshot("../assets/model-sf-play-audio-add-line-type.png")
 simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(-5)
+--simulator.turnRotaryEncoder(-5)
+--simulator.turnRotaryEncoder(-9) -- select vfrlow
+--simulator.turnRotaryEncoder(1)
+simulator.turnRotaryEncoder(3)
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("../assets/model-sf-play-audio-add-play-file.png")
 simulator.pressKey(KEY_RTN)
@@ -64,7 +69,8 @@ simulator.turnRotaryEncoder(10)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(3)
+--simulator.turnRotaryEncoder(3)
+simulator.turnRotaryEncoder(5) -- select vfr instead of rx (due to sim sensor changes)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
