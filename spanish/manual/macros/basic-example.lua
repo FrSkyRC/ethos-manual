@@ -1,4 +1,5 @@
 -- 2025-01-02 create 
+-- 2025-03-28 move low position trim up, graph was not showing; increase erasing free mix name
 -- 0 = STICK_LEFT_HORIZONTAL (Rudder)
 -- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
 -- 2 = STICK_RIGHT_VERTICAL (Elevator)

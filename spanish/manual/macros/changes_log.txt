@@ -32,3 +32,20 @@ with
 2024-12-06 edit system-menu.lua to remove the x20pro bit
 
 2024-12-07 edit model-mixes-free.lua to add the new trim action
+??
+-- 2025-03-28 edit basic-example to move low position trim up, graph was not showing; increase erasing free mix name
+
+-- 2025-04-07 edit how-to-consumption to -- 2025-04-07 line 73 select invert instead of edge
+
+-- edit user interface --2025-04-07 -- select altitude instead of lipo (due to sensors changes)
+
+-- edit model-lsw -- 2025-04-07 -- select ESC consumption instead of GASS (due to sim sensor changes)
+
+-- edit model-mixes -- 2025-04-07 due to new thr mix interlock must set thr to -100 first, then to mid
+
+-- edit model-sf 2025-04-07 select vfr and vfrlow line 49 and 69 due to sim sensor and audio file changes
+
+-- edit model-timers 
+
+2025-04-08 -- modelsf.sh to add --audio-directory ./sd/audio 
+2025-04-08 -- modeltimers.sh to add --audio-directory ./sd/audio 

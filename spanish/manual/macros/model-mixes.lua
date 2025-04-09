@@ -1,9 +1,22 @@
+-- 2025-04-07 due to new thr mix interlock must set thr to -100 first, then to mid
+
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 -- simulator.loadModel("extra.bin")
 -- model must have ail mix with 3 weight rates and no expo
+
 simulator.loadModel("rarebear.bin")
+
+-- 0 = STICK_LEFT_HORIZONTAL (Rudder)
+-- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
+-- 2 = STICK_RIGHT_VERTICAL (Elevator)
+-- 3 = STICK_RIGHT_HORIZONTAL (Aileron)
+simulator.setAnalog(1, -100) -- set thr to -100
+
+
+
+
 
 simulator.setAnalog(ANALOG_LAST_SLIDER, 50)
 simulator.pressKey(KEY_ENTER)
@@ -76,6 +89,8 @@ simulator.turnRotaryEncoder(-2)
 simulator.screenshot("../assets/model-mixes-ail-ch-count.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+
+simulator.setAnalog(1, 0) -- set thr to half way
 simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1)
