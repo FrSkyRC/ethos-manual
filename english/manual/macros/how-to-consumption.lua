@@ -1,4 +1,5 @@
 -- 2025-01-03 first release
+-- 2025-04-07 line 73 select invert instead of edge
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -31,19 +32,19 @@ simulator.turnRotaryEncoder(-21)
 simulator.turnRotaryEncoder(5)
 simulator.screenshot("../assets/how-to-consumption-create-calc-sensor.png")
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(1) -- scroll to consumption
+simulator.pressKey(KEY_ENTER) -- open options
 simulator.screenshot("../assets/how-to-consumption-create-calc-select.png")
-simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN) -- retun
 simulator.turnRotaryEncoder(5)
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) -- edit range max
 simulator.touch(396, 450)
 simulator.touch(396, 450)
 simulator.touch(396, 450)
 simulator.turnRotaryEncoder(-8)
 simulator.touch(22, 442)
 simulator.turnRotaryEncoder(8)
-simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN) -- set to 2800
 simulator.screenshot("../assets/how-to-consumption-sensor-edit.png")
 simulator.turnRotaryEncoder(2)
 --[[
@@ -56,20 +57,20 @@ simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 ]]--
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) -- edit reset
 simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(7)
+simulator.turnRotaryEncoder(7) -- scroll to system event
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) -- edit member
 simulator.turnRotaryEncoder(3)
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) -- select telem active
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_ENTER, 1)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(1)
+simulator.pressKey(KEY_ENTER) -- select invert (instead of edge)
 simulator.pressKey(KEY_RTN)
 
 simulator.turnRotaryEncoder(1)

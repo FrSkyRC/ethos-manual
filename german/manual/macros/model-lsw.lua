@@ -1,6 +1,7 @@
 -- 2024-12-03 change simulator.setSwitch(0, 1) to simulator.setSwitch(1, 1) to avoide conflict with Thr Cut on sw SA
 -- 2024-12-11 work-around for encoder skipping
 -- 2025-02-18 update Sticky for Edge option addition
+-- 2025-04-07 -- select ESC consumption instead of GASS (due to sim sensor changes)
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -75,7 +76,8 @@ simulator.turnRotaryEncoder(9)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(33)
+--simulator.turnRotaryEncoder(33)
+simulator.turnRotaryEncoder(36) -- select ESC consumption instead of GASS (due to sim sensor changes)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)

@@ -118,7 +118,7 @@ lotharthole@192-168-1-2 manual % sh cpimages.sh
 
 
 Language differences:
-1. DE and ES have their own radio .bin files due to language setting
+1. DE and ES and IT have their own radio .bin files due to language setting
 2. The Extra fwexample.bin models have different Timer names
 3. The DE model-select.lua has German category names, and scrolls down 4 to the Segler category
 3a. The DE screenshots.sh deletes German folders
@@ -141,3 +141,5 @@ simulator.setSwitch(3, 2) -- set switch SD down as trainer switch
 simulator.setAnalog(1, -100) -- set thr to -100
 simulator.setAnalog(ANALOG_LAST_SLIDER, -100)
 simulator.sleep(1) -- wait 
+
+Radio .bin files are all named *-en.bin but edited for the language

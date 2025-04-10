@@ -16,8 +16,8 @@ ETHOS='/mnt/c/Program Files (x86)/FrSky/Ethos'
 #"${ETHOS}/X20S/simulator.exe"   --read-only --no-gui  --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-menu.lua
 "${ETHOS}/X20S/simulator.exe"   --read-only --no-gui  --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-select.lua
 cp models/glider/magnus.bin models
-rm -r models/airplane
-rm -r models/glider
+rm -r models/flugzeug
+rm -r models/segler
 rm -r models/heli
 rm -r models/multirotor
 
@@ -45,7 +45,7 @@ rm -r models/multirotor
 
 "${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-lsw.lua
 
-"${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-sf.lua
+"${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --audio-directory ./sd/audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-sf.lua
 
 "${ETHOS}/X20S/simulator.exe"   --read-only --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-vars.lua
 

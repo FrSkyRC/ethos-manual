@@ -1,18 +1,28 @@
 -- 2024-12-03 simulator.setSwitch(0, 1) -- set switch A to mid for thr active
+-- 2025-04-08  due to new thr mix interlock must set thr to -100 first, then to mid; select new audio files
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("rarebear.bin")
 
+-- simulator.setSwitch(3, 2) -- set switch
+-- 0 = STICK_LEFT_HORIZONTAL (Rudder)
+-- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
+-- 2 = STICK_RIGHT_VERTICAL (Elevator)
+-- 3 = STICK_RIGHT_HORIZONTAL (Aileron)
 
+-- simulator.setAnalog(ANALOG_LAST_SLIDER, -100)
+-- simulator.sleep(1) -- wait 
+simulator.setAnalog(1, -100) -- set thr to -100 - sim now requires thr to 0
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_MDL)
 simulator.setSwitch(0, 1) -- enable thr on swotch SA so timer 1 runs
+simulator.setAnalog(1, 0) -- set thr to mid
 simulator.turnRotaryEncoder(6)
 simulator.screenshot("../assets/model-icon-timers.png")
 simulator.pressKey(KEY_ENTER)
-simulator.setSwitch(0, 1) -- set switch A to mid for thr active
+-- simulator.setSwitch(0, 1) -- set switch A to mid for thr active
 simulator.screenshot("../assets/model-timers.png")
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
@@ -103,8 +113,9 @@ simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(3)
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(-10) 
-simulator.pressKey(KEY_ENTER) -- select timpu.wav
+--simulator.turnRotaryEncoder(-10) 
+simulator.turnRotaryEncoder(1) 
+simulator.pressKey(KEY_ENTER) -- select timer-1-elapsed.wav
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 simulator.screenshot("../assets/model-timer1-actions-summary.png")
@@ -182,8 +193,9 @@ simulator.pressKey(KEY_ENTER) -- enter mins
 simulator.pressKey(KEY_RTN) -- accept time
 simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER) -- edit file
-simulator.turnRotaryEncoder(-10)
-simulator.pressKey(KEY_ENTER) -- select timup.wav
+--simulator.turnRotaryEncoder(-10)
+simulator.turnRotaryEncoder(2)
+simulator.pressKey(KEY_ENTER) -- select timer-2-elapsed
 -- simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
