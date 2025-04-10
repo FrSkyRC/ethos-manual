@@ -1,0 +1,104 @@
+RSSI
+RX 
+SWR
+Vfr
+RxBatt
+LiPO
+LiPO
+Altitude
+VSpeed
+RPM
+Current
+GPS
+GPS clock
+GPS speed
+GPS alt
+GPS course
+ADC2
+Air speed
+VFAS
+RB Ch.State
+RB State
+R.Angle 
+P.Angle
+GASS temp1
+GASS temp2
+GASS RPM
+GASS res. vol
+GASS res. %
+GASS flow
+GASS max flow
+GASS avg flow
+H.Pressure
+ESC RPM
+ESC consumption
+RxBatt1
+RxBatt2
+Rx Current
+Rx Quality
+Rx RSSI1
+Rx RSSI2
+Antenna
+RX SNR 
+RF Mode
+Tx Power
+Tx Quality
+Tx RSSI
+Tx SNR 
+
+
+
+RSSI 2.4G
+RX
+RSSI 900M
+RX
+SWR
+VFR 2.4G
+VFR 900M
+RxBatt
+LiPO
+LiPO
+Altitude
+VSpeed
+RPM
+Current
+GPS
+GPS clock
+GPS speed
+GPS alt
+GPS course
+ADC2
+Air speed
+VFAS
+RB Ch.State
+RB State
+R.Angle 
+P.Angle
+GASS temp1
+GASS temp2
+GASS RPM
+GASS res. vol
+GASS res. %
+GASS flow
+GASS max flow
+GASS avg flow
+H.Pressure
+ESC RPM
+ESC consumption
+RxBatt1
+RxBatt2
+Rx Current
+-- no more:
+Rx Quality
+Rx RSSI1
+Rx RSSI2
+Antenna
+RX SNR 
+RF Mode
+Tx Power
+Tx Quality
+Tx RSSI
+Tx SNR 
+
+
+
