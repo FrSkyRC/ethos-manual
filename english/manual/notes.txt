@@ -9,6 +9,7 @@ cd /mnt/c/Github/ethos-manual/english/manual
 cd /mnt/c/Github/ethos-manual/german/manual
 cd /mnt/c/Github/ethos-manual/spanish/manual
 cd /mnt/c/Github/ethos-manual/italian/manual
+cd /mnt/c/Github/ethos-manual/french_LT/manual
 
 cd /mnt/c/gittest/manual
 
