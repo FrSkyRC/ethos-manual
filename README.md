@@ -7,6 +7,7 @@ This commit is now half way and will be finalised on follow-on versions.
 - Online version: https://frsky-rc.gitbook.io/manuel-francais-ethos
 - PDF version: https://github.com/FrSkyRC/ethos-manual/releases/download/1.5.15/ethos-french-manual.pdf
 
+### Manuals in other languages
 PDF copies of the latest manuals in the other languages can be found at
 https://github.com/FrSkyRC/ETHOS-Feedback-Community
 (Links at the bottom of the page.)
