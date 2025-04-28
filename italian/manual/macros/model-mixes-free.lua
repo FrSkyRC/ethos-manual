@@ -309,7 +309,7 @@ simulator.screenshot("../assets/model-mix-free-actions-trim-summary.png")
 simulator.pressKey(KEY_RTN, 1) -- return home
 -- add actions move section to put slow first
 simulator.pressKey(KEY_MDL)
-simulator.turnRotaryEncoder(4)
+simulator.turnRotaryEncoder(4) -- scroll to mixes
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(5)
 simulator.pressKey(KEY_ENTER)
@@ -317,15 +317,16 @@ simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(10)
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(4)
+simulator.turnRotaryEncoder(4) -- scroll to move cmd
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(-4)
+simulator.screenshot("../assets/model-mix-free-actions-slow-move.png")
+simulator.turnRotaryEncoder(-4) -- move up 4
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
+simulator.turnRotaryEncoder(2) -- scroll to curve
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(4)
+simulator.turnRotaryEncoder(4) -- scroll to move cmd
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(-1)
+simulator.turnRotaryEncoder(-1) -- move up 1
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(4)
 --simulator.screenshot("./screenshot3.png")
