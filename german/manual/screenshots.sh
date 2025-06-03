@@ -65,6 +65,8 @@ rm -r 'scripts/lua task example'
 rm -r 'scripts/source example'
 rm -r 'scripts/demo source'
 
+"${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-mix-eg.lua
+
 "${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/trainer-take-back.lua
 
 "${ETHOS}/X20S/simulator.exe"   --read-only --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/basic-example.lua
