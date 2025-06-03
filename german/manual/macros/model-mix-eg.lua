@@ -66,20 +66,36 @@ simulator.pressKey(KEY_RTN)
 simulator.screenshot("../assets/model-mix-eg-using-weight.png")
 simulator.touch(37, 33)
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
+simulator.turnRotaryEncoder(2) -- scroll to add mix
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
+simulator.turnRotaryEncoder(1) --mscroll to free mix 
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
+simulator.turnRotaryEncoder(2) -- scroll to last position
 simulator.pressKey(KEY_ENTER)
+-- simulator.turnRotaryEncoder(6) -- scroll to default weight action
+simulator.turnRotaryEncoder(4) -- scroll to source
+simulator.pressKey(KEY_ENTER)
+
+simulator.turnRotaryEncoder(1) -- scroll to category
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(12) -- scroll to special
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(2) -- scroll scroll to members
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(1) -- scroll to 0
+simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+
 simulator.turnRotaryEncoder(6) -- scroll to default weight action
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(4) -- scroll to del
+simulator.pressKey(KEY_ENTER) -- delete
+simulator.pressKey(KEY_ENTER) -- confirm del
+simulator.turnRotaryEncoder(1) -- scroll to add action
 simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
+simulator.turnRotaryEncoder(2) -- scroll to 
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER)
