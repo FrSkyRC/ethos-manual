@@ -82,6 +82,7 @@ simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 -- simulator.screenshot("./screenshot5.png") -- confirm we are back at weight
 -- end of Direction section
+-- start of Weight section
 simulator.pressKey(KEY_ENTER) 
 simulator.turnRotaryEncoder(1) -- scroll to edit select
 simulator.screenshot("../assets/model-mix-free-actions-weight-edit-select.png")
@@ -130,6 +131,7 @@ simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 simulator.screenshot("../assets/model-mix-free-actions-weight-summary.png")
 -- end of weight action
+-- start of curve section
 simulator.turnRotaryEncoder(1)
 simulator.screenshot("../assets/model-mix-free-actions-weight-summary-add-action.png")
 simulator.pressKey(KEY_ENTER)
@@ -202,8 +204,18 @@ simulator.screenshot("../assets/model-mix-free-actions-curve-expo-edit.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 simulator.screenshot("../assets/model-mix-free-actions-curve-expo-edit-summary.png")
--- strat of diff action
-simulator.turnRotaryEncoder(1)
+
+simulator.pressKey(KEY_ENTER) -- open edit dialog
+simulator.turnRotaryEncoder(4) -- scroll to move cmd
+simulator.screenshot("../assets/model-mix-free-actions-curve-expo-select-move-option.png")
+simulator.pressKey(KEY_ENTER) -- select move
+simulator.screenshot("../assets/model-mix-free-actions-curve-expo-select-move.png")
+simulator.turnRotaryEncoder(-1) -- move up 1
+simulator.pressKey(KEY_ENTER) -- finish move
+simulator.screenshot("../assets/model-mix-free-actions-curve-expo-edit-summary-moved.png")
+-- end of curve action
+-- start of diff action
+simulator.turnRotaryEncoder(2) -- scroll to add new action
 simulator.screenshot("../assets/model-mix-free-actions-curve-summary-add-action.png")
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(2)
@@ -311,25 +323,25 @@ simulator.pressKey(KEY_RTN, 1) -- return home
 simulator.pressKey(KEY_MDL)
 simulator.turnRotaryEncoder(4) -- scroll to mixes
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(5)
+simulator.turnRotaryEncoder(5) -- scroll to free mix
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
+simulator.turnRotaryEncoder(1) -- select edit
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(10)
+simulator.turnRotaryEncoder(10) -- scroll to slow
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(4) -- scroll to move cmd
+simulator.turnRotaryEncoder(4) -- scroll to move cmd option
 simulator.pressKey(KEY_ENTER)
-simulator.screenshot("../assets/model-mix-free-actions-slow-move.png")
 simulator.turnRotaryEncoder(-4) -- move up 4
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2) -- scroll to curve
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(4) -- scroll to move cmd
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(-1) -- move up 1
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(4)
+simulator.pressKey(KEY_ENTER) -- set slow at top
+--simulator.turnRotaryEncoder(2) -- scroll to curve
+--simulator.pressKey(KEY_ENTER)
+--simulator.turnRotaryEncoder(4) -- select move cmd option
+--simulator.pressKey(KEY_ENTER)
+--simulator.turnRotaryEncoder(-1) -- move up 1
+--simulator.pressKey(KEY_ENTER)
+--simulator.turnRotaryEncoder(4)
 --simulator.screenshot("./screenshot3.png")
-simulator.turnRotaryEncoder(-5)
+--simulator.turnRotaryEncoder(-5)
 simulator.screenshot("../assets/model-mix-free-actions-slow-at-top.png")
+simulator.sleep(1) -- wait for screen to be painted
 simulator.pressKey(KEY_RTN, 1)
