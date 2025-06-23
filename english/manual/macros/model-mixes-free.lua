@@ -331,6 +331,7 @@ simulator.turnRotaryEncoder(10) -- scroll to slow
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(4) -- scroll to move cmd option
 simulator.pressKey(KEY_ENTER)
+simulator.screenshot("../assets/model-mix-free-actions-slow-move.png")
 simulator.turnRotaryEncoder(-4) -- move up 4
 simulator.pressKey(KEY_ENTER) -- set slow at top
 --simulator.turnRotaryEncoder(2) -- scroll to curve
