@@ -51,3 +51,9 @@ with
 2025-04-08 -- modeltimers.sh to add --audio-directory ./sd/audio 
 
 -- edit model-fm.lua -- 2025-04-14 add new section for the trims section of the fixed wing example
+
+-- 2025-06-03 model-mix-eg -- In the ‘Logic switches – use with telemetry’ section, add a warning for LSW’s using telemetry
+-- 2025-07-15 basic-example.lua -- adapt macro to new Ethos 1.7 source select
+-- 2025-07-15 model-mixes.lua -- adapt macro to new Ethos 1.7 source select
+-- 2025-07-15 model-mixes-free.lua --  adapt macro to new Ethos 1.7 source select
+-- 2025-07-15 system-menu.lua --  adapt macro to new Ethos 1.7 source select

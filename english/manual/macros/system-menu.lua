@@ -1,4 +1,5 @@
 -- 2024-12-02 LT edit due to documents folder added in sd/
+-- 2025-07-19 adapt macro to new Ethos 1.7 source select
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -103,6 +104,8 @@ simulator.turnRotaryEncoder(3)
 simulator.pressKey(KEY_ENTER, 0.6)
 simulator.screenshot("../assets/system-general-brightness-menu.png")
 simulator.turnRotaryEncoder(3)
+
+--[[
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(5)
@@ -115,6 +118,15 @@ simulator.turnRotaryEncoder(8)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+]]--
+simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(2)
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(8)
+simulator.pressKey(KEY_ENTER)
+
+
 simulator.screenshot("../assets/system-general-brightness-slider.png")
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
@@ -142,7 +154,7 @@ simulator.sleep(10)
 simulator.screenshot("../assets/system-general-audio-bluetooth-connected.png")
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("../assets/system-general-audio-bluetooth-connected-ok.png")
-simulator.turnRotaryEncoder(9)
+simulator.turnRotaryEncoder(7)
 simulator.turnRotaryEncoder(-6)
 simulator.screenshot("../assets/system-general-audio-vario.png")
 simulator.turnRotaryEncoder(9)

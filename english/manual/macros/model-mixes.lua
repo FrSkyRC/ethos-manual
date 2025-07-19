@@ -1,4 +1,5 @@
 -- 2025-04-07 due to new thr mix interlock must set thr to -100 first, then to mid
+-- 2025-07-15 adapt macro to new Ethos 1.7 source select
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -72,6 +73,7 @@ simulator.turnRotaryEncoder(8)
 simulator.pressKey(KEY_ENTER, 1) -- long press diff source
 simulator.turnRotaryEncoder(3)
 simulator.pressKey(KEY_ENTER) -- select use a source
+--[[
 simulator.pressKey(KEY_ENTER) --  cat
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER) -- open cat
@@ -83,6 +85,18 @@ simulator.turnRotaryEncoder(8)
 simulator.pressKey(KEY_ENTER) -- slider right
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+]]--
+--simulator.pressKey(KEY_ENTER, 1240)
+--simulator.turnRotaryEncoder(3)
+--simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(2)
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(8)
+simulator.pressKey(KEY_ENTER)
+simulator.screenshot("./screenshot1.png")
+
+
 simulator.screenshot("../assets/model-mixes-ail-diff.png")
 simulator.turnRotaryEncoder(4)
 simulator.turnRotaryEncoder(-2)
