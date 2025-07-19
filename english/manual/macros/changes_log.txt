@@ -50,4 +50,13 @@ with
 2025-04-08 -- modelsf.sh to add --audio-directory ./sd/audio 
 2025-04-08 -- modeltimers.sh to add --audio-directory ./sd/audio 
 
--- edit model-fm.lua -- 2025-04-14 add new section for the trims section of the fixed wing example
+2025-04-14 -- edit model-fm.lua add new section for the trims section of the fixed wing example
+
+2025-06-03 -- add model-mix-eg to highlight need for Warning! When a logic switch using telemetry is used in a mix, an additional mix action using the same logic switch inverted (i.e when inactive) must be added to ensure that the mix will have valid values even when telemetry is lost.
+
+2025-07-14 -- edit model-mixes-free to add move of the curve above weight straight after curve is done
+
+1.7.0
+2025-07-15 -- edit model-mixes-free for new source select
+2025-07-15 -- edit model-mixes ditto
+
