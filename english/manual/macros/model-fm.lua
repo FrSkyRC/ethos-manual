@@ -1,4 +1,5 @@
 -- 2025-04-14 add new section for the trims section of the fixed wing example
+-- 2025-07-19 adapt macro to new Ethos 1.7 source select
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -19,19 +20,19 @@ simulator.pressKey(KEY_ENTER)
 --[[
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
-simulator.touch(480, 353) -- H
+simulator.touch(480, 353) -- F
 simulator.touch(65, 400) -- shift
-simulator.touch(79, 350) -- a
-simulator.touch(722, 352) -- l
-simulator.touch(321, 350) -- f
-simulator.touch(416, 451) -- space
-simulator.touch(69, 404) -- shift
-simulator.touch(318, 355) -- F
-simulator.touch(71, 400) -- shift
-simulator.touch(722, 351) -- l
-simulator.touch(82, 353) -- a
-simulator.touch(759, 311) -- p
-simulator.touch(163, 352) -- s
+simulator.touch(79, 350) -- l
+simulator.touch(722, 352) -- a
+simulator.touch(321, 350) -- p
+simulator.touch(416, 451) -- s
+simulator.touch(69, 404) -- space
+simulator.touch(318, 355) -- shift
+simulator.touch(71, 400) -- H
+simulator.touch(722, 351) -- a
+simulator.touch(82, 353) -- l
+simulator.touch(759, 311) -- f
+simulator.touch(163, 352) -- 
 simulator.touch(742, 447) -- enter?
 ]]--
 
@@ -54,6 +55,7 @@ simulator.pressKey(KEY_RTN)
 
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
+--[[
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1)
@@ -64,6 +66,13 @@ simulator.turnRotaryEncoder(13)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+]]--
+simulator.pressKey(KEY_ENTER) -- open source select
+simulator.turnRotaryEncoder(1) -- scroll to sw's
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(13) -- scroll to sw SE mid
+simulator.pressKey(KEY_ENTER) --y
+--
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.touch(391, 446)
@@ -88,18 +97,20 @@ simulator.touch(715, 349) -- L
 simulator.touch(87, 353) -- A
 simulator.touch(765, 305) -- P
 simulator.touch(167, 353) -- S
-simulator.touch(421, 458)
-simulator.touch(65, 405)
-simulator.touch(322, 355)
-simulator.touch(55, 403)
-simulator.touch(517, 305)
+simulator.touch(421, 458) -- space
+simulator.touch(65, 405) --f
+simulator.touch(322, 355) --u
+simulator.touch(55, 403) --l
+simulator.touch(517, 305) --l
 simulator.touch(716, 350)
 simulator.touch(716, 350)
 simulator.touch(752, 451)
+--simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
+--simulator.turnRotaryEncoder(1)
+--simulator.pressKey(KEY_ENTER)
+--[[
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(2)
@@ -108,6 +119,13 @@ simulator.turnRotaryEncoder(14)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+]]--
+simulator.pressKey(KEY_ENTER) -- open source select
+simulator.turnRotaryEncoder(1) -- scroll to sw's
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(14) -- scroll to sw SE down
+simulator.pressKey(KEY_ENTER) --y
+--
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.touch(393, 449)
@@ -130,7 +148,7 @@ simulator.screenshot("../assets/model-fm-move.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN, 1)
 
--- now set custoom trims
+-- now set custom trims
 simulator.pressKey(KEY_MDL)
 simulator.turnRotaryEncoder(7)
 simulator.pressKey(KEY_ENTER) -- select trims
@@ -146,7 +164,8 @@ simulator.turnRotaryEncoder(2) -- highlight behaviour
 simulator.screenshot("../assets/tut-fw-eg-trims-ele-add-behavior.png")
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(-1) -- back to active cond
-simulator.pressKey(KEY_ENTER) 
+simulator.pressKey(KEY_ENTER) --edit
+--[[ 
 simulator.turnRotaryEncoder(2) 
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(8) -- select fm
@@ -157,6 +176,15 @@ simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+]]--
+simulator.turnRotaryEncoder(9) -- scroll to fm
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(1) -- scroll to fm1
+simulator.pressKey(KEY_ENTER) --y
+--simulator.pressKey(KEY_ENTER)
+
+
+
 simulator.screenshot("../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm-select.png")
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
@@ -168,6 +196,7 @@ simulator.screenshot("../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-f
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(-1)
 simulator.pressKey(KEY_ENTER)
+--[[
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(8)
@@ -178,6 +207,15 @@ simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+]]--
+simulator.turnRotaryEncoder(9) -- scroll to fm
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(2) -- scroll to fm1
+simulator.pressKey(KEY_ENTER) --y
+--simulator.pressKey(KEY_ENTER)
+
+
+
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(2)

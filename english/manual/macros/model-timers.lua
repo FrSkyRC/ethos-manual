@@ -49,14 +49,15 @@ simulator.pressKey(KEY_ENTER) -- edit mode
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER) -- select down mode
 
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(4)
+simulator.turnRotaryEncoder(1) -- scroll to start value
+simulator.pressKey(KEY_ENTER) --y
+simulator.pressKey(KEY_ENTER) -- skip hours
+simulator.turnRotaryEncoder(4) -- 4 mins
 simulator.pressKey(KEY_RTN)
-
-simulator.turnRotaryEncoder(1)
+simulator.turnRotaryEncoder(1) --scroll to start cond 
 simulator.pressKey(KEY_ENTER)
+-- select thr active
+--[[
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(5)
@@ -67,12 +68,21 @@ simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+]]--
+simulator.turnRotaryEncoder(6) --scroll to system event
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(2) -- scroll to thr active
+simulator.pressKey(KEY_ENTER) --y
+
+-- deselect thr active
 simulator.turnRotaryEncoder(-3)
 simulator.screenshot("../assets/model-timer1-edit.png")
 simulator.turnRotaryEncoder(4)
 simulator.pressKey(KEY_ENTER) -- select custom stop condition
-simulator.turnRotaryEncoder(1) -- 
+simulator.turnRotaryEncoder(1) -- scroll to stop cond
 simulator.pressKey(KEY_ENTER) -- edit custom
+-- select telem active
+--[[
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER) -- category dialog
 simulator.turnRotaryEncoder(5)
@@ -84,6 +94,13 @@ simulator.pressKey(KEY_ENTER) -- select telem active
 -- simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN) -- back to stop cond
+]]--
+simulator.turnRotaryEncoder(6) --scroll to system event
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(3) -- scroll to telem active
+simulator.pressKey(KEY_ENTER) --y
+
+-- end select
 simulator.pressKey(KEY_ENTER, 1) -- bring up options
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER) -- select invert
@@ -144,10 +161,12 @@ simulator.pressKey(KEY_RTN) -- enter name
 simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER) -- edit alarm vale
 simulator.pressKey(KEY_ENTER) -- step past hours
-simulator.turnRotaryEncoder(2) -- 
+simulator.turnRotaryEncoder(2) -- 2 minutes
 simulator.pressKey(KEY_RTN) -- enter timer
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER) -- edit start cond
+-- select thr active
+--[[
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(5)
@@ -158,6 +177,13 @@ simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER) -- enter thr active
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+]]--
+simulator.turnRotaryEncoder(6) --scroll to system event
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(2) -- scroll to thr active
+simulator.pressKey(KEY_ENTER) --y
+
+-- end select thr active
 simulator.turnRotaryEncoder(-3)
 simulator.screenshot("../assets/model-timer2-edit.png")
 simulator.turnRotaryEncoder(9)
