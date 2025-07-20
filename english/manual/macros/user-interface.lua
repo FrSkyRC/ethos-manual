@@ -1,5 +1,7 @@
 --2024-12-04 change adcValue() to setAnalog()
 --2025-04-07 -- select altitude instead of lipo (due to sensors changes)
+--2025-07-19 adapt macro to new Ethos 1.7 source select
+
 -- 0 = STICK_LEFT_HORIZONTAL (Rudder)
 -- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
 -- 2 = STICK_RIGHT_VERTICAL (Elevator)
@@ -72,24 +74,33 @@ simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER, 0.6)
 simulator.turnRotaryEncoder(14)
 simulator.screenshot("../assets/source-with-options.png")
-simulator.pressKey(KEY_ENTER, 0.6)
+simulator.pressKey(KEY_ENTER, 0.6) -- long press ENT
 simulator.screenshot("../assets/source-menu.png")
-simulator.turnRotaryEncoder(3)
-simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(3) -- scroll to select a source
+simulator.pressKey(KEY_ENTER) --y
+--[[
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_ENTER, 0.6)
-simulator.turnRotaryEncoder(3)
+]]--
+simulator.pressKey(KEY_ENTER) -- open source select
+simulator.turnRotaryEncoder(2) -- scroll to analog
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(3) -- scroll to ail
+simulator.pressKey(KEY_ENTER) --y
+
+simulator.pressKey(KEY_ENTER, 0.6) --long pressd ENT
+simulator.turnRotaryEncoder(3) -- scroll to convert to value
 simulator.screenshot("../assets/source-convert-to-value.png")
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(1) -- scroll to options
+simulator.pressKey(KEY_ENTER) --y
 simulator.screenshot("../assets/source-stick-options.png")
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_ENTER) -- open the dialog
+simulator.pressKey(KEY_RTN) -- exit options
+--simulator.pressKey(KEY_ENTER) -- open the dialog
+--[[
 simulator.turnRotaryEncoder(1) -- select the category column
 simulator.pressKey(KEY_ENTER) -- category menu
 simulator.turnRotaryEncoder(1)
@@ -98,25 +109,45 @@ simulator.turnRotaryEncoder(1) -- select the member column
 simulator.pressKey(KEY_ENTER) -- member menu
 simulator.turnRotaryEncoder(5)
 simulator.pressKey(KEY_ENTER) -- choose SF (2pos)
-simulator.pressKey(KEY_RTN) -- remove selection
-simulator.pressKey(KEY_RTN) -- close the dialog
+]]--
+simulator.pressKey(KEY_ENTER) -- open source select
+simulator.pressKey(KEY_RTN) -- exit member select
+simulator.turnRotaryEncoder(1) -- scroll to sw's
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(5) -- scroll to sw SF
+simulator.pressKey(KEY_ENTER) --y
+--simulator.turnRotaryEncoder(4) -- scroll to S1
+--simulator.pressKey(KEY_ENTER) --y
+
+--simulator.pressKey(KEY_RTN) -- remove selection
+--simulator.pressKey(KEY_RTN) -- close the dialog
 simulator.pressKey(KEY_ENTER, 0.6)
 simulator.turnRotaryEncoder(4)
 simulator.pressKey(KEY_ENTER) -- SF source options
 simulator.screenshot("../assets/source-2pos-options.png")
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_ENTER) -- open the dialog
+simulator.pressKey(KEY_RTN) -- exit
+--simulator.pressKey(KEY_ENTER) -- open the dialog
+--[[
 simulator.turnRotaryEncoder(1) -- select the category column
 simulator.pressKey(KEY_ENTER) -- category menu
 simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER) -- choose the trim category
 simulator.pressKey(KEY_RTN) -- remove selection
 simulator.pressKey(KEY_RTN) -- close the dialog
+]]--
+simulator.pressKey(KEY_ENTER) -- open source select
+simulator.pressKey(KEY_RTN) -- exit member select
+simulator.turnRotaryEncoder(2) -- scroll to trims
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(2) -- scroll to thr trim
+simulator.pressKey(KEY_ENTER) --y
+
 simulator.pressKey(KEY_ENTER, 0.6)
 simulator.turnRotaryEncoder(4)
 simulator.pressKey(KEY_ENTER) -- trim source options
 simulator.screenshot("../assets/source-trim-options.png")
-simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN) -- exit
+--[[
 simulator.pressKey(KEY_ENTER) -- open the dialog
 simulator.turnRotaryEncoder(1) -- select the category column
 simulator.pressKey(KEY_ENTER) -- category menu
@@ -124,11 +155,20 @@ simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER) -- choose the vars category
 simulator.pressKey(KEY_RTN) -- remove selection
 simulator.pressKey(KEY_RTN) -- close the dialog
+]]--
+simulator.pressKey(KEY_ENTER) -- open source select
+simulator.pressKey(KEY_RTN) -- exit member select
+simulator.turnRotaryEncoder(2) -- scroll to vars
+simulator.pressKey(KEY_ENTER) --y
+--simulator.turnRotaryEncoder(2) -- scroll to
+simulator.pressKey(KEY_ENTER) --y select var
+
 simulator.pressKey(KEY_ENTER, 0.6)
 simulator.turnRotaryEncoder(4)
 simulator.pressKey(KEY_ENTER) -- Var source options
 simulator.screenshot("../assets/source-var-options.png")
 simulator.pressKey(KEY_RTN) -- close the options menu
+--[[
 simulator.pressKey(KEY_RTN) -- clear the selection
 simulator.pressKey(KEY_RTN) -- mixes page
 simulator.pressKey(KEY_RTN) -- clear the selection
@@ -138,21 +178,55 @@ simulator.pressKey(KEY_ENTER) -- model functions
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER, 0.6) -- play audio
 simulator.turnRotaryEncoder(3)
+]]--
+--[[
+simulator.pressKey(KEY_ENTER) -- open source select
+simulator.pressKey(KEY_RTN) -- exit member select
+simulator.turnRotaryEncoder(-3) -- scroll to LSW
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(1) -- scroll to lsw 
+simulator.pressKey(KEY_ENTER) --y select LSW
+
+
 simulator.pressKey(KEY_ENTER, 0.6) -- options menu
+simulator.turnRotaryEncoder(4)
+simulator.pressKey(KEY_ENTER) -- lsw options
 simulator.screenshot("../assets/switch-options.png")
-simulator.pressKey(KEY_RTN) -- close the options menu
+]]--
+--simulator.pressKey(KEY_RTN) -- close the options menu
 simulator.pressKey(KEY_RTN) -- clear the selection
 simulator.pressKey(KEY_RTN) -- back to functions page
 simulator.pressKey(KEY_RTN) -- clear the selection
 simulator.pressKey(KEY_RTN) -- back to model page
-simulator.turnRotaryEncoder(-1)
+simulator.turnRotaryEncoder(7) -- scroll to logic switches
 simulator.pressKey(KEY_ENTER) -- inters logiques
-simulator.turnRotaryEncoder(1)
+simulator.turnRotaryEncoder(1) -- scroll to lsw 1
+simulator.pressKey(KEY_ENTER) -- Y
+simulator.turnRotaryEncoder(1) -- scroll to edit
+simulator.pressKey(KEY_ENTER) -- Y
+simulator.turnRotaryEncoder(4) -- scroll to rssi
+
 simulator.pressKey(KEY_ENTER, 0.6) -- edit inter logique
 simulator.turnRotaryEncoder(4)
-simulator.pressKey(KEY_ENTER, 0.6) -- sensor options
+simulator.pressKey(KEY_ENTER) -- sensor options
 simulator.screenshot("../assets/source-sensor-options.png")
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER) -- tick "Max"
+--simulator.turnRotaryEncoder(1)
+--simulator.pressKey(KEY_ENTER) -- tick "Max"
+simulator.sleep(1) -- wait for sim
 simulator.pressKey(KEY_RTN) -- close the dialog
 simulator.screenshot("../assets/source-sensor-maxi.png")
+simulator.pressKey(KEY_RTN) -- deselect
+simulator.pressKey(KEY_RTN) -- exit LSW1
+simulator.turnRotaryEncoder(1) -- scroll to lsw 2
+simulator.pressKey(KEY_ENTER) -- open
+simulator.turnRotaryEncoder(1) -- scroll to  edit
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(3) -- scroll to trigger on
+simulator.pressKey(KEY_ENTER, 1)
+simulator.screenshot("../assets/switch-options.png")
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+
