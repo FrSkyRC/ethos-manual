@@ -1,4 +1,5 @@
 -- 2024-12-03 change scroll from 8 to 9 in category to skip over gyro switch
+-- 2025-07-21 adapt macro to new Ethos 1.7 source select
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -60,6 +61,7 @@ simulator.turnRotaryEncoder(2)
 simulator.screenshot("../assets/model-vars-add-value.png")
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_ENTER)
+--[[select thermal
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(9) -- 2024-12-03 change 8 to 9 to skip over gyro switch
@@ -70,6 +72,12 @@ simulator.turnRotaryEncoder(4)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+]]--
+simulator.turnRotaryEncoder(10) --scoll to fm
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(4) --scroll to thermal
+simulator.pressKey(KEY_ENTER) --y
+-- end select thermal
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.touch(392, 445)
@@ -79,6 +87,7 @@ simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(9)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_ENTER)
+--[[select speed
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(9) -- 2024-12-03 change 8 to 9 to skip over gyro switch
@@ -89,6 +98,13 @@ simulator.turnRotaryEncoder(5)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+]]--
+simulator.turnRotaryEncoder(10) --scoll to fm
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(5) --scroll to speed
+simulator.pressKey(KEY_ENTER) --y
+-- end select speed
+
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.touch(383, 441)
@@ -123,6 +139,7 @@ simulator.screenshot("../assets/model-vars-add-action.png")
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
+--[[select landing
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(8) -- 2024-12-03 change 7 to 8 to skip over gyro switch
@@ -133,6 +150,12 @@ simulator.turnRotaryEncoder(3)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+]]--
+simulator.turnRotaryEncoder(9) --scoll to fm
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(3) --scroll to landing
+simulator.pressKey(KEY_ENTER) --y
+-- end select landing
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("../assets/model-vars-functions.png")
@@ -146,45 +169,60 @@ simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(-1)
 simulator.screenshot("../assets/model-vars-functions-repurpose.png")
 simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN) -- back to vars menu
 --simulator.pressKey(KEY_RTN)
 -- start of var calculation demo
+simulator.pressKey(KEY_ENTER) --open var dialog
+simulator.turnRotaryEncoder(2) --scroll to add
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(7) --scroll to add new action
+simulator.pressKey(KEY_ENTER) --f
+simulator.turnRotaryEncoder(1) --scroll to active cond
+simulator.pressKey(KEY_ENTER) --y
+--[[select fs1
+simulator.turnRotaryEncoder(1) -scroll to cat
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(3) --scroll to fn sw's
+simulator.pressKey(KEY_ENTER) --y
+simulator.pressKey(KEY_RTN) --return with default fs1
+]]--
+simulator.turnRotaryEncoder(4) --scroll to fn sw's
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(0) --scroll to fs1
+simulator.pressKey(KEY_ENTER) --y
+--end select fs1
+simulator.pressKey(KEY_ENTER, 1) --long ent
+simulator.turnRotaryEncoder(2) --scroll to edge
+simulator.pressKey(KEY_ENTER) --y
+simulator.pressKey(KEY_RTN)
+simulator.turnRotaryEncoder(2) --skip over fn to value
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
+simulator.touch(389, 450) --set units steps
+simulator.turnRotaryEncoder(2) --value 2
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+--end action 1, start action 2
+simulator.turnRotaryEncoder(11) --scroll to add action (was 11)8
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(1) --scroll to active cond
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(7)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
+--[[select fs2
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(3)
 simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_ENTER, 1)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_RTN)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
-simulator.touch(389, 450)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-simulator.turnRotaryEncoder(11)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(3)
-simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+]]--
+simulator.turnRotaryEncoder(4) --scroll to fn sw's
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(1) --scroll to fs2
+simulator.pressKey(KEY_ENTER) --y
+--end select fs2
 simulator.pressKey(KEY_ENTER, 1)
 simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER)
@@ -203,6 +241,7 @@ simulator.turnRotaryEncoder(15)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
+--[[select fs3
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(3)
@@ -213,6 +252,12 @@ simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+]]--
+simulator.turnRotaryEncoder(4) --scroll to fn sw's
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(2) --scroll to fs3
+simulator.pressKey(KEY_ENTER) --y
+--end select fs3
 simulator.pressKey(KEY_ENTER, 1)
 simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER)
