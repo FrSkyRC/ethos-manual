@@ -63,3 +63,4 @@ Ethos 1.7 changes
 -- 2025-07-20 model-fm.lua --  adapt macro to new Ethos 1.7 source select
 -- 2025-07-20 model-timers.lua --  adapt macro to new Ethos 1.7 source select
 -- 2025-07-21 model-vars.lua adapt macro to new Ethos 1.7 source select
+-- 2025-07-22 display.lua adapt macro to new Ethos 1.7 source select
