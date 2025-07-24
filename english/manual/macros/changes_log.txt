@@ -54,6 +54,7 @@ with
 
 -- 2025-06-03 model-mix-eg -- In the ‘Logic switches – use with telemetry’ section, add a warning for LSW’s using telemetry
 Ethos 1.7 changes
+-- rarebear.bin and zBalance.bin for exchanging Ail1 left and right etc.
 -- 2025-07-15 model-mixes.lua -- adapt macro to new Ethos 1.7 source select
 -- 2025-07-15 model-mixes-free.lua --  adapt macro to new Ethos 1.7 source select
 -- 2025-07-15 basic-example.lua -- adapt macro to new Ethos 1.7 source select
@@ -62,5 +63,12 @@ Ethos 1.7 changes
 -- 2025-07-19 user-interface.lua -- adapt macro to new Ethos 1.7 source select
 -- 2025-07-20 model-fm.lua --  adapt macro to new Ethos 1.7 source select
 -- 2025-07-20 model-timers.lua --  adapt macro to new Ethos 1.7 source select
+-- 2025-07-21 model-trims.lua adapt macro to new Ethos 1.7 source select
 -- 2025-07-21 model-vars.lua adapt macro to new Ethos 1.7 source select
+-- 2025-07-22 model-blanks.lua adapt macro to new Ethos 1.7 source select
 -- 2025-07-22 display.lua adapt macro to new Ethos 1.7 source select
+-- 2025-07-23 model-lsw.lua -- adapt macro to new Ethos 1.7 source select
+-- 2025-07-23 model-mix-eg.lua -- adapt macro to new Ethos 1.7 source select
+
+-- 2025-07-24 model-trainer.lua -- adapt macro to new Ethos 1.7 source select
+-- 2025-07-24 model-sf.lua -- adapt macro to new Ethos 1.7 source select

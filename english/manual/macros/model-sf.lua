@@ -1,4 +1,5 @@
 -- 2025-04-07 select vfr and vfrlow line 49 and 69 due to sim sensor and audio file changes
+-- 2025-07-24 adapt macro to new Ethos 1.7 source select
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -55,14 +56,16 @@ simulator.pressKey(KEY_ENTER)
 simulator.screenshot("../assets/model-sf-play-audio-add-play-file.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+simulator.turnRotaryEncoder(1) --scroll to add action
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(1) -- scroll to play value
+simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
+-- select 
+--[[
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(10)
@@ -74,6 +77,12 @@ simulator.turnRotaryEncoder(5) -- select vfr instead of rx (due to sim sensor ch
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+]]--
+simulator.turnRotaryEncoder(11) -- scroll to telem
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(5) --scroll to vfr 2.4
+simulator.pressKey(KEY_ENTER) --y
+
 simulator.screenshot("../assets/model-sf-play-audio-add-play-value.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
