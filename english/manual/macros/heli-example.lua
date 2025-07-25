@@ -1,4 +1,4 @@
--- 2025-01-02 create 
+-- 2025-07-25 adapt macro to new Ethos 1.7 source select
 -- 0 = STICK_LEFT_HORIZONTAL (Rudder)
 -- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
 -- 2 = STICK_RIGHT_VERTICAL (Elevator)
@@ -11,25 +11,24 @@ simulator.loadModel("zblank.bin")
 -- load user defined checklist
 simulator.sleep(1) -- wait for checklist to load
 simulator.pressKey(KEY_ENTER) -- accept checklist
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_MDL)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(15)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(3)
+--simulator.pressKey(KEY_ENTER) --
+simulator.pressKey(KEY_MDL) --open model menu
+simulator.turnRotaryEncoder(1) --scroll to model select
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(7) --scroll to add model
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(1) --scroll to create mdoel
+simulator.pressKey(KEY_ENTER) --
+simulator.turnRotaryEncoder(3) --scroll to heli
 --simulator.screenshot("./screenshot1.png")
-simulator.pressKey(KEY_ENTER)
 simulator.screenshot("../assets/tut-heli-eg-wiz-create-heli.png")
-simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_ENTER) --y
 simulator.screenshot("../assets/tut-heli-eg-wiz-fbl.png")
-simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE) --accept swash
 simulator.screenshot("../assets/tut-heli-eg-wiz-ch-reassign.png")
-simulator.pressKey(KEY_PAGE)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_PAGE) --accept ch reassign
+simulator.turnRotaryEncoder(1) --scroll to name
+simulator.pressKey(KEY_ENTER) --y
 simulator.touch(55, 452)
 simulator.touch(283, 300)
 simulator.touch(360, 305)
@@ -42,10 +41,10 @@ simulator.pressKey(KEY_RTN)
 simulator.screenshot("../assets/tut-heli-eg-wiz-name.png")
 simulator.pressKey(KEY_PAGE)
 
-simulator.pressKey(KEY_MDL)
-simulator.turnRotaryEncoder(4)
+simulator.pressKey(KEY_MDL) --open model menu
+simulator.turnRotaryEncoder(4) --scroll to mixes
 simulator.screenshot("../assets/tut-heli-eg-mixes-icon.png")
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) --y
 simulator.screenshot("../assets/tut-heli-eg-mixes.png")
 simulator.turnRotaryEncoder(1)
 simulator.screenshot("../assets/tut-heli-eg-mixes-ail.png")
