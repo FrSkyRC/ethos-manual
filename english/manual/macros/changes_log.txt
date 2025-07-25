@@ -72,3 +72,4 @@ Ethos 1.7 changes
 
 -- 2025-07-24 model-trainer.lua -- adapt macro to new Ethos 1.7 source select
 -- 2025-07-24 model-sf.lua -- adapt macro to new Ethos 1.7 source select
+-- 2025-07-23 wing-example.lua -- adapt macro to new Ethos 1.7 source select

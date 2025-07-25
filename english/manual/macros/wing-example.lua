@@ -79,6 +79,8 @@ simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.touch(217, 353)
+-- select switch SB down
+--[[
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(3)
@@ -89,6 +91,14 @@ simulator.turnRotaryEncoder(5)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+]]--
+simulator.pressKey(KEY_ENTER) --open
+simulator.turnRotaryEncoder(3) --scroll to sw's
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(5) --scroll to SB dow --yn
+simulator.pressKey(KEY_ENTER)
+--
+
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(-9)
@@ -111,6 +121,7 @@ simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(-1)
 simulator.pressKey(KEY_ENTER)
+--[[
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(2)
@@ -121,6 +132,13 @@ simulator.turnRotaryEncoder(5)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+]]--
+simulator.pressKey(KEY_ENTER) --open
+simulator.turnRotaryEncoder(3) --scroll to sw's
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(5) --scroll to SB dow --yn
+simulator.pressKey(KEY_ENTER)
+--
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1)
@@ -155,6 +173,7 @@ simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_ENTER)
+--[[
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(3)
@@ -165,6 +184,13 @@ simulator.turnRotaryEncoder(5)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+]]--
+simulator.pressKey(KEY_ENTER) --open
+simulator.turnRotaryEncoder(3) --scroll to sw's
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(5) --scroll to SB dow --yn
+simulator.pressKey(KEY_ENTER)
+--
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(-3)
@@ -185,6 +211,7 @@ simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(-1)
 simulator.pressKey(KEY_ENTER)
+--[[
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(2)
@@ -195,6 +222,13 @@ simulator.turnRotaryEncoder(5)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+]]--
+simulator.pressKey(KEY_ENTER) --open
+simulator.turnRotaryEncoder(3) --scroll to sw's
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(5) --scroll to SB dow --yn
+simulator.pressKey(KEY_ENTER)
+--
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1)
@@ -217,6 +251,7 @@ simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_DISP)
+--[[
 simulator.pressKey(KEY_DISP)
 simulator.pressKey(KEY_DISP)
 simulator.pressKey(KEY_DISP)
@@ -240,25 +275,40 @@ simulator.touch(733, 402)
 simulator.touch(733, 402)
 simulator.touch(733, 402)
 simulator.touch(733, 402)
-simulator.touch(278, 299)
-simulator.touch(76, 405)
-simulator.touch(512, 303)
-simulator.touch(236, 350)
-simulator.touch(238, 350)
-simulator.touch(199, 304)
-simulator.touch(282, 303)
+]]--
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+
+simulator.touch(278, 299) --R
+simulator.touch(76, 405) --shift
+simulator.touch(512, 303) --u
+simulator.touch(236, 350) --d
+simulator.touch(238, 350) --d
+simulator.touch(199, 304) --e
+simulator.touch(282, 303) --r
 simulator.pressKey(KEY_RTN)
-simulator.turnRotaryEncoder(8)
+--simulator.turnRotaryEncoder(8)
+--simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(3)
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
+--simulator.pressKey(KEY_ENTER)
+--.pressKey(KEY_RTN)
+--simulator.pressKey(KEY_RTN)
 --simulator.screenshot("./screenshot14.png")
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
+--simulator.pressKey(KEY_ENTER)
+--simulator.turnRotaryEncoder(1)
+--simulator.pressKey(KEY_ENTER)
+-- select rudder
+--[[
 simulator.turnRotaryEncoder(3)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1)
@@ -269,17 +319,33 @@ simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
+]]--
+simulator.pressKey(KEY_ENTER) --open
+simulator.turnRotaryEncoder(1) --scroll to analog
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(0) --scroll to rudder
+simulator.pressKey(KEY_ENTER) --y
+--
+simulator.pressKey(KEY_RTN) --deselect source
+simulator.pressKey(KEY_RTN) --exit rudder mix
 simulator.screenshot("../assets/tut-wing-eg-mixes-rud-mix.png")
+simulator.pressKey(KEY_RTN) --exit mixes
+simulator.pressKey(KEY_RTN, 0.6) --exit
+simulator.pressKey(KEY_MDL) --open model menu
+simulator.pressKey(KEY_ENTER)
+
+simulator.turnRotaryEncoder(4) --scroll to outputs
+simulator.pressKey(KEY_ENTER) --open outputs
+
 simulator.setSwitch(1, 1) -- set switch SB up to switch rates off
 simulator.setAnalog(3, 100) -- set ail to 75%
 simulator.setAnalog(2, 0) -- set ele to 0%
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
+simulator.sleep(1) -- wait 
+--simulator.pressKey(KEY_RTN) --exit mixes
+--simulator.pressKey(KEY_RTN)
+--simulator.pressKey(KEY_RTN)
+--simulator.turnRotaryEncoder(1)
+--simulator.pressKey(KEY_ENTER)
 simulator.screenshot("../assets/tut-wing-eg-outputs-full-ail.png")
 simulator.setAnalog(2, 100) -- set ele to 100%
 simulator.sleep(1) -- wait 
