@@ -12,6 +12,7 @@ cd /mnt/c/Github/ethos-manual/italian/manual
 cd /mnt/c/Github/ethos-manual/french_LT/manual
 
 cd /mnt/c/gittest/manual
+cd /mnt/c/gittest17/manual
 
 cd /mnt/c/Users/lotharthole/manual (old)
 
@@ -142,5 +143,7 @@ simulator.setSwitch(3, 2) -- set switch SD down as trainer switch
 simulator.setAnalog(1, -100) -- set thr to -100
 simulator.setAnalog(ANALOG_LAST_SLIDER, -100)
 simulator.sleep(1) -- wait 
+simulator.touch(546, 91) -- add new mix button '+'
+
 
 Radio .bin files are all named *-en.bin but edited for the language
