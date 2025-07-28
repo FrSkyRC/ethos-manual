@@ -1,6 +1,7 @@
 -- 2024-12-03 change model from zNewModel.bin to zblank.bin
 -- 2024-12-30 add heli mixes library screenshot
 -- 2025-07-22 adapt macro to new Ethos 1.7 source select
+-- 2025-07-28 adapt to new '+' add button for mixes, lsw, sf, vars
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -42,6 +43,7 @@ simulator.pressKey(KEY_DISP)
 simulator.turnRotaryEncoder(8) --scroll to new screen
 simulator.screenshot("../assets/display-home.png")
 simulator.pressKey(KEY_RTN, 1)
+--
 -- get heli library screenshot
 simulator.pressKey(KEY_MDL) --open model menu
 simulator.turnRotaryEncoder(1) --scroll to model select
@@ -68,10 +70,12 @@ simulator.pressKey(KEY_PAGE) --page to end
 simulator.pressKey(KEY_MDL) --open model menu
 simulator.turnRotaryEncoder(4) --scroll to mixes
 simulator.pressKey(KEY_ENTER) --y
-simulator.turnRotaryEncoder(8) --scroll add mix
-simulator.pressKey(KEY_ENTER) --y
+--simulator.turnRotaryEncoder(8) --scroll add mix
+--simulator.pressKey(KEY_ENTER) --y
+simulator.touch(546, 91) -- add new mix button '+'
 simulator.screenshot("../assets/model-mixes-library-heli.png")
 simulator.pressKey(KEY_RTN, 1)
+--
 -- get multirotor library screenshot
 simulator.loadModel("zblank.bin")
 -- load user defined checklist
@@ -104,7 +108,8 @@ simulator.pressKey(KEY_PAGE) --page to end
 simulator.pressKey(KEY_MDL) --open model menu
 simulator.turnRotaryEncoder(4) --scroll to mixes
 simulator.pressKey(KEY_ENTER) --y
-simulator.turnRotaryEncoder(8) --scroll add mix
-simulator.pressKey(KEY_ENTER) --y
+--simulator.turnRotaryEncoder(8) --scroll add mix
+--simulator.pressKey(KEY_ENTER) --y
+simulator.touch(546, 91) -- add new mix button '+'
 simulator.screenshot("../assets/model-mixes-library-multirotor.png")
 simulator.pressKey(KEY_RTN, 1)

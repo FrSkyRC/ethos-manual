@@ -77,3 +77,4 @@ Ethos 1.7 changes
 -- 2025-07-26 howto1-lobatt.lua -- adapt macro to new Ethos 1.7 source select
 -- 2025-07-28 model-mixes-free.lua -- use new '+' add mix button
 -- 2025-07-28 howto3-consumpo.lua -- new 1.7 source select, also use new lsw and sf add
+-- 2025-07-28 model-blanks.lua -- adapt to new '+' add button for mixes, lsw, sf, vars
