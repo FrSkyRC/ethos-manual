@@ -12,18 +12,18 @@ simulator.loadModel("zblank.bin")
 -- load user defined checklist
 simulator.sleep(1) -- wait for checklist to load
 simulator.screenshot("../assets/model-checklist-user-checklist.png")
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_MDL)
+simulator.pressKey(KEY_ENTER) --ack alert
+simulator.pressKey(KEY_MDL) -- open model menu
 
-simulator.turnRotaryEncoder(11)
+simulator.turnRotaryEncoder(11) -- scroll to lsw
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("../assets/model-lsw-add.png")
 simulator.pressKey(KEY_RTN)
-simulator.turnRotaryEncoder(1)
+simulator.turnRotaryEncoder(1) -- scroll to sf
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("../assets/model-sf-add.png")
 simulator.pressKey(KEY_RTN)
-simulator.turnRotaryEncoder(2)
+simulator.turnRotaryEncoder(2) -- scroll to vars
 simulator.pressKey(KEY_ENTER)
 -- simulator.screenshot("../assets/model-icon-vars.png")
 simulator.pressKey(KEY_ENTER)
@@ -33,8 +33,10 @@ simulator.screenshot("../assets/model-vars-add.png")
 -- simulator.screenshot("../assets/model-vars-edit.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_DISP)
+simulator.pressKey(KEY_RTN) -- back to model menu
+--
+-- open configure sreens
+simulator.pressKey(KEY_DISP) -- open configure sreens
 -- simulator.screenshot("../assets/display-home.png")
 --simulator.turnRotaryEncoder(2)
 --simulator.pressKey(KEY_ENTER)
@@ -42,7 +44,7 @@ simulator.pressKey(KEY_DISP)
 --simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(8) --scroll to new screen
 simulator.screenshot("../assets/display-home.png")
-simulator.pressKey(KEY_RTN, 1)
+simulator.pressKey(KEY_RTN, 1) -- return home
 --
 -- get heli library screenshot
 simulator.pressKey(KEY_MDL) --open model menu
