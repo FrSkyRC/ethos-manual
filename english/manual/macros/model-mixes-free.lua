@@ -1,5 +1,5 @@
 -- 2025-07-15 adapt macro to new Ethos 1.7 source select
--- 2025-07-28 use new '+' add mix button
+-- 2025-07-28 use new '+' add mix button, also add final screenshot showing free mix output parameters
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -469,6 +469,9 @@ simulator.pressKey(KEY_ENTER) -- set slow at top
 --simulator.turnRotaryEncoder(4)
 --simulator.screenshot("./screenshot3.png")
 --simulator.turnRotaryEncoder(-5)
-simulator.screenshot("../assets/model-mix-free-actions-slow-at-top.png")
 simulator.sleep(1) -- wait for screen to be painted
+simulator.screenshot("../assets/model-mix-free-actions-slow-at-top.png")
+--now show bottom of page incl output
+simulator.turnRotaryEncoder(10) -- scroll to output
+simulator.screenshot("../assets/model-mix-free-output.png")
 simulator.pressKey(KEY_RTN, 1)
