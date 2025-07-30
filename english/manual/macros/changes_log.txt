@@ -81,3 +81,4 @@ Ethos 1.7 changes
 -- 2025-07-29 basic-example.lua adapt to new '+' button for add mix
 -- 2025-07-30 model-mixes-free.lua -- add final screenshot showing free mix output parameters
 -- 2025-07-30 model-blanks.ua -- complete full comments 
+-- 2025-07-30 heli-example.ua -- complete full comments 
