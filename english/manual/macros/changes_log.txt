@@ -87,3 +87,4 @@ Ethos 1.7 changes
 -- 2025-08-02 how-to-butterfly.lua -- new 1.7 source select and add comments
 -- 2025-08-02 ng2.bin swap ail and flap channels so ch1 is left etc
 -- 2025-08-02 proshots.lua -- new 1.7 source select and add comments
+-- 2025-08-03 model-mixes.lua -- add missing comments

@@ -146,6 +146,7 @@ simulator.sleep(1) -- wait
 simulator.touch(546, 91) -- add new mix button '+'
 simulator.touch(571, 91) -- add new lsw button '+'
 simulator.touch(571, 91) -- add new sf button '+'
+simulator.touch(571, 91) -- add new fm button '+'
 
 
 Radio .bin files are all named *-en.bin but edited for the language
