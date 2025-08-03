@@ -111,7 +111,7 @@ simulator.touch(738, 451) -- ENTER
 --simulator.pressKey(KEY_RTN)
 
 simulator.screenshot("../assets/model-sf-x20pro-play-text.png")
-
+--[[
 simulator.turnRotaryEncoder(-4)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(-2)
@@ -119,4 +119,5 @@ simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(5)
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("../assets/model-sf-haptic-x20proaw.png")
+]]--
 simulator.pressKey(KEY_RTN, 1) -- home

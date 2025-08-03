@@ -92,4 +92,6 @@ Ethos 1.7 changes
 -- 2025-08-03 update rarebear.bin model for working lsw 
 -- 2025-08-03 model-fm.lua -- add more missing comments
 -- 2025-08-03 model-lsw.lua -- add '+' lsw button and missing comments
--- 2025-08-03 model-mixes-eg.lua -- add missing comments
+-- 2025-08-03 model-mixes-eg.lua -- adapt for '+' add and add comments
+-- 2025-08-03 model-sf.lua -- adapt for '+' add sf and add comments
+-- 2025-08-03 proshots.lua -- remove the proaw section
