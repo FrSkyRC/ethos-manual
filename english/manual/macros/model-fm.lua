@@ -1,6 +1,7 @@
 -- 2025-04-14 add new section for the trims section of the fixed wing example
 -- 2025-07-19 adapt macro to new Ethos 1.7 source select
 -- 2025-08-03 add new '+' fm button changes, and missing comments 
+-- 2025-08-03 add more missing comments
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -163,16 +164,16 @@ simulator.pressKey(KEY_RTN, 1)
 
 -- now set custom trims
 simulator.pressKey(KEY_MDL)
-simulator.turnRotaryEncoder(7)
+simulator.turnRotaryEncoder(7) -- scroll to trims
 simulator.pressKey(KEY_ENTER) -- select trims
-simulator.turnRotaryEncoder(9)
+simulator.turnRotaryEncoder(9) -- scroll to step
 simulator.pressKey(KEY_ENTER) -- edit step
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER) -- select coarse
-simulator.turnRotaryEncoder(1) 
+simulator.turnRotaryEncoder(1) -- scroll to medium
+simulator.pressKey(KEY_ENTER) -- select 
+simulator.turnRotaryEncoder(1) -- scroll to mode
 simulator.pressKey(KEY_ENTER) -- edit mode 
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(2) -- scroll to custom
+simulator.pressKey(KEY_ENTER) -- y
 simulator.turnRotaryEncoder(2) -- highlight behaviour
 simulator.screenshot("../assets/tut-fw-eg-trims-ele-add-behavior.png")
 simulator.pressKey(KEY_ENTER)
@@ -199,16 +200,16 @@ simulator.pressKey(KEY_ENTER) --y
 
 
 simulator.screenshot("../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm-select.png")
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
+simulator.turnRotaryEncoder(1) -- scroll to mode
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(2) -- scroll to Offset plus Default
 simulator.screenshot("../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-select.png")
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
+simulator.pressKey(KEY_ENTER)-- y
+simulator.turnRotaryEncoder(1) -- scroll to add new behavior
 simulator.screenshot("../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm1.png")
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(-1)
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(-1) -- back to active cond
+simulator.pressKey(KEY_ENTER) -- y
 --[[
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
@@ -223,17 +224,17 @@ simulator.pressKey(KEY_RTN)
 ]]--
 simulator.turnRotaryEncoder(9) -- scroll to fm
 simulator.pressKey(KEY_ENTER) --y
-simulator.turnRotaryEncoder(2) -- scroll to fm1
+simulator.turnRotaryEncoder(2) -- scroll to fm2
 simulator.pressKey(KEY_ENTER) --y
 --simulator.pressKey(KEY_ENTER)
 
 
 
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
+simulator.turnRotaryEncoder(1) -- scroll to mode
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(2) -- scroll to Offset plus Default
 --simulator.screenshot("../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm2-select.png")
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) -- y
 simulator.screenshot("../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm2.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN, 1)

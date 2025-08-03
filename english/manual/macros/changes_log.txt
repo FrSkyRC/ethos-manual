@@ -90,3 +90,4 @@ Ethos 1.7 changes
 -- 2025-08-03 model-mixes.lua -- add missing comments
 -- 2025-08-03 model-fm.lua -- add new '+' fm button changes, and missing comments 
 -- 2025-08-03 update rarebear.bin model for working lsw 
+-- 2025-08-03 model-fm.lua -- add more missing comments
