@@ -100,3 +100,4 @@ Ethos 1.7 changes
 -- 2025-08-04 model-trainer.lua -- adapt to new '+' add button and add comments
 -- 2025-08-04 model-vars.lua -- adapt to '+' add button and add comments
 -- 2025-08-04 system-menu.lua -- remove Flash related code and add missing comments
+-- 2025-08-04 user-interface.lua -- fix switch-options.png and comments
