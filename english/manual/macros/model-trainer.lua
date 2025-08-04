@@ -1,4 +1,5 @@
 -- 2025-07-24 adapt macro to new Ethos 1.7 source select
+-- 2025-08-04 add comments
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -6,12 +7,12 @@ dofile("common.lua")
 simulator.loadModel("rarebear.bin")
 
 
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_MDL)
-simulator.pressKey(KEY_PAGE)
-simulator.turnRotaryEncoder(7)
+simulator.pressKey(KEY_ENTER) -- ackn alert
+simulator.pressKey(KEY_MDL) -- open model menu
+simulator.pressKey(KEY_PAGE) -- 2ndpage
+simulator.turnRotaryEncoder(7) -- scroll to trainer
 simulator.screenshot("../assets/model-icon-trainer.png")
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) -- open
 simulator.screenshot("../assets/model-trainer.png")
 simulator.turnRotaryEncoder(1) --scroll to trainer mode
 simulator.pressKey(KEY_ENTER) --y
@@ -44,7 +45,7 @@ simulator.screenshot("../assets/model-trainer-link-mode-bt-search-waiting.png")
 simulator.sleep(3) -- wait for load
 simulator.turnRotaryEncoder(1) --scroll to first device
 simulator.screenshot("../assets/model-trainer-link-mode-bt-select-device.png")
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) -- y
 simulator.sleep(3) -- wait for load
 simulator.screenshot("../assets/model-trainer-link-mode-bt-device-connected.png")
 simulator.pressKey(KEY_ENTER) -- accept device connected
@@ -74,26 +75,26 @@ simulator.pressKey(KEY_ENTER) --y
 -- end active cond set
 
 --simulator.pressKey(KEY_RTN)
-simulator.turnRotaryEncoder(9)
+simulator.turnRotaryEncoder(9) -- scroll page up
 --simulator.screenshot("./screenshot11.png") -- place holder
-simulator.turnRotaryEncoder(-9)
+simulator.turnRotaryEncoder(-9) -- move cursor back
 simulator.screenshot("../assets/model-trainer-active-condition.png")
-simulator.turnRotaryEncoder(1)
+simulator.turnRotaryEncoder(1) -- scroll to ch1
 simulator.screenshot("../assets/model-trainer-slave-channels.png")
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) -- open
 simulator.sleep(3) -- wait for load
 simulator.screenshot("../assets/model-trainer-slave-channel-edit.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN) -- back to trainer 
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(1) -- scroll to trainer mode
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(1) -- scroll to slave mode
+simulator.pressKey(KEY_ENTER) -- y
 simulator.screenshot("../assets/model-trainer-slave.png")
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(1) -- scroll to link mode
+simulator.pressKey(KEY_ENTER) -- y
 simulator.screenshot("../assets/model-trainer-slave-link-mode.png")
 simulator.pressKey(KEY_RTN)
 --simulator.turnRotaryEncoder(1)
