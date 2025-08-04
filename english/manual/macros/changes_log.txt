@@ -98,3 +98,4 @@ Ethos 1.7 changes
 -- 2025-08-03 proshots.lua -- remove the proaw section
 
 -- 2025-08-04 model-trainer.lua -- adapt to new '+' add button and add comments
+-- 2025-08-03 model-vars.lua -- adapt to '+' add button and add comments
