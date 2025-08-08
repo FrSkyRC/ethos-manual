@@ -144,9 +144,10 @@ simulator.setAnalog(1, -100) -- set thr to -100
 simulator.setAnalog(ANALOG_LAST_SLIDER, -100)
 simulator.sleep(1) -- wait 
 simulator.touch(546, 91) -- add new mix button '+'
+simulator.touch(571, 91) -- add new fm button '+'
 simulator.touch(571, 91) -- add new lsw button '+'
 simulator.touch(571, 91) -- add new sf button '+'
-simulator.touch(571, 91) -- add new fm button '+'
+simulator.touch(571, 91) -- add new var button '+'
 
 
 Radio .bin files are all named *-en.bin but edited for the language
