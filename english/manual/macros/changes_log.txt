@@ -108,3 +108,4 @@ Ethos 1.7 changes
 -- 2025-08-08 magnus.bin -- recreate Magnus as basic glider model for use with model-outputs.lua
 -- 2025-08-08 zBalance.bin -- recreate zBalanace as basic glider model with 4 ail for use with model-outputs.lua
 -- 2025-08-05 model-lua.lua -- adapt to 1.7, add comments
+-- 2025-08-08 model-chview.lua -- adapt macro to new Ethos 1.7, add comments
