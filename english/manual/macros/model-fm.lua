@@ -14,6 +14,7 @@ simulator.pressKey(KEY_MDL) -- open model menu
 simulator.turnRotaryEncoder(3) -- -- scroll to flight modes
 simulator.screenshot("../assets/model-icon-fm.png")
 simulator.pressKey(KEY_ENTER) -- open
+simulator.screenshot("../assets/model-fm.png")
 --[[
 simulator.turnRotaryEncoder(1) -- scroll to first fm
 simulator.pressKey(KEY_ENTER) -- open options
