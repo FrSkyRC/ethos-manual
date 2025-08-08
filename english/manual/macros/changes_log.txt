@@ -104,3 +104,4 @@ Ethos 1.7 changes
 
 -- 2025-08-05 model-telemetry.lua -- adapt to 1.7 source select, new '+' add buttons and comments
 -- 2025-08-08 model-outputs.lua -- adapt macro to new Ethos 1.7 source select, add comments
+-- 2025-08-08 x20proaw.lua -- adapt to 1.7 source select, new '+' add buttons and comments
