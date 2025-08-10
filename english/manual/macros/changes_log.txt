@@ -111,3 +111,4 @@ Ethos 1.7 changes
 -- 2025-08-08 model-chview.lua -- adapt macro to new Ethos 1.7, add comments
 
 -- 2025-08-09 model-fm.lua -- add back model-fm.png screenshot
+-- 2025-08-09 model-mixes.lua -- add throttle input options screenshot

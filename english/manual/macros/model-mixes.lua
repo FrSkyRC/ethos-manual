@@ -66,9 +66,16 @@ simulator.turnRotaryEncoder(2) -- scroll to thr mix
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- open
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1) -- scroll to edit
+simulator.turnRotaryEncoder(1) -- scroll to name
 simulator.screenshot("../assets/model-mixes-thr.png")
-simulator.turnRotaryEncoder(2) -- scroll to trim
+
+simulator.turnRotaryEncoder(1) -- scroll to input
+simulator.pressKey(KEY_ENTER, 0.6) -- long ENT open options
+simulator.screenshot("../assets/model-mixes-thr-options.png")
+simulator.pressKey(KEY_RTN) -- back to mix
+
+
+simulator.turnRotaryEncoder(1) -- scroll to trim
 simulator.pressKey(KEY_ENTER) -- open trim menu
 simulator.screenshot("../assets/model-mixes-thr-trim-menu.png")
 simulator.pressKey(KEY_RTN)
