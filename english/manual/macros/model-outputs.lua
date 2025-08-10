@@ -117,23 +117,23 @@ simulator.loadModel("zBalance.bin")
 simulator.pressKey(KEY_ENTER) -- ack alert
 simulator.setAnalog(1, 90) -- set flap stick to 80
 
-simulator.pressKey(KEY_MDL)
-simulator.turnRotaryEncoder(5)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(11)
-simulator.pressKey(KEY_ENTER)
---simulator.screenshot("./screenshot8.png")
-simulator.turnRotaryEncoder(6)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(-1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_MDL) -- open model menu
+simulator.turnRotaryEncoder(5) -- scroll to channels
+simulator.pressKey(KEY_ENTER) -- open
+simulator.turnRotaryEncoder(1) -- scroll to ch1 ail 1 left
+simulator.pressKey(KEY_ENTER) -- open
+simulator.turnRotaryEncoder(11) -- scroll to balance channels button
+simulator.pressKey(KEY_ENTER) -- open
+--simulator.screenshot("./screenshot8.png") -- initial list of ch's
+simulator.turnRotaryEncoder(6) -- scroll to ch6 ail 3 left
+simulator.pressKey(KEY_ENTER) -- tick
+simulator.turnRotaryEncoder(-1) -- scroll back to ch5 ail 2 right
+simulator.pressKey(KEY_ENTER) -- tick
+simulator.turnRotaryEncoder(2) -- scroll to ch7 ail 4 right
+simulator.pressKey(KEY_ENTER) -- tick
+simulator.pressKey(KEY_PAGE) -- page to OK button
 --simulator.screenshot("./screenshot9.png")
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) -- confirm
 simulator.screenshot("../assets/model-outputs-balance-ch2-9-8-1.png")
 simulator.pressKey(KEY_RTN, 1)
 
