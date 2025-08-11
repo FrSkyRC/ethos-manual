@@ -114,3 +114,4 @@ Ethos 1.7 changes
 -- 2025-08-09 model-mixes.lua -- add throttle input options screenshot
 
 -- 2025-08-11 rarebear.bin -- set aileron mix weight back to 100%
+-- 2025-08-11 model-lua.lua -- enable task example and add comments
