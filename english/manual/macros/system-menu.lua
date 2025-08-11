@@ -1,6 +1,7 @@
 -- 2024-12-02 LT edit due to documents folder added in sd/
 -- 2025-07-19 adapt macro to new Ethos 1.7 source select
 -- 2025-08-04 remove Flash related code and add missing comments
+-- 2025-08-11 fix typo 
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -81,9 +82,9 @@ simulator.turnRotaryEncoder(2) -- scroll to 'send file'
 simulator.screenshot("../assets/system-filemanager-bluetooth-send.png")
 simulator.pressKey(KEY_RTN) -- close the menu
 -- note: from ethos 1.7 the flash drive no longer exists
---simulator.pressKey(KEY_PAGE) -- page to flash drive
+simulator.pressKey(KEY_PAGE) -- page to flash drive
 --simulator.screenshot("../assets/system-filemanager-flash.png")
---simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
 
 simulator.turnRotaryEncoder(1) -- scroll to system alerts
 simulator.screenshot("../assets/system-icon-alerts.png")
