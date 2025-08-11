@@ -153,7 +153,7 @@ simulator.screenshot("../assets/system-general-haptic-options.png")
 simulator.pressKey(KEY_RTN) -- close the haptic-options menu
 
 simulator.turnRotaryEncoder(8) -- scroll to see all 'top toolbar'
-simulator.turnRotaryEncoder(-4)) -- move cursor back
+simulator.turnRotaryEncoder(-4) -- move cursor back
 simulator.screenshot("../assets/system-general-topbar.png")
 simulator.turnRotaryEncoder(3) -- scroll to 'select model at power on'
 simulator.screenshot("../assets/system-general-model-start.png")
