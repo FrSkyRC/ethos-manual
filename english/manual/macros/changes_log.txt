@@ -118,3 +118,4 @@ Ethos 1.7 changes
 -- 2025-08-11 system-menu.lua -- fix typo 
 -- 2025-08-11 system-menu.lua -- fix bug introduced by removing Flash drive
 -- 2025-08-13 magnus.bin -- add model image
+-- 2025-08-13 screenshots.sh -- model-trainer must be run with --no-gui to avoid errors
