@@ -120,5 +120,6 @@ Ethos 1.7 changes
 
 -- 2025-08-13 magnus.bin -- add model image
 -- 2025-08-13 screenshots.sh -- model-trainer must be run with --no-gui to avoid errors
--- 2025-08-13ra timer-take-back.lua -- add comments
+-- 2025-08-13 timer-take-back.lua -- add comments
 -- 2025-08-09 telemetry.lua -- take 'model-telemetry-calculated-sensor-consumption.png' screenshot with highlight
+-- 2025-08-13 display.lua -- add comments

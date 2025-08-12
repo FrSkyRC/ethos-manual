@@ -1,5 +1,6 @@
 --2024-12-04 change adcValue() to setAnalog()
 -- 2025-07-22 adapt macro to new Ethos 1.7 source select
+-- 2025-08-09 add comments
 
 -- 0 = STICK_LEFT_HORIZONTAL (Rudder)
 -- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
@@ -176,13 +177,13 @@ simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_PAGE)
 simulator.screenshot("../assets/display-widget-text.png")
 -- create new model for default home screen
-simulator.pressKey(KEY_MDL)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(18)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_MDL) -- open model menu
+simulator.turnRotaryEncoder(1) -- scroll to model select
+simulator.pressKey(KEY_ENTER) -- open
+simulator.turnRotaryEncoder(18) -- scroll to plus button at the end
+simulator.pressKey(KEY_ENTER) -- create new model
+simulator.turnRotaryEncoder(1) -- scroll to airplane
+simulator.pressKey(KEY_ENTER) -- select
 simulator.pressKey(KEY_PAGE)
 simulator.pressKey(KEY_PAGE)
 simulator.pressKey(KEY_PAGE)
@@ -194,8 +195,8 @@ simulator.touch(742, 454)
 --simulator.touch(743, 453)
 simulator.sleep(2) -- wait 
 simulator.screenshot("../assets/display-main-view.png")
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(1) -- scroll to configure
+simulator.pressKey(KEY_ENTER) -- open 
 simulator.screenshot("../assets/display-widget-config-options.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
