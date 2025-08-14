@@ -130,3 +130,4 @@ First big update of assets in 1.7 branch
 -- 2025-08-14 model-checklist.lua -- add comments
 -- 2025-08-04 model-chview.lua -- adapt for no add in options, add comments
 -- 2025-08-14 model-edit.lua -- add S.Port connector select options, add comments
+-- 2025-08-14 model-select.lua -- add comments
