@@ -12,7 +12,7 @@ cd /mnt/c/Github/ethos-manual/italian/manual
 cd /mnt/c/Github/ethos-manual/french_LT/manual
 
 cd /mnt/c/gittest/manual
-cd /mnt/c/gittest17/manual
+cd /mnt/c/gittest_1p7/manual
 
 cd /mnt/c/Users/lotharthole/manual (old)
 
