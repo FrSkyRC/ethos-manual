@@ -1,12 +1,13 @@
 -- 2025-01-03 first release
 -- 2025-07-26 adapt macro to new Ethos 1.7 source select
+-- 2025-08-15 add comments
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("katana.bin")
 
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) -- ack alert
 simulator.pressKey(KEY_MDL) --open model menu
 simulator.pressKey(KEY_PAGE) -- 2nd page
 simulator.turnRotaryEncoder(1) -- highlight telemetry
@@ -101,7 +102,7 @@ simulator.turnRotaryEncoder(1) --scroll to enable
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(1) --scroll to active cond
 simulator.pressKey(KEY_ENTER) --y
---select BattLOw lsw
+
 --[[
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
@@ -114,28 +115,29 @@ simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 ]]--
+--select BattLow lsw
 simulator.turnRotaryEncoder(4) --scroll to lsw
 simulator.pressKey(KEY_ENTER) --y
 simulator.pressKey(KEY_ENTER) --confirm BattLow
 --
 simulator.screenshot("../assets/how-to-low-batt-sf-battlow.png")
 --simulator.turnRotaryEncoder(5)
-simulator.turnRotaryEncoder(2)
+simulator.turnRotaryEncoder(2) -- scroll to repeat
 
-simulator.pressKey(KEY_ENTER)
-simulator.touch(392, 446)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(3)
+simulator.pressKey(KEY_ENTER) -- edit
+simulator.touch(392, 446) -- set 10s steps
+simulator.turnRotaryEncoder(1) -- 10s
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(3) -- scroll to add action
 
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1) --scroll to type
-simulator.pressKey(KEY_ENTER) --y
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(1) -- scroll to action type
+simulator.pressKey(KEY_ENTER) -- y
 simulator.turnRotaryEncoder(1) --scroll to play value
 simulator.pressKey(KEY_ENTER) --y
---select lipo sensor
+simulator.turnRotaryEncoder(1) --scroll to source
+simulator.pressKey(KEY_ENTER) --y
+
 --[[
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
@@ -155,13 +157,15 @@ simulator.pressKey(KEY_RTN)
 --simulator.pressKey(KEY_ENTER)
 --simulator.turnRotaryEncoder(1)
 --simulator.pressKey(KEY_ENTER)
+
+--select lipo sensor
 simulator.turnRotaryEncoder(10) --scroll to telem
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(6) --scroll to 2nd lipo
 simulator.pressKey(KEY_ENTER) --y
 --
 simulator.screenshot("../assets/how-to-low-batt-sf-play-value-lipo.png")
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN) -- deselect
+simulator.pressKey(KEY_RTN) -- back to sf
 simulator.screenshot("../assets/how-to-low-batt-sf-play-value-lipo-summary.png")
-simulator.pressKey(KEY_RTN, 1)
+simulator.pressKey(KEY_RTN, 1) -- return home

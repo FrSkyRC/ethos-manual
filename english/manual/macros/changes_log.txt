@@ -133,3 +133,4 @@ First big update of assets in 1.7 branch
 -- 2025-08-14 model-select.lua -- add comments
 -- 2025-08-14 model-timers.lua -- add comments
 -- 2025-08-14 x18s.lua -- enable dofile, tweak comments
+-- 2025-08-15 how-to-low-bat.lua -- add comments
