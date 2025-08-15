@@ -1,14 +1,15 @@
 --2024-12-04 change adcValue() to setAnalog()
 -- 2025-07-22 adapt macro to new Ethos 1.7 source select
 -- 2025-08-09 add comments
+-- 2025-08-15 enable dofile again
 
 -- 0 = STICK_LEFT_HORIZONTAL (Rudder)
 -- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
 -- 2 = STICK_RIGHT_VERTICAL (Elevator)
 -- 3 = STICK_RIGHT_HORIZONTAL (Aileron)
 
---dofile("common.lua")
-simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
+dofile("common.lua")
+-- simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("geronimo.bin")
 
