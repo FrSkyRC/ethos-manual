@@ -1,4 +1,5 @@
 -- 2025-08-13 add comments
+-- 2025-08-16 add model-curves-edit-options, remove commented out sections
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -65,37 +66,14 @@ simulator.turnRotaryEncoder(-1) -- back to type
 simulator.pressKey(KEY_ENTER) -- open type
 simulator.turnRotaryEncoder(1) -- scroll to custom
 simulator.pressKey(KEY_ENTER) -- select custom
--- simulator.screenshot("../assets/model-curves-custom5.png")
--- attach curve to a mix so that Input option appears
+
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- back to curves
---simulator.pressKey(KEY_RTN) -- deselect
---simulator.pressKey(KEY_RTN) -- back to models
---[[
-simulator.turnRotaryEncoder(-9) -- scroll back to mixes
-simulator.pressKey(KEY_ENTER) -- back to mixes
-simulator.turnRotaryEncoder(2) -- scroll to ele
-simulator.pressKey(KEY_ENTER) -- to elevator
-simulator.turnRotaryEncoder(1) -- scroll to edit
-simulator.pressKey(KEY_ENTER) -- edit
-simulator.turnRotaryEncoder(3) -- scroll to curve
-simulator.pressKey(KEY_ENTER) -- select curve
--- simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2) -- scroll to curve1
-simulator.pressKey(KEY_ENTER) -- open
-simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- back to mixes list
-simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- back to model menu
-simulator.pressKey(KEY_RTN) --back to models
-]]--
---simulator.turnRotaryEncoder(9) -- scroll back to curves
---simulator.pressKey(KEY_ENTER) -- go to curves
---simulator.turnRotaryEncoder(1) -- scroll to curve1
+
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- scroll to edit
+simulator.screenshot("../assets/model-curves-edit-options.png")
 simulator.pressKey(KEY_ENTER)
--- simulator.screenshot("./screenshot1.png")
 simulator.turnRotaryEncoder(5)
 simulator.screenshot("../assets/model-curves-custom5.png")
 
