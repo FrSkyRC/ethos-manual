@@ -1,6 +1,7 @@
 -- 2024-12-03 change simulator.setSwitch(0, 1) to simulator.setSwitch(1, 1) to avoide conflict with Thr Cut on sw SA
 -- 2025-07-23 adapt macro to new Ethos 1.7 source select
 -- 2025-08-03 add '+' lsw button and missing comments
+-- 2025-08-16 change 'model-lsw-edge-during-gt0' to use 1% steps
 
 -- This macro relies on logic switch TestC for testing logic switch coinfirmation before ture and false.
 
@@ -195,7 +196,9 @@ simulator.turnRotaryEncoder(-1) -- reduce to 3s
 simulator.pressKey(KEY_RTN) -- accept
 simulator.turnRotaryEncoder(1) -- scroll to 2nd during param
 simulator.pressKey(KEY_ENTER) -- edit
-simulator.turnRotaryEncoder(30) -- increase to 5s
+--simulator.turnRotaryEncoder(30) -- increase to 5s
+simulator.touch(388, 446) -- set to 1% steps
+simulator.turnRotaryEncoder(3) -- increase from 2 to 5s
 simulator.pressKey(KEY_RTN) -- accept
 simulator.screenshot("../assets/model-lsw-edge-during-gt0.png")
 
