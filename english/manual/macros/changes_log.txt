@@ -141,3 +141,5 @@ First big update of assets in 1.7 branch
 
 -- 2025-08-16 model-lsw.lua -- change 'model-lsw-edge-during-gt0' to use 1% steps
 -- 2025-08-16 add model-curves-edit-options, remove commented out sections
+
+-- 2025-08-17 model-curves.lua -- put back attach to mix section

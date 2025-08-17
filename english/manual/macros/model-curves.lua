@@ -1,5 +1,6 @@
 -- 2025-08-13 add comments
 -- 2025-08-16 add model-curves-edit-options, remove commented out sections
+-- 2025-08-17 put back attach to mix section
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -66,16 +67,37 @@ simulator.turnRotaryEncoder(-1) -- back to type
 simulator.pressKey(KEY_ENTER) -- open type
 simulator.turnRotaryEncoder(1) -- scroll to custom
 simulator.pressKey(KEY_ENTER) -- select custom
-
-simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- back to curves
-
+-- simulator.screenshot("../assets/model-curves-custom5.png")
+-- attach curve to a mix so that Input option appears
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN) -- back to curves list
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN) -- back to models
+simulator.turnRotaryEncoder(-9)
+simulator.pressKey(KEY_ENTER) -- back to mixes
+simulator.turnRotaryEncoder(2)
+simulator.pressKey(KEY_ENTER) -- to elevator
+simulator.turnRotaryEncoder(1)
+simulator.pressKey(KEY_ENTER) -- edit
+simulator.turnRotaryEncoder(3) -- 
+simulator.pressKey(KEY_ENTER) -- select curve
+-- simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(2) -- select curve1
 simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN) --back to models
+simulator.turnRotaryEncoder(9)
+simulator.pressKey(KEY_ENTER) -- go to curves
+simulator.turnRotaryEncoder(1) -- scroll to first curve
+simulator.pressKey(KEY_ENTER) -- open options
 simulator.turnRotaryEncoder(1) -- scroll to edit
-simulator.screenshot("../assets/model-curves-edit-options.png")
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(5)
+simulator.pressKey(KEY_ENTER) -- edit
+simulator.turnRotaryEncoder(5) -- scroll to curve typed
 simulator.screenshot("../assets/model-curves-custom5.png")
+
 
 simulator.turnRotaryEncoder(5)
 simulator.pressKey(KEY_ENTER) -- open points edit
@@ -132,9 +154,10 @@ simulator.pressKey(KEY_MDL) -- open model menu
 simulator.pressKey(KEY_PAGE) -- 2nd page
 simulator.turnRotaryEncoder(5) -- scroll to curves
 simulator.pressKey(KEY_ENTER) -- open curves
-simulator.turnRotaryEncoder(1) -- scroll to edit
-simulator.pressKey(KEY_ENTER) -- edit 
 simulator.turnRotaryEncoder(1) -- scroll to cv1
+simulator.pressKey(KEY_ENTER) -- edopenit 
+simulator.turnRotaryEncoder(1) -- scroll to edit
+simulator.screenshot("../assets/model-curves-edit-options.png")
 simulator.pressKey(KEY_ENTER) -- edit cv1
 simulator.screenshot("../assets/model-curves-expo.png")
 simulator.pressKey(KEY_RTN) -- back to curves list
