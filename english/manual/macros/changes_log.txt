@@ -143,3 +143,5 @@ First big update of assets in 1.7 branch
 -- 2025-08-16 add model-curves-edit-options, remove commented out sections
 
 -- 2025-08-17 model-curves.lua -- put back attach to mix section
+-- 2025-08-17 simmanrs.bat -- add
+-- 2025-08-17 simmanrsro.bat -- add
