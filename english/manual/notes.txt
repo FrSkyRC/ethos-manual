@@ -13,6 +13,8 @@ cd /mnt/c/Github/ethos-manual/french_LT/manual
 
 cd /mnt/c/gittest/manual
 cd /mnt/c/gittest_1p7/manual
+cd /mnt/c/gittest_es/manual
+cd /mnt/c/gittest_en/manual
 
 cd /mnt/c/Users/lotharthole/manual (old)
 
@@ -151,3 +153,12 @@ simulator.touch(571, 91) -- add new var button '+'
 
 
 Radio .bin files are all named *-en.bin but edited for the language
+
+To create a new radio sim:
+1. Download the sim eg X20RS-Simulator.exe
+2. Install the sim
+3. Copy the radio.bin from C:\Users\lotharthole\.ethos\X20RS to the current manual folder and rename as x20rs-en.bin
+4. Create new simmanrs.bat and simmanrsro.bat
+5. Run simmanrs and complete the create a new model wizard, any old name.
+6. Set current model to Rarebear and Delete the 'New model' and 'any old name' models.
+7. Run simmanrs again and check that Rarebear loads with no errors.
