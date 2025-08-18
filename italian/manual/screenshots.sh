@@ -1,3 +1,4 @@
+# 2025-08-18 remove --no-gui from model-outputs and model-trainer
 #!/bin/bash
 
 # note the lines with gui enabled must be left on, the sim does not run properly (it skips) if gui is turned off on these
