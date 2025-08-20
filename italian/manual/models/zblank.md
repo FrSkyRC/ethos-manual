@@ -1,16 +1,16 @@
-## Demo de Listas de Comprobación
+## Checklist Demo
 
-Las listas de comprobación pueden ser creadas directamente por el usuario mediante el editor de texto gratuito Markdown si se quiere usar texto mejorado, o con cualquier otro editor de texto para texto sencillo.
+La Checklist può essere creata dall'utente usando un editor Markdown per testo potenziato o un semplice Edito di testo
 
-Ejemplos de texto mejorado:
+Esempi Potenziati / Enhanced:
 
-## Énfasis
+## Emphasis
 
-**Este texto está en negrita**
+**questo è un testo in grassetto**
 
-*Este texto está en itálica*
+*questo in italico*
 
-- comprobación 1
-- comprobación 2
-* comprobación 3
-+ comprobación 4
+- check 1
+- check 2
+* check 3
++ check 4

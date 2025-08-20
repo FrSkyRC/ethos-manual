@@ -37,111 +37,15 @@ with
 
 -- 2025-04-07 edit how-to-consumption to -- 2025-04-07 line 73 select invert instead of edge
 
--- 2025-04-07 -- edit user interface -- select altitude instead of lipo (due to sensors changes)
+-- edit user interface --2025-04-07 -- select altitude instead of lipo (due to sensors changes)
 
--- 2025-04-07 -- edit model-lsw -- select ESC consumption instead of GASS (due to sim sensor changes)
+-- edit model-lsw -- 2025-04-07 -- select ESC consumption instead of GASS (due to sim sensor changes)
 
--- 2025-04-07 -- edit model-mixes -- due to new thr mix interlock must set thr to -100 first, then to mid
+-- edit model-mixes -- 2025-04-07 due to new thr mix interlock must set thr to -100 first, then to mid
 
--- 2025-04-07 -- edit model-sf -- select vfr and vfrlow line 49 and 69 due to sim sensor and audio file changes
+-- edit model-sf 2025-04-07 select vfr and vfrlow line 49 and 69 due to sim sensor and audio file changes
 
 -- edit model-timers 
 
--- 2025-04-08 -- modelsf.sh to add --audio-directory ./sd/audio 
--- 2025-04-08 -- modeltimers.sh to add --audio-directory ./sd/audio 
-
--- 2025-04-14 -- edit model-fm.lua -- add new section for the trims section of the fixed wing example
-
--- 2025-06-03 model-mix-eg -- In the ‘Logic switches – use with telemetry’ section, add a warning for LSW’s using telemetry
-Ethos 1.7 changes
--- rarebear.bin and zBalance.bin for exchanging Ail1 left and right etc.
--- 2025-07-15 model-mixes.lua -- adapt macro to new Ethos 1.7 source select
--- 2025-07-15 model-mixes-free.lua --  adapt macro to new Ethos 1.7 source select
--- 2025-07-15 basic-example.lua -- adapt macro to new Ethos 1.7 source select
--- 2025-07-15 system-menu.lua --  adapt macro to new Ethos 1.7 source select
-
--- 2025-07-19 user-interface.lua -- adapt macro to new Ethos 1.7 source select
--- 2025-07-20 model-fm.lua --  adapt macro to new Ethos 1.7 source select
--- 2025-07-20 model-timers.lua --  adapt macro to new Ethos 1.7 source select
--- 2025-07-21 model-trims.lua adapt macro to new Ethos 1.7 source select
--- 2025-07-21 model-vars.lua adapt macro to new Ethos 1.7 source select
--- 2025-07-22 model-blanks.lua adapt macro to new Ethos 1.7 source select
--- 2025-07-22 display.lua adapt macro to new Ethos 1.7 source select
--- 2025-07-23 model-lsw.lua -- adapt macro to new Ethos 1.7 source select
--- 2025-07-23 model-mix-eg.lua -- adapt macro to new Ethos 1.7 source select
-
--- 2025-07-24 model-trainer.lua -- adapt macro to new Ethos 1.7 source select
--- 2025-07-24 model-sf.lua -- adapt macro to new Ethos 1.7 source select
--- 2025-07-25 wing-example.lua -- adapt macro to new Ethos 1.7 source select
--- 2025-07-25 heli-example.lua -- adapt macro to new Ethos 1.7 source select
--- 2025-07-26 howto1-lobatt.lua -- adapt macro to new Ethos 1.7 source select
--- 2025-07-28 model-mixes-free.lua -- use new '+' add mix button
--- 2025-07-28 howto3-consumpo.lua -- new 1.7 source select, also use new lsw and sf add
--- 2025-07-28 model-blanks.lua -- adapt to new '+' add button for mixes, lsw, sf, vars
--- 2025-07-29 basic-example.lua adapt to new '+' button for add mix
--- 2025-07-30 model-mixes-free.lua -- add final screenshot showing free mix output parameters
--- 2025-07-30 model-blanks.lua -- complete full comments 
--- 2025-07-30 heli-example.lua -- complete full comments 
--- 2025-07-30 wing-example.lua -- update comments, replace touch ENT with key ENT
-
--- 2025-07-30 how-to-in-flight-comp.lua -- update comments, replace touch ENT with key ENT
--- 2025-08-02 how-to-butterfly.lua -- new 1.7 source select and add comments
--- 2025-08-02 ng2.bin swap ail and flap channels so ch1 is left etc
--- 2025-08-02 proshots.lua -- new 1.7 source select and add comments
--- 2025-08-03 model-mixes.lua -- add missing comments
--- 2025-08-03 model-fm.lua -- add new '+' fm button changes, and missing comments 
--- 2025-08-03 update rarebear.bin model for working lsw 
--- 2025-08-03 model-fm.lua -- add more missing comments
--- 2025-08-03 model-lsw.lua -- add '+' lsw button and missing comments
--- 2025-08-03 model-mixes-eg.lua -- adapt for '+' add and add comments
--- 2025-08-03 model-sf.lua -- adapt for '+' add sf and add comments
--- 2025-08-03 proshots.lua -- remove the proaw section
-
--- 2025-08-04 model-trainer.lua -- adapt to new '+' add button and add comments
--- 2025-08-04 model-vars.lua -- adapt to '+' add button and add comments
--- 2025-08-04 system-menu.lua -- remove Flash related code and add missing comments
--- 2025-08-04 user-interface.lua -- fix switch-options.png and comments
-
--- 2025-08-05 model-telemetry.lua -- adapt to 1.7 source select, new '+' add buttons and comments
--- 2025-08-08 model-outputs.lua -- adapt macro to new Ethos 1.7 source select, add comments
--- 2025-08-08 x20proaw.lua -- adapt to 1.7 source select, new '+' add buttons and comments
--- 2025-08-08 magnus.bin -- recreate Magnus as basic glider model for use with model-outputs.lua
--- 2025-08-08 zBalance.bin -- recreate zBalanace as basic glider model with 4 ail for use with model-outputs.lua
--- 2025-08-05 model-lua.lua -- adapt to 1.7, add comments
--- 2025-08-08 model-chview.lua -- adapt macro to new Ethos 1.7, add comments
-
--- 2025-08-09 model-fm.lua -- add back model-fm.png screenshot
--- 2025-08-09 model-mixes.lua -- add throttle input options screenshot
-
--- 2025-08-11 rarebear.bin -- set aileron mix weight back to 100%
--- 2025-08-11 model-lua.lua -- enable task example and add comments
--- 2025-08-11 system-menu.lua -- fix typo 
--- 2025-08-11 system-menu.lua -- fix bug introduced by removing Flash drive
-
--- 2025-08-13 magnus.bin -- add model image
--- 2025-08-13 screenshots.sh -- model-trainer must be run with --no-gui to avoid errors
--- 2025-08-13 timer-take-back.lua -- add comments
--- 2025-08-09 telemetry.lua -- take 'model-telemetry-calculated-sensor-consumption.png' screenshot with highlight
--- 2025-08-13 display.lua -- add comments
-=========
-First big update of assets in 1.7 branch
-========
--- 2025-08-13 model-curves.lua -- add comments
--- 2025-08-14 model-checklist.lua -- add comments
--- 2025-08-04 model-chview.lua -- adapt for no add in options, add comments
--- 2025-08-14 model-edit.lua -- add S.Port connector select options, add comments
--- 2025-08-14 model-select.lua -- add comments
--- 2025-08-14 model-timers.lua -- add comments
--- 2025-08-14 x18s.lua -- enable dofile, tweak comments
-
--- 2025-08-15 how-to-low-bat.lua -- add comments
--- 2025-08-15 x20rs.lua -- first release
--- 2025-08-15 x20rs-en.bin -- first release
--- 2025-08-15 x20rs-shots.sh -- first release
-
--- 2025-08-16 model-lsw.lua -- change 'model-lsw-edge-during-gt0' to use 1% steps
--- 2025-08-16 add model-curves-edit-options, remove commented out sections
-
--- 2025-08-17 model-curves.lua -- put back attach to mix section
--- 2025-08-17 simmanrs.bat -- add
--- 2025-08-17 simmanrsro.bat -- add
+2025-04-08 -- modelsf.sh to add --audio-directory ./sd/audio 
+2025-04-08 -- modeltimers.sh to add --audio-directory ./sd/audio 
