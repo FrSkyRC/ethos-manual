@@ -12,5 +12,5 @@ simulator.pressKey(KEY_ENTER) -- open
 simulator.turnRotaryEncoder(1) -- scroll to hardware check
 simulator.pressKey(KEY_ENTER) -- enable
 simulator.screenshot("../assets/system-hardware-check-x18s.png")
-simulator.pressKey(KEY_RTN) exit
+simulator.pressKey(KEY_RTN, 0.6) -- exit
 
