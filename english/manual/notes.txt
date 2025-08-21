@@ -15,6 +15,8 @@ cd /mnt/c/gittest/manual
 cd /mnt/c/gittest_1p7/manual
 cd /mnt/c/gittest_es/manual
 cd /mnt/c/gittest_en/manual
+cd /mnt/c/gittest_de/manual
+cd /mnt/c/gittest_jp/manual
 
 cd /mnt/c/Users/lotharthole/manual (old)
 
