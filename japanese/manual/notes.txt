@@ -1,0 +1,164 @@
+
+
+
+To run the screenshot bash scripts for the EN manual
+----------------------------------------------------
+Run cmd as admin
+Bash
+cd /mnt/c/Github/ethos-manual/english/manual
+cd /mnt/c/Github/ethos-manual/german/manual
+cd /mnt/c/Github/ethos-manual/spanish/manual
+cd /mnt/c/Github/ethos-manual/italian/manual
+cd /mnt/c/Github/ethos-manual/french_LT/manual
+
+cd /mnt/c/gittest/manual
+cd /mnt/c/gittest_1p7/manual
+cd /mnt/c/gittest_es/manual
+cd /mnt/c/gittest_en/manual
+
+cd /mnt/c/Users/lotharthole/manual (old)
+
+
+sh screenshots.sh -- full set
+or
+sh sysmenu.sh -- runs sysmenu.lua (uses fwexample.bin)
+sh proshots.sh -- for the x20 pro screenshots --runsx20pro.lua (uses rarebear.bin)
+sh mainui.sh -- for mainviews and user interface screenshots -- runs mainview.lua and user-interface.lua (uses fwexample.bin)
+sh modelselect -- for model select section -- runs model-select.lua (uses rarebear.bin and also relies on ultimate 60.bin)
+sh modeledit.sh -- for model/edit section --runs model-edit.lua (uses fwexample.bin) -- relies on Extra model
+sh modelfm.sh -- for model/flight modes section runs model-fm.lua (uses zBlank.bin) with blank fm
+sh modelmixes.sh -- for model/mixes first section --runs model-mixes.lua (uses rarebear.bin)
+sh modelmixesfree.sh -- for model mixes - free mix --runs model-mixes-free.lua (uses rarebear.bin)
+sh modeloutputs.sh -- for model outputs --runs model-outputs.lua (uses zBalanace.bin)
+sh modeltimers.sh -- for model timers --runs model-timers.lua (uses rarebear.bin)
+sh modeltrims.sh -- for model trims --runs model-trims.lua (uses blaster.bin for offset trims) 
+sh modelcurves.sh -- for model curves --runs model-curves.lua  (uses zblank.bin)
+sh modelchecklist.sh -- runs model-checklist.lua (uses rarebear.bin)
+sh modelblanks.sh --runs model-blanks.lua (uses zblank.bin) 
+sh modellsw.sh -- runs model-lsw.lua (uses rarebear.bin)
+sh modelsf.sh --runs model-sf.lua (uses rarebear.bin) 
+sh modelvars.sh --runs model-vars.lua (uses blaster.bin) 
+sh modeltrainer.sh --runs  model-trainer.lua (uses rarebear.bin) 
+sh modelchview.sh --runs model-chview.lua (uses blaster.bin) 
+sh display.sh --runs display.lua (uses geronimo.bin)
+sh modellua.sh --runs model-lua.lua  (uses rarebear.bin)
+sh x18s.sh --runs x18s.lua (uses fwexample.bin)
+sh trainer.sh --runs trainer-take-back.lua (use oxalys.bin)
+sh proawshots.sh --runs x20proaw.lua (uses fwexample.bin)
+sh howto1.sh -- runs how-to-low-batt.lua (uses katana.bin)
+sh howto3.sh -- runs how-to-consumption.lua (uses katana.bin)
+
+sh toolbars.sh --runs toolbars.lua (*** Note must be last because it generates a lua error ****)
+
+Lua scripts
+common.lua is in all macros
+
+
+To be done:
+model-rf.lua 
+
+
+To run sim for manual manually to allow editing of models etc
+-------------------------------------------------------------
+From cmd window
+Run cmd as admin
+--setman - to set up the folder (old)
+setman-gittest - to set up the folder at c:\gittest\manual
+simman - to run X20S sim 
+simmanro - to run X20S sim in read only mode
+
+simmanpro - to run X20PRO sim 
+simmanro - to run X20PRO sim in read only mode
+
+simman - to run X20PROAW sim 
+simmanro - to run X20PROAW sim in read only mode
+
+simman - to run X20S sim 
+simmanro - to run X20S sim in read only mode
+
+1. For screenshots.sh (or sysmenu, mainui, proshots individually)
+Rename model to Example in Model/edit
+Rename timer 1 to BattTimer
+Configure Status widget on main page 
+Check system/general/vario is ON (bluetooth?)
+ensure model is bound
+back in File Explorer rename file to fwexample.bin
+
+
+2. For top bar screenshots 
+Rename model to Example in Model/edit
+Rename timer 1 to BattTimer
+back in File Explorer rename file to topbar.bin
+
+Sim options
+-----------
+Nightly build warning is removed, simulator can be considered as safe to fly
+--no-audio option added
+--no-gui option added
+--read-only option added
+--system-directory and 
+--user-directory options added
+--audio-directory , 
+--documents-directory, 
+--bitmaps-directory and 
+--scripts-directory options added
+--radio-settings option added
+--exec option added to execute a lua script as a macro
+
+
+Changes for Bertrand
+1. topbar.bin : change model name to Katana
+2. fwexample.bin : remains as model 'Extra'
+3. oxalys.bin : is a clone of fwexample.bin ??
+4. rarebear.bin : used for model macros
+5. weasel.bin used for model/select since not visible in select screen
+
+
+
+lotharthole@192-168-1-2 ~ % cd local
+lotharthole@192-168-1-2 local % cd ethos
+lotharthole@192-168-1-2 ethos % cd manual
+lotharthole@192-168-1-2 manual % sh cpimages.sh
+
+
+Language differences:
+1. DE and ES and IT have their own radio .bin files due to language setting
+2. The Extra fwexample.bin models have different Timer names
+3. The DE model-select.lua has German category names, and scrolls down 4 to the Segler category
+3a. The DE screenshots.sh deletes German folders
+4. zblank.bin calls up the zblank.md checklist file
+
+Screens with telemetry sources:
+source-sensor-maxi
+Vfr in timer play value
+RSSI Min in the Value widget example
+RSSI Max in Sensor options p19
+
+
+
+Sim commands
+simulator.setSwitch(3, 2) -- set switch SD down as trainer switch
+-- 0 = STICK_LEFT_HORIZONTAL (Rudder)
+-- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
+-- 2 = STICK_RIGHT_VERTICAL (Elevator)
+-- 3 = STICK_RIGHT_HORIZONTAL (Aileron)
+simulator.setAnalog(1, -100) -- set thr to -100
+simulator.setAnalog(ANALOG_LAST_SLIDER, -100)
+simulator.sleep(1) -- wait 
+simulator.touch(546, 91) -- add new mix button '+'
+simulator.touch(571, 91) -- add new fm button '+'
+simulator.touch(571, 91) -- add new lsw button '+'
+simulator.touch(571, 91) -- add new sf button '+'
+simulator.touch(571, 91) -- add new var button '+'
+
+
+Radio .bin files are all named *-en.bin but edited for the language
+
+To create a new radio sim:
+1. Download the sim eg X20RS-Simulator.exe
+2. Install the sim
+3. Copy the radio.bin from C:\Users\lotharthole\.ethos\X20RS to the current manual folder and rename as x20rs-en.bin
+4. Create new simmanrs.bat and simmanrsro.bat
+5. Run simmanrs and complete the create a new model wizard, any old name.
+6. Set current model to Rarebear and Delete the 'New model' and 'any old name' models.
+7. Run simmanrs again and check that Rarebear loads with no errors.
