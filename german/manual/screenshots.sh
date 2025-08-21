@@ -1,3 +1,4 @@
+# 2025-08-18 remove --no-gui from model-outputs and model-trainer
 #!/bin/bash
 
 # note the lines with gui enabled must be left on, the sim does not run properly (it skips) if gui is turned off on these
@@ -16,8 +17,8 @@ ETHOS='/mnt/c/Program Files (x86)/FrSky/Ethos'
 #"${ETHOS}/X20S/simulator.exe"   --read-only --no-gui  --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-menu.lua
 "${ETHOS}/X20S/simulator.exe"   --read-only --no-gui  --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-select.lua
 cp models/glider/magnus.bin models
-rm -r models/flugzeug
-rm -r models/segler
+rm -r models/airplane
+rm -r models/glider
 rm -r models/heli
 rm -r models/multirotor
 
@@ -49,7 +50,7 @@ rm -r models/multirotor
 
 "${ETHOS}/X20S/simulator.exe"   --read-only --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-vars.lua
 
-"${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-trainer.lua
+"${ETHOS}/X20S/simulator.exe"   --read-only --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-trainer.lua
 
 "${ETHOS}/X20S/simulator.exe"   --read-only --no-gui --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-chview.lua
 

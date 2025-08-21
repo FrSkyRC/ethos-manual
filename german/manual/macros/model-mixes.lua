@@ -1,4 +1,6 @@
 -- 2025-04-07 due to new thr mix interlock must set thr to -100 first, then to mid
+-- 2025-07-15 adapt macro to new Ethos 1.7 source select
+-- 2025-08-03 add missing comments
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -13,42 +15,16 @@ simulator.loadModel("rarebear.bin")
 -- 2 = STICK_RIGHT_VERTICAL (Elevator)
 -- 3 = STICK_RIGHT_HORIZONTAL (Aileron)
 simulator.setAnalog(1, -100) -- set thr to -100
-
-
-
-
-
 simulator.setAnalog(ANALOG_LAST_SLIDER, 50)
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_MDL)
--- set up a flight mode
---[[
-simulator.turnRotaryEncoder(3)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.touch(322, 351)
-simulator.touch(633, 399)
-simulator.touch(69, 452)
-simulator.touch(39, 308)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-]]--
--- end of fm
-simulator.turnRotaryEncoder(4)
+simulator.pressKey(KEY_ENTER) -- ack alert
+simulator.pressKey(KEY_MDL) -- open model menu
+simulator.turnRotaryEncoder(4) -- scroll to mixes
 simulator.screenshot("../assets/model-icon-mixes.png")
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
+simulator.turnRotaryEncoder(1) -- scroll to ail mix
 simulator.screenshot("../assets/model-mixes.png")
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
+simulator.turnRotaryEncoder(1) -- scroll to edit
 simulator.screenshot("../assets/model-mixes-ail-edit.png")
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("../assets/model-mixes-ail.png")
@@ -66,56 +42,58 @@ simulator.screenshot("../assets/model-mixes-ail-expo.png")
 -- simulator.pressKey(KEY_ENTER)
 -- simulator.turnRotaryEncoder(-1)
 -- simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
+simulator.turnRotaryEncoder(2) -- scroll to weight
 simulator.screenshot("../assets/model-mixes-ail-weight.png")
 simulator.turnRotaryEncoder(8)
-simulator.pressKey(KEY_ENTER, 1) -- long press diff source
-simulator.turnRotaryEncoder(3)
-simulator.pressKey(KEY_ENTER) -- select use a source
-simulator.pressKey(KEY_ENTER) --  cat
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER) -- open cat
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER) -- analogs
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER) -- member list
-simulator.turnRotaryEncoder(8)
-simulator.pressKey(KEY_ENTER) -- slider right
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_ENTER, 0.6) -- long press diff source
+simulator.turnRotaryEncoder(3) -- scroll to use a source
+simulator.pressKey(KEY_ENTER) -- select 
+
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(2) -- scroll to analogs
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(8) -- scroll to slider right
+simulator.pressKey(KEY_ENTER)
 simulator.screenshot("../assets/model-mixes-ail-diff.png")
-simulator.turnRotaryEncoder(4)
-simulator.turnRotaryEncoder(-2)
+simulator.turnRotaryEncoder(4) -- scroll to bottom
+simulator.turnRotaryEncoder(-2) -- move cursor back for screenshot
 simulator.screenshot("../assets/model-mixes-ail-ch-count.png")
 simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN) -- back to mixes list
 
 simulator.setAnalog(1, 0) -- set thr to half way
-simulator.turnRotaryEncoder(2)
+simulator.turnRotaryEncoder(2) -- scroll to thr mix
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
+simulator.turnRotaryEncoder(1) -- open
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
+simulator.turnRotaryEncoder(1) -- scroll to name
 simulator.screenshot("../assets/model-mixes-thr.png")
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
+
+simulator.turnRotaryEncoder(1) -- scroll to input
+simulator.pressKey(KEY_ENTER, 0.6) -- long ENT open options
+simulator.screenshot("../assets/model-mixes-thr-options.png")
+simulator.pressKey(KEY_RTN) -- back to mix
+
+
+simulator.turnRotaryEncoder(1) -- scroll to trim
+simulator.pressKey(KEY_ENTER) -- open trim menu
 simulator.screenshot("../assets/model-mixes-thr-trim-menu.png")
 simulator.pressKey(KEY_RTN)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(1) -- scroll to low pos trim
+simulator.pressKey(KEY_ENTER) -- enable
 simulator.screenshot("../assets/model-mixes-thr-trim-low-position.png")
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(5)
-simulator.turnRotaryEncoder(-5)
+simulator.pressKey(KEY_ENTER) -- disable 
+simulator.turnRotaryEncoder(1) -- scroll to thr cut
+simulator.pressKey(KEY_ENTER) -- open
+simulator.turnRotaryEncoder(5) -- scroll down
+simulator.turnRotaryEncoder(-5) -- scroll back for screenshot
 simulator.screenshot("../assets/model-mixes-thr-cut.png")
-simulator.turnRotaryEncoder(5)
+simulator.turnRotaryEncoder(5) -- scroll to thr hold
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(5)
-simulator.turnRotaryEncoder(-5)
+simulator.turnRotaryEncoder(5) -- scroll down
+simulator.turnRotaryEncoder(-5) -- scroll back for screenshot
 simulator.screenshot("../assets/model-mixes-thr-hold.png")
-simulator.turnRotaryEncoder(7)
+simulator.turnRotaryEncoder(7) -- scroll to end
 simulator.screenshot("../assets/model-mixes-thr-ch-count.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)

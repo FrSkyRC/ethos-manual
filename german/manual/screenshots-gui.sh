@@ -1,20 +1,21 @@
+# 2025-08-18 remove --no-gui from model-outputs and model-trainer
 #!/bin/bash
 
 # note the lines with gui enabled must be left on, the sim does not run properly (it skips) if gui is turned off on these
 
 ETHOS='/mnt/c/Program Files (x86)/FrSky/Ethos'
 
-"${ETHOS}/X20S/simulator.exe"   --read-only --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/system-menu.lua
+"${ETHOS}/X20S/simulator.exe"   --read-only  --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/system-menu.lua
 
-"${ETHOS}/X20PRO/simulator.exe" --read-only --no-audio --radio-settings ./x20pro-en.bin --sd-directory ./sd --flash-directory ./flash --radio-directory ./sd --exec ./macros/x20pro.lua
+"${ETHOS}/X20PRO/simulator.exe" --read-only  --no-audio --radio-settings ./x20pro-en.bin --sd-directory ./sd --flash-directory ./flash --radio-directory ./sd --exec ./macros/x20pro.lua
 
-"${ETHOS}/X20S/simulator.exe"   --read-only --no-audio --radio-settings ./x20s-en.bin --exec ./macros/mainview.lua
+"${ETHOS}/X20S/simulator.exe"   --read-only  --no-audio --radio-settings ./x20s-en.bin --exec ./macros/mainview.lua
 
 "${ETHOS}/X20S/simulator.exe"   --read-only --no-audio --radio-settings ./x20s-en.bin --exec ./macros/user-interface.lua
 
 
-#"${ETHOS}/X20S/simulator.exe"   --read-only --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-menu.lua
-"${ETHOS}/X20S/simulator.exe"   --read-only --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-select.lua
+#"${ETHOS}/X20S/simulator.exe"   --read-only  --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-menu.lua
+"${ETHOS}/X20S/simulator.exe"   --read-only  --no-audio --radio-settings ./x20s-en.bin   --sd-directory ./sd --flash-directory ./flash --exec ./macros/model-select.lua
 cp models/glider/magnus.bin models
 rm -r models/flugzeug
 rm -r models/segler
@@ -88,4 +89,4 @@ rm -r 'scripts/demo source'
 "${ETHOS}/X20PROAW/simulator.exe" --read-only --no-audio --radio-settings ./x20proaw-en.bin --sd-directory ./sd --flash-directory ./flash --radio-directory ./sd --exec ./macros/x20proaw.lua
 
 # toolbars must be rub last because it generates a Lua error
-"${ETHOS}/X20S/simulator.exe"   --read-only --no-audio --radio-settings ./x20s-en.bin --exec ./macros/toolbars.lua
+"${ETHOS}/X20S/simulator.exe"   --read-only  --no-audio --radio-settings ./x20s-en.bin --exec ./macros/toolbars.lua

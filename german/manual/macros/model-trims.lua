@@ -1,4 +1,5 @@
---2024-12-03 9) due to gyro switch category added
+-- 2024-12-03 9) due to gyro switch category added
+-- 2025-07-21 adapt macro to new Ethos 1.7 source select
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -45,6 +46,8 @@ simulator.screenshot("../assets/model-trims-mode-elevator-edit-behaviour.png") -
 -- simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(-1)
 simulator.pressKey(KEY_ENTER) -- add condiition
+--select speed
+--[[
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER) --- select cat
 simulator.turnRotaryEncoder(9) -- 2024-12-03 from 8 to 9 due to gyro switch added
@@ -55,7 +58,12 @@ simulator.turnRotaryEncoder(5)
 simulator.pressKey(KEY_ENTER) -- select speed
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
-
+]]--
+simulator.turnRotaryEncoder(10) --scroll to fm
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(5) --scroll to speed
+simulator.pressKey(KEY_ENTER) --y
+--
 simulator.turnRotaryEncoder(1) 
 simulator.pressKey(KEY_ENTER) -- edit trim mode
 simulator.turnRotaryEncoder(-1) 
@@ -71,6 +79,8 @@ simulator.turnRotaryEncoder(1) -- back on trim
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(-1)  
 simulator.pressKey(KEY_ENTER) -- select cond
+-- select thermal
+--[[
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER) -- select cat
 simulator.turnRotaryEncoder(9) -- 2024-12-03 from 8 to 9 due to gyro switch added
@@ -81,7 +91,12 @@ simulator.turnRotaryEncoder(4)
 simulator.pressKey(KEY_ENTER) -- select thermal
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
-
+]]--
+simulator.turnRotaryEncoder(10) --scroll to fm
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(4) --scroll to thermal
+simulator.pressKey(KEY_ENTER) --y
+--
 simulator.turnRotaryEncoder(1) 
 simulator.pressKey(KEY_ENTER) -- edit trim mode
 simulator.screenshot("../assets/model-trims-mode-elevator-custom-select.png")
@@ -100,6 +115,8 @@ simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER)-- add behaviour
 simulator.turnRotaryEncoder(-1)
 simulator.pressKey(KEY_ENTER)
+-- select calactive
+--[[
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(5)
@@ -110,6 +127,12 @@ simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+]]--
+simulator.turnRotaryEncoder(6) --scroll to lsw
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(2)  --scroll to calactive
+simulator.pressKey(KEY_ENTER) --y
+-- end select
 simulator.turnRotaryEncoder(1)
 simulator.touch(461, 445)
 simulator.turnRotaryEncoder(-1)
