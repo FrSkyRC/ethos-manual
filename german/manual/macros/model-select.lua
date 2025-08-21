@@ -70,7 +70,8 @@ simulator.touch(525, 319) -- tap on magnus model
 simulator.turnRotaryEncoder(3) -- scroll to change folder
 simulator.screenshot("../assets/model-modelselect-folder-change-select.png")
 simulator.pressKey(KEY_ENTER) -- --y
-simulator.turnRotaryEncoder(2) -- scroll to 'glider'
+--simulator.turnRotaryEncoder(2) -- scroll to 'glider'
+simulator.turnRotaryEncoder(4) -- scroll to 'glider'
 simulator.screenshot("../assets/model-modelselect-folder-change-glider.png")
 -- simulator.pressKey(KEY_ENTER) -- don't actually move 
 -- simulator.touch(84, 80)
