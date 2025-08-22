@@ -145,3 +145,7 @@ First big update of assets in 1.7 branch
 -- 2025-08-17 model-curves.lua -- put back attach to mix section
 -- 2025-08-17 simmanrs.bat -- add
 -- 2025-08-17 simmanrsro.bat -- add
+
+-- 2025-08-22 add .gitignore file to ethos-manual so .sh files have lf not crlf
+-- 2025-08-22 copy fwexample.bin from old to new DE due to DE content
+-- 2025-08-22 update user-interface and mainview.lus in DE
