@@ -88,5 +88,7 @@ rm -r 'scripts/demo source'
 
 "${ETHOS}/X20PROAW/simulator.exe" --read-only --no-audio --radio-settings ./x20proaw-en.bin --sd-directory ./sd --flash-directory ./flash --radio-directory ./sd --exec ./macros/x20proaw.lua
 
+"${ETHOS}/X20RS/simulator.exe" --read-only --no-audio --radio-settings ./x20rs-en.bin --sd-directory ./sd --flash-directory ./flash --radio-directory ./sd --exec ./macros/x20rs.lua
+
 # toolbars must be rub last because it generates a Lua error
 "${ETHOS}/X20S/simulator.exe"   --read-only --no-audio --radio-settings ./x20s-en.bin --exec ./macros/toolbars.lua
