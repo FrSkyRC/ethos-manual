@@ -23,6 +23,7 @@ cd /mnt/c/Users/lotharthole/manual (old)
 
 
 sh screenshots.sh -- full set
+sh screenshots-gui.sh -- full set with gui
 or
 sh sysmenu.sh -- runs sysmenu.lua (uses fwexample.bin)
 sh proshots.sh -- for the x20 pro screenshots --runsx20pro.lua (uses rarebear.bin)
@@ -48,39 +49,44 @@ sh modellua.sh --runs model-lua.lua  (uses rarebear.bin)
 sh x18s.sh --runs x18s.lua (uses fwexample.bin)
 sh trainer.sh --runs trainer-take-back.lua (use oxalys.bin)
 sh proawshots.sh --runs x20proaw.lua (uses fwexample.bin)
+sh prors-shots.sh --runs x20prors.lua  (uses rarebear.bin) 
 sh howto1.sh -- runs how-to-low-batt.lua (uses katana.bin)
 sh howto3.sh -- runs how-to-consumption.lua (uses katana.bin)
 
 sh toolbars.sh --runs toolbars.lua (*** Note must be last because it generates a lua error ****)
 
 Lua scripts
-common.lua is in all macros
+common.lua is in all macros for fixed date and time
 
 
 To be done:
-model-rf.lua 
+model-rf.lua (no simulation of enough receivers)
 
 
 To run sim for manual manually to allow editing of models etc
 -------------------------------------------------------------
 From cmd window
-Run cmd as admin
+Right click Run cmd as admin
 --setman - to set up the folder (old)
-setman-gittest - to set up the folder at c:\gittest\manual
+--setman-gittest - to set up the folder at c:\gittest\manual (old)
 simman - to run X20S sim 
 simmanro - to run X20S sim in read only mode
 
 simmanpro - to run X20PRO sim 
 simmanro - to run X20PRO sim in read only mode
 
-simman - to run X20PROAW sim 
-simmanro - to run X20PROAW sim in read only mode
+simmanproaw - to run X20PROAW sim 
+simmanproawro - to run X20PROAW sim in read only mode
 
-simman - to run X20S sim 
-simmanro - to run X20S sim in read only mode
+simmanrs - to run X20RS sim 
+simmanrsro - to run X20RS sim in read only mode
+
+simmanx18s - to run X20RS sim 
+simmanx18sro - to run X20RS sim in read only mode
 
 1. For screenshots.sh (or sysmenu, mainui, proshots individually)
-Rename model to Example in Model/edit
+model fwexample.bin:
+Rename model to Extra in Model/edit
 Rename timer 1 to BattTimer
 Configure Status widget on main page 
 Check system/general/vario is ON (bluetooth?)
@@ -117,7 +123,7 @@ Changes for Bertrand
 5. weasel.bin used for model/select since not visible in select screen
 
 
-
+compare images on macbook pro:
 lotharthole@192-168-1-2 ~ % cd local
 lotharthole@192-168-1-2 local % cd ethos
 lotharthole@192-168-1-2 ethos % cd manual
@@ -125,11 +131,22 @@ lotharthole@192-168-1-2 manual % sh cpimages.sh
 
 
 Language differences:
-1. DE and ES and IT have their own radio .bin files due to language setting
-2. The Extra fwexample.bin models have different Timer names
+1. They have their own radio .bin files due to language setting
+2. The Extra fwexample.bin models have different Timer names in DE, FR and ?
 3. The DE model-select.lua has German category names, and scrolls down 4 to the Segler category
 3a. The DE screenshots.sh deletes German folders
-4. zblank.bin calls up the zblank.md checklist file
+4. zblank.bin calls up the zblank.md checklist file in each language
+5. geronimo.md is called up by geronimo.bin in display
+5. The EN wav files are copied to each language
+
+
+
+
+
+
+
+
+
 
 Screens with telemetry sources:
 source-sensor-maxi
