@@ -35,11 +35,10 @@ simulator.turnRotaryEncoder(-1) -- scroll back to bluetooth
 simulator.pressKey(KEY_ENTER) -- enable
 --simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_ENTER) -- confirm stop audio bt
-simulator.sleep(2) -- wait 
+simulator.sleep(3) -- wait 
 simulator.screenshot("../assets/model-telemetry-bt-option.png")
-simulator.sleep(1) -- wait 
+simulator.sleep(5) -- wait 
 simulator.pressKey(KEY_ENTER) -- turn off BT
-
 --
 -- rssi sensor
 --
@@ -108,7 +107,7 @@ simulator.turnRotaryEncoder(2) -- scroll to auto detect
 simulator.pressKey(KEY_ENTER)
 simulator.sleep(1) -- wait 
 simulator.screenshot("../assets/model-telemetry-diy-sensor-auto-detect.png")
-simulator.pressKey(KEY_RTN) -- deselect
+--simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- cancel auto detect
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- back to telem list
