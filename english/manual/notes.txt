@@ -10,6 +10,7 @@ cd /mnt/c/Github/ethos-manual/german/manual
 cd /mnt/c/Github/ethos-manual/spanish/manual
 cd /mnt/c/Github/ethos-manual/italian/manual
 cd /mnt/c/Github/ethos-manual/french_LT/manual
+cd /mnt/c/Github/ethos-manual/japanese/manual
 
 cd /mnt/c/gittest/manual
 cd /mnt/c/gittest_1p7/manual
@@ -18,6 +19,7 @@ cd /mnt/c/gittest_en/manual
 cd /mnt/c/gittest_de/manual
 cd /mnt/c/gittest_jp/manual
 cd /mnt/c/gittest_it/manual
+cd /mnt/c/gittest_new/manual
 
 cd /mnt/c/Users/lotharthole/manual (old)
 
@@ -85,8 +87,7 @@ simmanx18s - to run X20RS sim
 simmanx18sro - to run X20RS sim in read only mode
 
 1. For screenshots.sh (or sysmenu, mainui, proshots individually)
-model fwexample.bin:
-Rename model to Extra in Model/edit
+model fwexample.bin: Rename model to Extra in Model/edit
 Rename timer 1 to BattTimer
 Configure Status widget on main page 
 Check system/general/vario is ON (bluetooth?)

@@ -1,5 +1,6 @@
 -- 2025-08-05 adapt to 1.7 source select, new '+' add buttons and comments
 -- 2025-08-09 take 'model-telemetry-calculated-sensor-consumption.png' screenshot with highlight
+-- 2025-09-03 remove the first deselect line 111
 --
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
