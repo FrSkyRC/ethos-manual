@@ -1,5 +1,9 @@
 -- 2025-02-1 Created
 -- 2025-08-02 new 1.7 source select and add comments
+-- 2025-09-04 add sleep(1) at line 279, replace turnRotaryEncoder(1) with (-2) and (+3)
+-- 2025-09-04 reverse both sleep(1) at line 279, replace turnRotaryEncoder(1) with (-2) and (+3)
+-- 2025-09-04 introduce simulator.enterText("FlapOffset")
+
 -- 0 = STICK_LEFT_HORIZONTAL (Rudder)
 -- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
 -- 2 = STICK_RIGHT_VERTICAL (Elevator)
@@ -207,6 +211,7 @@ simulator.pressKey(KEY_PAGE)
 --simulator.touch(747, 401)
 --simulator.touch(747, 401)
 --simulator.touch(747, 401)
+--[[
 simulator.touch(323, 349) --F
 simulator.touch(68, 396) -- shift
 simulator.touch(724, 359) -- l
@@ -220,6 +225,22 @@ simulator.touch(315, 353) -- f
 simulator.touch(164, 350) -- s
 simulator.touch(197, 302) -- e
 simulator.touch(368, 305) -- t
+simulator.pressKey(KEY_RTN) -- accept name
+]]--
+simulator.enterText("FlapOffset")
+-- simulator.touch(323, 349) --F
+-- simulator.touch(68, 396) -- shift
+-- simulator.touch(724, 359) -- l
+-- simulator.touch(85, 358) -- a
+-- simulator.touch(756, 302) -- p
+-- simulator.touch(61, 397) -- shift
+-- simulator.touch(683, 301) -- O
+-- simulator.touch(56, 403) -- shift
+-- simulator.touch(314, 353) -- f
+-- simulator.touch(315, 353) -- f
+-- simulator.touch(164, 350) -- s
+-- simulator.touch(197, 302) -- e
+-- simulator.touch(368, 305) -- t
 simulator.pressKey(KEY_RTN) -- accept name
 simulator.turnRotaryEncoder(3) -- scroll to source
 simulator.pressKey(KEY_ENTER) -- 
@@ -275,6 +296,9 @@ simulator.turnRotaryEncoder(2) -- scroll to output 2
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(7) -- scroll to ch 7
 simulator.pressKey(KEY_ENTER)
+--simulator.turnRotaryEncoder(-2) -- scroll to end of page
+--simulator.turnRotaryEncoder(3) -- scroll to end of page
+--simulator.sleep(1) -- wait 
 simulator.turnRotaryEncoder(1) -- scroll to end of page
 simulator.screenshot("../assets/how-to-butterfly-offset-mix-flaps-up.png")
 simulator.setAnalog(1, -100)

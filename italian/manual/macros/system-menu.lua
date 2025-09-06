@@ -2,6 +2,7 @@
 -- 2025-07-19 adapt macro to new Ethos 1.7 source select
 -- 2025-08-04 remove Flash related code and add missing comments
 -- 2025-08-11 fix typo 
+-- 2025-09-03 fix audio folders to en instead of de, scroll to keys in wake-up
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -19,10 +20,10 @@ simulator.pressKey(KEY_ENTER)
 -- end    
 simulator.screenshot("../assets/system-filemanager-sd.png")
 simulator.pressKey(KEY_ENTER) -- enter inside [audio]
+simulator.turnRotaryEncoder(2)
+simulator.pressKey(KEY_ENTER) -- enter inside [en]
 simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER) -- enter inside [fr]
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER) -- enter inside [femme]
+simulator.pressKey(KEY_ENTER) -- enter inside [gb]
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER) -- enter inside [system]
 simulator.turnRotaryEncoder(1) -- select 1.wav
@@ -118,7 +119,7 @@ simulator.pressKey(KEY_ENTER)
 simulator.screenshot("../assets/system-general-brightness-slider.png")
 simulator.turnRotaryEncoder(1) -- scroll to wake up
 simulator.pressKey(KEY_ENTER) -- open options
-simulator.turnRotaryEncoder(4) -- scroll to keys
+simulator.turnRotaryEncoder(3) -- scroll to keys
 simulator.screenshot("../assets/system-general-sleep.png")
 simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(2) -- scroll to sleep mode brightness
@@ -130,10 +131,11 @@ simulator.turnRotaryEncoder(1) -- scroll to often
 simulator.screenshot("../assets/system-general-audio-modes.png")
 simulator.pressKey(KEY_RTN) -- close the dialog
 simulator.turnRotaryEncoder(3) -- scroll to BT search
+
 simulator.screenshot("../assets/system-general-audio-bluetooth.png")
 simulator.pressKey(KEY_ENTER) -- enable search
 simulator.screenshot("../assets/system-general-audio-bluetooth-searching.png")
-simulator.sleep(0.05)
+simulator.sleep(1)
 simulator.turnRotaryEncoder(1) -- scroll to select device
 simulator.screenshot("../assets/system-general-audio-bluetooth-device-selected.png")
 simulator.pressKey(KEY_ENTER) -- select
@@ -142,6 +144,7 @@ simulator.sleep(10)
 simulator.screenshot("../assets/system-general-audio-bluetooth-connected.png")
 simulator.pressKey(KEY_ENTER) -- tap ok
 simulator.screenshot("../assets/system-general-audio-bluetooth-connected-ok.png")
+
 simulator.turnRotaryEncoder(7) -- scroll to see all vario
 simulator.turnRotaryEncoder(-6) -- move cursor back
 simulator.screenshot("../assets/system-general-audio-vario.png")

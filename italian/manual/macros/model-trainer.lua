@@ -1,5 +1,6 @@
 -- 2025-07-24 adapt macro to new Ethos 1.7 source select
 -- 2025-08-04 add comments
+-- 2025-09-04 increase wait for load to 6s
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -49,8 +50,8 @@ simulator.pressKey(KEY_ENTER) -- y
 simulator.sleep(3) -- wait for load
 simulator.screenshot("../assets/model-trainer-link-mode-bt-device-connected.png")
 simulator.pressKey(KEY_ENTER) -- accept device connected
-simulator.sleep(3) -- wait for load
-simulator.turnRotaryEncoder(1) -- to active cond
+simulator.sleep(6) -- wait for load
+simulator.turnRotaryEncoder(1) -- to disconnect
 simulator.screenshot("../assets/model-trainer-link-mode-bt-device-disconnect.png")
 simulator.turnRotaryEncoder(1) -- to active cond
 -- set active condition
