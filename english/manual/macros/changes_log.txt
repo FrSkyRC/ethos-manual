@@ -154,3 +154,5 @@ First big update of assets in 1.7 branch
 -- 2025-09-03 telemetry.lua -- remove the first deselect line 111
 -- 2025-09-04 model-trainer.lua -- increase wait for load to 6s
 -- 2025-09-04 how-to-butterfly.lua -- introduce simulator.enterText("FlapOffset")
+
+-- 2025-09-09 display.lua -- add bottombar-glider.png
