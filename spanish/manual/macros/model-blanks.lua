@@ -2,6 +2,7 @@
 -- 2024-12-30 add heli mixes library screenshot
 -- 2025-07-22 adapt macro to new Ethos 1.7 source select
 -- 2025-07-28 adapt to new '+' add button for mixes, lsw, sf, vars
+-- 2025-09-09 add bottombar-heli.png and bottombar-multirotor.png
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -67,6 +68,7 @@ simulator.turnRotaryEncoder(1) --scroll to A
 --simulator.pressKey(KEY_ENTER) --
 simulator.pressKey(KEY_RTN) --exit name field
 simulator.pressKey(KEY_PAGE) --page to end
+simulator.screenshot("../assets/bottombar-heli.png", {x=0, y=410, w=800, h=70})
 --simulator.pressKey(KEY_PAGE)
 --simulator.pressKey(KEY_PAGE)
 simulator.pressKey(KEY_MDL) --open model menu
@@ -107,6 +109,7 @@ simulator.pressKey(KEY_RTN)
 --simulator.pressKey(KEY_PAGE)
 --simulator.pressKey(KEY_PAGE)
 simulator.pressKey(KEY_PAGE) --page to end
+simulator.screenshot("../assets/bottombar-multirotor.png", {x=0, y=410, w=800, h=70})
 simulator.pressKey(KEY_MDL) --open model menu
 simulator.turnRotaryEncoder(4) --scroll to mixes
 simulator.pressKey(KEY_ENTER) --y

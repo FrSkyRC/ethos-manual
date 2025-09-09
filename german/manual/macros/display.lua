@@ -2,6 +2,7 @@
 -- 2025-07-22 adapt macro to new Ethos 1.7 source select
 -- 2025-08-09 add comments
 -- 2025-08-15 enable dofile again
+-- 2025-09-09 add bottombar-glider.png
 
 -- 0 = STICK_LEFT_HORIZONTAL (Rudder)
 -- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
@@ -168,6 +169,7 @@ simulator.pressKey(KEY_PAGE)
 simulator.screenshot("../assets/display-widget-lipo.png")
 simulator.pressKey(KEY_PAGE)
 simulator.screenshot("../assets/display-widget-channels.png")
+simulator.screenshot("../assets/bottombar-glider.png", {x=0, y=410, w=800, h=70})
 simulator.pressKey(KEY_PAGE)
 simulator.screenshot("../assets/display-widget-line-chart.png")
 simulator.turnRotaryEncoder(1)
