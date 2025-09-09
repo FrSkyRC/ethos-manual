@@ -48,6 +48,10 @@ simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 --]]
 simulator.pressKey(KEY_ENTER) -- edit source
+simulator.screenshot("../assets/model-mix-free-source-categories.png")
+--simulator.sleep(2) -- wait for sim
+simulator.turnRotaryEncoder(-2) -- scroll to end of list
+simulator.screenshot("../assets/model-mix-free-source-categories-2.png")
 simulator.turnRotaryEncoder(2) -- scroll to analogs
 simulator.pressKey(KEY_ENTER) -- select analogs
 simulator.turnRotaryEncoder(3) -- scroll to ail
