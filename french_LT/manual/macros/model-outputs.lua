@@ -1,6 +1,7 @@
 -- 2024-12-04 change adcValue() to setAnalog()
 -- 2024-12-29 make 4 ch balance into ch2, ch9, ch8, ch1 instead of ch2, ch9, ch1, ch8
 -- 2025-08-08 adapt macro to new Ethos 1.7 source select, add comments
+-- 2025-09-13 adapt multi ch balance to td sr12
 
 -- 0 = STICK_LEFT_HORIZONTAL (Rudder)
 -- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
@@ -125,11 +126,11 @@ simulator.pressKey(KEY_ENTER) -- open
 simulator.turnRotaryEncoder(11) -- scroll to balance channels button
 simulator.pressKey(KEY_ENTER) -- open
 --simulator.screenshot("./screenshot8.png") -- initial list of ch's
-simulator.turnRotaryEncoder(6) -- scroll to ch6 ail 3 left
+simulator.turnRotaryEncoder(7) -- scroll to ch7 ail 3 left
 simulator.pressKey(KEY_ENTER) -- tick
-simulator.turnRotaryEncoder(-1) -- scroll back to ch5 ail 2 right
+simulator.turnRotaryEncoder(3) -- scroll to ch10 ail 4 right
 simulator.pressKey(KEY_ENTER) -- tick
-simulator.turnRotaryEncoder(2) -- scroll to ch7 ail 4 right
+simulator.turnRotaryEncoder(-5) -- scroll back to ch5 ail 2 right
 simulator.pressKey(KEY_ENTER) -- tick
 simulator.pressKey(KEY_PAGE) -- page to OK button
 --simulator.screenshot("./screenshot9.png")
