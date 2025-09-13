@@ -1,4 +1,5 @@
 -- 2025-08-14 add S.Port connector select options, add comments
+-- 2025-09-13 add model-edit-thr-stick-deadband.png
 
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -17,7 +18,9 @@ simulator.pressKey(KEY_ENTER) -- open model typ eoptions
 simulator.screenshot("../assets/model-edit-modeltype.png")
 simulator.pressKey(KEY_RTN) -- exit options
 simulator.turnRotaryEncoder(13) -- scroll to end to move page
-simulator.turnRotaryEncoder(-5) -- scroll back to analog filter
+simulator.turnRotaryEncoder(-5) -- scroll back to thr stick deadband
+simulator.screenshot("../assets/model-edit-thr-stick-deadband.png")
+simulator.turnRotaryEncoder(1) -- scroll to analog filter
 simulator.screenshot("../assets/model-edit-analog-filter.png")
 simulator.pressKey(KEY_ENTER) -- open options
 simulator.screenshot("../assets/model-edit-analog-filter-select.png")
