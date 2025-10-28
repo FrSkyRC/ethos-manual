@@ -1,0 +1,158 @@
+-- 2025-10-20
+--
+** github folder names
+----------------------
+macros_low_level_dev - contains low level macros
+macros_high_level_dev - contains high level macros
+model-lua_scripts_dev -- contains lua scripts for model-lua section
+macros_working_folder -- this is the working folder for running the above scripts in the sim
+
+Running the macros
+------------------
+-- Running X20S main set of macros
+-- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
+-- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X20S_radio_backup.zip'
+-- 3. Web Sim / Uploads 'Start a macro' and select 'X20S_low_level_macros.zip'
+-- 4. Web Sim / Uploads 'Start a macro' and select 'X20S_top_level_macros.zip' and run
+-- 5. Web Sim / Downloads 'Save all screenshots' and browse to your 'assets_test' folder (it should be empty)
+-- 6. In '/Users/lotharthole/local/Ethos/manual/' run cpimages2.sh for an images diff
+
+-- Running X20S macro for model-lua
+-- Different because additional scripts are needed.
+-- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
+-- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X20S_radio_backup.zip'
+-- 4. Web Sim / Uploads 'Start a macro' and select 'model-lua_scripts'
+-- 5. Web Sim / Uploads 'Start a macro' and select 'macros_high_level/model-lua.zip' (simulator.reloadScripts() will effectively restart the sim so the Lua icon gets loaded) and run
+-- 6. Web Sim / Downloads 'Save all screenshots' and browse to your 'assets_test' folder (it should be empty)
+-- 7. In '/Users/lotharthole/local/Ethos/manual/' run cpimages2.sh for an images diff
+
+-- Running X20Pro main macro
+-- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
+-- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X20Pro_radio_backup.zip'
+-- 3. Web Sim / Uploads 'Start a macro' and select 'X20Pro.zip' and run
+-- 4. Web Sim / Downloads 'Save all screenshots' and browse to your 'assets_test' folder (it should be empty)
+-- 5. In '/Users/lotharthole/local/Ethos/manual/' run cpimages2.sh for an images diff
+
+-- Running X20ProAw main macro
+-- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
+-- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X20ProAW_radio_backup.zip'
+-- 3. Web Sim / Uploads 'Start a macro' and select 'X20ProAW.zip' and run
+-- 4. Web Sim / Downloads 'Save all screenshots' and browse to your 'assets_test' folder (it should be empty)
+-- 5. In '/Users/lotharthole/local/Ethos/manual/' run cpimages2.sh for an images diff
+
+-- Running X2RS main macro
+-- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
+-- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X20RS_radio_backup.zip'
+-- 3. Web Sim / Uploads 'Start a macro' and select 'x20rs.zip' and run
+-- 4. Web Sim / Downloads 'Save all screenshots' and browse to your 'assets_test' folder (it should be empty)
+-- 5. In '/Users/lotharthole/local/Ethos/manual/' run cpimages2.sh for an images diff
+
+-- Running X18S main macro
+-- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
+-- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X18S_radio_backup.zip'
+-- 3. Web Sim / Uploads 'Start a macro' and select 'X18S.zip' and run
+-- 4. Web Sim / Downloads 'Save all screenshots' and browse to your 'assets_test' folder (it should be empty)
+-- 5. In '/Users/lotharthole/local/Ethos/manual/' run cpimages2.sh for an images diff
+
+
+
+Language differences:
+1. They have their own radio backup files due to language setting
+2. The Extra fwexample.bin models have different Timer names in DE, FR and ?
+3. The DE model-select.lua has German category names, and scrolls down 4 to the Segler category
+3a. The DE model-select deletes German folders created by it
+4. zblank.bin calls up the zblank.md checklist file stored in each language radio backup
+5. geronimo.md is called up by geronimo.bin in display
+5. The EN wav files are copied to each language
+
+
+
+
+
+
+X20S main set of macros
+-----------------------
+model-select.lua (uses rarebear.bin and also relies on ultimate 60.bin)
+model-edit.lua (uses fwexample.bin) -- named Extra
+model-fm.lua (uses zBlank.bin) with blank fm
+model-mixes.lua (uses rarebear.bin)
+model-mixes-free.lua (uses rarebear.bin)
+model-mix-eg.lua (uses rarebear.bin)
+model-outputs.lua (uses zBalanace.bin)
+model-chview (uses blaster.bin)
+model-timers.lua (uses rarebear.bin)
+model-trims.lua (uses blaster.bin for offset trims) 
+
+model-checklist.lua (uses rarebear.bin)
+model-blanks.lua (uses zblank.bin) 
+model-lsw.lua (uses rarebear.bin)
+model-sf.lua (uses rarebear.bin) 
+model-curves.lua  (uses zblank.bin)
+model-vars.lua (uses blaster.bin) 
+model-trainer.lua (uses rarebear.bin) 
+model-blanks.lua (uses zblank.bin twice)
+model-chview.lua (uses blaster.bin) 
+model-lua.lua  (uses rarebear.bin)
+display.lua (uses geronimo.bin)
+
+basic-example.lua (uses zblank.bin)
+wing-example.lua (uses zblank.bin)
+heli-example.lua (uses zblank.bin and xheli.bin)
+how-to-low-batt.lua (uses katana.bin)
+how-to-consumption.lua (uses katana.bin)
+how-to-butterfly.lua (uses ng2.bin)
+how-to-in-flight-comp.lua (uses rarebear.bin)
+trainer-take-back.lua (use oxalys.bin)
+
+system-menu.lua (uses fwexample.bin)
+user-interface.lua (uses fwexample.bin)
+mainview.lua -- (uses fwexample.bin)
+telemetry.lua -- (uses rarebear.bin)
+toolbars.lua (*** Note must be last because it generates a lua error ****)
+
+Macros for other radios
+X20pro.lua (uses rarebear.bin)
+x20proaw.lua (uses fwexample.bin)
+x20prors.lua  (uses rarebear.bin) 
+x18s.lua (uses fwexample.bin)
+
+common.lua is in all macros for fixed date and time, to reset scripts and set readonly mode
+
+
+To be done:
+model-rf.lua (no simulation of enough receivers)
+
+sim model notes
+---------------
+model fwexample.bin: 
+1. named Extra
+2. Rename timer 1 to BattTimer
+3. Configure Status widget on main page 
+4. Check system/general/vario bluetooth is Off
+5. ensure model is bound
+6. back in File Explorer rename file to fwexample.bin
+
+model topbar.bin
+1. change model name to Katana
+2. Rename timer 1 to BattTimer
+3. back in File Explorer rename file to topbar.bin
+
+
+oxalys.bin : is a clone of fwexample.bin ??
+rarebear.bin : used for model macros
+weasel.bin used for model/select since not visible in select screen
+
+To make other languages
+-----------------------
+A. Radio backup
+1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
+2. Web Sim / Uploads 'Restore a radio backup' and select 'X20S_radio_backup.zip'
+3. Go to System/General and set the display and audio language
+4. Go to Timers and rename timer 1 to:
+de Batterie
+5. Download radio backup
+6. Unzip and add .md files 
+6. Rename and zip
+7. Add to github
+
+B. For DE make a custom model-select and add to github
