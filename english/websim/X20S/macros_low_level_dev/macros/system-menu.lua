@@ -9,6 +9,7 @@
 -- 2025-10-09 switch BT off again for later macros running
 -- 2025-10-10 adapt for sleep mode always on for sim
 -- 2025-11-02 sim bug fixed, adapt for change sleep mode back to keys
+-- 2025-11-03 add screenshots for descending sort and logs folder
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -32,11 +33,36 @@ simulator.pressKey(KEY_ENTER) -- open menu
 simulator.screenshot("/screenshots/system-filemanager-menu-options.png")
 simulator.pressKey(KEY_RTN) -- exit menu
 -- new sort options
+--[[
 simulator.turnRotaryEncoder(-1) -- scroll back to new sort option
 simulator.pressKey(KEY_ENTER) -- open sort options
 simulator.screenshot("/screenshots/system-filemanager-menu-sort-options.png")
 simulator.pressKey(KEY_RTN) -- exit menu
 simulator.turnRotaryEncoder(2) -- scroll to audio folder
+]]--
+simulator.turnRotaryEncoder(5) -- scroll to logs folder
+simulator.pressKey(KEY_ENTER) -- open
+simulator.turnRotaryEncoder(-2) -- scroll back to sort option
+simulator.pressKey(KEY_ENTER) -- open sort
+simulator.screenshot("/screenshots/system-filemanager-menu-sort-options.png")
+simulator.turnRotaryEncoder(2) -- scroll to descending
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(2) -- scroll to oldest first
+simulator.pressKey(KEY_ENTER) -- y
+simulator.screenshot("/screenshots/system-filemanager-menu-sort-options-desc.png")
+simulator.pressKey(KEY_RTN) -- exit sort
+simulator.turnRotaryEncoder(3) -- scroll to first log file
+simulator.screenshot("/screenshots/system-filemanager-logs.png")
+simulator.turnRotaryEncoder(-3) -- scroll back to sort
+simulator.pressKey(KEY_ENTER) -- open
+simulator.turnRotaryEncoder(1) --- scroll to ascending
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(2) -- scroll to newest first
+simulator.pressKey(KEY_ENTER) -- y
+simulator.pressKey(KEY_RTN) -- back to logs
+simulator.pressKey(KEY_RTN) -- deselect
+simulator.pressKey(KEY_RTN) -- back to system
+simulator.pressKey(KEY_ENTER) -- open file manager
 
 simulator.pressKey(KEY_ENTER) -- enter inside [audio]
 simulator.turnRotaryEncoder(2)

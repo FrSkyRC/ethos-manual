@@ -201,3 +201,4 @@ First big update of assets in 1.7 branch
 
 -- 2025-11-02 X20S_radio_backup.zip --- change change sleep mode back to keys
 -- 2025-11-02 system-menu.lua -- sim bug fixed, adapt for sleep mode back to keys
+-- 2025-11-03 system-menu.lua -- add screenshots for descending sort and logs folder
