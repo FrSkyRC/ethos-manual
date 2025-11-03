@@ -2,6 +2,7 @@
 -- 2025-10-05 adapt to web sim
 -- 2025-10-11 revert to original final model view
 -- 2025-10-22 move the delete folder lines into this low level model-select.lua for ease of other langauges support - adapt for DE
+-- 2025-11-03 add simulator.touch(405, 191) -- Virtual OK for DE
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -25,7 +26,8 @@ simulator.touch(197, 305) --e
 simulator.touch(517, 303) --u
 simulator.touch(397, 354) --g
 simulator.screenshot("/screenshots/model-modelselect-create-airplane-folder.png")
-simulator.touch(461, 191) -- Virtual OK
+--simulator.touch(461, 191) -- Virtual OK
+simulator.touch(405, 191) -- Virtual OK for DE
 simulator.touch(756, 80) --add cat
 simulator.touch(166, 350) --S
 simulator.touch(61, 403) --shift
@@ -34,14 +36,16 @@ simulator.touch(396, 359) --g
 simulator.touch(716, 356) --l
 simulator.touch(205, 303) --e
 simulator.touch(280, 302) --r
-simulator.touch(450, 184) -- Virtual OK
+--simulator.touch(450, 184) -- Virtual OK
+simulator.touch(405, 191) -- Virtual OK for DE
 simulator.touch(751, 79) -- add cat
 simulator.touch(476, 350) -- H
 simulator.touch(60, 405) -- shift
 simulator.touch(198, 303) -- e
 simulator.touch(710, 356) -- l
 simulator.touch(590, 302) -- i
-simulator.touch(455, 193) -- Virtual OK
+--simulator.touch(455, 193) -- Virtual OK
+simulator.touch(405, 191) -- Virtual OK for DE
 simulator.touch(755, 84) -- add cat
 simulator.touch(636, 399) -- M
 simulator.touch(65, 400) -- shift
@@ -54,7 +58,8 @@ simulator.touch(678, 305) -- o
 simulator.touch(359, 306) -- t
 simulator.touch(679, 304) -- o
 simulator.touch(279, 303) -- r
-simulator.touch(458, 191) -- Virtual OK
+--simulator.touch(458, 191) -- Virtual OK
+simulator.touch(405, 191) -- Virtual OK for DE
 simulator.touch(490, 81) -- tap on multirotor to open folder options
 simulator.screenshot("/screenshots/model-modelselect-folder-options.png")
 simulator.pressKey(KEY_RTN) -- exit options
