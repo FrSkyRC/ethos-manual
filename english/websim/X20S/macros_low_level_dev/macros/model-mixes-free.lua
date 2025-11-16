@@ -1,6 +1,7 @@
 -- 2025-07-15 adapt macro to new Ethos 1.7 source select
 -- 2025-07-28 use new '+' add mix button, also add final screenshot showing free mix output parameters
-
+-- 2025=11-16 add new feature to select a number as the source to a free mix
+-- 2025-11-16 also adapt for 'use a source' dialog having 4 lines
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
@@ -30,9 +31,11 @@ simulator.turnRotaryEncoder(1) --scroll to edit
 simulator.screenshot("/screenshots/model-mix-free-select-edit.png")
 simulator.pressKey(KEY_ENTER) --enter edit
 simulator.screenshot("/screenshots/model-mix-free-edit.png")
+--[[
 simulator.turnRotaryEncoder(7) -- down to add action
 simulator.screenshot("/screenshots/model-mix-free-add-action.png")
 simulator.turnRotaryEncoder(-3) -- up to source
+]]--
 -- select aileron as source
 --[[ old ail selection 
 simulator.pressKey(KEY_ENTER)
@@ -47,6 +50,7 @@ simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 --]]
+--[[
 simulator.pressKey(KEY_ENTER) -- edit source
 simulator.screenshot("/screenshots/model-mix-free-source-categories.png")
 --simulator.sleep(2) -- wait for sim
@@ -57,8 +61,58 @@ simulator.pressKey(KEY_ENTER) -- select analogs
 simulator.turnRotaryEncoder(3) -- scroll to ail
 simulator.pressKey(KEY_ENTER) -- select ail
 simulator.screenshot("/screenshots/model-mix-free-source-ail.png")
+]]--
+--[[
+simulator.turnRotaryEncoder(4) -- scroll to source
+simulator.screenshot("/screenshots/model-mix-free-source.png")
+simulator.pressKey(KEY_ENTER, 0.6)
+simulator.turnRotaryEncoder(2) -- scroll to convert to a value
+simulator.screenshot("/screenshots/screenshot3.png")
+simulator.pressKey(KEY_ENTER)
+simulator.screenshot("/screenshots/screenshot4.png")
+simulator.pressKey(KEY_ENTER, 0.870000)
+simulator.turnRotaryEncoder(6)
+simulator.screenshot("/screenshots/screenshot6.png")
+simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER)
+simulator.screenshot("/screenshots/screenshot7.png")
+simulator.turnRotaryEncoder(-2)
+simulator.screenshot("/screenshots/screenshot8.png")
+simulator.turnRotaryEncoder(2)
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(3)
+simulator.pressKey(KEY_ENTER)
+simulator.screenshot("/screenshots/screenshot9.png")
+simulator.turnRotaryEncoder(3)
+simulator.screenshot("/screenshots/screenshot10.png")
+]]--
 
-simulator.turnRotaryEncoder(2) --scroll to weight action
+simulator.turnRotaryEncoder(4) -- scroll to source
+simulator.screenshot("/screenshots/model-mix-free-source.png")
+simulator.pressKey(KEY_ENTER, 0.6) -- open options
+simulator.turnRotaryEncoder(1) -- scroll to convert to value
+simulator.screenshot("/screenshots/model-mix-free-source-convert-to-value.png")
+simulator.pressKey(KEY_ENTER) -- y
+simulator.screenshot("/screenshots/model-mix-free-source-as-value.png")
+simulator.pressKey(KEY_ENTER, 0.6) -- open options
+simulator.turnRotaryEncoder(4) -- scroll to use a source
+simulator.screenshot("/screenshots/model-mix-free-use-a-source.png")
+simulator.pressKey(KEY_ENTER) -- y
+simulator.pressKey(KEY_ENTER) -- open source select
+simulator.screenshot("/screenshots/model-mix-free-source-categories.png")
+simulator.turnRotaryEncoder(-2)
+simulator.screenshot("/screenshots/model-mix-free-source-categories-2.png")
+simulator.turnRotaryEncoder(2) -- scroll to analogs
+simulator.pressKey(KEY_ENTER) -- open analogs cat
+simulator.turnRotaryEncoder(3) -- scroll to aileron
+simulator.pressKey(KEY_ENTER) -- y
+simulator.screenshot("/screenshots/model-mix-free-source-ail.png")
+simulator.turnRotaryEncoder(3) -- scroll to add action
+simulator.screenshot("/screenshots/model-mix-free-add-action.png")
+
+
+
+simulator.turnRotaryEncoder(-1) --scroll to weight action
 simulator.screenshot("/screenshots/model-mix-free-actions-weight.png")
 --
 -- Direction section
@@ -361,7 +415,7 @@ simulator.pressKey(KEY_ENTER)
 simulator.screenshot("/screenshots/model-mix-free-actions-offset-edit.png")
 simulator.turnRotaryEncoder(-1) --scroll back to offset active
 simulator.pressKey(KEY_ENTER, 1) -- long press for options
-simulator.turnRotaryEncoder(3) -- scroll to use a source
+simulator.turnRotaryEncoder(4) -- scroll to use a source
 simulator.screenshot("/screenshots/model-mix-free-actions-offset-use-source.png")
 simulator.pressKey(KEY_ENTER) -- confirm use a source
 --[[
