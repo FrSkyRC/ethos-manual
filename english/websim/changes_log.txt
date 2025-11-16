@@ -205,3 +205,6 @@ First big update of assets in 1.7 branch
 
 -- 2025-11-03 system-menu.lua for DE -- add screenshots for descending sort and logs folder
 -- 2025-11-03 model-select.lua for DE -- add simulator.touch(405, 191) -- Virtual OK for DE
+
+-- 2025-11-16 model-mixes-free.lua -- add new feature to select a number as the source to a free mix
+-- 2025-11-16 model-mixes-free.lua -- also adapt for 'use a source' dialog having 4 lines
