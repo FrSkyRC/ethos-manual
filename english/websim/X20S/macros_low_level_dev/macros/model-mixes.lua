@@ -1,6 +1,7 @@
 -- 2025-04-07 due to new thr mix interlock must set thr to -100 first, then to mid
 -- 2025-07-15 adapt macro to new Ethos 1.7 source select
 -- 2025-08-03 add missing comments
+-- 2025-11-26 adapt for value edit options, add sequencer mix
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -46,7 +47,7 @@ simulator.turnRotaryEncoder(2) -- scroll to weight
 simulator.screenshot("/screenshots/model-mixes-ail-weight.png")
 simulator.turnRotaryEncoder(8)
 simulator.pressKey(KEY_ENTER, 0.6) -- long press diff source
-simulator.turnRotaryEncoder(3) -- scroll to use a source
+simulator.turnRotaryEncoder(4) -- scroll to use a source
 simulator.pressKey(KEY_ENTER) -- select 
 
 simulator.pressKey(KEY_ENTER)
@@ -95,5 +96,30 @@ simulator.turnRotaryEncoder(-5) -- scroll back for screenshot
 simulator.screenshot("/screenshots/model-mixes-thr-hold.png")
 simulator.turnRotaryEncoder(7) -- scroll to end
 simulator.screenshot("/screenshots/model-mixes-thr-ch-count.png")
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN, 1)
+--
+-- sequencer mix
+simulator.pressKey(KEY_MDL) -- open model menu
+simulator.turnRotaryEncoder(4) -- scroll to mixes
+simulator.pressKey(KEY_ENTER) -- open
+simulator.turnRotaryEncoder(-1) -- scroll back to '+' add button
+simulator.pressKey(KEY_ENTER) -- add mix
+simulator.turnRotaryEncoder(20) -- scroll to sequencer mix
+simulator.screenshot("/screenshots/model-mixes-library-seq.png")
+simulator.pressKey(KEY_ENTER) -- add seq mix
+simulator.turnRotaryEncoder(2) -- scroll to after last pos
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(1) -- scroll to name
+simulator.screenshot("/screenshots/model-mixes-seq.png")
+simulator.turnRotaryEncoder(13) -- scroll to end of page
+simulator.turnRotaryEncoder(-1) -- scroll backto output 1 menu
+simulator.screenshot("/screenshots/model-mixes-seq-op1-menu.png")
+simulator.pressKey(KEY_ENTER) -- open
+simulator.screenshot("/screenshots/model-mixes-seq-op1-options.png")
+simulator.turnRotaryEncoder(2) -- scroll to add backward curve
+simulator.pressKey(KEY_ENTER) -- add backward curve
+simulator.pressKey(KEY_ENTER) -- open menu
+simulator.screenshot("/screenshots/model-mixes-seq-op1-options-2.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN, 1)
