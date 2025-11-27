@@ -6,34 +6,36 @@ dofile("/macros/common.lua")
 simulator.loadModel("signature edge.bin")
 
 simulator.pressKey(KEY_ENTER) -- ack alert
-simulator.pressKey(KEY_MDL)
-simulator.turnRotaryEncoder(4)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(5)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.screenshot("/screenshots/screenshot1.png")
-simulator.turnRotaryEncoder(14)
-simulator.turnRotaryEncoder(-3)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.screenshot("/screenshots/screenshot2.png")
-simulator.pressKey(KEY_ENTER)
-simulator.screenshot("/screenshots/screenshot3.png")
-simulator.pressKey(KEY_RTN)
-simulator.turnRotaryEncoder(2)
-simulator.screenshot("/screenshots/screenshot4.png")
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
-simulator.screenshot("/screenshots/screenshot5.png")
-simulator.pressKey(KEY_ENTER)
-simulator.screenshot("/screenshots/screenshot6.png")
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
-simulator.screenshot("/screenshots/screenshot7.png")
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_MDL) -- open model menu
+simulator.turnRotaryEncoder(4) -- scroll to mixes
+simulator.pressKey(KEY_ENTER) -- open
+simulator.turnRotaryEncoder(5) -- scroll to sequence mix
+simulator.pressKey(KEY_ENTER) -- open
+simulator.turnRotaryEncoder(1) -- scroll to edit
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(1) -- scroll to name
+simulator.screenshot("/screenshots/how-to-seq-gear-name.png")
+simulator.turnRotaryEncoder(14) -- scroll to bottonm of page
+simulator.turnRotaryEncoder(-3) -- scroll back to op1 menu
+simulator.screenshot("/screenshots/how-to-seq-gear-op1-menu-button.png")
+simulator.pressKey(KEY_ENTER) -- open
+simulator.turnRotaryEncoder(1) -- scroll to edit fwd curve
+simulator.screenshot("/screenshots/how-to-seq-gear-op1-edit-fwd-curve.png")
+simulator.pressKey(KEY_ENTER) -- edit fwd curve
+simulator.screenshot("/screenshots/how-to-seq-gear-op1-fwd-curve.png")
+simulator.pressKey(KEY_RTN) -- exit
+simulator.turnRotaryEncoder(2) -- scroll to op2 menu
+simulator.screenshot("/screenshots/how-to-seq-gear-op2-menu-button.png")
+simulator.pressKey(KEY_ENTER) -- open
+simulator.turnRotaryEncoder(1) -- scroll to edit fwd curve
+simulator.screenshot("/screenshots/how-to-seq-gear-op2-edit-fwd-curve.png")
+simulator.pressKey(KEY_ENTER)  -- edit fwd curve
+simulator.screenshot("/screenshots/how-to-seq-gear-op2-fwd-curve.png")
+simulator.pressKey(KEY_RTN) -- exit
+simulator.pressKey(KEY_ENTER) -- open menu
+simulator.turnRotaryEncoder(2) -- scroll to edit backw curve
+simulator.screenshot("/screenshots/how-to-seq-gear-op2-edit-bkwd-curve.png")
+simulator.pressKey(KEY_ENTER) -- edit backw curve
+simulator.screenshot("/screenshots/how-to-seq-gear-op2-bkwd-curve.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN, 0.6)

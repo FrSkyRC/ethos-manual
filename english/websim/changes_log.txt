@@ -208,5 +208,5 @@ First big update of assets in 1.7 branch
 
 -- 2025-11-16 model-mixes-free.lua -- add new feature to select a number as the source to a free mix
 -- 2025-11-16 model-mixes-free.lua -- also adapt for 'use a source' dialog having 4 lines
-on hold pending betrand advice -- 2025-11-18 system-menu.lua -- adapt for new 'use a source' dialog
 -- 2025-11-27 model-mixes.lua -- adapt for value edit options, add sequencer mix
+-- 2025-11-27 how-to-gear-seq.lua -- first release
