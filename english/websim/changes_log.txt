@@ -210,3 +210,4 @@ First big update of assets in 1.7 branch
 -- 2025-11-16 model-mixes-free.lua -- also adapt for 'use a source' dialog having 4 lines
 -- 2025-11-27 model-mixes.lua -- adapt for value edit options, add sequencer mix
 -- 2025-11-27 how-to-gear-seq.lua -- first release
+-- 2025-11-27 basic-example.lua -- adapt for value edit options
