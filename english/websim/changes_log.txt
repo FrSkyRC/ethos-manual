@@ -212,3 +212,4 @@ First big update of assets in 1.7 branch
 -- 2025-11-27 how-to-gear-seq.lua -- first release
 -- 2025-11-27 basic-example.lua -- adapt for use a source options 
 -- 2025-11-27 how-to-butterfly.lua -- adapt for use a source options and new curve parameter order
+-- 2025-11-29 model-curves.lua -- adapt to new curves parameter order
