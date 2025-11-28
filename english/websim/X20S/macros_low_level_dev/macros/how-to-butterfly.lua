@@ -4,6 +4,7 @@
 -- 2025-09-04 reverse both sleep(1) at line 279, replace turnRotaryEncoder(1) with (-2) and (+3)
 -- 2025-09-04 introduce simulator.enterText("FlapOffset")
 -- 2025-10-11 remove one too many RTN due to bug
+-- 2025-11-27 adapt for use a source options and new curve parameter order
 
 -- 0 = STICK_LEFT_HORIZONTAL (Rudder)
 -- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
@@ -97,19 +98,19 @@ simulator.touch(128, 308) --w
 simulator.touch(234, 352) --d
 simulator.touch(478, 407) --b
 simulator.pressKey(KEY_RTN)
-simulator.turnRotaryEncoder(1) -- scroll to  
+simulator.turnRotaryEncoder(1) -- scroll to curve type
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(3) -- scroll to custom
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1) -- scroll to points count
+simulator.turnRotaryEncoder(2) -- scroll to easy mode
+simulator.pressKey(KEY_ENTER) -- toggle to off so we can edit x points
+simulator.turnRotaryEncoder(2) -- scroll to points count
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(-2) -- adjust from 5 to 3
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2) -- scroll to easy mode
-simulator.pressKey(KEY_ENTER) -- toggle to off so we can edit x points
 simulator.screenshot("/screenshots/how-to-butterfly-mix-curve-3pt.png")
-simulator.turnRotaryEncoder(2) -- scroll to points header
-simulator.pressKey(KEY_ENTER) -- open points
+--simulator.turnRotaryEncoder(2) -- scroll to points header
+--simulator.pressKey(KEY_ENTER) -- open points
 simulator.turnRotaryEncoder(2) -- scroll to point 2 x val
 simulator.pressKey(KEY_ENTER)
 simulator.touch(389, 448) -- set 10% steps
@@ -142,7 +143,7 @@ simulator.pressKey(KEY_ENTER)
 simulator.touch(389, 445) -- increase to 10% steps
 simulator.touch(389, 445) -- increase to 100% steps
 simulator.turnRotaryEncoder(-2) -- reduce from +10% to -190%
-simulator.touch(34, 450) -- set back to 10% dtepsa
+simulator.touch(34, 450) -- set back to 10% steps
 simulator.turnRotaryEncoder(1) -- increase from -190 to -180%
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.turnRotaryEncoder(2) -- scroll to weight flap 2
@@ -337,16 +338,16 @@ simulator.turnRotaryEncoder(1) -- scroll to type
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(3) -- scroll to custom
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
+--simulator.turnRotaryEncoder(1)
 --simulator.screenshot("/screenshots/how-to-butterfly-comp-curve.png")
 simulator.turnRotaryEncoder(1) -- scroll to smooth
 simulator.pressKey(KEY_ENTER) -- enable smooth
 simulator.screenshot("/screenshots/how-to-butterfly-comp-curve.png")
-simulator.turnRotaryEncoder(3) -- scroll to points heading
-simulator.pressKey(KEY_ENTER) -- open
-simulator.turnRotaryEncoder(1) -- scroll to point 1
+--simulator.turnRotaryEncoder(3) -- scroll to points heading
+--simulator.pressKey(KEY_ENTER) -- open
+simulator.turnRotaryEncoder(4) -- scroll to point 1
 simulator.pressKey(KEY_ENTER) --y
-simulator.touch(391, 444) -- set to 1% steps
+--simulator.touch(391, 444) -- set to 1% steps
 simulator.touch(391, 444) -- set to 10% steps
 simulator.turnRotaryEncoder(1) -- 10%
 simulator.touch(29, 442) -- reduce to 1% steps
@@ -354,18 +355,19 @@ simulator.turnRotaryEncoder(2) -- 12%
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.turnRotaryEncoder(1) -- scroll to point 2
 simulator.pressKey(KEY_ENTER) --y
-simulator.touch(386, 447) -- set to 1% steps
+--simulator.touch(386, 447) -- set to 1% steps
 simulator.touch(386, 447) -- set to 10% steps
 simulator.turnRotaryEncoder(1) -- 10%
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.turnRotaryEncoder(1) -- scroll to point 3
 simulator.pressKey(KEY_ENTER) --y
-simulator.touch(397, 447) -- set to 1% steps
+--simulator.touch(397, 447) -- set to 1% steps
+--simulator.touch(29, 442) -- reduce to 1% steps
 simulator.turnRotaryEncoder(8) -- 8 %
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.turnRotaryEncoder(1) -- scroll to point 4
 simulator.pressKey(KEY_ENTER) --y
-simulator.touch(388, 445) -- set to 1% steps
+--simulator.touch(388, 445) -- set to 1% steps
 simulator.turnRotaryEncoder(5) -- 5%
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.turnRotaryEncoder(1)
@@ -485,7 +487,7 @@ simulator.turnRotaryEncoder(1) -- scroll to edit
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(17) -- scroll to elevator weigth
 simulator.pressKey(KEY_ENTER, 0.6)
-simulator.turnRotaryEncoder(3) -- scroll to use a source
+simulator.turnRotaryEncoder(4) -- scroll to use a source
 simulator.screenshot("/screenshots/how-to-butterfly-mix-ele-use-source.png")
 simulator.pressKey(KEY_ENTER) --y
 simulator.pressKey(KEY_ENTER) -- open

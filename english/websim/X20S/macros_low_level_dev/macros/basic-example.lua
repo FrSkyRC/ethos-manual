@@ -3,7 +3,7 @@
 -- 2025-07-19 adapt macro to new Ethos 1.7 source select
 -- 2025-07-29 adapt to new '+' button for add mix
 -- 2025-10-08 adapt for wenb sim switches
--- 2025-11-27 adapt for value edit options
+-- 2025-11-27 adapt for use a source options 
 
 -- 0 = STICK_LEFT_HORIZONTAL (Rudder)
 -- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
