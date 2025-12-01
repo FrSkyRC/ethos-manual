@@ -117,9 +117,38 @@ simulator.turnRotaryEncoder(-1) -- scroll backto output 1 menu
 simulator.screenshot("/screenshots/model-mixes-seq-op1-menu.png")
 simulator.pressKey(KEY_ENTER) -- open
 simulator.screenshot("/screenshots/model-mixes-seq-op1-options.png")
+simulator.turnRotaryEncoder(1) -- scroll to edit curve
+simulator.pressKey(KEY_ENTER) -- edit curve
+simulator.screenshot("/screenshots/model-mixes-seq-op1-curve.png")
+--simulator.pressKey(KEY_RTN) -- exit edit
+--simulator.pressKey(KEY_ENTER) -- open menu again
+--simulator.turnRotaryEncoder(2) -- scroll to add backward curve
+--simulator.pressKey(KEY_ENTER) -- add backward curve
+--simulator.pressKey(KEY_ENTER) -- open menu
+simulator.turnRotaryEncoder(4) -- scroll to point 2 Y coord
+simulator.pressKey(KEY_ENTER) -- edit point
+simulator.touch(388, 447) -- set to 10% steps
+simulator.turnRotaryEncoder(10) -- 100%
+simulator.pressKey(KEY_RTN) -- exit
+simulator.turnRotaryEncoder(4) -- scroll to point 4 Y coord
+simulator.pressKey(KEY_ENTER) -- edit
+simulator.touch(395, 451) -- set to 10% steps
+simulator.turnRotaryEncoder(-10) -- -100%
+simulator.pressKey(KEY_RTN) -- exit edit
+simulator.pressKey(KEY_RTN) -- deselect
+simulator.pressKey(KEY_RTN) -- exit edit
+simulator.pressKey(KEY_ENTER) -- open menu
 simulator.turnRotaryEncoder(2) -- scroll to add backward curve
-simulator.pressKey(KEY_ENTER) -- add backward curve
+simulator.pressKey(KEY_ENTER) -- add
 simulator.pressKey(KEY_ENTER) -- open menu
 simulator.screenshot("/screenshots/model-mixes-seq-op1-options-2.png")
+simulator.turnRotaryEncoder(1) -- scroll to edit fwd curve
+simulator.pressKey(KEY_ENTER) -- edit
+simulator.screenshot("/screenshots/model-mixes-seq-op1-curve-fwd.png")
+simulator.pressKey(KEY_RTN) -- exit
+simulator.pressKey(KEY_ENTER) -- open menu
+simulator.turnRotaryEncoder(2) -- scroll to edit bkwd curve
+simulator.pressKey(KEY_ENTER) -- edit
+simulator.screenshot("/screenshots/model-mixes-seq-op1-curve-bkwd.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN, 1)
