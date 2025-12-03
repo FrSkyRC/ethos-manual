@@ -104,9 +104,9 @@ simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- scroll to edit
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("/screenshots/tut-heli-eg-curves-normal.png")
-simulator.turnRotaryEncoder(10) -- scroll to points
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(7) -- scroll down
+--simulator.turnRotaryEncoder(10) -- scroll to points hdr
+--simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(16) -- scroll down
 simulator.screenshot("/screenshots/tut-heli-eg-curves-normal2.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN) -- back to curves
@@ -115,9 +115,9 @@ simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- scroll to edit
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("/screenshots/tut-heli-eg-curves-iup1.png")
-simulator.turnRotaryEncoder(10) -- scroll to points
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(3) -- scroll down
+--simulator.turnRotaryEncoder(10) -- scroll to points hdr
+--simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(12) -- scroll down
 simulator.screenshot("/screenshots/tut-heli-eg-curves-iup1-2.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN) -- back to curves
@@ -126,9 +126,9 @@ simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- scroll to edit
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("/screenshots/tut-heli-eg-curves-iup2.png")
-simulator.turnRotaryEncoder(10) -- scroll to points
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2) -- scroll down
+--simulator.turnRotaryEncoder(10) -- scroll to points hdr
+--simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(11) -- scroll down
 simulator.screenshot("/screenshots/tut-heli-eg-curves-iup2-2.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
