@@ -2,6 +2,7 @@
 -- 2025-04-07 -- select altitude instead of lipo (due to sensors changes)
 -- 2025-07-19 adapt macro to new Ethos 1.7 source select
 -- 2025-08-04 fix switch-options.png and comments
+-- 2025-12-03 fix 'use a source'
 
 -- 0 = STICK_LEFT_HORIZONTAL (Rudder)
 -- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
@@ -87,7 +88,8 @@ simulator.turnRotaryEncoder(14)
 simulator.screenshot("/screenshots/source-with-options.png")
 simulator.pressKey(KEY_ENTER, 0.6) -- long press ENT
 simulator.screenshot("/screenshots/source-menu.png")
-simulator.turnRotaryEncoder(3) -- scroll to select a source
+--simulator.turnRotaryEncoder(3) -- scroll to select a source
+simulator.turnRotaryEncoder(4) -- scroll to select a source
 simulator.pressKey(KEY_ENTER) --y
 --[[
 simulator.pressKey(KEY_ENTER)
@@ -104,7 +106,7 @@ simulator.turnRotaryEncoder(3) -- scroll to ail
 simulator.pressKey(KEY_ENTER) --y
 
 simulator.pressKey(KEY_ENTER, 0.6) --long pressd ENT
-simulator.turnRotaryEncoder(3) -- scroll to convert to value
+simulator.turnRotaryEncoder(1) -- scroll to convert to value
 simulator.screenshot("/screenshots/source-convert-to-value.png")
 simulator.turnRotaryEncoder(1) -- scroll to options
 simulator.pressKey(KEY_ENTER) --y
@@ -135,7 +137,8 @@ simulator.pressKey(KEY_ENTER) --y
 --simulator.pressKey(KEY_RTN) -- remove selection
 --simulator.pressKey(KEY_RTN) -- close the dialog
 simulator.pressKey(KEY_ENTER, 0.6)
-simulator.turnRotaryEncoder(4)
+--simulator.turnRotaryEncoder(4)
+simulator.turnRotaryEncoder(2) -- scroll to options
 simulator.pressKey(KEY_ENTER) -- SF source options
 simulator.screenshot("/screenshots/source-2pos-options.png")
 simulator.pressKey(KEY_RTN) -- exit
@@ -160,7 +163,8 @@ simulator.turnRotaryEncoder(2) -- scroll to thr trim
 simulator.pressKey(KEY_ENTER) --y
 --
 simulator.pressKey(KEY_ENTER, 0.6)
-simulator.turnRotaryEncoder(4)
+--simulator.turnRotaryEncoder(4)
+simulator.turnRotaryEncoder(2) -- scroll to options
 simulator.pressKey(KEY_ENTER) -- trim source options
 simulator.screenshot("/screenshots/source-trim-options.png")
 simulator.pressKey(KEY_RTN) -- exit
@@ -185,7 +189,8 @@ simulator.pressKey(KEY_ENTER) --y
 simulator.pressKey(KEY_ENTER) --y select var
 --
 simulator.pressKey(KEY_ENTER, 0.6)
-simulator.turnRotaryEncoder(4)
+--simulator.turnRotaryEncoder(4) -- scroll to options
+simulator.turnRotaryEncoder(2) -- scroll to options
 simulator.pressKey(KEY_ENTER) -- Var source options
 simulator.screenshot("/screenshots/source-var-options.png")
 simulator.pressKey(KEY_RTN) -- close the options menu

@@ -215,3 +215,5 @@ First big update of assets in 1.7 branch
 -- 2025-11-27 how-to-gear-seq.lua -- first release
 -- 2025-11-29 model-curves.lua -- adapt to new curves parameter order (rev5 no text change)
 -- 2025-12-03 how-to-gear-seq.lua -- improve the how to with different fwd and bkwd curves
+-- 2025-12-03 how-to-in-flight-comp.lua -- update for new curve parameter order
+-- 2025-12-03 user-interface.lua -- fix 'use a source'
