@@ -2,6 +2,8 @@
 -- 2025-07-28 use new '+' add mix button, also add final screenshot showing free mix output parameters
 -- 2025=11-16 add new feature to select a number as the source to a free mix
 -- 2025-11-16 also adapt for 'use a source' dialog having 4 lines
+-- 2025-12-04 remove set 1% steps
+
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
@@ -474,12 +476,12 @@ simulator.pressKey(KEY_ENTER)
 -- simulator.screenshot("/screenshots/model-mix-free-actions-slow-edit.png")
 simulator.turnRotaryEncoder(1) -- scroll to up value
 simulator.pressKey(KEY_ENTER)
-simulator.touch(395, 451) -- set 1% steps
+--simulator.touch(395, 451) -- set 1% steps
 simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_RTN) -- 2s
 simulator.turnRotaryEncoder(1) -- scroll to down value
 simulator.pressKey(KEY_ENTER)
-simulator.touch(394, 448) -- set 1% steps
+--simulator.touch(394, 448) -- set 1% steps
 simulator.turnRotaryEncoder(2)
 simulator.pressKey(KEY_RTN) -- 2s
 simulator.turnRotaryEncoder(-2)

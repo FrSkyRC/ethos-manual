@@ -2,6 +2,7 @@
 -- 2025-08-16 add model-curves-edit-options, remove commented out sections
 -- 2025-08-17 put back attach to mix section
 -- 2025-11-29 adapt to new curves parameter order
+-- 2025-12-04 remove set 1% steps
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -34,7 +35,7 @@ simulator.pressKey(KEY_ENTER) -- open
 simulator.screenshot("/screenshots/model-curves-fn-xgt0.png")
 simulator.turnRotaryEncoder(1) -- scroll to offset
 simulator.pressKey(KEY_ENTER) -- edit
-simulator.touch(389, 449) -- set 1% steps
+--simulator.touch(389, 449) -- set 1% steps
 simulator.touch(389, 449) -- set 10% steps
 simulator.turnRotaryEncoder(2) -- 20%
 simulator.screenshot("/screenshots/model-curves-fn-xgt0-offset.png")
