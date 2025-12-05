@@ -45,6 +45,7 @@ simulator.pressKey(KEY_ENTER) -- add mix
 ]]--
 --add butterfly mix
 simulator.touch(546, 91) -- add new mix button '+'
+simulator.screenshot("/screenshots/model-mixes-library-glider.png")
 simulator.turnRotaryEncoder(10) -- scroll to butterfly mix
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(2) -- scroll to last position
