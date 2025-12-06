@@ -3,6 +3,7 @@
 -- 2025-07-19 adapt macro to new Ethos 1.7 source select
 -- 2025-08-04 fix switch-options.png and comments
 -- 2025-12-03 fix 'use a source'
+-- 2025-12-06 adapt for BT removal in Telemetry
 
 -- 0 = STICK_LEFT_HORIZONTAL (Rudder)
 -- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
@@ -68,7 +69,7 @@ simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(4)
 simulator.pressKey(KEY_ENTER)
 --simulator.turnRotaryEncoder(14)
-simulator.turnRotaryEncoder(15) -- select altitude instead of lipo (due to sensors changes)
+simulator.turnRotaryEncoder(14) -- select altitude instead of lipo (due to sensors changes)
 simulator.pressKey(KEY_ENTER, 0.6)
 simulator.turnRotaryEncoder(4)
 simulator.pressKey(KEY_ENTER)
