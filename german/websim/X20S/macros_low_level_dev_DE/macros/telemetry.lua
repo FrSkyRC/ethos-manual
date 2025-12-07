@@ -1,7 +1,8 @@
 -- 2025-08-05 adapt to 1.7 source select, new '+' add buttons and comments
 -- 2025-08-09 take 'model-telemetry-calculated-sensor-consumption.png' screenshot with highlight
 -- 2025-09-03 remove the first deselect line 111
---
+-- 2025-12-06 adapt for BT removed from this screen
+
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
@@ -26,11 +27,13 @@ simulator.turnRotaryEncoder(2) -- scroll to comp only
 simulator.pressKey(KEY_ENTER) -- open, get confirmation dialog
 simulator.screenshot("/screenshots/model-telemetry-comp-only-confirm.png")
 simulator.pressKey(KEY_RTN) -- cancel
-simulator.turnRotaryEncoder(2) -- scroll to individual rssi alert
+--simulator.turnRotaryEncoder(2) -- scroll to individual rssi alert (BT change)
+simulator.turnRotaryEncoder(1) -- scroll to individual rssi alert
 simulator.pressKey(KEY_ENTER) -- enable
 simulator.screenshot("/screenshots/model-telemetry-rssi-individual-alert.png")
 simulator.pressKey(KEY_ENTER) -- disable
 --
+--[[ BT removed from this screen
 -- bluetooth
 simulator.turnRotaryEncoder(-1) -- scroll back to bluetooth
 simulator.pressKey(KEY_ENTER) -- enable
@@ -40,11 +43,13 @@ simulator.sleep(3) -- wait
 simulator.screenshot("/screenshots/model-telemetry-bt-option.png")
 simulator.sleep(5) -- wait 
 simulator.pressKey(KEY_ENTER) -- turn off BT
+]]--
 --
 -- rssi sensor
 --
 --simulator.turnRotaryEncoder(7)
-simulator.turnRotaryEncoder(4) -- scroll to first sensor in list - rssi
+--simulator.turnRotaryEncoder(4) -- scroll to first sensor in list - rssi (BT change)
+simulator.turnRotaryEncoder(3) -- scroll to first sensor in list - rssi
 simulator.screenshot("/screenshots/model-telemetry-discovered-new-sensors.png")
 simulator.pressKey(KEY_ENTER) -- open edit options
 simulator.turnRotaryEncoder(1) -- scroll to edit
@@ -100,7 +105,7 @@ simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
 -- do diy sensor
 --
 simulator.pressKey(KEY_ENTER) -- open telemetry menu
-simulator.turnRotaryEncoder(6) -- scroll to 'create diy sensor'
+simulator.turnRotaryEncoder(5) -- scroll to 'create diy sensor'
 simulator.screenshot("/screenshots/model-telemetry-diy-sensor-select.png")
 simulator.pressKey(KEY_ENTER) -- enable
 simulator.screenshot("/screenshots/model-telemetry-diy-sensor-edit.png")
@@ -119,7 +124,7 @@ simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
 --
 -- consumption
 simulator.pressKey(KEY_ENTER) -- open telemetry menu
-simulator.turnRotaryEncoder(7) -- scroll to 'create calculated sensor'
+simulator.turnRotaryEncoder(6) -- scroll to 'create calculated sensor'
 simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-select.png")
 simulator.pressKey(KEY_ENTER) -- enabled
 simulator.turnRotaryEncoder(1) -- scroll to consumption
@@ -138,7 +143,7 @@ simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
 --
 -- trip
 simulator.pressKey(KEY_ENTER) -- open telemetry menu
-simulator.turnRotaryEncoder(7) -- scroll to 'create calculated sensor'
+simulator.turnRotaryEncoder(6) -- scroll to 'create calculated sensor'
 -- simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-select.png")
 simulator.pressKey(KEY_ENTER) --enable
 -- simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-consumption.png")
@@ -154,7 +159,7 @@ simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
 --
 -- multi-lipo
 simulator.pressKey(KEY_ENTER) -- open telemetry menu
-simulator.turnRotaryEncoder(7) -- scroll to 'create calculated sensor'
+simulator.turnRotaryEncoder(6) -- scroll to 'create calculated sensor'
 -- simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-select.png")
 simulator.pressKey(KEY_ENTER) -- enable
 -- simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-consumption.png")
@@ -181,7 +186,7 @@ simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
 --
 -- percent
 simulator.pressKey(KEY_ENTER) -- open telemetry menu
-simulator.turnRotaryEncoder(7) -- scroll to 'create calculated sensor'
+simulator.turnRotaryEncoder(6) -- scroll to 'create calculated sensor'
 -- simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-select.png")
 simulator.pressKey(KEY_ENTER)
 -- simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-consumption.png")
@@ -197,7 +202,7 @@ simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
 --
 -- power
 simulator.pressKey(KEY_ENTER) -- open telemetry menu
-simulator.turnRotaryEncoder(7) -- scroll to 'create calculated sensor'
+simulator.turnRotaryEncoder(6) -- scroll to 'create calculated sensor'
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- scroll to fn
 simulator.pressKey(KEY_ENTER)
@@ -220,7 +225,7 @@ simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
 --
 -- do calculated custom power sensor
 simulator.pressKey(KEY_ENTER) -- open telemetry menu
-simulator.turnRotaryEncoder(7) -- scroll to 'calculated sensor'
+simulator.turnRotaryEncoder(6) -- scroll to 'calculated sensor'
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- scroll to formula
 simulator.pressKey(KEY_ENTER)
@@ -375,7 +380,7 @@ simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
 --
 -- do subtract example
 simulator.pressKey(KEY_ENTER) -- open telemetry menu
-simulator.turnRotaryEncoder(7) -- scroll to 'calculated sensor'
+simulator.turnRotaryEncoder(6) -- scroll to 'calculated sensor'
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- scroll to fn
 simulator.pressKey(KEY_ENTER)
@@ -474,7 +479,7 @@ simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
 -- demo of internal value 
 simulator.setAnalog(1, 100) -- set thr to -100
 simulator.pressKey(KEY_ENTER) -- open telemetry menu
-simulator.turnRotaryEncoder(7) -- scroll to 'calculated sensor'
+simulator.turnRotaryEncoder(6) -- scroll to 'calculated sensor'
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- scroll to fn
 simulator.pressKey(KEY_ENTER)

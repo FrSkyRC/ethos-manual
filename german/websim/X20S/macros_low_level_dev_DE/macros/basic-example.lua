@@ -3,6 +3,7 @@
 -- 2025-07-19 adapt macro to new Ethos 1.7 source select
 -- 2025-07-29 adapt to new '+' button for add mix
 -- 2025-10-08 adapt for wenb sim switches
+-- 2025-11-27 adapt for use a source options 
 
 -- 0 = STICK_LEFT_HORIZONTAL (Rudder)
 -- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
@@ -164,7 +165,7 @@ simulator.screenshot("/screenshots/tut-fw-eg-mixes-ail-diff-50.png")
 --simulator.pressKey(KEY_RTN)
 
 simulator.pressKey(KEY_ENTER, 0.6) --long ENT
-simulator.turnRotaryEncoder(3) --scroll to use a source
+simulator.turnRotaryEncoder(4) --scroll to use a source
 simulator.screenshot("/screenshots/tut-fw-eg-mixes-ail-diff-use-source.png")
 simulator.pressKey(KEY_ENTER) --y
 --

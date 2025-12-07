@@ -28,7 +28,7 @@ simulator.touch(571, 91) -- add new var button '+'
 simulator.screenshot("/screenshots/model-vars-new_var.png")
 simulator.turnRotaryEncoder(5) -- scroll to values
 simulator.pressKey(KEY_ENTER) -- edit
-simulator.touch(397, 444) -- set to 1% steps
+--simulator.touch(397, 444) -- set to 1% steps
 simulator.touch(397, 444) -- set to 10% steps
 simulator.turnRotaryEncoder(3) -- 30%
 simulator.pressKey(KEY_RTN) -- accept
@@ -56,13 +56,13 @@ simulator.pressKey(KEY_RTN) -- accept
 -- set range
 simulator.turnRotaryEncoder(1) -- scroll to range from
 simulator.pressKey(KEY_ENTER) -- y
-simulator.touch(393, 444) -- set to 1% steps
+--simulator.touch(393, 444) -- set to 1% steps
 simulator.touch(393, 444) -- set to 10% steps
 simulator.turnRotaryEncoder(9) -- from -100% to -10%  
 simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(1) -- scroll to range to
 simulator.pressKey(KEY_ENTER) -- y
-simulator.touch(395, 449) -- set to 1% steps 
+--simulator.touch(395, 449) -- set to 1% steps 
 simulator.turnRotaryEncoder(5) -- 105%
 simulator.touch(392, 451) -- set to 10% steps
 simulator.turnRotaryEncoder(-9) -- reduce to 15%
@@ -93,7 +93,7 @@ simulator.pressKey(KEY_ENTER) --y
 -- end select thermal
 simulator.turnRotaryEncoder(1) -- scroll to value
 simulator.pressKey(KEY_ENTER) -- y
-simulator.touch(392, 445) -- set to 1% steps
+--simulator.touch(392, 445) -- set to 1% steps
 simulator.turnRotaryEncoder(9) -- 9%
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- back to var
@@ -120,7 +120,7 @@ simulator.pressKey(KEY_ENTER) --y
 
 simulator.turnRotaryEncoder(1) -- scroll to value
 simulator.pressKey(KEY_ENTER) -- y
-simulator.touch(383, 441) -- set 1% steps
+--simulator.touch(383, 441) -- set 1% steps
 simulator.turnRotaryEncoder(-3) -- -3%
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- back to var
@@ -137,13 +137,13 @@ simulator.touch(571, 91) -- add new var button '+'
 -- set range
 simulator.turnRotaryEncoder(3) -- scroll to range from
 simulator.pressKey(KEY_ENTER) -- y
-simulator.touch(386, 439) -- set 1% steps
+--simulator.touch(386, 439) -- set 1% steps
 simulator.touch(390, 441) -- set 10% steps
 simulator.turnRotaryEncoder(10) -- increase from -100% to 0%
 simulator.pressKey(KEY_RTN) -- accept
 simulator.turnRotaryEncoder(1) -- scroll to range to
 simulator.pressKey(KEY_ENTER) -- y
-simulator.touch(392, 444) -- set 1% steps
+--simulator.touch(392, 444) -- set 1% steps
 simulator.touch(392, 444) -- set 10% steps
 simulator.turnRotaryEncoder(-8) -- reduce from 100% to 20%
 simulator.touch(28, 445) -- set back to 1% steps
