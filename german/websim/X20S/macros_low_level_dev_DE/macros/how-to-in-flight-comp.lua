@@ -1,5 +1,7 @@
---2025-02-1 created
---2025-07-26 new 1.7 source select and lsw and sf add 
+-- 2025-02-1 created
+-- 2025-07-26 new 1.7 source select and lsw and sf add 
+-- 2025-12-03 update for new curve parameter order
+
 -- 0 = STICK_LEFT_HORIZONTAL (Rudder)
 -- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
 -- 2 = STICK_RIGHT_VERTICAL (Elevator)
@@ -105,9 +107,10 @@ simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(1) --scroll to edit
 simulator.pressKey(KEY_ENTER) --y
 simulator.screenshot("/screenshots/how-in-flight-comp-var-comp-curve.png")
-simulator.turnRotaryEncoder(9) --scroll to points heading
-simulator.pressKey(KEY_ENTER) --open points list
-simulator.turnRotaryEncoder(5) --scroll to point 5
+--simulator.turnRotaryEncoder(9) --scroll to points heading
+--simulator.pressKey(KEY_ENTER) --open points list
+--simulator.turnRotaryEncoder(5) --scroll to point 5
+simulator.turnRotaryEncoder(13) --scroll to point 5
 simulator.screenshot("/screenshots/how-in-flight-comp-var-comp-curve-pts.png")
 simulator.pressKey(KEY_RTN, 1) --return home
  

@@ -3,6 +3,8 @@
 -- 2025-10-11 revert to original final model view
 -- 2025-10-22 move the delete folder lines into this low level model-select.lua for ease of other langauges support - adapt for DE
 -- 2025-11-03 add simulator.touch(405, 191) -- Virtual OK for DE
+-- 2025-10-22 move the delete folder lines into this low level model-select.lua for ease of other langauges support
+-- 2025-12-05 simulator.touch(351, 84) -- tap on multirotor to open folder options
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -60,7 +62,8 @@ simulator.touch(679, 304) -- o
 simulator.touch(279, 303) -- r
 --simulator.touch(458, 191) -- Virtual OK
 simulator.touch(405, 191) -- Virtual OK for DE
-simulator.touch(490, 81) -- tap on multirotor to open folder options
+--simulator.touch(490, 81) -- tap on multirotor to open folder options
+simulator.touch(351, 84) -- tap on multirotor to open folder options
 simulator.screenshot("/screenshots/model-modelselect-folder-options.png")
 simulator.pressKey(KEY_RTN) -- exit options
 

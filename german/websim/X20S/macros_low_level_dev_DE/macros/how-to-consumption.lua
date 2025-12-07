@@ -2,6 +2,7 @@
 -- 2025-04-07 line 73 select invert instead of edge
 -- 2025-07-28 new 1.7 source select, also use new lsw and sf add
 -- 2025-10-26 adapt for new play audio priority
+-- 2025-12-06 adapt for BT removal in Telemetry
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -13,7 +14,7 @@ simulator.pressKey(KEY_MDL) --open model menu
 simulator.pressKey(KEY_PAGE) --2nd page
 simulator.turnRotaryEncoder(1) --scroll to telem
 simulator.pressKey(KEY_ENTER) --y
-simulator.turnRotaryEncoder(17) --scroll to current sensor
+simulator.turnRotaryEncoder(16) --scroll to current sensor
 simulator.screenshot("/screenshots/how-to-consumption-telemetry-current-sensor.png")
 simulator.pressKey(KEY_ENTER) --open
 simulator.turnRotaryEncoder(1) --scroll to edit
@@ -26,14 +27,14 @@ simulator.touch(391, 447) --100 step
 simulator.turnRotaryEncoder(-5) --reduce to 100 from 500
 simulator.pressKey(KEY_RTN) --exit 
 simulator.screenshot("/screenshots/how-to-consumption-telemetry-current-sensor-edit.png")
-simulator.turnRotaryEncoder(-15) --scroll back to 
+--simulator.turnRotaryEncoder(-15) --scroll back to 
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
-simulator.turnRotaryEncoder(-21) --scroll back to calc sensor
+simulator.turnRotaryEncoder(-21) --scroll back to top
 -- simulator.screenshot("./screenshot3.png") -- place holder
 --
 -- start of calculated sensor
-simulator.turnRotaryEncoder(5) --scroll to create calc sensor
+simulator.turnRotaryEncoder(4) --scroll to create calc sensor
 simulator.screenshot("/screenshots/how-to-consumption-create-calc-sensor.png")
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(1) -- scroll to consumption

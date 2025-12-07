@@ -10,6 +10,7 @@
 -- 2025-10-10 adapt for sleep mode always on for sim
 -- 2025-11-02 sim bug fixed, adapt for change sleep mode back to keys
 -- 2025-11-03 add screenshots for descending sort and logs folder
+-- 2025-12-07 simulator.turnRotaryEncoder(4) -- scroll to use a source
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -174,7 +175,7 @@ simulator.screenshot("/screenshots/system-general.png")
 simulator.turnRotaryEncoder(3) -- scroll to brightness
 simulator.pressKey(KEY_ENTER, 0.6) -- long ENT
 simulator.screenshot("/screenshots/system-general-brightness-menu.png")
-simulator.turnRotaryEncoder(3) -- scroll to use a source
+simulator.turnRotaryEncoder(4) -- scroll to use a source
 --
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_ENTER)

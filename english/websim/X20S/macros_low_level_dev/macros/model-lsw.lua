@@ -2,6 +2,7 @@
 -- 2025-07-23 adapt macro to new Ethos 1.7 source select
 -- 2025-08-03 add '+' lsw button and missing comments
 -- 2025-08-16 change 'model-lsw-edge-during-gt0' to use 1% steps
+-- 2025-12-05 add simulator.touch(32, 453) -- set back to 0.1 steps due to bug, also scroll to use a source
 
 -- This macro relies on logic switch TestC for testing logic switch coinfirmation before ture and false.
 
@@ -164,15 +165,18 @@ simulator.pressKey(KEY_ENTER) -- open options
 -- simulator.pressKey(KEY_ENTER)
 -- simulator.turnRotaryEncoder(0)
 -- simulator.pressKey(KEY_ENTER)
+
+simulator.touch(32, 453) -- set back to 0.1 steps due to bug
 simulator.turnRotaryEncoder(-1) -- scroll back to 'rising edge'
 simulator.pressKey(KEY_RTN) -- back to lsw
 simulator.screenshot("/screenshots/model-lsw-edge-rising-edge.png")
 simulator.pressKey(KEY_ENTER) -- open options
+simulator.touch(32, 453) -- set back to 0.1 steps due to bug
 simulator.turnRotaryEncoder(1) -- back to default '---'
 simulator.pressKey(KEY_RTN) -- accept
 simulator.turnRotaryEncoder(-1) -- scroll back to 1st during param
 simulator.pressKey(KEY_ENTER) -- edit
-simulator.touch(388, 446) -- set 1s step
+--simulator.touch(388, 446) -- set 1s step
 simulator.turnRotaryEncoder(5) -- 5s
 simulator.pressKey(KEY_RTN) -- accept
 simulator.turnRotaryEncoder(1) -- scroll to 2nd during param
@@ -183,22 +187,22 @@ simulator.turnRotaryEncoder(-1) -- move cursor back for screenshot
 simulator.screenshot("/screenshots/model-lsw-edge-during-gt0-rising-edge.png")
 simulator.turnRotaryEncoder(1) -- scroll to 2nd during param
 simulator.pressKey(KEY_ENTER) -- edit 
+simulator.touch(32, 453) -- set back to 0.1 steps due to bug
 simulator.turnRotaryEncoder(1) -- back to default '---'
 simulator.pressKey(KEY_RTN) -- accept
 simulator.turnRotaryEncoder(-1) -- scroll back to 1st during param
 simulator.pressKey(KEY_ENTER) -- edit
-simulator.touch(390, 439) -- set 1s step
-simulator.touch(40, 443)
+--simulator.touch(390, 439) -- set 1s step
 simulator.turnRotaryEncoder(-2) -- reduce to 3s
 simulator.pressKey(KEY_RTN) -- accept
 simulator.screenshot("/screenshots/model-lsw-edge-during-eq0.png")
 simulator.pressKey(KEY_ENTER) -- edit
-simulator.turnRotaryEncoder(-1) -- reduce to 3s
+simulator.turnRotaryEncoder(-1) -- reduce to 2s
 simulator.pressKey(KEY_RTN) -- accept
 simulator.turnRotaryEncoder(1) -- scroll to 2nd during param
 simulator.pressKey(KEY_ENTER) -- edit
 --simulator.turnRotaryEncoder(30) -- increase to 5s
-simulator.touch(388, 446) -- set to 1% steps
+--simulator.touch(388, 446) -- set to 1% steps
 simulator.turnRotaryEncoder(3) -- increase from 2 to 5s
 simulator.pressKey(KEY_RTN) -- accept
 simulator.screenshot("/screenshots/model-lsw-edge-during-gt0.png")
@@ -231,7 +235,7 @@ simulator.pressKey(KEY_ENTER) --y
 --
 simulator.turnRotaryEncoder(1) --scroll to value (x)
 simulator.pressKey(KEY_ENTER, 1) --long ENT
-simulator.turnRotaryEncoder(3) --scroll to use a source
+simulator.turnRotaryEncoder(4) --scroll to use a source
 simulator.pressKey(KEY_ENTER) --y
 simulator.pressKey(KEY_ENTER) --open
 -- select timer 3

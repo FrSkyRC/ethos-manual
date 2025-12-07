@@ -2,6 +2,7 @@
 -- 2025-07-26 adapt macro to new Ethos 1.7 source select
 -- 2025-08-15 add comments
 -- 2025-10-26 adapt for new play audio priority
+-- 2025-12-06 adapt for BT removal in Telemetry
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -13,7 +14,7 @@ simulator.pressKey(KEY_MDL) --open model menu
 simulator.pressKey(KEY_PAGE) -- 2nd page
 simulator.turnRotaryEncoder(1) -- highlight telemetry
 simulator.pressKey(KEY_ENTER) --y
-simulator.turnRotaryEncoder(13) --scroll to lipo sensor
+simulator.turnRotaryEncoder(12) --scroll to lipo sensor
 simulator.screenshot("/screenshots/how-to-low-batt-telemetry-lipo-sensor.png")
 simulator.pressKey(KEY_RTN) --deselect
 simulator.pressKey(KEY_RTN) --return to telem icon
