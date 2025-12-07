@@ -35,6 +35,7 @@ dofile("/macros/how-to-consumption.lua") -- how to 3
 dofile("/macros/how-to-butterfly.lua") -- how to 6
 dofile("/macros/how-to-in-flight-comp.lua") -- how to 10
 dofile("/macros/trainer-take-back.lua") -- how to 11
+dofile("/macros/how-to-gear-seq.lua") -- how to 13
 -- lua
 -- lua is done seperately 
 -- must be done last because we only want lua icon in menu once
