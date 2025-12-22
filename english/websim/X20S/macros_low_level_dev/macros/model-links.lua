@@ -1,6 +1,7 @@
 -- 2025-07-24 adapt macro to new Ethos 1.7 source select
 -- 2025-08-04 add comments
 -- 2025-09-04 increase wait for load to 6s
+-- 2025-12-19 reset form to blanks at start
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -14,6 +15,14 @@ simulator.pressKey(KEY_PAGE) -- 2ndpage
 simulator.turnRotaryEncoder(7) -- scroll to trainer
 simulator.screenshot("/screenshots/model-icon-links.png")
 simulator.pressKey(KEY_ENTER) -- open
+-- reset links to blanks
+simulator.turnRotaryEncoder(3) -- scroll to Trainer cable
+simulator.pressKey(KEY_ENTER) -- open
+simulator.turnRotaryEncoder(-2) -- scroll back to '---'
+simulator.pressKey(KEY_ENTER) -- select
+simulator.turnRotaryEncoder(-2) -- scroll back to top
+simulator.pressKey(KEY_RTN) -- deselect
+--
 simulator.screenshot("/screenshots/model-links.png")
 simulator.turnRotaryEncoder(1) -- scroll to s.port
 simulator.screenshot("/screenshots/model-links-sport-conn.png")
