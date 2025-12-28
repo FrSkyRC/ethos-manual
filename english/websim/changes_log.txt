@@ -199,22 +199,31 @@ First big update of assets in 1.7 branch
 -- 2025-10-26 how-to-low-batt.lua -- adapt for new play audio priority
 -- 2025-10-26 how-to-consumption.lua -- adapt for new play audio priority
 
--- 2025-11-02 X20S_radio_backup.zip --- change change sleep mode back to keys
+-- 2025-11-02 X20S_radio_backup.zip -- change change sleep mode back to keys
 -- 2025-11-02 system-menu.lua -- sim bug fixed, adapt for sleep mode back to keys
 -- 2025-11-03 system-menu.lua -- add screenshots for descending sort and logs folder
 
 -- 2025-11-03 system-menu.lua for DE -- add screenshots for descending sort and logs folder
 -- 2025-11-03 model-select.lua for DE -- add simulator.touch(405, 191) -- Virtual OK for DE
-
--- 2025-11-16 model-mixes-free.lua -- add new feature to select a number as the source to a free mix (rev4)
--- 2025-11-16 model-mixes-free.lua -- also adapt for 'use a source' dialog having 4 lines (rev4)
-
--- 2025-11-27 model-mixes.lua -- adapt for value edit options, add sequencer mix (rev5 no text change)
--- 2025-11-27 basic-example.lua -- adapt for use a source options (rev5 no text change)
--- 2025-11-27 how-to-butterfly.lua -- adapt for use a source options and new curve parameter order (rev5 no text change)
+-- 2025-11-26 model-mixes.lua -- adapt for value edit options, add sequencer mix
 -- 2025-11-27 how-to-gear-seq.lua -- first release
--- 2025-11-29 model-curves.lua -- adapt to new curves parameter order (rev5 no text change)
+-- 2025-12-02 signature edge.bin -- add sequence for gear and door
 -- 2025-12-03 how-to-gear-seq.lua -- improve the how to with different fwd and bkwd curves
--- 2025-12-03 how-to-in-flight-comp.lua -- update for new curve parameter order
--- 2025-12-03 user-interface.lua -- fix 'use a source'
--- 2025-12-03 heli-example.lua -- adapt to new curves parameters
+-- 2025-12-04 model-curves.lua -- remove set 1% steps
+-- 2025-12-04 model-mixes-free.lua -- remove set 1% steps
+-- 2025-12-04 model-vars.lua -- remove set 1% steps
+-- 2025-12-05 model-lsw.lua -- add simulator.touch(32, 453) -- set back to 0.1 steps due to bug, also scroll to use a source
+-- 2025-12-06 telemetry.lua -- adapt for BT removed from this screen
+-- 2025-12-07 how-to-low-batt.lua -- adapt for BT removal in Telemetry
+-- 2025-12-07 how-to-consumtion.lua -- adapt for BT removal in Telemetry
+-- 2025-12-07 user-interface.lua -- adapt for BT removal in Telemetry
+-- 2025-12-07 model-edit.lua -- adapt for SPort removal in Edit Model
+-- 2025-12-07 system-menu.lua -- simulator.turnRotaryEncoder(4) -- scroll to use a source
+-- 2025-12-07 toolbars.lua -- make macro other language friendly
+start of 1.7.0 rev6
+-- 2025-12-10 model-links.lua created
+-- 2025-12-15 model-lsw.lua revert step size to 0.1
+-- 2025-12-19 rearbear.bin set Trainer cable = Master for ignore trainer inputs
+-- 2025-12-19 model-links.lua -- reset form to blanks at start
+-- 2025-12-19 X20S_radio_backup.zip -- updated rearbear.bin (for links) and signature edge.bin (for how-to-gear-seq)
+-- 2025-12-22 model-trims.lua -- add new trims to subtrims options
