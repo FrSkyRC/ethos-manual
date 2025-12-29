@@ -1,0 +1,8 @@
+start of 1.7.0 rev6
+-- 2025-12-28 update DE X20S_radio_backup_DE
+-- 2025-12-28 update DE images for model-links and model-trims
+-- 2025-12-28 update ES X20S_radio_backup_ES
+-- 2025-12-28 update ES images for model-links and model-trims
+-- 2025-12-29 update IT X20S_radio_backup_IT
+-- 2025-12-29 update IT images for model-links and model-trims
+
