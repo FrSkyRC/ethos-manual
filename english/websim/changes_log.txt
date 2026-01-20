@@ -227,5 +227,3 @@ start of 1.7.0 rev6
 -- 2025-12-19 model-links.lua -- reset form to blanks at start
 -- 2025-12-19 X20S_radio_backup.zip -- updated rearbear.bin (for links) and signature edge.bin (for how-to-gear-seq)
 -- 2025-12-22 model-trims.lua -- add new trims to subtrims options
-
--- 2026-01-13 modelselect.lua -- add clone options
