@@ -2,6 +2,7 @@
 -- 2025-10-05 adapt to web sim
 -- 2025-10-11 revert to original final model view
 -- 2025-10-22 move the delete folder lines into this low level model-select.lua for ease of other langauges support
+-- 2026-01-13 add clone options
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -60,12 +61,19 @@ simulator.screenshot("/screenshots/model-modelselect-folder-options.png")
 simulator.pressKey(KEY_RTN) -- exit options
 
 simulator.touch(625, 79) -- tap on uncategorized
-simulator.pressKey(KEY_RTN)
-simulator.touch(85, 185)
+simulator.pressKey(KEY_RTN) -- deselect
+simulator.touch(85, 185) -- highlight 1st model
 simulator.screenshot("/screenshots/model-modelselect-folders.png")
-simulator.touch(525, 319)
+simulator.touch(525, 319) -- highlight Magnus model
 simulator.touch(525, 319) -- tap on magnus model
 --simulator.touch(235, 360)
+simulator.turnRotaryEncoder(2) -- scroll to clone
+simulator.screenshot("/screenshots/model-modelselect-clone-select.png")
+simulator.pressKey(KEY_ENTER) -- open options
+simulator.screenshot("/screenshots/model-modelselect-clone-options.png")
+simulator.pressKey(KEY_RTN) -- deselect back to magnus model
+-- folder change
+simulator.pressKey(KEY_ENTER) -- open options
 simulator.turnRotaryEncoder(3) -- scroll to change folder
 simulator.screenshot("/screenshots/model-modelselect-folder-change-select.png")
 simulator.pressKey(KEY_ENTER) -- --y
