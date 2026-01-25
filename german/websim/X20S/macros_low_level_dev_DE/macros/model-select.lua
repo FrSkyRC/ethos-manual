@@ -5,6 +5,7 @@
 -- 2025-11-03 add simulator.touch(405, 191) -- Virtual OK for DE
 -- 2025-10-22 move the delete folder lines into this low level model-select.lua for ease of other langauges support
 -- 2025-12-05 simulator.touch(351, 84) -- tap on multirotor to open folder options
+-- 2026-01-21 add clone, receive model, send model options
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -68,12 +69,23 @@ simulator.screenshot("/screenshots/model-modelselect-folder-options.png")
 simulator.pressKey(KEY_RTN) -- exit options
 
 simulator.touch(625, 79) -- tap on uncategorized
-simulator.pressKey(KEY_RTN)
-simulator.touch(85, 185)
+simulator.pressKey(KEY_RTN) -- deselect
+simulator.touch(85, 185) -- highlight 1st model
 simulator.screenshot("/screenshots/model-modelselect-folders.png")
-simulator.touch(525, 319)
-simulator.touch(525, 319) -- tap on magnus model
+-- model management menu section
+simulator.touch(525, 319) -- highlight Magnus model
+simulator.screenshot("/screenshots/model-modelselect-folders-2.png")
+simulator.touch(525, 319) -- tap on magnus model to open options menu
 --simulator.touch(235, 360)
+simulator.turnRotaryEncoder(1) -- scroll to 'Set current model
+simulator.screenshot("/screenshots/model-modelselect-model-set.png")
+simulator.turnRotaryEncoder(1) -- scroll to clone
+simulator.screenshot("/screenshots/model-modelselect-clone-select.png")
+simulator.pressKey(KEY_ENTER) -- open options
+simulator.screenshot("/screenshots/model-modelselect-clone-options.png")
+simulator.pressKey(KEY_RTN) -- deselect back to magnus model
+-- folder change
+simulator.pressKey(KEY_ENTER) -- open options
 simulator.turnRotaryEncoder(3) -- scroll to change folder
 simulator.screenshot("/screenshots/model-modelselect-folder-change-select.png")
 simulator.pressKey(KEY_ENTER) -- --y
@@ -83,6 +95,19 @@ simulator.screenshot("/screenshots/model-modelselect-folder-change-glider.png")
 -- simulator.pressKey(KEY_ENTER) -- don't actually move 
 -- simulator.touch(84, 80)
 simulator.pressKey(KEY_RTN) -- escape from model options
+-- receive model
+simulator.pressKey(KEY_ENTER) -- open options
+simulator.turnRotaryEncoder(4) -- scroll to receive model
+simulator.screenshot("/screenshots/model-modelselect-receive-model-select.png")
+simulator.pressKey(KEY_ENTER) --y
+simulator.screenshot("/screenshots/model-modelselect-receive-model-dialog.png")
+simulator.pressKey(KEY_RTN) -- escape from model options
+-- send model
+simulator.pressKey(KEY_ENTER) -- open options
+simulator.turnRotaryEncoder(5) -- scroll to receive model
+simulator.screenshot("/screenshots/model-modelselect-send-model-select.png")
+simulator.pressKey(KEY_RTN) -- escape from model options
+--
 simulator.pressKey(KEY_PAGE) -- page to airplane cat
 simulator.screenshot("/screenshots/model-modelselect-folder-airplane-select.png")
 simulator.pressKey(KEY_ENTER) -- open 

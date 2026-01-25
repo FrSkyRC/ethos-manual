@@ -26,6 +26,54 @@ Running the macros
 -- 6. Web Sim / Downloads 'Save all screenshots' and browse to your 'assets_test' folder (it should be empty)
 -- 7. In '/Users/lotharthole/local/Ethos/manual/' run cpimages2.sh for an images diff
 
+-- Running individual X20S high level macros
+-- Used for example to update only a few specific screeenshots
+--
+-- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
+-- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X20S_radio_backup.zip'
+-- 3. Web Sim / Uploads 'Start a macro' and select 'X20S_low_level_macros.zip'
+-- 4. Web Sim / Uploads 'Start a macro' and select and run one of the individual high level macros from the list below:
+--
+model-select.zip
+model-edit.zip
+model-fm.zip
+model-mixes.zip
+model-mixes-free.zip
+model-mix-eg.zip
+model-outputs.zip
+model-chview.zip
+model-timers.zip
+model-trims.zip
+-- model-rf.zip (future development)
+model-checklist.zip
+model-lsw.zip
+model-sf.zip
+model-curves.zip
+model-vars.zip
+--model-trainer.zip (deprecated, replaced by model-links)
+model-links.zip
+model-blanks.zip
+display.zip
+basic-example.zip
+wing-example.zip
+heli-example.zip
+how-to-low-batt.zip (how to 1)
+how-to-consumption.zip (how to 3)
+how-to-butterfly.zip (how to 6)
+how-to-in-flight-comp.zip (how to 10)
+trainer-take-back.zip (how to 11)
+how-to-gear-seq.zip (how to 13)
+model-lua.zip
+system-menu.zip
+user-interface.zip
+telemetry.zip
+toolbars.zip
+mainview.zip
+
+-- 6. Web Sim / Downloads 'Save all screenshots' and browse to your 'assets_test' folder (it should be empty)
+-- 7. In '/Users/lotharthole/local/Ethos/manual/' run cpimages2.sh for an images diff
+
+
 -- Running X20Pro main macro
 -- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
 -- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X20Pro_radio_backup.zip'
@@ -40,7 +88,7 @@ Running the macros
 -- 4. Web Sim / Downloads 'Save all screenshots' and browse to your 'assets_test' folder (it should be empty)
 -- 5. In '/Users/lotharthole/local/Ethos/manual/' run cpimages2.sh for an images diff
 
--- Running X2RS main macro
+-- Running X20RS main macro
 -- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
 -- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X20RS_radio_backup.zip'
 -- 3. Web Sim / Uploads 'Start a macro' and select 'x20rs.zip' and run
@@ -63,10 +111,23 @@ Language differences:
 3a. The DE model-select deletes German folders created by it
 4. zblank.bin calls up the zblank.md checklist file stored in each language radio backup
 5. geronimo.md is called up by geronimo.bin in display
-5. The EN wav files are copied to each language
+6. The EN wav files are copied to each language
 
 
+-- To run the macros for other languages
+--
+-- In step 2, replace for example 'X20S_radio_backup.zip' with 'X20S_radio_backup_DE.zip'
+'X20S_radio_backup_ES.zip'
+'X20S_radio_backup_FR.zip'
+'X20S_radio_backup_IT.zip'
+'X20S_radio_backup_JP.zip'
 
+-- For DE only,
+-- Do step 3 as normal
+-- 3. Web Sim / Uploads 'Start a macro' and select 'X20S_low_level_macros.zip'
+-- But then also do
+-- 3a. Web Sim / Uploads 'Start a macro' and select 'X20S_low_level_macros_DE.zip'
+(DE has a custom model-select)
 
 
 
