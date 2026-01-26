@@ -2,7 +2,8 @@
 -- 2025-10-05 adapt to web sim
 -- 2025-10-11 revert to original final model view
 -- 2025-10-22 move the delete folder lines into this low level model-select.lua for ease of other langauges support
--- 2026-01-13 add clone options
+-- 2026-01-21 add clone, receive model, send model options
+-- 2026-01-26 add simulation for model send and receive
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -91,12 +92,30 @@ simulator.pressKey(KEY_ENTER) -- open options
 simulator.turnRotaryEncoder(4) -- scroll to receive model
 simulator.screenshot("/screenshots/model-modelselect-receive-model-select.png")
 simulator.pressKey(KEY_ENTER) --y
+simulator.screenshot("/screenshots/model-modelselect-receive-model-waiting.png")
+simulator.sleep(3) -- wait 
 simulator.screenshot("/screenshots/model-modelselect-receive-model-dialog.png")
-simulator.pressKey(KEY_RTN) -- escape from model options
+simulator.pressKey(KEY_ENTER) --y to confirm receive
+simulator.sleep(1) -- wait 
+simulator.screenshot("/screenshots/model-modelselect-receive-model-receiving.png")
+simulator.sleep(5) -- wait 
+simulator.pressKey(KEY_ENTER) -- ack failure
+--simulator.pressKey(KEY_RTN) -- escape from model options
 -- send model
 simulator.pressKey(KEY_ENTER) -- open options
 simulator.turnRotaryEncoder(5) -- scroll to receive model
 simulator.screenshot("/screenshots/model-modelselect-send-model-select.png")
+simulator.pressKey(KEY_ENTER) -- y
+simulator.screenshot("/screenshots/model-modelselect-send-model-waiting-devices.png")
+simulator.sleep(3) -- wait 
+simulator.screenshot("/screenshots/model-modelselect-send-model-dialog.png")
+simulator.turnRotaryEncoder(1) -- scroll to alice
+simulator.pressKey(KEY_ENTER) -- y
+simulator.screenshot("/screenshots/model-modelselect-send-model-waiting-connect.png")
+simulator.sleep(3) -- wait 
+simulator.screenshot("/screenshots/model-modelselect-send-model-sending.png")
+simulator.sleep(3) -- wait 
+simulator.screenshot("/screenshots/model-modelselect-send-model-success.png")
 simulator.pressKey(KEY_RTN) -- escape from model options
 --
 simulator.pressKey(KEY_PAGE) -- page to airplane cat
