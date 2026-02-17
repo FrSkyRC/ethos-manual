@@ -2,6 +2,9 @@
 -- 2025-08-04 add comments
 -- 2025-09-04 increase wait for load to 6s
 -- 2025-12-19 reset form to blanks at start
+-- 2025-02-10 changes due to revised BT 
+-- 2025-02-16 further changes to BT for disconnect
+-- 2026-02-17 further changes from Bertrand
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -111,6 +114,8 @@ simulator.turnRotaryEncoder(2) -- scroll to bT search
 simulator.screenshot("/screenshots/model-links-bt-master-search.png")
 simulator.pressKey(KEY_ENTER) -- search
 simulator.sleep(1) -- wait
+simulator.advertizeBluetooth("Alice", "01;01;01;01;01;01")
+simulator.advertizeBluetooth("Bob", "01;01;01;01;01;02")
 simulator.turnRotaryEncoder(1) -- scroll to Alice
 simulator.screenshot("/screenshots/model-links-bt-master-alice.png")
 simulator.pressKey(KEY_ENTER) -- select alice
@@ -119,14 +124,21 @@ simulator.screenshot("/screenshots/model-links-bt-master-connected-ok.png")
 simulator.pressKey(KEY_ENTER) -- ack connected
 simulator.sleep(1) -- wait
 simulator.screenshot("/screenshots/model-links-bt-master-connected.png")
-
+simulator.pressKey(KEY_ENTER) -- open Alice
+simulator.turnRotaryEncoder(1) -- scroll to disconnect option
+simulator.screenshot("/screenshots/model-links-bt-master-disconnect-select.png")
+simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(-2) -- scroll to BT
 simulator.pressKey(KEY_ENTER) -- open
 simulator.turnRotaryEncoder(1) -- scroll to slave
 simulator.screenshot("/screenshots/model-links-bt-slave-select.png")
-simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER) -- open
 simulator.screenshot("/screenshots/model-links-bt-slave.png")
-
+simulator.pressKey(KEY_ENTER) -- back to dialog
+simulator.turnRotaryEncoder(1) -- scroll to engo glasses
+simulator.screenshot("/screenshots/model-links-bt-engo-select.png")
+simulator.pressKey(KEY_ENTER)
+simulator.screenshot("/screenshots/model-links-bt-engo.png")
 simulator.pressKey(KEY_RTN, 0.6) -- home
 --
 -- now do extanel module links

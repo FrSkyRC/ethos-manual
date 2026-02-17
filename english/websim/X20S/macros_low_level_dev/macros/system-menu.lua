@@ -11,6 +11,8 @@
 -- 2025-11-02 sim bug fixed, adapt for change sleep mode back to keys
 -- 2025-11-03 add screenshots for descending sort and logs folder
 -- 2025-12-07 simulator.turnRotaryEncoder(4) -- scroll to use a source
+-- 2025-02-12 changes due to revised BT 
+-- 2026-02-17 further changes from Bertrand
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -201,7 +203,8 @@ simulator.turnRotaryEncoder(1) -- scroll to often
 simulator.screenshot("/screenshots/system-general-audio-modes.png")
 simulator.pressKey(KEY_RTN) -- close the dialog
 -- -- bluetooth
-simulator.turnRotaryEncoder(1) -- scroll to BT
+simulator.turnRotaryEncoder(7) -- scroll to end of BT
+simulator.turnRotaryEncoder(-6) -- scroll back to BT
 simulator.pressKey(KEY_ENTER) -- enable BT
 simulator.sleep(1)
 simulator.screenshot("/screenshots/system-general-audio-bluetooth-enable.png")
@@ -210,20 +213,32 @@ simulator.screenshot("/screenshots/system-general-audio-bluetooth.png")
 simulator.pressKey(KEY_ENTER) -- enable search
 simulator.screenshot("/screenshots/system-general-audio-bluetooth-searching.png")
 simulator.sleep(1)
-simulator.advertizeBluetooth("Alice")
-simulator.sleep(1)
-simulator.advertizeBluetooth("Bob")
-simulator.sleep(1)
+simulator.advertizeBluetooth("LC-B41", "01;01;01;01;01;01")
+simulator.advertizeBluetooth("Alice", "01;01;01;01;01;02")
+simulator.advertizeBluetooth("Bob", "01;01;01;01;01;03")
+--simulator.advertizeBluetooth("Alice")
+--simulator.sleep(1)
+--simulator.advertizeBluetooth("Bob")
+--simulator.sleep(1)
 simulator.turnRotaryEncoder(1) -- scroll to select device
 simulator.screenshot("/screenshots/system-general-audio-bluetooth-device-selected.png")
 simulator.pressKey(KEY_ENTER) -- select
 simulator.screenshot("/screenshots/system-general-audio-bluetooth-connecting.png")
-simulator.sleep(10)
+simulator.sleep(5)
 simulator.screenshot("/screenshots/system-general-audio-bluetooth-connected.png")
 simulator.pressKey(KEY_ENTER) -- tap ok
+simulator.sleep(1) -- wait
 simulator.screenshot("/screenshots/system-general-audio-bluetooth-connected-ok.png")
--- switch off BT again for later macros runninmg
-simulator.turnRotaryEncoder(-3) -- scroll back to BT enable
+simulator.turnRotaryEncoder(1) -- scroll to speaker mute
+simulator.screenshot("/screenshots/system-general-audio-speaker-mute.png")
+-- show disconnect
+simulator.turnRotaryEncoder(-1) -- scroll to back to device
+simulator.pressKey(KEY_ENTER) -- open dialog
+simulator.turnRotaryEncoder(1) -- scroll to disconnect option
+simulator.screenshot("/screenshots/system-general-audio-bluetooth-disconnect-select.png")
+simulator.pressKey(KEY_ENTER) -- disconnect
+-- switch off BT again for later macros running
+simulator.turnRotaryEncoder(-2) -- scroll back to BT enable
 simulator.pressKey(KEY_ENTER) -- toggle off
 -- -- vario
 simulator.turnRotaryEncoder(7) -- scroll to see all vario
