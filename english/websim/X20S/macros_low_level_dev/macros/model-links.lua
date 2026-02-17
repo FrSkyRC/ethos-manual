@@ -114,8 +114,8 @@ simulator.turnRotaryEncoder(2) -- scroll to bT search
 simulator.screenshot("/screenshots/model-links-bt-master-search.png")
 simulator.pressKey(KEY_ENTER) -- search
 simulator.sleep(1) -- wait
-simulator.advertizeBluetooth("Alice", "01;01;01;01;01;01")
-simulator.advertizeBluetooth("Bob", "01;01;01;01;01;02")
+simulator.advertizeBluetooth("Alice", "01:01:01:01:01:01")
+simulator.advertizeBluetooth("Bob", "01:01:01:01:01:02")
 simulator.turnRotaryEncoder(1) -- scroll to Alice
 simulator.screenshot("/screenshots/model-links-bt-master-alice.png")
 simulator.pressKey(KEY_ENTER) -- select alice

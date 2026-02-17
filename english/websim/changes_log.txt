@@ -239,3 +239,6 @@ start of 1.7.0 rev6
 -- 2026-02-17 model-links.lua further changes from Bertrand
 -- 2025-02-12 system-menu.lua changes due to revised BT 
 -- 2026-02-17 system-menu.lua further changes from Bertrand
+-- 2026-02-17 model-links.lua replace semicolon with colon in BT address
+-- 2026-02-17 system-menu.lua replace semicolon with colon in BT address
+-- 2026-02-17 model-sf.lua adapt for new SF workflow
