@@ -2,7 +2,6 @@
 -- 2025-07-24 adapt macro to new Ethos 1.7 source select
 -- 2025-08-03 adapt for '+' add sf and add comments
 -- 2025-10-25 adapt for new play audio priority
--- 2026-02-17 adapt for new SF workflow
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -29,34 +28,21 @@ simulator.pressKey(KEY_ENTER)
 ]]--
 -- add new sf
 simulator.touch(571, 91) -- add new sf button '+'
-simulator.screenshot("/screenshots/model-sf-menu.png")
-simulator.turnRotaryEncoder(1) -- scroll to reset
-simulator.pressKey(KEY_ENTER) -- open sf
+--
 simulator.turnRotaryEncoder(1) -- scroll to action
 simulator.screenshot("/screenshots/model-sf-reset.png")
-simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- exit
---
-simulator.touch(571, 91) -- add new sf button '+'
-simulator.turnRotaryEncoder(2) -- scroll to screenshot
-simulator.pressKey(KEY_ENTER) -- open sf
-simulator.turnRotaryEncoder(1) -- scroll to action
+simulator.pressKey(KEY_ENTER) -- open action list
+simulator.turnRotaryEncoder(1) -- scroll to screenshot
+simulator.pressKey(KEY_ENTER) -- select
 simulator.screenshot("/screenshots/model-sf-screenshot.png")
-simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- exit
---
-simulator.touch(571, 91) -- add new sf button '+'
-simulator.turnRotaryEncoder(3) -- scroll to set fs
-simulator.pressKey(KEY_ENTER) -- open sf
-simulator.turnRotaryEncoder(1) -- scroll to action
+simulator.pressKey(KEY_ENTER) -- open action list
+simulator.turnRotaryEncoder(1) -- scroll to set failsafe
+simulator.pressKey(KEY_ENTER) -- select
 simulator.screenshot("/screenshots/model-sf-set-failsafe.png")
-simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- exit
---
-simulator.touch(571, 91) -- add new sf button '+'
-simulator.turnRotaryEncoder(4) -- scroll to play audio
-simulator.pressKey(KEY_ENTER) -- open sf
-simulator.turnRotaryEncoder(1) -- scroll to action
+-- simulator.turnRotaryEncoder(0)
+simulator.pressKey(KEY_ENTER) -- open action list
+simulator.turnRotaryEncoder(1) -- scroll to play audio
+simulator.pressKey(KEY_ENTER) -- select
 simulator.screenshot("/screenshots/model-sf-play-audio.png")
 simulator.turnRotaryEncoder(1) -- scroll to state
 simulator.pressKey(KEY_ENTER) -- enable sf
@@ -86,7 +72,20 @@ simulator.turnRotaryEncoder(1) -- scroll to play value
 simulator.pressKey(KEY_ENTER) -- y
 simulator.turnRotaryEncoder(1) -- scroll to source
 simulator.pressKey(KEY_ENTER) -- y
--- 
+-- select 
+--[[
+simulator.turnRotaryEncoder(1)
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(10)
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(2)
+simulator.pressKey(KEY_ENTER)
+--simulator.turnRotaryEncoder(3)
+simulator.turnRotaryEncoder(5) -- select vfr instead of rx (due to sim sensor changes)
+simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+]]--
 simulator.turnRotaryEncoder(11) -- scroll to telem
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(5) --scroll to vfr 2.4
@@ -99,7 +98,7 @@ simulator.turnRotaryEncoder(1) -- scroll to add new line
 simulator.screenshot("/screenshots/model-sf-play-audio-add-play-value-add-line.png")
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- back to sf list
-simulator.turnRotaryEncoder(-4) -- scroll bacl to sf5 sequence
+simulator.turnRotaryEncoder(-1) -- scroll bacl to sf5 sequence
 simulator.pressKey(KEY_ENTER) -- y
 simulator.turnRotaryEncoder(1) -- scroll to edit
 simulator.pressKey(KEY_ENTER) -- y
@@ -121,72 +120,52 @@ simulator.pressKey(KEY_ENTER)
 ]]--
 -- add new sf
 simulator.touch(571, 91) -- add new sf button '+'
-simulator.turnRotaryEncoder(5) -- scroll to haptic
-simulator.pressKey(KEY_ENTER) -- open sf
+--
 simulator.turnRotaryEncoder(1) -- scroll to action
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(4) -- scroll to haptic
+simulator.pressKey(KEY_ENTER) -- y
 simulator.screenshot("/screenshots/model-sf-haptic.png")
 simulator.turnRotaryEncoder(4) -- scroll to pattern
 simulator.pressKey(KEY_ENTER) -- y
 simulator.screenshot("/screenshots/model-sf-haptic-pattern.png")
-simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- exit
-simulator.pressKey(KEY_RTN) -- exit
---
-simulator.touch(571, 91) -- add new sf button '+'
-simulator.turnRotaryEncoder(6) -- scroll to write logs
-simulator.pressKey(KEY_ENTER) -- open sf
-simulator.turnRotaryEncoder(1) -- scroll to action
+simulator.pressKey(KEY_RTN) -- cancel
+simulator.turnRotaryEncoder(-4) -- scroll back to actiob
+simulator.pressKey(KEY_ENTER) -- open action
+simulator.turnRotaryEncoder(1) -- scroll to write logs
+simulator.pressKey(KEY_ENTER) -- select
 simulator.screenshot("/screenshots/model-sf-write-logs.png")
-simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- exit
-
---
-simulator.touch(571, 91) -- add new sf button '+'
-simulator.turnRotaryEncoder(7) -- scroll to go to screen
-simulator.pressKey(KEY_ENTER) -- open sf
-simulator.turnRotaryEncoder(1) -- scroll to action
+simulator.pressKey(KEY_ENTER) -- open actions list
+simulator.turnRotaryEncoder(1) -- scroll to go to screen
+simulator.pressKey(KEY_ENTER) -- select
 simulator.screenshot("/screenshots/model-sf-go-to-screen.png")
 simulator.turnRotaryEncoder(4) -- scroll to screen
 simulator.pressKey(KEY_ENTER) -- open
+-- simulator.touch(403, 266)
 simulator.turnRotaryEncoder(1) -- scroll to category
 simulator.pressKey(KEY_ENTER) -- open
 simulator.turnRotaryEncoder(5) -- scroll to end of options list
 --simulator.pressKey(KEY_ENTER)
 simulator.screenshot("/screenshots/model-sf-go-to-screen-options.png")
-simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- exit
-simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- exit
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN) -- back to sf
-
---
-simulator.touch(571, 91) -- add new sf button '+'
-simulator.turnRotaryEncoder(8) -- scroll to lock touchscreen
-simulator.pressKey(KEY_ENTER) -- open sf
-simulator.turnRotaryEncoder(1) -- scroll to action
+simulator.turnRotaryEncoder(-4) -- scroll back to action
+simulator.pressKey(KEY_ENTER) -- open actions list
+simulator.turnRotaryEncoder(1) -- scroll to lock touchscreen
+simulator.pressKey(KEY_ENTER) -- select
 simulator.screenshot("/screenshots/model-sf-lock-touchscreen.png")
-simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- exit
-
---
-simulator.touch(571, 91) -- add new sf button '+'
---simulator.pressKey(KEY_ENTER) -- open actions list
-simulator.turnRotaryEncoder(9) -- scroll to load model
+simulator.pressKey(KEY_ENTER) -- open actions list
+simulator.turnRotaryEncoder(1) -- scroll to load model
 simulator.pressKey(KEY_ENTER) -- select
-simulator.turnRotaryEncoder(1) -- scroll to action
 simulator.screenshot("/screenshots/model-sf-load-model.png")
-simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- exit
-
---
-simulator.touch(571, 91) -- add new sf button '+'
---simulator.pressKey(KEY_ENTER) -- open actions list
-simulator.turnRotaryEncoder(10) -- scroll to play vario
+simulator.pressKey(KEY_ENTER) -- open actions list
+simulator.turnRotaryEncoder(1) -- scroll to play vario
 simulator.pressKey(KEY_ENTER) -- select
-simulator.turnRotaryEncoder(1) -- scroll to action
 simulator.screenshot("/screenshots/model-sf-play-vario.png")
 simulator.turnRotaryEncoder(4) -- scroll to source
 simulator.pressKey(KEY_ENTER) -- open
+
 simulator.turnRotaryEncoder(1) -- scroll to vspeed
 simulator.screenshot("/screenshots/model-sf-play-vario-options.png")
 simulator.pressKey(KEY_ENTER) -- select

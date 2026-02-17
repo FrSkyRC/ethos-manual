@@ -231,3 +231,14 @@ start of 1.7.0 rev6
 -- 2026-01-21 model-select.lua inside macros_low_level_dev_DE -- add clone, receive model, send model options for DE
 -- 2026-01-26 model-select.lua -- add simulation for model send and receive
 -- 2026-01-26 model-select.lua inside macros_low_level_dev_DE -- add simulation for model send and receive
+-- 2026-02-16 model-links.lua further changes to BT for disconnect
+-- 2026-02-17 update X20S_radio_backup_FR.zip with rearebear.bin
+-- 2026-02-17 update X20S_radio_backup_JP.zip with rearebear.bin
+-- 2025-02-10 model-links.lua changes due to revised BT 
+-- 2025-02-16 model-links.lua further changes to BT for disconnect
+-- 2026-02-17 model-links.lua further changes from Bertrand
+-- 2025-02-12 system-menu.lua changes due to revised BT 
+-- 2026-02-17 system-menu.lua further changes from Bertrand
+-- 2026-02-17 model-links.lua replace semicolon with colon in BT address
+-- 2026-02-17 system-menu.lua replace semicolon with colon in BT address
+-- 2026-02-17 model-sf.lua adapt for new SF workflow
