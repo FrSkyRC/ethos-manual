@@ -96,7 +96,9 @@ simulator.turnRotaryEncoder(1) --scroll to SF
 simulator.pressKey(KEY_ENTER) --open
 simulator.turnRotaryEncoder(1) --scroll to add sf
 simulator.pressKey(KEY_ENTER) --y
-simulator.turnRotaryEncoder(1) --scroll to action
+simulator.turnRotaryEncoder(1) --scroll to 1st fn
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(1) --scroll to fn
 simulator.pressKey(KEY_ENTER) --open
 simulator.turnRotaryEncoder(3) --scroll to play audio
 simulator.pressKey(KEY_ENTER) --y
