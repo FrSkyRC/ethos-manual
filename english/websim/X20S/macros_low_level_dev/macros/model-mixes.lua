@@ -2,6 +2,7 @@
 -- 2025-07-15 adapt macro to new Ethos 1.7 source select
 -- 2025-08-03 add missing comments
 -- 2025-11-26 adapt for value edit options, add sequencer mix
+-- 2026-02-19 add missing RTN line 144
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -140,6 +141,7 @@ simulator.pressKey(KEY_RTN) -- exit edit
 simulator.pressKey(KEY_ENTER) -- open menu
 simulator.turnRotaryEncoder(2) -- scroll to add backward curve
 simulator.pressKey(KEY_ENTER) -- add
+simulator.pressKey(KEY_RTN) -- exit
 simulator.pressKey(KEY_ENTER) -- open menu
 simulator.screenshot("/screenshots/model-mixes-seq-op1-options-2.png")
 simulator.turnRotaryEncoder(1) -- scroll to edit fwd curve

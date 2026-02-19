@@ -243,3 +243,4 @@ start of 1.7.0 rev6
 -- 2026-02-17 system-menu.lua replace semicolon with colon in BT address
 -- 2026-02-17 model-sf.lua adapt for new SF workflow
 -- 2026-02-18 model-select.lua add another ack at end of model receive, and add the advertize() lines
+-- 2026-02-19 model-mixes.lua add missing RTN line 144
