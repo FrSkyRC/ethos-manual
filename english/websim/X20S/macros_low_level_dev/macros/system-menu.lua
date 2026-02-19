@@ -13,6 +13,7 @@
 -- 2025-12-07 simulator.turnRotaryEncoder(4) -- scroll to use a source
 -- 2025-02-12 changes due to revised BT 
 -- 2026-02-17 further changes from Bertrand
+-- 2026-02-17 replace semicolon with colon in BT address
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
