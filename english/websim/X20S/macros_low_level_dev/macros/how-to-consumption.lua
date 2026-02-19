@@ -3,6 +3,7 @@
 -- 2025-07-28 new 1.7 source select, also use new lsw and sf add
 -- 2025-10-26 adapt for new play audio priority
 -- 2025-12-06 adapt for BT removal in Telemetry
+-- 2026-02-19 adapt for SF workflow change
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -171,6 +172,8 @@ simulator.turnRotaryEncoder(1) --scroll to sf
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(1) --scroll to add sf
 simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(1) --scroll to 1st fn
+simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(1) --scroll to fn
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(3) --scroll to play audio
@@ -299,6 +302,8 @@ simulator.pressKey(KEY_ENTER) --y
 --simulator.turnRotaryEncoder(2) -- highlight add (old way)
 --simulator.pressKey(KEY_ENTER)
 simulator.touch(571, 91) -- add new sf button '+'
+simulator.turnRotaryEncoder(1) --scroll to 1st fn
+simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(1) -- highlight action
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(3) -- highlight play audio
