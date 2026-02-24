@@ -5,7 +5,8 @@
     "module": 0,
     "band": 0,
     "bandConfigurable": true,
-    "rxIdx": 0,
+    "rxConfigurable": true,
+    "rx": 0,
     "appId": 0,
     "frames": [
       {
@@ -20,6 +21,12 @@
         "precision": 1,
         "offset": 0
       }
+    ],
+    "properties": [
+      "module",
+      "band",
+      "rx",
+      "appId"
     ]
   },
   {
@@ -28,7 +35,8 @@
     "module": 0,
     "band": 0,
     "bandConfigurable": true,
-    "rxIdx": 0,
+    "rxConfigurable": false,
+    "rx": 0,
     "appId": 0,
     "frames": [
       {
@@ -43,6 +51,12 @@
         "precision": -1,
         "offset": 100
       }
+    ],
+    "properties": [
+      "module",
+      "band",
+      "rx",
+      "appId"
     ]
   },
   {
@@ -51,7 +65,8 @@
     "module": 0,
     "band": "1",
     "bandConfigurable": true,
-    "rxIdx": 0,
+    "rxConfigurable": true,
+    "rx": 0,
     "appId": 0,
     "frames": [
       {
@@ -66,6 +81,12 @@
         "precision": 1,
         "offset": 0
       }
+    ],
+    "properties": [
+      "module",
+      "band",
+      "rx",
+      "appId"
     ]
   },
   {
@@ -74,7 +95,8 @@
     "module": 0,
     "band": "1",
     "bandConfigurable": true,
-    "rxIdx": 0,
+    "rxConfigurable": false,
+    "rx": 0,
     "appId": 0,
     "frames": [
       {
@@ -89,6 +111,12 @@
         "precision": -1,
         "offset": 100
       }
+    ],
+    "properties": [
+      "module",
+      "band",
+      "rx",
+      "appId"
     ]
   },
   {
@@ -97,7 +125,8 @@
     "module": 0,
     "band": 0,
     "bandConfigurable": false,
-    "rxIdx": 0,
+    "rxConfigurable": false,
+    "rx": 0,
     "appId": 0,
     "frames": [
       {
@@ -112,6 +141,12 @@
         "precision": -1,
         "offset": 100
       }
+    ],
+    "properties": [
+      "module",
+      "band",
+      "rx",
+      "appId"
     ]
   },
   {
@@ -120,7 +155,8 @@
     "module": 0,
     "band": 0,
     "bandConfigurable": false,
-    "rxIdx": 0,
+    "rxConfigurable": false,
+    "rx": 0,
     "appId": 0,
     "frames": [
       {
@@ -135,6 +171,12 @@
         "precision": 10,
         "offset": 0
       }
+    ],
+    "properties": [
+      "module",
+      "band",
+      "rx",
+      "appId"
     ]
   },
   {
@@ -143,14 +185,15 @@
     "module": 0,
     "band": 0,
     "bandConfigurable": false,
-    "rxIdx": 0,
+    "rxConfigurable": false,
+    "rx": 0,
     "appId": 0,
     "frames": [
       {
         "name": "RxBatt",
         "appId": 61700,
         "unit": "V",
-        "value": "5.38",
+        "value": 10.4,
         "physId": 152,
         "primId": 16,
         "interval": 200,
@@ -158,6 +201,12 @@
         "precision": 100,
         "offset": 0
       }
+    ],
+    "properties": [
+      "module",
+      "band",
+      "rx",
+      "appId"
     ]
   },
   {
@@ -166,7 +215,8 @@
     "module": 0,
     "band": 0,
     "bandConfigurable": false,
-    "rxIdx": 0,
+    "rxConfigurable": false,
+    "rx": 0,
     "appId": 0,
     "frames": [
       {
@@ -181,6 +231,12 @@
         "precision": 1,
         "offset": 0
       }
+    ],
+    "properties": [
+      "module",
+      "band",
+      "rx",
+      "appId"
     ]
   },
   {
@@ -190,7 +246,8 @@
     "module": 0,
     "band": 0,
     "bandConfigurable": false,
-    "rxIdx": 0,
+    "rxConfigurable": false,
+    "rx": 0,
     "appId": 0,
     "frames": [
       {
@@ -217,6 +274,12 @@
         "precision": 100,
         "offset": 0
       }
+    ],
+    "properties": [
+      "module",
+      "band",
+      "rx",
+      "appId"
     ]
   },
   {
@@ -226,7 +289,8 @@
     "module": 0,
     "band": 0,
     "bandConfigurable": false,
-    "rxIdx": 0,
+    "rxConfigurable": false,
+    "rx": 0,
     "appId": 0,
     "frames": [
       {
@@ -253,6 +317,12 @@
         "precision": 100,
         "offset": 0
       }
+    ],
+    "properties": [
+      "module",
+      "band",
+      "rx",
+      "appId"
     ]
   },
   {
@@ -262,35 +332,41 @@
     "module": 0,
     "band": 0,
     "bandConfigurable": false,
-    "rxIdx": 0,
+    "rxConfigurable": false,
+    "rx": 0,
     "appId": 0,
     "frames": [
       {
-        "name": "Cell 0",
+        "name": "Cell 1",
         "appId": 768,
         "unit": "V",
         "value": "3.2",
         "physId": 152,
         "primId": 16,
-        "interval": 200,
         "multiplier": 500,
         "precision": 500,
         "offset": 0
       },
       {
-        "name": "Cell 1",
+        "name": "Cell 2",
         "appId": 768,
         "unit": "V",
-        "value": "3.72",
+        "value": 3.7,
         "physId": 152,
         "primId": 16,
-        "interval": 200,
         "multiplier": 500,
         "precision": 500,
         "offset": 0
       }
     ],
-    "nextTimestamp": 1761476347454,
+    "properties": [
+      "module",
+      "band",
+      "rx",
+      "appId",
+      "interval"
+    ],
+    "nextTimestamp": 1764910680715,
     "interval": 200
   },
   {
@@ -300,29 +376,17 @@
     "module": 0,
     "band": 0,
     "bandConfigurable": false,
-    "rxIdx": 0,
+    "rxConfigurable": false,
+    "rx": 0,
     "appId": 1,
     "frames": [
-      {
-        "name": "Cell 0",
-        "appId": 768,
-        "unit": "V",
-        "value": 3.692,
-        "physId": 152,
-        "primId": 16,
-        "interval": 200,
-        "multiplier": 500,
-        "precision": 500,
-        "offset": 0
-      },
       {
         "name": "Cell 1",
         "appId": 768,
         "unit": "V",
-        "value": "3.72",
+        "value": "3.69",
         "physId": 152,
         "primId": 16,
-        "interval": 200,
         "multiplier": 500,
         "precision": 500,
         "offset": 0
@@ -331,10 +395,9 @@
         "name": "Cell 2",
         "appId": 768,
         "unit": "V",
-        "value": "3.71",
+        "value": "3.72",
         "physId": 152,
         "primId": 16,
-        "interval": 200,
         "multiplier": 500,
         "precision": 500,
         "offset": 0
@@ -343,10 +406,9 @@
         "name": "Cell 3",
         "appId": 768,
         "unit": "V",
-        "value": "3.70",
+        "value": "3.71",
         "physId": 152,
         "primId": 16,
-        "interval": 200,
         "multiplier": 500,
         "precision": 500,
         "offset": 0
@@ -355,10 +417,9 @@
         "name": "Cell 4",
         "appId": 768,
         "unit": "V",
-        "value": "3.69",
+        "value": "3.70",
         "physId": 152,
         "primId": 16,
-        "interval": 200,
         "multiplier": 500,
         "precision": 500,
         "offset": 0
@@ -367,16 +428,33 @@
         "name": "Cell 5",
         "appId": 768,
         "unit": "V",
+        "value": "3.69",
+        "physId": 152,
+        "primId": 16,
+        "multiplier": 500,
+        "precision": 500,
+        "offset": 0
+      },
+      {
+        "name": "Cell 6",
+        "appId": 768,
+        "unit": "V",
         "value": "3.71",
         "physId": 152,
         "primId": 16,
-        "interval": 200,
         "multiplier": 500,
         "precision": 500,
         "offset": 0
       }
     ],
-    "nextTimestamp": 1761476347454,
+    "properties": [
+      "module",
+      "band",
+      "rx",
+      "appId",
+      "interval"
+    ],
+    "nextTimestamp": 1764910680715,
     "interval": 200
   }
 ]
