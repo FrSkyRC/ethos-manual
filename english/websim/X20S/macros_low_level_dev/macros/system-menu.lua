@@ -14,6 +14,7 @@
 -- 2025-02-12 changes due to revised BT 
 -- 2026-02-17 further changes from Bertrand
 -- 2026-02-17 replace semicolon with colon in BT address
+-- 2026-02-23 add advertize() fns to mimic manual simulation
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -214,7 +215,9 @@ simulator.screenshot("/screenshots/system-general-audio-bluetooth.png")
 simulator.pressKey(KEY_ENTER) -- enable search
 simulator.screenshot("/screenshots/system-general-audio-bluetooth-searching.png")
 simulator.sleep(1)
-simulator.advertizeBluetooth("LC-B41", "01:01:01:01:01:01")
+simulator.advertizeBluetooth("LC-B41", "01:01:01:01:F5:41")
+simulator.advertizeBluetooth("Test1", "01:00:00:00:00:01")
+simulator.advertizeBluetooth("Test2", "02:00:00:00:00:02")
 --simulator.advertizeBluetooth("Alice")
 --simulator.sleep(1)
 --simulator.advertizeBluetooth("Bob")
@@ -230,6 +233,7 @@ simulator.sleep(1) -- wait
 simulator.screenshot("/screenshots/system-general-audio-bluetooth-connected-ok.png")
 simulator.turnRotaryEncoder(1) -- scroll to speaker mute
 simulator.screenshot("/screenshots/system-general-audio-speaker-mute.png")
+--simulator.sleep(5) -- wait
 -- show disconnect
 simulator.turnRotaryEncoder(-1) -- scroll to back to device
 simulator.pressKey(KEY_ENTER) -- open dialog

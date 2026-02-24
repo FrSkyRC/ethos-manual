@@ -3,6 +3,7 @@
 -- 2025-08-15 add comments
 -- 2025-10-26 adapt for new play audio priority
 -- 2025-12-06 adapt for BT removal in Telemetry
+-- 2026-02-19 adapt for SF workflow change
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})

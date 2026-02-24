@@ -1,5 +1,6 @@
 -- 2025-11-27 first release
 -- 2025-12-03 improve the how to with different fwd and bkwd curves
+-- 2026-02-24 remove dropped edit sequence
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -88,10 +89,10 @@ simulator.pressKey(KEY_ENTER) -- open menu
 simulator.turnRotaryEncoder(2) -- scroll to add backw curve
 simulator.screenshot("/screenshots/how-to-seq-gear-op2-add-bkwd-curve.png")
 simulator.pressKey(KEY_ENTER) -- add backw curve
-simulator.pressKey(KEY_ENTER) -- open menu
-simulator.turnRotaryEncoder(2) -- scroll edit backw curve
+--simulator.pressKey(KEY_ENTER) -- open menu
+--simulator.turnRotaryEncoder(2) -- scroll edit backw curve
 simulator.pressKey(KEY_ENTER) -- edit
-simulator.turnRotaryEncoder(3) -- scroll to pt 4
+simulator.turnRotaryEncoder(2) -- scroll to pt 4
 simulator.pressKey(KEY_ENTER) -- edit
 simulator.touch(389, 443) -- increase step
 simulator.turnRotaryEncoder(5) -- increase to 1.5s

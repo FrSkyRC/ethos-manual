@@ -12,15 +12,17 @@ Running the macros
 -- Running X20S main set of macros
 -- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
 -- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X20S_radio_backup.zip'
--- 3. Web Sim / Uploads 'Start a macro' and select 'X20S_low_level_macros.zip'
--- 4. Web Sim / Uploads 'Start a macro' and select 'X20S_top_level_macros.zip' and run
--- 5. Web Sim / Downloads 'Save all screenshots' and browse to your 'assets_test' folder (it should be empty)
--- 6. In '/Users/lotharthole/local/Ethos/manual/' run cpimages2.sh for an images diff
+-- 3. Web Sim / Uploads 'Upload a JSON telemetry file' and select 'telemetry_settings.json'
+-- 4. Web Sim / Uploads 'Start a macro' and select 'X20S_low_level_macros.zip'
+-- 5. Web Sim / Uploads 'Start a macro' and select 'X20S_top_level_macros.zip' and run
+-- 6. Web Sim / Downloads 'Save all screenshots' and browse to your 'assets_test' folder (it should be empty)
+-- 7. In '/Users/lotharthole/local/Ethos/manual/' run cpimages2.sh for an images diff
 
 -- Running X20S macro for model-lua
 -- Different because additional scripts are needed.
 -- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
 -- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X20S_radio_backup.zip'
+-- 3. Web Sim / Uploads 'Upload a JSON telemetry file' and select 'telemetry_settings.json'
 -- 4. Web Sim / Uploads 'Start a macro' and select 'model-lua_scripts'
 -- 5. Web Sim / Uploads 'Start a macro' and select 'macros_high_level/model-lua.zip' (simulator.reloadScripts() will effectively restart the sim so the Lua icon gets loaded) and run
 -- 6. Web Sim / Downloads 'Save all screenshots' and browse to your 'assets_test' folder (it should be empty)
@@ -31,8 +33,9 @@ Running the macros
 --
 -- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
 -- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X20S_radio_backup.zip'
--- 3. Web Sim / Uploads 'Start a macro' and select 'X20S_low_level_macros.zip'
--- 4. Web Sim / Uploads 'Start a macro' and select and run one of the individual high level macros from the list below:
+-- 3. Web Sim / Uploads 'Upload a JSON telemetry file' and select 'telemetry_settings.json'
+-- 4. Web Sim / Uploads 'Start a macro' and select 'X20S_low_level_macros.zip'
+-- 5. Web Sim / Uploads 'Start a macro' and select and run one of the individual high level macros from the list below:
 --
 model-select.zip
 model-edit.zip
@@ -77,30 +80,34 @@ mainview.zip
 -- Running X20Pro main macro
 -- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
 -- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X20Pro_radio_backup.zip'
--- 3. Web Sim / Uploads 'Start a macro' and select 'X20Pro.zip' and run
--- 4. Web Sim / Downloads 'Save all screenshots' and browse to your 'assets_test' folder (it should be empty)
--- 5. In '/Users/lotharthole/local/Ethos/manual/' run cpimages2.sh for an images diff
+-- 3. Web Sim / Uploads 'Upload a JSON telemetry file' and select 'telemetry_settings.json'
+-- 4. Web Sim / Uploads 'Start a macro' and select 'X20Pro.zip' and run
+-- 5. Web Sim / Downloads 'Save all screenshots' and browse to your 'assets_test' folder (it should be empty)
+-- 6. In '/Users/lotharthole/local/Ethos/manual/' run cpimages2.sh for an images diff
 
 -- Running X20ProAw main macro
 -- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
 -- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X20ProAW_radio_backup.zip'
--- 3. Web Sim / Uploads 'Start a macro' and select 'X20ProAW.zip' and run
--- 4. Web Sim / Downloads 'Save all screenshots' and browse to your 'assets_test' folder (it should be empty)
--- 5. In '/Users/lotharthole/local/Ethos/manual/' run cpimages2.sh for an images diff
+-- 3. Web Sim / Uploads 'Upload a JSON telemetry file' and select 'telemetry_settings.json'
+-- 4. Web Sim / Uploads 'Start a macro' and select 'X20ProAW.zip' and run
+-- 5. Web Sim / Downloads 'Save all screenshots' and browse to your 'assets_test' folder (it should be empty)
+-- 6. In '/Users/lotharthole/local/Ethos/manual/' run cpimages2.sh for an images diff
 
 -- Running X20RS main macro
 -- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
 -- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X20RS_radio_backup.zip'
--- 3. Web Sim / Uploads 'Start a macro' and select 'x20rs.zip' and run
--- 4. Web Sim / Downloads 'Save all screenshots' and browse to your 'assets_test' folder (it should be empty)
--- 5. In '/Users/lotharthole/local/Ethos/manual/' run cpimages2.sh for an images diff
+-- 3. Web Sim / Uploads 'Upload a JSON telemetry file' and select 'telemetry_settings.json'
+-- 4. Web Sim / Uploads 'Start a macro' and select 'x20rs.zip' and run
+-- 5. Web Sim / Downloads 'Save all screenshots' and browse to your 'assets_test' folder (it should be empty)
+-- 6. In '/Users/lotharthole/local/Ethos/manual/' run cpimages2.sh for an images diff
 
 -- Running X18S main macro
 -- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
 -- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X18S_radio_backup.zip'
--- 3. Web Sim / Uploads 'Start a macro' and select 'X18S.zip' and run
--- 4. Web Sim / Downloads 'Save all screenshots' and browse to your 'assets_test' folder (it should be empty)
--- 5. In '/Users/lotharthole/local/Ethos/manual/' run cpimages2.sh for an images diff
+-- 3. Web Sim / Uploads 'Upload a JSON telemetry file' and select 'telemetry_settings.json'
+-- 4. Web Sim / Uploads 'Start a macro' and select 'X18S.zip' and run
+-- 5. Web Sim / Downloads 'Save all screenshots' and browse to your 'assets_test' folder (it should be empty)
+-- 6. In '/Users/lotharthole/local/Ethos/manual/' run cpimages2.sh for an images diff
 
 
 
@@ -113,6 +120,9 @@ Language differences:
 5. geronimo.md is called up by geronimo.bin in display
 6. The EN wav files are copied to each language
 
+
+To create a new radio backup for another language
+1. Copy X20S_radio_backup.zip to 
 
 -- To run the macros for other languages
 --
