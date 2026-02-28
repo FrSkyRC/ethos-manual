@@ -1,0 +1,103 @@
+-- 2025-07-24 adapt macro to new Ethos 1.7 source select
+-- 2025-08-04 add comments
+-- 2025-09-04 increase wait for load to 6s
+
+dofile("/macros/common.lua")
+--simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
+
+simulator.loadModel("rarebear.bin")
+
+
+simulator.pressKey(KEY_ENTER) -- ackn alert
+simulator.pressKey(KEY_MDL) -- open model menu
+simulator.pressKey(KEY_PAGE) -- 2ndpage
+simulator.turnRotaryEncoder(7) -- scroll to trainer
+simulator.screenshot("/screenshots/model-icon-trainer.png")
+simulator.pressKey(KEY_ENTER) -- open
+simulator.screenshot("/screenshots/model-trainer.png")
+simulator.turnRotaryEncoder(1) --scroll to trainer mode
+simulator.pressKey(KEY_ENTER) --y
+simulator.screenshot("/screenshots/model-trainer-options.png")
+simulator.turnRotaryEncoder(1) --scroll to master
+simulator.pressKey(KEY_ENTER) --y
+simulator.screenshot("/screenshots/model-trainer-master.png")
+simulator.turnRotaryEncoder(1) --scroll to link mode
+simulator.pressKey(KEY_ENTER) --y
+simulator.screenshot("/screenshots/model-trainer-link-mode-options.png")
+-- BT 
+simulator.turnRotaryEncoder(1) --scroll to BT
+simulator.pressKey(KEY_ENTER) --y
+simulator.sleep(1) -- wait for sim
+--simulator.pressKey(KEY_ENTER) -- acknowledge BT will be stopped
+simulator.screenshot("/screenshots/model-trainer-link-mode-bt.png")
+simulator.turnRotaryEncoder(2) --scroll to bt search
+simulator.screenshot("/screenshots/model-trainer-link-mode-bt-search.png")
+simulator.pressKey(KEY_ENTER) --y
+simulator.screenshot("/screenshots/model-trainer-link-mode-bt-search-waiting.png")
+
+--simulator.sleep(3) -- wait for load
+--simulator.turnRotaryEncoder(1) --scroll to first device
+simulator.sleep(1)
+simulator.advertizeBluetooth("Alice")
+simulator.sleep(1)
+simulator.advertizeBluetooth("Bob")
+simulator.sleep(1)
+simulator.turnRotaryEncoder(1) -- scroll to select device
+simulator.screenshot("/screenshots/model-trainer-link-mode-bt-select-device.png")
+simulator.pressKey(KEY_ENTER) -- y
+simulator.sleep(3) -- wait for load
+simulator.screenshot("/screenshots/model-trainer-link-mode-bt-device-connected.png")
+simulator.pressKey(KEY_ENTER) -- accept device connected
+simulator.sleep(6) -- wait for load
+simulator.turnRotaryEncoder(1) -- to disconnect
+simulator.screenshot("/screenshots/model-trainer-link-mode-bt-device-disconnect.png")
+simulator.turnRotaryEncoder(1) -- to active cond
+-- set active condition
+--[[
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(1)
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(2) -- switches
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(2) -- member
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(2) -- SA down
+simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+]]--
+simulator.pressKey(KEY_ENTER) -- open edit
+simulator.turnRotaryEncoder(3) -- scroll to sw's
+simulator.pressKey(KEY_ENTER) --y
+simulator.turnRotaryEncoder(2) --scroll to SA down
+simulator.pressKey(KEY_ENTER) --y
+-- end active cond set
+
+--simulator.pressKey(KEY_RTN)
+simulator.turnRotaryEncoder(9) -- scroll page up
+--simulator.screenshot("./screenshot11.png") -- place holder
+simulator.turnRotaryEncoder(-9) -- move cursor back
+simulator.screenshot("/screenshots/model-trainer-active-condition.png")
+simulator.turnRotaryEncoder(1) -- scroll to ch1
+simulator.screenshot("/screenshots/model-trainer-slave-channels.png")
+simulator.pressKey(KEY_ENTER) -- open
+simulator.sleep(3) -- wait for load
+simulator.screenshot("/screenshots/model-trainer-slave-channel-edit.png")
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN) -- back to trainer 
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(1) -- scroll to trainer mode
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(1) -- scroll to slave mode
+simulator.pressKey(KEY_ENTER) -- y
+simulator.screenshot("/screenshots/model-trainer-slave.png")
+simulator.turnRotaryEncoder(1) -- scroll to link mode
+simulator.pressKey(KEY_ENTER) -- y
+simulator.screenshot("/screenshots/model-trainer-slave-link-mode.png")
+simulator.pressKey(KEY_RTN)
+--simulator.turnRotaryEncoder(1)
+--simulator.pressKey(KEY_ENTER)
+--simulator.screenshot("/screenshots/model-trainer-slave-mode.png")
+--simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN, 1)

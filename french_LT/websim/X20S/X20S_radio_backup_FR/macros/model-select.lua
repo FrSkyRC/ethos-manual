@@ -1,12 +1,10 @@
 -- 2025-08-14 add comments
 -- 2025-10-05 adapt to web sim
 -- 2025-10-11 revert to original final model view
--- 2025-10-22 move the delete folder lines into this low level model-select.lua for ease of other langauges support - adapt for DE
--- 2025-11-03 add simulator.touch(405, 191) -- Virtual OK for DE
 -- 2025-10-22 move the delete folder lines into this low level model-select.lua for ease of other langauges support
--- 2025-12-05 simulator.touch(351, 84) -- tap on multirotor to open folder options
 -- 2026-01-21 add clone, receive model, send model options
 -- 2026-01-26 add simulation for model send and receive
+-- 2026-02-18 add another ack at end of model receive, and add the advertize() lines
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -20,36 +18,33 @@ simulator.turnRotaryEncoder(1) -- scroll to Model select
 simulator.screenshot("/screenshots/model-icon-modelselect.png")
 simulator.pressKey(KEY_ENTER) -- open
 simulator.touch(758, 91) -- add cat
-simulator.touch(321, 350) --F
-simulator.touch(67, 403) --shift
-simulator.touch(714, 352) --l
-simulator.touch(513, 306) --u
-simulator.touch(400, 346) --g
-simulator.touch(163, 401) --z
-simulator.touch(197, 305) --e
-simulator.touch(517, 303) --u
-simulator.touch(397, 354) --g
+simulator.touch(86, 351) -- A
+simulator.touch(76, 405) -- shift
+simulator.touch(599, 301) -- i
+simulator.touch(279, 304) --r
+simulator.touch(754, 303) --p
+simulator.touch(719, 354) --l
+simulator.touch(81, 356) --a
+simulator.touch(556, 405) --n
+simulator.touch(198, 306) --e
 simulator.screenshot("/screenshots/model-modelselect-create-airplane-folder.png")
---simulator.touch(461, 191) -- Virtual OK
-simulator.touch(405, 191) -- Virtual OK for DE
+simulator.touch(461, 191) -- Virtual OK
 simulator.touch(756, 80) --add cat
-simulator.touch(166, 350) --S
-simulator.touch(61, 403) --shift
-simulator.touch(197, 308) --e
-simulator.touch(396, 359) --g
-simulator.touch(716, 356) --l
-simulator.touch(205, 303) --e
-simulator.touch(280, 302) --r
---simulator.touch(450, 184) -- Virtual OK
-simulator.touch(405, 191) -- Virtual OK for DE
+simulator.touch(393, 348) --G
+simulator.touch(57, 402) --shift
+simulator.touch(715, 355) --l
+simulator.touch(600, 300) --i
+simulator.touch(233, 351) --d
+simulator.touch(186, 304) --e
+simulator.touch(279, 302) --r
+simulator.touch(450, 184) -- Virtual OK
 simulator.touch(751, 79) -- add cat
 simulator.touch(476, 350) -- H
 simulator.touch(60, 405) -- shift
 simulator.touch(198, 303) -- e
 simulator.touch(710, 356) -- l
 simulator.touch(590, 302) -- i
---simulator.touch(455, 193) -- Virtual OK
-simulator.touch(405, 191) -- Virtual OK for DE
+simulator.touch(455, 193) -- Virtual OK
 simulator.touch(755, 84) -- add cat
 simulator.touch(636, 399) -- M
 simulator.touch(65, 400) -- shift
@@ -62,10 +57,8 @@ simulator.touch(678, 305) -- o
 simulator.touch(359, 306) -- t
 simulator.touch(679, 304) -- o
 simulator.touch(279, 303) -- r
---simulator.touch(458, 191) -- Virtual OK
-simulator.touch(405, 191) -- Virtual OK for DE
---simulator.touch(490, 81) -- tap on multirotor to open folder options
-simulator.touch(351, 84) -- tap on multirotor to open folder options
+simulator.touch(458, 191) -- Virtual OK
+simulator.touch(490, 81) -- tap on multirotor to open folder options
 simulator.screenshot("/screenshots/model-modelselect-folder-options.png")
 simulator.pressKey(KEY_RTN) -- exit options
 
@@ -90,8 +83,7 @@ simulator.pressKey(KEY_ENTER) -- open options
 simulator.turnRotaryEncoder(3) -- scroll to change folder
 simulator.screenshot("/screenshots/model-modelselect-folder-change-select.png")
 simulator.pressKey(KEY_ENTER) -- --y
---simulator.turnRotaryEncoder(2) -- scroll to 'glider'
-simulator.turnRotaryEncoder(4) -- scroll to 'glider' in DE
+simulator.turnRotaryEncoder(2) -- scroll to 'glider'
 simulator.screenshot("/screenshots/model-modelselect-folder-change-glider.png")
 -- simulator.pressKey(KEY_ENTER) -- don't actually move 
 -- simulator.touch(84, 80)
@@ -107,21 +99,24 @@ simulator.screenshot("/screenshots/model-modelselect-receive-model-dialog.png")
 simulator.pressKey(KEY_ENTER) --y to confirm receive
 simulator.sleep(1) -- wait 
 simulator.screenshot("/screenshots/model-modelselect-receive-model-receiving.png")
-simulator.sleep(5) -- wait 
+--simulator.sleep(5) -- wait 
+simulator.pressKey(KEY_ENTER) -- ack receive
 simulator.pressKey(KEY_ENTER) -- ack failure
 --simulator.pressKey(KEY_RTN) -- escape from model options
 -- send model
 simulator.pressKey(KEY_ENTER) -- open options
-simulator.turnRotaryEncoder(5) -- scroll to receive model
+simulator.turnRotaryEncoder(5) -- scroll to send model
 simulator.screenshot("/screenshots/model-modelselect-send-model-select.png")
 simulator.pressKey(KEY_ENTER) -- y
 simulator.screenshot("/screenshots/model-modelselect-send-model-waiting-devices.png")
 simulator.sleep(3) -- wait 
-simulator.screenshot("/screenshots/model-modelselect-send-model-dialog.png")
+simulator.advertizeBluetooth("Alice", "01:01:01:01:01:01")
+simulator.advertizeBluetooth("Bob", "01:01:01:01:01:02")
 simulator.turnRotaryEncoder(1) -- scroll to alice
+simulator.screenshot("/screenshots/model-modelselect-send-model-dialog.png")
 simulator.pressKey(KEY_ENTER) -- y
 simulator.screenshot("/screenshots/model-modelselect-send-model-waiting-connect.png")
-simulator.sleep(3) -- wait 
+--simulator.sleep(3) -- wait 
 simulator.screenshot("/screenshots/model-modelselect-send-model-sending.png")
 simulator.sleep(3) -- wait 
 simulator.screenshot("/screenshots/model-modelselect-send-model-success.png")
@@ -204,7 +199,7 @@ simulator.pressKey(KEY_ENTER) -- y
 
 simulator.pressKey(KEY_RTN, 1) -- return home
 
-os.remove('SD:/models/Flugzeug/')
-os.remove('SD:/models/Segler/')
+os.remove('SD:/models/Airplane/')
+os.remove('SD:/models/Glider/')
 os.remove('SD:/models/Heli/')
 os.remove('SD:/models/Multirotor/')
