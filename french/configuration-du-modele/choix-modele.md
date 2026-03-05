@@ -2,48 +2,51 @@
 
 ![Icône Sélection du modèle](../assets/model-icon-modelselect.png)
 
-La sélection d'un modèle est accessible en sélectionnant « Choix modèle ». Il permet de sélectionner le modèle actuel, d'ajouter un nouveau modèle, de le dupliquer ou de le supprimer.
+La sélection d'un modèle est accessible en sélectionnant « Choix modèle » dans le menu Modèle.
+
+Il permet de sélectionner le modèle courant, d'ajouter un nouveau modèle, de le dupliquer tout ou partie, d’envoyer ou de recevoir un modèle via Bluetooth, ou de le supprimer.
 
 ### Gestion des dossiers de modèles
 
-Ethos vous permet de créer vos propres dossiers pour trier et regrouper vos modèles. 
-Chaque nouveau modèle crée, reçu, ou stocké dans le répertoire /models de la carte SD ou eMMC sera stocké dans le dossier "non trié". Ethos supprime automatiquement ce dernier quand il est vide.
+Ethos vous permet de créer vos propres dossiersafin de classer et regrouper vos modèles.
 
-![](<../.gitbook/assets/2 (1).jpeg>)
+Des noms de dossiers typiques peuvent être : Avions, Planeurs, Hélicos, Quads, Warbirds, Bateaux, Voitures, Modèles, Archive, etc.
 
-![](../.gitbook/assets/3.jpeg)
+![Dossiers de modèles](../assets/model-modelselect-folders.png)
 
-Pour créer un dossier, appuyez [+] » en haut à droite. Entrez le nom dans la boîte de dialogue « Créer nouveau dossier », puis appuyez sur OK. Les noms peuvent comporter jusqu'à 15 caractères. Répétez l'opération si besoin pour vos autres dossiers.
+Tant que vous n’avez pas créé et organisé vos dossiers, Ethos créera automatiquement le dossier « Non trié ».
 
-NB: ces dossiers apparaissent sous forme de sous-répertoires sous le répertoire \models sur la carte SD ou eMMC, selon la radio.
+Cela se produit lorsque vous mettez à jour vers Ethos version 1.1.0 alpha 17 ou ultérieure, ou lorsque vous copiez un modèle provenant d’Internet ou d’un ami dans le dossier Modèles sur la carte SD ou eMMC.
 
-Les dossiers sont triés par ordre alphabétique, hormis le dossier « Non trié », toujours en dernier dans la liste.
+Ethos supprimera automatiquement le dossier « Non trié » lorsqu’il ne sera plus nécessaire.
 
-![](<../.gitbook/assets/4 (1).jpeg>)
+Pour créer votre premier dossier, appuyez sur le « + » à droite de l’étiquette « Non trié », ou effectuez un appui long sur la touche Page Up/Down.
 
-Un appui sur le nom de dossier fait apparaitre une boite de dialogue afin de renommer, supprimer un dossier. Si des modèles étaient toujours présents dans le dossier supprimé Ethos les déplace automatiquement dans "Non trié".
+![Création de dossier de modèles](../assets/model-modelselect-create-airplane-folder.png)
 
-### Déplacement d'un modèle vers un autre dossier
+Saisissez le nom dans la boîte de dialogue « Créer nouveau dossier », puis appuyez sur OK.
 
-![](../.gitbook/assets/5.jpeg)
+Les noms peuvent comporter jusqu'à 15 caractères. Répétez l'opération si besoin pour vos autres dossiers.
 
-Pour déplacer un modèle vers un autre dossier, appuyez sur l'icône du modèle, puis sélectionnez « Déplacer » dans la boîte de dialogue.
+Notez que ces dossiers apparaissent comme sous-dossiers du dossier Modèles sur la carte SD ou la mémoire eMMC, selon la radio.
 
-![](../.gitbook/assets/6.jpeg)
+Les dossiers sont triés par ordre alphabétique, hormis le dossier « Non trié », qui apparaîtra toujours en dernier dans la liste.
 
-Choisissez le dossier cible.
+![Menu contextuel des dossiers de modèles](../assets/model-modelselect-folder-options.png)
+
+Un appui sur le nom de dossier fait apparaitre une boite de dialogue permettant de renommer ou de supprimer un dossier. Si des modèles se trouvaient dans le dossier supprimé, Ethos les déplace automatiquement dans le dossier "Non trié".
 
 ### Ajout d'un nouveau modèle
 
-![](../.gitbook/assets/7.jpeg)
+![Ajout d'un nouveau modèle](../assets/model-modelselect-folder-airplane-select.png)
 
 Pour créer un nouveau modèle, sélectionnez la catégorie de modèle sous laquelle vous souhaitez créer le modèle, puis appuyez sur l'icône [+] pour créer un nouveau modèle ou pour recevoir un modèle d'une autre radio Ethos via Bluetooth.
 
-![](<../.gitbook/assets/8 (1).png>)
+![Menu de création de modèle](../assets/model-modelselect-model-create.png)
 
-Appuyez sur l'icône [+] pour lancer l'assistant « Créer modèle ». (Vous devrez peut-être d'abord créer vos catégories de modèles, voir ci-dessus.)
+Appuyez sur « Créer modèle » pour lancer l'assistant de création de modèle (vous devrez peut-être d'abord créer vos catégories de modèles, voir ci-dessus.)
 
-![](<../.gitbook/assets/9 (1).jpeg>)
+![Lancement de l'assistant de création de modèle](../assets/model-modelselect-model-wizard-airplane.png)
 
 Choisissez le type de modèle que vous souhaitez créer et suivez les instructions.
 
@@ -55,67 +58,247 @@ Il existe des assistants pour :
 * Multirotor
 * Autre
 
-Les assistants vous guident dans la configuration de base pour un type de modèle donné. 
+Les assistants vous guident dans la configuration de base pour un type de modèle donné.
 
-NB: un nom de modèle peut comporter jusqu'à 15 caractères.
+![Lancement de l'assistant de création de modèle](../assets/model-modelselect-model-wizard-rx.png)
 
-![](../.gitbook/assets/10.png)
+Les assistants incluent la configuration optionnelle de mixages prédéfinis pour les récepteurs stabilisés FrSky, tels que le gain et le mode de stabilisation.
 
-Les assistants incluent la configuration optionnelle de mixages prédéfinis pour les récepteurs stabilisés FrSky. Dans ce cas, les voies
-pour le contrôle des modes de stabilisation seront automatiquement ajoutées.
+Les récepteurs stabilisés FrSky nécessitent un ordre de canaux spécifique, à savoir AETR.
 
-NB : Une configuration Elevon peut être réalisée en créant un nouveau modèle d'avion avec 2 ailerons et pas d'empennage. Les courses de mixage par défaut sont de 50 % sur chacune des commandes. Les courses pourront être adaptées à votre modèle.
+Par conséquent, l’option « Ordre des canaux » dans le menu Manches (Sticks) doit être laissée sur le réglage par défaut AETR, et l’option « Quatre premiers canaux fixes » doit être activée (ON), afin de garantir que l’ordre des canaux créé par l’assistant sera compatible avec le récepteur.
 
-![](<../.gitbook/assets/11 (1).jpeg>)
+![Lancement de l'assistant de création de modèle](../assets/model-modelselect-model-wizard-engine.png)
 
-Le modèle créé apparaîtra dans le dossier de catégorie de modèle défini par l'utilisateur qui était actif au démarrage de l'assistant et sera trié par ordre alphabétique.
+Pour un modèle de type avion, la page suivante est Moteur, qui permet de sélectionner le nombre souhaité de voies moteur (s’il y en a).
 
-### Réception d'un modèle depuis une autre radio Ethos
+![Lancement de l'assistant de création de modèle](../assets/model-modelselect-model-wizard-ail-and-flaps.png)
 
-![](../.gitbook/assets/12.png)
+Pour un modèle de type avion, le nombre de voies d’ailerons et de volets (flaps) est ensuite sélectionné.
 
-Pour recevoir un modèle, sélectionnez la catégorie de modèle dans laquelle vous souhaitez créer le modèle, puis appuyez sur l'icône [+].
+À partir d’Ethos 1.7.0, les assistants de création de modèle attribuent les voies en commençant par la gauche et en alternant de l’extérieur vers l’intérieur, afin d’être cohérents avec la documentation des récepteurs FrSky.
 
-![](../.gitbook/assets/13.png)
+Ainsi, pour un modèle simple avec 2 ailerons, 1 profondeur, 1 direction et 1 moteur, l’ordre des voies sera le suivant (en supposant l’ordre de canaux par défaut AETR et l’option « Quatre premiers canaux fixes » activée) :
 
-Appuyez sur « Recevoir » pour lancer le processus de réception d'un modèle d'une autre radio Ethos via Bluetooth.
+* CH1 Aileron gauche
+* CH2 Profondeur
+* CH3 Gaz
+* CH4 Directio
+* CH5 Aileron droit
 
-![](../.gitbook/assets/14.png)
+### Mise à jour des modèles vers Ethos 26.1
 
-Votre radio passera en mode d'attente et affichera également son adresse Bluetooth locale pour permettre l'identification de l'adresse correcte sur la radio "émetteur".
+Lors de la mise à jour vers Ethos 26.1, les modèles existants peuvent être convertis pour s’adapter au nouveau schéma de comptage des voies à partir de la gauche.
 
-![](../.gitbook/assets/15.png)\
-Sur la radio "émetteur" , appuyez sur l'icône du modèle et sélectionnez « Envoyer » pour débuter le transfert.
+Il existe 3 scénarios :
 
-![](../.gitbook/assets/16.png)\
-La radio réceptrice annoncera le fichier modèle sur le point d'être reçu pour confirmation. Appuyez sur Oui pour recevoir le modèle.
+#### Modèles existants avec l’ordre de voies par défaut 1.6.x (comptage depuis la droite)
 
-### Sélection d'un modèle
+Leurs mixages seront réarrangés pour correspondre au nouveau schéma (comptage depuis la gauche). Mais l’allocation des voies de sortie reste identique, donc aucun changement de câblage n’est nécessaire.
 
-![Icône Sélection du modèle](../assets/model-icon-modelselect.png)
+Seuls les mixages sont réordonnés dans la nouvelle séquence, mais les voies de sortie originales sont conservées pour que le modèle continue à fonctionner correctement.
 
-Appuyez sur « Choix modèle » pour afficher une liste de vos modèles.
+Exemple de réorganisation des mixes :
 
-![](../.gitbook/assets/18.jpeg)
+Avant :
 
-Veuillez noter qu'après une mise à niveau de la version d'Ethos, ETHOS convertit les modèles individuellement lorsqu'ils sont sélectionnés avec l'écran de sélection des modèles. Il n'est pas nécessaire de sélectionner chaque modèle après une mise à jour car la conversion peut avoir lieu à une date ultérieure lorsqu'ils sont sélectionnés, même avec une version ultérieure d'Ethos. Il n'y a pas de retard notable dans le processus de conversion lorsqu'un modèle est sélectionné. Lorsque la conversion a lieu, la date de dernière modification en bas de l'écran de sélection du modèle passe à la date du jour. Si aucune conversion n'est nécessaire, la date ne change que si vous apportez une modification au modèle.
+* CH1 Aileron droit
 
-NB: il est conseillé d'effectuer une sauvegarde avec Suite avant une mise à jour afin de pouvoir revenir en arrière en cas de problème.
+* CH2 Profondeur
 
-### Sélection rapide
+* CH3 Gaz
 
-Touch\_long ou Enter\_long sur l'icône d'un modèle basculera immédiatement vers ce modèle.
+* CH4 Direction
 
-### Gestion des modèles
+* CH5 Aileron gauche
 
-Appuyez sur un modèle pour le mettre en surbrillance, puis appuyez à nouveau dessus pour afficher le menu de gestion des modèles.
+Après :
 
-![](../.gitbook/assets/19.jpeg)
+* CH5 Aileron gauche
 
-Options de gestion des modèles :
+* CH2 Profondeur
 
-* Appuyez sur « Sélectionner » pour faire du modèle en surbrillance le modèle actuel.
-* Vous pouvez dupliquer le modèle. Le modèle dupliqué aura un numéro de récepteur different.Il n'est pas nécessaire d'appairer à nouveau si le récepteur possède le même numéro.
-* Vous modifiez le dossier du modèle.
-* Vous pouvez également supprimer le modèle.
-NB: L'option "Supprimer" n'apparaît que si le modèle sélectionné n'est pas le modèle actuel.
+* CH3 Gaz
+
+* CH4 Direction
+
+* CH1 Aileron droit
+
+#### Modèles existants déjà configurés pour compter depuis la gauche
+
+Ces modèles ne seront pas modifiés, car ils sont déjà conformes au nouveau schéma.
+
+#### Modèles dont les voies ont été inversées manuellement (Aileron inversé et renommage des sorties)
+
+Ces modèles fonctionneront correctement après la mise à jour, mais un conflit peut apparaître dans le nommage des voies.
+
+Pour résoudre ce problème, il faut annuler les inversions de mixages précédemment appliquées :
+
+Ré-inverser le mix d’Aileron avec des valeurs positives pour le poids et le différentiel.
+
+Échanger les voies de sortie de l’aileron à l’aide de la fonction « Swap » dans le menu Canaux.
+
+Renommer également les deux voies pour correspondre correctement aux fonctions gauche et droite.
+
+⚠️ Attention ! Après ces modifications, vérifiez que les mixages et les sorties fonctionnent correctement dans le bon ordre, sans les hélices.
+
+Pour un examen détaillé des trois scénarios de conversion, veuillez vous référer à l’Annexe A – Conversion des modèles Ethos de 1.6.X à 26.1.
+
+![Assistant configuration d'empennage](../assets/model-modelselect-model-wizard-tail.png)
+
+Pour un modèle de type avion, la configuration de l'empennage peut être soit "Empennage traditionnel" (en croix), soit "Empennage en V", ou pas d'empennage (par exemple pour un delta ou un aile volante).
+
+### Ailes delta
+
+Un montage Elevon peut être obtenu en créant un nouveau modèle avion avec 2 ailerons et pas d'empennage, ce qui entraînera la création automatique du mixage Elevon.
+
+Les poids par défaut des mixes sont de 50 % chacun, afin d’obtenir un total de 100 % si ailerons et profondeur sont appliqués simultanément.
+
+Alternativement, lors de l’utilisation d’un récepteur stabilisé, le mixage delta peut être effectué directement par le récepteur.
+
+Dans l’assistant, pour cette situation, vous devez sélectionner 1 aileron et 1 profondeur, car le mixage Elevon sera effectué dans le récepteur.
+
+Veuillez vous référer au manuel du récepteur stabilisé pour plus de détails.
+
+Pour un modèle à aile delta possédant à la fois des surfaces d’ailerons et de profondeur, laissez l’assistant compléter le modèle comme si une queue était présente.
+Il configurera les voies nécessaires pour les ailerons et la profondeur, avec ou sans gouvernail selon les besoins.
+
+![Assistant Profondeur / Dérive](../assets/model-modelselect-model-wizard-ele-and-rudder.png)
+
+Pour un modèle de type avion, après avoir choisi par exemple un empennage traditionnel en croix, il est possible de configurer le nombre de voies pour la profondeur et la dérive.
+
+![Assistant configuration d'empennage](../assets/model-modelselect-model-wizard-ch-reassignment.png)
+
+Après avoir configuré les options de voies, l’étape suivante permet de réaffecter les fonctions du modèle à différentes voies.
+
+L’assistant respecte l’ordre des voies défini dans le menu Manches (Sticks), mais cet écran permet de réaffecter les voies tout en gardant à l’esprit que les récepteurs stabilisés FrSky exigent que les voies stabilisées soient dans un ordre spécifique.
+
+Veuillez vous référer au manuel du récepteur pour plus de détails.
+
+![Assistant Nom / Image du modèle](../assets/model-modelselect-model-wizard-name.png)
+
+À la dernière étape, il est possible de définir le nom du modèle et de lier une image au modèle.
+Notez que les noms de modèles peuvent comporter jusqu’à 15 caractères.
+
+![Assistant configuration d'empennage](../assets/model-modelselect-model-wizard-ultimate.png)
+
+Le nouveau modèle a été créé.
+
+![Assistant configuration d'empennage](../assets/model-modelselect-model-airplane-category.png)
+
+Le modèle créé apparaîtra dans le dossier de catégorie de modèle défini par l'utilisateur qui était actif au démarrage de l'assistant et sera rangé par ordre alphabétique.
+
+Veuillez également vous référer à l’exemple d’avion à voilure fixe de base dans la section Tutoriels de programmation pour un exemple complet.
+
+### Sélection de modèle
+
+![Sélection de modèle](../assets/model-icon-modelselect.png)
+
+Appuyez sur « Choix modèle » pour afficher la liste de vos modèles.
+
+![Sélection de modèle](../assets/model-modelselect-folders.png)
+
+Veuillez noter qu’après une mise à jour d’Ethos, les modèles sont convertis individuellement lorsqu’ils sont sélectionnés depuis l’écran de sélection de modèles.
+
+Il n’est pas nécessaire de sélectionner chaque modèle immédiatement après la mise à jour, car la conversion peut avoir lieu plus tard, lorsqu’ils seront sélectionnés, même avec une version ultérieure d’Ethos.
+
+Aucun délai perceptible n’est constaté lors de la conversion lorsqu’un modèle est sélectionné.
+
+Lorsque la conversion a lieu, la date de dernière modification affichée en bas de l’écran de sélection de modèles sera mise à jour à la date actuelle. Si aucune conversion n’est nécessaire, la date ne change que si vous apportez une modification au modèle.
+
+#### Sélection rapide
+
+Un appui long tactile ou un appui long sur Entrée sur l’icône d’un modèle permettra de passer immédiatement à ce modèle.
+
+Voir également la section « Choisir le modèle courant » ci-dessous.
+
+### Menu de gestion des modèles
+
+![Sélection de modèle](../assets/model-modelselect-folders-2.png)
+
+Appuyez sur un **modèle** pour le **sélectionner**, puis appuyez de nouveau dessus pour **ouvrir le menu de gestion du modèle**.
+
+#### Choisir le modèle courant
+
+![Sélection de modèle](../assets/model-modelselect-model-set.png)
+
+Appuyez sur **« Sélectionner »** pour faire du modèle sélectionné le modèle actif.
+
+Sinon, vous pouvez utiliser la méthode de **« Sélection rapide »** décrite ci-dessus.
+
+#### Dupliquer un modèle
+
+![Sélection de modèle](../assets/model-modelselect-clone-select.png)
+
+Appuyez sur « Dupliquer » pour créer une copie du modèle sélectionné.
+
+![Sélection de modèle](../assets/model-modelselect-clone-options.png)
+
+Une boîte de dialogue s’ouvrira pour vous permettre de **personnaliser la copie**.
+
+Par défaut, le système RF n’est pas dupliqué, ce qui signifie que le **module RF sera désactivé** dans la copie, et le **numéro de modèle différent**.
+
+Si l’option « Système RF » est sélectionnée, la configuration RF, y compris le numéro de modèle, sera copiée.
+
+Les **mixages, timers et courbes** du modèle ne seront pas clonés si l'option correspondante n’est pas sélectionnée.
+
+Appuyez sur **OK** pour continuer.
+
+Un message **« Modèle copié avec succès ! »** s’affichera une fois l’opération terminée.
+
+#### Déplacer un modèle
+
+![Sélection de modèle](../assets/model-modelselect-folder-change-select.png)
+
+Pour **déplacer un modèle vers un autre dossier**, appuyez sur l’**icône du modèle**, puis sélectionnez **« Déplacer »** dans le menu contextuel.
+
+![Sélection de modèle](../assets/model-modelselect-folder-change-glider.png)
+
+Choisissez alors le dossier vers lequel vous souhaitez le déplacer.
+
+#### Recevoir un modèle
+
+![Sélection de modèle](../assets/model-modelselect-receive-model-select.png)
+
+Appuyez sur **« Recevoir »** pour lancer le processus de réception d’un modèle depuis une autre radio Ethos via Bluetooth.
+Veuillez noter que l’option « Recevoir un modèle » doit être activée avant d’utiliser « Envoyer un modèle » sur la radio émettrice.
+
+![Sélection de modèle](../assets/model-modelselect-receive-model-waiting.png)
+
+Until a Bluetooth connection is found, a ‘Waiting for connection’ dialog is displayed.
+
+![Sélection de modèle](../assets/model-modelselect-receive-model-dialog.png)
+
+Once a connection has been established, an ‘About to receive’ dialog is displayed waiting for confirmation to proceed.
+
+![Sélection de modèle](../assets/model-modelselect-receive-model-receiving.png)
+
+File transfer commences and a progress bar is displayed, followed by a success message on completion. 
+
+#### Envoi de modèle
+
+![Sélection de modèle](../assets/model-modelselect-send-model-select.png)
+
+Appuyez sur **« Envoyer »** pour lancer le **transfert d’un modèle vers une autre radio Ethos via Bluetooth**.
+Veuillez noter que l’option **« Recevoir »** doit être activée **avant** d’utiliser **« Envoyer »** sur la radio émettrice.
+
+![Sélection de modèle](../assets/model-modelselect-send-model-waiting-devices.png)
+
+Tant qu’aucune connexion Bluetooth n’est établie, une boîte de dialogue « En attente de connextion ... » s’affiche.
+
+![Sélection de modèle](../assets/model-modelselect-send-model-dialog.png)
+
+Une fois que des appareils ont été détectés, une boîte de dialogue de sélection d’appareil s’affiche. Sélectionnez alors l’appareil vers lequel le modèle doit être envoyé.
+
+![Sélection de modèle](../assets/model-modelselect-send-model-sending.png)
+
+Le **transfert de fichier commence** et une **barre de progression** est affichée.
+
+![Sélection de modèle](../assets/model-modelselect-send-model-success.png)
+
+Un message apparaît une fois le transfert terminé.
+
+#### Supprimer un modèle
+
+Appuyez sur **« Supprimer »** pour effacer un modèle.
+Cette option **n’est pas disponible pour le modèle actif**.
