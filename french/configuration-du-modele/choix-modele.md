@@ -60,7 +60,7 @@ Il existe des assistants pour :
 
 Les assistants vous guident dans la configuration de base pour un type de modèle donné.
 
-![Lancement de l'assistant de création de modèle](../assets/model-modelselect-model-wizard-rx.png)
+![Assistant configuration du récepteur stabilisé (on non)](../assets/model-modelselect-model-wizard-rx.png)
 
 Les assistants incluent la configuration optionnelle de mixages prédéfinis pour les récepteurs stabilisés FrSky, tels que le gain et le mode de stabilisation.
 
@@ -68,11 +68,11 @@ Les récepteurs stabilisés FrSky nécessitent un ordre de canaux spécifique, �
 
 Par conséquent, l’option « Ordre des canaux » dans le menu Manches (Sticks) doit être laissée sur le réglage par défaut AETR, et l’option « Quatre premiers canaux fixes » doit être activée (ON), afin de garantir que l’ordre des canaux créé par l’assistant sera compatible avec le récepteur.
 
-![Lancement de l'assistant de création de modèle](../assets/model-modelselect-model-wizard-engine.png)
+![Assistant configuration du moteur](../assets/model-modelselect-model-wizard-engine.png)
 
 Pour un modèle de type avion, la page suivante est Moteur, qui permet de sélectionner le nombre souhaité de voies moteur (s’il y en a).
 
-![Lancement de l'assistant de création de modèle](../assets/model-modelselect-model-wizard-ail-and-flaps.png)
+![Assistant configuration de les ailerons et volets (flaps)](../assets/model-modelselect-model-wizard-ail-and-flaps.png)
 
 Pour un modèle de type avion, le nombre de voies d’ailerons et de volets (flaps) est ensuite sélectionné.
 
