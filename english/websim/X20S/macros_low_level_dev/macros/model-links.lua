@@ -5,6 +5,7 @@
 -- 2025-02-10 changes due to revised BT 
 -- 2025-02-16 further changes to BT for disconnect
 -- 2026-02-17 further changes from Bertrand
+-- 2026-02-24 add ActiveLook glasses
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -100,6 +101,7 @@ simulator.pressKey(KEY_ENTER) -- select
 simulator.turnRotaryEncoder(1) -- scroll to BT
 simulator.screenshot("/screenshots/model-links-bt.png")
 simulator.pressKey(KEY_ENTER) -- open bt
+simulator.screenshot("/screenshots/model-links-bt-options.png")
 simulator.turnRotaryEncoder(1) -- scroll to telem
 simulator.pressKey(KEY_ENTER) -- y
 simulator.screenshot("/screenshots/model-links-bt-telem.png")

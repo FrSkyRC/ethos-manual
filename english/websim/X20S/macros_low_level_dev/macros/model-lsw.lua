@@ -4,6 +4,7 @@
 -- 2025-08-16 change 'model-lsw-edge-during-gt0' to use 1% steps
 -- 2025-12-05 add simulator.touch(32, 453) -- scroll back to 0.1 steps due to bug, also scroll to use a source
 -- 2025-12-15 revert step size to 0.1
+-- 2026-03-13 update for 
 
 -- This macro relies on logic switch TestC for testing logic switch coinfirmation before ture and false.
 
@@ -321,5 +322,7 @@ simulator.pressKey(KEY_ENTER, 1) --long ENT
 simulator.turnRotaryEncoder(2) --scroll to ignore trainer input
 simulator.pressKey(KEY_ENTER) --y
 simulator.screenshot("/screenshots/model-lsw-ignore-trainer-input.png")
+simulator.pressKey(KEY_RTN) --exit
+simulator.screenshot("/screenshots/model-lsw-ignore-trainer-input-enabled.png")
 
 simulator.pressKey(KEY_RTN, 1)

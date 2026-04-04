@@ -24,6 +24,7 @@ simulator.turnRotaryEncoder(2) -- scroll to 'ignore trainer input'
 simulator.pressKey(KEY_ENTER) -- enable
 simulator.screenshot("/screenshots/trainer-take-back-ailinput-ignore.png")
 simulator.pressKey(KEY_RTN) -- back to lsw1
+simulator.screenshot("/screenshots/trainer-take-back-ailinput-ignore-enabled.png")
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- back to lsw list
 simulator.turnRotaryEncoder(1) -- scroll to second lsw eleinput
