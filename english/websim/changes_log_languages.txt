@@ -15,4 +15,6 @@ start of 1.7.0 rev6
 
 -- 2026-04-04 update DE images for model trainer
 -- 2026-04-04 update ES images for model trainer
+-- 2026-04-04 update FR images for model trainer
+-- 2026-04-04 update IT images for model trainer
 
