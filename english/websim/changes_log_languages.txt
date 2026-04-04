@@ -9,4 +9,7 @@ start of 1.7.0 rev6
 -- 2026-01-26 update DE images for model send and receive images
 -- 2026-01-26 update ES images for model send and receive images
 -- 2026-01-26 update IT images for model send and receive images
+-- 2026-02-17 update X20S_radio_backup_FR.zip with rearebear.bin
+-- 2026-02-17 update X20S_radio_backup_JP.zip with rearebear.bin
+-- 2026-02-17 update FR images
 

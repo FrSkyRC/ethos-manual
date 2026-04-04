@@ -113,7 +113,7 @@ mainview.zip
 
 Language differences:
 1. They have their own radio backup files due to language setting
-2. The Extra fwexample.bin models have different Timer names in DE, FR and ?
+2. The Extra fwexample.bin models have different Timer names in DE, FR (Batterie) and ?
 3. The DE model-select.lua has German category names, and scrolls down 4 to the Segler category
 3a. The DE model-select deletes German folders created by it
 4. zblank.bin calls up the zblank.md checklist file stored in each language radio backup
