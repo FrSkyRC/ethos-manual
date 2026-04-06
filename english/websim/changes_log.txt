@@ -248,3 +248,6 @@ start of 1.7.0 rev6
 -- 2026-02-19 how-to-low-batt.lua adapt for SF workflow change
 -- 2026-02-24 how-to-gear-seq.lua remove dropped edit sequence
 -- 2026-04-04 model-trainer.lua revert back to trainer from links
+-- 2026-04-04 model-glasses first version
+-- 2026-04-06 telemetry.lua adapt for new tabs in Telemetry
+-- 2026-04-06 model-glasses adapt to scrolling bug fix
