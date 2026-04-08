@@ -29,3 +29,4 @@ start of 1.7.0 rev6
 -- 2026-04-06 system-menu update IT images only, no change to macro
 -- 2026-04-06 system-menu update JP images only, no change to macro
 -- 2026-04-08 DE add screenshots showing ignore trainer inpout symbol
+-- 2026-04-08 ES add screenshots showing ignore trainer inpout symbol
