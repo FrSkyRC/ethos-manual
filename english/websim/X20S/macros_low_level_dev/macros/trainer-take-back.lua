@@ -1,4 +1,5 @@
 -- 2025-08-04 add comments
+-- 2026-04-07 add screenshots showing ignore trainer inpout symbol
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -32,6 +33,14 @@ simulator.pressKey(KEY_ENTER) -- open
 simulator.turnRotaryEncoder(1) -- scroll to edit
 simulator.pressKey(KEY_ENTER) -- y
 simulator.screenshot("/screenshots/trainer-take-back-eleinput.png")
+simulator.turnRotaryEncoder(4) -- scroll to source
+simulator.pressKey(KEY_ENTER, 0.6) -- long ENT
+simulator.turnRotaryEncoder(2) -- scroll to 'ignore trainer input'
+simulator.pressKey(KEY_ENTER) -- enable
+--simulator.screenshot("/screenshots/trainer-take-back-elevator-ignore.png")
+simulator.pressKey(KEY_RTN) -- back to lsw1
+simulator.screenshot("/screenshots/trainer-take-back-elevator-ignore-enabled.png")
+simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- back to lsw list
 simulator.turnRotaryEncoder(1) -- scroll to lsw disable trainer
 simulator.pressKey(KEY_ENTER) -- open

@@ -2,6 +2,7 @@
 -- 2025-08-09 take 'model-telemetry-calculated-sensor-consumption.png' screenshot with highlight
 -- 2025-09-03 remove the first deselect line 111
 -- 2025-12-06 adapt for BT removed from this screen
+-- 2025-04-04 adapt for new tabs in Telemetry
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -16,40 +17,30 @@ simulator.turnRotaryEncoder(1) -- scroll to telemetry
 simulator.screenshot("/screenshots/model-icon-telemetry.png")
 simulator.pressKey(KEY_ENTER) -- open
 --simulator.screenshot("/screenshots/model-telemetry-discover-new-sensors-off-1.png")
-simulator.turnRotaryEncoder(1) -- scroll to discover param
-simulator.screenshot("/screenshots/model-telemetry-discover-new-sensors-off.png")
-simulator.pressKey(KEY_ENTER) -- enable
-simulator.screenshot("/screenshots/model-telemetry-discover-new-sensors-on.png")
-simulator.pressKey(KEY_ENTER) -- disable
 --
--- competition only
-simulator.turnRotaryEncoder(2) -- scroll to comp only
-simulator.pressKey(KEY_ENTER) -- open, get confirmation dialog
-simulator.screenshot("/screenshots/model-telemetry-comp-only-confirm.png")
-simulator.pressKey(KEY_RTN) -- cancel
---simulator.turnRotaryEncoder(2) -- scroll to individual rssi alert (BT change)
-simulator.turnRotaryEncoder(1) -- scroll to individual rssi alert
+-- **** Telemetry menu
+-- Telemetry tab is active by default
+simulator.screenshot("/screenshots/model-telemetry.png")
+simulator.turnRotaryEncoder(1) -- scroll to first sensor
+simulator.turnRotaryEncoder(-1) -- scroll to [+] menu
+simulator.pressKey(KEY_ENTER) -- open
+simulator.screenshot("/screenshots/model-telemetry-tab-options.png")
+simulator.turnRotaryEncoder(1) -- scroll to discover option
+ 
+simulator.screenshot("/screenshots/model-telemetry-discover-new-sensors-select.png")
 simulator.pressKey(KEY_ENTER) -- enable
-simulator.screenshot("/screenshots/model-telemetry-rssi-individual-alert.png")
-simulator.pressKey(KEY_ENTER) -- disable
+simulator.screenshot("/screenshots/model-telemetry-discover-new-sensors-result.png")
+-- after discovery focus is still on [+] menu
+simulator.pressKey(KEY_ENTER) -- open
+simulator.turnRotaryEncoder(1) -- scroll to stop discovery option
+simulator.screenshot("/screenshots/model-telemetry-stop-discovery-select.png")
+simulator.pressKey(KEY_ENTER) -- stop discovery
 --
---[[ BT removed from this screen
--- bluetooth
-simulator.turnRotaryEncoder(-1) -- scroll back to bluetooth
-simulator.pressKey(KEY_ENTER) -- enable
---simulator.pressKey(KEY_ENTER)
---simulator.pressKey(KEY_ENTER) -- confirm stop audio bt
-simulator.sleep(3) -- wait 
-simulator.screenshot("/screenshots/model-telemetry-bt-option.png")
-simulator.sleep(5) -- wait 
-simulator.pressKey(KEY_ENTER) -- turn off BT
-]]--
+-- after stop discovery focus is still on [+] menu
 --
 -- rssi sensor
 --
---simulator.turnRotaryEncoder(7)
---simulator.turnRotaryEncoder(4) -- scroll to first sensor in list - rssi (BT change)
-simulator.turnRotaryEncoder(3) -- scroll to first sensor in list - rssi
+simulator.turnRotaryEncoder(1) -- scroll to first sensor in list - rssi
 simulator.screenshot("/screenshots/model-telemetry-discovered-new-sensors.png")
 simulator.pressKey(KEY_ENTER) -- open edit options
 simulator.turnRotaryEncoder(1) -- scroll to edit
@@ -100,12 +91,19 @@ simulator.screenshot("/screenshots/model-telemetry-edit-vspeed-sensor-2.png")
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- back to telem list
 simulator.pressKey(KEY_RTN) -- deselect
+simulator.pressKey(KEY_RTN) -- 
+simulator.pressKey(KEY_RTN) -- 
 simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
+
+
 --
 -- do diy sensor
 --
-simulator.pressKey(KEY_ENTER) -- open telemetry menu
-simulator.turnRotaryEncoder(5) -- scroll to 'create diy sensor'
+-- start at Telemetry icon
+simulator.pressKey(KEY_ENTER) -- open
+simulator.turnRotaryEncoder(-1) -- scroll to [+] menu
+simulator.pressKey(KEY_ENTER) -- open tab options
+simulator.turnRotaryEncoder(2) -- scroll to diy sensor option
 simulator.screenshot("/screenshots/model-telemetry-diy-sensor-select.png")
 simulator.pressKey(KEY_ENTER) -- enable
 simulator.screenshot("/screenshots/model-telemetry-diy-sensor-edit.png")
@@ -113,18 +111,22 @@ simulator.turnRotaryEncoder(2) -- scroll to auto detect
 simulator.pressKey(KEY_ENTER)
 simulator.sleep(1) -- wait 
 simulator.screenshot("/screenshots/model-telemetry-diy-sensor-auto-detect.png")
---simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- cancel auto detect
+simulator.pressKey(KEY_ENTER) -- close dialog
 simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- back to telem list
+simulator.pressKey(KEY_RTN) -- exit
 simulator.pressKey(KEY_RTN) -- deselect
+simulator.pressKey(KEY_RTN) -- 
+simulator.pressKey(KEY_RTN) -- 
 simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
+
 --
 -- now do calculated sensors
 --
--- consumption
-simulator.pressKey(KEY_ENTER) -- open telemetry menu
-simulator.turnRotaryEncoder(6) -- scroll to 'create calculated sensor'
+-- start at Telemetry icon
+simulator.pressKey(KEY_ENTER) -- open
+simulator.turnRotaryEncoder(-1) -- scroll to [+] menu
+simulator.pressKey(KEY_ENTER) -- open tab options
+simulator.turnRotaryEncoder(3) -- scroll to 'create calculated sensor'
 simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-select.png")
 simulator.pressKey(KEY_ENTER) -- enabled
 simulator.turnRotaryEncoder(1) -- scroll to consumption
@@ -136,36 +138,17 @@ simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-consumption
 simulator.turnRotaryEncoder(1) -- scroll to distance
 simulator.pressKey(KEY_ENTER) -- enable
 simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-distance.png")
-simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- back to telem list
-simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
+simulator.pressKey(KEY_ENTER) -- enabled
+simulator.turnRotaryEncoder(1) -- scroll to trip
 --
 -- trip
-simulator.pressKey(KEY_ENTER) -- open telemetry menu
-simulator.turnRotaryEncoder(6) -- scroll to 'create calculated sensor'
--- simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-select.png")
-simulator.pressKey(KEY_ENTER) --enable
--- simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-consumption.png")
-simulator.turnRotaryEncoder(1) --scroll to fn
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2) --scroll to trip
+--
 simulator.pressKey(KEY_ENTER) -- enable
 simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-trip.png")
-simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- back to telem list
-simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
+simulator.pressKey(KEY_ENTER) -- enabled
+simulator.turnRotaryEncoder(1) -- scroll to multi-lipo
 --
 -- multi-lipo
-simulator.pressKey(KEY_ENTER) -- open telemetry menu
-simulator.turnRotaryEncoder(6) -- scroll to 'create calculated sensor'
--- simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-select.png")
-simulator.pressKey(KEY_ENTER) -- enable
--- simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-consumption.png")
-simulator.turnRotaryEncoder(1) --scroll to fn
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(3) --scroll to multi lipo
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-multi-lipo.png")
 simulator.turnRotaryEncoder(9) -- scroll to xxxxx
@@ -178,58 +161,36 @@ simulator.turnRotaryEncoder(2) -- scroll to
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(2) -- scroll to 2nd lipo
 simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-multi-lipo-2.png")
-simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- back to telem list
-simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
-
+simulator.turnRotaryEncoder(-10) -- scroll back to function
+simulator.pressKey(KEY_ENTER) -- enabled
+simulator.turnRotaryEncoder(1) -- scroll to percent
 --
 -- percent
-simulator.pressKey(KEY_ENTER) -- open telemetry menu
-simulator.turnRotaryEncoder(6) -- scroll to 'create calculated sensor'
--- simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-select.png")
-simulator.pressKey(KEY_ENTER)
--- simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-consumption.png")
-simulator.turnRotaryEncoder(1) --scroll to fn
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(4) -- scroll to percent
+-- start at Telemetry icon
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-percent.png")
-simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- back to telem list
-simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
+simulator.pressKey(KEY_ENTER) -- enabled
+simulator.turnRotaryEncoder(1) -- scroll to power
 --
 -- power
-simulator.pressKey(KEY_ENTER) -- open telemetry menu
-simulator.turnRotaryEncoder(6) -- scroll to 'create calculated sensor'
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1) -- scroll to fn
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(5) -- scroll to power
+-- start at Telemetry icon
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-power.png")
-simulator.turnRotaryEncoder(8) -- scroll to xxxx
+simulator.turnRotaryEncoder(8) -- scroll to current source
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1) -- scroll to 
+simulator.turnRotaryEncoder(1) -- scroll to current sensor
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1) -- scroll to 
+simulator.turnRotaryEncoder(1) -- scroll to voltage source
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(3) -- scroll to 
+simulator.turnRotaryEncoder(3) -- scroll to vfas sensor
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-power-2.png")
-simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- back to telem list
-simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
+simulator.turnRotaryEncoder(-9) -- scroll back to function
+simulator.pressKey(KEY_ENTER) -- enabled
+simulator.turnRotaryEncoder(1) -- scroll to custom
 --
 -- do calculated custom power sensor
-simulator.pressKey(KEY_ENTER) -- open telemetry menu
-simulator.turnRotaryEncoder(6) -- scroll to 'calculated sensor'
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1) -- scroll to formula
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(6) -- scroll to custom
+-- start at Telemetry icon
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("/screenshots/model-telemetry-edit-custom-sensor.png")
 -- simulator.turnRotaryEncoder(9) -- scroll to add
@@ -251,21 +212,7 @@ simulator.pressKey(KEY_PAGE)
 simulator.pressKey(KEY_PAGE)
 simulator.pressKey(KEY_PAGE)
 simulator.pressKey(KEY_PAGE)
---[[
-simulator.touch(732, 402)
-simulator.touch(732, 402)
-simulator.touch(732, 402)
-simulator.touch(732, 402)
-simulator.touch(732, 402)
-simulator.touch(732, 402)
-simulator.touch(732, 402)
-simulator.touch(732, 402)
-simulator.touch(731, 403)
-simulator.touch(731, 403)
-simulator.touch(731, 403)
-simulator.touch(731, 403)
-simulator.touch(731, 403)
-]]--
+--
 simulator.touch(640, 399) -- M
 simulator.touch(73, 393) -- shift
 simulator.touch(79, 351) -- a
@@ -292,21 +239,6 @@ simulator.turnRotaryEncoder(-1) -- scroll back to delete actions
 simulator.pressKey(KEY_ENTER) -- delete
 simulator.pressKey(KEY_ENTER) -- confirm
 -- now we are back on the source param
---[[
-simulator.pressKey(KEY_ENTER) -- edit source
-simulator.turnRotaryEncoder(1) -- cat
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(10) -- scroll to telem
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2) -- scroll to member
-simulator.pressKey(KEY_ENTER)
--- simulator.turnRotaryEncoder(21)
-simulator.turnRotaryEncoder(21) -- scroll to VFAS
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
--- simulator.turnRotaryEncoder(2)
-]]--
 -- select vfas source
 simulator.pressKey(KEY_ENTER) -- edit source
 simulator.turnRotaryEncoder(11) -- scroll to telem
@@ -321,20 +253,6 @@ simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(2) -- scroll to multiply
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- scroll to source
---[[
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1) -- scroll to cat
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(10) -- scroll to telem
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2) -- scroll to member
-simulator.pressKey(KEY_ENTER)
--- simulator.turnRotaryEncoder(13) -- 
-simulator.turnRotaryEncoder(13) -- scroll to current
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-]]--
 -- select current
 simulator.pressKey(KEY_ENTER) -- edit source
 simulator.turnRotaryEncoder(11) -- scroll to telem
@@ -349,19 +267,6 @@ simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(5) -- scroll to max
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- scroll to source
---[[
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1) -- cat
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(10) -- scroll to telem
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2) -- scroll to memebr
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(-1) -- reverse scroll to MaxPower
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-]]--
 -- select maxpower custom sensor
 simulator.pressKey(KEY_ENTER) -- edit source
 simulator.turnRotaryEncoder(11) -- scroll to telem
@@ -374,16 +279,22 @@ simulator.screenshot("/screenshots/model-telemetry-edit-custom-sensor-maxpower-2
 --simulator.screenshot("./screenshot38.png")
 --simulator.pressKey(KEY_RTN, 1)
 simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- back to telem list
+simulator.pressKey(KEY_RTN) -- exit
 simulator.pressKey(KEY_RTN) -- deselect
+simulator.pressKey(KEY_RTN) -- 
+simulator.pressKey(KEY_RTN) -- 
 simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
 --
 -- do subtract example
-simulator.pressKey(KEY_ENTER) -- open telemetry menu
-simulator.turnRotaryEncoder(6) -- scroll to 'calculated sensor'
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1) -- scroll to fn
-simulator.pressKey(KEY_ENTER)
+-- start at Telemetry icon
+simulator.pressKey(KEY_ENTER) -- open
+simulator.turnRotaryEncoder(-1) -- scroll to [+] menu
+simulator.pressKey(KEY_ENTER) -- open tab options
+simulator.turnRotaryEncoder(3) -- scroll to 'create calculated sensor'
+--simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-select.png")
+simulator.pressKey(KEY_ENTER) -- create
+simulator.turnRotaryEncoder(1) -- scroll to function
+simulator.pressKey(KEY_ENTER) -- edit
 simulator.turnRotaryEncoder(6) -- scroll to custom
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- scroll to name
@@ -400,20 +311,7 @@ simulator.pressKey(KEY_PAGE)
 simulator.pressKey(KEY_PAGE)
 simulator.pressKey(KEY_PAGE)
 simulator.pressKey(KEY_PAGE)
---[[
-simulator.touch(739, 401)
-simulator.touch(739, 401)
-simulator.touch(739, 401)
-simulator.touch(739, 401)
-simulator.touch(739, 401)
-simulator.touch(739, 401)
-simulator.touch(739, 401)
-simulator.touch(739, 401)
-simulator.touch(739, 401)
-simulator.touch(738, 401)
-simulator.touch(738, 401)
-simulator.touch(738, 401)
-]]--
+--
 simulator.touch(166, 348) -- S
 simulator.touch(72, 408) -- shift
 simulator.touch(517, 303) -- u
@@ -433,17 +331,7 @@ simulator.pressKey(KEY_RTN) -- accept
 simulator.screenshot("/screenshots/model-telemetry-edit-custom-sensor-subtrexample.png")
 simulator.turnRotaryEncoder(7) -- scroll to source
 simulator.pressKey(KEY_ENTER) -- y
---[[
-simulator.turnRotaryEncoder(1) -- scroll to 
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(10) -- scroll to custom
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(3) -- scroll to 
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-]]--
+
 -- add rssi sensor
 simulator.turnRotaryEncoder(11) -- scroll to telem
 simulator.pressKey(KEY_ENTER)
@@ -471,34 +359,29 @@ simulator.pressKey(KEY_RTN) -- y
 simulator.screenshot("/screenshots/model-telemetry-edit-custom-sensor-subtr-20.png")
 --simulator.screenshot("./screenshot7.png")
 simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- back to telem list
+simulator.pressKey(KEY_RTN) -- exit
 simulator.pressKey(KEY_RTN) -- deselect
+simulator.pressKey(KEY_RTN) -- 
+simulator.pressKey(KEY_RTN) -- 
 simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
 --simulator.pressKey(KEY_RTN)
 --
 -- demo of internal value 
 simulator.setAnalog(1, 100) -- set thr to -100
-simulator.pressKey(KEY_ENTER) -- open telemetry menu
-simulator.turnRotaryEncoder(6) -- scroll to 'calculated sensor'
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1) -- scroll to fn
-simulator.pressKey(KEY_ENTER)
+-- start at Telemetry icon
+simulator.pressKey(KEY_ENTER) -- open
+simulator.turnRotaryEncoder(-1) -- scroll to [+] menu
+simulator.pressKey(KEY_ENTER) -- open tab options
+simulator.turnRotaryEncoder(3) -- scroll to 'create calculated sensor'
+--simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-select.png")
+simulator.pressKey(KEY_ENTER) -- create
+simulator.turnRotaryEncoder(1) -- scroll to function
+simulator.pressKey(KEY_ENTER) -- open
 simulator.turnRotaryEncoder(6) -- scroll to custom
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(8) -- scroll to source
 simulator.pressKey(KEY_ENTER)
---[[
-simulator.turnRotaryEncoder(1) -- scroll to 
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1) -- scroll to 
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2) -- scroll to 
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2) -- scroll to 
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-]]--
+--
 -- select throttle
 simulator.turnRotaryEncoder(2) -- scroll to analog
 simulator.pressKey(KEY_ENTER)
@@ -510,30 +393,62 @@ simulator.setAnalog(1, -100) -- set thr to -100
 simulator.sleep(0.6) -- wait 
 simulator.screenshot("/screenshots/model-telemetry-edit-custom-sensor-internal-value-min.png")
 simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- back to telem list
+simulator.pressKey(KEY_RTN) -- exit
 simulator.pressKey(KEY_RTN) -- deselect
+simulator.pressKey(KEY_RTN) -- 
+simulator.pressKey(KEY_RTN) -- 
 simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
+
+
+-- **** Settings menu
+--simulator.pressKey(KEY_MDL) -- open model menu
+--simulator.pressKey(KEY_PAGE) -- 2nd page
+--simulator.turnRotaryEncoder(1) -- scroll to telemetry
+simulator.pressKey(KEY_ENTER) -- open
+simulator.pressKey(KEY_PAGE) -- go to settings tab
+simulator.screenshot("/screenshots/model-telemetry-settings.png")
+--
+-- competition only
+simulator.turnRotaryEncoder(1) -- scroll to comp only
+simulator.pressKey(KEY_ENTER) -- open, get confirmation dialog
+simulator.screenshot("/screenshots/model-telemetry-comp-only-confirm.png")
+simulator.pressKey(KEY_RTN) -- cancel
+--
+-- bluetooth
+simulator.turnRotaryEncoder(1) -- scroll to bluetooth
+simulator.pressKey(KEY_ENTER) -- enable
+--simulator.pressKey(KEY_ENTER)
+--simulator.pressKey(KEY_ENTER) -- confirm stop audio bt
+simulator.sleep(3) -- wait 
+simulator.screenshot("/screenshots/model-telemetry-bt-option.png")
+simulator.sleep(5) -- wait 
+simulator.pressKey(KEY_ENTER) -- turn off BT
+--
+--simulator.turnRotaryEncoder(2) -- scroll to individual rssi alert (BT change)
+simulator.turnRotaryEncoder(1) -- scroll to individual rssi alert
+simulator.pressKey(KEY_ENTER) -- enable
+simulator.screenshot("/screenshots/model-telemetry-rssi-individual-alert.png")
+simulator.pressKey(KEY_ENTER) -- disable
+simulator.pressKey(KEY_RTN) -- deselect
+simulator.pressKey(KEY_RTN) -- exit
+simulator.pressKey(KEY_RTN) -- deselect
+--simulator.pressKey(KEY_RTN) -- 
+--simulator.pressKey(KEY_RTN) -- 
+simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
+
 --
 -- delete all sensors
---simulator.turnRotaryEncoder(1) -- scroll to telemetry
---simulator.pressKey(KEY_ENTER) -- open
 -- get blank start after deleting all sensors
 simulator.pressKey(KEY_ENTER) -- open telemetry menu
-simulator.turnRotaryEncoder(2) -- scroll to delete all sensors
+simulator.turnRotaryEncoder(-1) -- scroll to [+] menu
+simulator.pressKey(KEY_ENTER) -- open tab options
+simulator.turnRotaryEncoder(4) -- scroll to 'delete all sensors'
+simulator.screenshot("/screenshots/model-telemetry-sensors-delete-select.png")
 simulator.pressKey(KEY_ENTER) -- delete all sensors
 simulator.screenshot("/screenshots/model-telemetry-sensors-delete-confirm.png")
 simulator.pressKey(KEY_RTN) -- cancel
 simulator.pressKey(KEY_ENTER) -- confirm delete all sensors
 simulator.sleep(1) -- wait 
 simulator.screenshot("/screenshots/model-telemetry-sensors-deleted.png")
---
-simulator.turnRotaryEncoder(-1) -- scroll back to discover sensors
---
--- simulator.turnRotaryEncoder(1) -- scroll to discover sensors
-simulator.pressKey(KEY_ENTER) -- discover new sensors
-simulator.sleep(10) -- wait 
---simulator.screenshot("/screenshots/model-telemetry-discover-new-sensors-on.png")
-simulator.screenshot("/screenshots/model-telemetry-discover-new-sensors-off-1.png")
-simulator.pressKey(KEY_ENTER) -- turn discover off again
 --
 simulator.pressKey(KEY_RTN, 0.6) -- return home
