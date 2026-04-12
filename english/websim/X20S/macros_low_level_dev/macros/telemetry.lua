@@ -2,7 +2,7 @@
 -- 2025-08-09 take 'model-telemetry-calculated-sensor-consumption.png' screenshot with highlight
 -- 2025-09-03 remove the first deselect line 111
 -- 2025-12-06 adapt for BT removed from this screen
--- 2025-04-04 adapt for new tabs in Telemetry
+-- 2025-04-11 adapt for new tabs in Telemetry
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -440,15 +440,15 @@ simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
 -- delete all sensors
 -- get blank start after deleting all sensors
 simulator.pressKey(KEY_ENTER) -- open telemetry menu
-simulator.turnRotaryEncoder(-1) -- scroll to [+] menu
+simulator.touch(214, 90) -- tap on the Sensors tab
 simulator.pressKey(KEY_ENTER) -- open tab options
-simulator.turnRotaryEncoder(4) -- scroll to 'delete all sensors'
+simulator.turnRotaryEncoder(1) -- scroll to 'delete all sensors'
 simulator.screenshot("/screenshots/model-telemetry-sensors-delete-select.png")
 simulator.pressKey(KEY_ENTER) -- delete all sensors
 simulator.screenshot("/screenshots/model-telemetry-sensors-delete-confirm.png")
-simulator.pressKey(KEY_RTN) -- cancel
+--simulator.pressKey(KEY_RTN) -- cancel
 simulator.pressKey(KEY_ENTER) -- confirm delete all sensors
-simulator.sleep(1) -- wait 
+simulator.sleep(0.6) -- wait 
 simulator.screenshot("/screenshots/model-telemetry-sensors-deleted.png")
 --
 simulator.pressKey(KEY_RTN, 0.6) -- return home

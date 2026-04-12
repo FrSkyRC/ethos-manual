@@ -254,3 +254,4 @@ start of 1.7.0 rev6
 -- 2026-04-06 system-menu update images only, no change to macro
 -- 2026-04-07 ignore-trainer-take-back.lua add screenshots showing ignore trainer inpout symbol
 -- 2026-04-07 oxalys.bin update X20S_radio_backup.zip put Trainer back into Oxalys model
+-- 2026-04-11 telemetry.lua adapt for new tabs in Telemetry
