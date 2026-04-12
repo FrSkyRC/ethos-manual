@@ -36,3 +36,4 @@ start of 1.7.0 rev6
 -- 2026-04-12 update DE images for model telemetry
 -- 2026-04-12 update ES images for model telemetry
 -- 2026-04-12 update FR images for model telemetry
+-- 2026-04-12 update IT images for model telemetry
