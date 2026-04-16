@@ -264,7 +264,7 @@ start of 1.7.0 rev6
 -- 2026-04-16 model-chview.lua update images only, no change to macro
 -- 2026-04-16 model-select.lua update images only, no change to macro
 -- 2026-04-16 model-edit.lua adapt for ethos26 style, restore s.port options
--- 2026-04-16 model-form.lua update images only, no change to macro
+-- 2026-04-16 model-fm.lua update images only, no change to macro
 -- 2026-04-16 model-mixes.lua update images only, no change to macro
 -- 2026-04-16 model-mixes-free.lua update images only, no change to macro
 -- 2026-04-16 model-mix-eg.lua update images only, no change to macro
@@ -275,3 +275,4 @@ start of 1.7.0 rev6
 -- 2026-04-16 model-curves.lua update images only, no change to macro
 -- 2026-04-16 model-vars.lua update images only, no change to macro
 -- 2026-04-16 user-interface.lua update for ethos26 style
+-- 2026-04-16 toolbars.lua update images only, no change to macro
