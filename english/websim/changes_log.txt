@@ -278,3 +278,4 @@ start of 1.7.0 rev6
 -- 2026-04-16 toolbars.lua update images only, no change to macro
 -- 2026-04-16 basic-example.lua update images only, no change to macro
 -- 2026-04-16 wing-example.lua update images only, no change to macro
+-- 2026-04-16 heli-example.lua update images only, no change to macro
