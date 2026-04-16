@@ -265,3 +265,4 @@ start of 1.7.0 rev6
 -- 2026-04-13 model-select.lua update images only, no change to macro
 -- 2026-04-16 model-edit.lua adapt for ethos26 style, restore s.port options
 -- 2026-04-13 model-form.lua update images only, no change to macro
+-- 2026-04-13 model-mixes.lua update images only, no change to macro
