@@ -260,3 +260,4 @@ start of 1.7.0 rev6
 -- 2026-04-13 model-blanks.lua update images only, no change to macro
 -- 2026-04-13 display.lua update images only, no change to macro
 -- 2026-04-15 display.lua adapt to new config styles new sshots
+-- 2026-04-13 model-checklist.lua update images only, no change to macro
