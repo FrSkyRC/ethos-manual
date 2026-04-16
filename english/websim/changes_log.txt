@@ -280,3 +280,4 @@ start of 1.7.0 rev6
 -- 2026-04-16 wing-example.lua update images only, no change to macro
 -- 2026-04-16 heli-example.lua update images only, no change to macro
 -- 2026-04-16 how-to-low-batt.lua update for ethos26 style
+-- 2026-04-16 how-to-consumption.lua update for ethos26 style
