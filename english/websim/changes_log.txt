@@ -260,10 +260,11 @@ start of 1.7.0 rev6
 -- 2026-04-13 model-blanks.lua update images only, no change to macro
 -- 2026-04-13 display.lua update images only, no change to macro
 -- 2026-04-15 display.lua adapt to new config styles new sshots
--- 2026-04-13 model-checklist.lua update images only, no change to macro
--- 2026-04-13 model-chview.lua update images only, no change to macro
--- 2026-04-13 model-select.lua update images only, no change to macro
+-- 2026-04-16 model-checklist.lua update images only, no change to macro
+-- 2026-04-16 model-chview.lua update images only, no change to macro
+-- 2026-04-16 model-select.lua update images only, no change to macro
 -- 2026-04-16 model-edit.lua adapt for ethos26 style, restore s.port options
--- 2026-04-13 model-form.lua update images only, no change to macro
--- 2026-04-13 model-mixes.lua update images only, no change to macro
--- 2026-04-13 model-mixes-free.lua update images only, no change to macro
+-- 2026-04-16 model-form.lua update images only, no change to macro
+-- 2026-04-16 model-mixes.lua update images only, no change to macro
+-- 2026-04-16 model-mixes-free.lua update images only, no change to macro
+-- 2026-04-16 model-mix-eg.lua update images only, no change to macro
