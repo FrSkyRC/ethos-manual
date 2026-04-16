@@ -271,3 +271,4 @@ start of 1.7.0 rev6
 -- 2026-04-16 model-outputs.lua update images only, no change to macro
 -- 2026-04-16 model-timers.lua update images only, no change to macro
 -- 2026-04-16 model-trims.lua update images only, no change to macro
+-- 2026-04-16 model-sf.lua update images only, no change to macro
