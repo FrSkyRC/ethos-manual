@@ -1,0 +1,978 @@
+Errors at 
+085505 ?:-1: attempt to index a nil value
+
+and
+
+108156 ?:-1: attempt to index a nil value
+108157 Lua::pcall() error: wrong number of results
+108159 Bluetooth mode set to None
+108159 WD resumed
+108160 ?:-1: attempt to compare number with nil
+
+----------------
+
+Ethos
+Release
+26 Nightlies
+Radio
+X20SX20S
+Country protocol
+FCC
+open_in_new
+open_in_new
+0
+0
+0
+0
+0
+0
+open_in_new
+000000 setSystemDirectory("")
+000000 setUserDirectory("/persist/X20S")
+000000 setAudioDirectory("/persist/X20S/audio")
+000000 setUserDocumentsDirectory("/persist/X20S/documents")
+000000 setUserBitmapsDirectory("/persist/X20S/bitmaps")
+000000 setUserScriptsDirectory("/persist/X20S/scripts")
+000257 X20S Ethos 26.1.0 @ 22f3471c started!
+000258 MIXER task started
+000258 TIMER task started
+000258 AUDIO task started
+000258 REQUESTS task started
+000258 MENUS task started
+000267 storageInit()
+000268 Mount 'SD:' succeeded
+000268 SystemData::read(USER:/radio.bin)
+000268 System settings will be converted from version 0.2.6 to 0.2.18
+001273 Translation::load('SYSTEM:/i18n/es.i18n')
+001278 loadBitmaps()
+001282 Lua::load('SCRIPTS:/status/main.luac')
+001284 WD suspended
+001284 ModelData::read('USER:/models/spitfire mk 9b.bin')
+001287 ModelData version will be converted from version 0.2.6 to 0.2.18
+001288 Bluetooth mode set to None
+001288 playHaptic(duration=10)
+001289 playFile('AUDIO:/es/default/system/hello.wav', id=5, priority=0)
+001289 WD resumed
+001290 Home::doPreflightChecks()
+001343 playFile('AUDIO:/es/default/system/throttle-warning.wav', id=9, priority=0)
+001344 playFile('AUDIO:/es/default/system/function-switches-warning.wav', id=24, priority=0)
+001349 load_stb(BITMAPS:/models/Spitfire.png) took 0us
+001430 SystemData::write('USER:/radio.bin')
+002460 ModelData::write('USER:/models/spitfire mk 9b.bin')
+002466 RAM backup ...
+002466 RAM backup written (size=517)
+030939 MACRO task started (script='/macros/main.lua')
+030944 Lua::load('/macros/main.lua')
+030963 Macro paused (@/macros/main.lua, 9)
+032040 Macro resume requested
+032112 setReadonly(1)
+032113 WD suspended
+032113 ModelData::read('USER:/models/rarebear.bin')
+032129 ModelData version will be converted from version 0.2.9 to 0.2.18
+032131 Bluetooth mode set to None
+032131 WD resumed
+032133 Home::doPreflightChecks()
+032134 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+032158 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+032187 playFile('AUDIO:/es/default/system/throttle-warning.wav', id=9, priority=0)
+032187 playFile('AUDIO:/es/default/system/no-failsafe.wav', id=13, priority=0)
+032188 playFile('AUDIO:/es/default/system/switch-warning.wav', id=10, priority=0)
+032189 playFile('AUDIO:/es/default/system/function-switches-warning.wav', id=24, priority=0)
+032189 playFile('AUDIO:/es/default/system/pot-warning.wav', id=11, priority=0)
+032204 playFile('AUDIO:/es/default/timer-1-elapsed.wav', id=28, priority=1)
+032320 Write PNG file '/screenshots/model-menu.png'
+032422 Write PNG file '/screenshots/model-icon-modelselect.png'
+032525 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+032849 load_stb(BITMAPS:/models/Addiction_X.png) took 0us
+033186 load_stb(BITMAPS:/models/Blaster.png) took 0us
+033304 RAM backup ...
+033306 RAM backup written (size=777)
+033519 load_stb(BITMAPS:/models/Edge_540.png) took 0us
+033853 load_bmp(BITMAPS:/models/extra.bmp) took 0us
+034190 load_stb(BITMAPS:/models/Extra_300.png) took 0us
+034526 load_stb(BITMAPS:/models/Geronimo.png) took 0us
+034863 load_stb(BITMAPS:/models/Katana.png) took 0us
+035198 load_stb(BITMAPS:/models/Laser_60.png) took 0us
+035535 load_stb(BITMAPS:/models/Magnus.png) took 0us
+035874 load_stb(BITMAPS:/models/ng_2m.png) took 0us
+036209 load_stb(BITMAPS:/models/Oxalys.png) took 0us
+036548 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+036884 load_stb(BITMAPS:/models/Sig_Edge.png) took 0us
+037222 load_stb(BITMAPS:/models/ng_2m.png) took 0us
+037554 load_stb(BITMAPS:/models/Spitfire.png) took 0us
+037983 Write PNG file '/screenshots/model-modelselect-create-airplane-folder.png'
+039210 Write PNG file '/screenshots/model-modelselect-folder-options.png'
+039676 load_stb(BITMAPS:/models/Addiction_X.png) took 0us
+040005 load_stb(BITMAPS:/models/Blaster.png) took 0us
+040339 load_stb(BITMAPS:/models/Edge_540.png) took 0us
+040668 load_bmp(BITMAPS:/models/extra.bmp) took 0us
+040998 load_stb(BITMAPS:/models/Extra_300.png) took 0us
+041325 load_stb(BITMAPS:/models/Geronimo.png) took 0us
+041661 load_stb(BITMAPS:/models/Katana.png) took 0us
+042000 load_stb(BITMAPS:/models/Laser_60.png) took 0us
+042335 load_stb(BITMAPS:/models/Magnus.png) took 0us
+042673 load_stb(BITMAPS:/models/ng_2m.png) took 0us
+043007 load_stb(BITMAPS:/models/Oxalys.png) took 0us
+043344 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+043677 load_stb(BITMAPS:/models/Sig_Edge.png) took 0us
+044013 load_stb(BITMAPS:/models/ng_2m.png) took 0us
+044343 load_stb(BITMAPS:/models/Spitfire.png) took 0us
+044694 load_stb(BITMAPS:/models/Addiction_X.png) took 0us
+045033 load_stb(BITMAPS:/models/Blaster.png) took 0us
+045368 load_stb(BITMAPS:/models/Edge_540.png) took 0us
+045696 load_bmp(BITMAPS:/models/extra.bmp) took 0us
+046029 load_stb(BITMAPS:/models/Extra_300.png) took 0us
+046359 load_stb(BITMAPS:/models/Geronimo.png) took 0us
+046698 load_stb(BITMAPS:/models/Katana.png) took 0us
+047029 playFile('AUDIO:/es/default/system/sensor-lost.wav', id=25, priority=0)
+047032 load_stb(BITMAPS:/models/Laser_60.png) took 0us
+047368 load_stb(BITMAPS:/models/Magnus.png) took 0us
+047708 load_stb(BITMAPS:/models/ng_2m.png) took 0us
+048045 load_stb(BITMAPS:/models/Oxalys.png) took 0us
+048379 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+048714 load_stb(BITMAPS:/models/Sig_Edge.png) took 0us
+049054 load_stb(BITMAPS:/models/ng_2m.png) took 0us
+049390 load_stb(BITMAPS:/models/Spitfire.png) took 0us
+049447 Write PNG file '/screenshots/model-modelselect-folders.png'
+049548 Write PNG file '/screenshots/model-modelselect-folders-2.png'
+049695 Write PNG file '/screenshots/model-modelselect-model-set.png'
+049790 Write PNG file '/screenshots/model-modelselect-clone-select.png'
+049886 ModelData::read('USER:/models/magnus.bin')
+049888 ModelData version will be converted from version 0.2.6 to 0.2.18
+049915 Write PNG file '/screenshots/model-modelselect-clone-options.png'
+050194 Write PNG file '/screenshots/model-modelselect-folder-change-select.png'
+050387 Write PNG file '/screenshots/model-modelselect-folder-change-glider.png'
+050627 Write PNG file '/screenshots/model-modelselect-receive-model-select.png'
+050749 Bluetooth mode set to Transferencia de archivo
+050770 Write PNG file '/screenshots/model-modelselect-receive-model-waiting.png'
+051059 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+051060 RAM backup ...
+051062 RAM backup written (size=777)
+053839 Write PNG file '/screenshots/model-modelselect-receive-model-dialog.png'
+054988 Write PNG file '/screenshots/model-modelselect-receive-model-receiving.png'
+055106 Model Test.bin read header failed: Encabezado incorrecto
+055114 Bluetooth mode set to None
+055359 Write PNG file '/screenshots/model-modelselect-send-model-select.png'
+055483 Bluetooth mode set to Transferencia de archivo
+055502 Write PNG file '/screenshots/model-modelselect-send-model-waiting-devices.png'
+058648 Write PNG file '/screenshots/model-modelselect-send-model-dialog.png'
+058783 Write PNG file '/screenshots/model-modelselect-send-model-waiting-connect.png'
+058841 Write PNG file '/screenshots/model-modelselect-send-model-sending.png'
+059936 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+059940 RAM backup ...
+059945 RAM backup written (size=782)
+061929 Write PNG file '/screenshots/model-modelselect-send-model-success.png'
+062031 Bluetooth mode set to None
+062102 Write PNG file '/screenshots/model-modelselect-folder-airplane-select.png'
+062287 Write PNG file '/screenshots/model-modelselect-model-receive.png'
+062404 Write PNG file '/screenshots/model-modelselect-model-create.png'
+062496 Home::openModelWizard()
+062497 ModelData::setModelType(0)
+062499 ModelData::setModelType(0)
+062521 Write PNG file '/screenshots/model-modelselect-model-wizard-airplane.png'
+062637 load_stb(SYSTEM:/bitmaps/system/NoRx.png) took 0us
+062659 Write PNG file '/screenshots/model-modelselect-model-wizard-rx.png'
+062774 load_stb(SYSTEM:/bitmaps/system/aircraft_engine_1.png) took 0us
+062795 Write PNG file '/screenshots/model-modelselect-model-wizard-engine.png'
+062911 load_stb(SYSTEM:/bitmaps/system/airplane_02A00F.png) took 0us
+062933 Write PNG file '/screenshots/model-modelselect-model-wizard-ail-and-flaps.png'
+063025 load_stb(SYSTEM:/bitmaps/system/tail_traditional.png) took 0us
+063047 Write PNG file '/screenshots/model-modelselect-model-wizard-tail.png'
+063160 load_stb(SYSTEM:/bitmaps/system/tail_01R01E.png) took 0us
+063182 Write PNG file '/screenshots/model-modelselect-model-wizard-ele-and-rudder.png'
+063318 Write PNG file '/screenshots/model-modelselect-model-wizard-ch-reassignment.png'
+063429 FrSkyFileChoice::readFilesList('BITMAPS:/models')
+063676 RAM backup ...
+063677 RAM backup written (size=782)
+064299 Bitmap::load(BITMAPS:/models/) failed: read error
+064299 load_stb(BITMAPS:/models/) took 0us
+064684 load_stb(BITMAPS:/models/XK110.png) took 0us
+065037 load_stb(BITMAPS:/models/Weasel.png) took 0us
+065398 load_stb(BITMAPS:/models/Ultimate_60.png) took 0us
+065506 Write PNG file '/screenshots/model-modelselect-model-wizard-name.png'
+065636 SystemData::write('USER:/radio.bin') skipped (read-only mode)
+065636 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+065638 ModelData::setModelType(0)
+065639 SystemData::write('USER:/radio.bin') skipped (read-only mode)
+065640 ModelData::write('USER:/models/Airplane/ultimate.bin') skipped (read-only mode)
+065641 WD suspended for 2000ms
+065642 Bluetooth mode set to None
+065642 WD resumed
+065663 load_stb(BITMAPS:/models/Ultimate_60.png) took 0us
+065665 Write PNG file '/screenshots/model-modelselect-model-wizard-ultimate.png'
+066810 RAM backup ...
+066814 RAM backup written (size=588)
+067056 Model Test.bin read header failed: Encabezado incorrecto
+067632 load_stb(BITMAPS:/models/Addiction_X.png) took 0us
+067965 load_stb(BITMAPS:/models/Blaster.png) took 0us
+068299 load_stb(BITMAPS:/models/Edge_540.png) took 0us
+068624 load_bmp(BITMAPS:/models/extra.bmp) took 0us
+068959 load_stb(BITMAPS:/models/Extra_300.png) took 0us
+069292 load_stb(BITMAPS:/models/Geronimo.png) took 0us
+069628 load_stb(BITMAPS:/models/Katana.png) took 0us
+069965 load_stb(BITMAPS:/models/Laser_60.png) took 0us
+070300 load_stb(BITMAPS:/models/Magnus.png) took 0us
+070643 load_stb(BITMAPS:/models/ng_2m.png) took 0us
+070979 load_stb(BITMAPS:/models/Oxalys.png) took 0us
+071314 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+071648 load_stb(BITMAPS:/models/Sig_Edge.png) took 0us
+071982 load_stb(BITMAPS:/models/ng_2m.png) took 0us
+072315 load_stb(BITMAPS:/models/Spitfire.png) took 0us
+072984 load_stb(BITMAPS:/models/Ultimate_60.png) took 0us
+073319 load_stb(BITMAPS:/models/Weasel.png) took 0us
+074893 load_stb(BITMAPS:/models/Ultimate_60.png) took 0us
+074925 Write PNG file '/screenshots/model-modelselect-model-airplane-category.png'
+075652 load_stb(BITMAPS:/models/Addiction_X.png) took 0us
+075986 load_stb(BITMAPS:/models/Blaster.png) took 0us
+076325 load_stb(BITMAPS:/models/Edge_540.png) took 0us
+076659 load_bmp(BITMAPS:/models/extra.bmp) took 0us
+076991 load_stb(BITMAPS:/models/Extra_300.png) took 0us
+077318 load_stb(BITMAPS:/models/Geronimo.png) took 0us
+077657 load_stb(BITMAPS:/models/Katana.png) took 0us
+077990 load_stb(BITMAPS:/models/Laser_60.png) took 0us
+078328 load_stb(BITMAPS:/models/Magnus.png) took 0us
+078664 load_stb(BITMAPS:/models/ng_2m.png) took 0us
+079005 load_stb(BITMAPS:/models/Oxalys.png) took 0us
+079342 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+079681 load_stb(BITMAPS:/models/Sig_Edge.png) took 0us
+080025 load_stb(BITMAPS:/models/ng_2m.png) took 0us
+080362 load_stb(BITMAPS:/models/Spitfire.png) took 0us
+081567 setReadonly(1)
+081568 WD suspended
+081573 ModelData::read('USER:/models/fwexample.bin')
+081575 ModelData version will be converted from version 0.2.6 to 0.2.18
+081581 Bluetooth mode set to None
+081582 WD resumed
+081582 Home::doPreflightChecks()
+081582 load_bmp(BITMAPS:/models/extra.bmp) took 0us
+081588 playFile('AUDIO:/es/default/engon.wav', id=31, priority=1)
+081606 load_bmp(BITMAPS:/models/extra.bmp) took 0us
+081639 playFile('AUDIO:/es/default/system/throttle-warning.wav', id=9, priority=0)
+081639 playFile('AUDIO:/es/default/system/no-failsafe.wav', id=13, priority=0)
+081813 Write PNG file '/screenshots/model-icon-editmodel.png'
+081929 FrSkyFileChoice::readFilesList('BITMAPS:/models')
+081955 Write PNG file '/screenshots/model-editmodel.png'
+082150 Write PNG file '/screenshots/model-edit-modeltype.png'
+082360 Write PNG file '/screenshots/model-edit-receiver-type.png'
+082746 ModelData::write('USER:/models/fwexample.bin') skipped (read-only mode)
+082765 RAM backup ...
+082773 RAM backup written (size=661)
+082889 Write PNG file '/screenshots/model-edit-thr-deadband.png'
+082992 Write PNG file '/screenshots/model-edit-analog-filter.png'
+083133 Write PNG file '/screenshots/model-edit-analog-filter-select.png'
+083301 Write PNG file '/screenshots/model-edit-fn-switches.png'
+083421 Write PNG file '/screenshots/model-edit-fn-switches-select.png'
+083606 Write PNG file '/screenshots/model-edit-sport.png'
+083746 Write PNG file '/screenshots/model-model-edit-sport-select.png'
+083959 Write PNG file '/screenshots/model-model-edit-sport-power-select.png'
+084140 Write PNG file '/screenshots/model-edit-model-runtime.png'
+084234 Write PNG file '/screenshots/model-edit-model-reset_all_mixes.png'
+085488 setReadonly(1)
+085490 WD suspended
+085496 ModelData::read('USER:/models/zblank.bin')
+085504 ModelData version will be converted from version 0.2.6 to 0.2.18
+085505 ?:-1: attempt to index a nil value
+085514 Bluetooth mode set to None
+085514 WD resumed
+085515 Home::doPreflightChecks()
+085575 playFile('AUDIO:/es/default/system/throttle-warning.wav', id=9, priority=0)
+086676 ModelData::write('USER:/models/zblank.bin') skipped (read-only mode)
+086701 RAM backup ...
+086701 RAM backup written (size=602)
+086778 Write PNG file '/screenshots/model-icon-fm.png'
+086928 Write PNG file '/screenshots/model-fm.png'
+088680 Write PNG file '/screenshots/model-fm-form.png'
+090568 Write PNG file '/screenshots/model-fm-0to3.png'
+090766 Write PNG file '/screenshots/model-fm-move-select.png'
+090901 Write PNG file '/screenshots/model-fm-move.png'
+091508 ModelData::write('USER:/models/zblank.bin') skipped (read-only mode)
+091511 RAM backup ...
+091518 RAM backup written (size=620)
+093096 Write PNG file '/screenshots/tut-fw-eg-trims-ele-add-behavior.png'
+093703 Write PNG file '/screenshots/tut-fw-eg-trims-ele-custom-default-plus-offset-fm-select.png'
+093916 Write PNG file '/screenshots/tut-fw-eg-trims-ele-custom-default-plus-offset-select.png'
+094088 Write PNG file '/screenshots/tut-fw-eg-trims-ele-custom-default-plus-offset-fm1.png'
+094823 Write PNG file '/screenshots/tut-fw-eg-trims-ele-custom-default-plus-offset-fm2.png'
+095984 ModelData::write('USER:/models/zblank.bin') skipped (read-only mode)
+095991 RAM backup ...
+095991 RAM backup written (size=636)
+096157 setReadonly(1)
+096157 WD suspended
+096163 ModelData::read('USER:/models/rarebear.bin')
+096167 ModelData version will be converted from version 0.2.9 to 0.2.18
+096176 Bluetooth mode set to None
+096176 WD resumed
+096177 Home::doPreflightChecks()
+096182 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+096210 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+096238 playFile('AUDIO:/es/default/system/throttle-warning.wav', id=9, priority=0)
+096238 playFile('AUDIO:/es/default/system/no-failsafe.wav', id=13, priority=0)
+096242 playFile('AUDIO:/es/default/system/switch-warning.wav', id=10, priority=0)
+096243 playFile('AUDIO:/es/default/system/function-switches-warning.wav', id=24, priority=0)
+096245 playFile('AUDIO:/es/default/system/pot-warning.wav', id=11, priority=0)
+096350 playFile('AUDIO:/es/default/timer-1-elapsed.wav', id=32, priority=1)
+096443 Write PNG file '/screenshots/model-icon-mixes.png'
+096621 Write PNG file '/screenshots/model-mixes.png'
+096797 Write PNG file '/screenshots/model-mixes-ail-edit.png'
+096929 Write PNG file '/screenshots/model-mixes-ail.png'
+097462 Write PNG file '/screenshots/model-mixes-ail-expo.png'
+097593 Write PNG file '/screenshots/model-mixes-ail-weight.png'
+098567 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+098569 RAM backup ...
+098576 RAM backup written (size=779)
+099083 Write PNG file '/screenshots/model-mixes-ail-diff.png'
+099309 Write PNG file '/screenshots/model-mixes-ail-ch-count.png'
+099696 Write PNG file '/screenshots/model-mixes-thr.png'
+100236 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+100237 RAM backup ...
+100243 RAM backup written (size=782)
+100522 Write PNG file '/screenshots/model-mixes-thr-options.png'
+100757 Write PNG file '/screenshots/model-mixes-thr-trim-menu.png'
+100938 Write PNG file '/screenshots/model-mixes-thr-trim-low-position.png'
+101356 Write PNG file '/screenshots/model-mixes-thr-cut.png'
+101819 Write PNG file '/screenshots/model-mixes-thr-hold.png'
+102041 Write PNG file '/screenshots/model-mixes-thr-ch-count.png'
+102210 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+102210 RAM backup ...
+102211 RAM backup written (size=782)
+104100 Write PNG file '/screenshots/model-mixes-library-seq.png'
+104392 Write PNG file '/screenshots/model-mixes-seq.png'
+104746 Write PNG file '/screenshots/model-mixes-seq-op1-menu.png'
+104874 Write PNG file '/screenshots/model-mixes-seq-op1-options.png'
+105024 Write PNG file '/screenshots/model-mixes-seq-op1-curve.png'
+106395 Write PNG file '/screenshots/model-mixes-seq-op1-options-2.png'
+106543 Write PNG file '/screenshots/model-mixes-seq-op1-curve-fwd.png'
+106809 Write PNG file '/screenshots/model-mixes-seq-op1-curve-bkwd.png'
+107122 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+107122 RAM backup ...
+107128 RAM backup written (size=845)
+108138 setReadonly(1)
+108139 WD suspended
+108144 ModelData::read('USER:/models/rarebear.bin')
+108153 ModelData version will be converted from version 0.2.9 to 0.2.18
+108156 ?:-1: attempt to index a nil value
+108157 Lua::pcall() error: wrong number of results
+108159 Bluetooth mode set to None
+108159 WD resumed
+108160 ?:-1: attempt to compare number with nil
+108164 Home::doPreflightChecks()
+108186 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+108219 playFile('AUDIO:/es/default/system/throttle-warning.wav', id=9, priority=0)
+108219 playFile('AUDIO:/es/default/system/no-failsafe.wav', id=13, priority=0)
+108220 playFile('AUDIO:/es/default/system/switch-warning.wav', id=10, priority=0)
+108222 playFile('AUDIO:/es/default/system/function-switches-warning.wav', id=24, priority=0)
+108222 playFile('AUDIO:/es/default/system/pot-warning.wav', id=11, priority=0)
+108303 playFile('AUDIO:/es/default/timer-1-elapsed.wav', id=35, priority=1)
+108585 Write PNG file '/screenshots/model-mixes-library-airplane.png'
+108788 Write PNG file '/screenshots/model-mix-free-add-position.png'
+108947 Write PNG file '/screenshots/model-mix-free-added.png'
+109122 Write PNG file '/screenshots/model-mix-free-select-edit.png'
+109240 Write PNG file '/screenshots/model-mix-free-edit.png'
+109396 Write PNG file '/screenshots/model-mix-free-source.png'
+110046 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+110046 RAM backup ...
+110052 RAM backup written (size=805)
+110224 Write PNG file '/screenshots/model-mix-free-source-convert-to-value.png'
+110354 Convert to const value 0
+110372 Write PNG file '/screenshots/model-mix-free-source-as-value.png'
+111271 Write PNG file '/screenshots/model-mix-free-use-a-source.png'
+111467 Write PNG file '/screenshots/model-mix-free-source-categories.png'
+111585 Write PNG file '/screenshots/model-mix-free-source-categories-2.png'
+111870 Write PNG file '/screenshots/model-mix-free-source-ail.png'
+112012 Write PNG file '/screenshots/model-mix-free-add-action.png'
+112106 Write PNG file '/screenshots/model-mix-free-actions-weight.png'
+112573 Write PNG file '/screenshots/model-mix-free-actions-direction-select.png'
+112693 Write PNG file '/screenshots/model-mix-free-actions-directions.png'
+113093 Write PNG file '/screenshots/model-mix-free-actions-directions-top.png'
+113274 Write PNG file '/screenshots/model-mix-free-actions-directions-summary.png'
+113911 Write PNG file '/screenshots/model-mix-free-actions-weight-edit-select.png'
+114094 Write PNG file '/screenshots/model-mix-free-actions-weight-active-condition.png'
+114231 Write PNG file '/screenshots/model-mix-free-actions-weight-add-weight.png'
+114590 Write PNG file '/screenshots/model-mix-free-actions-weight-edit-select-SA.png'
+115699 Write PNG file '/screenshots/model-mix-free-actions-weight-edit.png'
+115910 Write PNG file '/screenshots/model-mix-free-actions-weight-summary.png'
+116007 Write PNG file '/screenshots/model-mix-free-actions-weight-summary-add-action.png'
+116282 Write PNG file '/screenshots/model-mix-free-action-types.png'
+116501 Write PNG file '/screenshots/model-mix-free-actions-curve-type.png'
+116616 Write PNG file '/screenshots/model-mix-free-actions-curve-cv1-select.png'
+116710 Write PNG file '/screenshots/model-mix-free-actions-curve-expo-select.png'
+118917 Write PNG file '/screenshots/model-mix-free-actions-curve-expo-edit.png'
+119111 Write PNG file '/screenshots/model-mix-free-actions-curve-expo-edit-summary.png'
+119340 Write PNG file '/screenshots/model-mix-free-actions-curve-expo-select-move-option.png'
+119463 Write PNG file '/screenshots/model-mix-free-actions-curve-expo-select-move.png'
+119620 Write PNG file '/screenshots/model-mix-free-actions-curve-expo-edit-summary-moved.png'
+119743 Write PNG file '/screenshots/model-mix-free-actions-curve-summary-add-action.png'
+120020 Write PNG file '/screenshots/model-mix-free-actions-type-differential.png'
+120469 Write PNG file '/screenshots/model-mix-free-actions-diff-edit.png'
+120886 Write PNG file '/screenshots/model-mix-free-actions-type-offset.png'
+121562 Write PNG file '/screenshots/model-mix-free-actions-offset-edit.png'
+122686 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+122687 RAM backup ...
+122687 RAM backup written (size=860)
+123001 Write PNG file '/screenshots/model-mix-free-actions-offset-use-source.png'
+123474 Write PNG file '/screenshots/model-mix-free-actions-offset-use-source-thr-trim.png'
+124648 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+124651 RAM backup ...
+124659 RAM backup written (size=862)
+125064 Write PNG file '/screenshots/model-mix-free-actions-offset-use-source-thr-trim-full-range.png'
+125575 Write PNG file '/screenshots/model-mix-free-actions-type-slow.png'
+126169 Write PNG file '/screenshots/model-mix-free-actions-slow-edit.png'
+126373 Write PNG file '/screenshots/model-mix-free-actions-slow-summary.png'
+126728 Write PNG file '/screenshots/model-mix-free-actions-type-trim.png'
+126953 Write PNG file '/screenshots/model-mix-free-actions-trim-edit.png'
+127204 Write PNG file '/screenshots/model-mix-free-actions-trim-summary.png'
+128002 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+128003 RAM backup ...
+128007 RAM backup written (size=880)
+129415 Write PNG file '/screenshots/model-mix-free-actions-slow-move.png'
+130636 Write PNG file '/screenshots/model-mix-free-actions-slow-at-top.png'
+130929 Write PNG file '/screenshots/model-mix-free-output.png'
+132234 setReadonly(1)
+132235 WD suspended
+132242 ModelData::read('USER:/models/rarebear.bin')
+132254 ModelData version will be converted from version 0.2.9 to 0.2.18
+132255 Bluetooth mode set to None
+132256 WD resumed
+132259 Home::doPreflightChecks()
+132282 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+132317 playFile('AUDIO:/es/default/system/throttle-warning.wav', id=9, priority=0)
+132318 playFile('AUDIO:/es/default/system/no-failsafe.wav', id=13, priority=0)
+132318 playFile('AUDIO:/es/default/system/switch-warning.wav', id=10, priority=0)
+132325 playFile('AUDIO:/es/default/system/function-switches-warning.wav', id=24, priority=0)
+132329 playFile('AUDIO:/es/default/system/pot-warning.wav', id=11, priority=0)
+132455 playFile('AUDIO:/es/default/timer-1-elapsed.wav', id=38, priority=1)
+135306 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+135308 RAM backup ...
+135317 RAM backup written (size=814)
+135944 Write PNG file '/screenshots/model-mix-eg-using-weight.png'
+138017 Write PNG file '/screenshots/model-mix-eg-using-offset-actions.png'
+138165 Write PNG file '/screenshots/model-mix-eg-using-offset.png'
+139033 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+139033 RAM backup ...
+139039 RAM backup written (size=842)
+139481 setReadonly(1)
+139481 WD suspended
+139487 ModelData::read('USER:/models/magnus.bin')
+139491 ModelData version will be converted from version 0.2.6 to 0.2.18
+139494 Bluetooth mode set to None
+139494 WD resumed
+139497 Home::doPreflightChecks()
+139515 load_stb(BITMAPS:/models/Magnus.png) took 0us
+139559 playFile('AUDIO:/es/default/system/throttle-warning.wav', id=9, priority=0)
+139790 Write PNG file '/screenshots/model-icon-outputs.png'
+139970 Write PNG file '/screenshots/model-outputs.png'
+140124 Write PNG file '/screenshots/model-outputs-elevator-edit.png'
+140350 Write PNG file '/screenshots/model-outputs-throttle-edit.png'
+140660 ModelData::write('USER:/models/magnus.bin') skipped (read-only mode)
+140660 RAM backup ...
+140661 RAM backup written (size=680)
+140956 Write PNG file '/screenshots/model-outputs-sbus-warning.png'
+141530 Write PNG file '/screenshots/model-outputs-swap-channels-select.png'
+141976 Write PNG file '/screenshots/model-outputs-swap-channels.png'
+142119 Write PNG file '/screenshots/model-outputs-reset-select.png'
+142454 ModelData::write('USER:/models/magnus.bin') skipped (read-only mode)
+142454 RAM backup ...
+142456 RAM backup written (size=680)
+144082 Write PNG file '/screenshots/model-outputs-balance-select.png'
+144245 Write PNG file '/screenshots/model-outputs-balance-choose_channels.png'
+144538 Write PNG file '/screenshots/model-outputs-balance-choose-ch7-and-ch6.png'
+144677 Write PNG file '/screenshots/model-outputs-balance-ch7-and-ch6.png'
+144872 Write PNG file '/screenshots/model-outputs-balance-ch6-magnet-off.png'
+145407 Write PNG file '/screenshots/model-outputs-balance-ch6-magnet-on.png'
+145657 Write PNG file '/screenshots/model-outputs-balance-curve-edit.png'
+146452 WD suspended
+146454 ModelData::read('USER:/models/zbalance.bin')
+146468 ModelData version will be converted from version 0.2.6 to 0.2.18
+146469 Bluetooth mode set to None
+146470 WD resumed
+146474 Home::doPreflightChecks()
+146538 playFile('AUDIO:/es/default/system/throttle-warning.wav', id=9, priority=0)
+147639 ModelData::write('USER:/models/zbalance.bin') skipped (read-only mode)
+147639 RAM backup ...
+147647 RAM backup written (size=678)
+147826 Write PNG file '/screenshots/model-outputs-balance-ch2-9-8-1.png'
+148628 setReadonly(1)
+148628 WD suspended
+148634 ModelData::read('USER:/models/blaster.bin')
+148642 ModelData version will be converted from version 0.2.6 to 0.2.18
+148644 Bluetooth mode set to None
+148644 WD resumed
+148644 Home::doPreflightChecks()
+148659 load_stb(BITMAPS:/models/Blaster.png) took 0us
+148663 playFile('AUDIO:/es/default/espmcd.wav', id=53, priority=1)
+148665 playFile('AUDIO:/es/default/espmcd.wav', id=54, priority=1)
+148666 [es] playDuration(180s)
+148669 playFile('AUDIO:/es/default/system/3.wav', id=55, priority=1)
+148677 playFile('AUDIO:/es/default/system/minutes.wav', id=55, priority=1)
+148677 playFile('AUDIO:/es/default/stblof.wav', id=58, priority=1)
+148707 playFile('AUDIO:/es/default/system/throttle-warning.wav', id=9, priority=0)
+148708 playFile('AUDIO:/es/default/system/no-failsafe.wav', id=13, priority=0)
+148743 playFile('AUDIO:/es/default/lndgmd.wav', id=48, priority=1)
+149824 ModelData::write('USER:/models/blaster.bin') skipped (read-only mode)
+149824 RAM backup ...
+149830 RAM backup written (size=3521)
+150080 Write PNG file '/screenshots/model-mixes-chview-elevator.png'
+150293 Write PNG file '/screenshots/model-mixes-chview-select.png'
+153414 Write PNG file '/screenshots/model-mixes-chview-elevator-channel-view.png'
+153524 Write PNG file '/screenshots/model-mixes-chview-elevator-channel.png'
+153673 Write PNG file '/screenshots/model-mixes-chview-collapsed.png'
+153940 Write PNG file '/screenshots/model-mixes-chview-table-view-select.png'
+154074 Write PNG file '/screenshots/model-mixes-chview-back-at-mixes-view.png'
+155343 setReadonly(1)
+155345 WD suspended
+155353 ModelData::read('USER:/models/rarebear.bin')
+155367 ModelData version will be converted from version 0.2.9 to 0.2.18
+155373 Bluetooth mode set to None
+155373 WD resumed
+155374 Home::doPreflightChecks()
+155395 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+155398 playFile('AUDIO:/es/default/timer-1-elapsed.wav', id=60, priority=1)
+155437 playFile('AUDIO:/es/default/system/throttle-warning.wav', id=9, priority=0)
+155437 playFile('AUDIO:/es/default/system/no-failsafe.wav', id=13, priority=0)
+155438 playFile('AUDIO:/es/default/system/switch-warning.wav', id=10, priority=0)
+155440 playFile('AUDIO:/es/default/system/function-switches-warning.wav', id=24, priority=0)
+155443 playFile('AUDIO:/es/default/system/pot-warning.wav', id=11, priority=0)
+155719 Write PNG file '/screenshots/model-icon-timers.png'
+155888 Write PNG file '/screenshots/model-timers.png'
+156035 Write PNG file '/screenshots/model-timers-action-select.png'
+156528 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+156529 RAM backup ...
+156530 RAM backup written (size=777)
+157762 Write PNG file '/screenshots/model-timer1-edit.png'
+159292 Write PNG file '/screenshots/model-timer1-edit-stop.png'
+159482 Write PNG file '/screenshots/model-timer1-add-action.png'
+159639 Write PNG file '/screenshots/model-timer1-action-countdown.png'
+159947 Write PNG file '/screenshots/model-timer1-action-type-select.png'
+160433 FrSkyFileChoice::readFilesList('AUDIO:/es/default')
+160798 Write PNG file '/screenshots/model-timer1-actions-summary.png'
+162567 Write PNG file '/screenshots/model-timer2-edit.png'
+163838 FrSkyFileChoice::readFilesList('AUDIO:/es/default')
+164481 Write PNG file '/screenshots/model-timer2-actions-summary.png'
+165527 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+165527 RAM backup ...
+165535 RAM backup written (size=777)
+222465 [es] playDuration(60s)
+222466 playFile('AUDIO:/es/default/system/1.wav', id=0, priority=0)
+222473 playFile('AUDIO:/es/default/system/minute.wav', id=0, priority=0)
+222474 playHaptic(duration=6)
+252463 [es] playDuration(90s)
+252466 playFile('AUDIO:/es/default/system/1.wav', id=0, priority=0)
+252475 playFile('AUDIO:/es/default/system/minute.wav', id=0, priority=0)
+252483 playFile('AUDIO:/es/default/system/and.wav', id=0, priority=0)
+252492 playFile('AUDIO:/es/default/system/30.wav', id=0, priority=0)
+252494 playFile('AUDIO:/es/default/system/seconds.wav', id=0, priority=0)
+252503 playHaptic(duration=6)
+272464 playTone(fq=2250, dur=40, pause=40)
+272467 playHaptic(duration=6)
+273465 playTone(fq=2250, dur=40, pause=40)
+273465 playHaptic(duration=6)
+274463 playTone(fq=2250, dur=40, pause=40)
+274466 playHaptic(duration=6)
+275458 playTone(fq=2250, dur=40, pause=40)
+275461 playHaptic(duration=6)
+276462 playTone(fq=2250, dur=40, pause=40)
+276466 playHaptic(duration=6)
+277463 playTone(fq=2250, dur=40, pause=40)
+277463 playHaptic(duration=6)
+278462 playTone(fq=2250, dur=40, pause=40)
+278463 playHaptic(duration=6)
+279465 playTone(fq=2250, dur=40, pause=40)
+279466 playHaptic(duration=6)
+280464 playTone(fq=2250, dur=40, pause=40)
+280467 playHaptic(duration=6)
+280907 [es] playDuration(120s)
+280912 playFile('AUDIO:/es/default/system/2.wav', id=0, priority=0)
+280912 playFile('AUDIO:/es/default/system/minutes.wav', id=0, priority=0)
+280912 playHaptic(duration=6)
+281462 playTone(fq=2250, dur=40, pause=40)
+281467 playHaptic(duration=6)
+282461 playFile('AUDIO:/es/default/timer-2-elapsed.wav', id=0, priority=0)
+282461 playHaptic(duration=6)
+285825 Write PNG file '/screenshots/model-timers-widget.png'
+286910 setReadonly(1)
+286911 WD suspended
+286917 ModelData::read('USER:/models/blaster.bin')
+286927 ModelData version will be converted from version 0.2.6 to 0.2.18
+286929 Bluetooth mode set to None
+286929 WD resumed
+286933 Home::doPreflightChecks()
+286933 playFile('AUDIO:/es/default/espmcd.wav', id=75, priority=1)
+286942 playFile('AUDIO:/es/default/espmcd.wav', id=76, priority=1)
+286946 [es] playDuration(180s)
+286946 playFile('AUDIO:/es/default/system/3.wav', id=77, priority=1)
+286950 playFile('AUDIO:/es/default/system/minutes.wav', id=77, priority=1)
+286951 playFile('AUDIO:/es/default/stblof.wav', id=80, priority=1)
+286985 load_stb(BITMAPS:/models/Blaster.png) took 0us
+286989 playFile('AUDIO:/es/default/system/throttle-warning.wav', id=9, priority=0)
+286989 playFile('AUDIO:/es/default/system/no-failsafe.wav', id=13, priority=0)
+287281 Write PNG file '/screenshots/model-icon-trims.png'
+287426 Write PNG file '/screenshots/model-trims.png'
+287626 Write PNG file '/screenshots/model-trims-step-options.png'
+287863 Write PNG file '/screenshots/model-trims-mode-option-easy.png'
+287964 Write PNG file '/screenshots/model-trims-mode-option-fm.png'
+288083 Write PNG file '/screenshots/model-trims-mode-option-off.png'
+288145 ModelData::write('USER:/models/blaster.bin') skipped (read-only mode)
+288145 RAM backup ...
+288146 RAM backup written (size=3521)
+288471 Write PNG file '/screenshots/model-trims-mode-elevator.png'
+288675 Write PNG file '/screenshots/model-trims-mode-elevator-custom-select.png'
+288874 Write PNG file '/screenshots/model-trims-mode-elevator-add-behaviour.png'
+288994 Write PNG file '/screenshots/model-trims-mode-elevator-edit-behaviour.png'
+289689 Write PNG file '/screenshots/model-trims-mode-elevator-edit-behaviour-unplugged.png'
+289827 Write PNG file '/screenshots/model-trims-mode-elevator-edit-behaviour-equal.png'
+289919 Write PNG file '/screenshots/model-trims-mode-elevator-edit-behaviour-offset.png'
+290039 Write PNG file '/screenshots/model-trims-mode-elevator-custom-speed.png'
+290784 Write PNG file '/screenshots/model-trims-mode-elevator-custom-select.png'
+290954 Write PNG file '/screenshots/model-trims-mode-elevator-custom-select-2.png'
+291176 Write PNG file '/screenshots/model-trims-mode-elevator-custom-speed-thermal.png'
+291275 Write PNG file '/screenshots/model-trims-mode-elevator-trim-to-subtrim-select.png'
+291419 Write PNG file '/screenshots/model-trims-mode-elevator-trim-to-subtrim-options.png'
+292395 Write PNG file '/screenshots/model-trims-mode-unplugged-select.png'
+292540 Write PNG file '/screenshots/model-trims-mode-unplugged-select.png'
+293107 Write PNG file '/screenshots/model-trims-cross-edit.png'
+293233 Write PNG file '/screenshots/model-trims-cross.png'
+293334 Write PNG file '/screenshots/model-trims-instant-trim.png'
+293445 Write PNG file '/screenshots/model-trims-move-trims-to-subtrims.png'
+293569 Write PNG file '/screenshots/model-trims-move-trims-to-subtrims-options.png'
+293698 ModelData::write('USER:/models/blaster.bin') skipped (read-only mode)
+293698 RAM backup ...
+293699 RAM backup written (size=3546)
+293782 Write PNG file '/screenshots/model-trims-add-trim-select.png'
+293908 Write PNG file '/screenshots/model-trims-add-trim-edit.png'
+295048 ModelData::write('USER:/models/blaster.bin') skipped (read-only mode)
+295051 RAM backup ...
+295061 RAM backup written (size=3554)
+295193 setReadonly(1)
+295195 WD suspended
+295203 ModelData::read('USER:/models/rarebear.bin')
+295204 ModelData version will be converted from version 0.2.9 to 0.2.18
+295206 Bluetooth mode set to None
+295206 WD resumed
+295218 Home::doPreflightChecks()
+295230 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+295282 playFile('AUDIO:/es/default/system/throttle-warning.wav', id=9, priority=0)
+295282 playFile('AUDIO:/es/default/system/no-failsafe.wav', id=13, priority=0)
+295282 playFile('AUDIO:/es/default/system/switch-warning.wav', id=10, priority=0)
+295291 playFile('AUDIO:/es/default/system/function-switches-warning.wav', id=24, priority=0)
+295296 playFile('AUDIO:/es/default/system/pot-warning.wav', id=11, priority=0)
+295352 playFile('AUDIO:/es/default/timer-1-elapsed.wav', id=82, priority=1)
+296313 Write PNG file '/screenshots/model-checklist-at_start.png'
+296397 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+296397 RAM backup ...
+296398 RAM backup written (size=777)
+296588 Write PNG file '/screenshots/model-icon-checklist.png'
+296771 Write PNG file '/screenshots/model-checklist.png'
+297066 Write PNG file '/screenshots/model-checklist-check_function.png'
+297398 Write PNG file '/screenshots/model-checklist-switches.png'
+297562 Write PNG file '/screenshots/model-checklist-switches-options.png'
+298244 Write PNG file '/screenshots/model-checklist-function-switches.png'
+298417 Write PNG file '/screenshots/model-checklist-function-switches-options.png'
+299260 Write PNG file '/screenshots/model-checklist-pots.png'
+299437 Write PNG file '/screenshots/model-checklist-pots-options.png'
+300769 setReadonly(1)
+300773 WD suspended
+300782 ModelData::read('USER:/models/rarebear.bin')
+300783 ModelData version will be converted from version 0.2.9 to 0.2.18
+300784 Bluetooth mode set to None
+300785 WD resumed
+300785 Home::doPreflightChecks()
+300808 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+300811 playFile('AUDIO:/es/default/timer-1-elapsed.wav', id=85, priority=1)
+300846 playFile('AUDIO:/es/default/system/throttle-warning.wav', id=9, priority=0)
+300847 playFile('AUDIO:/es/default/system/no-failsafe.wav', id=13, priority=0)
+300847 playFile('AUDIO:/es/default/system/switch-warning.wav', id=10, priority=0)
+300851 playFile('AUDIO:/es/default/system/function-switches-warning.wav', id=24, priority=0)
+300859 playFile('AUDIO:/es/default/system/pot-warning.wav', id=11, priority=0)
+301082 Write PNG file '/screenshots/model-icon-lsw.png'
+301936 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+301938 RAM backup ...
+301948 RAM backup written (size=777)
+302218 Write PNG file '/screenshots/model-lsw-confirm-lsw-true.png'
+303380 Write PNG file '/screenshots/model-lsw-confirm-lsw-false.png'
+303628 Write PNG file '/screenshots/model-lsw-menu.png'
+303946 Write PNG file '/screenshots/model-lsw-move.png'
+304139 Write PNG file '/screenshots/model-lsw-A~X.png'
+304578 Write PNG file '/screenshots/model-lsw-common-parameters.png'
+306921 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+306921 RAM backup ...
+306928 RAM backup written (size=799)
+307306 Write PNG file '/screenshots/model-lsw-delta-gtX.png'
+307883 Write PNG file '/screenshots/model-lsw-range.png'
+308119 Write PNG file '/screenshots/model-lsw-AND.png'
+308336 Write PNG file '/screenshots/model-lsw-OR.png'
+308550 Write PNG file '/screenshots/model-lsw-XOR.png'
+308784 Write PNG file '/screenshots/model-lsw-timer-generator.png'
+308999 Write PNG file '/screenshots/model-lsw-sticky.png'
+309964 Write PNG file '/screenshots/model-lsw-sticky-edge-select.png'
+311103 Write PNG file '/screenshots/model-lsw-sticky-with-edge.png'
+311363 Write PNG file '/screenshots/model-lsw-edge.png'
+311609 Write PNG file '/screenshots/model-lsw-edge-rising-edge.png'
+312273 Write PNG file '/screenshots/model-lsw-edge-during-gt0-rising-edge.png'
+312738 Write PNG file '/screenshots/model-lsw-edge-during-eq0.png'
+313185 Write PNG file '/screenshots/model-lsw-edge-during-gt0.png'
+315237 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+315238 RAM backup ...
+315248 RAM backup written (size=823)
+315755 Write PNG file '/screenshots/model-lsw-delta-AgtX.png'
+318506 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+318506 RAM backup ...
+318512 RAM backup written (size=849)
+318755 Write PNG file '/screenshots/model-lsw-ignore-trainer-input.png'
+318887 Write PNG file '/screenshots/model-lsw-ignore-trainer-input-enabled.png'
+320043 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+320046 RAM backup ...
+320054 RAM backup written (size=849)
+320184 setReadonly(1)
+320184 WD suspended
+320193 ModelData::read('USER:/models/rarebear.bin')
+320207 ModelData version will be converted from version 0.2.9 to 0.2.18
+320209 Bluetooth mode set to None
+320209 WD resumed
+320213 Home::doPreflightChecks()
+320233 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+320270 playFile('AUDIO:/es/default/timer-1-elapsed.wav', id=88, priority=1)
+320283 playFile('AUDIO:/es/default/system/throttle-warning.wav', id=9, priority=0)
+320283 playFile('AUDIO:/es/default/system/no-failsafe.wav', id=13, priority=0)
+320284 playFile('AUDIO:/es/default/system/switch-warning.wav', id=10, priority=0)
+320287 playFile('AUDIO:/es/default/system/function-switches-warning.wav', id=24, priority=0)
+320295 playFile('AUDIO:/es/default/system/pot-warning.wav', id=11, priority=0)
+320554 Write PNG file '/screenshots/model-icon-sf.png'
+320842 Write PNG file '/screenshots/model-sf-menu.png'
+320996 Write PNG file '/screenshots/model-sf-move.png'
+321194 Write PNG file '/screenshots/model-sf-menu.png'
+321383 Write PNG file '/screenshots/model-sf-reset.png'
+321738 Write PNG file '/screenshots/model-sf-screenshot.png'
+322119 Write PNG file '/screenshots/model-sf-set-failsafe.png'
+322513 Write PNG file '/screenshots/model-sf-play-audio.png'
+322836 Write PNG file '/screenshots/model-sf-play-audio-add-line.png'
+322959 FrSkyFileChoice::readFilesList('AUDIO:/es/default')
+323082 Write PNG file '/screenshots/model-sf-play-audio-add-line-type.png'
+323435 Write PNG file '/screenshots/model-sf-play-audio-add-play-file.png'
+323700 FrSkyFileChoice::readFilesList('AUDIO:/es/default')
+324441 Write PNG file '/screenshots/model-sf-play-audio-add-play-value.png'
+324656 Write PNG file '/screenshots/model-sf-play-audio-add-play-value-add-line.png'
+325416 Write PNG file '/screenshots/model-sf-play-audio-add-sequence.png'
+325590 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+325590 RAM backup ...
+325595 RAM backup written (size=801)
+325615 Write PNG file '/screenshots/model-sf-play-audio-add-sequence-management.png'
+326144 Write PNG file '/screenshots/model-sf-haptic.png'
+326360 Write PNG file '/screenshots/model-sf-haptic-pattern.png'
+326814 Write PNG file '/screenshots/model-sf-write-logs.png'
+327271 Write PNG file '/screenshots/model-sf-go-to-screen.png'
+327702 Write PNG file '/screenshots/model-sf-go-to-screen-options.png'
+328304 Write PNG file '/screenshots/model-sf-lock-touchscreen.png'
+328745 Model  read header failed: Formato incorrecto
+328809 Write PNG file '/screenshots/model-sf-load-model.png'
+328968 Model  read header failed: Formato incorrecto
+329327 Write PNG file '/screenshots/model-sf-play-vario.png'
+329585 Write PNG file '/screenshots/model-sf-play-vario-options.png'
+329706 Write PNG file '/screenshots/model-sf-play-vario-vspeed.png'
+330861 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+330861 RAM backup ...
+330869 RAM backup written (size=818)
+331003 setReadonly(1)
+331004 WD suspended
+331011 ModelData::read('USER:/models/zblank.bin')
+331024 ModelData version will be converted from version 0.2.6 to 0.2.18
+331025 Bluetooth mode set to None
+331025 WD resumed
+331029 Home::doPreflightChecks()
+331085 playFile('AUDIO:/es/default/system/throttle-warning.wav', id=9, priority=0)
+331355 Write PNG file '/screenshots/model-icon-curves.png'
+331537 Write PNG file '/screenshots/model-curves-add.png'
+331690 Write PNG file '/screenshots/model-curves-edit.png'
+331843 Write PNG file '/screenshots/model-curves-type.png'
+332086 Write PNG file '/screenshots/model-curves-fn-types.png'
+332225 Write PNG file '/screenshots/model-curves-fn-xgt0.png'
+332481 Write PNG file '/screenshots/model-curves-fn-xgt0-offset.png'
+332820 Write PNG file '/screenshots/model-curves-fn-xlt0.png'
+333057 Write PNG file '/screenshots/model-curves-fn-barx.png'
+333275 Write PNG file '/screenshots/model-curves-fn-fgt0.png'
+333507 Write PNG file '/screenshots/model-curves-fn-flt0.png'
+333736 Write PNG file '/screenshots/model-curves-fn-barf.png'
+335782 Write PNG file '/screenshots/model-curves-custom5.png'
+337743 Write PNG file '/screenshots/model-curves-custom5-2.png'
+338041 Write PNG file '/screenshots/model-curves-custom5-2-smooth.png'
+339180 ModelData::write('USER:/models/zblank.bin') skipped (read-only mode)
+339180 RAM backup ...
+339190 RAM backup written (size=623)
+339305 WD suspended
+339305 ModelData::read('USER:/models/zcurves.bin')
+339321 ModelData version will be converted from version 0.2.6 to 0.2.18
+339322 Bluetooth mode set to None
+339327 WD resumed
+339328 Home::doPreflightChecks()
+339393 playFile('AUDIO:/es/default/system/throttle-warning.wav', id=9, priority=0)
+339393 playFile('AUDIO:/es/default/system/no-failsafe.wav', id=13, priority=0)
+339845 Write PNG file '/screenshots/model-curves-edit-options.png'
+339984 Write PNG file '/screenshots/model-curves-expo.png'
+340517 ModelData::write('USER:/models/zcurves.bin') skipped (read-only mode)
+340517 RAM backup ...
+340525 RAM backup written (size=752)
+340762 Write PNG file '/screenshots/model-curves-custom-easy-off.png'
+341229 Write PNG file '/screenshots/model-curves-fn-offset-var.png'
+341974 Write PNG file '/screenshots/model-curves-custom-with-var.png'
+343525 setReadonly(1)
+343528 WD suspended
+343536 ModelData::read('USER:/models/blaster.bin')
+343550 ModelData version will be converted from version 0.2.6 to 0.2.18
+343560 Bluetooth mode set to None
+343560 WD resumed
+343561 Home::doPreflightChecks()
+343563 playFile('AUDIO:/es/default/espmcd.wav', id=105, priority=1)
+343563 [es] playDuration(180s)
+343568 playFile('AUDIO:/es/default/system/3.wav', id=107, priority=1)
+343568 playFile('AUDIO:/es/default/system/minutes.wav', id=107, priority=1)
+343579 playFile('AUDIO:/es/default/stblof.wav', id=110, priority=1)
+343603 load_stb(BITMAPS:/models/Blaster.png) took 0us
+343616 playFile('AUDIO:/es/default/espmcd.wav', id=106, priority=1)
+343619 playFile('AUDIO:/es/default/system/throttle-warning.wav', id=9, priority=0)
+343624 playFile('AUDIO:/es/default/system/no-failsafe.wav', id=13, priority=0)
+343927 Write PNG file '/screenshots/model-icon-vars.png'
+344070 Write PNG file '/screenshots/model-vars.png'
+344227 Write PNG file '/screenshots/model-vars-actions.png'
+344406 Write PNG file '/screenshots/model-vars-new_var.png'
+344795 Write PNG file '/screenshots/model-vars-values.png'
+346349 Write PNG file '/screenshots/model-vars-add-value.png'
+348358 Write PNG file '/screenshots/model-vars-fm-dependent.png'
+349584 Write PNG file '/screenshots/model-vars-add-action.png'
+350261 Write PNG file '/screenshots/model-vars-functions.png'
+350486 Write PNG file '/screenshots/model-vars-functions-repurpose-select.png'
+350829 Write PNG file '/screenshots/model-vars-functions-repurpose.png'
+356972 Write PNG file '/screenshots/model-vars-calc-example.png'
+358031 ModelData::write('USER:/models/blaster.bin') skipped (read-only mode)
+358033 RAM backup ...
+358041 RAM backup written (size=3613)
+358307 setReadonly(1)
+358310 WD suspended
+358318 ModelData::read('USER:/models/rarebear.bin')
+358333 ModelData version will be converted from version 0.2.9 to 0.2.18
+358342 Bluetooth mode set to None
+358343 WD resumed
+358343 Home::doPreflightChecks()
+358372 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+358398 playFile('AUDIO:/es/default/system/throttle-warning.wav', id=9, priority=0)
+358398 playFile('AUDIO:/es/default/system/no-failsafe.wav', id=13, priority=0)
+358399 playFile('AUDIO:/es/default/system/switch-warning.wav', id=10, priority=0)
+358403 playFile('AUDIO:/es/default/system/function-switches-warning.wav', id=24, priority=0)
+358411 playFile('AUDIO:/es/default/system/pot-warning.wav', id=11, priority=0)
+358500 playFile('AUDIO:/es/default/timer-1-elapsed.wav', id=112, priority=1)
+358748 Write PNG file '/screenshots/model-icon-trainer.png'
+358871 Write PNG file '/screenshots/model-trainer-add.png'
+359026 Write PNG file '/screenshots/model-trainer-options.png'
+359120 Write PNG file '/screenshots/model-trainer-cable-select.png'
+359294 Write PNG file '/screenshots/model-trainer-cable-slave.png'
+359471 Write PNG file '/screenshots/model-trainer-cable-master-select.png'
+359604 Write PNG file '/screenshots/model-trainer-cable-master.png'
+359704 Write PNG file '/screenshots/model-trainer-cable-master-active-condition-select.png'
+359939 Write PNG file '/screenshots/model-trainer-cable-master-copy-select.png'
+360185 Write PNG file '/screenshots/model-trainer-cable-master-delete-select.png'
+360737 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+360737 RAM backup ...
+360745 RAM backup written (size=778)
+361515 Write PNG file '/screenshots/model-trainer-bt-select.png'
+361626 Bluetooth mode set to Alumno
+361705 Write PNG file '/screenshots/model-trainer-bt-slave.png'
+361866 Write PNG file '/screenshots/model-trainer-bt-master-select.png'
+361965 Bluetooth mode set to Entrenador
+361984 Write PNG file '/screenshots/model-trainer-bt-master.png'
+362104 Write PNG file '/screenshots/model-trainer-bt-master-search.png'
+363140 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+363141 RAM backup ...
+363152 RAM backup written (size=904)
+363340 Write PNG file '/screenshots/model-trainer-bt-master-alice.png'
+364493 Write PNG file '/screenshots/model-trainer-bt-master-connected-ok.png'
+364628 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+364629 RAM backup ...
+364629 RAM backup written (size=909)
+365631 Write PNG file '/screenshots/model-trainer-bt-master-connected.png'
+365830 Write PNG file '/screenshots/model-trainer-bt-master-disconnect-select.png'
+366541 Write PNG file '/screenshots/model-trainer-bt-master-active-condition.png'
+366658 Write PNG file '/screenshots/model-trainer-bt-master-channels.png'
+366793 Write PNG file '/screenshots/model-trainer-bt-master-channel-edit.png'
+367037 Write PNG file '/screenshots/model-trainer-bt-master-options.png'
+367158 Write PNG file '/screenshots/model-trainer-bt-master-delete-select.png'
+367313 Bluetooth mode set to None
+368723 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+368723 RAM backup ...
+368726 RAM backup written (size=657)
+368805 Write PNG file '/screenshots/model-trainer-ext-select.png'
+368984 Write PNG file '/screenshots/model-trainer-ext-slave.png'
+369141 Write PNG file '/screenshots/model-trainer-ext-slave-protocol-select.png'
+369395 Write PNG file '/screenshots/model-trainer-ext-master-select.png'
+369539 Write PNG file '/screenshots/model-trainer-ext-master.png'
+369681 Write PNG file '/screenshots/model-trainer-ext-master-protocol-select.png'
+369984 Write PNG file '/screenshots/model-trainer-sport-select.png'
+370179 Write PNG file '/screenshots/model-trainer-sport-slave.png'
+370361 Write PNG file '/screenshots/model-trainer-sport-master-select.png'
+370501 Write PNG file '/screenshots/model-trainer-sport-master.png'
+371652 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+371653 RAM backup ...
+371655 RAM backup written (size=923)
+371993 Write PNG file '/screenshots/model-rf-trainer-ppm-select.png'
+372127 Write PNG file '/screenshots/model-rf-trainer-ppm.png'
+372296 Write PNG file '/screenshots/model-rf-trainer-sbus-select.png'
+372429 Write PNG file '/screenshots/model-rf-trainer-sbus.png'
+372587 Write PNG file '/screenshots/model-rf-trainer-master-ppm-select.png'
+372705 Write PNG file '/screenshots/model-rf-trainer-master-ppm.png'
+372861 Write PNG file '/screenshots/model-rf-trainer-master-sbus-select.png'
+372978 Write PNG file '/screenshots/model-rf-trainer-master-sbus.png'
+373869 setReadonly(1)
+373872 WD suspended
+373884 ModelData::read('USER:/models/zblank.bin')
+373903 ModelData version will be converted from version 0.2.6 to 0.2.18
+373912 Bluetooth mode set to None
+373912 WD resumed
+373913 Home::doPreflightChecks()
+373972 playFile('AUDIO:/es/default/system/throttle-warning.wav', id=9, priority=0)
+374990 Write PNG file '/screenshots/model-checklist-user-checklist.png'
+375098 ModelData::write('USER:/models/zblank.bin') skipped (read-only mode)
+375098 RAM backup ...
+375099 RAM backup written (size=604)
+375463 Write PNG file '/screenshots/model-lsw-add.png'
+375687 Write PNG file '/screenshots/model-sf-add.png'
+375957 Write PNG file '/screenshots/model-vars-add.png'
+376333 Model Test.bin read header failed: Encabezado incorrecto
+376674 load_stb(BITMAPS:/models/Addiction_X.png) took 0us
+377005 load_stb(BITMAPS:/models/Blaster.png) took 0us
+377337 load_stb(BITMAPS:/models/Edge_540.png) took 0us
+377665 load_bmp(BITMAPS:/models/extra.bmp) took 0us
+377999 load_stb(BITMAPS:/models/Extra_300.png) took 0us
+378328 load_stb(BITMAPS:/models/Geronimo.png) took 0us
+378662 load_stb(BITMAPS:/models/Katana.png) took 0us
+378997 load_stb(BITMAPS:/models/Laser_60.png) took 0us
+379333 load_stb(BITMAPS:/models/Magnus.png) took 0us
+379670 load_stb(BITMAPS:/models/ng_2m.png) took 0us
+380008 load_stb(BITMAPS:/models/Oxalys.png) took 0us
+380348 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+380682 load_stb(BITMAPS:/models/Sig_Edge.png) took 0us
+381022 load_stb(BITMAPS:/models/ng_2m.png) took 0us
+381353 load_stb(BITMAPS:/models/Spitfire.png) took 0us
+381732 load_stb(BITMAPS:/models/Ultimate_60.png) took 0us
+382064 load_stb(BITMAPS:/models/Weasel.png) took 0us
+383627 Home::openModelWizard()
+383627 ModelData::setModelType(0)
+383634 ModelData::setModelType(0)
+383757 ModelData::setModelType(2)
+383758 load_stb(SYSTEM:/bitmaps/system/heli_fbl.png) took 0us
+383870 FrSkyFileChoice::readFilesList('BITMAPS:/models')
+384077 SystemData::write('USER:/radio.bin') skipped (read-only mode)
+384077 ModelData::write('USER:/models/zblank.bin') skipped (read-only mode)
+384078 ModelData::setModelType(0)
+384084 SystemData::write('USER:/radio.bin') skipped (read-only mode)
+384096 ModelData::write('USER:/models/a.bin') skipped (read-only mode)
+384104 WD suspended for 2000ms
+384110 Bluetooth mode set to None
+384117 WD resumed
+384145 Write PNG file '/screenshots/bottombar-heli.png'
+384423 Write PNG file '/screenshots/model-mixes-library-heli.png'
+385124 Macro stop requested
+385273 RAM backup ...
+385276 RAM backup written (size=636)
+385685 MACRO task end
+open_in_new
+48495051525354454647424344373839404131323334353655
+
+
+

@@ -1,0 +1,1181 @@
+No errors full run
+
+--------
+Ethos
+Release
+26 Nightlies
+Radio
+X20SX20S
+Country protocol
+FCC
+open_in_new
+open_in_new
+0
+0
+0
+0
+0
+0
+open_in_new
+000000 setSystemDirectory("")
+000000 setUserDirectory("/persist/X20S")
+000000 setAudioDirectory("/persist/X20S/audio")
+000000 setUserDocumentsDirectory("/persist/X20S/documents")
+000000 setUserBitmapsDirectory("/persist/X20S/bitmaps")
+000000 setUserScriptsDirectory("/persist/X20S/scripts")
+000275 X20S Ethos 26.1.0 @ 22f3471c started!
+000275 MIXER task started
+000275 MENUS task started
+000275 AUDIO task started
+000275 TIMER task started
+000275 REQUESTS task started
+000293 storageInit()
+000293 Mount 'SD:' succeeded
+000294 SystemData::read(USER:/radio.bin)
+001304 loadBitmaps()
+001308 Lua::load('SCRIPTS:/status/main.luac')
+001310 WD suspended
+001310 ModelData::read('USER:/models/zcurves.bin')
+001314 Bluetooth mode set to None
+001314 playHaptic(duration=10)
+001315 playFile('AUDIO:/en/gb/system/hello.wav', id=5, priority=0)
+001316 WD resumed
+001317 Home::doPreflightChecks()
+001370 playFile('AUDIO:/en/gb/system/throttle-warning.wav', id=9, priority=0)
+001370 playFile('AUDIO:/en/gb/system/no-failsafe.wav', id=13, priority=0)
+002484 RAM backup ...
+002485 RAM backup written (size=880)
+010706 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+010707 playHaptic(duration=10)
+010709 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+010906 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+010907 playHaptic(duration=10)
+010909 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+013506 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+013507 playHaptic(duration=10)
+013509 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+014115 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+014118 playHaptic(duration=10)
+014123 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+016536 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+016537 playHaptic(duration=10)
+016540 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+019575 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+019576 playHaptic(duration=10)
+019577 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+023026 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+023027 playHaptic(duration=10)
+023031 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+025036 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+025037 playHaptic(duration=10)
+025042 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+028306 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+028308 playHaptic(duration=10)
+028312 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+029516 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+029517 playHaptic(duration=10)
+029522 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+030528 MACRO task started (script='/macros/main.lua')
+030537 Lua::load('/macros/main.lua')
+030563 Macro paused (@/macros/main.lua, 9)
+031536 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+031537 playHaptic(duration=10)
+031539 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+032146 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+032150 playHaptic(duration=10)
+032155 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+032357 Macro resume requested
+032447 setReadonly(1)
+032459 WD suspended
+032463 ModelData::read('USER:/models/rarebear.bin')
+032471 Bluetooth mode set to None
+032471 WD resumed
+032472 Home::doPreflightChecks()
+032482 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+032526 playFile('AUDIO:/en/gb/system/throttle-warning.wav', id=9, priority=0)
+032526 playFile('AUDIO:/en/gb/system/no-failsafe.wav', id=13, priority=0)
+032526 playFile('AUDIO:/en/gb/system/switch-warning.wav', id=10, priority=0)
+032527 playFile('AUDIO:/en/gb/system/function-switches-warning.wav', id=24, priority=0)
+032528 playFile('AUDIO:/en/gb/system/pot-warning.wav', id=11, priority=0)
+032566 playFile('AUDIO:/en/gb/timer-1-elapsed.wav', id=28, priority=1)
+032661 Write PNG file '/screenshots/model-menu.png'
+032763 Write PNG file '/screenshots/model-icon-modelselect.png'
+033197 load_stb(BITMAPS:/models/Addiction_X.png) took 0us
+033347 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+033533 load_stb(BITMAPS:/models/Blaster.png) took 0us
+033635 RAM backup ...
+033639 RAM backup written (size=906)
+033866 load_stb(BITMAPS:/models/Edge_540.png) took 0us
+034201 load_bmp(BITMAPS:/models/extra.bmp) took 0us
+034534 load_stb(BITMAPS:/models/Extra_300.png) took 0us
+034871 load_stb(BITMAPS:/models/Geronimo.png) took 0us
+035208 load_stb(BITMAPS:/models/Katana.png) took 0us
+035545 load_stb(BITMAPS:/models/Laser_60.png) took 0us
+035885 load_stb(BITMAPS:/models/Magnus.png) took 0us
+036222 load_stb(BITMAPS:/models/ng_2m.png) took 0us
+036557 load_stb(BITMAPS:/models/Oxalys.png) took 0us
+036896 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+037234 load_stb(BITMAPS:/models/Sig_Edge.png) took 0us
+037569 load_stb(BITMAPS:/models/ng_2m.png) took 0us
+037606 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+037903 load_stb(BITMAPS:/models/Spitfire.png) took 0us
+038311 Write PNG file '/screenshots/model-modelselect-create-airplane-folder.png'
+039246 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+039556 Write PNG file '/screenshots/model-modelselect-folder-options.png'
+040024 load_stb(BITMAPS:/models/Addiction_X.png) took 0us
+040359 load_stb(BITMAPS:/models/Blaster.png) took 0us
+040689 load_stb(BITMAPS:/models/Edge_540.png) took 0us
+041020 load_bmp(BITMAPS:/models/extra.bmp) took 0us
+041056 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+041057 playHaptic(duration=10)
+041059 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+041352 load_stb(BITMAPS:/models/Extra_300.png) took 0us
+041685 load_stb(BITMAPS:/models/Geronimo.png) took 0us
+042021 load_stb(BITMAPS:/models/Katana.png) took 0us
+042056 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+042057 playHaptic(duration=10)
+042058 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+042358 load_stb(BITMAPS:/models/Laser_60.png) took 0us
+042695 load_stb(BITMAPS:/models/Magnus.png) took 0us
+043028 load_stb(BITMAPS:/models/ng_2m.png) took 0us
+043365 load_stb(BITMAPS:/models/Oxalys.png) took 0us
+043694 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+043876 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+044031 load_stb(BITMAPS:/models/Sig_Edge.png) took 0us
+044368 load_stb(BITMAPS:/models/ng_2m.png) took 0us
+044703 load_stb(BITMAPS:/models/Spitfire.png) took 0us
+045087 load_stb(BITMAPS:/models/Addiction_X.png) took 0us
+045424 load_stb(BITMAPS:/models/Blaster.png) took 0us
+045764 load_stb(BITMAPS:/models/Edge_540.png) took 0us
+046090 load_bmp(BITMAPS:/models/extra.bmp) took 0us
+046425 load_stb(BITMAPS:/models/Extra_300.png) took 0us
+046697 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+046761 load_stb(BITMAPS:/models/Geronimo.png) took 0us
+046896 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+046897 playHaptic(duration=10)
+046899 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+047091 load_stb(BITMAPS:/models/Katana.png) took 0us
+047428 load_stb(BITMAPS:/models/Laser_60.png) took 0us
+047696 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+047762 load_stb(BITMAPS:/models/Magnus.png) took 0us
+048103 load_stb(BITMAPS:/models/ng_2m.png) took 0us
+048432 load_stb(BITMAPS:/models/Oxalys.png) took 0us
+048496 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+048498 playHaptic(duration=10)
+048504 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+048697 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+048698 playHaptic(duration=10)
+048704 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+048767 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+049104 load_stb(BITMAPS:/models/Sig_Edge.png) took 0us
+049444 load_stb(BITMAPS:/models/ng_2m.png) took 0us
+049779 load_stb(BITMAPS:/models/Spitfire.png) took 0us
+049839 Write PNG file '/screenshots/model-modelselect-folders.png'
+049956 Write PNG file '/screenshots/model-modelselect-folders-2.png'
+050115 Write PNG file '/screenshots/model-modelselect-model-set.png'
+050210 Write PNG file '/screenshots/model-modelselect-clone-select.png'
+050308 ModelData::read('USER:/models/magnus.bin')
+050325 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+050326 playHaptic(duration=10)
+050329 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+050337 Write PNG file '/screenshots/model-modelselect-clone-options.png'
+050569 Write PNG file '/screenshots/model-modelselect-folder-change-select.png'
+050759 Write PNG file '/screenshots/model-modelselect-folder-change-glider.png'
+051029 Write PNG file '/screenshots/model-modelselect-receive-model-select.png'
+051147 Bluetooth mode set to File transfer
+051166 Write PNG file '/screenshots/model-modelselect-receive-model-waiting.png'
+051336 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+051337 playHaptic(duration=10)
+051340 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+053756 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+053758 playHaptic(duration=10)
+053760 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+053956 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+053957 playHaptic(duration=10)
+053959 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+054242 Write PNG file '/screenshots/model-modelselect-receive-model-dialog.png'
+055390 Write PNG file '/screenshots/model-modelselect-receive-model-receiving.png'
+055529 Model Test.bin read header failed: Wrong header
+055536 Bluetooth mode set to None
+055760 Write PNG file '/screenshots/model-modelselect-send-model-select.png'
+055785 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+055785 playHaptic(duration=10)
+055789 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+055893 Bluetooth mode set to File transfer
+055912 Write PNG file '/screenshots/model-modelselect-send-model-waiting-devices.png'
+055985 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+055986 playHaptic(duration=10)
+055987 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+056987 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+059076 Write PNG file '/screenshots/model-modelselect-send-model-dialog.png'
+059210 Write PNG file '/screenshots/model-modelselect-send-model-waiting-connect.png'
+059270 Write PNG file '/screenshots/model-modelselect-send-model-sending.png'
+059627 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+059627 playHaptic(duration=10)
+059633 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+060367 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+060368 RAM backup ...
+060373 RAM backup written (size=911)
+062366 Write PNG file '/screenshots/model-modelselect-send-model-success.png'
+062485 Bluetooth mode set to None
+062540 Write PNG file '/screenshots/model-modelselect-folder-airplane-select.png'
+062732 Write PNG file '/screenshots/model-modelselect-model-receive.png'
+062843 Write PNG file '/screenshots/model-modelselect-model-create.png'
+062875 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+062876 playHaptic(duration=10)
+062877 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+062951 Home::openModelWizard()
+062951 ModelData::setModelType(0)
+062954 ModelData::setModelType(0)
+062976 Write PNG file '/screenshots/model-modelselect-model-wizard-airplane.png'
+063069 load_stb(SYSTEM:/bitmaps/system/NoRx.png) took 0us
+063092 Write PNG file '/screenshots/model-modelselect-model-wizard-rx.png'
+063200 load_stb(SYSTEM:/bitmaps/system/aircraft_engine_1.png) took 0us
+063223 Write PNG file '/screenshots/model-modelselect-model-wizard-engine.png'
+063275 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+063275 playHaptic(duration=10)
+063277 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+063343 load_stb(SYSTEM:/bitmaps/system/airplane_02A00F.png) took 0us
+063364 Write PNG file '/screenshots/model-modelselect-model-wizard-ail-and-flaps.png'
+063478 load_stb(SYSTEM:/bitmaps/system/tail_traditional.png) took 0us
+063500 Write PNG file '/screenshots/model-modelselect-model-wizard-tail.png'
+063608 load_stb(SYSTEM:/bitmaps/system/tail_01R01E.png) took 0us
+063630 Write PNG file '/screenshots/model-modelselect-model-wizard-ele-and-rudder.png'
+063675 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+063675 playHaptic(duration=10)
+063677 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+063753 Write PNG file '/screenshots/model-modelselect-model-wizard-ch-reassignment.png'
+063866 FrSkyFileChoice::readFilesList('BITMAPS:/models')
+063876 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+064148 RAM backup ...
+064148 RAM backup written (size=911)
+064724 Bitmap::load(BITMAPS:/models/) failed: read error
+064726 load_stb(BITMAPS:/models/) took 0us
+065087 load_stb(BITMAPS:/models/XK110.png) took 0us
+065439 load_stb(BITMAPS:/models/Weasel.png) took 0us
+065794 load_stb(BITMAPS:/models/Ultimate_60.png) took 0us
+065918 Write PNG file '/screenshots/model-modelselect-model-wizard-name.png'
+066034 SystemData::write('USER:/radio.bin') skipped (read-only mode)
+066034 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+066037 ModelData::setModelType(0)
+066037 SystemData::write('USER:/radio.bin') skipped (read-only mode)
+066038 ModelData::write('USER:/models/Airplane/ultimate.bin') skipped (read-only mode)
+066041 WD suspended for 2000ms
+066042 Bluetooth mode set to None
+066043 WD resumed
+066070 load_stb(BITMAPS:/models/Ultimate_60.png) took 0us
+066072 Write PNG file '/screenshots/model-modelselect-model-wizard-ultimate.png'
+067196 RAM backup ...
+067199 RAM backup written (size=716)
+067467 Model Test.bin read header failed: Wrong header
+068046 load_stb(BITMAPS:/models/Addiction_X.png) took 0us
+068385 load_stb(BITMAPS:/models/Blaster.png) took 0us
+068719 load_stb(BITMAPS:/models/Edge_540.png) took 0us
+069043 load_bmp(BITMAPS:/models/extra.bmp) took 0us
+069371 load_stb(BITMAPS:/models/Extra_300.png) took 0us
+069704 load_stb(BITMAPS:/models/Geronimo.png) took 0us
+070039 load_stb(BITMAPS:/models/Katana.png) took 0us
+070376 load_stb(BITMAPS:/models/Laser_60.png) took 0us
+070710 load_stb(BITMAPS:/models/Magnus.png) took 0us
+071049 load_stb(BITMAPS:/models/ng_2m.png) took 0us
+071383 load_stb(BITMAPS:/models/Oxalys.png) took 0us
+071716 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+072052 load_stb(BITMAPS:/models/Sig_Edge.png) took 0us
+072391 load_stb(BITMAPS:/models/ng_2m.png) took 0us
+072724 load_stb(BITMAPS:/models/Spitfire.png) took 0us
+073397 load_stb(BITMAPS:/models/Ultimate_60.png) took 0us
+073733 load_stb(BITMAPS:/models/Weasel.png) took 0us
+075311 load_stb(BITMAPS:/models/Ultimate_60.png) took 0us
+075341 Write PNG file '/screenshots/model-modelselect-model-airplane-category.png'
+076031 load_stb(BITMAPS:/models/Addiction_X.png) took 0us
+076365 load_stb(BITMAPS:/models/Blaster.png) took 0us
+076697 load_stb(BITMAPS:/models/Edge_540.png) took 0us
+077029 load_bmp(BITMAPS:/models/extra.bmp) took 0us
+077366 load_stb(BITMAPS:/models/Extra_300.png) took 0us
+077700 load_stb(BITMAPS:/models/Geronimo.png) took 0us
+078030 load_stb(BITMAPS:/models/Katana.png) took 0us
+078368 load_stb(BITMAPS:/models/Laser_60.png) took 0us
+078704 load_stb(BITMAPS:/models/Magnus.png) took 0us
+079039 load_stb(BITMAPS:/models/ng_2m.png) took 0us
+079375 load_stb(BITMAPS:/models/Oxalys.png) took 0us
+079705 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+080041 load_stb(BITMAPS:/models/Sig_Edge.png) took 0us
+080379 load_stb(BITMAPS:/models/ng_2m.png) took 0us
+080716 load_stb(BITMAPS:/models/Spitfire.png) took 0us
+081942 setReadonly(1)
+081943 WD suspended
+081947 ModelData::read('USER:/models/fwexample.bin')
+081953 Bluetooth mode set to None
+081953 WD resumed
+081955 Home::doPreflightChecks()
+081964 load_bmp(BITMAPS:/models/extra.bmp) took 0us
+081966 playFile('AUDIO:/en/gb/engon.wav', id=31, priority=1)
+081987 load_bmp(BITMAPS:/models/extra.bmp) took 0us
+082011 playFile('AUDIO:/en/gb/system/throttle-warning.wav', id=9, priority=0)
+082011 playFile('AUDIO:/en/gb/system/no-failsafe.wav', id=13, priority=0)
+082192 Write PNG file '/screenshots/model-icon-editmodel.png'
+082290 FrSkyFileChoice::readFilesList('BITMAPS:/models')
+082318 Write PNG file '/screenshots/model-editmodel.png'
+082516 Write PNG file '/screenshots/model-edit-modeltype.png'
+082758 Write PNG file '/screenshots/model-edit-receiver-type.png'
+083124 RAM backup ...
+083124 RAM backup written (size=789)
+083146 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+083147 playHaptic(duration=10)
+083148 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+083279 Write PNG file '/screenshots/model-edit-thr-deadband.png'
+083401 Write PNG file '/screenshots/model-edit-analog-filter.png'
+083525 Write PNG file '/screenshots/model-edit-analog-filter-select.png'
+083565 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+083566 playHaptic(duration=10)
+083567 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+083699 Write PNG file '/screenshots/model-edit-fn-switches.png'
+083766 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+083774 playHaptic(duration=10)
+083778 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+083837 Write PNG file '/screenshots/model-edit-fn-switches-select.png'
+084006 Write PNG file '/screenshots/model-edit-sport.png'
+084158 Write PNG file '/screenshots/model-model-edit-sport-select.png'
+084362 Write PNG file '/screenshots/model-model-edit-sport-power-select.png'
+084375 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+084375 playHaptic(duration=10)
+084377 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+084550 Write PNG file '/screenshots/model-edit-model-runtime.png'
+084647 Write PNG file '/screenshots/model-edit-model-reset_all_mixes.png'
+084976 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+084976 playHaptic(duration=10)
+084978 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+085931 setReadonly(1)
+085932 WD suspended
+085939 ModelData::read('USER:/models/zblank.bin')
+085953 Bluetooth mode set to None
+085953 WD resumed
+085954 Home::doPreflightChecks()
+086010 playFile('AUDIO:/en/gb/system/throttle-warning.wav', id=9, priority=0)
+086987 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+087134 RAM backup ...
+087134 RAM backup written (size=730)
+087212 Write PNG file '/screenshots/model-icon-fm.png'
+087342 Write PNG file '/screenshots/model-fm.png'
+087395 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+087395 playHaptic(duration=10)
+087397 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+089126 Write PNG file '/screenshots/model-fm-form.png'
+091103 Write PNG file '/screenshots/model-fm-0to3.png'
+091312 Write PNG file '/screenshots/model-fm-move-select.png'
+091444 Write PNG file '/screenshots/model-fm-move.png'
+091447 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+091449 playHaptic(duration=10)
+091451 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+091656 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+092070 ModelData::write('USER:/models/zblank.bin') skipped (read-only mode)
+092070 RAM backup ...
+092076 RAM backup written (size=748)
+092666 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+092667 playHaptic(duration=10)
+092668 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+093644 Write PNG file '/screenshots/tut-fw-eg-trims-ele-add-behavior.png'
+094205 Write PNG file '/screenshots/tut-fw-eg-trims-ele-custom-default-plus-offset-fm-select.png'
+094415 Write PNG file '/screenshots/tut-fw-eg-trims-ele-custom-default-plus-offset-select.png'
+094583 Write PNG file '/screenshots/tut-fw-eg-trims-ele-custom-default-plus-offset-fm1.png'
+095350 Write PNG file '/screenshots/tut-fw-eg-trims-ele-custom-default-plus-offset-fm2.png'
+096495 ModelData::write('USER:/models/zblank.bin') skipped (read-only mode)
+096498 RAM backup ...
+096500 RAM backup written (size=764)
+096706 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+096710 setReadonly(1)
+096710 WD suspended
+096714 ModelData::read('USER:/models/rarebear.bin')
+096729 Bluetooth mode set to None
+096729 WD resumed
+096731 Home::doPreflightChecks()
+096739 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+096762 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+096789 playFile('AUDIO:/en/gb/system/throttle-warning.wav', id=9, priority=0)
+096789 playFile('AUDIO:/en/gb/system/no-failsafe.wav', id=13, priority=0)
+096790 playFile('AUDIO:/en/gb/system/switch-warning.wav', id=10, priority=0)
+096792 playFile('AUDIO:/en/gb/system/function-switches-warning.wav', id=24, priority=0)
+096794 playFile('AUDIO:/en/gb/system/pot-warning.wav', id=11, priority=0)
+096917 playFile('AUDIO:/en/gb/timer-1-elapsed.wav', id=32, priority=1)
+097012 Write PNG file '/screenshots/model-icon-mixes.png'
+097195 Write PNG file '/screenshots/model-mixes.png'
+097357 Write PNG file '/screenshots/model-mixes-ail-edit.png'
+097501 Write PNG file '/screenshots/model-mixes-ail.png'
+098050 Write PNG file '/screenshots/model-mixes-ail-expo.png'
+098194 Write PNG file '/screenshots/model-mixes-ail-weight.png'
+098526 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+098526 playHaptic(duration=10)
+098528 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+098726 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+098730 playHaptic(duration=10)
+098739 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+099163 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+099163 RAM backup ...
+099171 RAM backup written (size=908)
+099546 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+099547 playHaptic(duration=10)
+099549 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+099711 Write PNG file '/screenshots/model-mixes-ail-diff.png'
+099957 Write PNG file '/screenshots/model-mixes-ail-ch-count.png'
+100372 Write PNG file '/screenshots/model-mixes-thr.png'
+100861 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+100863 RAM backup ...
+100872 RAM backup written (size=911)
+101222 Write PNG file '/screenshots/model-mixes-thr-options.png'
+101440 Write PNG file '/screenshots/model-mixes-thr-trim-menu.png'
+101681 Write PNG file '/screenshots/model-mixes-thr-trim-low-position.png'
+102127 Write PNG file '/screenshots/model-mixes-thr-cut.png'
+102205 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+102206 playHaptic(duration=10)
+102207 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+102594 Write PNG file '/screenshots/model-mixes-thr-hold.png'
+102817 Write PNG file '/screenshots/model-mixes-thr-ch-count.png'
+102963 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+102964 RAM backup ...
+102964 RAM backup written (size=911)
+103016 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+104869 Write PNG file '/screenshots/model-mixes-library-seq.png'
+105190 Write PNG file '/screenshots/model-mixes-seq.png'
+105554 Write PNG file '/screenshots/model-mixes-seq-op1-menu.png'
+105683 Write PNG file '/screenshots/model-mixes-seq-op1-options.png'
+105831 Write PNG file '/screenshots/model-mixes-seq-op1-curve.png'
+105865 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+105865 playHaptic(duration=10)
+105867 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+107215 Write PNG file '/screenshots/model-mixes-seq-op1-options-2.png'
+107285 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+107285 playHaptic(duration=10)
+107287 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+107404 Write PNG file '/screenshots/model-mixes-seq-op1-curve-fwd.png'
+107658 Write PNG file '/screenshots/model-mixes-seq-op1-curve-bkwd.png'
+107906 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+107906 RAM backup ...
+107911 RAM backup written (size=974)
+108906 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+108993 setReadonly(1)
+108993 WD suspended
+108994 ModelData::read('USER:/models/rarebear.bin')
+109011 Bluetooth mode set to None
+109012 WD resumed
+109012 Home::doPreflightChecks()
+109038 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+109069 playFile('AUDIO:/en/gb/system/throttle-warning.wav', id=9, priority=0)
+109069 playFile('AUDIO:/en/gb/system/no-failsafe.wav', id=13, priority=0)
+109073 playFile('AUDIO:/en/gb/system/switch-warning.wav', id=10, priority=0)
+109077 playFile('AUDIO:/en/gb/system/function-switches-warning.wav', id=24, priority=0)
+109078 playFile('AUDIO:/en/gb/system/pot-warning.wav', id=11, priority=0)
+109118 playFile('AUDIO:/en/gb/timer-1-elapsed.wav', id=35, priority=1)
+109434 Write PNG file '/screenshots/model-mixes-library-airplane.png'
+109638 Write PNG file '/screenshots/model-mix-free-add-position.png'
+109836 Write PNG file '/screenshots/model-mix-free-added.png'
+110008 Write PNG file '/screenshots/model-mix-free-select-edit.png'
+110136 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+110141 Write PNG file '/screenshots/model-mix-free-edit.png'
+110293 Write PNG file '/screenshots/model-mix-free-source.png'
+110746 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+110748 playHaptic(duration=10)
+110751 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+110955 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+110957 RAM backup ...
+110965 RAM backup written (size=934)
+111144 Write PNG file '/screenshots/model-mix-free-source-convert-to-value.png'
+111278 Convert to const value 0
+111299 Write PNG file '/screenshots/model-mix-free-source-as-value.png'
+111757 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+112156 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+112157 playHaptic(duration=10)
+112159 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+112197 Write PNG file '/screenshots/model-mix-free-use-a-source.png'
+112366 Write PNG file '/screenshots/model-mix-free-source-categories.png'
+112481 Write PNG file '/screenshots/model-mix-free-source-categories-2.png'
+112786 Write PNG file '/screenshots/model-mix-free-source-ail.png'
+112927 Write PNG file '/screenshots/model-mix-free-add-action.png'
+112975 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+112975 playHaptic(duration=10)
+112977 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+113047 Write PNG file '/screenshots/model-mix-free-actions-weight.png'
+113578 Write PNG file '/screenshots/model-mix-free-actions-direction-select.png'
+113726 Write PNG file '/screenshots/model-mix-free-actions-directions.png'
+114158 Write PNG file '/screenshots/model-mix-free-actions-directions-top.png'
+114337 Write PNG file '/screenshots/model-mix-free-actions-directions-summary.png'
+114958 Write PNG file '/screenshots/model-mix-free-actions-weight-edit-select.png'
+115015 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+115015 playHaptic(duration=10)
+115017 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+115137 Write PNG file '/screenshots/model-mix-free-actions-weight-active-condition.png'
+115284 Write PNG file '/screenshots/model-mix-free-actions-weight-add-weight.png'
+115629 Write PNG file '/screenshots/model-mix-free-actions-weight-edit-select-SA.png'
+116718 Write PNG file '/screenshots/model-mix-free-actions-weight-edit.png'
+116915 Write PNG file '/screenshots/model-mix-free-actions-weight-summary.png'
+117029 Write PNG file '/screenshots/model-mix-free-actions-weight-summary-add-action.png'
+117280 Write PNG file '/screenshots/model-mix-free-action-types.png'
+117507 Write PNG file '/screenshots/model-mix-free-actions-curve-type.png'
+117623 Write PNG file '/screenshots/model-mix-free-actions-curve-cv1-select.png'
+117655 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+117655 playHaptic(duration=10)
+117657 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+117728 Write PNG file '/screenshots/model-mix-free-actions-curve-expo-select.png'
+117856 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+117856 playHaptic(duration=10)
+117858 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+119277 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+119942 Write PNG file '/screenshots/model-mix-free-actions-curve-expo-edit.png'
+120141 Write PNG file '/screenshots/model-mix-free-actions-curve-expo-edit-summary.png'
+120380 Write PNG file '/screenshots/model-mix-free-actions-curve-expo-select-move-option.png'
+120520 Write PNG file '/screenshots/model-mix-free-actions-curve-expo-select-move.png'
+120673 Write PNG file '/screenshots/model-mix-free-actions-curve-expo-edit-summary-moved.png'
+120792 Write PNG file '/screenshots/model-mix-free-actions-curve-summary-add-action.png'
+120896 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+120897 playHaptic(duration=10)
+120901 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+121099 Write PNG file '/screenshots/model-mix-free-actions-type-differential.png'
+121105 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+121106 playHaptic(duration=10)
+121108 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+121506 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+121530 Write PNG file '/screenshots/model-mix-free-actions-diff-edit.png'
+121954 Write PNG file '/screenshots/model-mix-free-actions-type-offset.png'
+122642 Write PNG file '/screenshots/model-mix-free-actions-offset-edit.png'
+123759 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+123759 RAM backup ...
+123768 RAM backup written (size=989)
+124078 Write PNG file '/screenshots/model-mix-free-actions-offset-use-source.png'
+124537 Write PNG file '/screenshots/model-mix-free-actions-offset-use-source-thr-trim.png'
+125657 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+125658 RAM backup ...
+125665 RAM backup written (size=991)
+126077 Write PNG file '/screenshots/model-mix-free-actions-offset-use-source-thr-trim-full-range.png'
+126216 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+126216 playHaptic(duration=10)
+126221 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+126425 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+126426 playHaptic(duration=10)
+126427 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+126606 Write PNG file '/screenshots/model-mix-free-actions-type-slow.png'
+126625 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+126626 playHaptic(duration=10)
+126627 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+127036 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+127037 playHaptic(duration=10)
+127044 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+127218 Write PNG file '/screenshots/model-mix-free-actions-slow-edit.png'
+127407 Write PNG file '/screenshots/model-mix-free-actions-slow-summary.png'
+127788 Write PNG file '/screenshots/model-mix-free-actions-type-trim.png'
+127856 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+128019 Write PNG file '/screenshots/model-mix-free-actions-trim-edit.png'
+128055 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+128056 playHaptic(duration=10)
+128057 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+128274 Write PNG file '/screenshots/model-mix-free-actions-trim-summary.png'
+129082 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+129084 RAM backup ...
+129093 RAM backup written (size=1009)
+130494 Write PNG file '/screenshots/model-mix-free-actions-slow-move.png'
+131106 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+131107 playHaptic(duration=10)
+131116 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+131711 Write PNG file '/screenshots/model-mix-free-actions-slow-at-top.png'
+132003 Write PNG file '/screenshots/model-mix-free-output.png'
+132726 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+132926 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+132928 playHaptic(duration=10)
+132929 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+133285 setReadonly(1)
+133287 WD suspended
+133295 ModelData::read('USER:/models/rarebear.bin')
+133310 Bluetooth mode set to None
+133310 WD resumed
+133311 Home::doPreflightChecks()
+133334 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+133355 playFile('AUDIO:/en/gb/timer-1-elapsed.wav', id=38, priority=1)
+133367 playFile('AUDIO:/en/gb/system/throttle-warning.wav', id=9, priority=0)
+133367 playFile('AUDIO:/en/gb/system/no-failsafe.wav', id=13, priority=0)
+133367 playFile('AUDIO:/en/gb/system/switch-warning.wav', id=10, priority=0)
+133370 playFile('AUDIO:/en/gb/system/function-switches-warning.wav', id=24, priority=0)
+133374 playFile('AUDIO:/en/gb/system/pot-warning.wav', id=11, priority=0)
+136327 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+136329 RAM backup ...
+136331 RAM backup written (size=943)
+136982 Write PNG file '/screenshots/model-mix-eg-using-weight.png'
+137996 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+138999 Write PNG file '/screenshots/model-mix-eg-using-offset-actions.png'
+139137 Write PNG file '/screenshots/model-mix-eg-using-offset.png'
+139406 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+139407 playHaptic(duration=10)
+139414 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+140059 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+140063 RAM backup ...
+140063 RAM backup written (size=971)
+140206 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+140208 playHaptic(duration=10)
+140216 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+140406 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+140406 playHaptic(duration=10)
+140408 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+140466 setReadonly(1)
+140466 WD suspended
+140467 ModelData::read('USER:/models/magnus.bin')
+140481 Bluetooth mode set to None
+140481 WD resumed
+140482 Home::doPreflightChecks()
+140493 load_stb(BITMAPS:/models/Magnus.png) took 0us
+140542 playFile('AUDIO:/en/gb/system/throttle-warning.wav', id=9, priority=0)
+140777 Write PNG file '/screenshots/model-icon-outputs.png'
+140960 Write PNG file '/screenshots/model-outputs.png'
+141120 Write PNG file '/screenshots/model-outputs-elevator-edit.png'
+141320 Write PNG file '/screenshots/model-outputs-throttle-edit.png'
+141652 RAM backup ...
+141652 RAM backup written (size=808)
+141867 Write PNG file '/screenshots/model-outputs-sbus-warning.png'
+142429 Write PNG file '/screenshots/model-outputs-swap-channels-select.png'
+142874 Write PNG file '/screenshots/model-outputs-swap-channels.png'
+143027 Write PNG file '/screenshots/model-outputs-reset-select.png'
+143359 ModelData::write('USER:/models/magnus.bin') skipped (read-only mode)
+143359 RAM backup ...
+143368 RAM backup written (size=808)
+144971 Write PNG file '/screenshots/model-outputs-balance-select.png'
+145110 Write PNG file '/screenshots/model-outputs-balance-choose_channels.png'
+145413 Write PNG file '/screenshots/model-outputs-balance-choose-ch7-and-ch6.png'
+145566 Write PNG file '/screenshots/model-outputs-balance-ch7-and-ch6.png'
+145774 Write PNG file '/screenshots/model-outputs-balance-ch6-magnet-off.png'
+146283 Write PNG file '/screenshots/model-outputs-balance-ch6-magnet-on.png'
+146585 Write PNG file '/screenshots/model-outputs-balance-curve-edit.png'
+147361 WD suspended
+147364 ModelData::read('USER:/models/zbalance.bin')
+147388 Bluetooth mode set to None
+147389 WD resumed
+147390 Home::doPreflightChecks()
+147411 ModelData::write('USER:/models/zbalance.bin') skipped (read-only mode)
+147450 playFile('AUDIO:/en/gb/system/throttle-warning.wav', id=9, priority=0)
+148570 RAM backup ...
+148570 RAM backup written (size=806)
+148740 Write PNG file '/screenshots/model-outputs-balance-ch2-9-8-1.png'
+149559 setReadonly(1)
+149560 WD suspended
+149569 ModelData::read('USER:/models/blaster.bin')
+149585 Bluetooth mode set to None
+149586 WD resumed
+149586 Home::doPreflightChecks()
+149588 playFile('AUDIO:/en/gb/espmcd.wav', id=53, priority=1)
+149594 [en] playDuration(180s)
+149603 playFile('AUDIO:/en/gb/system/3.wav', id=55, priority=1)
+149603 playFile('AUDIO:/en/gb/system/minutes.wav', id=55, priority=1)
+149610 playFile('AUDIO:/en/gb/stblof.wav', id=58, priority=1)
+149637 load_stb(BITMAPS:/models/Blaster.png) took 0us
+149639 playFile('AUDIO:/en/gb/espmcd.wav', id=54, priority=1)
+149646 playFile('AUDIO:/en/gb/system/throttle-warning.wav', id=9, priority=0)
+149647 playFile('AUDIO:/en/gb/system/no-failsafe.wav', id=13, priority=0)
+149684 playFile('AUDIO:/en/gb/lndgmd.wav', id=48, priority=1)
+150742 RAM backup ...
+150743 RAM backup written (size=3649)
+151057 Write PNG file '/screenshots/model-mixes-chview-elevator.png'
+151266 Write PNG file '/screenshots/model-mixes-chview-select.png'
+151946 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+151947 playHaptic(duration=10)
+151958 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+154392 Write PNG file '/screenshots/model-mixes-chview-elevator-channel-view.png'
+154531 Write PNG file '/screenshots/model-mixes-chview-elevator-channel.png'
+154565 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+154566 playHaptic(duration=10)
+154567 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+154681 Write PNG file '/screenshots/model-mixes-chview-collapsed.png'
+154930 Write PNG file '/screenshots/model-mixes-chview-table-view-select.png'
+155082 Write PNG file '/screenshots/model-mixes-chview-back-at-mixes-view.png'
+155576 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+155577 playHaptic(duration=10)
+155579 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+156368 setReadonly(1)
+156368 WD suspended
+156375 ModelData::read('USER:/models/rarebear.bin')
+156382 Bluetooth mode set to None
+156382 WD resumed
+156382 Home::doPreflightChecks()
+156403 load_stb(BITMAPS:/models/Rarebear.png) took 0us
+156406 playFile('AUDIO:/en/gb/timer-1-elapsed.wav', id=60, priority=1)
+156441 playFile('AUDIO:/en/gb/system/throttle-warning.wav', id=9, priority=0)
+156441 playFile('AUDIO:/en/gb/system/no-failsafe.wav', id=13, priority=0)
+156446 playFile('AUDIO:/en/gb/system/switch-warning.wav', id=10, priority=0)
+156447 playFile('AUDIO:/en/gb/system/function-switches-warning.wav', id=24, priority=0)
+156451 playFile('AUDIO:/en/gb/system/pot-warning.wav', id=11, priority=0)
+156714 Write PNG file '/screenshots/model-icon-timers.png'
+156858 Write PNG file '/screenshots/model-timers.png'
+157017 Write PNG file '/screenshots/model-timers-action-select.png'
+157536 RAM backup ...
+157538 RAM backup written (size=906)
+158016 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+158728 Write PNG file '/screenshots/model-timer1-edit.png'
+159225 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+159226 playHaptic(duration=10)
+159233 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+159425 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+159426 playHaptic(duration=10)
+159427 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+160232 Write PNG file '/screenshots/model-timer1-edit-stop.png'
+160432 Write PNG file '/screenshots/model-timer1-add-action.png'
+160570 Write PNG file '/screenshots/model-timer1-action-countdown.png'
+160645 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+160646 playHaptic(duration=10)
+160647 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+160902 Write PNG file '/screenshots/model-timer1-action-type-select.png'
+161256 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+161257 playHaptic(duration=10)
+161259 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+161438 FrSkyFileChoice::readFilesList('AUDIO:/en/gb')
+161820 Write PNG file '/screenshots/model-timer1-actions-summary.png'
+162076 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+163528 Write PNG file '/screenshots/model-timer2-edit.png'
+163696 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+163697 playHaptic(duration=10)
+163698 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+164862 FrSkyFileChoice::readFilesList('AUDIO:/en/gb')
+165515 Write PNG file '/screenshots/model-timer2-actions-summary.png'
+165907 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+165907 playHaptic(duration=10)
+165916 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+166548 ModelData::write('USER:/models/rarebear.bin') skipped (read-only mode)
+166550 RAM backup ...
+166558 RAM backup written (size=906)
+166706 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+171767 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+173587 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+173591 playHaptic(duration=10)
+173592 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+174796 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+174797 playHaptic(duration=10)
+174805 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+175396 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+175398 playHaptic(duration=10)
+175399 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+176596 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+176997 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+176998 playHaptic(duration=10)
+176999 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+179416 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+182837 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+183456 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+184666 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+185266 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+185267 playHaptic(duration=10)
+185271 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+186896 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+187296 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+187297 playHaptic(duration=10)
+187299 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+188106 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+189326 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+189746 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+190146 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+190546 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+190548 playHaptic(duration=10)
+190549 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+191346 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+192747 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+193546 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+193756 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+193757 playHaptic(duration=10)
+193759 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+194366 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+194368 playHaptic(duration=10)
+194369 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+194776 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+194777 playHaptic(duration=10)
+194788 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+195378 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+195381 playHaptic(duration=10)
+195392 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+195586 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+200036 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+200038 playHaptic(duration=10)
+200040 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+201036 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+201436 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+201439 playHaptic(duration=10)
+201447 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+202436 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+203656 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+203657 playHaptic(duration=10)
+203665 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+205876 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+206886 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+208497 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+209727 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+209728 playHaptic(duration=10)
+209729 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+210557 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+211356 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+211360 playHaptic(duration=10)
+211362 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+212366 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+212370 playHaptic(duration=10)
+212381 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+213376 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+213377 playHaptic(duration=10)
+213379 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+213776 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+213778 playHaptic(duration=10)
+213779 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+214196 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+214396 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+214400 playHaptic(duration=10)
+214411 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+216206 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+216211 playHaptic(duration=10)
+216223 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+217626 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+217626 playHaptic(duration=10)
+217628 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+218236 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+220266 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+220267 playHaptic(duration=10)
+220279 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+223430 playHaptic(duration=6)
+223926 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+223927 playHaptic(duration=10)
+223929 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+224336 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+225996 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+225997 playHaptic(duration=10)
+226007 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+226396 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+229826 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+229827 playHaptic(duration=10)
+229837 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+230026 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+232836 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+233236 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+233437 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+233438 playHaptic(duration=10)
+233441 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+233636 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+233637 playHaptic(duration=10)
+233645 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+233846 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+233847 playHaptic(duration=10)
+233849 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+234246 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+234249 playHaptic(duration=10)
+234262 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+234446 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+238486 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+238488 playHaptic(duration=10)
+238490 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+242746 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+242750 playHaptic(duration=10)
+242761 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+243956 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+245576 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+245805 playFile('AUDIO:/en/gb/timer-1-elapsed.wav', id=60, priority=1)
+248796 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+250206 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+251206 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+251606 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+253429 [en] playDuration(90s)
+253431 playFile('AUDIO:/en/gb/system/1.wav', id=0, priority=0)
+253441 playFile('AUDIO:/en/gb/system/minute.wav', id=0, priority=0)
+253441 playFile('AUDIO:/en/gb/system/and.wav', id=0, priority=0)
+253441 playFile('AUDIO:/en/gb/system/30.wav', id=0, priority=0)
+253441 playFile('AUDIO:/en/gb/system/seconds.wav', id=0, priority=0)
+253441 playHaptic(duration=6)
+255676 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+255677 playHaptic(duration=10)
+255679 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+256086 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+257916 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+259157 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+259966 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+259967 playHaptic(duration=10)
+259969 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+260566 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+261996 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+261997 playHaptic(duration=10)
+262000 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+264236 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+264237 playHaptic(duration=10)
+264239 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+265646 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+265647 playHaptic(duration=10)
+265656 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+265846 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+267496 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+267499 playHaptic(duration=10)
+267512 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+267696 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+269926 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+269928 playHaptic(duration=10)
+269929 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+270546 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+270547 playHaptic(duration=10)
+270549 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+270747 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+272156 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+272160 playHaptic(duration=10)
+272172 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+273424 playTone(fq=2250, dur=40, pause=40)
+273426 playHaptic(duration=6)
+273976 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+273977 playHaptic(duration=10)
+273980 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+274425 playTone(fq=2250, dur=40, pause=40)
+274427 playHaptic(duration=6)
+275197 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+275426 playTone(fq=2250, dur=40, pause=40)
+275429 playHaptic(duration=6)
+276206 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+276207 playHaptic(duration=10)
+276209 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+276426 playTone(fq=2250, dur=40, pause=40)
+276426 playHaptic(duration=6)
+277417 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+277425 playTone(fq=2250, dur=40, pause=40)
+277430 playHaptic(duration=6)
+278430 playTone(fq=2250, dur=40, pause=40)
+278432 playHaptic(duration=6)
+279425 playTone(fq=2250, dur=40, pause=40)
+279428 playHaptic(duration=6)
+280428 playTone(fq=2250, dur=40, pause=40)
+280428 playHaptic(duration=6)
+281433 playTone(fq=2250, dur=40, pause=40)
+281439 playHaptic(duration=6)
+281475 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+281475 playHaptic(duration=10)
+281477 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+281950 playHaptic(duration=6)
+282423 playTone(fq=2250, dur=40, pause=40)
+282425 playHaptic(duration=6)
+283305 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+283423 playFile('AUDIO:/en/gb/timer-2-elapsed.wav', id=0, priority=0)
+283425 playHaptic(duration=6)
+283506 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+283507 playHaptic(duration=10)
+283509 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+284106 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+284111 playHaptic(duration=10)
+284121 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+284716 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+285537 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+285539 playHaptic(duration=10)
+285553 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+286556 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+286556 playHaptic(duration=10)
+286558 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+286819 Write PNG file '/screenshots/model-timers-widget.png'
+287926 setReadonly(1)
+287927 WD suspended
+287939 ModelData::read('USER:/models/blaster.bin')
+287961 Bluetooth mode set to None
+287961 WD resumed
+287962 Home::doPreflightChecks()
+287966 playFile('AUDIO:/en/gb/espmcd.wav', id=75, priority=1)
+287981 playFile('AUDIO:/en/gb/espmcd.wav', id=76, priority=1)
+287988 [en] playDuration(180s)
+287993 playFile('AUDIO:/en/gb/system/3.wav', id=77, priority=1)
+287994 playFile('AUDIO:/en/gb/system/minutes.wav', id=77, priority=1)
+287998 playFile('AUDIO:/en/gb/stblof.wav', id=80, priority=1)
+288034 playFile('AUDIO:/en/gb/system/throttle-warning.wav', id=9, priority=0)
+288034 playFile('AUDIO:/en/gb/system/no-failsafe.wav', id=13, priority=0)
+288036 load_stb(BITMAPS:/models/Blaster.png) took 0us
+288315 Write PNG file '/screenshots/model-icon-trims.png'
+288466 Write PNG file '/screenshots/model-trims.png'
+288660 Write PNG file '/screenshots/model-trims-step-options.png'
+288874 Write PNG file '/screenshots/model-trims-mode-option-easy.png'
+288973 Write PNG file '/screenshots/model-trims-mode-option-fm.png'
+289094 Write PNG file '/screenshots/model-trims-mode-option-off.png'
+289158 RAM backup ...
+289158 RAM backup written (size=3649)
+289469 Write PNG file '/screenshots/model-trims-mode-elevator.png'
+289596 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+289597 playHaptic(duration=10)
+289603 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+289672 Write PNG file '/screenshots/model-trims-mode-elevator-custom-select.png'
+289796 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+289797 playHaptic(duration=10)
+289799 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+289845 Write PNG file '/screenshots/model-trims-mode-elevator-add-behaviour.png'
+289981 Write PNG file '/screenshots/model-trims-mode-elevator-edit-behaviour.png'
+290406 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+290407 playHaptic(duration=10)
+290418 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+290685 Write PNG file '/screenshots/model-trims-mode-elevator-edit-behaviour-unplugged.png'
+290819 Write PNG file '/screenshots/model-trims-mode-elevator-edit-behaviour-equal.png'
+290919 Write PNG file '/screenshots/model-trims-mode-elevator-edit-behaviour-offset.png'
+291073 Write PNG file '/screenshots/model-trims-mode-elevator-custom-speed.png'
+291792 Write PNG file '/screenshots/model-trims-mode-elevator-custom-select.png'
+291835 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+291835 playHaptic(duration=10)
+291837 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+291983 Write PNG file '/screenshots/model-trims-mode-elevator-custom-select-2.png'
+292035 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+292035 playHaptic(duration=10)
+292037 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+292220 Write PNG file '/screenshots/model-trims-mode-elevator-custom-speed-thermal.png'
+292321 Write PNG file '/screenshots/model-trims-mode-elevator-trim-to-subtrim-select.png'
+292457 Write PNG file '/screenshots/model-trims-mode-elevator-trim-to-subtrim-options.png'
+292836 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+292837 playHaptic(duration=10)
+292847 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+293418 Write PNG file '/screenshots/model-trims-mode-unplugged-select.png'
+293455 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+293455 playHaptic(duration=10)
+293457 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+293558 Write PNG file '/screenshots/model-trims-mode-unplugged-select.png'
+293655 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+293655 playHaptic(duration=10)
+293656 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+294056 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+294057 playHaptic(duration=10)
+294058 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+294075 Write PNG file '/screenshots/model-trims-cross-edit.png'
+294199 Write PNG file '/screenshots/model-trims-cross.png'
+294299 Write PNG file '/screenshots/model-trims-instant-trim.png'
+294402 Write PNG file '/screenshots/model-trims-move-trims-to-subtrims.png'
+294539 Write PNG file '/screenshots/model-trims-move-trims-to-subtrims-options.png'
+294737 Write PNG file '/screenshots/model-trims-add-trim-select.png'
+294866 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+294866 playHaptic(duration=10)
+294868 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+294879 Write PNG file '/screenshots/model-trims-add-trim-edit.png'
+295066 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+295066 playHaptic(duration=10)
+295074 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+295245 ModelData::write('USER:/models/blaster.bin') skipped (read-only mode)
+295246 RAM backup ...
+295255 RAM backup written (size=3649)
+295268 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+295269 playHaptic(duration=10)
+295271 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+295676 playFile('AUDIO:/en/gb/system/rssi-int-lost.wav', id=20, priority=0)
+295680 playHaptic(duration=10)
+295693 playFile('AUDIO:/en/gb/system/rssi-int-recovered.wav', id=20, priority=0)
+296187 setReadonly(1)
+296187 WD suspended
+296189 ModelData::read('USER:/models/rarebear.bin')
+296214 Bluetooth mode set to None
+296214 WD resumed
+296215 Home::doPreflightChecks()
+296271 playFile('AUDIO:/en/gb/system/throttle-warning.wav', id=9, priority=0)
+296271 playFile('AUDIO:/en/gb/system/no-failsafe.wav', id=13, priority=0)
+296272 playFile('AUDIO:/en/gb/system/switch-warning.wav', id=10, priority=0)
+296284 playFile('AUDIO:/en/gb/system/function-switches-warning.wav', id=24, priority=0)
+296291 playFile('AUDIO:/en/gb/system/pot-warning.wav', id=11, priority=0)
+296506 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+296896 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+308386 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+308956 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+309586 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+310207 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+311386 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+311866 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+312556 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+312966 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+313696 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+314406 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+314845 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+315446 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+316626 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+317727 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+318506 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+318976 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+319487 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+320186 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+320926 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+322226 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+322766 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+323246 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+323787 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+324387 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+325026 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+325496 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+326216 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+326867 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+327276 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+327896 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+328946 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+329756 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+330356 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+330766 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+331336 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+332516 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+332997 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+333406 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+333946 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+335646 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+336696 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+337286 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+338316 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+339476 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+339876 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+340376 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+340766 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+341196 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+341696 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+342176 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+343205 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+343616 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+344136 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+344966 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+345646 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+346306 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+346896 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+347346 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+347996 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+348576 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+349256 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+349766 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+350236 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+350726 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+351246 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+351816 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+352477 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+353065 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+353477 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+353936 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+354376 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+354906 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+355445 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+355976 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+356796 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+357266 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+357756 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+358176 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+359556 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+360056 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+360556 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+361046 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+361436 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+361895 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+362415 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+362866 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+363476 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+364436 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+364876 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+365306 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+365766 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+366786 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+367195 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+367947 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+368395 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+368976 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+370116 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+370586 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+371456 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+372216 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+372626 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+373276 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+373706 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+374106 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+374605 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+375005 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+375606 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+375985 Macro stop requested
+376066 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+376566 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+377015 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+377496 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+377996 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+378806 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+379486 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+380026 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+380986 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+381406 playFile('AUDIO:/en/gb/system/sensor-lost.wav', id=25, priority=0)
+open_in_new
+1234567891011121314151617181920212223242526
