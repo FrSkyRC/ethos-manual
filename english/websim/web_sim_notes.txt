@@ -181,6 +181,25 @@ mainview.lua -- (uses fwexample.bin)
 telemetry.lua -- (uses rarebear.bin)
 toolbars.lua (*** Note must be last because it generates a lua error ****)
 
+List of models used
+-------------------
+blaster.bin
+fwexample.bin
+geronimo.bin
+katana.bin
+ng2.bin
+oxalys.bin
+rarebear.bin 
+zBalanace.bin
+zblank.bin
+ultimate 60.bin
+xheli.bin
+
+List of models with Status widget
+---------------------------------
+fwexample.bin yes -- done
+
+
 Macros for other radios
 X20pro.lua (uses rarebear.bin)
 x20proaw.lua (uses fwexample.bin)

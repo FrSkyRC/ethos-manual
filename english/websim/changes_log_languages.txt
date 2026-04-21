@@ -43,4 +43,5 @@ start of 1.7.0 rev6
 -- 2026-04-13 model-lsw.lua update FR images only, no change to macro
 -- 2026-04-13 model-lsw.lua update IT images only, no change to macro
 -- 2026-04-13 model-lsw.lua update JP images only, no change to macro
---2026-04-20 Update all IT images
+-- 2026-04-20 Update all IT images
+-- 2026-04-20 Update all FR images
