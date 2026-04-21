@@ -45,3 +45,5 @@ start of 1.7.0 rev6
 -- 2026-04-13 model-lsw.lua update JP images only, no change to macro
 -- 2026-04-20 Update all IT images
 -- 2026-04-20 Update all FR images
+-- 2026-04-21 Update IT glases images only
+-- 2026-04-21 Update FR glases images only
