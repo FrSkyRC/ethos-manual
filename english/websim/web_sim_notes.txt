@@ -240,6 +240,7 @@ A. Radio backup
 3. Go to System/General and set the display and audio language
 4. Go to Timers and rename timer 1 to:
 de Batterie
+fr Batterie
 5. Download radio backup
 6. Unzip and add .md files 
 6. Rename and zip

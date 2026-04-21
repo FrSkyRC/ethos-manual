@@ -1,7 +1,0 @@
--- Running X20S main set of macros
--- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
--- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X20S_radio_backup.zip' or 'X20S_radio_backup_XX.zip' where XX=language
--- 3. Web Sim / Uploads 'Upload a JSON telemetry file' and select 'telemetry_settings.json'
--- 4. Web Sim / Uploads 'Start a macro' and select 'X20S_low_level_macros.zip'
--- 5. Web Sim / Uploads 'Start a macro' and select 'X20S_top_level_macros.zip' and run
--- 6. Web Sim / Downloads 'Save all screenshots' and browse to your 'assets_test' folder (it should be empty)
