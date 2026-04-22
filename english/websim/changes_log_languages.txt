@@ -47,3 +47,14 @@ start of 1.7.0 rev6
 -- 2026-04-20 Update all FR images
 -- 2026-04-21 Update IT glases images only
 -- 2026-04-21 Update FR glases images only
+-- 2026-04-22 update X20S_radio_backup_ES - remove trainer setup from rarebear
+-- 2026-04-22 update all ES iamges for ethos26 
+
+
+
+
+
+
+Change backups for rarebear
+rerun low batt
+rerun 
