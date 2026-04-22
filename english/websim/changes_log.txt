@@ -289,3 +289,5 @@ start of 1.7.0 rev6
 -- 2026-04-21 model-glasses.lua correct last line to use RTN
 -- 2026-04-22 rarebear.bin remove trainer setup
 -- 2026-04-21 Update EN trainer images only
+-- 2026-04-22 how-to-consumption.lua adapt for only 1 voice and images
+
