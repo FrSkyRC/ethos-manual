@@ -1,6 +1,7 @@
 
 -- 2026-04-04 first version
 -- 2026-04-06 adapt to scrolling bug fix
+-- 2026-04-21 correct last line to use RTN
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -93,4 +94,4 @@ simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- exit
 simulator.pressKey(KEY_RTN) -- exit
 simulator.screenshot("/screenshots/model-glasses-display-widget-2-vfr.png")
-simulator.pressKey(KEY_ENTER, 0.6) -- return home
+simulator.pressKey(KEY_RTN, 0.6) -- return home

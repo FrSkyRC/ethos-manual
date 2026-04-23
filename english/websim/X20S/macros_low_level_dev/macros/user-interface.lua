@@ -4,6 +4,7 @@
 -- 2025-08-04 fix switch-options.png and comments
 -- 2025-12-03 fix 'use a source'
 -- 2025-12-06 adapt for BT removal in Telemetry
+-- 2026-04-16 adapt for ethos 26 new style
 
 -- 0 = STICK_LEFT_HORIZONTAL (Rudder)
 -- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
@@ -69,19 +70,22 @@ simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(4)
 simulator.pressKey(KEY_ENTER)
 --simulator.turnRotaryEncoder(14)
-simulator.turnRotaryEncoder(14) -- select altitude instead of lipo (due to sensors changes)
+simulator.turnRotaryEncoder(8) -- select altitude instead of lipo (due to sensors changes)
 simulator.pressKey(KEY_ENTER, 0.6)
 simulator.turnRotaryEncoder(4)
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("/screenshots/keyboard-numbers-on-telemetry.png")
+simulator.pressKey(KEY_RTN) -- deselect
+simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN) -- back to telemetry
-simulator.turnRotaryEncoder(-5) 
+
 --
 -- source options in mixes
+simulator.turnRotaryEncoder(-5) 
 simulator.pressKey(KEY_ENTER) -- open mixes
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER, 0.6)

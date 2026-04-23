@@ -4,6 +4,8 @@
 -- 2025-10-26 adapt for new play audio priority
 -- 2025-12-06 adapt for BT removal in Telemetry
 -- 2026-02-19 adapt for SF workflow change
+-- 2026-04-17 adapt for ethos26
+-- 2026-04-22 adapt for only 1 voice
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -15,7 +17,7 @@ simulator.pressKey(KEY_MDL) --open model menu
 simulator.pressKey(KEY_PAGE) --2nd page
 simulator.turnRotaryEncoder(1) --scroll to telem
 simulator.pressKey(KEY_ENTER) --y
-simulator.turnRotaryEncoder(16) --scroll to current sensor
+simulator.turnRotaryEncoder(11) --scroll to current sensor
 simulator.screenshot("/screenshots/how-to-consumption-telemetry-current-sensor.png")
 simulator.pressKey(KEY_ENTER) --open
 simulator.turnRotaryEncoder(1) --scroll to edit
@@ -30,12 +32,13 @@ simulator.pressKey(KEY_RTN) --exit
 simulator.screenshot("/screenshots/how-to-consumption-telemetry-current-sensor-edit.png")
 --simulator.turnRotaryEncoder(-15) --scroll back to 
 simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-simulator.turnRotaryEncoder(-21) --scroll back to top
+simulator.pressKey(KEY_RTN) -- exit edit
+simulator.turnRotaryEncoder(-11) --scroll back to top
 -- simulator.screenshot("./screenshot3.png") -- place holder
 --
 -- start of calculated sensor
-simulator.turnRotaryEncoder(4) --scroll to create calc sensor
+simulator.pressKey(KEY_ENTER) -- open options
+simulator.turnRotaryEncoder(3) --scroll to create calc sensor
 simulator.screenshot("/screenshots/how-to-consumption-create-calc-sensor.png")
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(1) -- scroll to consumption
@@ -78,7 +81,7 @@ simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 ]]--
 --select telem active
-simulator.turnRotaryEncoder(8) --scroll to system event
+simulator.turnRotaryEncoder(9) --scroll to system event
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(3) --scroll to  - telem active
 simulator.pressKey(KEY_ENTER)
@@ -334,8 +337,8 @@ simulator.pressKey(KEY_ENTER)
 --
 --simulator.pressKey(KEY_RTN)
 simulator.screenshot("/screenshots/how-to-consumption-sf2-play-battlow.png")
---simulator.turnRotaryEncoder(2) --scroll to repeat
-simulator.turnRotaryEncoder(3) --scroll to repeat (skip priority)
+simulator.turnRotaryEncoder(2) -- scroll to repeat (voice greyed out)
+--simulator.turnRotaryEncoder() --scroll to repeat (skip priority)
 --set repeat
 simulator.pressKey(KEY_ENTER) --y
 simulator.touch(392, 446) --10s steps

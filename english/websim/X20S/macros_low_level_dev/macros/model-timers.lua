@@ -1,6 +1,7 @@
 -- 2024-12-03 simulator.setSwitch(0, 1) -- set switch A to mid for thr active
 -- 2025-04-08  due to new thr mix interlock must set thr to -100 first, then to mid; select new audio files
 -- 2025-08-14 add comments
+-- 2026-04-19 remove retrun home at end, was hanging up macro
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -252,6 +253,7 @@ simulator.pressKey(KEY_RTN, 1) -- return home
 -- simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_PAGE) -- to main screen 2
 simulator.sleep(120) -- wait for timer 2 to time out 
-simulator.pressKey(KEY_RTN) -- wake up screen
+--simulator.pressKey(KEY_RTN) -- wake up screen
 simulator.screenshot("/screenshots/model-timers-widget.png")
-simulator.pressKey(KEY_RTN, 1) -- return home
+simulator.sleep(1) -- wait 
+--simulator.pressKey(KEY_RTN, 1) -- return home

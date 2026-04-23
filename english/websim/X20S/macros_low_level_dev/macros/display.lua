@@ -3,6 +3,8 @@
 -- 2025-08-09 add comments
 -- 2025-08-15 enable dofile again
 -- 2025-09-09 add bottombar-glider.png
+-- 2026-04-14 adapt to new config styles
+-- 2026-04-15 adapt to new config styles new sshots
 
 -- 0 = STICK_LEFT_HORIZONTAL (Rudder)
 -- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
@@ -15,6 +17,34 @@
 dofile("/macros/common.lua")
 -- simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
+-- use a blank model for the initial screenshots
+simulator.loadModel("zblank.bin")
+-- load user defined checklist
+simulator.sleep(1) -- wait for checklist to load
+--simulator.screenshot("/screenshots/model-checklist-user-checklist.png")
+simulator.pressKey(KEY_ENTER) --ack alert
+
+-- open configure sreens
+simulator.pressKey(KEY_DISP) -- open configure sreens
+-- simulator.screenshot("/screenshots/display-home.png")
+--simulator.turnRotaryEncoder(2)
+--simulator.pressKey(KEY_ENTER)
+--simulator.screenshot("/screenshots/display-change-source.png")
+--simulator.pressKey(KEY_RTN)
+--simulator.turnRotaryEncoder(8) --scroll to new screen
+simulator.screenshot("/screenshots/display-home.png")
+simulator.turnRotaryEncoder(1) --scroll to configure of first widget
+--simulator.pressKey(KEY_ENTER) --y
+simulator.screenshot("/screenshots/display-widget-bitmap-config-selected.png")
+simulator.pressKey(KEY_RTN) -- deselect
+simulator.pressKey(KEY_PAGE) -- go to '+' button
+simulator.pressKey(KEY_ENTER) -- add screen
+simulator.turnRotaryEncoder(4) --scroll to 9 panel
+simulator.pressKey(KEY_ENTER) -- select
+simulator.screenshot("/screenshots/display-home-screen2.png")
+simulator.pressKey(KEY_RTN, 1)
+
+
 simulator.loadModel("geronimo.bin")
 
 simulator.setAnalog(1, 80)
@@ -26,6 +56,9 @@ simulator.setAnalog(3, 40)
 
 simulator.pressKey(KEY_ENTER) --clear warning
 simulator.pressKey(KEY_DISP) --go to configure screens
+
+
+
 simulator.turnRotaryEncoder(1) --scroll to configure of first widget
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(1) --scroll to widget select(bitmap is default)
@@ -144,10 +177,12 @@ simulator.setAnalog(1, 60)
 simulator.pressKey(KEY_RTN) --return from w
 simulator.pressKey(KEY_RTN)
 
-simulator.turnRotaryEncoder(7) --scroll to screen 2
-simulator.pressKey(KEY_ENTER) --open
-simulator.pressKey(KEY_ENTER) --open config options 
+--simulator.turnRotaryEncoder(7) --scroll to screen 2
+simulator.pressKey(KEY_PAGE) -- page to screen 2
+--simulator.pressKey(KEY_ENTER) --open
+simulator.pressKey(KEY_ENTER, 0.6) --open config options 
 simulator.screenshot("/screenshots/display-screen-config-options.png")
+simulator.pressKey(KEY_RTN) -- exit options
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)

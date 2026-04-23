@@ -2,6 +2,7 @@
 -- 2025-07-30 add full comments
 -- 2025-10-11 remove one too many RTN due to bug
 -- 2025-12-03 adapt to new curves parameters
+-- 2026-04-17 adapt to ethos26
 --
 -- 0 = STICK_LEFT_HORIZONTAL (Rudder)
 -- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
@@ -55,6 +56,7 @@ simulator.pressKey(KEY_ENTER) -- open mixes
 simulator.screenshot("/screenshots/tut-heli-eg-mixes.png")
 simulator.turnRotaryEncoder(1) -- scroll to ail mix
 simulator.screenshot("/screenshots/tut-heli-eg-mixes-ail.png")
+simulator.pressKey(KEY_RTN, 1)
 --
 -- now load the preconfigured heli example model
 simulator.loadModel("xheli.bin")

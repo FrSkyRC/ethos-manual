@@ -4,6 +4,8 @@
 -- 2025-10-26 adapt for new play audio priority
 -- 2025-12-06 adapt for BT removal in Telemetry
 -- 2026-02-19 adapt for SF workflow change
+-- 2026-04-17 adapt to ethos26
+-- 2026-04-21 adapt for only 1 voice
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -15,16 +17,17 @@ simulator.pressKey(KEY_MDL) --open model menu
 simulator.pressKey(KEY_PAGE) -- 2nd page
 simulator.turnRotaryEncoder(1) -- highlight telemetry
 simulator.pressKey(KEY_ENTER) --y
-simulator.turnRotaryEncoder(12) --scroll to lipo sensor
+simulator.turnRotaryEncoder(6) --scroll to lipo sensor
 simulator.screenshot("/screenshots/how-to-low-batt-telemetry-lipo-sensor.png")
 simulator.pressKey(KEY_RTN) --deselect
-simulator.pressKey(KEY_RTN) --return to telem icon
+simulator.pressKey(KEY_RTN) --
 simulator.pressKey(KEY_RTN) --deselect icon
+simulator.pressKey(KEY_RTN) --return to telem icon
 
 --simulator.pressKey(KEY_ENTER)
 --simulator.pressKey(KEY_MDL)
 --simulator.pressKey(KEY_PAGE)
-simulator.turnRotaryEncoder(3) --scroll to lsw icon
+simulator.turnRotaryEncoder(2) --scroll to lsw icon
 simulator.pressKey(KEY_ENTER) --open
 simulator.turnRotaryEncoder(1) --scroll to add lsw button
 simulator.pressKey(KEY_ENTER) --open
@@ -82,7 +85,7 @@ simulator.pressKey(KEY_RTN) --back
 --simulator.screenshot("/screenshots/how-to-low-batt-lsw-battlow-lipo-lowest.png")
 simulator.turnRotaryEncoder(2) --scroll to delay
 simulator.pressKey(KEY_ENTER) -- edit delay before active
-simulator.touch(391, 447) --set 1s steps
+--simulator.touch(391, 447) --set 1s steps
 simulator.turnRotaryEncoder(4) --4s
 
 simulator.pressKey(KEY_RTN) --back
@@ -127,8 +130,8 @@ simulator.pressKey(KEY_ENTER) --confirm BattLow
 --
 simulator.screenshot("/screenshots/how-to-low-batt-sf-battlow.png")
 --simulator.turnRotaryEncoder(5)
---simulator.turnRotaryEncoder(2) -- scroll to repeat
-simulator.turnRotaryEncoder(3) -- scroll to repeat
+simulator.turnRotaryEncoder(2) -- scroll to repeat (voice greyed out)
+--simulator.turnRotaryEncoder(3) -- scroll to repeat
 
 simulator.pressKey(KEY_ENTER) -- edit
 simulator.touch(392, 446) -- set 10s steps

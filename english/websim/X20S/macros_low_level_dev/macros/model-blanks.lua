@@ -3,6 +3,7 @@
 -- 2025-07-22 adapt macro to new Ethos 1.7 source select
 -- 2025-07-28 adapt to new '+' add button for mixes, lsw, sf, vars
 -- 2025-09-09 add bottombar-heli.png and bottombar-multirotor.png
+-- 2026-04-15 adapt to new configure screens style
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -35,17 +36,6 @@ simulator.screenshot("/screenshots/model-vars-add.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN) -- back to model menu
---
--- open configure sreens
-simulator.pressKey(KEY_DISP) -- open configure sreens
--- simulator.screenshot("/screenshots/display-home.png")
---simulator.turnRotaryEncoder(2)
---simulator.pressKey(KEY_ENTER)
---simulator.screenshot("/screenshots/display-change-source.png")
---simulator.pressKey(KEY_RTN)
-simulator.turnRotaryEncoder(8) --scroll to new screen
-simulator.screenshot("/screenshots/display-home.png")
-simulator.pressKey(KEY_RTN, 1) -- return home
 --
 -- get heli library screenshot
 simulator.pressKey(KEY_MDL) --open model menu
