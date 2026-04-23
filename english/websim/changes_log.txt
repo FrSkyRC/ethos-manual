@@ -293,4 +293,5 @@ start of 1.7.0 rev6
 -- 2026-04-23 update X20S_radio_backup_EN
 -- 2026-04-23 update X20S_radio_backup_DE
 -- 2026-04-23 update X20S_radio_backup_ES
+-- 2026-04-23 update X20S_radio_backup_FR
 
