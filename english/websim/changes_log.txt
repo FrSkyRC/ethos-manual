@@ -295,3 +295,5 @@ start of 1.7.0 rev6
 -- 2026-04-23 update X20S_radio_backup_ES
 -- 2026-04-23 update X20S_radio_backup_FR
 -- 2026-04-23 update X20S_radio_backup_IT
+-- 2026-05-01 model-edit.lua revert s.port to previous and remove unnecessary screenshots
+-- 2026-05-01 telemetry.lua adapt for fbus via sport connector and long press options
