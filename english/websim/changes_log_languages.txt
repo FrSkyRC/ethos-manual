@@ -58,6 +58,7 @@ start of 1.7.0 rev6
 -- 2026-04-22 update X20S_radio_backup_JP - remove trainer setup from rarebear
 -- 2026-04-22 update all JP iamges for ethos26 
 -- 2026-05-01 model-edit.lua, telemetry.lua -- DE images only
+-- 2026-05-01 model-edit.lua, telemetry.lua -- ES images only
 
 
 
