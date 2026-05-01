@@ -60,6 +60,7 @@ start of 1.7.0 rev6
 -- 2026-05-01 model-edit.lua, telemetry.lua -- DE images only
 -- 2026-05-01 model-edit.lua, telemetry.lua -- ES images only
 -- 2026-05-01 model-edit.lua, telemetry.lua -- FR images only
+-- 2026-05-01 model-edit.lua, telemetry.lua -- IT images only
 
 
 
