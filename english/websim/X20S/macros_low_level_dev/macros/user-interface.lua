@@ -5,6 +5,7 @@
 -- 2025-12-03 fix 'use a source'
 -- 2025-12-06 adapt for BT removal in Telemetry
 -- 2026-04-16 adapt for ethos 26 new style
+-- 2026-05-08 adapt for fn sw's added to source categories
 
 -- 0 = STICK_LEFT_HORIZONTAL (Rudder)
 -- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
@@ -162,7 +163,7 @@ simulator.pressKey(KEY_RTN) -- close the dialog
 -- new thr trim select
 simulator.pressKey(KEY_ENTER) -- open source select
 simulator.pressKey(KEY_RTN) -- exit member select
-simulator.turnRotaryEncoder(2) -- scroll to trims
+simulator.turnRotaryEncoder(3) -- scroll to trims
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(2) -- scroll to thr trim
 simulator.pressKey(KEY_ENTER) --y

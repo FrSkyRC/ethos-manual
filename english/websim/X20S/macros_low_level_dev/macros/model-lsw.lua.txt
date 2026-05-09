@@ -5,7 +5,7 @@
 -- 2025-12-05 add simulator.touch(32, 453) -- scroll back to 0.1 steps due to bug, also scroll to use a source
 -- 2025-12-15 revert step size to 0.1
 -- 2026-03-13 update for 
--- 2026-05-09 model-lsw-ignore-trainer now done by trainer-take-back.lua 
+-- 2026-05-07 adapt for fn sw's added to source categories
 
 -- This macro relies on logic switch TestC for testing logic switch coinfirmation before ture and false.
 
@@ -231,7 +231,7 @@ simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 ]]--
 simulator.pressKey(KEY_RTN) -- back to category
-simulator.turnRotaryEncoder(8) --scroll to timers
+simulator.turnRotaryEncoder(9) --scroll to timers
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(1) --scroll to timer 2
 simulator.pressKey(KEY_ENTER) --y
@@ -269,10 +269,6 @@ simulator.pressKey(KEY_ENTER) -- open lsw
 simulator.turnRotaryEncoder(2) -- scroll to add
 simulator.pressKey(KEY_ENTER) --y
 ]]--
---
--- this section below no longer needed, now done by trainer-take-back.lua
---[[
-
 -- add new lsw
 simulator.touch(571, 91) -- add new lsw button '+'
 --
@@ -302,6 +298,17 @@ simulator.turnRotaryEncoder(1) --scroll to source
 simulator.pressKey(KEY_ENTER) --y
 simulator.pressKey(KEY_ENTER) --open
 -- select elevator
+--[[
+simulator.turnRotaryEncoder(1)
+simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(1)
+simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(1)
+simulator.pressKey(KEY_ENTER)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+]]--
 simulator.turnRotaryEncoder(1) -- scroll to elevator
 simulator.pressKey(KEY_ENTER) -- y
 
@@ -318,5 +325,5 @@ simulator.pressKey(KEY_ENTER) --y
 simulator.screenshot("/screenshots/model-lsw-ignore-trainer-input.png")
 simulator.pressKey(KEY_RTN) --exit
 simulator.screenshot("/screenshots/model-lsw-ignore-trainer-input-enabled.png")
-]]--
+
 simulator.pressKey(KEY_RTN, 1)

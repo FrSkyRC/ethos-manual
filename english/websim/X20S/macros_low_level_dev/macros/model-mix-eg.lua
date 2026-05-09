@@ -1,5 +1,6 @@
 -- 2025-07-23 -- adapt macro to new Ethos 1.7 source select
 -- 2025-08-0 adapt for '+' add and add comments
+-- 2026-05-07 adapt for adding fn sw's to source categories, adapt to long press options
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -30,7 +31,7 @@ simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- scroll to add action
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
+simulator.turnRotaryEncoder(1) -- scroll to active condition
 simulator.pressKey(KEY_ENTER)
 -- select lsw 3
 --[[
@@ -47,14 +48,14 @@ simulator.pressKey(KEY_RTN)
 ]]--
 simulator.turnRotaryEncoder(5) --scroll to lsw
 simulator.pressKey(KEY_ENTER) --y
-simulator.turnRotaryEncoder(0) --scroll to ls0
+simulator.turnRotaryEncoder(0) --scroll to ls0 vfrlow
 simulator.pressKey(KEY_ENTER) --y
 --
-simulator.touch(43, 23)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
+simulator.touch(43, 23) -- exit
+simulator.turnRotaryEncoder(1) -- scroll to add new action
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(1) -- scroll to active condition
+simulator.pressKey(KEY_ENTER) -- edit
 -- select lsw 3 and its inverse
 --[[
 simulator.turnRotaryEncoder(1)
@@ -74,10 +75,12 @@ simulator.turnRotaryEncoder(0) --scroll to ls0
 simulator.pressKey(KEY_ENTER) --y
 --
 simulator.pressKey(KEY_ENTER, 1) -- invoke invert dialog
+simulator.turnRotaryEncoder(2) -- scroll to options
+simulator.pressKey(KEY_ENTER) -- open
 simulator.turnRotaryEncoder(1) -- scroll to invert
 simulator.pressKey(KEY_ENTER) -- invert
 simulator.pressKey(KEY_RTN)
-simulator.turnRotaryEncoder(2) -- scroll to while active
+simulator.turnRotaryEncoder(2) -- scroll to weight
 simulator.pressKey(KEY_ENTER)
 simulator.touch(392, 443) -- 10%
 simulator.touch(392, 443) -- 100%
@@ -108,7 +111,7 @@ simulator.pressKey(KEY_ENTER)
 --[[
 simulator.turnRotaryEncoder(1) -- scroll to category
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(12) -- scroll to special
+simulator.turnRotaryEncoder(13) -- scroll to member special
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(2) -- scroll scroll to members
 simulator.pressKey(KEY_ENTER)

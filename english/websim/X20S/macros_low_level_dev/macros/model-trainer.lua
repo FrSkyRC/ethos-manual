@@ -2,6 +2,7 @@
 -- 2025-08-04 add comments
 -- 2025-09-04 increase wait for load to 6s
 -- 2026-04-02 revrt back to trainer from links
+-- 2026-05-08 adapt for long press changes
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -48,17 +49,24 @@ simulator.screenshot("/screenshots/model-trainer-cable-master-channel-edit.png")
 ]]--
 simulator.pressKey(KEY_RTN) -- return from edit
 simulator.pressKey(KEY_RTN) -- deselect
--- simulator.pressKey(KEY_RTN)
--- simulator.pressKey(KEY_RTN)
--- simulator.pressKey(KEY_RTN) -- return to model / trainer 
+simulator.pressKey(KEY_RTN)
+--simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN) -- return to model / trainer 
 --
 -- now remove cable trainer
 -- simulator.pressKey(KEY_ENTER) -- open trainer
-simulator.touch(112, 86) -- tap on cable trainer tab
+--simulator.touch(112, 86) -- tap on cable trainer tab
+simulator.pressKey(KEY_ENTER) -- open trainer
+simulator.pressKey(KEY_ENTER, 0.6) -- long press for options
 simulator.turnRotaryEncoder(1) -- scroll to copy
 simulator.screenshot("/screenshots/model-trainer-cable-master-copy-select.png")
 simulator.pressKey(KEY_ENTER) -- yes copy
-simulator.touch(112, 86) -- tap on cable trainer tab
+--simulator.touch(112, 86) -- tap on cable trainer tab
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN) -- return to model / trainer 
+simulator.pressKey(KEY_ENTER) -- open trainer
+simulator.pressKey(KEY_ENTER, 0.6) -- long press for options
 simulator.turnRotaryEncoder(3) -- scroll to delete
 simulator.screenshot("/screenshots/model-trainer-cable-master-delete-select.png")
 simulator.pressKey(KEY_RTN) -- return from edit
@@ -120,7 +128,8 @@ simulator.screenshot("/screenshots/model-trainer-bt-master-channel-edit.png")
 simulator.pressKey(KEY_RTN) -- return from edit
 simulator.pressKey(KEY_RTN) -- deselect
 --simulator.touch(112, 86) -- tap on bt trainer tab
-simulator.touch(294, 87) -- tap on bt trainer tab
+--simulator.touch(294, 87) -- tap on bt trainer tab
+simulator.pressKey(KEY_ENTER, 0.6) -- long press for options
 simulator.turnRotaryEncoder(1) -- scroll to paste
 simulator.screenshot("/screenshots/model-trainer-bt-master-options.png")
 simulator.turnRotaryEncoder(2) -- scroll to delete
@@ -128,10 +137,11 @@ simulator.screenshot("/screenshots/model-trainer-bt-master-delete-select.png")
 simulator.pressKey(KEY_ENTER) -- yes 
 simulator.pressKey(KEY_ENTER) -- confirm delete bt
 -- now delete cable trainer
-simulator.touch(112, 86) -- tap on cable trainer tab
+--simulator.touch(112, 86) -- tap on cable trainer tab
+simulator.pressKey(KEY_ENTER, 0.6) -- long press for options
 simulator.turnRotaryEncoder(3) -- scroll to delete
 simulator.pressKey(KEY_ENTER) -- yes 
-simulator.pressKey(KEY_ENTER) -- confirm delete bt
+simulator.pressKey(KEY_ENTER) -- confirm delete cable
 
 simulator.pressKey(KEY_RTN, 0.6) -- return to home
 --

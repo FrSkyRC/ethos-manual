@@ -4,6 +4,7 @@
 -- 2025-12-06 adapt for BT removed from this screen
 -- 2025-04-11 adapt for new tabs in Telemetry
 -- 2026-05-01 adapt for fbus via sport connector and long press options
+-- 2026-05-07 adapt for fn sw's added to source categories
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -242,7 +243,7 @@ simulator.pressKey(KEY_ENTER) -- confirm
 -- now we are back on the source param
 -- select vfas source
 simulator.pressKey(KEY_ENTER) -- edit source
-simulator.turnRotaryEncoder(11) -- scroll to telem
+simulator.turnRotaryEncoder(12) -- scroll to telem
 simulator.pressKey(KEY_ENTER) -- y
 simulator.turnRotaryEncoder(21) -- scroll to vfas
 simulator.pressKey(KEY_ENTER) -- y
@@ -256,7 +257,7 @@ simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- scroll to source
 -- select current
 simulator.pressKey(KEY_ENTER) -- edit source
-simulator.turnRotaryEncoder(11) -- scroll to telem
+simulator.turnRotaryEncoder(12) -- scroll to telem
 simulator.pressKey(KEY_ENTER) -- y
 simulator.turnRotaryEncoder(13) -- scroll to current
 simulator.pressKey(KEY_ENTER) --
@@ -270,7 +271,7 @@ simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- scroll to source
 -- select maxpower custom sensor
 simulator.pressKey(KEY_ENTER) -- edit source
-simulator.turnRotaryEncoder(11) -- scroll to telem
+simulator.turnRotaryEncoder(12) -- scroll to telem
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(-1) -- reverse scroll to maxpower
 simulator.pressKey(KEY_ENTER)
@@ -334,7 +335,7 @@ simulator.turnRotaryEncoder(7) -- scroll to source
 simulator.pressKey(KEY_ENTER) -- y
 
 -- add rssi sensor
-simulator.turnRotaryEncoder(11) -- scroll to telem
+simulator.turnRotaryEncoder(12) -- scroll to telem
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(0) -- scroll to rssi 2.4g
 simulator.pressKey(KEY_ENTER)

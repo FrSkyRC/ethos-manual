@@ -297,3 +297,14 @@ start of 1.7.0 rev6
 -- 2026-04-23 update X20S_radio_backup_IT
 -- 2026-05-01 model-edit.lua revert s.port to previous and remove unnecessary screenshots
 -- 2026-05-01 telemetry.lua adapt for fbus via sport connector and long press options
+-- 2026-05-08 user-interface.lua -- adapt for fn sw's added to source categories
+-- 2026-05-07 display.lue -- adapt for fn sw's added to source categories
+-- 2026-05-07 how-to-butterfly.lua -- adapt for fn sw's added to source categories
+-- 2026-05-07 how-to-consumption.lua -- adapt for fn sw's added to source categories
+-- 2026-05-07 how-to-low-batt.lua -- adapt for fn sw's added to source categories
+-- 2026-05-07 model-glassses.lua -- adapt for fn sw's added to source categories
+-- 2026-05-07 model-mix-eg.lua -- adapt for adding fn sw's to source categories, adapt to long press options
+-- 2026-05-07 telemetry.lua -- adapt for fn sw's added to source categories
+-- 2026-05-08 model-trainer.lua -- adapt for long press changes
+-- 2025-11-27 model-mixes-free.lua -- adapt for use a source options and new curve parameter order
+-- 2026-05-09 model-lsw-ignore-trainer now done by trainer-take-back.lua 

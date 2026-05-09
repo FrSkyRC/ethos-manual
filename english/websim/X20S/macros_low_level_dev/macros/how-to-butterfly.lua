@@ -5,6 +5,7 @@
 -- 2025-09-04 introduce simulator.enterText("FlapOffset")
 -- 2025-10-11 remove one too many RTN due to bug
 -- 2025-11-27 adapt for use a source options and new curve parameter order
+-- 2026-05-07 adapt for fn sw's added to source categories
 
 -- 0 = STICK_LEFT_HORIZONTAL (Rudder)
 -- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
@@ -260,7 +261,7 @@ simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 ]]--
-simulator.turnRotaryEncoder(12) --scroll to special value
+simulator.turnRotaryEncoder(11) --scroll to special value
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) --scroll to 0
 simulator.pressKey(KEY_ENTER)
@@ -506,7 +507,7 @@ simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 ]]--
 -- select ch20
-simulator.turnRotaryEncoder(6) -- scroll to channels
+simulator.turnRotaryEncoder(7) -- scroll to channels
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(19) --- scroll to ch20
 simulator.screenshot("/screenshots/how-to-butterfly-mix-ele-use-ch20.png")

@@ -3,6 +3,7 @@
 -- 2025=11-16 add new feature to select a number as the source to a free mix
 -- 2025-11-16 also adapt for 'use a source' dialog having 4 lines
 -- 2025-12-04 remove set 1% steps
+-- 2025-11-27 adapt for use a source options and new curve parameter order
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -448,7 +449,7 @@ simulator.pressKey(KEY_RTN)
 --simulator.pressKey(KEY_ENTER) -- confirm
 --select thr trim
 simulator.pressKey(KEY_ENTER) -- open 
-simulator.turnRotaryEncoder(5) -- scroll to trim
+simulator.turnRotaryEncoder(6) -- scroll to trim
 simulator.pressKey(KEY_ENTER) -- confirm
 simulator.turnRotaryEncoder(2) -- scroll to thr trim
 simulator.pressKey(KEY_ENTER) -- confirm
