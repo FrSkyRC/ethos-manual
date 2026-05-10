@@ -308,3 +308,4 @@ start of 1.7.0 rev6
 -- 2026-05-08 model-trainer.lua -- adapt for long press changes
 -- 2025-11-27 model-mixes-free.lua -- adapt for use a source options and new curve parameter order
 -- 2026-05-09 model-lsw-ignore-trainer now done by trainer-take-back.lua 
+-- 2026-05-09 model-mixes.lua -- use oxalys model for thr options with ignore trainer
