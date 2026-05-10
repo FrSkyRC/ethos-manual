@@ -5,12 +5,12 @@
 macros_low_level_dev - contains low level macros
 macros_high_level_dev - contains high level macros
 model-lua_scripts_dev -- contains lua scripts for model-lua section
-macros_working_folder -- this is the working folder for running the above scripts in the sim
+macros_working_folder -- this is the working folder for running the above scripts in the sim (only on local pc, not in repo because they are just copies in one place for convenience)
 
 Running the macros
 ------------------
 -- Running X20S main set of macros
--- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
+-- 1. Reload https://ethos.studio1247.com/nightly26/X20S_FCC?reset=all
 -- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X20S_radio_backup.zip'
 -- 3. Web Sim / Uploads 'Upload a JSON telemetry file' and select 'telemetry_settings.json'
 -- 4. Web Sim / Uploads 'Start a macro' and select 'X20S_low_level_macros.zip'
@@ -20,7 +20,7 @@ Running the macros
 
 -- Running X20S macro for model-lua
 -- Different because additional scripts are needed.
--- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
+-- 1. Reload https://ethos.studio1247.com/nightly26/X20S_FCC?reset=all
 -- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X20S_radio_backup.zip'
 -- 3. Web Sim / Uploads 'Upload a JSON telemetry file' and select 'telemetry_settings.json'
 -- 4. Web Sim / Uploads 'Start a macro' and select 'model-lua_scripts'
@@ -31,7 +31,7 @@ Running the macros
 -- Running individual X20S high level macros
 -- Used for example to update only a few specific screeenshots
 --
--- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
+-- 1. Reload https://ethos.studio1247.com/nightly26/X20S_FCC?reset=all
 -- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X20S_radio_backup.zip'
 -- 3. Web Sim / Uploads 'Upload a JSON telemetry file' and select 'telemetry_settings.json'
 -- 4. Web Sim / Uploads 'Start a macro' and select 'X20S_low_level_macros.zip'
@@ -78,7 +78,7 @@ mainview.zip
 
 
 -- Running X20Pro main macro
--- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
+-- 1. Reload https://ethos.studio1247.com/nightly26/X20S_FCC?reset=all
 -- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X20Pro_radio_backup.zip'
 -- 3. Web Sim / Uploads 'Upload a JSON telemetry file' and select 'telemetry_settings.json'
 -- 4. Web Sim / Uploads 'Start a macro' and select 'X20Pro.zip' and run
@@ -86,7 +86,7 @@ mainview.zip
 -- 6. In '/Users/lotharthole/local/Ethos/manual/' run cpimages2.sh for an images diff
 
 -- Running X20ProAw main macro
--- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
+-- 1. Reload https://ethos.studio1247.com/nightly26/X20S_FCC?reset=all
 -- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X20ProAW_radio_backup.zip'
 -- 3. Web Sim / Uploads 'Upload a JSON telemetry file' and select 'telemetry_settings.json'
 -- 4. Web Sim / Uploads 'Start a macro' and select 'X20ProAW.zip' and run
@@ -94,7 +94,7 @@ mainview.zip
 -- 6. In '/Users/lotharthole/local/Ethos/manual/' run cpimages2.sh for an images diff
 
 -- Running X20RS main macro
--- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
+-- 1. Reload https://ethos.studio1247.com/nightly26/X20S_FCC?reset=all
 -- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X20RS_radio_backup.zip'
 -- 3. Web Sim / Uploads 'Upload a JSON telemetry file' and select 'telemetry_settings.json'
 -- 4. Web Sim / Uploads 'Start a macro' and select 'x20rs.zip' and run
@@ -102,7 +102,7 @@ mainview.zip
 -- 6. In '/Users/lotharthole/local/Ethos/manual/' run cpimages2.sh for an images diff
 
 -- Running X18S main macro
--- 1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
+-- 1. Reload https://ethos.studio1247.com/nightly26/X20S_FCC?reset=all
 -- 2. Web Sim / Uploads 'Restore a radio backup' and select 'X18S_radio_backup.zip'
 -- 3. Web Sim / Uploads 'Upload a JSON telemetry file' and select 'telemetry_settings.json'
 -- 4. Web Sim / Uploads 'Start a macro' and select 'X18S.zip' and run
@@ -235,7 +235,7 @@ weasel.bin used for model/select since not visible in select screen
 To make other languages
 -----------------------
 A. Radio backup
-1. Reload https://ethos.studio1247.com/nightly17/X20S_FCC?reset=all
+1. Reload https://ethos.studio1247.com/nightly26/X20S_FCC?reset=all
 2. Web Sim / Uploads 'Restore a radio backup' and select 'X20S_radio_backup.zip'
 3. Go to System/General and set the display and audio language
 4. Go to Timers and rename timer 1 to:
