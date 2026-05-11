@@ -65,6 +65,7 @@ start of 1.7.0 rev6
 -- 2026-05-11 update all DE images for ethos26 
 -- 2026-05-11 update all ES images for ethos26 
 -- 2026-05-11 update all IT images for ethos26 
+-- 2026-05-11 update all JP images for ethos26 
 
 
 
@@ -72,6 +73,4 @@ start of 1.7.0 rev6
 
 
 
-Change backups for rarebear
-rerun low batt
-rerun 
+
