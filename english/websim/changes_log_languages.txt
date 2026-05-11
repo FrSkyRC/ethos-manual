@@ -62,6 +62,7 @@ start of 1.7.0 rev6
 -- 2026-05-01 model-edit.lua, telemetry.lua -- FR images only
 -- 2026-05-01 model-edit.lua, telemetry.lua -- IT images only
 -- 2026-05-01 model-edit.lua, telemetry.lua -- JP images only
+-- 2026-05-11 update all DE iamges for ethos26 
 
 
 
