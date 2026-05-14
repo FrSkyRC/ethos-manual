@@ -3,6 +3,7 @@
 -- 2025-08-03 add missing comments
 -- 2025-11-26 adapt for value edit options, add sequencer mix
 -- 2026-02-19 add missing RTN line 144
+-- 2026-05-09 use oxalys model for thr options with ignore trainer
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -73,7 +74,7 @@ simulator.screenshot("/screenshots/model-mixes-thr.png")
 
 simulator.turnRotaryEncoder(1) -- scroll to input
 simulator.pressKey(KEY_ENTER, 0.6) -- long ENT open options
-simulator.screenshot("/screenshots/model-mixes-thr-options.png")
+--simulator.screenshot("/screenshots/model-mixes-thr-options.png") --see below
 simulator.pressKey(KEY_RTN) -- back to mix
 
 
@@ -152,5 +153,22 @@ simulator.pressKey(KEY_ENTER) -- open menu
 simulator.turnRotaryEncoder(2) -- scroll to edit bkwd curve
 simulator.pressKey(KEY_ENTER) -- edit
 simulator.screenshot("/screenshots/model-mixes-seq-op1-curve-bkwd.png")
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN, 1)
+--
+-- now do thr options when trainer active
+simulator.loadModel("oxalys.bin")
+
+simulator.pressKey(KEY_ENTER) -- ack alert
+simulator.pressKey(KEY_MDL) -- open model menu
+simulator.turnRotaryEncoder(4) -- scroll to mixes
+simulator.pressKey(KEY_ENTER) -- open
+simulator.turnRotaryEncoder(3) -- scroll to thr mix
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(1) -- scroll to edit
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(2) -- scroll to input
+simulator.pressKey(KEY_ENTER, 0.6) -- long ENT open options
+simulator.screenshot("/screenshots/model-mixes-thr-options.png") 
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN, 1)

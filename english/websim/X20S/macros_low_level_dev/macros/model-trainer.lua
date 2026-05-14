@@ -3,6 +3,7 @@
 -- 2025-09-04 increase wait for load to 6s
 -- 2026-04-02 revrt back to trainer from links
 -- 2026-05-08 adapt for long press changes
+-- 2026-05-13 remove surplus rtn statements due to bug fix
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -47,9 +48,9 @@ simulator.screenshot("/screenshots/model-trainer-cable-master-channels.png")
 simulator.pressKey(KEY_ENTER) -- open ch1 edit
 simulator.screenshot("/screenshots/model-trainer-cable-master-channel-edit.png")
 ]]--
-simulator.pressKey(KEY_RTN) -- return from edit
+--simulator.pressKey(KEY_RTN) -- return from edit
 simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN)
+--simulator.pressKey(KEY_RTN)
 --simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN) -- return to model / trainer 
 --
@@ -62,8 +63,8 @@ simulator.turnRotaryEncoder(1) -- scroll to copy
 simulator.screenshot("/screenshots/model-trainer-cable-master-copy-select.png")
 simulator.pressKey(KEY_ENTER) -- yes copy
 --simulator.touch(112, 86) -- tap on cable trainer tab
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
+--simulator.pressKey(KEY_RTN)
+--simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN) -- return to model / trainer 
 simulator.pressKey(KEY_ENTER) -- open trainer
 simulator.pressKey(KEY_ENTER, 0.6) -- long press for options

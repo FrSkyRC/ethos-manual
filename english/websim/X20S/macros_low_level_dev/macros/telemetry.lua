@@ -5,6 +5,7 @@
 -- 2025-04-11 adapt for new tabs in Telemetry
 -- 2026-05-01 adapt for fbus via sport connector and long press options
 -- 2026-05-07 adapt for fn sw's added to source categories
+-- 2026-05-13 remove surplus rtn statements due to bug fix
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -93,8 +94,8 @@ simulator.screenshot("/screenshots/model-telemetry-edit-vspeed-sensor-2.png")
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- back to telem list
 simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- 
-simulator.pressKey(KEY_RTN) -- 
+--simulator.pressKey(KEY_RTN) -- 
+--simulator.pressKey(KEY_RTN) -- 
 simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
 
 
@@ -117,8 +118,8 @@ simulator.pressKey(KEY_ENTER) -- close dialog
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- exit
 simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- 
-simulator.pressKey(KEY_RTN) -- 
+--simulator.pressKey(KEY_RTN) -- 
+--simulator.pressKey(KEY_RTN) -- 
 simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
 
 --
@@ -243,7 +244,7 @@ simulator.pressKey(KEY_ENTER) -- confirm
 -- now we are back on the source param
 -- select vfas source
 simulator.pressKey(KEY_ENTER) -- edit source
-simulator.turnRotaryEncoder(12) -- scroll to telem
+simulator.turnRotaryEncoder(11) -- scroll to source category telem
 simulator.pressKey(KEY_ENTER) -- y
 simulator.turnRotaryEncoder(21) -- scroll to vfas
 simulator.pressKey(KEY_ENTER) -- y
@@ -257,7 +258,7 @@ simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- scroll to source
 -- select current
 simulator.pressKey(KEY_ENTER) -- edit source
-simulator.turnRotaryEncoder(12) -- scroll to telem
+simulator.turnRotaryEncoder(11) -- scroll to source category telem
 simulator.pressKey(KEY_ENTER) -- y
 simulator.turnRotaryEncoder(13) -- scroll to current
 simulator.pressKey(KEY_ENTER) --
@@ -271,7 +272,7 @@ simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- scroll to source
 -- select maxpower custom sensor
 simulator.pressKey(KEY_ENTER) -- edit source
-simulator.turnRotaryEncoder(12) -- scroll to telem
+simulator.turnRotaryEncoder(11) -- scroll to source category telem
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(-1) -- reverse scroll to maxpower
 simulator.pressKey(KEY_ENTER)
@@ -283,8 +284,8 @@ simulator.screenshot("/screenshots/model-telemetry-edit-custom-sensor-maxpower-2
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- exit
 simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- 
-simulator.pressKey(KEY_RTN) -- 
+--simulator.pressKey(KEY_RTN) -- 
+--simulator.pressKey(KEY_RTN) -- 
 simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
 --
 -- do subtract example
@@ -335,7 +336,7 @@ simulator.turnRotaryEncoder(7) -- scroll to source
 simulator.pressKey(KEY_ENTER) -- y
 
 -- add rssi sensor
-simulator.turnRotaryEncoder(12) -- scroll to telem
+simulator.turnRotaryEncoder(11) -- scroll to source category telem
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(0) -- scroll to rssi 2.4g
 simulator.pressKey(KEY_ENTER)
@@ -363,8 +364,8 @@ simulator.screenshot("/screenshots/model-telemetry-edit-custom-sensor-subtr-20.p
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- exit
 simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- 
-simulator.pressKey(KEY_RTN) -- 
+--simulator.pressKey(KEY_RTN) -- 
+--simulator.pressKey(KEY_RTN) -- 
 simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
 --simulator.pressKey(KEY_RTN)
 --
@@ -385,7 +386,7 @@ simulator.turnRotaryEncoder(8) -- scroll to source
 simulator.pressKey(KEY_ENTER)
 --
 -- select throttle
-simulator.turnRotaryEncoder(2) -- scroll to analog
+simulator.turnRotaryEncoder(2) -- scroll to source category analog
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(2) -- scroll to throttle
 simulator.pressKey(KEY_ENTER)
@@ -397,8 +398,8 @@ simulator.screenshot("/screenshots/model-telemetry-edit-custom-sensor-internal-v
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- exit
 simulator.pressKey(KEY_RTN) -- deselect
-simulator.pressKey(KEY_RTN) -- 
-simulator.pressKey(KEY_RTN) -- 
+--simulator.pressKey(KEY_RTN) -- 
+--simulator.pressKey(KEY_RTN) -- 
 simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
 
 
@@ -433,9 +434,9 @@ simulator.turnRotaryEncoder(1) -- scroll to individual rssi alert
 simulator.pressKey(KEY_ENTER) -- enable
 simulator.screenshot("/screenshots/model-telemetry-rssi-individual-alert.png")
 simulator.pressKey(KEY_ENTER) -- disable
-simulator.pressKey(KEY_RTN) -- deselect
+--simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- exit
-simulator.pressKey(KEY_RTN) -- deselect
+--simulator.pressKey(KEY_RTN) -- deselect
 --simulator.pressKey(KEY_RTN) -- 
 --simulator.pressKey(KEY_RTN) -- 
 simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted

@@ -309,3 +309,5 @@ start of 1.7.0 rev6
 -- 2026-05-08 model-mixes-free.lua -- adapt for use a source options and new curve parameter order
 -- 2026-05-09 model-lsw-ignore-trainer now done by trainer-take-back.lua 
 -- 2026-05-09 model-mixes.lua -- use oxalys model for thr options with ignore trainer
+-- 2026-05-13 model-trainer.lua -- remove surplus rtn statements due to bug fix
+-- 2026-05-13 telemetry.lua -- remove surplus rtn statements due to bug fix
