@@ -1,30 +1,30 @@
-## Emphasis
+## Titre ou Mise en évidence
 
-**This is bold text**
+**Ceci est du texte en gras**
 
-*This is italic text*
+*Ceci est du texte en italique*
 
-~~Strikethrough~~
+~~Ceci est du texte barré~~
 
-Inline `code`
+Code embarqué `code`
 
-## Blockquotes
+## Bloc de citations
 
-> Blockquotes can be nested...
->> ...by using additional greater-than signs right next to each other...
-> > > ...or with spaces between arrows.
+> Les citations peuvent être imbriquées...
+>> ...en utilisant des signes « plus grand que » supplémentaires placés les uns à la suite des autres...
+> > > ...ou en insérant des espaces entre les flèches.
 
 ## Code
 
-Indented code
+Code indenté 
 
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
+    // Quelques commentaires
+    ligne 1 du code
+    ligne 2 du code
+    ligne 3 du code
 
-Block code "fences"
+"Balises" de bloc de code
 
 ```
-Sample text here...
+Ici un exemple de texte...
 ```

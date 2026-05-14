@@ -1,16 +1,16 @@
-## Checklist Demo
+## Démo de Checklist
 
-The Checklist can be created by the user using a Markdown editor for enhanced text or a simple text editor for plain text.
+La Checklist (ou listing des contrôles à effectuer) peut être créée par l'utilisateur à l'aide d'un éditeur Markdown pour le texte enrichi ou d'un simple éditeur de texte
 
-Enhanced examples:
+Ci-dessous des exemples de texte enrichi (= mise en fome particulière du texte) de Checklist :
 
-## Emphasis
+## Titre
 
-**this is bold text**
+**Ceci est du texte en gras**
 
-*this is italic text*
+*Ceci est du texte en italique*
 
-- check 1
-- check 2
-* check 3
-+ check 4
+- Vérification 1
+- Vérification 2
+* Vérification 3
++ Vérification 4
