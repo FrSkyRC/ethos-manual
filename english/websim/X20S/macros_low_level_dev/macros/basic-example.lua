@@ -489,3 +489,7 @@ simulator.pressKey(KEY_ENTER) --confirm copy name
 simulator.screenshot("/screenshots/tut-fw-eg-retracts-outputs.png")
 simulator.pressKey(KEY_RTN, 1)
 
+--
+-- trims examples are done in model-fm.lua
+-- e.g.
+--simulator.screenshot("/screenshots/tut-fw-eg-trims-ele-custom-default-plus-offset-fm-select.png")

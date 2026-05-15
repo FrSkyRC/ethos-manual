@@ -311,3 +311,7 @@ start of 1.7.0 rev6
 -- 2026-05-09 model-mixes.lua -- use oxalys model for thr options with ignore trainer
 -- 2026-05-13 model-trainer.lua -- remove surplus rtn statements due to bug fix
 -- 2026-05-13 telemetry.lua -- remove surplus rtn statements due to bug fix
+-- 2026-05-15 how-to-low-batt.lua -- remove surplus rtn statements due to bug fix
+-- 2026-05-15 user-interface.lua -- remove surplus rtn statements due to bug fix
+-- 2026-05-15 model-fm.lua -- adapt for fn sw's added to source categories
+-- 2026-05-15 system-menu.lua -- add theme section

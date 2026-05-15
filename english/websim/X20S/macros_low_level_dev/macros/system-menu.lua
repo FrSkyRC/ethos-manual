@@ -15,6 +15,7 @@
 -- 2026-02-17 further changes from Bertrand
 -- 2026-02-17 replace semicolon with colon in BT address
 -- 2026-02-23 add advertize() fns to mimic manual simulation
+-- 2026-05-15 add theme section
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -378,5 +379,21 @@ simulator.turnRotaryEncoder(-1) -- back to radio runtime
 simulator.screenshot("/screenshots/system-info-radio-runtime.png")
 
 simulator.pressKey(KEY_RTN, 0.6) -- return home
-
+--
+-- now do the themes
+simulator.pressKey(KEY_SYS) -- open system menu
+simulator.turnRotaryEncoder(4) -- scroll to general
+simulator.pressKey(KEY_ENTER) -- open general
+simulator.turnRotaryEncoder(8) -- scroll to theme
+simulator.pressKey(KEY_ENTER) -- open
+simulator.screenshot("/screenshots/system-general-theme-select.png")
+simulator.turnRotaryEncoder(2) -- scroll to outline
+simulator.pressKey(KEY_ENTER) -- y
+simulator.pressKey(KEY_RTN) --
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_MDL) -- open model menu
+simulator.turnRotaryEncoder(1) -- scroll to model select
+simulator.screenshot("/screenshots/system-general-theme-outline-example.png")
+simulator.pressKey(KEY_RTN, 0.6)
 

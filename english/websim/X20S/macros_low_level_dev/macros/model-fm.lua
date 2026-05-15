@@ -2,6 +2,7 @@
 -- 2025-07-19 adapt macro to new Ethos 1.7 source select
 -- 2025-08-03 add new '+' fm button changes, and missing comments 
 -- 2025-08-03 add more missing comments
+-- 2026-05-15 adapt for fn sw's added to source categories
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -192,7 +193,7 @@ simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 ]]--
-simulator.turnRotaryEncoder(9) -- scroll to fm
+simulator.turnRotaryEncoder(10) -- scroll to fm
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(1) -- scroll to fm1
 simulator.pressKey(KEY_ENTER) --y
@@ -223,7 +224,7 @@ simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 ]]--
-simulator.turnRotaryEncoder(9) -- scroll to fm
+simulator.turnRotaryEncoder(10) -- scroll to fm
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(2) -- scroll to fm2
 simulator.pressKey(KEY_ENTER) --y

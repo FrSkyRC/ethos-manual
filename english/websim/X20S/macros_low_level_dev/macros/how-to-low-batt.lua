@@ -6,6 +6,7 @@
 -- 2026-02-19 adapt for SF workflow change
 -- 2026-04-17 adapt to ethos26
 -- 2026-04-21 adapt for only 1 voice
+-- 2026-05-13 remove surplus rtn statements due to bug fix
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
@@ -20,8 +21,8 @@ simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(6) --scroll to lipo sensor
 simulator.screenshot("/screenshots/how-to-low-batt-telemetry-lipo-sensor.png")
 simulator.pressKey(KEY_RTN) --deselect
-simulator.pressKey(KEY_RTN) --
-simulator.pressKey(KEY_RTN) --deselect icon
+--simulator.pressKey(KEY_RTN) --
+--simulator.pressKey(KEY_RTN) --deselect icon
 simulator.pressKey(KEY_RTN) --return to telem icon
 
 --simulator.pressKey(KEY_ENTER)

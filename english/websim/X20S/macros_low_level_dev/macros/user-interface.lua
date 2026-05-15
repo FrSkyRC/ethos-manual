@@ -6,6 +6,7 @@
 -- 2025-12-06 adapt for BT removal in Telemetry
 -- 2026-04-16 adapt for ethos 26 new style
 -- 2026-05-08 adapt for fn sw's added to source categories
+-- 2026-05-15 remove surplus rtn statements due to bug fix
 
 -- 0 = STICK_LEFT_HORIZONTAL (Rudder)
 -- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
@@ -80,8 +81,8 @@ simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
+--simulator.pressKey(KEY_RTN)
+--simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN) -- back to telemetry
 
 --
