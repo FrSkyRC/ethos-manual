@@ -396,4 +396,16 @@ simulator.pressKey(KEY_MDL) -- open model menu
 simulator.turnRotaryEncoder(1) -- scroll to model select
 simulator.screenshot("/screenshots/system-general-theme-outline-example.png")
 simulator.pressKey(KEY_RTN, 0.6)
+--
+-- now set the theme back to dark
+simulator.pressKey(KEY_SYS) -- open system menu
+simulator.turnRotaryEncoder(4) -- scroll to general
+simulator.pressKey(KEY_ENTER) -- open general
+simulator.turnRotaryEncoder(8) -- scroll to theme
+simulator.pressKey(KEY_ENTER) -- open
+simulator.screenshot("/screenshots/system-general-theme-select.png")
+simulator.turnRotaryEncoder(-2) -- scroll back to dark
+simulator.pressKey(KEY_ENTER) -- y
+
+simulator.pressKey(KEY_RTN, 0.6)
 
