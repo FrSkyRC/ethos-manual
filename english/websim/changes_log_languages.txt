@@ -68,10 +68,14 @@ start of 1.7.0 rev6
 -- 2026-05-11 update all JP images for ethos26 
 -- 2026-05-16 update all DE images for ethos26 
 -- 2026-05-16 update all ES images for ethos26 
+-- 2026-05-20 update all JP images for ethos26 
 
 to do
 -- 2026-05-16 X20S_radio_backup_DE rebuilt with themes added (may need widget repair) ************
 -- 2026-05-16 X20S_radio_backup_ES rebuilt with widgets repaired and themes added
+-- 2026-05-16 X20S_radio_backup_FR rebuilt with widgets repaired and themes added
+-- 2026-05-16 X20S_radio_backup_IT rebuilt with widgets repaired and themes added
+-- 2026-05-20 X20S_radio_backup_JO rebuilt with widgets repaired and themes added
 
 
 
