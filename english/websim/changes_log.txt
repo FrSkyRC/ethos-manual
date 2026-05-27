@@ -316,3 +316,4 @@ start of 1.7.0 rev6
 -- 2026-05-15 model-fm.lua -- adapt for fn sw's added to source categories
 -- 2026-05-15 system-menu.lua -- add theme section
 -- 2026-05-16 X20S_radio_backup_EN rebuilt with widgets repaired and themes added
+-- 2026-05-27 X20S_radio_backup_EN update logs folder and theme
