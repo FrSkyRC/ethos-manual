@@ -1,4 +1,4 @@
---dofile("/macros/common.lua")
+dofile("/macros/common.lua")
 
 simulator.loadModel("edge 540.bin")
 
