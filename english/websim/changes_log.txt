@@ -318,3 +318,4 @@ start of 1.7.0 rev6
 -- 2026-05-16 X20S_radio_backup_EN rebuilt with widgets repaired and themes added
 -- 2026-05-27 X20S_radio_backup_EN update logs folder and theme
 -- 2026-05-27 EN Ethos_User_Manual_26.1.0-rev6
+-- 2026-05-28 EN Ethos_User_Manual_26.1.0-rev7
