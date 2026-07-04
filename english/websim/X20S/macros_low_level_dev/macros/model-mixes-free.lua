@@ -4,9 +4,47 @@
 -- 2025-11-16 also adapt for 'use a source' dialog having 4 lines
 -- 2025-12-04 remove set 1% steps
 -- 2025-11-27 adapt for use a source options and new curve parameter order
+-- 2026-07-03 add new option to create a Var in source select
 
 dofile("/macros/common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
+
+-- first capture source categories and adding a var within source select
+-- model must have no vars
+simulator.loadModel("zblank.bin")
+-- load user defined checklist
+simulator.sleep(1) -- wait for checklist to load
+--imulator.screenshot("/screenshots/model-checklist-user-checklist.png")
+simulator.pressKey(KEY_ENTER) --ack alert
+simulator.pressKey(KEY_MDL) -- open model menu
+simulator.turnRotaryEncoder(4) -- scroll to mixes
+simulator.pressKey(KEY_ENTER)
+simulator.touch(546, 91) -- tap on '+' add mix button
+simulator.turnRotaryEncoder(1) --scroll to free mix
+--simulator.screenshot("/screenshots/model-mixes-library-airplane.png")
+simulator.pressKey(KEY_ENTER) --add free mix
+simulator.turnRotaryEncoder(2) --scroll to 'last position'
+simulator.screenshot("/screenshots/model-mix-free-add-position.png")
+simulator.pressKey(KEY_ENTER) --finish add free mix
+simulator.pressKey(KEY_RTN) --back to mixes list
+--simulator.screenshot("/screenshots/model-mix-free-added.png")
+simulator.pressKey(KEY_ENTER) --open free mix
+simulator.turnRotaryEncoder(1) --scroll to edit
+--simulator.screenshot("/screenshots/model-mix-free-select-edit.png")
+simulator.pressKey(KEY_ENTER) --enter edit
+--simulator.screenshot("/screenshots/model-mix-free-edit.png")
+
+simulator.turnRotaryEncoder(3) -- scroll to source
+--simulator.screenshot("/screenshots/model-mix-free-source.png")
+simulator.pressKey(KEY_ENTER) -- open source select
+simulator.screenshot("/screenshots/model-mix-free-source-categories.png")
+simulator.turnRotaryEncoder(-2) -- scroll back to 2nd page
+simulator.screenshot("/screenshots/model-mix-free-source-categories-2.png")
+simulator.turnRotaryEncoder(-3) -- scroll back to Vars
+simulator.pressKey(KEY_ENTER) -- edit
+simulator.screenshot("/screenshots/model-mix-free-source-categories-create-var.png")
+simulator.pressKey(KEY_RTN) 
+simulator.pressKey(KEY_RTN, 1) -- home
 
 -- model must have no free mix, this macro starts from scratch
 simulator.loadModel("rarebear.bin")
@@ -15,11 +53,6 @@ simulator.pressKey(KEY_ENTER) --acknowledge alert
 simulator.pressKey(KEY_MDL) --open model menu
 simulator.turnRotaryEncoder(4) --scroll to mixes
 simulator.pressKey(KEY_ENTER) --open mixes menu
---simulator.turnRotaryEncoder(4) --scroll to 4th mix
---simulator.pressKey(KEY_ENTER) --open dialog
---simulator.turnRotaryEncoder(2) --scroll to add mix
---simulator.screenshot("/screenshots/model-mix-free-add.png")
---simulator.pressKey(KEY_ENTER) --add mix
 simulator.touch(546, 91) -- tap on '+' add mix button
 simulator.turnRotaryEncoder(1) --scroll to free mix
 simulator.screenshot("/screenshots/model-mixes-library-airplane.png")
@@ -34,61 +67,7 @@ simulator.turnRotaryEncoder(1) --scroll to edit
 simulator.screenshot("/screenshots/model-mix-free-select-edit.png")
 simulator.pressKey(KEY_ENTER) --enter edit
 simulator.screenshot("/screenshots/model-mix-free-edit.png")
---[[
-simulator.turnRotaryEncoder(7) -- down to add action
-simulator.screenshot("/screenshots/model-mix-free-add-action.png")
-simulator.turnRotaryEncoder(-3) -- up to source
-]]--
--- select aileron as source
---[[ old ail selection 
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(3)
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
---]]
---[[
-simulator.pressKey(KEY_ENTER) -- edit source
-simulator.screenshot("/screenshots/model-mix-free-source-categories.png")
---simulator.sleep(2) -- wait for sim
-simulator.turnRotaryEncoder(-2) -- scroll to end of list
-simulator.screenshot("/screenshots/model-mix-free-source-categories-2.png")
-simulator.turnRotaryEncoder(2) -- scroll to analogs
-simulator.pressKey(KEY_ENTER) -- select analogs
-simulator.turnRotaryEncoder(3) -- scroll to ail
-simulator.pressKey(KEY_ENTER) -- select ail
-simulator.screenshot("/screenshots/model-mix-free-source-ail.png")
-]]--
---[[
-simulator.turnRotaryEncoder(4) -- scroll to source
-simulator.screenshot("/screenshots/model-mix-free-source.png")
-simulator.pressKey(KEY_ENTER, 0.6)
-simulator.turnRotaryEncoder(2) -- scroll to convert to a value
-simulator.screenshot("/screenshots/screenshot3.png")
-simulator.pressKey(KEY_ENTER)
-simulator.screenshot("/screenshots/screenshot4.png")
-simulator.pressKey(KEY_ENTER, 0.870000)
-simulator.turnRotaryEncoder(6)
-simulator.screenshot("/screenshots/screenshot6.png")
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_ENTER)
-simulator.screenshot("/screenshots/screenshot7.png")
-simulator.turnRotaryEncoder(-2)
-simulator.screenshot("/screenshots/screenshot8.png")
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(3)
-simulator.pressKey(KEY_ENTER)
-simulator.screenshot("/screenshots/screenshot9.png")
-simulator.turnRotaryEncoder(3)
-simulator.screenshot("/screenshots/screenshot10.png")
-]]--
+--
 
 simulator.turnRotaryEncoder(4) -- scroll to source
 simulator.screenshot("/screenshots/model-mix-free-source.png")
@@ -125,19 +104,12 @@ simulator.pressKey(KEY_ENTER) -- select edit
 simulator.turnRotaryEncoder(4) -- scroll to add new weight
 simulator.pressKey(KEY_ENTER) -- open add 
 simulator.pressKey(KEY_ENTER) -- open active cond
---simulator.turnRotaryEncoder(1)
---simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(3) --scroll to 'direction'
 simulator.screenshot("/screenshots/model-mix-free-actions-direction-select.png")
 simulator.pressKey(KEY_ENTER) -- confirm direction
---simulator.turnRotaryEncoder(2)
---simulator.pressKey(KEY_ENTER)
---simulator.turnRotaryEncoder(0)
 simulator.screenshot("/screenshots/model-mix-free-actions-directions.png")
 simulator.turnRotaryEncoder(2) -- scroll to Top
 simulator.pressKey(KEY_ENTER) -- confirm
---simulator.pressKey(KEY_RTN)
---simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(1) -- scroll to weight
 simulator.pressKey(KEY_ENTER) -- edit weight
 simulator.touch(391, 444) -- select 10% step
@@ -157,7 +129,6 @@ simulator.pressKey(KEY_ENTER) -- delete direction line
 simulator.pressKey(KEY_ENTER) -- confirm
 simulator.pressKey(KEY_RTN) 
 simulator.pressKey(KEY_RTN) -- exit edit mix action
--- simulator.screenshot("./screenshot5.png") -- confirm we are back at weight
 -- end of Direction section
 -- start of Weight section
 simulator.pressKey(KEY_ENTER) -- open actions
@@ -170,52 +141,6 @@ simulator.turnRotaryEncoder(3) --scroll to 'add new weight'
 simulator.screenshot("/screenshots/model-mix-free-actions-weight-add-weight.png")
 simulator.pressKey(KEY_ENTER) -- open add new weight
 simulator.pressKey(KEY_ENTER) -- open active cond
---[[
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(3)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.touch(397, 442)
-simulator.turnRotaryEncoder(-3)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(3)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.touch(389, 446)
-simulator.turnRotaryEncoder(-5)
-simulator.pressKey(KEY_ENTER)
-simulator.screenshot("/screenshots/model-mix-free-actions-weight-edit.png")
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-simulator.screenshot("/screenshots/model-mix-free-actions-weight-summary.png")
-]]--
---simulator.pressKey(KEY_ENTER) -- open action dialog
---simulator.turnRotaryEncoder(1) -- scroll to edit
---simulator.pressKey(KEY_ENTER) -- edit
---simulator.turnRotaryEncoder(4) -- scroll to add new weight
---simulator.pressKey(KEY_ENTER) -- open add weight
---simulator.pressKey(KEY_ENTER) -- open 'active condition'
---select sw SA- as active cond
 simulator.turnRotaryEncoder(4) -- scroll to switches 
 simulator.pressKey(KEY_ENTER) -- open switches
 simulator.turnRotaryEncoder(1) -- scroll to SA-
@@ -268,58 +193,6 @@ simulator.pressKey(KEY_ENTER) --y
 simulator.touch(394, 444) -- select 10% step
 simulator.turnRotaryEncoder(5) --50%
 simulator.pressKey(KEY_ENTER) -- finish 50%
---[[ 
-simulator.turnRotaryEncoder(1) -- down to add a new curve action
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(-1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.touch(393, 448)
-simulator.turnRotaryEncoder(4)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(-1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.touch(395, 441)
-simulator.turnRotaryEncoder(3)
-simulator.pressKey(KEY_ENTER)
-simulator.screenshot("/screenshots/model-mix-free-actions-curve-expo-edit.png")
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-simulator.screenshot("/screenshots/model-mix-free-actions-curve-expo-edit-summary.png")
-]]--
 simulator.turnRotaryEncoder(1) -- down to add a new curve action
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(-1) -- scroll back to active cond
@@ -346,9 +219,6 @@ simulator.pressKey(KEY_ENTER) -- open active cond
 --select SA down as active cond
 simulator.turnRotaryEncoder(4) -- scroll to switches
 simulator.pressKey(KEY_ENTER) -- open switches
---simulator.pressKey(KEY_RTN) 
---simulator.turnRotaryEncoder(-1)
---simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(2) -- scroll to SA down
 simulator.pressKey(KEY_ENTER) -- confirm
 --end select
@@ -387,11 +257,7 @@ simulator.turnRotaryEncoder(1) -- down to differential
 simulator.screenshot("/screenshots/model-mix-free-actions-type-differential.png")
 simulator.pressKey(KEY_ENTER) -- select diff
 simulator.turnRotaryEncoder(1) -- down to value
--- simulator.screenshot("./screenshot18.png") -- diff at 0%, not needed
 simulator.pressKey(KEY_ENTER) -- enter edit mode
--- simulator.turnRotaryEncoder(1)
--- simulator.pressKey(KEY_ENTER)
--- simulator.pressKey(KEY_ENTER)
 simulator.touch(393, 452) --set 10% steps
 simulator.turnRotaryEncoder(5) --50%
 simulator.pressKey(KEY_ENTER) --y
@@ -421,32 +287,6 @@ simulator.pressKey(KEY_ENTER, 1) -- long press for options
 simulator.turnRotaryEncoder(4) -- scroll to use a source
 simulator.screenshot("/screenshots/model-mix-free-actions-offset-use-source.png")
 simulator.pressKey(KEY_ENTER) -- confirm use a source
---[[
-simulator.pressKey(KEY_ENTER) -- 
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(4)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-simulator.screenshot("/screenshots/model-mix-free-actions-offset-use-source-thr-trim.png")
-simulator.pressKey(KEY_ENTER, 1)
-simulator.turnRotaryEncoder(4)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
-simulator.screenshot("/screenshots/model-mix-free-actions-offset-use-source-thr-trim-full-range.png")
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-]]--
---simulator.pressKey(KEY_ENTER,1)
---simulator.turnRotaryEncoder(3) -- scroll to Use a source
---simulator.pressKey(KEY_ENTER) -- confirm
 --select thr trim
 simulator.pressKey(KEY_ENTER) -- open 
 simulator.turnRotaryEncoder(6) -- scroll to trim
@@ -464,7 +304,6 @@ simulator.screenshot("/screenshots/model-mix-free-actions-offset-use-source-thr-
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN) -- back to free mix
--- simulator.screenshot("/screenshots/model-mix-free-actions-offset-use-source-thr-trim-summary.png")
 
 
 simulator.turnRotaryEncoder(1) -- scroll to add action
@@ -474,7 +313,6 @@ simulator.pressKey(KEY_ENTER) -- edit type
 simulator.turnRotaryEncoder(3) -- scroll to slow
 simulator.screenshot("/screenshots/model-mix-free-actions-type-slow.png")
 simulator.pressKey(KEY_ENTER)
--- simulator.screenshot("/screenshots/model-mix-free-actions-slow-edit.png")
 simulator.turnRotaryEncoder(1) -- scroll to up value
 simulator.pressKey(KEY_ENTER)
 --simulator.touch(395, 451) -- set 1% steps
@@ -521,15 +359,6 @@ simulator.pressKey(KEY_ENTER)
 simulator.screenshot("/screenshots/model-mix-free-actions-slow-move.png")
 simulator.turnRotaryEncoder(-4) -- move up 4
 simulator.pressKey(KEY_ENTER) -- set slow at top
---simulator.turnRotaryEncoder(2) -- scroll to curve
---simulator.pressKey(KEY_ENTER)
---simulator.turnRotaryEncoder(4) -- select move cmd option
---simulator.pressKey(KEY_ENTER)
---simulator.turnRotaryEncoder(-1) -- move up 1
---simulator.pressKey(KEY_ENTER)
---simulator.turnRotaryEncoder(4)
---simulator.screenshot("./screenshot3.png")
---simulator.turnRotaryEncoder(-5)
 simulator.sleep(1) -- wait for screen to be painted
 simulator.screenshot("/screenshots/model-mix-free-actions-slow-at-top.png")
 --now show bottom of page incl output
