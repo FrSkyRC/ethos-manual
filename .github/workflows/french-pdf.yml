@@ -21,7 +21,7 @@ jobs:
     - name: Install needed packages
       run: |
         sudo apt-get update
-        sudo apt-get install pandoc texlive-fonts-recommended texlive-fonts-extra texlive-lang-french texlive-lang-chinese texlive-xetex
+        sudo apt-get install pandoc texlive-fonts-recommended texlive-fonts-extra texlive-lang-french texlive-lang-chinese texlive-xetex fonts-inter fonts-inconsolata
 
     - name: Checkout code
       uses: actions/checkout@v4
