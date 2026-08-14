@@ -35,6 +35,10 @@ numbersections: true
 
 CJKmainfont: Microsoft YaHei
 mainfont: Inter
+# Inter n'expose pas de métadonnées OpenType "Language" pour le français ;
+# sans ça, fontspec/babel émettent "Language 'French' not available for font
+# 'Inter'" (cosmétique, mais Language=Default fait taire la recherche).
+mainfontoptions: Language=Default
 #sansfont: Linux Biolinum O
 monofont: Inconsolata
 monofontoptions: Scale=.8
@@ -147,10 +151,10 @@ header-includes:
   % "version" des métadonnées, cf. \docversion défini dans forge/template.latex).
   \newcommand{\pagefootrevision}{\raisebox{-1.2ex}{Révision~\docversion}}
   % \ifoot/\ofoot (intérieur/extérieur) alternent gauche/droite selon la
-  % parité de page en recto-verso ; \ifthispageodd (natif KOMA) permet de
+  % parité de page en recto-verso ; \Ifthispageodd (natif KOMA) permet de
   % forcer la révision toujours à gauche et le numéro toujours à droite.
-  \ifoot[\pagefootrevision]{\ifthispageodd{\pagefootrevision}{\pagefootcontent}}
-  \ofoot[\pagefootcontent]{\ifthispageodd{\pagefootcontent}{\pagefootrevision}}
+  \ifoot[\pagefootrevision]{\Ifthispageodd{\pagefootrevision}{\pagefootcontent}}
+  \ofoot[\pagefootcontent]{\Ifthispageodd{\pagefootcontent}{\pagefootrevision}}
   % Un tableau (longtable) juste avant une figure flottante peut fausser le
   % calcul de place restante et faire déborder l'image en bas de page (bug
   % connu de l'interaction longtable/floats). \FloatBarrier après chaque
