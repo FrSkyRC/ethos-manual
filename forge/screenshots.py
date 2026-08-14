@@ -31,7 +31,7 @@ SCREENSHOTS_DIR = os.path.join(LOCALIZED_FORGE_DIR, "..", "screenshots")
 
 # Source sub-directories copied as-is from forge/ into build/.
 BUILD_SOURCE_DIRS = ("models", "bitmaps", "scripts", "documents", "macros")
-AUDIO_LANGUAGES = ("en", "fr")
+AUDIO_LANGUAGES = ("de", "en", "es", "fr", "it")
 
 RUN_WASM_URL = "https://raw.githubusercontent.com/FrSkyRC/ethos-tools/main/simulation/run_wasm.js"
 RELEASE_ASSET_URL = "https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases/download/{release}/{asset}"
