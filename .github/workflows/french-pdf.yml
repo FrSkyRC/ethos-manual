@@ -21,7 +21,12 @@ jobs:
     - name: Install needed packages
       run: |
         sudo apt-get update
-        sudo apt-get install pandoc texlive-fonts-recommended texlive-fonts-extra texlive-lang-french texlive-lang-chinese texlive-xetex fonts-inter fonts-inconsolata
+        sudo apt-get install texlive-fonts-recommended texlive-fonts-extra texlive-lang-french texlive-lang-chinese texlive-xetex fonts-inter fonts-inconsolata
+
+    - name: Set up a recent pandoc
+      uses: r-lib/actions/setup-pandoc@v2
+      with:
+        pandoc-version: '3.2.1'
 
     - name: Checkout code
       uses: actions/checkout@v4
