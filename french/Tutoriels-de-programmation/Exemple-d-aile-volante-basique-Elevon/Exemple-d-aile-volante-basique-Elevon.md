@@ -1,2 +1,0 @@
-## Exemple d' aile volante basique (Elevon)
-Cet exemple simple d'aile volante couvre la configuration d'un modèle ayant 2 servos pour les élevons. Nous utiliserons les Débattements, l'expo et les ratios de mixage recommandés par Dreamflight Weasel.
