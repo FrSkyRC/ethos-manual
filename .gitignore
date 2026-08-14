@@ -1,5 +1,9 @@
+.idea
+.vscode
 .DS_Store
-._*
+__pycache__
 Thumbs.db
-book.*
+*.pyc
+*.luac
 *.pdf
+*.zip
