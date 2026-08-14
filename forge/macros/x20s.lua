@@ -6,7 +6,6 @@
 --
 -- models
 dofile("/macros/model-select.lua")
-exit()
 dofile("/macros/model-edit.lua")
 
 dofile("/macros/model-fm.lua")
