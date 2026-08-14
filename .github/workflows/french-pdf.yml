@@ -46,7 +46,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-          file: ./french/FR.Ethos_French_Manual.pdf
+          file: ./french/FR.Manuel_Ethos.pdf
           update_latest_release: true
           overwrite: true
     

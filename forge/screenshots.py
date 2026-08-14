@@ -95,7 +95,7 @@ def run_macro(radio, release, macro, force=False):
         ], check=True, cwd=BUILD_DIR)
 
 
-def setup_builddir(release):
+def setup_builddir(release, radio):
     """Stages a clean build/ directory to mount as run_wasm.js's
     --root-directory: sources copied from forge/, plus the radio settings
     and audio packs the simulator expects to find there."""
@@ -103,7 +103,7 @@ def setup_builddir(release):
         shutil.rmtree(BUILD_DIR)
     os.makedirs(BUILD_DIR)
 
-    shutil.copy(os.path.join(LOCALIZED_FORGE_DIR, "x20s-fr.bin"), os.path.join(BUILD_DIR, "radio.bin"))
+    shutil.copy(os.path.join(LOCALIZED_FORGE_DIR, f"{ radio }.bin"), os.path.join(BUILD_DIR, "radio.bin"))
 
     for name in BUILD_SOURCE_DIRS:
         if os.path.exists(os.path.join(COMMON_FORGE_DIR, name)):
@@ -134,7 +134,7 @@ def main():
     parser.add_argument("--force", action="store_true", help="download even if already cached")
     args = parser.parse_args()
 
-    setup_builddir(args.release)
+    setup_builddir(args.release, "x20s")
     run_macro("X20S_FCC", args.release, "x20s.lua", args.force)
     copy_screenshots()
 
