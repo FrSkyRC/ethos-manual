@@ -130,7 +130,7 @@ def copy_screenshots():
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--release", required=True, help="ex. 26.1.0-RC7")
+    parser.add_argument("--release", required=True, help="ex. nightly26")
     parser.add_argument("--force", action="store_true", help="download even if already cached")
     args = parser.parse_args()
 

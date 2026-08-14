@@ -94,7 +94,7 @@ def main():
             "book.tex",
         ], check=True)
 
-    os.replace("book.pdf", "ethos-french-manual.pdf")
+    os.replace("book.pdf", "FR.Ethos_French_Manual.pdf")
 
 
 if __name__ == "__main__":
