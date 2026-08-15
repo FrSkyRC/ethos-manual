@@ -103,7 +103,10 @@ def setup_builddir(release, radio):
         shutil.rmtree(BUILD_DIR)
     os.makedirs(BUILD_DIR)
 
-    shutil.copy(os.path.join(LOCALIZED_FORGE_DIR, f"{ radio }.bin"), os.path.join(BUILD_DIR, "radio.bin"))
+    if os.path.exists(os.path.join(LOCALIZED_FORGE_DIR, f"{ radio }.bin")):
+        shutil.copy(os.path.join(LOCALIZED_FORGE_DIR, f"{ radio }.bin"), os.path.join(BUILD_DIR, "radio.bin"))
+    elif os.path.exists(os.path.join(COMMON_FORGE_DIR, f"{ radio }.bin")):
+        shutil.copy(os.path.join(COMMON_FORGE_DIR, f"{ radio }.bin"), os.path.join(BUILD_DIR, "radio.bin"))
 
     for name in BUILD_SOURCE_DIRS:
         if os.path.exists(os.path.join(COMMON_FORGE_DIR, name)):
