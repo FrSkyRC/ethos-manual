@@ -138,15 +138,7 @@ simulator.screenshot("/screenshots/model-modelselect-model-wizard-ch-reassignmen
 simulator.pressKey(KEY_PAGE) -- enter name
 simulator.turnRotaryEncoder(1)
 simulator.pressKey(KEY_ENTER) -- go into edit name
-simulator.touch(513, 302) -- U
-simulator.touch(68, 399) -- shift
-simulator.touch(715, 351) -- l
-simulator.touch(360, 304) -- t
-simulator.touch(599, 301) -- i
-simulator.touch(640, 405) -- m
-simulator.touch(78, 356) -- a
-simulator.touch(360, 306) -- t
-simulator.touch(203, 302) -- e
+simulator.enterText("Ultimate")
 simulator.pressKey(KEY_RTN) -- accept
 simulator.turnRotaryEncoder(1) -- scroll to picture
 simulator.pressKey(KEY_ENTER) -- edit
