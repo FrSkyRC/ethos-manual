@@ -33,10 +33,17 @@ Couvre l'affichage, les paramètres audio, le vario, le retour vibreur et la bar
   **Toujours** (pas de mise en veille), **Manches**, **Inters**, **Gyro**
   (inclinaison de la radio). Les touches réveillent toujours l'écran, quels
   que soient ces réglages.
+
+  ![Réveil de l'écran](../screenshots/system-general-sleep.png)
+
 - **Mise en veille** — durée d'inactivité avant l'extinction du
   rétroéclairage (non modifiable si Activation est réglé sur Toujours).
 - **Luminosité veille** — luminosité du rétroéclairage pendant la veille.
-- **Mode sombre** — choix entre les modes clair ou sombre de l'affichage.
+
+  ![Luminosité en veille](../screenshots/system-general-sleep-brightness.png)
+
+- **Thème** — choix entre les thèmes **Sombre** (par défaut) et **Clair** de
+  l'affichage. D'autres thèmes Lua peuvent également être installés.
 - **Couleur de surbrillance** — la couleur de surbrillance de l'interface
   (par défaut `#F8B038`).
 
@@ -78,6 +85,9 @@ Couvre l'affichage, les paramètres audio, le vario, le retour vibreur et la bar
   bips sont émis pendant le réglage afin d'aider à juger le niveau à
   l'oreille.
 - **Modes audio** :
+
+  ![Modes audio](../screenshots/system-general-audio-modes.png)
+
   - **Silencieux** — pas d'audio (une alerte sera tout de même émise au
     démarrage si la vérification du [mode silencieux](alerts.md) est activée).
   - **Alarmes uniquement** — seules les alarmes seront jouées.
@@ -92,14 +102,24 @@ Couvre l'affichage, les paramètres audio, le vario, le retour vibreur et la bar
     sélectionnez-le dès qu'il est trouvé :
 
     ![Bluetooth audio](../screenshots/system-general-audio-bluetooth.png)
-    
+
     ![Message d'attente de périphériques](../screenshots/system-general-audio-bluetooth-searching.png)
-    
+
     ![Choix de périphérique Bluetooth](../screenshots/system-general-audio-bluetooth-device-selected.png)
-    
+
     ![Message d'attente de l'appareil](../screenshots/system-general-audio-bluetooth-connecting.png)
-    
+
+    ![Appareil Bluetooth appairé](../screenshots/system-general-audio-bluetooth-connected.png)
+
+    Une fois l'appareil appairé, validez avec **OK** : l'écran Bluetooth
+    réaffiche alors la connexion établie.
+
     ![Appareil Bluetooth connecté](../screenshots/system-general-audio-bluetooth-connected-ok.png)
+
+    Pour déconnecter l'appareil, appuyez dessus afin de faire apparaître
+    l'option **Déconnecter**.
+
+    ![Déconnexion Bluetooth](../screenshots/system-general-audio-bluetooth-disconnect-select.png)
 
     **Couper haut-parleur** contrôle alors le haut-parleur intégré — toujours
     activé, activé uniquement lorsque la télémétrie est active, ou contrôlé
@@ -124,8 +144,12 @@ Vario](../model-setup/special-functions.md) pour d'autres paramètres du vario.
 
 ## Vibreur
 
+![Vibreur](../screenshots/system-general-haptic.png)
+
 - **Intensité** — un curseur pour l'intensité des vibrations.
 - **Mode** — les mêmes options que les modes audio ci-dessus.
+
+  ![Modes vibreur](../screenshots/system-general-haptic-options.png)
 
 ## Emplacement de stockage (X18 et X20 Pro/R/RS) {: #storage-location-x18-and-x20-prorrs }
 
@@ -167,6 +191,4 @@ USB :
   un simulateur RC.
 - **Ethos Suite** — passe immédiatement en mode Ethos pour l'utilisation avec
   [Ethos Suite](../ethos-suite/index.md).
-- **Série** — passe immédiatement en mode Série, en transmettant les traces de
-  débogage Lua via USB-Serial à 115200 bps (un pilote de port COM virtuel
-  Windows peut être nécessaire).
+- **Série** — passe immédiatement en mode Série, en transmettant les traces de débogage Lua via USB-Serial à 115200 bps (un [pilote de port COM virtuel Windows](https://www.st.com/en/development-tools/stsw-stm32102.html) peut être nécessaire).
