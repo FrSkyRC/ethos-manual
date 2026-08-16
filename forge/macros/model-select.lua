@@ -12,22 +12,13 @@ dofile("/macros/common.lua")
 simulator.loadModel("rarebear.bin") -- relies on many models
 simulator.pressKey(KEY_ENTER) -- Ack the checklist warnings
 simulator.pressKey(KEY_MDL) -- open the Model page
-injectRSSI()
 simulator.screenshot("/screenshots/model-menu.png")
 
 simulator.turnRotaryEncoder(1) -- scroll to Model select
 simulator.screenshot("/screenshots/model-icon-modelselect.png")
 simulator.pressKey(KEY_ENTER) -- open
 simulator.touch(758, 91) -- add cat
-simulator.touch(86, 351) -- A
-simulator.touch(76, 405) -- shift
-simulator.touch(599, 301) -- i
-simulator.touch(279, 304) --r
-simulator.touch(754, 303) --p
-simulator.touch(719, 354) --l
-simulator.touch(81, 356) --a
-simulator.touch(556, 405) --n
-simulator.touch(198, 306) --e
+simulator.enterText(translate('Airplane'))
 simulator.screenshot("/screenshots/model-modelselect-create-airplane-folder.png")
 simulator.touch(461, 191) -- Virtual OK
 simulator.touch(756, 80) --add cat

@@ -1,0 +1,3 @@
+TRANSLATIONS = {
+  Airplane = "Airplane",
+}

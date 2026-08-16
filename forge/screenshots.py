@@ -16,11 +16,15 @@ Example:
 """
 
 import argparse
+import filecmp
+import fnmatch
 import os
 import shutil
 import subprocess
 import urllib.request
 import zipfile
+
+from PIL import Image, ImageChops
 
 LOCALIZED_FORGE_DIR = os.path.join(os.getcwd(), "forge")
 COMMON_FORGE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -28,6 +32,8 @@ CACHE_DIR = os.path.join(COMMON_FORGE_DIR, ".cache")
 SIMULATION_DIR = os.path.join(CACHE_DIR, "simulation")
 BUILD_DIR = os.path.join(LOCALIZED_FORGE_DIR, "build")
 SCREENSHOTS_DIR = os.path.join(LOCALIZED_FORGE_DIR, "..", "screenshots")
+CHANGED_DIR = os.path.join(BUILD_DIR, "changed")
+DIFF_DIR = os.path.join(BUILD_DIR, "diff")
 
 # Source sub-directories copied as-is from forge/ into build/.
 BUILD_SOURCE_DIRS = ("models", "bitmaps", "scripts", "documents", "macros")
@@ -35,6 +41,55 @@ AUDIO_LANGUAGES = ("de", "en", "es", "fr", "it")
 
 RUN_WASM_URL = "https://raw.githubusercontent.com/FrSkyRC/ethos-tools/main/simulation/run_wasm.js"
 RELEASE_ASSET_URL = "https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases/download/{release}/{asset}"
+
+X20S_MACROS = [
+  "model-select.lua",
+  "model-edit.lua",
+  "model-fm.lua",
+  "model-mixes.lua",
+  "model-mixes-free.lua",
+  "model-mix-eg.lua",
+  "model-outputs.lua",
+  "model-chview.lua",
+  "model-timers.lua",
+  "model-trims.lua",
+  # "model-rf.lua",
+  "model-checklist.lua",
+  "model-lsw.lua",
+  "model-sf.lua",
+  "model-curves.lua",
+  "model-vars.lua",
+  "model-trainer.lua",
+  "model-blanks.lua",
+  "display.lua",
+  "basic-example.lua",
+  "wing-example.lua",
+  "heli-example.lua",
+  "how-to-low-batt.lua", # how to 1
+  "how-to-consumption.lua", # how to 3
+  "how-to-butterfly.lua", # how to 6
+  "how-to-in-flight-comp.lua", # how to 10
+  "trainer-take-back.lua", # how to 11
+  "how-to-gear-seq.lua", # how to 13
+  # lua
+  # lua is done seperately 
+  # must be done last because we only want lua icon in menu once
+  # os.copy('RADIO:/macros/lua-fn/scripts' 'RADIO:/scripts')
+  #  "model-lua.lua",
+  # system
+  "system-menu.lua",
+  # ui
+  "user-interface.lua",
+  "mainview.lua",
+  # this must be last due to the Lock SF in topbar.bin
+  "telemetry.lua",
+  "toolbars.lua",
+]
+
+
+ALL_MACROS = {
+    "X20S_FCC": X20S_MACROS,
+}
 
 
 def download(url, dest_path, force=False):
@@ -57,13 +112,10 @@ def fetch_run_wasm(force=False):
     return download(RUN_WASM_URL, run_wasm_path, force=force)
 
 
-def fetch_simulator(radio, release, force=False):
-    """Downloads and unzips the simulator WASM for a given radio/release,
+def fetch_simulator(release, radio, force=False):
+    """Downloads and unzips the simulator WASM for a given release / radio,
     then returns the path to the JS glue file to pass to run_wasm.js.
     """
-    # The asset name uses dashes ("X20S-FCC-WebSimulator.zip") while
-    # --radio and the files inside the zip use underscores
-    # ("X20S_FCC.js"/.wasm).
     asset_name = f"{radio.replace('_', '-')}-WebSimulator.zip"
     extract_dir = os.path.join(SIMULATION_DIR, f"{radio}-{release}")
     js_path = os.path.join(extract_dir, f"{radio}.js")
@@ -83,16 +135,6 @@ def fetch_simulator(radio, release, force=False):
             f"contain the expected file, check its contents."
         )
     return js_path
-
-
-def run_macro(radio, release, macro, force=False):
-    run_wasm_path = fetch_run_wasm(force=force)
-    js_path = fetch_simulator(radio, release, force=force)
-    subprocess.run([
-            "node", run_wasm_path, js_path,
-            "--root-directory", BUILD_DIR,
-            "--macro", f'USER:/macros/{macro}',
-        ], check=True, cwd=BUILD_DIR)
 
 
 def setup_builddir(release, radio):
@@ -124,21 +166,71 @@ def setup_builddir(release, radio):
             archive.extractall(audio_build_dir)
 
 
+def run_macros(release, radio, macros, force=False):
+    run_wasm_path = fetch_run_wasm(force=force)
+    js_path = fetch_simulator(release, radio, force=force)
+    setup_builddir(release, radio)
+    for macro in macros:
+        subprocess.run([
+                "node", run_wasm_path, js_path,
+                "--root-directory", BUILD_DIR,
+                "--macro", f'USER:/macros/{macro}',
+            ], check=True, cwd=BUILD_DIR)
+
+
+def save_diff_image(ref_path, new_path, diff_path):
+    """Saves a copy of the new screenshot with every pixel that differs from
+    the reference one highlighted in red, to make the change easy to spot."""
+    ref = Image.open(ref_path).convert("RGB")
+    new = Image.open(new_path).convert("RGB")
+    if ref.size != new.size:
+        print(f"  (size changed, cannot highlight pixel differences: {ref.size} -> {new.size})")
+        return
+
+    diff_mask = ImageChops.difference(ref, new).convert("L").point(lambda p: 255 if p else 0)
+    highlighted = new.copy()
+    highlighted.paste(Image.new("RGB", new.size, (255, 0, 0)), mask=diff_mask)
+
+    os.makedirs(os.path.dirname(diff_path), exist_ok=True)
+    highlighted.save(diff_path)
+    print(f"  diff saved to {diff_path}")
+
+
 def copy_screenshots():
-    """Copies every screenshot produced by the macro run from build/screenshots
-    into french/screenshots/."""
+    for d in (CHANGED_DIR, DIFF_DIR):
+        if os.path.exists(d):
+            shutil.rmtree(d)
+    os.makedirs(CHANGED_DIR)
+
     src = os.path.join(BUILD_DIR, "screenshots")
-    shutil.copytree(src, SCREENSHOTS_DIR, dirs_exist_ok=True)
+    for name in os.listdir(src):
+        src_path = os.path.join(src, name)
+        ref_path = os.path.join(SCREENSHOTS_DIR, name)
+        if not os.path.exists(ref_path):
+            print(f"New screenshot: {name}")
+            shutil.copy2(src_path, os.path.join(CHANGED_DIR, name))
+        elif not filecmp.cmp(src_path, ref_path, shallow=False):
+            print(f"Changed screenshot: {name}")
+            shutil.copy2(src_path, os.path.join(CHANGED_DIR, name))
+            save_diff_image(ref_path, src_path, os.path.join(DIFF_DIR, name))
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--release", required=True, help="ex. nightly26")
+    parser.add_argument("--release", required=True, help="e.g. nightly26")
     parser.add_argument("--force", action="store_true", help="download even if already cached")
+    parser.add_argument("--radio", help="e.g. X20S_FCC")
+    parser.add_argument("filter", nargs="?", default=None, help='e.g. "model-*.lua" to only run matching macros')
     args = parser.parse_args()
 
-    setup_builddir(args.release, "x20s")
-    run_macro("X20S_FCC", args.release, "x20s.lua", args.force)
+    for radio, macros in ALL_MACROS.items():
+        if args.radio and args.radio != radio:
+            continue
+        if args.filter:
+            macros = [m for m in macros if fnmatch.fnmatch(m, args.filter)]
+        if macros:
+            run_macros(args.release, radio, macros, args.force)
+
     copy_screenshots()
 
 
