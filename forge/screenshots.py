@@ -189,7 +189,7 @@ def save_diff_image(ref_path, new_path, diff_path):
 
     diff_mask = ImageChops.difference(ref, new).convert("L").point(lambda p: 255 if p else 0)
     highlighted = new.copy()
-    highlighted.paste(Image.new("RGB", new.size, (255, 0, 0)), mask=diff_mask)
+    highlighted.paste(Image.new("RGB", new.size, (57, 255, 20)), mask=diff_mask)
 
     os.makedirs(os.path.dirname(diff_path), exist_ok=True)
     highlighted.save(diff_path)
