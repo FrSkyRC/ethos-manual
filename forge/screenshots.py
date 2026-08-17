@@ -32,8 +32,9 @@ CACHE_DIR = os.path.join(COMMON_FORGE_DIR, ".cache")
 SIMULATION_DIR = os.path.join(CACHE_DIR, "simulation")
 BUILD_DIR = os.path.join(LOCALIZED_FORGE_DIR, "build")
 SCREENSHOTS_DIR = os.path.join(LOCALIZED_FORGE_DIR, "..", "screenshots")
-CHANGED_DIR = os.path.join(BUILD_DIR, "changed")
-DIFF_DIR = os.path.join(BUILD_DIR, "diff")
+if not os.path.exists(SCREENSHOTS_DIR):
+    SCREENSHOTS_DIR = os.path.join(LOCALIZED_FORGE_DIR, "..", "assets")
+FAIL_DIR = os.path.join(BUILD_DIR, "fail")
 
 # Source sub-directories copied as-is from forge/ into build/.
 BUILD_SOURCE_DIRS = ("models", "bitmaps", "scripts", "documents", "macros")
@@ -197,10 +198,7 @@ def save_diff_image(ref_path, new_path, diff_path):
 
 
 def copy_screenshots():
-    for d in (CHANGED_DIR, DIFF_DIR):
-        if os.path.exists(d):
-            shutil.rmtree(d)
-    os.makedirs(CHANGED_DIR)
+    os.makedirs(FAIL_DIR)
 
     src = os.path.join(BUILD_DIR, "screenshots")
     for name in os.listdir(src):
@@ -208,11 +206,12 @@ def copy_screenshots():
         ref_path = os.path.join(SCREENSHOTS_DIR, name)
         if not os.path.exists(ref_path):
             print(f"New screenshot: {name}")
-            shutil.copy2(src_path, os.path.join(CHANGED_DIR, name))
+            shutil.copy2(src_path, os.path.join(FAIL_DIR, name))
         elif not filecmp.cmp(src_path, ref_path, shallow=False):
             print(f"Changed screenshot: {name}")
-            shutil.copy2(src_path, os.path.join(CHANGED_DIR, name))
-            save_diff_image(ref_path, src_path, os.path.join(DIFF_DIR, name))
+            shutil.copy2(ref_path, os.path.join(FAIL_DIR, name.replace(".png", ".ref.png")))
+            shutil.copy2(src_path, os.path.join(FAIL_DIR, name))
+            save_diff_image(ref_path, src_path, os.path.join(FAIL_DIR, name.replace(".png", ".diff.png")))
 
 
 def main():
