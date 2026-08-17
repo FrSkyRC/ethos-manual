@@ -48,21 +48,8 @@ simulator.touch(742, 447) -- enter?
 
 simulator.turnRotaryEncoder(1) -- scroll to name
 simulator.pressKey(KEY_ENTER) --edit mode
-simulator.touch(319, 350) -- F
-simulator.touch(65, 403) -- shift
-simulator.touch(718, 352) -- l
-simulator.touch(84, 352) -- a
-simulator.touch(749, 304) --p
-simulator.touch(160, 348) -- s
-simulator.touch(416, 455) -- space
-simulator.touch(43, 400) -- shift
-simulator.touch(482, 350) -- H
-simulator.touch(59, 399) -- shift
-simulator.touch(78, 352) -- a
-simulator.touch(720, 351) -- l
-simulator.touch(315, 353) -- f
+simulator.enterText(translate("Flaps_Half"))
 simulator.pressKey(KEY_RTN) -- accept
-
 simulator.turnRotaryEncoder(1) -- scroll to active condition
 simulator.pressKey(KEY_ENTER) --y
 --[[
@@ -106,21 +93,8 @@ simulator.touch(571, 91) -- add new fm button '+'
 --
 simulator.turnRotaryEncoder(1) -- scroll to name
 simulator.pressKey(KEY_ENTER) -- edit
-simulator.touch(320, 351)
-simulator.touch(55, 403) -- F
-simulator.touch(715, 349) -- L
-simulator.touch(87, 353) -- A
-simulator.touch(765, 305) -- P
-simulator.touch(167, 353) -- S
-simulator.touch(421, 458) -- space
-simulator.touch(65, 405) --f
-simulator.touch(322, 355) --u
-simulator.touch(55, 403) --l
-simulator.touch(517, 305) --l
-simulator.touch(716, 350)
-simulator.touch(716, 350)
-simulator.touch(752, 451)
---simulator.pressKey(KEY_RTN)
+simulator.enterText(translate("Flaps_Full"))
+simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(1) -- scroll to active cond
 simulator.pressKey(KEY_ENTER) -- y
 --simulator.turnRotaryEncoder(1)
