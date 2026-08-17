@@ -11,13 +11,20 @@ dofile("common.lua")
 -- simulator.loadModel("extra.bin")
 -- model must have ail mix with 3 weight rates and no expo
 
+local throttleStickIndex
+if system.getStickMode() == 1 then
+    throttleAnalogIndex = 2
+else
+    throttleAnalogIndex = 1
+end
+
 simulator.loadModel("rarebear.bin")
 
 -- 0 = STICK_LEFT_HORIZONTAL (Rudder)
 -- 1 = STICK_LEFT_VERTICAL (Throttle mode 2)
 -- 2 = STICK_RIGHT_VERTICAL (Elevator)
 -- 3 = STICK_RIGHT_HORIZONTAL (Aileron)
-simulator.setAnalog(1, -100) -- set thr to -100
+simulator.setAnalog(throttleAnalogIndex, -100) -- set thr to -100
 simulator.setAnalog(ANALOG_LAST_SLIDER, 50)
 simulator.pressKey(KEY_ENTER) -- ack alert
 simulator.pressKey(KEY_MDL) -- open model menu
@@ -64,7 +71,7 @@ simulator.screenshot("/screenshots/model-mixes-ail-ch-count.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN) -- back to mixes list
 
-simulator.setAnalog(1, 0) -- set thr to half way
+simulator.setAnalog(throttleAnalogIndex, 0) -- set thr to half way
 simulator.turnRotaryEncoder(2) -- scroll to thr mix
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- open
