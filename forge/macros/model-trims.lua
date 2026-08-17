@@ -2,7 +2,7 @@
 -- 2025-07-21 adapt macro to new Ethos 1.7 source select
 -- 2025-12-22 add new trims to subtrims options
 
-dofile("/macros/common.lua")
+dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("blaster.bin")

@@ -5,7 +5,7 @@
 -- 2025-09-09 add bottombar-heli.png and bottombar-multirotor.png
 -- 2026-04-15 adapt to new configure screens style
 
-dofile("/macros/common.lua")
+dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 -- for the blank shots

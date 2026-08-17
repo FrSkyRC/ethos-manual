@@ -1,7 +1,7 @@
 -- 2025-08-14 add comments
 -- 2025-09-24 convert to web sim and switches
 
-dofile("/macros/common.lua")
+dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("rarebear.bin")

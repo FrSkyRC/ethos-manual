@@ -6,7 +6,7 @@
 -- 2025-11-27 adapt for use a source options and new curve parameter order
 -- 2026-07-03 add new option to create a Var in source select
 
-dofile("/macros/common.lua")
+dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 -- first capture source categories and adding a var within source select

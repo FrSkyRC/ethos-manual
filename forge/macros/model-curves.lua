@@ -4,7 +4,7 @@
 -- 2025-11-29 adapt to new curves parameter order
 -- 2025-12-04 remove set 1% steps
 
-dofile("/macros/common.lua")
+dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 -- model must have no curves 

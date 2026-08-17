@@ -37,7 +37,7 @@ if not os.path.exists(SCREENSHOTS_DIR):
 FAIL_DIR = os.path.join(BUILD_DIR, "fail")
 
 # Source sub-directories copied as-is from forge/ into build/.
-BUILD_SOURCE_DIRS = ("models", "bitmaps", "scripts", "documents", "macros")
+BUILD_SOURCE_DIRS = ("models", "bitmaps", "scripts", "documents", "firmware", "logs", "macros")
 AUDIO_LANGUAGES = ("de", "en", "es", "fr", "it")
 
 RUN_WASM_URL = "https://raw.githubusercontent.com/FrSkyRC/ethos-tools/main/simulation/run_wasm.js"

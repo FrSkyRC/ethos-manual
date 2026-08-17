@@ -6,7 +6,7 @@
 -- 2026-01-26 add simulation for model send and receive
 -- 2026-02-18 add another ack at end of model receive, and add the advertize() lines
 
-dofile("/macros/common.lua")
+dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("rarebear.bin") -- relies on many models

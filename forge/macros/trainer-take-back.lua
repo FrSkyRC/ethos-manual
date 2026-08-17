@@ -1,7 +1,7 @@
 -- 2025-08-04 add comments
 -- 2026-04-07 add screenshots showing ignore trainer inpout symbol
 
-dofile("/macros/common.lua")
+dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 

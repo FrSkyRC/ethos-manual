@@ -6,7 +6,7 @@ simulator.setReadOnly(true) -- set to read only so models do not get modified
 simulator.resetAnalogs() -- reset all analogs
 simulator.resetSwitches() -- reset all switches
 
-dofile("/macros/translations.lua")
+dofile("translations.lua")
 
 function translate(text)
   local entry = TRANSLATIONS[text]

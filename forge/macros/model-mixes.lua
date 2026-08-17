@@ -5,7 +5,7 @@
 -- 2026-02-19 add missing RTN line 144
 -- 2026-05-09 use oxalys model for thr options with ignore trainer
 
-dofile("/macros/common.lua")
+dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 -- simulator.loadModel("extra.bin")

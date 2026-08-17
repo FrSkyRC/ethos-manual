@@ -2,7 +2,7 @@
 -- 2025-08-0 adapt for '+' add and add comments
 -- 2026-05-07 adapt for adding fn sw's to source categories, adapt to long press options
 
-dofile("/macros/common.lua")
+dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("rarebear.bin")

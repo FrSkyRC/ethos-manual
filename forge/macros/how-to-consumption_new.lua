@@ -8,7 +8,7 @@
 -- 2026-04-22 adapt for only 1 voice
 -- 2026-05-07 adapt for fn sw's added to source categories
 
-dofile("/macros/common.lua")
+dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("katana.bin")

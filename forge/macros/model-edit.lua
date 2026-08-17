@@ -5,7 +5,7 @@
 -- 2026-04-16 adapt for new 26.1 style and restore s.port
 -- 2026-05-01 revert s.port to previous and remove unnecessary screenshots
 
-dofile("/macros/common.lua")
+dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 -- model must have name Extra

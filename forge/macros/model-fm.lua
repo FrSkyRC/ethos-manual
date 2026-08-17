@@ -4,7 +4,7 @@
 -- 2025-08-03 add more missing comments
 -- 2026-05-15 adapt for fn sw's added to source categories
 
-dofile("/macros/common.lua")
+dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 -- model must have only default FM0

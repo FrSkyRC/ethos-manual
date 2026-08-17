@@ -17,7 +17,7 @@
 -- 2026-02-23 add advertize() fns to mimic manual simulation
 -- 2026-05-15 add theme section
 
-dofile("/macros/common.lua")
+dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("fwexample.bin")

@@ -4,7 +4,7 @@
 -- 2025-10-25 adapt for new play audio priority
 -- 2026-02-17 adapt for new SF workflow
 
-dofile("/macros/common.lua")
+dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("rarebear.bin")
