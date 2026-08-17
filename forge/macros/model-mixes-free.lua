@@ -40,7 +40,7 @@ simulator.pressKey(KEY_ENTER) -- open source select
 simulator.screenshot("/screenshots/model-mix-free-source-categories.png")
 simulator.turnRotaryEncoder(-2) -- scroll back to 2nd page
 simulator.screenshot("/screenshots/model-mix-free-source-categories-2.png")
-simulator.turnRotaryEncoder(-3) -- scroll back to Vars
+simulator.turnRotaryEncoder(-6) -- scroll back to Vars
 simulator.pressKey(KEY_ENTER) -- edit
 simulator.screenshot("/screenshots/model-mix-free-source-categories-create-var.png")
 simulator.pressKey(KEY_RTN) 
