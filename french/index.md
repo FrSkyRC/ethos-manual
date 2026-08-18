@@ -13,7 +13,7 @@ vient se greffer sur l'ensemble.
 ## Par où commencer
 
 - Vous découvrez Ethos ? Commencez par [Prise en main](getting-started/index.md) —
-  la disposition de l'écran principal et le fonctionnement de la navigation, avant de modifier au
+  la disposition de l'écran principal et le fonctionnement de la navigation, avant de modifier le
   moindre réglage.
 - Vous configurez une nouvelle radio ? Consultez [Configuration du système](system-setup/index.md) pour les
   réglages à faire une seule fois, valables pour toute la radio (calibration du matériel, alertes, batterie).

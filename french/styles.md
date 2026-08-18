@@ -2,7 +2,7 @@
 title: Manuel français de Ethos 26.1
 subtitle: Traduction de la doc anglaise écrite par Lothar Thole
 author: FrSky
-version: "26.1.0-14"
+version: "26.1.0"
 lang: fr
 keywords: [FrSky, Ethos]
 date: \today
