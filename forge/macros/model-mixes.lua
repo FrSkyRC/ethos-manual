@@ -11,13 +11,6 @@ dofile("common.lua")
 -- simulator.loadModel("extra.bin")
 -- model must have ail mix with 3 weight rates and no expo
 
-local throttleStickIndex
-if system.getStickMode() == 1 then
-    throttleAnalogIndex = 2
-else
-    throttleAnalogIndex = 1
-end
-
 simulator.loadModel("rarebear.bin")
 
 -- 0 = STICK_LEFT_HORIZONTAL (Rudder)

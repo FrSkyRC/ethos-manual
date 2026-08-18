@@ -12,15 +12,6 @@
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
-local throttleStickIndex, elevatorStickIndex
-if system.getStickMode() == 1 then
-    throttleAnalogIndex = 2
-    elevatorStickIndex = 1
-else
-    throttleAnalogIndex = 1
-    elevatorStickIndex = 2
-end
-
 simulator.loadModel("magnus.bin")
 simulator.pressKey(KEY_ENTER) -- ack alert
 

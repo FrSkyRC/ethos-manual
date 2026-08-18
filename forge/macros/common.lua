@@ -25,3 +25,10 @@ local function telemetryHook(event, line)
 end
 
 debug.sethook(telemetryHook, "l")
+
+throttleAnalogIndex = 1
+elevatorStickIndex = 2
+if system.getStickMode() == 1 then
+    throttleAnalogIndex = 2
+    elevatorStickIndex = 1
+end
