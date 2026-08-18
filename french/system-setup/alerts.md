@@ -24,8 +24,8 @@ propres à chaque modèle que vous créez vous-même.
   L'alerte peut être désactivée temporairement en attendant de changer la
   pile, mais il ne faut pas la laisser désactivée indéfiniment.
 - **Alerte conflit capteurs** — détecte les identifiants de capteurs de
-  télémétrie en conflit. Il n'est utile de la désactiver que si vous avez
-  des capteurs qui ne répondent pas à la spécification S.Port.
+  télémétrie en conflit. Il peut être nécessaire de désactiver lorsque
+  des capteurs ne répondent pas aux spécifications S.Port.
 - **Inactivité** — une annonce vocale « Inactivité prolongée » (ainsi
   qu'une vibration, au cas où le volume de la radio serait baissé) est
   émise lorsque la radio n'a pas été utilisée au-delà de la durée
