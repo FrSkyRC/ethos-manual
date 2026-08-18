@@ -22,7 +22,7 @@ basse](../how-to/low-battery-warning.md)).
   annonce vocale « Batterie radio faible » toutes les minutes, que la fenêtre
   soit ouverte ou non.
 
-  !!! Warning
+  **!!! Attention** -
       Lorsque cette alerte est donnée, il est prudent d'atterrir et de charger
       la batterie de la radio sans attendre — elle se répète chaque minute
       quoi qu'il arrive. À 6,0 V, la radio s'éteint automatiquement afin de
