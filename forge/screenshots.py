@@ -88,8 +88,13 @@ X20S_MACROS = [
 ]
 
 
+X20PRO_MACROS = [
+  "x20pro.lua"
+]
+
 ALL_MACROS = {
     "X20S_FCC": X20S_MACROS,
+    "X20PRO_FCC": X20PRO_MACROS,
 }
 
 
