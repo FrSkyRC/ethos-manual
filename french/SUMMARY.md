@@ -1,4 +1,4 @@
-# Table of contents
+# Documentation
 
 * [Home](index.md)
 * [Layouts](radio-layouts/index.md)
