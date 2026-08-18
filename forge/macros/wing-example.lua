@@ -360,7 +360,7 @@ simulator.pressKey(KEY_ENTER) --open outputs
 --simulator.setSwitch(1, 1) -- set switch SB up to switch rates off
 simulator.setSwitch(1, -100) -- set switch SB up to switch rates off
 simulator.setAnalog(3, 100) -- set ail to 75%
-simulator.setAnalog(2, 0) -- set ele to 0%
+simulator.setAnalog(elevatorAnalogIndex, 0) -- set ele to 0%
 simulator.sleep(1) -- wait 
 --simulator.pressKey(KEY_RTN) --exit mixes
 --simulator.pressKey(KEY_RTN)
@@ -368,13 +368,13 @@ simulator.sleep(1) -- wait
 --simulator.turnRotaryEncoder(1)
 --simulator.pressKey(KEY_ENTER)
 simulator.screenshot("/screenshots/tut-wing-eg-outputs-full-ail.png")
-simulator.setAnalog(2, 100) -- set ele to 100%
+simulator.setAnalog(elevatorAnalogIndex, 100) -- set ele to 100%
 simulator.sleep(1) -- wait 
 simulator.screenshot("/screenshots/tut-wing-eg-outputs-full-ail-full-ele.png")
 -- test trial
 -- tidy up at end
 simulator.setSwitch(1, -100) -- set switch SB up to default
 simulator.setAnalog(3, 0) -- set ail to 0%
-simulator.setAnalog(2, 0) -- set ele to 0%
+simulator.setAnalog(elevatorAnalogIndex, 0) -- set ele to 0%
 
 simulator.pressKey(KEY_RTN, 1) -- return home

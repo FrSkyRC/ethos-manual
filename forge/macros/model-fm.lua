@@ -48,7 +48,7 @@ simulator.touch(742, 447) -- enter?
 
 simulator.turnRotaryEncoder(1) -- scroll to name
 simulator.pressKey(KEY_ENTER) --edit mode
-simulator.enterText(translate("Flaps_Half"))
+simulator.enterText(translate("FlapsHalf"))
 simulator.pressKey(KEY_RTN) -- accept
 simulator.turnRotaryEncoder(1) -- scroll to active condition
 simulator.pressKey(KEY_ENTER) --y
@@ -93,7 +93,7 @@ simulator.touch(571, 91) -- add new fm button '+'
 --
 simulator.turnRotaryEncoder(1) -- scroll to name
 simulator.pressKey(KEY_ENTER) -- edit
-simulator.enterText(translate("Flaps_Full"))
+simulator.enterText(translate("FlapsFull"))
 simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(1) -- scroll to active cond
 simulator.pressKey(KEY_ENTER) -- y

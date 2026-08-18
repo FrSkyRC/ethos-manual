@@ -18,7 +18,7 @@ dofile("common.lua")
 
 simulator.loadModel("fwexample.bin")
 simulator.pressKey(KEY_ENTER) -- Ack the checklist warnings
-simulator.setAnalog(1, 100)
+simulator.setAnalog(throttleAnalogIndex, 100)
 --
 -- *** reset menu (from main page)
 simulator.pressKey(KEY_ENTER, 0.6) -- Contextual menu
