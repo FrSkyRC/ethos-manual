@@ -12,11 +12,20 @@
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
+local throttleStickIndex, elevatorStickIndex
+if system.getStickMode() == 1 then
+    throttleAnalogIndex = 2
+    elevatorStickIndex = 1
+else
+    throttleAnalogIndex = 1
+    elevatorStickIndex = 2
+end
+
 simulator.loadModel("magnus.bin")
 simulator.pressKey(KEY_ENTER) -- ack alert
 
-simulator.setAnalog(1, -100) -- set thr to -100
-simulator.setAnalog(2, 30) -- set ele to 30
+simulator.setAnalog(throttleAnalogIndex, -100) -- set thr to -100
+simulator.setAnalog(elevatorStickIndex, 30) -- set ele to 30
 simulator.setAnalog(ANALOG_LAST_SLIDER, -100) -- set thr channel to -100
 simulator.pressKey(KEY_MDL) -- open model menu
 --simulator.pressKey(KEY_MDL)
@@ -75,7 +84,7 @@ simulator.pressKey(KEY_RTN, 1)
 --
 --simulator.loadModel("zBalance.bin")
 --simulator.pressKey(KEY_ENTER) -- ack alert
-simulator.setAnalog(1, 80) -- set flap stick to 80
+simulator.setAnalog(throttleAnalogIndex, 80) -- set flap stick to 80
 simulator.pressKey(KEY_MDL) -- open model menu
 
 simulator.turnRotaryEncoder(5) -- scroll to outputs
@@ -117,7 +126,7 @@ simulator.pressKey(KEY_RTN, 0.6)
 --
 simulator.loadModel("zbalance.bin")
 simulator.pressKey(KEY_ENTER) -- ack alert
-simulator.setAnalog(1, 90) -- set flap stick to 80
+simulator.setAnalog(throttleAnalogIndex, 90) -- set flap stick to 80
 
 simulator.pressKey(KEY_MDL) -- open model menu
 simulator.turnRotaryEncoder(5) -- scroll to channels
