@@ -21,10 +21,10 @@ simulator.loadModel("rarebear.bin")
 simulator.pressKey(KEY_ENTER) -- ack alert
 simulator.pressKey(KEY_MDL) -- open model menu
 --simulator.setSwitch(0, 1) -- enable thr on swotch SA so timer 1 runs
---simulator.setAnalog(1, 0) -- set thr to mid - sim now requires thr to 0
+--simulator.setAnalog(throttleAnalogIndex, 0) -- set thr to mid - sim now requires thr to 0
 simulator.setSwitch(0, -100) -- enable thr on switch SA so timer 1 runs (-100 is switch towards the back)
 --simulator.sleep(1) -- wait for sim
-simulator.setAnalog(1, -100) -- set thr to -100 
+simulator.setAnalog(throttleAnalogIndex, -100) -- set thr to -100 
 
 
 simulator.turnRotaryEncoder(6) -- scroll to timers
@@ -39,18 +39,7 @@ simulator.turnRotaryEncoder(2) -- scroll to edit
 simulator.pressKey(KEY_ENTER) -- y
 simulator.turnRotaryEncoder(1) -- scroll to name
 simulator.pressKey(KEY_ENTER) -- edit name
-simulator.touch(479, 400) -- B
-simulator.touch(59, 397) -- shift
-simulator.touch(78, 357) -- a
-simulator.touch(358, 306) -- t
-simulator.touch(359, 305) -- t
-simulator.touch(74, 404) -- shift
-simulator.touch(361, 304) -- T
-simulator.touch(70, 396) -- shift
-simulator.touch(602, 299) -- i
-simulator.touch(632, 397) -- m
-simulator.touch(199, 298) -- e
-simulator.touch(279, 303) -- r
+simulator.enterText(translate("BattTimer"))
 simulator.pressKey(KEY_RTN) -- accept name
 simulator.turnRotaryEncoder(1) -- scroll to mode
 simulator.pressKey(KEY_ENTER) -- edit mode
@@ -59,9 +48,13 @@ simulator.pressKey(KEY_ENTER) -- select down mode
 
 simulator.turnRotaryEncoder(1) -- scroll to start value
 simulator.pressKey(KEY_ENTER) --y
-simulator.pressKey(KEY_ENTER) -- skip hours
+simulator.turnRotaryEncoder(1) -- show focus
+simulator.turnRotaryEncoder(1) -- skip hours
+simulator.pressKey(KEY_ENTER) -- edit minutes
 simulator.turnRotaryEncoder(4) -- 4 mins
-simulator.pressKey(KEY_RTN) -- exit value
+simulator.pressKey(KEY_ENTER) -- validate
+simulator.pressKey(KEY_RTN) -- exit focus
+simulator.pressKey(KEY_RTN) -- stop edit
 simulator.turnRotaryEncoder(1) --scroll to start cond 
 simulator.pressKey(KEY_ENTER) -- edit
 
@@ -140,13 +133,13 @@ simulator.pressKey(KEY_ENTER) -- open
 simulator.turnRotaryEncoder(3) -- scroll to file
 simulator.pressKey(KEY_ENTER) -- open
 --simulator.turnRotaryEncoder(-10) 
-simulator.turnRotaryEncoder(1) -- scroll to timer-1-elapsed.wav
+simulator.turnRotaryEncoder(translate("TimerFilePosition")) -- scroll to timer-1-elapsed.wav
 simulator.pressKey(KEY_ENTER) -- select timer-1-elapsed.wav
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- return to timer 1
 simulator.screenshot("/screenshots/model-timer1-actions-summary.png")
 -- end of timer 1
-simulator.setAnalog(1, 0) -- set thr to mid
+simulator.setAnalog(throttleAnalogIndex, 0) -- set thr to mid
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- return to timers home
 simulator.turnRotaryEncoder(1) -- scroll to timer options
@@ -156,23 +149,17 @@ simulator.pressKey(KEY_ENTER) -- select edit
 -- simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- scroll to name
 simulator.pressKey(KEY_ENTER) -- edit name
-simulator.touch(56, 404) -- U
-simulator.touch(79, 400) -- shift
-simulator.touch(520, 297) -- p
-simulator.touch(68, 396) -- shift
-simulator.touch(758, 307) -- T
-simulator.touch(73, 403) -- shift
-simulator.touch(360, 301) -- e
-simulator.touch(67, 400) -- s
-simulator.touch(205, 304) -- t
-simulator.touch(160, 354)
-simulator.touch(357, 306)
+simulator.enterText(translate("UpTest"))
 simulator.pressKey(KEY_RTN) -- accept name
 simulator.turnRotaryEncoder(2) -- scroll to alarm value
 simulator.pressKey(KEY_ENTER) -- edit alarm value
-simulator.pressKey(KEY_ENTER) -- step past hours
+simulator.turnRotaryEncoder(1) -- show focus
+simulator.turnRotaryEncoder(1) -- skip hours
+simulator.pressKey(KEY_ENTER) -- edit minutes
 simulator.turnRotaryEncoder(2) -- 2 minutes
-simulator.pressKey(KEY_RTN) -- enter timer
+simulator.pressKey(KEY_ENTER) -- validate
+simulator.pressKey(KEY_RTN) -- exit focus
+simulator.pressKey(KEY_RTN) -- stop edit
 simulator.turnRotaryEncoder(1) -- scroll to start cond
 simulator.pressKey(KEY_ENTER) -- edit start cond
 
@@ -201,9 +188,13 @@ simulator.turnRotaryEncoder(9) -- scroll to add action
 simulator.pressKey(KEY_ENTER) -- add action
 simulator.turnRotaryEncoder(2) -- scroll to start value
 simulator.pressKey(KEY_ENTER) -- edit start
-simulator.pressKey(KEY_ENTER) -- skip hours
+simulator.turnRotaryEncoder(1) -- show focus
+simulator.turnRotaryEncoder(1) -- skip hours
+simulator.pressKey(KEY_ENTER) -- edit minutes
 simulator.turnRotaryEncoder(-1) -- reduce from 2 to 1 minute
-simulator.pressKey(KEY_RTN) -- accept countdown
+simulator.pressKey(KEY_ENTER) -- validate
+simulator.pressKey(KEY_RTN) -- exit focus
+simulator.pressKey(KEY_RTN) -- stop edit
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- exit
 simulator.turnRotaryEncoder(1) -- scroll to add action
@@ -223,11 +214,13 @@ simulator.turnRotaryEncoder(2) -- scroll to play file
 simulator.pressKey(KEY_ENTER) -- play file
 simulator.turnRotaryEncoder(1) -- scroll to start time
 simulator.pressKey(KEY_ENTER) -- edit start time
-simulator.pressKey(KEY_ENTER) -- skip hours
--- simulator.pressKey(KEY_ENTER)
+simulator.turnRotaryEncoder(1) -- show focus
+simulator.turnRotaryEncoder(1) -- skip hours
+simulator.pressKey(KEY_ENTER) -- edit minutes
 simulator.turnRotaryEncoder(2) -- set to 2m
-simulator.pressKey(KEY_ENTER) -- enter mins
-simulator.pressKey(KEY_RTN) -- accept time
+simulator.pressKey(KEY_ENTER) -- validate
+simulator.pressKey(KEY_RTN) -- exit focus
+simulator.pressKey(KEY_RTN) -- stop edit
 simulator.turnRotaryEncoder(2) -- scroll to
 simulator.pressKey(KEY_ENTER) -- edit file
 --simulator.turnRotaryEncoder(-10)

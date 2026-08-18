@@ -8,4 +8,5 @@ TRANSLATIONS = {
   FlapsHalf = "Flaps Half",
   BattTimer = "BattTimer",
   TimerFilePosition = 11, -- position of "toùer-1-elapsed" wav file in Model / Timer
+  UpTest = "UpTest",
 }
