@@ -48,7 +48,7 @@ simulator.pressKey(KEY_RTN)
 ]]--
 simulator.turnRotaryEncoder(5) --scroll to lsw
 simulator.pressKey(KEY_ENTER) --y
-simulator.turnRotaryEncoder(0) --scroll to ls0 vfrlow
+-- simulator.turnRotaryEncoder(0) --scroll to ls0 vfrlow
 simulator.pressKey(KEY_ENTER) --y
 --
 simulator.touch(43, 23) -- exit
