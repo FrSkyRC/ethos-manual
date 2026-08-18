@@ -24,7 +24,7 @@ basse](../how-to/low-battery-warning.md)).
 
   !!! warning
       Lorsque cette alerte est donnée, il est prudent d'atterrir et de charger
-      la batterie de la radio sans attendre — elle se répète chaque minute
+      la batterie de la radio sans attendre. Elle se répète chaque minute
       quoi qu'il arrive. À 6,0 V, la radio s'éteint automatiquement afin de
       protéger les deux cellules Li-ion de 3,0 V.
 
