@@ -19,8 +19,9 @@ end
 
 local function telemetryHook(event, line)
   if event == "line" then
-    simulator.injectSPortFrame({module=0, band=0, rx=0, physId=0x98, primId=0x10, appId=0xF101, value=60})
-    simulator.injectSPortFrame({module=0, band=1, rx=0, physId=0x98, primId=0x10, appId=0xF101, value=60})
+    simulator.injectSPortFrame({module=0, band=0, rx=0, physId=0x98, primId=0x10, appId=0xF101, value=64})
+    simulator.injectSPortFrame({module=0, band=1, rx=0, physId=0x98, primId=0x10, appId=0xF101, value=64})
+    simulator.injectSPortFrame({module=0, band=1, rx=0, physId=0x98, primId=0x10, appId=0xF104, value=201})
   end
 end
 
