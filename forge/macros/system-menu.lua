@@ -217,12 +217,11 @@ simulator.pressKey(KEY_ENTER) -- enable search
 simulator.screenshot("/screenshots/system-general-audio-bluetooth-searching.png")
 simulator.sleep(1)
 simulator.advertizeBluetooth("LC-B41", "01:01:01:01:F5:41")
+simulator.sleep(1)
 simulator.advertizeBluetooth("Test1", "01:00:00:00:00:01")
+simulator.sleep(1)
 simulator.advertizeBluetooth("Test2", "02:00:00:00:00:02")
---simulator.advertizeBluetooth("Alice")
---simulator.sleep(1)
---simulator.advertizeBluetooth("Bob")
---simulator.sleep(1)
+simulator.sleep(1)
 simulator.turnRotaryEncoder(1) -- scroll to select device
 simulator.screenshot("/screenshots/system-general-audio-bluetooth-device-selected.png")
 simulator.pressKey(KEY_ENTER) -- select
