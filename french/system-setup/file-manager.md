@@ -61,11 +61,9 @@ La série **X20/X20S/X20HD** nécessite une carte SD formatée en FAT32, de 32 G
   et connectée par USB ; sélectionner un fichier de firmware et choisir
   **Flash** lance la mise à jour :
 
-  ![Mise à jour module interne](../screenshots/system-filemanager-flash.png)
+  ![Mise à jour module interne](../screenshots/system-filemanager-flash-TD-ISRM.png)
   
   ![Mise à jour récepteur S8R via S.Port](../screenshots/system-filemanager-flash-S8R.png)
-  
-  ![Mise à jour récepteur TD-R18 par OTA](../screenshots/system-filemanager-flash-TD-ISRM.png)
   
   ![Mise à jour bootloader](../screenshots/system-filemanager-flash-bootloader.png)
 
