@@ -71,7 +71,7 @@ simulator.screenshot("/screenshots/model-modelselect-receive-model-dialog.png")
 simulator.pressKey(KEY_ENTER) --y to confirm receive
 simulator.sleep(1) -- wait 
 simulator.screenshot("/screenshots/model-modelselect-receive-model-receiving.png")
---simulator.sleep(5) -- wait 
+simulator.sleep(5) -- wait 
 simulator.pressKey(KEY_ENTER) -- ack receive
 simulator.pressKey(KEY_ENTER) -- ack failure
 --simulator.pressKey(KEY_RTN) -- escape from model options
@@ -88,7 +88,7 @@ simulator.turnRotaryEncoder(1) -- scroll to alice
 simulator.screenshot("/screenshots/model-modelselect-send-model-dialog.png")
 simulator.pressKey(KEY_ENTER) -- y
 simulator.screenshot("/screenshots/model-modelselect-send-model-waiting-connect.png")
---simulator.sleep(3) -- wait 
+simulator.sleep(0.5) -- wait 
 simulator.screenshot("/screenshots/model-modelselect-send-model-sending.png")
 simulator.sleep(3) -- wait 
 simulator.screenshot("/screenshots/model-modelselect-send-model-success.png")
