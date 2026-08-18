@@ -59,7 +59,7 @@ existante pour **Modifier**/**Déplacer**/**Copier-coller**/**Cloner**/**Supprim
 
     ![|f|](../screenshots/model-curves-fn-barf.png)
 
-  Tous les types de courbes — y compris Fonction — disposent également d'un
+  Tous les types de courbes, y compris Fonction, disposent également d'un
   **Décalage**, qui les déplace vers le haut ou vers le bas sur l'axe Y (précision
   à une décimale, comme pour les valeurs Y en général) :
 

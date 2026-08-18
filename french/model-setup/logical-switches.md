@@ -102,7 +102,7 @@ Edge — signalé par le préfixe `†`) pour un contrôle beaucoup plus fin :
   temporiser le résultat).
 
 Trigger OFF se comporte de la même manière, en sens inverse. Les délais
-s'appliquent **après** la Condition d'activation — un changement de la
+s'appliquent **après** la Condition d'activation. Un changement de la
 Condition d'activation relance donc la temporisation avant que la valeur
 verrouillée n'atteigne à nouveau la sortie. Faire basculer simultanément les
 deux déclencheurs de Faux→Vrai **inverse** une fois la sortie du Sticky. Voir
@@ -188,7 +188,7 @@ reçue ».
     cas de perte de la télémétrie — rappelez-vous qu'un mixage inactif sort au
     neutre (0 % / 1500 µs, soit **mi-gaz** sur une voie de gaz).
     Alternativement, utilisez une action **Offset**, qui dispose déjà de
-    valeurs actives/inactives distinctes — par exemple la source **0** (la
+    valeurs actives/inactives distinctes. Par exemple la source **0** (la
     valeur spéciale) avec l'offset réglé de sorte que le mixage donne +100 %
     lorsque `LS3` est actif et −100 % lorsqu'il est inactif couvre les deux cas
     en une seule action.

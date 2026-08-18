@@ -27,8 +27,8 @@ mixage.
 ## Anatomie d'un mixage {: #anatomy-of-a-mix }
 
 Tous les mixages partagent le même ensemble de champs, quelle que soit la
-catégorie dont ils proviennent. Le mixage **ailerons** est proposé en exemple
-— la programmation reste identique pour la profondeur et la dérive.
+catégorie dont ils proviennent. Le mixage **ailerons** est proposé en exemple.
+La programmation reste identique pour la profondeur et la dérive.
 
 ![Mixage ailerons](../screenshots/model-mixes-ail-edit.png)
 

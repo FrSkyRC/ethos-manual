@@ -7,9 +7,9 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ![Phases de vol](../screenshots/model-fm.png)
 
 Les phases de vol permettent à un inter de sélectionner différents
-comportements pour un même modèle — les planeurs peuvent utiliser
-Lancement/Croisière/Vitesse/Thermique, les avions à moteur
-Normal/Décollage/Atterrissage, les hélicoptères Normal (mise en régime,
+comportements pour un même modèle. Les planeurs peuvent utiliser
+Lancement / Croisière / Vitesse / Thermique, les avions à moteur
+Normal / Décollage / Atterrissage, les hélicoptères Normal (mise en régime,
 décollage/atterrissage) / Idle Up 1 (vol acrobatique) / Idle Up 2 (3D).
 Elles éliminent une grande partie de la charge de commutation et de trim
 du pilote : une phase de vol peut prendre en charge ses propres trims
@@ -26,7 +26,7 @@ jusqu'à 20 au total.
 
 ## Nom
 
-Un nom descriptif — Croisière, Vitesse, Thermique, Décollage,
+Un nom descriptif : Croisière, Vitesse, Thermique, Décollage,
 Atterrissage, ce qui convient.
 
 ## Condition d'activation
@@ -68,8 +68,8 @@ mixages eux-mêmes dépendants des phases de vol.
 Appuyez sur une phase de vol pour **Modifier**, **Ajouter**,
 **Dupliquer** ou **Supprimer**. Une phase de vol **dupliquée** hérite des
 paramètres de la phase de vol originale dans chaque mixage utilisant les
-phases de vol — les mixages se comporteront de la même manière et seront
-également actifs (ou non) — c'est pourquoi la phase dupliquée est ajoutée
+phases de vol. Les mixages se comporteront de la même manière et seront
+également actifs (ou non). C'est pourquoi la phase dupliquée est ajoutée
 par défaut en dernière position, afin de ne pas interférer avec les phases
 existantes. L'option **Déplacer** modifie la priorité d'une phase de vol :
 la priorité des phases de vol est dans l'ordre croissant et (comme indiqué
