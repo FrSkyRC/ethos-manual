@@ -144,13 +144,6 @@ def fetch_simulator(release, radio, force=False):
 
 
 def setup_builddir(release, radio):
-    """Stages a clean build/ directory to mount as run_wasm.js's
-    --root-directory: sources copied from forge/, plus the radio settings
-    and audio packs the simulator expects to find there."""
-    if os.path.exists(BUILD_DIR):
-        shutil.rmtree(BUILD_DIR)
-    os.makedirs(BUILD_DIR)
-
     if os.path.exists(os.path.join(LOCALIZED_FORGE_DIR, f"{ radio }.bin")):
         shutil.copy(os.path.join(LOCALIZED_FORGE_DIR, f"{ radio }.bin"), os.path.join(BUILD_DIR, "radio.bin"))
     elif os.path.exists(os.path.join(COMMON_FORGE_DIR, f"{ radio }.bin")):
@@ -158,7 +151,7 @@ def setup_builddir(release, radio):
 
     for name in BUILD_SOURCE_DIRS:
         if os.path.exists(os.path.join(COMMON_FORGE_DIR, name)):
-            shutil.copytree(os.path.join(COMMON_FORGE_DIR, name), os.path.join(BUILD_DIR, name))
+            shutil.copytree(os.path.join(COMMON_FORGE_DIR, name), os.path.join(BUILD_DIR, name), dirs_exist_ok=True)
         if os.path.exists(os.path.join(LOCALIZED_FORGE_DIR, name)):
             shutil.copytree(os.path.join(LOCALIZED_FORGE_DIR, name), os.path.join(BUILD_DIR, name), dirs_exist_ok=True)
 
@@ -226,6 +219,10 @@ def main():
     parser.add_argument("--radio", help="e.g. X20S_FCC")
     parser.add_argument("filter", nargs="?", default=None, help='e.g. "model-*.lua" to only run matching macros')
     args = parser.parse_args()
+
+    if os.path.exists(BUILD_DIR):
+        shutil.rmtree(BUILD_DIR)
+    os.makedirs(BUILD_DIR)
 
     for radio, macros in ALL_MACROS.items():
         if args.radio and args.radio != radio:
