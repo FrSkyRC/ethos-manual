@@ -231,7 +231,7 @@ simulator.touch(197, 302) -- e
 simulator.touch(368, 305) -- t
 simulator.pressKey(KEY_RTN) -- accept name
 ]]--
-simulator.enterText("FlapOffset")
+simulator.enterText(translate("FlapOffset"))
 -- simulator.touch(323, 349) --F
 -- simulator.touch(68, 396) -- shift
 -- simulator.touch(724, 359) -- l
@@ -325,16 +325,7 @@ simulator.touch(457, 91) -- add new curve button '+'
 --
 simulator.turnRotaryEncoder(1) -- scroll to name
 simulator.pressKey(KEY_ENTER)
-simulator.touch(199, 299) -- E
-simulator.touch(57, 400) -- shift
-simulator.touch(711, 351) -- l
-simulator.touch(198, 299) -- e
-simulator.touch(51, 403) -- shift
-simulator.touch(315, 401) -- C
-simulator.touch(60, 393) -- shift
-simulator.touch(678, 306) -- o
-simulator.touch(636, 405) -- m
-simulator.touch(755, 307) -- p
+simulator.enterText(translate("EleComp"))
 simulator.pressKey(KEY_RTN) -- accept
 simulator.turnRotaryEncoder(1) -- scroll to type
 simulator.pressKey(KEY_ENTER)

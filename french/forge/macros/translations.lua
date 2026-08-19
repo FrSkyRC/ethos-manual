@@ -9,4 +9,6 @@ TRANSLATIONS = {
   BattTimer = "Chrono Batterie",
   TimerFilePosition = 11, -- position of "Atterissage" wav file in Model / Timer
   UpTest = "Chrono Gaz",
+  FlapOffset = "Décalage Volets",
+  EleComp = "Correct. Prof."
 }

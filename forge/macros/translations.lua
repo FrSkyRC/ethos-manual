@@ -9,4 +9,6 @@ TRANSLATIONS = {
   BattTimer = "BattTimer",
   TimerFilePosition = 11, -- position of "toùer-1-elapsed" wav file in Model / Timer
   UpTest = "UpTest",
+  FlapOffset = "FlapOffset",
+  EleComp = "EleComp",
 }
