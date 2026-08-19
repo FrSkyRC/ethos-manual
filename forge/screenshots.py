@@ -21,6 +21,7 @@ import fnmatch
 import os
 import shutil
 import subprocess
+import time
 import urllib.request
 import zipfile
 
@@ -98,9 +99,14 @@ ALL_MACROS = {
 }
 
 
+ONE_DAY_SECONDS = 24 * 60 * 60
+
+
 def download(url, dest_path, force=False):
     if not force and os.path.exists(dest_path):
-        return dest_path
+        age = time.time() - os.path.getmtime(dest_path)
+        if age < ONE_DAY_SECONDS:
+            return dest_path
 
     os.makedirs(os.path.dirname(dest_path), exist_ok=True)
     print(f"Download {url}")
