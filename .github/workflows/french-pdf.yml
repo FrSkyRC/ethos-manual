@@ -18,11 +18,16 @@ jobs:
       with:
         python-version: '3.x'
 
-    - name: Install needed packages
-      uses: awalsh128/cache-apt-pkgs-action@v1
+    - name: Cache apt archives
+      uses: actions/cache@v4
       with:
-        packages: texlive-fonts-recommended texlive-fonts-extra texlive-lang-french texlive-lang-chinese texlive-xetex fonts-inter fonts-inconsolata
-        version: 1.0
+        path: /var/cache/apt/archives
+        key: apt-archives-texlive-v1
+
+    - name: Install needed packages
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y texlive-fonts-recommended texlive-fonts-extra texlive-lang-french texlive-lang-chinese texlive-xetex fonts-inter fonts-inconsolata
 
     - name: Set up a recent pandoc
       uses: r-lib/actions/setup-pandoc@v2
