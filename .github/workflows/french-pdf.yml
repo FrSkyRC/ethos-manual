@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     permissions: write-all
 
     steps:
@@ -19,9 +19,10 @@ jobs:
         python-version: '3.x'
 
     - name: Install needed packages
-      run: |
-        sudo apt-get update
-        sudo apt-get install texlive-fonts-recommended texlive-fonts-extra texlive-lang-french texlive-lang-chinese texlive-xetex fonts-inter fonts-inconsolata
+      uses: awalsh128/cache-apt-pkgs-action@v1
+      with:
+        packages: texlive-fonts-recommended texlive-fonts-extra texlive-lang-french texlive-lang-chinese texlive-xetex fonts-inter fonts-inconsolata
+        version: 1.0
 
     - name: Set up a recent pandoc
       uses: r-lib/actions/setup-pandoc@v2
