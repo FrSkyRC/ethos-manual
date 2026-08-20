@@ -238,7 +238,10 @@ def main():
         if macros:
             run_macros(args.release, radio, macros, args.force)
 
-    copy_screenshots()
+    if os.path.exists(os.path.join(BUILD_DIR, "screenshots")):
+        copy_screenshots()
+    else:
+        print("No screenshot generated (wrong filter?)")
 
 
 if __name__ == "__main__":
