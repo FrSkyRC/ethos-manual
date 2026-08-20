@@ -10,7 +10,8 @@ TRANSLATIONS = {
   FlapsHalf = "Flaps Half",
   -- in Timers
   BattTimer = "BattTimer",
-  TimerFilePosition = 11, -- position of "toùer-1-elapsed" wav file in Model / Timer
+  Timer1FilePosition = 228, -- position of "toùer-1-elapsed" wav file in Model / Timer
+  Timer2FilePosition = 231, -- position of "toùer-1-elapsed" wav file in Model / Timer
   UpTest = "UpTest",
   -- in 'How to configure a butterfly (aka Crow) mix'
   FlapOffset = "FlapOffset",
