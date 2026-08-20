@@ -5,23 +5,19 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 # Mixage Butterfly (Corbeau)
 
 Le freinage butterfly (ou crocodile) permet de contrôler le taux de
-descente, le plus souvent sur les planeurs : les ailerons se relèvent
+descente, le plus souvent sur les planeurs. Les ailerons se relèvent
 modérément tandis que les volets s'abaissent beaucoup, ce qui crée
-énormément de traînée — idéal pour contrôler l'approche à
-l'atterrissage. Pour cet exemple, on supposera qu'il s'agit d'un planeur
+traînée importante. Ce dispositif est particulièrement utile pour contrôler l'approche à l'atterrissage. Pour cet exemple, on supposera qu'il s'agit d'un planeur
 dont les voies Flap existent déjà (créées par l'assistant [Choix du
 modèle](../model-setup/model-select.md)), et que le manche des gaz sert
-d'entrée de frein : aucun butterfly avec le manche des gaz vers le haut,
-puis de plus en plus à mesure que le manche est abaissé, avec une
-compensation à la profondeur pour éviter que le planeur ne remonte
-lorsque le crocodile est appliqué.
+d'entrée de frein. Le butterfly est nul lorsque le manche des gaz est en position haute, puis augmente progressivement à mesure que le manche est abaissé. Une compensation à la profondeur est également appliquée afin d'éviter que le planeur ne remonte lorsque le freinage crocodile est activé.
 
 ## 1. Désactiver le mixage Volets par défaut
 
 ![Désactivation du mixage volets](../screenshots/how-to-butterfly-flaps-disable.png)
 
 Réglez la **Condition active** du mixage Flaps créé par l'assistant sur
-`---` — il ne sera pas utilisé.
+`---` . Elle ne sera pas utilisé.
 
 ## 2. Créer le mixage Butterfly
 
@@ -38,7 +34,7 @@ mixage Flaps (désormais désactivé).
 
 Réglez **Entrée** sur **Gaz**. Par défaut, l'entrée des gaz est au
 maximum lorsque le manche est complètement levé, alors que le butterfly
-doit être à 0 dans cette position : appuyez longuement sur `ENT` sur Gaz
+doit être à 0 dans cette position. Appuyez longuement sur `ENT` sur Gaz
 et sélectionnez **Inverser** :
 
 ![Inverser les gaz](../screenshots/how-to-butterfly-mix-source-thr-neg-select.png)
@@ -57,7 +53,7 @@ d'atterrissage (ou sur une autre commande).
 
 Une petite bande morte à l'extrémité zéro du manche évite un déploiement
 accidentel si le manche bouge un peu près de la butée. Ajoutez une
-courbe personnalisée à 3 points (nommée par exemple « Crowdb ») avec le
+courbe personnalisée à 3 points (nommée par exemple «Zone Morte») avec le
 **Mode facile** désactivé, afin de pouvoir décaler les points X :
 
 ![Courbe à 3 points](../screenshots/how-to-butterfly-mix-curve-3pt.png)
@@ -67,7 +63,7 @@ courbe personnalisée à 3 points (nommée par exemple « Crowdb ») avec le
 !!! note
     Dès que vous ajoutez votre propre courbe au mixage Butterfly, le
     décalage interne 0–100 (normalement appliqué automatiquement) est
-    supprimé — la courbe doit donc reproduire elle-même cette
+    supprimé. La courbe doit donc reproduire elle-même cette
     transformation 0–100. Dans cet exemple, la sortie reste à 0 %
     jusqu'à ce que le manche des gaz atteigne −90 %, puis augmente
     linéairement jusqu'à 100 % :
@@ -78,21 +74,15 @@ courbe personnalisée à 3 points (nommée par exemple « Crowdb ») avec le
 
 ![Sortie ailerons](../screenshots/how-to-butterfly-mix-ailerons.png)
 
-Normalement, les ailerons sont réglés pour se relever modestement,
-disons 20 %, tandis que les volets s'abaissent beaucoup : c'est la
-répartition habituelle. Les volets sont inhabituels en ce sens qu'une
-très grande déviation vers le bas est nécessaire, avec très peu de
-mouvement vers le haut — ce qui est couramment obtenu en décalant les
-guignols des servos de volets de 20 à 30° par rapport au neutre dans la
-timonerie elle-même, si bien que les volets se retrouvent à peu près à
-moitié sortis au neutre du servo :
+Normalement, les ailerons sont réglés pour se relever modérément, par exemple de 20 %, tandis que les volets s'abaissent beaucoup davantage. C'est la répartition habituellement utilisée.
+Les volets présentent une particularité : ils nécessitent une très grande course vers le bas, avec très peu de débattement vers le haut. Ce résultat est généralement obtenu en décalant les guignols des servos de volets de 20 à 30° par rapport au neutre mécanique. Ainsi, lorsque le servo est au neutre, les volets se trouvent déjà approximativement à mi-course vers le bas.
 
 ![Volets en haut](../screenshots/how-to-butterfly-mix-flaps-up.png)
 
 ![Volets en bas](../screenshots/how-to-butterfly-mix-flaps-down.png)
 
 Réglez le Débattement du mixage des volets à une valeur élevée (par
-exemple −180 %) pour un débattement maximal ; la course physique réelle
+exemple −180 %) pour un débattement maximal. La course physique réelle
 est déterminée par les valeurs Min/Max des
 [Sorties](../model-setup/outputs.md).
 
@@ -118,7 +108,7 @@ ajuster), avec 2 voies de sortie affectées à vos deux voies de volets :
 
 Avec le manche des gaz à fond vers le haut (mixage Butterfly désactivé),
 vérifiez que les valeurs de la table de mixage des volets se situent au
-niveau du décalage (80 %) ; en amenant le manche des volets en position
+niveau du décalage (80 %). En amenant le manche des volets en position
 complètement déployée, la sortie du mixage doit se déplacer de la
 totalité du Débattement (par exemple de 80 % à −100 %, soit une
 amplitude de 180 %). Les limites réelles de course se configurent dans
@@ -132,8 +122,8 @@ les Sorties, à l'aide des paramètres Min et Max ou d'une courbe.
 
 Comme la compensation nécessaire n'est pas linéaire, utilisez une courbe
 plutôt qu'un Débattement fixe. Définissez une courbe personnalisée à
-5 points (par exemple « EleComp ») — dans cet exemple, ses points ont
-les valeurs initiales 12 %/10 %/8 %/5 %/0 % ; si votre aéronef n'a pas
+5 points (par exemple « EleComp »). Dans cet exemple, ses points ont
+les valeurs initiales 12 %/10 %/8 %/5 %/0 % . Si votre aéronef n'a pas
 de courbe de compensation de profondeur spécifiée, ces points devront
 être déterminés empiriquement.
 
@@ -141,13 +131,13 @@ Ensuite, convertissez cette courbe en une valeur utilisable comme
 **Débattement** de mixage : ajoutez un [Mixage
 Libre](../model-setup/mixes.md#mix-libraries) (« EleCompx ») avec les gaz
 comme source et la courbe EleComp associée, avec une sortie sur une voie
-élevée non utilisée (par exemple CH20) :
+élevée non utilisée (par exemple CH20).
 
 ![Mixage de compensation sur CH20](../screenshots/how-to-butterfly-comp-mix-ch20.png)
 
 Revenez maintenant au mixage Butterfly, appuyez longuement sur `ENT` sur
 le **Débattement** de la sortie de profondeur, sélectionnez **Utiliser
-une source**, puis choisissez CH20 (EleCompx) dans la catégorie Voies :
+une source**, puis choisissez CH20 (EleCompx) dans la catégorie Voies.
 
 ![Profondeur utilisant CH20 comme source](../screenshots/how-to-butterfly-mix-ele-use-ch20.png)
 
@@ -165,7 +155,7 @@ Le passage à l'[affichage par
 voie](../model-setup/mixes.md#per-channel-view) sur la profondeur vous
 permet de voir la mise à jour simultanée de tous les mixages
 contributeurs (entrée manche + compensation Butterfly) lorsque le manche
-des gaz/frein se déplace — ce qui est beaucoup plus facile pour le
+des gaz/frein se déplace.  Ce qui est beaucoup plus facile pour le
 débogage que la vue en tableau.
 
 !!! tip

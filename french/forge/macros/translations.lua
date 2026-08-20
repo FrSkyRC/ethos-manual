@@ -14,7 +14,7 @@ TRANSLATIONS = {
   Timer2FilePosition = 11, -- position of "Atterissage" wav file in Model / Timer
   UpTest = "Chrono Gaz",
   -- How to configure a butterfly (aka Crow) mix
-  Crowdb = "Crowdb",
+  Crowdb = "Zone morte",
   FlapOffset = "Décalage Volets",
   EleComp = "Correct. Prof."
 }
