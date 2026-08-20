@@ -4,7 +4,7 @@ translated_from: 4cf1808aa5b70d3f39900c1a7aff575ca60ee89e
 
 # Prise en main
 
-Avant de vous plonger dans les réglages du modèle ou du système, il est utile de vous familiariser avec les deux éléments que vous utiliserez en permanence : l'[écran principal](main-views.md) et le [système de navigation](user-interface-and-navigation.md)  qui repose sur (l'encodeur rotatif, les touches `ENT`/`RTN` et l'écran tactile).
+Avant de vous plonger dans les réglages du modèle ou du système, il est utile de vous familiariser avec les deux éléments que vous utiliserez en permanence : l'[écran principal](main-views.md) et le [système de navigation](user-interface-and-navigation.md), qui repose sur l'encodeur rotatif, les touches `ENT`/`RTN` et l'écran tactile.
 
 - [Vues principales](main-views.md) — L'écran d'accueil et le menu de connexion USB.
 - [Interface utilisateur et navigation](user-interface-and-navigation.md) — La modification

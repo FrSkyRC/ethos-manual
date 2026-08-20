@@ -22,4 +22,4 @@ Si la radio est connectée à un PC via un câble de données USB alors qu'elle 
 
 - **Joystick** — La radio est présentée comme un joystick USB HID, pour contrôler les simulateurs de vol RC sur PC.
 - **FrSky Suite** — La radio passe en « mode Ethos » pour communiquer avec [Ethos Suite](../ethos-suite/index.md).
-- **Serial** — La radio envoie les traces de débogage Lua sur la liaison USB-série (115200 bps). L'onglet Lua Development Tools d'Ethos Suite intègre un terminal permettant de les afficher. Sous Windows, l'installation d'un pilote  Virtual COM Port peut être nécessaire.
+- **Serial** — La radio envoie les traces de débogage Lua sur la liaison USB-série (115200 bps). L'onglet Lua Development Tools d'Ethos Suite intègre un terminal permettant de les afficher. Sous Windows, l'installation d'un pilote Virtual COM Port peut être nécessaire.

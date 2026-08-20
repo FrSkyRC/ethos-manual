@@ -6,10 +6,7 @@ translated_from: 4cf1808aa5b70d3f39900c1a7aff575ca60ee89e
 
 Ethos peut être piloté entièrement à l'aide du **sélecteur rotatif** de
 droite (tournez-le pour déplacer la surbrillance, appuyez pour `ENT`) et de
-la touche `RTN` pour sortir d'un menu. Lorsqu'il est présent, l'écran tactile constitue simplement un autre moyen d'effectuer les mêmes actions et ne correspond pas à un mode d'utilisation distinct. Les touches `MDL`, `DISP` et `SYS` conduisent directement à la
-Configuration du modèle, à Configurer les écrans et à la Configuration du
-système respectivement (Ces trois fonctions correspondent aux mêmes tuiles que celles de la barre inférieure.) ; un appui long sur `RTN` vous ramène directement à l'écran
-d'accueil à partir de n'importe quel sous-menu.
+la touche `RTN` pour sortir d'un menu. Lorsqu'il est présent, l'écran tactile constitue simplement un autre moyen d'effectuer les mêmes actions et ne correspond pas à un mode d'utilisation distinct. Les touches `MDL`, `DISP` et `SYS` conduisent respectivement à la Configuration du modèle, à Configurer les écrans et à la Configuration du système. Ces trois fonctions correspondent aux mêmes tuiles que celles de la barre inférieure. Un appui long sur `RTN` vous ramène directement à l'écran d'accueil à partir de n'importe quel sous-menu.
 
 ## Menu de réinitialisation
 
@@ -24,7 +21,7 @@ un menu de réinitialisation :
 - **Réinitialiser la télémétrie** — Réinitialise uniquement les données de
   télémétrie.
 - **Réinitialiser les chronos** — Réinitialise uniquement les chronos.
-- **Verrouiller l'écran tactile** — Egalement accessible en appuyant
+- **Verrouiller l'écran tactile** — Également accessible en appuyant
   simultanément sur `ENT` + `PAGE` pendant une seconde à partir de l'écran
   d'accueil, ou comme déclencheur d'une [fonction
   spéciale](../model-setup/special-functions.md).
@@ -47,7 +44,7 @@ Il suffit d'appuyer sur n'importe quel champ de texte (ou d'appuyer sur
 La touche retour arrière efface à gauche du curseur ; `PAGE` supprime à
 droite et, une fois le curseur arrivé à la fin du texte, poursuit la
 suppression à partir de la gauche. Appuyer sur le champ lui-même déplace le
-curseur à cette position , ou utilisez `SYS`/`DISP` pour le déplacer vers la
+curseur à cette position, ou utilisez `SYS`/`DISP` pour le déplacer vers la
 gauche ou vers la droite sans le tactile. Appuyez sur la touche
 **?123**/**abc** pour basculer sur le clavier numérique (qui contient
 également les caractères spéciaux).
@@ -69,8 +66,7 @@ déplacent vers la gauche ou vers la droite.
 
 Lorsque vous touchez une valeur numérique, une boîte de dialogue apparaît en
 bas de l'écran avec les commandes de valeur numérique. Les touches
-**`<`**/**`>`** modifient la valeur du pas (par incrément de facteur 10
-Par exemple 0,01/0,1/1,0/10,0), les touches **`-`**/**`+`** (ou le
+**`<`**/**`>`** modifient la valeur du pas par incréments d'un facteur 10 (par exemple 0,01/0,1/1,0/10,0), les touches **`-`**/**`+`** (ou le
 sélecteur rotatif) incrémentent ou décrémentent la valeur de ce pas, et le
 bouton **Plus** offre des options supplémentaires :
 
