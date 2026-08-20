@@ -370,7 +370,7 @@ simulator.pressKey(KEY_RTN) -- back to model menu, telem highlighted
 --simulator.pressKey(KEY_RTN)
 --
 -- demo of internal value 
-simulator.setAnalog(throttleAnalogIndex, 100) -- set thr to -100
+simulator.setAnalog(throttleStickIndex, 100) -- set thr to -100
 -- start at Telemetry icon
 simulator.pressKey(KEY_ENTER) -- open
 simulator.turnRotaryEncoder(-1) -- scroll to [+] menu
@@ -392,7 +392,7 @@ simulator.turnRotaryEncoder(2) -- scroll to throttle
 simulator.pressKey(KEY_ENTER)
 --
 simulator.screenshot("/screenshots/model-telemetry-edit-custom-sensor-internal-value-max.png")
-simulator.setAnalog(throttleAnalogIndex, -100) -- set thr to -100
+simulator.setAnalog(throttleStickIndex, -100) -- set thr to -100
 simulator.sleep(0.6) -- wait 
 simulator.screenshot("/screenshots/model-telemetry-edit-custom-sensor-internal-value-min.png")
 simulator.pressKey(KEY_RTN) -- deselect

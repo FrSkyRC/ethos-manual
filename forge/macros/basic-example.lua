@@ -285,7 +285,7 @@ simulator.screenshot("/screenshots/tut-fw-eg-mixes-ele-expo-rates.png")
 simulator.pressKey(KEY_RTN, 1)
 
 -- end of ele, start of thr
-simulator.setAnalog(throttleAnalogIndex, 20) -- set thr to +20%
+simulator.setAnalog(throttleStickIndex, 20) -- set thr to +20%
 --simulator.setSwitch(0, 2) -- move switch SA down
 simulator.setSwitch(0, 100) -- move switch SA down
 simulator.pressKey(KEY_MDL) -- open model menu
@@ -393,7 +393,7 @@ simulator.screenshot("/screenshots/tut-fw-eg-mixes-flaps-weights.png")
 simulator.pressKey(KEY_RTN, 1)
 
 -- end of flaps mix, start of outputs
-simulator.setAnalog(throttleAnalogIndex, -100) -- set thr to -100
+simulator.setAnalog(throttleStickIndex, -100) -- set thr to -100
 simulator.pressKey(KEY_MDL)
 simulator.turnRotaryEncoder(5) --scroll to outputs 
 simulator.screenshot("/screenshots/tut-fw-eg-outputs-icon.png")

@@ -48,7 +48,7 @@ simulator.pressKey(KEY_RTN, 1)
 
 simulator.loadModel("geronimo.bin")
 
-simulator.setAnalog(throttleAnalogIndex, 80)
+simulator.setAnalog(throttleStickIndex, 80)
 --simulator.setAnalog(ANALOG_LAST_SLIDER, (-0.0 * 100 / 1024))
 simulator.setAnalog(ANALOG_LAST_SLIDER, -100)
 simulator.setAnalog(elevatorAnalogIndex, -10)
@@ -64,17 +64,17 @@ simulator.turnRotaryEncoder(1) --scroll to configure of first widget
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(1) --scroll to widget select(bitmap is default)
 simulator.screenshot("/screenshots/display-widget-bitmap-config.png")
-simulator.setAnalog(throttleAnalogIndex, 80) -- start setting points for line chart demo
+simulator.setAnalog(throttleStickIndex, 80) -- start setting points for line chart demo
 simulator.turnRotaryEncoder(1) --scroll to bitmap type
 simulator.pressKey(KEY_ENTER) --y
 simulator.screenshot("/screenshots/display-widget-bitmap-type.png")
-simulator.setAnalog(throttleAnalogIndex, 70)
+simulator.setAnalog(throttleStickIndex, 70)
 simulator.pressKey(KEY_RTN) --deselectbtype
 simulator.turnRotaryEncoder(-1) --scroll back to widget select
 simulator.pressKey(KEY_ENTER) -- open widgets list
 simulator.turnRotaryEncoder(-1) --scroll back to '---'
 simulator.screenshot("/screenshots/display-widget-types.png")
-simulator.setAnalog(throttleAnalogIndex, 60)
+simulator.setAnalog(throttleStickIndex, 60)
 simulator.turnRotaryEncoder(2) --scroll to value widget
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(1) --scroll to source select
@@ -94,27 +94,27 @@ simulator.pressKey(KEY_ENTER) --y
 --
 simulator.turnRotaryEncoder(-1) --scroll back 
 simulator.screenshot("/screenshots/display-widget-value-config.png")
-simulator.setAnalog(throttleAnalogIndex, 50)
+simulator.setAnalog(throttleStickIndex, 50)
 simulator.turnRotaryEncoder(1) --scroll back to source
 simulator.pressKey(KEY_ENTER, 1) --long ENT
 simulator.turnRotaryEncoder(1) --scroll to min
 simulator.pressKey(KEY_ENTER) --y
 simulator.screenshot("/screenshots/display-widget-value-min.png")
-simulator.setAnalog(throttleAnalogIndex, 40)
+simulator.setAnalog(throttleStickIndex, 40)
 simulator.pressKey(KEY_RTN) --return
 simulator.turnRotaryEncoder(-1) --scroll back to w type
 simulator.screenshot("/screenshots/display-widget-value-min-rssi.png")
-simulator.setAnalog(throttleAnalogIndex, 30)
+simulator.setAnalog(throttleStickIndex, 30)
 simulator.pressKey(KEY_ENTER) --open w type
 simulator.turnRotaryEncoder(1) --scroll to timer logs
 simulator.pressKey(KEY_ENTER) --y
 simulator.screenshot("/screenshots/display-widget-timer-logs-config.png")
-simulator.setAnalog(throttleAnalogIndex, 20)
+simulator.setAnalog(throttleStickIndex, 20)
 simulator.pressKey(KEY_ENTER) -- enter cancels
 simulator.turnRotaryEncoder(1) --scroll to gps
 simulator.pressKey(KEY_ENTER) --y
 simulator.screenshot("/screenshots/display-widget-gps-map-config.png")
-simulator.setAnalog(throttleAnalogIndex, 10)
+simulator.setAnalog(throttleStickIndex, 10)
 simulator.pressKey(KEY_ENTER) --enter cancels
 simulator.turnRotaryEncoder(1) --scroll to lipo
 simulator.pressKey(KEY_ENTER) --y
@@ -124,12 +124,12 @@ simulator.turnRotaryEncoder(1) --scroll to lipo
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(-1) --scroll back to w type
 simulator.screenshot("/screenshots/display-widget-lipo-config.png")
-simulator.setAnalog(throttleAnalogIndex, 90)
+simulator.setAnalog(throttleStickIndex, 90)
 simulator.pressKey(KEY_ENTER) --open w select
 simulator.turnRotaryEncoder(1) --scroll to channels
 simulator.pressKey(KEY_ENTER) --y
 simulator.screenshot("/screenshots/display-widget-channels-config.png")
-simulator.setAnalog(throttleAnalogIndex, 80)
+simulator.setAnalog(throttleStickIndex, 80)
 simulator.pressKey(KEY_ENTER) --ent cancels
 simulator.turnRotaryEncoder(1) --scroll to line chart
 simulator.pressKey(KEY_ENTER) --y
@@ -169,12 +169,12 @@ simulator.pressKey(KEY_ENTER) --y
 --
 simulator.turnRotaryEncoder(-2) --scroll back to w select
 simulator.screenshot("/screenshots/display-widget-line-chart-config.png")
-simulator.setAnalog(throttleAnalogIndex, 70)
+simulator.setAnalog(throttleStickIndex, 70)
 simulator.pressKey(KEY_ENTER) --open w select
 simulator.turnRotaryEncoder(1) --scroll to text w
 simulator.pressKey(KEY_ENTER) --y
 simulator.screenshot("/screenshots/display-widget-text-config.png")
-simulator.setAnalog(throttleAnalogIndex, 60)
+simulator.setAnalog(throttleStickIndex, 60)
 simulator.pressKey(KEY_RTN) --return from w
 simulator.pressKey(KEY_RTN)
 
@@ -190,11 +190,11 @@ simulator.pressKey(KEY_RTN)
 
 -- now the working widgets
 simulator.sleep(10) -- wait 
-simulator.setAnalog(throttleAnalogIndex, 50) --set more points for line chart demo
+simulator.setAnalog(throttleStickIndex, 50) --set more points for line chart demo
 simulator.sleep(10) -- wait 
-simulator.setAnalog(throttleAnalogIndex, 40)
+simulator.setAnalog(throttleStickIndex, 40)
 simulator.sleep(10) -- wait 
-simulator.setAnalog(throttleAnalogIndex, 30)
+simulator.setAnalog(throttleStickIndex, 30)
 simulator.pressKey(KEY_PAGE)
 simulator.screenshot("/screenshots/display-widget-value-telemetry.png")
 simulator.pressKey(KEY_PAGE)

@@ -10,7 +10,7 @@ dofile("common.lua")
 
 simulator.loadModel("fwexample.bin")
 simulator.pressKey(KEY_ENTER) -- Ack the checklist warnings
-simulator.setAnalog(throttleAnalogIndex, 100)
+simulator.setAnalog(throttleStickIndex, 100)
 simulator.screenshot("/screenshots/mainview.png") -- Home screen
 simulator.connectUsb()
 simulator.screenshot("/screenshots/usbmenu.png") -- USB menu

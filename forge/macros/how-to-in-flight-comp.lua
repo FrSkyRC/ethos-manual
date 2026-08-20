@@ -11,7 +11,7 @@ dofile("common.lua")
 --simulator.setDateTime({year=2024, month=6, day=24, hour=20, min=0, sec=0, lock=true})
 
 simulator.loadModel("ng2.bin")
-simulator.setAnalog(throttleAnalogIndex, -100) -- set flap stick down
+simulator.setAnalog(throttleStickIndex, -100) -- set flap stick down
 simulator.pressKey(KEY_ENTER) --ack alert
 simulator.pressKey(KEY_MDL) --open model menu
 simulator.pressKey(KEY_PAGE) --2nd page

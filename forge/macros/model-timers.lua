@@ -21,10 +21,10 @@ simulator.loadModel("rarebear.bin")
 simulator.pressKey(KEY_ENTER) -- ack alert
 simulator.pressKey(KEY_MDL) -- open model menu
 --simulator.setSwitch(0, 1) -- enable thr on swotch SA so timer 1 runs
---simulator.setAnalog(throttleAnalogIndex, 0) -- set thr to mid - sim now requires thr to 0
+--simulator.setAnalog(throttleStickIndex, 0) -- set thr to mid - sim now requires thr to 0
 simulator.setSwitch(0, -100) -- enable thr on switch SA so timer 1 runs (-100 is switch towards the back)
 --simulator.sleep(1) -- wait for sim
-simulator.setAnalog(throttleAnalogIndex, -100) -- set thr to -100 
+simulator.setAnalog(throttleStickIndex, -100) -- set thr to -100 
 
 
 simulator.turnRotaryEncoder(6) -- scroll to timers
@@ -139,7 +139,7 @@ simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- return to timer 1
 simulator.screenshot("/screenshots/model-timer1-actions-summary.png")
 -- end of timer 1
-simulator.setAnalog(throttleAnalogIndex, 0) -- set thr to mid
+simulator.setAnalog(throttleStickIndex, 0) -- set thr to mid
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- return to timers home
 simulator.turnRotaryEncoder(1) -- scroll to timer options

@@ -18,7 +18,7 @@ dofile("common.lua")
 simulator.loadModel("ng2.bin")
 --
 -- disable std flaps mx
-simulator.setAnalog(throttleAnalogIndex, -100) -- set flap stick down
+simulator.setAnalog(throttleStickIndex, -100) -- set flap stick down
 simulator.pressKey(KEY_ENTER) --ack alert
 simulator.pressKey(KEY_MDL) --open model menu
 simulator.turnRotaryEncoder(4) --scroll to mixes
@@ -161,7 +161,7 @@ simulator.turnRotaryEncoder(1) -- increase from -190 to -180%
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.turnRotaryEncoder(1) -- scroll to flap 2
 simulator.screenshot("/screenshots/how-to-butterfly-mix-flaps-down.png")
-simulator.setAnalog(throttleAnalogIndex, 100)
+simulator.setAnalog(throttleStickIndex, 100)
 simulator.sleep(1) -- wait 
 simulator.screenshot("/screenshots/how-to-butterfly-mix-flaps-up.png")
 simulator.pressKey(KEY_RTN, 1)
@@ -308,7 +308,7 @@ simulator.pressKey(KEY_ENTER)
 --simulator.sleep(1) -- wait 
 simulator.turnRotaryEncoder(1) -- scroll to end of page
 simulator.screenshot("/screenshots/how-to-butterfly-offset-mix-flaps-up.png")
-simulator.setAnalog(throttleAnalogIndex, -100)
+simulator.setAnalog(throttleStickIndex, -100)
 simulator.sleep(1) -- wait 
 simulator.screenshot("/screenshots/how-to-butterfly-offset-mix-flaps-down.png")
 simulator.pressKey(KEY_RTN, 1)
