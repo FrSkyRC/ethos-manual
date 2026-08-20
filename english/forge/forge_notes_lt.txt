@@ -1,0 +1,4 @@
+EN master
+2026-08-20 Update model-timers to add Timer1FilePosition and Timer2FilePosition
+2026-08-20 Update translations.lua for   Timer1FilePosition = 228, Timer2FilePosition = 231, 
+

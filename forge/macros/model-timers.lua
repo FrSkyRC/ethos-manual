@@ -225,7 +225,7 @@ simulator.turnRotaryEncoder(2) -- scroll to
 simulator.pressKey(KEY_ENTER) -- edit file
 simulator.turnRotaryEncoder(translate("Timer2FilePosition")) -- scroll to timer-2-elapsed.wav
 --simulator.turnRotaryEncoder(-10)
-simulator.turnRotaryEncoder(2) -- scroll to timer-2-elapsed
+--simulator.turnRotaryEncoder(2) -- scroll to timer-2-elapsed
 simulator.pressKey(KEY_ENTER) -- select timer-2-elapsed
 -- simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN) -- deselect
