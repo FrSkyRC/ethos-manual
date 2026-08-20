@@ -16,8 +16,8 @@ Example:
 """
 
 import argparse
-import filecmp
 import fnmatch
+import io
 import os
 import shutil
 import subprocess
@@ -197,12 +197,24 @@ def save_diff_image(ref_path, new_path, diff_path):
     highlighted.paste(Image.new("RGB", new.size, (57, 255, 20)), mask=diff_mask)
 
     os.makedirs(os.path.dirname(diff_path), exist_ok=True)
-    highlighted.save(diff_path)
+    highlighted.save(diff_path, optimize=True)
     print(f"  diff saved to {diff_path}")
 
 
+def images_differ(path1, path2):
+    img1 = Image.open(path1).convert("RGB")
+    img2 = Image.open(path2).convert("RGB")
+    if img1.size != img2.size:
+        return True
+    return ImageChops.difference(img1, img2).getbbox() is not None
+
+
+def save_optimized_png(src_path, dest_path):
+    Image.open(src_path).save(dest_path, optimize=True)
+
+
 def copy_screenshots():
-    os.makedirs(FAIL_DIR)
+    os.makedirs(FAIL_DIR, exist_ok=True)
 
     src = os.path.join(BUILD_DIR, "screenshots")
     for name in os.listdir(src):
@@ -210,12 +222,23 @@ def copy_screenshots():
         ref_path = os.path.join(SCREENSHOTS_DIR, name)
         if not os.path.exists(ref_path):
             print(f"New screenshot: {name}")
-            shutil.copy2(src_path, os.path.join(FAIL_DIR, name))
-        elif not filecmp.cmp(src_path, ref_path, shallow=False):
+            save_optimized_png(src_path, os.path.join(FAIL_DIR, name))
+        elif images_differ(src_path, ref_path):
             print(f"Changed screenshot: {name}")
-            shutil.copy2(ref_path, os.path.join(FAIL_DIR, name.replace(".png", ".ref.png")))
-            shutil.copy2(src_path, os.path.join(FAIL_DIR, name))
+            save_optimized_png(ref_path, os.path.join(FAIL_DIR, name.replace(".png", ".ref.png")))
+            save_optimized_png(src_path, os.path.join(FAIL_DIR, name))
             save_diff_image(ref_path, src_path, os.path.join(FAIL_DIR, name.replace(".png", ".diff.png")))
+        else:
+            # Same pixels: keep whichever encoding is smaller as the reference.
+            ref_size = os.path.getsize(ref_path)
+            buffer = io.BytesIO()
+            Image.open(src_path).save(buffer, format="PNG", optimize=True)
+            new_size = buffer.tell()
+            if new_size < ref_size:
+                gain = 100 * (1 - new_size / ref_size)
+                with open(ref_path, "wb") as dest:
+                    dest.write(buffer.getvalue())
+                print(f"Recompressed {name}: {ref_size} -> {new_size} bytes ({gain:.1f}% smaller)")
 
 
 def main():
