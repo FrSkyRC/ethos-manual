@@ -92,6 +92,7 @@ simulator.turnRotaryEncoder(3) -- scroll to custom
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- scroll to name
 simulator.pressKey(KEY_ENTER)
+--[[
 simulator.touch(320, 400) --C
 simulator.touch(69, 406) -- shift
 simulator.touch(284, 312) --r
@@ -99,6 +100,8 @@ simulator.touch(679, 303) --o
 simulator.touch(128, 308) --w
 simulator.touch(234, 352) --d
 simulator.touch(478, 407) --b
+]]--
+simulator.enterText(translate("Crowdb"))
 simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(1) -- scroll to curve type
 simulator.pressKey(KEY_ENTER)
@@ -413,6 +416,7 @@ simulator.pressKey(KEY_PAGE)
 --simulator.touch(736, 398)
 --simulator.touch(736, 398)
 --simulator.touch(736, 398)
+--[[
 simulator.touch(199, 294) -- E
 simulator.touch(63, 399) -- shift
 simulator.touch(712, 345) -- l
@@ -423,7 +427,9 @@ simulator.touch(62, 398) -- shift
 simulator.touch(681, 305) -- o
 simulator.touch(641, 405) -- m
 simulator.touch(759, 307) -- p
-simulator.touch(241, 401) -- x
+]]--
+simulator.enterText(translate("EleComp"))
+simulator.touch(241, 401) -- x (add x to distinguish )
 simulator.pressKey(KEY_RTN) -- accept name
 simulator.turnRotaryEncoder(3) -- scroll to source
 simulator.pressKey(KEY_ENTER)

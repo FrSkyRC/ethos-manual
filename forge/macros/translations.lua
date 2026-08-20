@@ -14,6 +14,7 @@ TRANSLATIONS = {
   Timer2FilePosition = 231, -- position of "timer-2-elapsed" wav file in Model / Timer
   UpTest = "UpTest",
   -- in 'How to configure a butterfly (aka Crow) mix'
+  Crowdb = "Crowdb",
   FlapOffset = "FlapOffset",
   EleComp = "EleComp",
 }
