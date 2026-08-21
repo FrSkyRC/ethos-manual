@@ -20,4 +20,7 @@ TRANSLATIONS = {
   EleCompAdj = "EleCompAdj",
   -- in Model / SF
   VFRlowFilePosition = 250,  -- position of "vfr-low"
+  -- in Model / Select
+  VirtualOkXPosition = 553 -- position of Virtual OK on x-axis
+  -- VirtualOkXPosition = 405 -- position of Virtual OK on x-axis for DE
 }
