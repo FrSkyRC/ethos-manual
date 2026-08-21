@@ -3,6 +3,11 @@ EN master
 2026-08-20 Update translations.lua for   Timer1FilePosition = 228, Timer2FilePosition = 231, 
 2026-08-20 Update how-to-butterfly.lua for enterText()
 2026-08-20 Update translations.lua for "Compdb".
+2026-08-21 Update how-to-butterfly.lua for EleCompAdj
+2026-08-21 Update translations.lua for "EleCompAdj".
+2026-08-21 Accept how-to-butterfly
+2026-08-21 Rerun model-timers
+2026-08-21 Accept model-timers
 
 Todo
 Run the above and accept.
