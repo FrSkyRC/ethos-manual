@@ -8,6 +8,8 @@ EN master
 2026-08-21 Accept how-to-butterfly
 2026-08-21 Rerun model-timers
 2026-08-21 Accept model-timers
+2026-08-21 Run and accept model-select
+2026-08-21 Run and accept basic-example
 
 Todo
 Run the above and accept.

@@ -50,7 +50,7 @@ simulator.loadModel("geronimo.bin")
 simulator.setAnalog(throttleStickIndex, 80)
 --simulator.setAnalog(ANALOG_LAST_SLIDER, (-0.0 * 100 / 1024))
 simulator.setAnalog(ANALOG_LAST_SLIDER, -100)
-simulator.setAnalog(elevatorAnalogIndex, -10)
+simulator.setAnalog(elevatorStickIndex, -10)
 simulator.setAnalog(0, 20)
 simulator.setAnalog(3, 40)
 
