@@ -39,11 +39,6 @@ simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 --simulator.pressKey(KEY_RTN) -- remove one too many RTN due to bug
 simulator.pressKey(KEY_RTN) -- back to mixes list
---[[
-simulator.pressKey(KEY_ENTER) -- open mix options
-simulator.turnRotaryEncoder(2) -- scroll to add mix
-simulator.pressKey(KEY_ENTER) -- add mix
-]]--
 --add butterfly mix
 simulator.touch(546, 91) -- add new mix button '+'
 simulator.screenshot("/screenshots/model-mixes-library-glider.png")
@@ -59,18 +54,6 @@ simulator.turnRotaryEncoder(1) -- scroll to edit
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(4) -- down to input
 simulator.pressKey(KEY_ENTER)
---[[
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER) -- choose thr
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-]]--
 -- select thr stick
 simulator.turnRotaryEncoder(2) --scroll to analogs
 simulator.pressKey(KEY_ENTER)
@@ -92,15 +75,6 @@ simulator.turnRotaryEncoder(3) -- scroll to custom
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- scroll to name
 simulator.pressKey(KEY_ENTER)
---[[
-simulator.touch(320, 400) --C
-simulator.touch(69, 406) -- shift
-simulator.touch(284, 312) --r
-simulator.touch(679, 303) --o
-simulator.touch(128, 308) --w
-simulator.touch(234, 352) --d
-simulator.touch(478, 407) --b
-]]--
 simulator.enterText(translate("Crowdb"))
 simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(1) -- scroll to curve type
@@ -170,22 +144,12 @@ simulator.pressKey(KEY_RTN, 1)
 simulator.pressKey(KEY_MDL) -- open model menu
 simulator.turnRotaryEncoder(4) -- scroll to mixes
 simulator.pressKey(KEY_ENTER)
---[[
-simulator.turnRotaryEncoder(1) -- scroll to first mix
-simulator.pressKey(KEY_ENTER) -- open
-simulator.turnRotaryEncoder(2) -- scroll to add
-simulator.pressKey(KEY_ENTER)
-]]--
 simulator.touch(546, 91) -- add new mix button '+'
 simulator.turnRotaryEncoder(1) --scroll to free mix
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(2) --scroll to last position
 simulator.pressKey(KEY_ENTER)
 --
---simulator.turnRotaryEncoder(1)-- scroll to free mix
---simulator.pressKey(KEY_ENTER)
---simulator.turnRotaryEncoder(2) -- scroll to last position
---simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- scroll to name
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_PAGE)
@@ -203,67 +167,11 @@ simulator.pressKey(KEY_PAGE)
 simulator.pressKey(KEY_PAGE)
 simulator.pressKey(KEY_PAGE)
 simulator.pressKey(KEY_PAGE)
---simulator.touch(748, 401)
---simulator.touch(748, 401)
---simulator.touch(748, 401)
---simulator.touch(748, 401)
---simulator.touch(748, 401)
---simulator.touch(748, 401)
---simulator.touch(748, 401)
---simulator.touch(748, 401)
---simulator.touch(747, 401)
---simulator.touch(747, 401)
---simulator.touch(747, 401)
---simulator.touch(747, 401)
---simulator.touch(747, 401)
---simulator.touch(747, 401)
---simulator.touch(747, 401)
---[[
-simulator.touch(323, 349) --F
-simulator.touch(68, 396) -- shift
-simulator.touch(724, 359) -- l
-simulator.touch(85, 358) -- a
-simulator.touch(756, 302) -- p
-simulator.touch(61, 397) -- shift
-simulator.touch(683, 301) -- O
-simulator.touch(56, 403) -- shift
-simulator.touch(314, 353) -- f
-simulator.touch(315, 353) -- f
-simulator.touch(164, 350) -- s
-simulator.touch(197, 302) -- e
-simulator.touch(368, 305) -- t
-simulator.pressKey(KEY_RTN) -- accept name
-]]--
 simulator.enterText(translate("FlapOffset"))
--- simulator.touch(323, 349) --F
--- simulator.touch(68, 396) -- shift
--- simulator.touch(724, 359) -- l
--- simulator.touch(85, 358) -- a
--- simulator.touch(756, 302) -- p
--- simulator.touch(61, 397) -- shift
--- simulator.touch(683, 301) -- O
--- simulator.touch(56, 403) -- shift
--- simulator.touch(314, 353) -- f
--- simulator.touch(315, 353) -- f
--- simulator.touch(164, 350) -- s
--- simulator.touch(197, 302) -- e
--- simulator.touch(368, 305) -- t
 simulator.pressKey(KEY_RTN) -- accept name
 simulator.turnRotaryEncoder(3) -- scroll to source
 simulator.pressKey(KEY_ENTER) -- 
 -- select special value 0
---[[
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(11)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-]]--
 simulator.turnRotaryEncoder(11) --scroll to special value
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) --scroll to 0
@@ -318,12 +226,6 @@ simulator.pressKey(KEY_MDL) -- open model menu
 simulator.pressKey(KEY_PAGE) -- 2nd page
 simulator.turnRotaryEncoder(5) -- scroll to curves
 simulator.pressKey(KEY_ENTER)
---[[
-simulator.turnRotaryEncoder(1) -- scroll to first mix
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2) -- scroll to add mix
-simulator.pressKey(KEY_ENTER)
-]]--
 simulator.touch(457, 91) -- add new curve button '+'
 --
 simulator.turnRotaryEncoder(1) -- scroll to name
@@ -377,12 +279,6 @@ simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_PAGE) -- open model menu
 simulator.turnRotaryEncoder(3) -- scroll from model select to mixes
 simulator.pressKey(KEY_ENTER)
---[[
-simulator.turnRotaryEncoder(1) -- scroll to first mix
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2) --scroll to add mix
-simulator.pressKey(KEY_ENTER)
-]]--
 -- add free mix
 simulator.touch(546, 91) -- add new mix button '+'
 simulator.turnRotaryEncoder(1) --scroll to free mix
@@ -404,48 +300,12 @@ simulator.pressKey(KEY_PAGE)
 simulator.pressKey(KEY_PAGE)
 simulator.pressKey(KEY_PAGE)
 simulator.pressKey(KEY_PAGE)
---simulator.touch(736, 398)
---simulator.touch(736, 398)
---simulator.touch(736, 398)
---simulator.touch(736, 398)
---simulator.touch(736, 398)
---simulator.touch(736, 398)
---simulator.touch(736, 398)
---simulator.touch(736, 398)
---simulator.touch(736, 398)
---simulator.touch(736, 398)
---simulator.touch(736, 398)
---simulator.touch(736, 398)
---[[
-simulator.touch(199, 294) -- E
-simulator.touch(63, 399) -- shift
-simulator.touch(712, 345) -- l
-simulator.touch(199, 297) -- e
-simulator.touch(63, 400) -- shift
-simulator.touch(328, 402) -- C
-simulator.touch(62, 398) -- shift
-simulator.touch(681, 305) -- o
-simulator.touch(641, 405) -- m
-simulator.touch(759, 307) -- p
-]]--
-simulator.enterText(translate("EleComp"))
-simulator.touch(241, 401) -- x (add x to distinguish )
+simulator.enterText(translate("EleCompAdj"))
+--simulator.touch(241, 401) -- x (add x to distinguish )
 simulator.pressKey(KEY_RTN) -- accept name
 simulator.turnRotaryEncoder(3) -- scroll to source
 simulator.pressKey(KEY_ENTER)
 -- select thr stick
---[[
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-]]--
 simulator.turnRotaryEncoder(2) --scroll to analogs
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(2) --scroll to thr stick
@@ -490,19 +350,6 @@ simulator.turnRotaryEncoder(4) -- scroll to use a source
 simulator.screenshot("/screenshots/how-to-butterfly-mix-ele-use-source.png")
 simulator.pressKey(KEY_ENTER) --y
 simulator.pressKey(KEY_ENTER) -- open
---[[
-simulator.turnRotaryEncoder(1)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(5)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(2)
-simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(19)
-simulator.screenshot("/screenshots/how-to-butterfly-mix-ele-use-ch20.png")
-simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_RTN)
-simulator.pressKey(KEY_RTN)
-]]--
 -- select ch20
 simulator.turnRotaryEncoder(7) -- scroll to channels
 simulator.pressKey(KEY_ENTER)

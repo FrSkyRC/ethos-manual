@@ -17,6 +17,7 @@ TRANSLATIONS = {
   Crowdb = "Crowdb",
   FlapOffset = "FlapOffset",
   EleComp = "EleComp",
+  EleCompAdj = "EleCompAdj",
   -- in Model / SF
   VFRlowFilePosition = 250,  -- position of "vfr-low"
 }
