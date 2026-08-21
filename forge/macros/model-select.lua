@@ -167,7 +167,7 @@ simulator.pressKey(KEY_ENTER) -- y
 
 simulator.pressKey(KEY_RTN, 1) -- return home
 
-os.remove('SD:/models/Airplane/')
-os.remove('SD:/models/Glider/')
-os.remove('SD:/models/Heli/')
-os.remove('SD:/models/Multirotor/')
+--os.remove('SD:/models/Airplane/')
+--os.remove('SD:/models/Glider/')
+--os.remove('SD:/models/Heli/')
+--os.remove('SD:/models/Multirotor/')
