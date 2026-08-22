@@ -10,7 +10,7 @@ Un ensemble de contrôles de sécurité avant vol qui s'exécutent à la mise
 sous tension de la radio et/ou au chargement d'un modèle. Les contrôles
 intégrés comprennent le mode silencieux, le failsafe non défini, les
 positions des interrupteurs/potentiomètres, la batterie de la radio et la
-pile RTC — le contrôle des interrupteurs indique dans quel sens chaque
+pile RTC : le contrôle des interrupteurs indique dans quel sens chaque
 interrupteur doit être déplacé, au moyen de points rouges sur l'écran
 d'avertissement :
 
@@ -24,8 +24,8 @@ d'avertissement :
 
 ![Fonction de contrôle](../screenshots/model-checklist-check_function.png)
 
-Activez le contrôle et choisissez un opérateur — `<` (inférieur à), `~`
-(approximativement égal) ou `>` (supérieur à) — appliqué à une valeur ; un
+Activez le contrôle et choisissez un opérateur : `<` (inférieur à), `~`
+(approximativement égal) ou `>` (supérieur à) : appliqué à une valeur. Un
 avertissement est émis si le manche des gaz se trouve hors de la plage
 autorisée par cette comparaison.
 
@@ -71,7 +71,7 @@ ci-dessus.
 Exige des positions précises des potentiomètres/curseurs au démarrage,
 individuellement pour chaque commande (`~`/`<`/`>`, comme pour le contrôle
 des gaz). **Charger toutes les positions des potentiomètres** enregistre
-automatiquement les positions actuelles — vérifiez ensuite attentivement
+automatiquement les positions actuelles. Vérifiez ensuite attentivement
 les opérateurs sélectionnés automatiquement, car `~` par rapport à
 `<`/`>` peut ne pas correspondre à votre intention réelle.
 

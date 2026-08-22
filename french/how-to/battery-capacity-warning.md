@@ -10,7 +10,7 @@ Cette alerte est basée sur la **capacité consommée** (mAh) plutôt que sur la
 
 Les ESC Neuron de FrSky transmettent directement la consommation. Aucun capteur calculé n'est nécessaire. Dans [Options du récepteur → Port de télémétrie](../system-setup/devices.md), réglez le port de télémétrie sur S.Port, connectez le câble de télémétrie du Neuron, puis [découvrez les capteurs](../model-setup/telemetry.md#discovering-sensors). Le capteur d'intérêt est **ESC Consumption**.
 
-1. Ajoutez un [inter logique](../model-setup/logical-switches.md) pour surveiller `ESC Consumption`, qui devient Vrai au-dessus d'un seuil, par exemple 900 mAh — soit environ 60 % d'une batterie dimensionnée pour atterrir avec encore ~30 % de réserve.
+1. Ajoutez un [inter logique](../model-setup/logical-switches.md) pour surveiller `ESC Consumption`, qui devient Vrai au-dessus d'un seuil, par exemple 900 mAh : soit environ 60 % d'une batterie dimensionnée pour atterrir avec encore ~30 % de réserve.
 2. Ajoutez une [fonction spéciale Play audio](../model-setup/special-functions.md), avec le nouvel inter logique comme condition d'activation, et une étape **Play value** pour `ESC Consumption`.
 
 Comme mesure de sécurité supplémentaire, les ESC Neuron transmettent également **ESC Voltage**. Configurez un second inter logique de la même manière que dans [Alerte de tension de batterie basse](low-battery-warning.md) avec un seuil inférieur à 3,4 V par cellule pendant 4 secondes, soit 13,6 V pour une batterie LiPo 4S. Associez-lui sa propre fonction Play audio, répétée toutes les 5 secondes.

@@ -35,7 +35,7 @@ numbersections: true
 
 CJKmainfont: Microsoft YaHei
 mainfont: Inter
-# Inter n'expose pas de métadonnées OpenType "Language" pour le français ;
+# Inter n'expose pas de métadonnées OpenType "Language" pour le français.
 # sans ça, fontspec/babel émettent "Language 'French' not available for font
 # 'Inter'" (cosmétique, mais Language=Default fait taire la recherche).
 mainfontoptions: Language=Default
@@ -56,12 +56,12 @@ listingtitle: Extrait de code
 csl: iso690-author-date-fr.csl
 
 # https://tex.stackexchange.com/questions/7546/how-to-get-latex-symbol-in-document/7549#7549
-# Note : ce bloc est enveloppé en ```{=latex} pour être passé tel quel à LaTeX ;
+# Note : ce bloc est enveloppé en ```{=latex} pour être passé tel quel à LaTeX.
 # sans ça, Pandoc le retraite comme du Markdown (échappe les %, réinterprète
 # les guillemets…) et casse le préambule.
 # Voir aussi forge/template.latex : template Pandoc personnalisé (une seule
 # ligne modifiée par rapport au template par défaut, pour corriger un bug de
-# ligature/apostrophe avec babel-french — trop tôt dans le préambule pour être
+# ligature/apostrophe avec babel-french : trop tôt dans le préambule pour être
 # réparable depuis ce header-includes).
 header-includes:
 - |

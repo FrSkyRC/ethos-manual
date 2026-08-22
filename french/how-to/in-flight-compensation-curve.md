@@ -6,15 +6,15 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 
 ## Pourquoi
 
-Le déploiement des volets modifie la courbure de l'aile — le changement
+Le déploiement des volets modifie la courbure de l'aile : le changement
 de portance provoque la montée des avions à aile haute et la descente des
-avions à aile basse — ce qui nécessite une correction de la gouverne de
+avions à aile basse, ce qui nécessite une correction de la gouverne de
 profondeur non linéaire par rapport au débattement des volets, donc une
 courbe plutôt qu'un décalage fixe. Ce guide utilise les
 [Vars](../model-setup/variables.md) pour rendre les points d'une courbe
 de compensation réglables **en vol**, en réutilisant le trim
 d'accélérateur, selon le point de courbe dont le manche des volets est
-actuellement le plus proche — en s'appuyant sur l'étape de compensation
+actuellement le plus proche, en s'appuyant sur l'étape de compensation
 de profondeur du [Guide pratique : mixeur
 papillon](butterfly-mixer.md).
 
@@ -23,7 +23,7 @@ papillon](butterfly-mixer.md).
 Une [courbe personnalisée](../model-setup/curves.md) à 5 points suffit
 pour obtenir une compensation progressive sans complexité excessive. En
 partant de la droite, le point 5 (manche des volets entièrement en haut /
-aucun volet sorti) est toujours égal à zéro — aucune compensation n'est
+aucun volet sorti) est toujours égal à zéro : aucune compensation n'est
 nécessaire lorsque les volets ne sont pas déployés. Les 4 autres points
 de la courbe seront réglables à l'aide de Vars. Comme le manche des
 volets se trouvera souvent entre deux points définis, les deux points
@@ -34,7 +34,7 @@ cette zone de chevauchement.
 
 Plages point à point (adaptées, avec son aimable autorisation, du
 « Crow-aware adaptive elevator trim » de Mike Shellim développé pour
-OpenTX, voir rc-soar.com — légèrement modifiées pour étendre la plage du
+OpenTX, voir rc-soar.com : légèrement modifiées pour étendre la plage du
 Pt2 jusqu'à +100 %, pour la raison expliquée à l'[Étape
 6](#6-apply-the-curve)) :
 
@@ -56,21 +56,21 @@ chacun utilisant **Range** avec le manche des volets (c'est-à-dire
 l'accélérateur) comme source, actifs lorsque le manche se trouve dans la
 plage définie du point concerné :
 
-- `AdaptivePt2` — plage de 20 % à 100 % (portée jusqu'à 100 %
+- `AdaptivePt2` : plage de 20 % à 100 % (portée jusqu'à 100 %
   spécifiquement pour permettre de régler le Pt2 même sans volets
-  déployés — voir l'Étape 6).
+  déployés : voir l'Étape 6).
 
   ![AdaptivePt2](../screenshots/how-in-flight-comp-lsw-adaptivept2.png)
 
-- `AdaptivePt3` — plage de −45 % à 45 %.
+- `AdaptivePt3` : plage de −45 % à 45 %.
 
   ![AdaptivePt3](../screenshots/how-in-flight-comp-lsw-adaptivept3.png)
 
-- `AdaptivePt4` — plage de −90 % à −20 %.
+- `AdaptivePt4` : plage de −90 % à −20 %.
 
   ![AdaptivePt4](../screenshots/how-in-flight-comp-lsw-adaptivept4.png)
 
-- `AdaptivePt5` — plage de −100 % à −90 %.
+- `AdaptivePt5` : plage de −100 % à −90 %.
 
   ![AdaptivePt5](../screenshots/how-in-flight-comp-lsw-adaptivept5.png)
 
@@ -80,7 +80,7 @@ plage définie du point concerné :
 
 Quatre [Vars](../model-setup/variables.md), `VAdjPt2`–`VAdjPt5`, chacune
 avec une fourchette de 0 à 50 % (qui peut être augmentée si nécessaire)
-et une action définie pour **réutiliser le trim de l'accélérateur** — avec
+et une action définie pour **réutiliser le trim de l'accélérateur**, avec
 une taille de pas de 1,0 %, la condition d'activation étant
 l'interrupteur logique correspondant :
 
@@ -124,20 +124,20 @@ rattache sa courbe EleComp au mixage de compensation de profondeur.
 
 Dans la mesure du possible, partez de données réelles (directives du
 constructeur de l'avion, publications des forums) sur la course de
-profondeur nécessaire pour une sortie de volets donnée ; sinon, quelques
+profondeur nécessaire pour une sortie de volets donnée. Sinon, quelques
 millimètres de compensation à pleins volets constituent un point de
 départ raisonnable.
 
 !!! tip "Approche du réglage"
     Commencez avec de petites quantités de volets et de petites
     corrections de trim. `AdaptivePt2` peut être réglé **même si les
-    volets ne sont pas déployés** — sortez un peu les volets, rentrez-les
+    volets ne sont pas déployés** : sortez un peu les volets, rentrez-les
     à nouveau, et composez la compensation petit à petit, plutôt que de
     lutter contre un modèle qui monte ou qui descend en essayant de
     trimmer sous pression. Réappliquez un peu de volets pour vérifier,
     puis ajustez de nouveau si nécessaire. Une fois le Pt2 satisfaisant,
-    passez au point suivant, à peu près au milieu de la course du manche
-    — si le Pt2 a nécessité une correction de trim importante, il peut
+    passez au point suivant, à peu près au milieu de la course du manche.
+    Si le Pt2 a nécessité une correction de trim importante, il peut
     être prudent d'atterrir et de régler les points restants pour que
     chacun soit légèrement plus grand que le précédent, plutôt que de
     deviner à l'aveugle.

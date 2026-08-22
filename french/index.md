@@ -12,7 +12,7 @@ vient se greffer sur l'ensemble.
 
 ## Par où commencer
 
-- Vous découvrez Ethos ? Commencez par [Prise en main](getting-started/index.md) —
+- Vous découvrez Ethos ? Commencez par [Prise en main](getting-started/index.md) :
   la disposition de l'écran principal et le fonctionnement de la navigation, avant de modifier le
   moindre réglage.
 - Vous configurez une nouvelle radio ? Consultez [Configuration du système](system-setup/index.md) pour les

@@ -7,10 +7,10 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 Une amélioration utile de la fonction [Écolage](../model-setup/trainer.md) :
 au lieu de dépendre uniquement d'un interrupteur, l'instructeur peut
 reprendre le contrôle instantanément en bougeant simplement le manche
-d'ailerons ou de profondeur — inutile de chercher d'abord l'interrupteur
+d'ailerons ou de profondeur : inutile de chercher d'abord l'interrupteur
 d'écolage en cas de problème.
 
-L'interrupteur d'écolage démarre toujours la session ; c'est un
+L'interrupteur d'écolage démarre toujours la session. C'est un
 [interrupteur logique Sticky](../model-setup/logical-switches.md#sticky)
 qui pilote la fonction Écolage elle-même, annulé soit par le passage de
 l'interrupteur à l'état inactif, **soit** par la détection d'un mouvement
@@ -41,7 +41,7 @@ Le même principe, appliqué au manche de profondeur.
 
 Un interrupteur logique **OR**, vrai lorsque l'interrupteur de détection
 des ailerons ou celui de la profondeur est vrai, **ou** lorsque
-l'interrupteur d'écolage (par ex. SD) n'est pas en position basse —
+l'interrupteur d'écolage (par ex. SD) n'est pas en position basse :
 autrement dit, « l'instructeur a bougé un manche » ou « l'interrupteur
 d'écolage a été coupé » met fin à la session.
 
@@ -51,8 +51,8 @@ d'écolage a été coupé » met fin à la session.
 
 Un interrupteur logique de type **Sticky** : **Trigger ON** correspond à
 l'interrupteur d'écolage (SD en position basse), **Trigger OFF** à
-l'interrupteur d'annulation de l'étape 3. Utilisez cet interrupteur Sticky
-— appelons-le `TrainerActive` — comme condition d'activation de la
+l'interrupteur d'annulation de l'étape 3. Utilisez cet interrupteur Sticky,
+nommé ici `TrainerActive`, comme condition d'activation de la
 fonction Écolage, à la place de l'interrupteur brut.
 
 ## 5. Retour sonore

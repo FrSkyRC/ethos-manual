@@ -8,7 +8,7 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 
 ![Exemple de vue principale](../screenshots/mainview.png)
 
-L'écran d'accueil est ce que vous voyez lorsqu'aucun menu n'est ouvert. Il peut comporter jusqu'à **huit** vues, que vous configurez vous-même (voir [Écrans](../displays/index.md)), et entre lesquelles on passe avec la touche `PAGE` ou par un geste de balayage tactile. Un modèle nouvellement créé ne comporte qu'une seule vue, avec un widget pour l'image du modèle, trois widgets pour les chronos et l'affichage des trims et des potentiomètres ; tout ce qui s'y trouve est ensuite personnalisable par l'utilisateur.
+L'écran d'accueil est ce que vous voyez lorsqu'aucun menu n'est ouvert. Il peut comporter jusqu'à **huit** vues, que vous configurez vous-même (voir [Écrans](../displays/index.md)), et entre lesquelles on passe avec la touche `PAGE` ou par un geste de balayage tactile. Un modèle nouvellement créé ne comporte qu'une seule vue, avec un widget pour l'image du modèle, trois widgets pour les chronos et l'affichage des trims et des potentiomètres. Tout ce qui s'y trouve est ensuite personnalisable par l'utilisateur.
 
 Les vues principales partagent normalement les barres supérieure et inférieure décrites ci-dessous, mais une vue peut aussi être réglée en plein écran, ce qui masque les deux barres.
 
@@ -18,8 +18,8 @@ La barre supérieure affiche le nom du modèle sur la gauche (ainsi que la phase
 
 - l'enregistrement des données actif
 - l'écolage (maître ou élève, selon le cas)
-- RSSI — liaison 2,4 GHz
-- RSSI — liaison 900 MHz (si un module double bande / longue portée est installé)
+- RSSI : liaison 2,4 GHz
+- RSSI : liaison 900 MHz (si un module double bande / longue portée est installé)
 - le volume sonore
 - l'état de la batterie radio
 
@@ -27,13 +27,13 @@ Un appui sur l'icône du haut-parleur ou de la batterie permet d'accéder direct
 
 ### Avertissement d'erreur
 
-Un triangle rouge s'affiche dans la barre supérieure dès qu'Ethos détecte une erreur — une erreur de script Lua, une erreur de sauvegarde de la RAM, ou l'exécution d'une version de test (nightly/instable) du firmware en sont les causes les plus fréquentes. Les détails relatifs à l'avertissement sont toujours affichés dans la page **Système → Infos**, sur la même page que la durée de fonctionnement de la radio et les [journaux d'erreurs](../system-setup/information.md).
+Un triangle rouge s'affiche dans la barre supérieure dès qu'Ethos détecte une erreur : une erreur de script Lua, une erreur de sauvegarde de la RAM, ou l'exécution d'une version de test (nightly/instable) du firmware en sont les causes les plus fréquentes. Les détails relatifs à l'avertissement sont toujours affichés dans la page **Système → Infos**, sur la même page que la durée de fonctionnement de la radio et les [journaux d'erreurs](../system-setup/information.md).
 
 ## La barre inférieure
 
 ![Barre inférieure](../screenshots/bottombar.png)
 
-Quatre onglets sont alignés en bas de l'écran pour accéder aux sections principales — **Vue principale**, **Configuration du modèle**, **Configurer les écrans**, **Configuration de la radio** — l'heure système s'affichant à droite (un appui sur l'heure permet d'accéder directement à [Date et heure](../system-setup/date-and-time.md)).
+Quatre onglets sont alignés en bas de l'écran pour accéder aux sections principales : **Vue principale**, **Configuration du modèle**, **Configurer les écrans** et **Configuration de la radio**. L'heure système s'affiche à droite. Un appui sur l'heure permet d'accéder directement à [Date et heure](../system-setup/date-and-time.md).
 
 ## La zone des widgets
 

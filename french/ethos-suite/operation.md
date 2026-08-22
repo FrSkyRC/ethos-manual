@@ -6,7 +6,7 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 
 ## Section d'accueil
 
-**Update News** — Notes de version et recommandations de sauvegarde avant
+**Update News** : Notes de version et recommandations de sauvegarde avant
 d'effectuer les mises à jour. Ethos 1.6.0+ exige que le module RF interne et
 les récepteurs TD/TW/AP/AP Plus soient en v3.0.1+ pour bénéficier de ses
 améliorations. L'activation des **Pre-releases** (avec le serveur réglé sur
@@ -14,7 +14,7 @@ GitHub: voir [Paramètres de la suite](#suite-settings)) fait également
 apparaître ici les versions préliminaires, aux côtés de l'historique
 complet des versions.
 
-**Ethos web page** — Une vue intégrée de ethos.frsky-rc.com : ressources,
+**Ethos web page** : Une vue intégrée de ethos.frsky-rc.com : ressources,
 liens vers les modèles types et liste des radios prises en charge.
 
 ## Section Radio
@@ -26,10 +26,10 @@ dès sa détection.
 
 ### Informations sur la radio
 
-- **Ethos** — Versions du firmware et du chargeur de démarrage installées .
+- **Ethos** : Versions du firmware et du chargeur de démarrage installées .
   **Manage Ethos** Ouvre directement leur mise à jour si elles ne sont pas à
   jour.
-- **RF Module** — Firmware du module RF interne installé . **Manage
+- **RF Module** : Firmware du module RF interne installé . **Manage
   internal module** ouvre directement sa mise à jour si nécessaire.
 - **Model manager** / **Lua library** / **Download center**  (Raccourcis
   vers ces outils).
@@ -41,13 +41,13 @@ chargeur de démarrage, de la SD card/eMMC (fichiers audio) et de la mémoire
 flash (bitmaps système) . Les fichiers système en mémoire flash sont
 désormais mis à jour avec le firmware et ne sont plus gérés séparément.
 
-- **Write outdated components** — Met à jour uniquement les composants
+- **Write outdated components** : Met à jour uniquement les composants
   obsolètes.
-- **Write all components** — Met tout à jour, quelle que soit la version.
+- **Write all components** : Met tout à jour, quelle que soit la version.
 - Options individuelles **Write firmware**, **Write bootloader**, **Write
   audio files**, chacune lancée en cliquant sur le bouton de mise à jour
   gris foncé situé à côté de l'option sélectionnée.
-- **Flash from a local file** — Contourne le téléchargement en utilisant un
+- **Flash from a local file** : Contourne le téléchargement en utilisant un
   fichier de firmware déjà présent sur le disque.
 
 Sélectionner une version consiste d'abord à choisir la **branche** souhaitée
@@ -89,7 +89,7 @@ se mettent à jour via **Write all components** ou **Write audio files**
 
 Sélectionnez la version souhaitée (normalement la plus récente) et cliquez
 sur **Flash module** pour écrire directement le firmware sur le module RF
-interne — la mention « ...has been flashed successfully » confirme la fin de
+interne : la mention « ...has been flashed successfully » confirme la fin de
 l'opération. Cette procédure est également déclenchée automatiquement par la
 mise à niveau obligatoire en v3.0.1 décrite ci-dessus.
 
@@ -117,12 +117,12 @@ sauvegarde précédemment enregistrée peut être restaurée.
     jour d'Ethos](#updating-ethos)), car les fichiers de modèles ne sont pas
     rétrocompatibles.
 
-- **Backup Location** — Parcourez jusqu'à l'emplacement de sauvegarde
-  souhaité (le chemin est enregistré pour chaque type de radio) ; la date et
+- **Backup Location** : Parcourez jusqu'à l'emplacement de sauvegarde
+  souhaité (le chemin est enregistré pour chaque type de radio). La date et
   l'heure de la dernière sauvegarde s'affichent en dessous.
-- **Backup** — Enregistre les fichiers de modèle en y consignant la version
+- **Backup** : Enregistre les fichiers de modèle en y consignant la version
   d'Ethos actuelle.
-- **Restore** — Sélectionnez les composants à restaurer : Audio (désactivé
+- **Restore** : Sélectionnez les composants à restaurer : Audio (désactivé
   par défaut), Scripts, Screenshots, System Bitmaps (désactivé par défaut, est
   désormais gérés avec le firmware), Models (inclut les fichiers texte de
   [liste de contrôle définie par
@@ -138,40 +138,40 @@ en existe.
 
 ## Section Outils
 
-- **Download center** — Téléchargez n'importe quel firmware depuis le site
+- **Download center** : Téléchargez n'importe quel firmware depuis le site
   FrSky et (lorsque la radio est en mode Ethos) utilisez-la comme proxy
   pour flasher un module, un capteur, un servo ou un récepteur connecté via
   une liaison de mise à jour S.Port. Choisissez le produit dans la liste
   (par exemple un récepteur TW SR8), parcourez les **assets** disponibles,
   puis **Download** pour enregistrer localement ou **Flash** pour écrire
-  directement sur l'appareil connecté — une barre de progression suit le
+  directement sur l'appareil connecté : une barre de progression suit le
   flash et se termine par « ...has been flashed successfully! »
 
-- **Image manager** — Convertit vos images au format natif d'Ethos (BMP
+- **Image manager** : Convertit vos images au format natif d'Ethos (BMP
   32 bits, RVB, canal alpha ajouté uniquement si nécessaire) à la taille
   spécifiée, en conservant les proportions. Tailles de référence : les
   images des modèles sont de 300 × 280 pixels (X20) / 180 × 168 pixels
-  (X18) ; les images en plein écran de 800 × 480 pixels (X20) / 480 × 320
+  (X18). Les images en plein écran de 800 × 480 pixels (X20) / 480 × 320
   pixels (X18) . Voir le [Gestionnaire de
   fichiers](../system-setup/file-manager.md#top-level-folders) pour les
   règles de nommage des bitmaps. Permet également de parcourir directement
   les dossiers `bitmaps/gps`, `bitmaps/models` et `bitmaps/user` de la
   radio, avec prise en charge de l'envoi. Cliquez sur le bouton **+** pour
   ajouter des images à la liste de conversion (le format TIFF n'est pas pris
-  en charge), sélectionnez ensuite le chemin de sortie (un dossier local ;
-  directement sur la radio dans les images de modèle/utilisateur/GPS ; ou le
+  en charge), sélectionnez ensuite le chemin de sortie (un dossier local ,
+  directement sur la radio dans les images de modèle/utilisateur/GPS , ou le
   dossier de la radio actuellement ouvert), et indiquez éventuellement s'il
   faut ouvrir automatiquement le dossier de sortie ou forcer l'ajout d'un
   canal alpha.
 
-- **Audio manager** — Convertit vos fichiers audio au format d'Ethos (PCM
+- **Audio manager** : Convertit vos fichiers audio au format d'Ethos (PCM
   linéaire, 32 kHz, mono, 16 bits little-endian). Cliquez sur le bouton
   **+** pour ajouter des fichiers, choisissez un dossier local ou envoyez-les
   directement dans le dossier `audio` de la radio (en les déplaçant ensuite
   dans le bon sous-dossier de voix), avec ouverture automatique facultative
   de la destination.
 
-- **Lua development tools** — **Lua Docs** fournit un lien vers le guide de
+- **Lua development tools** : **Lua Docs** fournit un lien vers le guide de
   référence Ethos Lua (voir aussi le fil de discussion *FrSky - ETHOS Lua
   Script Programming* sur rcgroups) . **Lua Demo Scripts** ouvre la page des
   scripts d'exemple sur le GitHub Ethos-Feedback-Community . **Debug** ouvre
@@ -182,14 +182,14 @@ en existe.
      Ethos.
   2. Vous pouvez alors éditer vos scripts Lua directement sur le lecteur
      monté de la radio, avec votre éditeur de code préféré.
-  3. Ouvrez l'onglet **Lua Development Tools** → **START DEBUG** — l'émetteur
+  3. Ouvrez l'onglet **Lua Development Tools** → **START DEBUG** : l'émetteur
      redémarre en mode série/débogage et réinitialise les scripts.
   4. Toutes les sorties `print()` des scripts actifs sont envoyées dans la
      fenêtre de terminal de Suite.
   5. **STOP DEBUG** permet de revenir en mode Ethos normal pour poursuivre
      les modifications.
 
-- **DFU Flasher** — Flashe le chargeur de démarrage via une connexion USB
+- **DFU Flasher** : Flashe le chargeur de démarrage via une connexion USB
   hors tension (DFU), ce qui fonctionne même si le firmware a été totalement
   corrompu, car le chargeur de démarrage ST sous-jacent est dans la ROM.
   Cliquez sur **Select Bootloader** pour accéder à votre fichier téléchargé
@@ -202,39 +202,39 @@ en existe.
       plupart des PC sous Windows 10 ou versions ultérieures, les systèmes
       Tandem se connectent à l'aide du pilote DFU USB par défaut, mais les
       mises à jour Windows le remplacent parfois par un pilote générique qui
-      peut ne pas fonctionner — vérifiez le Gestionnaire de périphériques et
+      peut ne pas fonctionner. Vérifiez le Gestionnaire de périphériques et
       envisagez un programme tel que l'Impulse Driver Fixer. Pour les
       utilisateurs d'Horus X10 en particulier, il peut être nécessaire
       d'installer manuellement le pilote de périphérique USB du chargeur de
       démarrage STM32 (avec Impulse Driver Fixer ou Zadig), car Windows 10
       ne l'installe pas par défaut.
 
-- **Repair Tool** — Destiné aux radios X18/S, TW Lite, XE et X20 Pro/R/RS :
+- **Repair Tool** : Destiné aux radios X18/S, TW Lite, XE et X20 Pro/R/RS :
   si la radio ne peut pas lire à partir de la NAND ou si les paramètres ne
   peuvent pas être enregistrés, cet outil reformate le stockage interne.
 
 ## Section Autres
 
-- **Documentation** — Liens vers la communauté Ethos-Feedback sur GitHub,
+- **Documentation** : Liens vers la communauté Ethos-Feedback sur GitHub,
   les manuels officiels d'Ethos (téléchargeables) et une FAQ sur Ethos
   Suite.
-- **Ethos Github** — Versions et suivi des problèmes (pour éviter les
+- **Ethos Github** : Versions et suivi des problèmes (pour éviter les
   doublons, effectuez une recherche dans les problèmes existants avant d'en
   publier un nouveau).
 
 ### Paramètres de la suite {: #suite-settings }
 
-- **Language** — Tchèque, Allemand, Anglais, Espagnol, Français, Hébreu,
+- **Language** : Tchèque, Allemand, Anglais, Espagnol, Français, Hébreu,
   Italien, Néerlandais, Norvégien, Portugais, Slovénien, Chinois.
-- **Server location** — **FrSky server** ou **GitHub** (nécessaire pour
+- **Server location** : **FrSky server** ou **GitHub** (nécessaire pour
   l'accès aux versions préliminaires ci-dessus).
-- **Debug options** — Activer ou désactiver la boîte de dialogue
-  contextuelle en cas d'erreur fatale ; activer le mode de débogage de Suite
-  qui enregistre toutes les traces (pas seulement les plantages) ; ouvrir le
+- **Debug options** : Activer ou désactiver la boîte de dialogue
+  contextuelle en cas d'erreur fatale. Activer le mode de débogage de Suite
+  qui enregistre toutes les traces (pas seulement les plantages). Ouvrir le
   répertoire des journaux.
-- **Version** / **Update Suite** — Version actuelle de la suite et
+- **Version** / **Update Suite** : Version actuelle de la suite et
   vérification manuelle des mises à jour.
-- **About** — Une page de remerciements pour tous les composants réutilisés.
+- **About** : Une page de remerciements pour tous les composants réutilisés.
 
 ## Utilisation en ligne de commande
 
@@ -245,8 +245,8 @@ Ethos Suite peut être lancé depuis un terminal :
 | `--help` | Affiche l'aide en ligne de commande. |
 | `--version` | Affiche la version de Suite installée. |
 | `--list-radios` | Liste toutes les radios FrSky prises en charge. |
-| `--radio-components --radio {RADIO}` (ou `--radio auto`) | Liste les composants d'une radio connectée et leurs chemins. `auto` détecte automatiquement ; précisez `{RADIO}` si plusieurs radios sont connectées. |
-| `--get-path {COMPONENT}` | Obtient le chemin d'un composant — `BITMAPS`, `SCRIPTS`, `SCREENSHOTS`, `AUDIO` ou `I18N`. |
+| `--radio-components --radio {RADIO}` (ou `--radio auto`) | Liste les composants d'une radio connectée et leurs chemins. `auto` détecte automatiquement. Précisez `{RADIO}` si plusieurs radios sont connectées. |
+| `--get-path {COMPONENT}` | Obtient le chemin d'un composant : `BITMAPS`, `SCRIPTS`, `SCREENSHOTS`, `AUDIO` ou `I18N`. |
 | `--serial start` \| `--serial stop` | Active/désactive le mode de débogage série. |
 
 !!! note

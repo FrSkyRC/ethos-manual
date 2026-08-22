@@ -6,14 +6,14 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 
 ![Manches](../screenshots/system-sticks.png)
 
-Appelé **Manches** dans le menu — le mode des manches et l'ordre
+Appelé **Manches** dans le menu : le mode des manches et l'ordre
 d'affectation des voies par défaut.
 
 ## Mode des manches
 
-- **Mode 1** — Gaz / Ailerons sur le manche de droite, Profondeur / Dérive
+- **Mode 1** : Gaz / Ailerons sur le manche de droite, Profondeur / Dérive
   sur celui de gauche.
-- **Mode 2** — Gaz / Dérive sur le manche de gauche, Ailerons / Profondeur
+- **Mode 2** : Gaz / Dérive sur le manche de gauche, Ailerons / Profondeur
   sur celui de droite.
 
 Par défaut, les manches sont nommés selon les standards d'utilisation,
@@ -26,7 +26,7 @@ manches sont affectées aux voies lorsqu'un nouveau modèle est créé par les
 assistants de [Choix du modèle](../model-setup/model-select.md). L'ordre
 par défaut est **AETR** (APGD). S'il y a plus d'une voie par type de
 surface, elles seront regroupées, à moins que [4 premières voies
-fixes](#first-four-channels-fixed) ne soit activé — par exemple, pour
+fixes](#first-four-channels-fixed) ne soit activé : par exemple, pour
 2 ailerons, l'ordre des voies sera **AAETR** (AAPGD).
 
 ![Ordre voies](../screenshots/system-sticks-rx-order.png)

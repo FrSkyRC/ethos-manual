@@ -15,13 +15,13 @@ la touche `RTN` pour sortir d'un menu. Lorsqu'il est présent, l'écran tactile 
 Un appui long sur la touche `ENT` depuis l'écran d'accueil fait apparaître
 un menu de réinitialisation :
 
-- **Réinitialiser le vol** — Réinitialise les données de télémétrie, les
+- **Réinitialiser le vol** : Réinitialise les données de télémétrie, les
   chronos et les inters de fonction, et relance la [checklist](../model-setup/checklist.md)
   avant vol.
-- **Réinitialiser la télémétrie** — Réinitialise uniquement les données de
+- **Réinitialiser la télémétrie** : Réinitialise uniquement les données de
   télémétrie.
-- **Réinitialiser les chronos** — Réinitialise uniquement les chronos.
-- **Verrouiller l'écran tactile** — Également accessible en appuyant
+- **Réinitialiser les chronos** : Réinitialise uniquement les chronos.
+- **Verrouiller l'écran tactile** : Également accessible en appuyant
   simultanément sur `ENT` + `PAGE` pendant une seconde à partir de l'écran
   d'accueil, ou comme déclencheur d'une [fonction
   spéciale](../model-setup/special-functions.md).
@@ -41,7 +41,7 @@ disponible sur les radios tactiles.
 
 Il suffit d'appuyer sur n'importe quel champ de texte (ou d'appuyer sur
 `ENT` lorsqu'il est sélectionné) pour faire apparaître le clavier virtuel.
-La touche retour arrière efface à gauche du curseur ; `PAGE` supprime à
+La touche retour arrière efface à gauche du curseur. `PAGE` supprime à
 droite et, une fois le curseur arrivé à la fin du texte, poursuit la
 suppression à partir de la gauche. Appuyer sur le champ lui-même déplace le
 curseur à cette position, ou utilisez `SYS`/`DISP` pour le déplacer vers la
@@ -79,7 +79,7 @@ bouton **Plus** offre des options supplémentaires :
 ![Affichage du curseur de saisie](../screenshots/keyboard-numbers-slider.png)
 
 Le curseur (également réglable avec le sélecteur rotatif) permet d'ajuster
-rapidement la valeur ; sélectionnez « Désactiver curseur » pour revenir aux
+rapidement la valeur. Sélectionnez « Désactiver curseur » pour revenir aux
 saisies par valeurs. Les valeurs de plage de télémétrie peuvent être saisies
 de la même manière :
 
@@ -121,16 +121,16 @@ disponibles en fonction du type de source :
 
 **Toute source**
 
-- **Inverser** — Permet d'annuler ou d'inverser la source (par exemple,
+- **Inverser** : Permet d'annuler ou d'inverser la source (par exemple,
   active lorsque l'inter n'est *pas* en haut, au lieu de l'être lorsqu'il
   l'est).
-- **Front** — Se déclenche une seule fois lors d'un changement d'état
-  (FAUX→VRAI ou VRAI→FAUX) plutôt que de rester actif pendant tout l'état ;
-  signalé par un préfixe `†` sur la source. Disponible sur les inters en
+- **Front** : Se déclenche une seule fois lors d'un changement d'état
+  (FAUX→VRAI ou VRAI→FAUX) plutôt que de rester actif pendant tout l'état.
+  Signalé par un préfixe `†` sur la source. Disponible sur les inters en
   général, et plus particulièrement sur la condition de déclenchement de
   l'[inter logique Sticky](../model-setup/logical-switches.md).
 
-**Sources de type manche** — Options de type calibration/subtrim :
+**Sources de type manche** : Options de type calibration/subtrim :
 
 ![Options des manches](../screenshots/source-stick-options.png)
 
@@ -140,20 +140,20 @@ disponibles en fonction du type de source :
 
 ![Options des inters](../screenshots/switch-options.png)
 
-- **Négatif** — inverse l'action de l'inter.
-- **Demi-course** — pour un inter à 2 positions ou un inter logique, la
+- **Négatif** : inverse l'action de l'inter.
+- **Demi-course** : pour un inter à 2 positions ou un inter logique, la
   plage de sortie devient [0-100 %] au lieu de [-100 %-100 %].
 
 **Sources de type trim**
 
 ![Options des trims](../screenshots/source-trim-options.png)
 
-- **Négatif** — Inverse l'action du trim (utile dans les Actions d'un
+- **Négatif** : Inverse l'action du trim (utile dans les Actions d'un
   mixage libre).
-- **Course complète** — Par défaut, les trims ont une plage de +/- 25 % de
+- **Course complète** : Par défaut, les trims ont une plage de +/- 25 % de
   la course. Lorsqu'ils sont utilisés comme source, celle-ci peut être
   élargie à +/- 100 %.
-- **Non contrôlé par l'élève** — Sur un [inter
+- **Non contrôlé par l'élève** : Sur un [inter
   logique](../model-setup/logical-switches.md), cette option permet
   d'ignorer la valeur provenant de l'entrée de l'élève. Une application
   typique est celle où l'on détecte le mouvement des manches du côté
@@ -165,8 +165,8 @@ disponibles en fonction du type de source :
 
 ![Options des variables](../screenshots/source-var-options.png)
 
-- **Négatif** — Rend négative la valeur de la variable pour cet usage.
-- **Ignorer la plage** — Certains paramètres ont des plages asymétriques,
+- **Négatif** : Rend négative la valeur de la variable pour cet usage.
+- **Ignorer la plage** : Certains paramètres ont des plages asymétriques,
   comme les paramètres Min/Max dans Sorties, qui ont des plages de
   (−150 % à 0 %) et (0 % à +150 %) respectivement. Lorsque vous utilisez une
   [variable](../model-setup/variables.md) comme source d'un tel paramètre, à
@@ -174,7 +174,7 @@ disponibles en fonction du type de source :
   cette option pour contourner la conversion automatique de plage d'Ethos et
   éviter les valeurs inattendues.
 
-**Sources de type capteur de télémétrie** — **Mini** et **Maxi** prennent en
+**Sources de type capteur de télémétrie** : **Mini** et **Maxi** prennent en
 compte la valeur minimale ou maximale du capteur à la place de la valeur en
 temps réel (certains capteurs proposent en outre des options qui leur sont
 propres).

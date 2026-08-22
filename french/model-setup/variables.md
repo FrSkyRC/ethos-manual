@@ -8,12 +8,12 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 
 Les variables (« Vars ») sont des conteneurs nommés destinés aux valeurs
 de réglage propres à un modèle, référençables partout ailleurs dans la
-programmation — y compris dans les [mixages](mixes.md). Le fait de les
+programmation : y compris dans les [mixages](mixes.md). Le fait de les
 regrouper dans leur propre section sépare les *données de configuration*
 d'un modèle de sa *logique de programmation* : au lieu de fouiller des
 dizaines de mixages pour retrouver et ajuster une valeur, tout se trouve
-au même endroit avec un nom explicite. 64 Vars sont disponibles ; aucune
-n'existe par défaut. Ajoutez-en une avec **+** ; touchez une Var
+au même endroit avec un nom explicite. 64 Vars sont disponibles. Aucune
+n'existe par défaut. Ajoutez-en une avec **+**. Touchez une Var
 existante pour **Éditer**/**Déplacer**/**Copier**/**Cloner**/**Supprimer**.
 
 ![Ajouter une variable](../screenshots/model-vars-add.png)
@@ -32,7 +32,7 @@ est disponible (les champs à icône hamburger).
     Un planeur à ailerons scindés (les sections internes servant aussi
     de volets d'atterrissage) nécessite un réglage unique et partagé de
     différentiel d'ailerons, utilisé partout où les quatre surfaces
-    agissent comme ailerons — une Var contenant cette valeur unique,
+    agissent comme ailerons : une Var contenant cette valeur unique,
     référencée depuis chaque mixage concerné, garantit sa cohérence et
     fait qu'il n'y a qu'un seul endroit à ajuster.
 
@@ -40,18 +40,18 @@ est disponible (les champs à icône hamburger).
 
 ![Nouvelle variable](../screenshots/model-vars-new_var.png)
 
-- **Valeur** — valeur actuelle (affichage en lecture seule).
-- **Nom** — modifiable.
-- **Commentaire** — texte libre expliquant son rôle.
-- **Plage** — limites basse/haute (une décimale, dans les ±500 %) que la
+- **Valeur** : valeur actuelle (affichage en lecture seule).
+- **Nom** : modifiable.
+- **Commentaire** : texte libre expliquant son rôle.
+- **Plage** : limites basse/haute (une décimale, dans les ±500 %) que la
   valeur de la Var ne peut jamais dépasser.
 
 ### Valeurs
 
 ![Valeurs de la variable](../screenshots/model-vars-values.png)
 
-- **Fixe** — une constante unique, avec une décimale.
-- **Multiple/variable** — **Ajouter une nouvelle valeur** associe une
+- **Fixe** : une constante unique, avec une décimale.
+- **Multiple/variable** : **Ajouter une nouvelle valeur** associe une
   valeur à chaque condition active. Par exemple, `Var12` vaut 9 % lorsque
   la phase de vol Thermique (FM4) est active, et −3 % lorsque Vitesse
   (FM5) est active, sa Plage étant limitée à −10 %…+15 % afin qu'aucune
@@ -70,7 +70,7 @@ est disponible (les champs à icône hamburger).
 Les actions modifient la valeur d'une Var au fil du temps, pilotées par
 une entrée.
 
-**Trim réaffecté** — confie l'un des trims physiques au réglage de cette
+**Trim réaffecté** : confie l'un des trims physiques au réglage de cette
 Var au lieu de sa fonction normale, généralement conditionné à une seule
 condition active :
 
@@ -85,22 +85,22 @@ condition active :
     En dehors de cette condition active, le trim retrouve
     automatiquement sa fonction ordinaire.
 
-**Actions arithmétiques** — pilotées par n'importe quelle entrée :
+**Actions arithmétiques** : pilotées par n'importe quelle entrée :
 
-- **Assigner** — fixe la Var à une valeur donnée.
-- **Ajouter** / **Soustraire** / **Multiplier** / **Diviser** —
+- **Assigner** : fixe la Var à une valeur donnée.
+- **Ajouter** / **Soustraire** / **Multiplier** / **Diviser** :
   opérations arithmétiques sur la valeur actuelle.
-- **Pourcentage** — applique un pourcentage de l'entrée pilote.
-- **Min** / **Max** — borne la Var par rapport à l'entrée pilote.
+- **Pourcentage** : applique un pourcentage de l'entrée pilote.
+- **Min** / **Max** : borne la Var par rapport à l'entrée pilote.
 
   ![Actions de fonction](../screenshots/model-vars-functions.png)
 
 !!! example
-    `FS3(edge)` assigne directement 40 % à une Var ; `FS1(edge)` ajoute 2
-    à chaque appui (plafonné au maximum de la Plage) ; `FS2(edge)`
+    `FS3(edge)` assigne directement 40 % à une Var. `FS1(edge)` ajoute 2
+    à chaque appui (plafonné au maximum de la Plage). `FS2(edge)`
     soustrait 2 à chaque appui (limité au minimum de la Plage). L'option
     **Edge** (appui long sur l'interrupteur de fonction) est ici
-    importante — sans elle, l'action se répéterait continuellement aussi
+    importante, car sans elle l'action se répéterait continuellement aussi
     longtemps que l'interrupteur est maintenu, au lieu de ne s'exécuter
     qu'une fois par appui.
 

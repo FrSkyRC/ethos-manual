@@ -9,7 +9,7 @@ spécifique. Deux cas de figure : créer de toutes pièces un nouveau modèle
 pour l'un d'eux, ou convertir un modèle existant pour qu'il corresponde.
 
 !!! note "Captures d'écran à venir"
-    Cette page ne comporte pas encore de captures d'écran du simulateur —
+    Cette page ne comporte pas encore de captures d'écran du simulateur :
     voir [Screenshot
     Pipeline](../contributing/screenshot-pipeline.md).
 
@@ -23,11 +23,11 @@ premières voies soient fixes en **AETRA**.
 1. Dans [Manches](../system-setup/controls.md), vérifiez que **l'ordre des
    voies** est `AETR`.
 2. Activez **[Quatre premières voies
-   fixes](../system-setup/controls.md#first-four-channels-fixed)** — cela
+   fixes](../system-setup/controls.md#first-four-channels-fixed)**. Cela
    empêche l'assistant de regrouper les quatre premières voies, en les
    conservant strictement dans l'ordre `AETRA…` quel que soit le nombre de
    surfaces de chaque type que comporte la cellule.
-3. Lancez l'assistant de création de modèle normalement — les 5 premières
+3. Lancez l'assistant de création de modèle normalement : les 5 premières
    voies seront AETRA.
 
 !!! note "Auto-vérification des récepteurs Archer"
@@ -58,14 +58,14 @@ Point de départ :
 | 7 | Volet2 (gauche) |
 | 8 | Train rentrant |
 
-Ordre visé : `AETRAE` — CH1 Aileron1, CH2 Profondeur, CH3 Gaz,
+Ordre visé : `AETRAE` : CH1 Aileron1, CH2 Profondeur, CH3 Gaz,
 CH4 Direction, CH5 Aileron2, CH6 Profondeur2/AUX2 (puis gain/modes de
 vol/auto-vérification sur les voies 9 à 12).
 
 1. **Commencez par déplacer Aileron2 hors du chemin** : dans Sorties,
    sélectionnez CH2 (Aileron2), appuyez à nouveau, sélectionnez **Permuter
    les voies**, et permutez-la avec une voie inutilisée (par exemple CH9).
-   La permutation a lieu immédiatement — tous les mixages faisant référence
+   La permutation a lieu immédiatement : tous les mixages faisant référence
    à l'une ou l'autre voie sont ajustés automatiquement.
 2. **Permutez CH3 (Profondeur) en CH2.**
 3. **Permutez CH4 (Gaz) en CH3.**
@@ -85,4 +85,4 @@ Résultat :
 | 7 | Volet2 (gauche) |
 | 8 | Train rentrant |
 
-— soit désormais l'ordre attendu par les récepteurs stabilisés FrSky.
+Cet ordre est désormais celui attendu par les récepteurs stabilisés FrSky.

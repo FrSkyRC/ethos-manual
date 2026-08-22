@@ -14,14 +14,14 @@ décollage/atterrissage) / Idle Up 1 (vol acrobatique) / Idle Up 2 (3D).
 Elles éliminent une grande partie de la charge de commutation et de trim
 du pilote : une phase de vol peut prendre en charge ses propres trims
 indépendants et peut également conditionner les [Vars](variables.md) et
-les [Mixages](mixes.md) — ensemble, ces caractéristiques permettent de
+les [Mixages](mixes.md) : ensemble, ces caractéristiques permettent de
 gérer une réelle complexité. Reportez-vous à l'[Exemple de base pour aile
 fixe](../tutorials/basic-fixed-wing.md) pour voir les phases de vol
 appliquées à un modèle réel.
 
 Aucune phase de vol n'est définie par défaut. Appuyez sur la phase de vol
 par défaut et sélectionnez **Modifier** si vous souhaitez la renommer,
-sinon sélectionnez **Ajouter** pour définir une nouvelle phase de vol —
+sinon sélectionnez **Ajouter** pour définir une nouvelle phase de vol :
 jusqu'à 20 au total.
 
 ## Nom
@@ -47,14 +47,14 @@ active est indiquée en gras.
 
 !!! warning "Ajout d'une phase de vol à un modèle existant"
     Une phase de vol nouvellement ajoutée est, par défaut, active dans
-    chaque mixage déjà dépendant des phases de vol — vérifiez que chacun
+    chaque mixage déjà dépendant des phases de vol. Vérifiez que chacun
     de ces mixages fonctionne toujours correctement, en particulier un
     mixage **Lock** verrouillant une voie sur une phase de vol donnée.
 
 ## Activation progressive, désactivation progressive
 
 Les temps attribués aux transitions progressives entre les phases de vol
-(par exemple une seconde dans chaque sens) — cela n'a d'effet que sur les
+(par exemple une seconde dans chaque sens). Cela n'a d'effet que sur les
 mixages eux-mêmes dépendants des phases de vol.
 
 ## Gestion des phases de vol

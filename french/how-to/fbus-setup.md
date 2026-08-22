@@ -12,13 +12,13 @@ câbler deux servos Xact sur les voies d'aileron (1 et 5) de l'[exemple d'avion 
 voilure fixe de base](../tutorials/basic-fixed-wing.md).
 
 !!! note "Captures d'écran à venir"
-    Cette page ne comporte pas encore de captures d'écran du simulateur — voir
+    Cette page ne comporte pas encore de captures d'écran du simulateur : voir
     [Chaîne de production des captures](../contributing/screenshot-pipeline.md).
 
 ## 1. Télécharger la dernière version du firmware
 
 FBUS nécessite l'utilisation de la dernière version du firmware, tant pour le
-récepteur que pour les périphériques — par exemple, les servos Xact doivent être
+récepteur que pour les périphériques : par exemple, les servos Xact doivent être
 au moins en v2.0.1. Récupérez les mises à jour pertinentes sur la
 [page de téléchargement FrSky](https://www.frsky-rc.com/download/).
 
@@ -34,7 +34,7 @@ externe**.
 ## 3 / 5. Configurer les ID physiques
 
 Les deux servos utilisent par défaut l'ID physique `0C` hexadécimal et l'ID
-d'application `6800` hexadécimal — ils entreront en conflit sur le bus partagé si
+d'application `6800` hexadécimal. Ils entreront en conflit sur le bus partagé si
 l'un des deux n'est pas modifié. Deux méthodes sont possibles selon le type de
 récepteur :
 
@@ -51,7 +51,7 @@ récepteur :
    **Enregistrer dans le flash**.
 
 **Directement via le récepteur** (par exemple un TD-R18 Tandem, avec les deux
-servos câblés simultanément — voir l'[étape
+servos câblés simultanément : voir l'[étape
 4](#4-configure-the-receiver-for-fbus)) :
 
 1. Avec le servo 1 seul branché (par exemple sur la broche Pin1 du récepteur),
@@ -59,7 +59,7 @@ servos câblés simultanément — voir l'[étape
    Confirmez les valeurs par défaut (`0C` / `6800` / `CH1`), puis **Enregistrer
    dans le flash**.
 2. Avec le servo 2 seul branché (Pin5), même menu (Device Config ne peut se
-   connecter qu'à un seul servo à la fois) — passez à `0D` / `6801` / `CH5`, puis
+   connecter qu'à un seul servo à la fois) : passez à `0D` / `6801` / `CH5`, puis
    **Enregistrer dans le flash**. Sélectionnez ensuite de nouveau Device Config
    pour confirmer que la modification a bien été prise en compte.
 
@@ -68,14 +68,14 @@ servos câblés simultanément — voir l'[étape
 **SR10 Pro** : accédez au [Système RF](../model-setup/rf-system.md) → appuyez sur
 le bouton du récepteur → **Options** → réglez le **Port de télémétrie** sur
 **FBUS**. Les servos Xact peuvent alors être connectés en série à partir de ce
-port ; étant donné que chaque servo n'a qu'un seul connecteur, un prolongateur
+port. Étant donné que chaque servo n'a qu'un seul connecteur, un prolongateur
 multivoies F.Port2 (FP2CH4, FP2CH6 ou FP2CH8) permet de le répartir vers
 plusieurs servos.
 
 **TD-R18 Tandem** : Système RF → le bouton du récepteur → **Options** → réglez
-individuellement les broches (par exemple **Pin1**, **Pin5**) sur **FBUS** — vous
+individuellement les broches (par exemple **Pin1**, **Pin5**) sur **FBUS**. Vous
 pouvez réaffecter autant de broches que nécessaire à FBUS, ce qui évite
-totalement l'emploi de prolongateurs ; toutes les broches programmées en FBUS
+totalement l'emploi de prolongateurs. Toutes les broches programmées en FBUS
 transportent exactement le même signal FBUS.
 
 ## 5. Vérifier le contrôle FBUS des servos
@@ -96,11 +96,11 @@ le courant, la tension, la température et l'état (`OK` en fonctionnement norma
 Une fois le modèle entièrement câblé, il n'est plus pratique d'isoler un servo
 pour le reconfigurer via Device Config. Procédez plutôt ainsi : accédez à
 Télémétrie, repérez un capteur appartenant au servo concerné (par exemple
-`SRV1 curr`) et choisissez **Configure** — cela ouvre directement la
+`SRV1 curr`) et choisissez **Configure**. Cela ouvre directement la
 configuration de ce servo. Appuyez sur **Enregistrer dans le flash** après chaque
 modification.
 
 !!! warning
     Ne modifiez pas par inadvertance l'ID physique ou l'ID d'application depuis
-    cet écran — c'est ce qui garantit que chaque servo reste adressable sur le
+    cet écran. C'est ce qui garantit que chaque servo reste adressable sur le
     bus partagé.

@@ -13,7 +13,7 @@ supplémentaire :
 
 - Vous pouvez choisir parmi **15** mises en page différentes, dont deux mises
   en page dédiées à l'écran d'accueil et une option plein écran, avec jusqu'à
-  9 widgets — configurés exactement comme pour le premier écran.
+  9 widgets : configurés exactement comme pour le premier écran.
 - Les écrans peuvent être réorganisés ou même supprimés depuis leur propre
   boîte de dialogue d'édition, appelée en appuyant sur Écran1, ou Écran2, etc.
 
@@ -31,7 +31,7 @@ Configurer les écrans.
 
 ## Options au niveau de l'écran
 
-Au-delà des widgets individuels, chaque écran possède ses propres réglages —
+Au-delà des widgets individuels, chaque écran possède ses propres réglages :
 taille de la grille de la mise en page, arrière-plan, et choix des écrans
 inclus dans le cycle `PAGE`.
 

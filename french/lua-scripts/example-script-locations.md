@@ -8,8 +8,8 @@ Les scripts d'exemple officiels sont publiés sur
 [github.com/FrSkyRC/ETHOS-Feedback-Community](https://github.com/FrSkyRC/ETHOS-Feedback-Community/tree/main/lua)
 (en particulier `/lua/examples/task` et `/lua/examples/source`). La majorité
 des exemples concernent les widgets Lua (configurés dans la section
-[Configurer les écrans](../displays/custom-widgets.md)) ; l'exemple
-**`servo`** illustre plus spécifiquement un **outil système** — un script
+[Configurer les écrans](../displays/custom-widgets.md)). L'exemple
+**`servo`** illustre plus spécifiquement un **outil système** : un script
 qui apparaît après **Info** dans la section Système des menus plutôt que
 comme widget d'affichage.
 
@@ -23,7 +23,7 @@ comme widget d'affichage.
    **Enregistrer la page sous…**, puis enregistrez le fichier sous le nom
    `main.lua`.
 4. Pour éviter les conflits avec les fichiers `main.lua` d'autres scripts,
-   déplacez-le dans un dossier portant un nom approprié — le nom du dossier
+   déplacez-le dans un dossier portant un nom approprié : le nom du dossier
    source lui-même est un choix judicieux.
 
 Pour tous les autres fichiers dont un script a besoin (images, etc.) :
@@ -31,7 +31,7 @@ cliquez sur le fichier, cliquez sur **Download**, puis cliquez avec le
 bouton droit de la souris et choisissez **Enregistrer l'image sous…** (ou
 l'équivalent) pour l'enregistrer à côté du script.
 
-Les scripts s'installent dans le dossier `scripts/` de la SD card/eMMC —
+Les scripts s'installent dans le dossier `scripts/` de la SD card/eMMC :
 voir [Gestionnaire de
 fichiers](../system-setup/file-manager.md#top-level-folders).
 
