@@ -13,6 +13,7 @@ EN master
 2026-08-21 Update model-select for localization
 2026-08-21 Update translations.lua for DE to localize
 2026-08-21 Run and accept model-select
+2026-08-22 Update display for telemetry position line 89
 
 Todo
 Run the above and accept.
