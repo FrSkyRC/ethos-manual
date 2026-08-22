@@ -11,10 +11,11 @@ d'affectation des voies par défaut.
 
 ## Mode des manches
 
-- **Mode 1** : Gaz / Ailerons sur le manche de droite, Profondeur / Dérive
-  sur celui de gauche.
-- **Mode 2** : Gaz / Dérive sur le manche de gauche, Ailerons / Profondeur
-  sur celui de droite.
+**Mode 1** : Gaz / Ailerons sur le manche de droite, Profondeur / Dérive
+sur celui de gauche.
+
+**Mode 2** : Gaz / Dérive sur le manche de gauche, Ailerons / Profondeur
+sur celui de droite.
 
 Par défaut, les manches sont nommés selon les standards d'utilisation,
 mais vous avez la possibilité de les renommer.

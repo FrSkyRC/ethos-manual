@@ -113,17 +113,19 @@ d'ailerons/volets.
 La **configuration de l'empennage** propose un empennage classique en croix, un
 empennage en V, ou aucun empennage (aile delta/aile volante) :
 
-- **Aile delta/aile volante** : la création d'un modèle Avion avec 2 ailerons et
-  aucune surface d'empennage génère automatiquement le mixage Elevon, avec des
-  courses par défaut de 50 % afin que des ordres simultanés d'ailerons et de
-  profondeur à fond totalisent toujours 100 %.
-- **Aile delta avec un récepteur stabilisé assurant le mixage** : sélectionnez
-  plutôt 1 aileron et 1 profondeur. Le mixage Elevon est réalisé dans le
-  récepteur, conformément à son propre manuel.
-- **Aile delta avec des surfaces d'ailerons et de profondeur dédiées** :
-  laissez l'assistant se dérouler comme si le modèle avait un empennage. Il
-  configure les voies d'ailerons et de profondeur nécessaires (avec ou sans
-  dérive), et aucun mixage Elevon n'est créé.
+**Aile delta/aile volante** : la création d'un modèle Avion avec 2 ailerons et
+aucune surface d'empennage génère automatiquement le mixage Elevon, avec des
+courses par défaut de 50 % afin que des ordres simultanés d'ailerons et de
+profondeur à fond totalisent toujours 100 %.
+
+**Aile delta avec un récepteur stabilisé assurant le mixage** : sélectionnez
+plutôt 1 aileron et 1 profondeur. Le mixage Elevon est réalisé dans le
+récepteur, conformément à son propre manuel.
+
+**Aile delta avec des surfaces d'ailerons et de profondeur dédiées** :
+laissez l'assistant se dérouler comme si le modèle avait un empennage. Il
+configure les voies d'ailerons et de profondeur nécessaires (avec ou sans
+dérive), et aucun mixage Elevon n'est créé.
 
 L'étape de **réaffectation des voies** permet de modifier l'affectation par
 défaut de l'assistant, en gardant à l'esprit que les récepteurs stabilisés

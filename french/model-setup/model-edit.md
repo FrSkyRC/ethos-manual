@@ -50,21 +50,26 @@ Les six inters de fonction sont disponibles partout où se trouve un paramètre
 peuvent pas être utilisés comme source. Ils peuvent être configurés comme
 suit :
 
-- **6-Pos avec OFF** : appuyez sur n'importe quel inter de fonction pour le
-  verrouiller sur ON. Appuyer une deuxième fois sur le *même* inter éteint
-  les six inters de fonction.
-- **6-Pos** : appuyez sur n'importe quel inter de fonction pour le verrouiller
-  sur ON jusqu'à ce qu'un *autre* inter de fonction soit enfoncé, qui prend
-  alors le relais.
-- **2 × 3 Pos** : divise les 6 inters de fonction en deux groupes de 3, avec
-  un inter allumé par groupe.
-- **6 × 2 Pos** : chacun des 6 inters peut être activé ou désactivé
-  indépendamment.
-- **Poussoir** : les 6 inters de fonction sont considérés comme momentanés :
-  chacun n'est activé que lorsqu'il est maintenu enfoncé.
-- **Permanent** : si cette option est activée, l'inter de fonction conserve
-  son état lors de la mise en marche de la radio ou de la sélection du même
-  modèle, au lieu d'être réinitialisé.
+**6-Pos avec OFF** : appuyez sur n'importe quel inter de fonction pour le
+verrouiller sur ON. Appuyer une deuxième fois sur le *même* inter éteint
+les six inters de fonction.
+
+**6-Pos** : appuyez sur n'importe quel inter de fonction pour le verrouiller
+sur ON jusqu'à ce qu'un *autre* inter de fonction soit enfoncé, qui prend
+alors le relais.
+
+**2 × 3 Pos** : divise les 6 inters de fonction en deux groupes de 3, avec
+un inter allumé par groupe.
+
+**6 × 2 Pos** : chacun des 6 inters peut être activé ou désactivé
+indépendamment.
+
+**Poussoir** : les 6 inters de fonction sont considérés comme momentanés :
+chacun n'est activé que lorsqu'il est maintenu enfoncé.
+
+**Permanent** : si cette option est activée, l'inter de fonction conserve
+son état lors de la mise en marche de la radio ou de la sélection du même
+modèle, au lieu d'être réinitialisé.
 
 ![Options des inters de fonction](../screenshots/model-edit-fn-switches-select.png)
 

@@ -42,16 +42,18 @@ correspondre à ce que le récepteur prend en charge**, sinon l'appairage
 échouera. Après un changement de mode, revérifiez soigneusement chaque voie
 et tout particulièrement le comportement du failsafe.
 
-- **ACCESS** : les chaînes 2,4 GHz et 900 MHz fonctionnent en tandem sous un
-  même ensemble de commandes ACCESS. Jusqu'à trois récepteurs au total, dans
-  n'importe quelle combinaison de 2,4 GHz (24 voies) et 900 MHz (16 voies).
-  La télémétrie des deux bandes est active simultanément, étiquetée par
-  bande. Une source de télémétrie **RX** indique quel récepteur est
-  actuellement la source de télémétrie active.
-- **ACCST D16** : une seule chaîne 2,4 GHz, pour les récepteurs de la série
-  « X » plus anciens.
-- **Mode TD** : tandem 2,4 GHz + 900 MHz à faible latence et longue portée
-  pour les récepteurs Tandem, 24 voies sur chaque bande.
+**ACCESS** : les chaînes 2,4 GHz et 900 MHz fonctionnent en tandem sous un
+même ensemble de commandes ACCESS. Jusqu'à trois récepteurs au total, dans
+n'importe quelle combinaison de 2,4 GHz (24 voies) et 900 MHz (16 voies).
+La télémétrie des deux bandes est active simultanément, étiquetée par
+bande. Une source de télémétrie **RX** indique quel récepteur est
+actuellement la source de télémétrie active.
+
+**ACCST D16** : une seule chaîne 2,4 GHz, pour les récepteurs de la série
+« X » plus anciens.
+
+**Mode TD** : tandem 2,4 GHz + 900 MHz à faible latence et longue portée
+pour les récepteurs Tandem, 24 voies sur chaque bande.
 
 Les versions du **firmware Flex** ajoutent une seconde colonne Type
 permettant de basculer entre les modulations FLEX915M (915 MHz de type FCC)
@@ -169,15 +171,18 @@ enregistrées côté récepteur, ce qui leur permet de survivre à un redémarra
 de celui-ci. Revérifiez soigneusement le failsafe après toute mise à jour du
 firmware du récepteur ajoutant ce comportement.
 
-- **Hold** : maintient les dernières positions de voies reçues.
-- **Custom** : par voie : **Not Set**, **Hold**, **Custom** (une valeur fixe,
-  à saisir directement ou à capturer avec l'icône en forme de flèche) ou
-  **No Pulses**.
-- **No Pulses** : arrête purement et simplement les impulsions, pour les
-  contrôleurs de vol disposant de leur propre comportement de retour au
-  point de départ en cas de perte de signal.
-- **Receiver** : (récepteurs série X ou plus récents) définit le failsafe
-  directement sur le récepteur.
+**Hold** : maintient les dernières positions de voies reçues.
+
+**Custom** : par voie : **Not Set**, **Hold**, **Custom** (une valeur fixe,
+à saisir directement ou à capturer avec l'icône en forme de flèche) ou
+**No Pulses**.
+
+**No Pulses** : arrête purement et simplement les impulsions, pour les
+contrôleurs de vol disposant de leur propre comportement de retour au
+point de départ en cas de perte de signal.
+
+**Receiver** : (récepteurs série X ou plus récents) définit le failsafe
+directement sur le récepteur.
 
 !!! warning
     Testez soigneusement le réglage de failsafe choisi avant de vous y fier.

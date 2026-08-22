@@ -88,45 +88,50 @@ Couvre l'affichage, les paramètres audio, le vario, le retour vibreur et la bar
 
   ![Modes audio](../screenshots/system-general-audio-modes.png)
 
-  - **Silencieux** : pas d'audio (une alerte sera tout de même émise au
-    démarrage si la vérification du [mode silencieux](alerts.md) est activée).
-  - **Alarmes uniquement** : seules les alarmes seront jouées.
-  - **Par défaut** : les sons sont activés.
-  - **Fréquent** : ajoute des bips d'erreur lors du dépassement des valeurs
-    minimale ou maximale.
-  - **Toujours** : ajoute des bips lors de la navigation dans les menus, en
-    plus des sons du mode « Fréquent ».
-  - **Bluetooth** (X20S/HD/Pro/R/RS uniquement) : relaie l'audio vers un
-    appareil Bluetooth appairé (casque, etc.). Appuyez sur **Chercher
-    périphériques**, placez l'appareil cible en mode d'appairage, puis
-    sélectionnez-le dès qu'il est trouvé :
+  **Silencieux** : pas d'audio (une alerte sera tout de même émise au
+  démarrage si la vérification du [mode silencieux](alerts.md) est activée).
 
-    ![Bluetooth audio](../screenshots/system-general-audio-bluetooth.png)
+  **Alarmes uniquement** : seules les alarmes seront jouées.
 
-    ![Message d'attente de périphériques](../screenshots/system-general-audio-bluetooth-searching.png)
+  **Par défaut** : les sons sont activés.
 
-    ![Choix de périphérique Bluetooth](../screenshots/system-general-audio-bluetooth-device-selected.png)
+  **Fréquent** : ajoute des bips d'erreur lors du dépassement des valeurs
+  minimale ou maximale.
 
-    ![Message d'attente de l'appareil](../screenshots/system-general-audio-bluetooth-connecting.png)
+  **Toujours** : ajoute des bips lors de la navigation dans les menus, en
+  plus des sons du mode « Fréquent ».
 
-    ![Appareil Bluetooth appairé](../screenshots/system-general-audio-bluetooth-connected.png)
+  **Bluetooth** (X20S/HD/Pro/R/RS uniquement) : relaie l'audio vers un
+  appareil Bluetooth appairé (casque, etc.). Appuyez sur **Chercher
+  périphériques**, placez l'appareil cible en mode d'appairage, puis
+  sélectionnez-le dès qu'il est trouvé :
 
-    Une fois l'appareil appairé, validez avec **OK** : l'écran Bluetooth
-    réaffiche alors la connexion établie.
+  ![Bluetooth audio](../screenshots/system-general-audio-bluetooth.png)
 
-    ![Appareil Bluetooth connecté](../screenshots/system-general-audio-bluetooth-connected-ok.png)
+  ![Message d'attente de périphériques](../screenshots/system-general-audio-bluetooth-searching.png)
 
-    Pour déconnecter l'appareil, appuyez dessus afin de faire apparaître
-    l'option **Déconnecter**.
+  ![Choix de périphérique Bluetooth](../screenshots/system-general-audio-bluetooth-device-selected.png)
 
-    ![Déconnexion Bluetooth](../screenshots/system-general-audio-bluetooth-disconnect-select.png)
+  ![Message d'attente de l'appareil](../screenshots/system-general-audio-bluetooth-connecting.png)
 
-    **Couper haut-parleur** contrôle alors le haut-parleur intégré : toujours
-    activé, activé uniquement lorsque la télémétrie est active, ou contrôlé
-    par une source telle qu'un inter. Le système se souvient du périphérique
-    Bluetooth. Pour un fonctionnement normal, allumez la radio avant le
-    périphérique Bluetooth, et comptez quelques secondes après sa connexion
-    pour que la coupure du haut-parleur s'active à nouveau.
+  ![Appareil Bluetooth appairé](../screenshots/system-general-audio-bluetooth-connected.png)
+
+  Une fois l'appareil appairé, validez avec **OK** : l'écran Bluetooth
+  réaffiche alors la connexion établie.
+
+  ![Appareil Bluetooth connecté](../screenshots/system-general-audio-bluetooth-connected-ok.png)
+
+  Pour déconnecter l'appareil, appuyez dessus afin de faire apparaître
+  l'option **Déconnecter**.
+
+  ![Déconnexion Bluetooth](../screenshots/system-general-audio-bluetooth-disconnect-select.png)
+
+  **Couper haut-parleur** contrôle alors le haut-parleur intégré : toujours
+  activé, activé uniquement lorsque la télémétrie est active, ou contrôlé
+  par une source telle qu'un inter. Le système se souvient du périphérique
+  Bluetooth. Pour un fonctionnement normal, allumez la radio avant le
+  périphérique Bluetooth, et comptez quelques secondes après sa connexion
+  pour que la coupure du haut-parleur s'active à nouveau.
 
 ## Vario {: #vario }
 
@@ -185,10 +190,13 @@ bitmaps) **avant** de changer l'emplacement de stockage.
 Ce qui se produit automatiquement lorsque la radio est connectée à un PC via
 USB :
 
-- **Non défini** : une boîte de dialogue apparaît au moment de la connexion
-  pour proposer le choix.
-- **Joystick** : passe immédiatement en mode Joystick pour l'utilisation avec
-  un simulateur RC.
-- **Ethos Suite** : passe immédiatement en mode Ethos pour l'utilisation avec
-  [Ethos Suite](../ethos-suite/index.md).
-- **Série** : passe immédiatement en mode Série, en transmettant les traces de débogage Lua via USB-Serial à 115200 bps (un [pilote de port COM virtuel Windows](https://www.st.com/en/development-tools/stsw-stm32102.html) peut être nécessaire).
+**Non défini** : une boîte de dialogue apparaît au moment de la connexion
+pour proposer le choix.
+
+**Joystick** : passe immédiatement en mode Joystick pour l'utilisation avec
+un simulateur RC.
+
+**Ethos Suite** : passe immédiatement en mode Ethos pour l'utilisation avec
+[Ethos Suite](../ethos-suite/index.md).
+
+**Série** : passe immédiatement en mode Série, en transmettant les traces de débogage Lua via USB-Serial à 115200 bps (un [pilote de port COM virtuel Windows](https://www.st.com/en/development-tools/stsw-stm32102.html) peut être nécessaire).
