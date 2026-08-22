@@ -56,21 +56,21 @@ chacun utilisant **Range** avec le manche des volets (c'est-à-dire
 l'accélérateur) comme source, actifs lorsque le manche se trouve dans la
 plage définie du point concerné :
 
-- `AdaptivePt2` : plage de 20 % à 100 % (portée jusqu'à 100 %
+- **`AdaptivePt2`** : plage de 20 % à 100 % (portée jusqu'à 100 %
   spécifiquement pour permettre de régler le Pt2 même sans volets
   déployés : voir l'Étape 6).
 
   ![AdaptivePt2](../screenshots/how-in-flight-comp-lsw-adaptivept2.png)
 
-- `AdaptivePt3` : plage de −45 % à 45 %.
+- **`AdaptivePt3`** : plage de −45 % à 45 %.
 
   ![AdaptivePt3](../screenshots/how-in-flight-comp-lsw-adaptivept3.png)
 
-- `AdaptivePt4` : plage de −90 % à −20 %.
+- **`AdaptivePt4`** : plage de −90 % à −20 %.
 
   ![AdaptivePt4](../screenshots/how-in-flight-comp-lsw-adaptivept4.png)
 
-- `AdaptivePt5` : plage de −100 % à −90 %.
+- **`AdaptivePt5`** : plage de −100 % à −90 %.
 
   ![AdaptivePt5](../screenshots/how-in-flight-comp-lsw-adaptivept5.png)
 

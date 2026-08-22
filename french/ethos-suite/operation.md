@@ -26,19 +26,19 @@ dès sa détection.
 
 ### Informations sur la radio
 
-- **Ethos** : Versions du firmware et du chargeur de démarrage installées .
+- **Ethos** : Versions du firmware et du chargeur de démarrage installées.
   **Manage Ethos** Ouvre directement leur mise à jour si elles ne sont pas à
   jour.
-- **RF Module** : Firmware du module RF interne installé . **Manage
+- **RF Module** : Firmware du module RF interne installé. **Manage
   internal module** ouvre directement sa mise à jour si nécessaire.
-- **Model manager** / **Lua library** / **Download center**  (Raccourcis
+- **Model manager** / **Lua library** / **Download center** (Raccourcis
   vers ces outils).
 
 ### Mise à jour d'Ethos {: #updating-ethos }
 
 L'onglet **Ethos** affiche côte à côte les versions du firmware, du
 chargeur de démarrage, de la SD card/eMMC (fichiers audio) et de la mémoire
-flash (bitmaps système) . Les fichiers système en mémoire flash sont
+flash (bitmaps système). Les fichiers système en mémoire flash sont
 désormais mis à jour avec le firmware et ne sont plus gérés séparément.
 
 - **Write outdated components** : Met à jour uniquement les composants
@@ -52,21 +52,21 @@ désormais mis à jour avec le firmware et ne sont plus gérés séparément.
 
 Sélectionner une version consiste d'abord à choisir la **branche** souhaitée
 (Stable/Testing) puis la version. La mise à jour invite d'abord à effectuer
-une sauvegarde (**Go to backup page**) . Faites-la!  Si le firmware du module
+une sauvegarde (**Go to backup page**). Faites-la ! Si le firmware du module
 RF interne n'est pas en v3.0.1+, Ethos 1.6.0+ exige sa mise à niveau avant
 de poursuivre (**Go to Module manager** le flashe automatiquement, puis la
-mise à jour d'Ethos reprend)  . Pour les récepteurs TD/TW/AP/AP Plus, il
+mise à jour d'Ethos reprend). Pour les récepteurs TD/TW/AP/AP Plus, il
 faut ensuite supprimer la télémétrie et relancer la découverte afin de
 récupérer les noms de capteurs actualisés.
 
 La progression de la mise à jour est affichée étape par étape (passage au
 chargeur d'amorçage, téléchargement, copie, démontage des disques,
-écriture, rafraîchissement des informations radio, « Update successful! ») .
+écriture, rafraîchissement des informations radio, « Update successful! »).
 L'écran de la radio affiche également la progression de l'écriture.
 
 !!! note "Mises à jour préliminaires"
     Les fichiers d'une version préliminaire peuvent changer sans que son
-    numéro de version change, ce que Suite ne peut pas détecter . Reflashez
+    numéro de version change, ce que Suite ne peut pas détecter. Reflashez
     toujours une version préliminaire que vous utilisez déjà lorsqu'elle
     devient une version définitive. En cas de doute, vérifiez la date du
     firmware dans [System → Info](../system-setup/information.md).
@@ -74,13 +74,13 @@ L'écran de la radio affiche également la progression de l'écriture.
 !!! note "Mise à jour depuis Ethos 1.2.8 ou antérieur"
     Si vous effectuez une mise à jour depuis une version aussi ancienne,
     FrsSky Suite peut ne pas être en mesure de flasher automatiquement le
-    firmware ou le chargeur de démarrage . Une boîte de dialogue vous guide
+    firmware ou le chargeur de démarrage. Une boîte de dialogue vous guide
     alors pour réaliser le flash manuellement. Dans les deux cas, il serait
     prudent d'éjecter les disques manuellement avant de débrancher le câble
     USB.
 
 Les fichiers bitmap système sont désormais mis à jour automatiquement avec
-le firmware (aucune gestion séparée n'est nécessaire) . Les fichiers audio
+le firmware (aucune gestion séparée n'est nécessaire). Les fichiers audio
 se mettent à jour via **Write all components** ou **Write audio files**
 (téléchargement du pack audio de la langue sélectionnée, par exemple
 « English audio pack »).
@@ -111,7 +111,7 @@ paramètres de la radio peut être enregistrée sur le disque, ou une
 sauvegarde précédemment enregistrée peut être restaurée.
 
 !!! warning
-    La restauration ne restaure **pas** le firmware . Après avoir restauré
+    La restauration ne restaure **pas** le firmware. Après avoir restauré
     vos modèles et vos paramètres, vous devez toujours réécrire séparément
     la version de firmware qui correspond à cette sauvegarde (voir [Mise à
     jour d'Ethos](#updating-ethos)), car les fichiers de modèles ne sont pas
@@ -132,7 +132,7 @@ sauvegarde précédemment enregistrée peut être restaurée.
 ### Lua library
 
 Parcourez et installez en un clic des scripts/outils Lua depuis la
-bibliothèque distante de FrSky (ou installez depuis un fichier zip local) .
+bibliothèque distante de FrSky (ou installez depuis un fichier zip local).
 les scripts installés apparaissent aux côtés du catalogue distant dès qu'il
 en existe.
 
@@ -152,14 +152,14 @@ en existe.
   spécifiée, en conservant les proportions. Tailles de référence : les
   images des modèles sont de 300 × 280 pixels (X20) / 180 × 168 pixels
   (X18). Les images en plein écran de 800 × 480 pixels (X20) / 480 × 320
-  pixels (X18) . Voir le [Gestionnaire de
+  pixels (X18). Voir le [Gestionnaire de
   fichiers](../system-setup/file-manager.md#top-level-folders) pour les
   règles de nommage des bitmaps. Permet également de parcourir directement
   les dossiers `bitmaps/gps`, `bitmaps/models` et `bitmaps/user` de la
   radio, avec prise en charge de l'envoi. Cliquez sur le bouton **+** pour
   ajouter des images à la liste de conversion (le format TIFF n'est pas pris
-  en charge), sélectionnez ensuite le chemin de sortie (un dossier local ,
-  directement sur la radio dans les images de modèle/utilisateur/GPS , ou le
+  en charge), sélectionnez ensuite le chemin de sortie (un dossier local,
+  directement sur la radio dans les images de modèle/utilisateur/GPS, ou le
   dossier de la radio actuellement ouvert), et indiquez éventuellement s'il
   faut ouvrir automatiquement le dossier de sortie ou forcer l'ajout d'un
   canal alpha.
@@ -173,8 +173,8 @@ en existe.
 
 - **Lua development tools** : **Lua Docs** fournit un lien vers le guide de
   référence Ethos Lua (voir aussi le fil de discussion *FrSky - ETHOS Lua
-  Script Programming* sur rcgroups) . **Lua Demo Scripts** ouvre la page des
-  scripts d'exemple sur le GitHub Ethos-Feedback-Community . **Debug** ouvre
+  Script Programming* sur rcgroups). **Lua Demo Scripts** ouvre la page des
+  scripts d'exemple sur le GitHub Ethos-Feedback-Community. **Debug** ouvre
   une fenêtre de journal de débogage en direct pour afficher les traces Lua
   `print()` envoyées à l'USB-Série lorsque la radio est en mode série :
 

@@ -6,7 +6,7 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 
 Ethos Suite est l'application PC compagnon, pour Windows ou Mac, qui permet de gérer une radio exécutant Ethos, connectée par un câble USB.
 
-![Onglet Radio d'Ethos Suite](../screenshots/ethos-suite-radio-tab.png)
+![Onglet Radio d'Ethos Suite](../assets/suite/1000000100000CA2000008B0CFAA509D.png)
 
 Une fois la connexion établie, Ethos Suite peut faire les choses suivantes :
 
@@ -27,7 +27,7 @@ Une fois la connexion établie, Ethos Suite peut faire les choses suivantes :
 Notez qu'en plus de ses outils, Suite propose trois modes de fonctionnement distincts avec la radio :
 
 - **Radio en mode bootloader**. L'onglet **Radio** permet de vérifier et de mettre à jour le firmware de la radio ainsi que les fichiers de la mémoire flash, de la SD card ou de l'eMMC. Le **Model Manager** effectue une sauvegarde de la radio ou restaure une sauvegarde enregistrée.
-- **Radio en mode Ethos**.  Dans ce mode, Suite utilise la radio comme proxy (via les outils **FRSK Flasher**/Download center) pour flasher directement le module interne, ou n'importe quel capteur, servo ou récepteur connecté.
+- **Radio en mode Ethos**. Dans ce mode, Suite utilise la radio comme proxy (via les outils **FRSK Flasher**/Download center) pour flasher directement le module interne, ou n'importe quel capteur, servo ou récepteur connecté.
 - **Radio en mode DFU**. La radio est connectée hors tension et le **DFU Flasher** est utilisé pour flasher le bootloader lui-même, par exemple lorsque le firmware de la radio a été corrompu et que celle-ci ne s'allume plus normalement.
 
 Voir [Migration](migration.md) pour transférer une radio existante vers Ethos Suite pour la première fois, et [Utilisation](operation.md) pour l'interface de Suite proprement dite.

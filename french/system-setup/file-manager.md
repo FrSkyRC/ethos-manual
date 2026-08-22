@@ -14,8 +14,8 @@ Appuyez sur **Flash** (ou sur `PAGE` pour changer de disque) pour explorer le di
 
 ![Disque "Flash"](../screenshots/system-filemanager-flash.png)
 
-- `bitmaps/system` : les bitmaps / icônes utilisées pour les affichages écran et les icônes
-- `fonts/` : les fontes correspondant aux différentes langues sélectionnables
+- **`bitmaps/system`** : les bitmaps / icônes utilisées pour les affichages écran et les icônes
+- **`fonts/`** : les fontes correspondant aux différentes langues sélectionnables
 
 Le bootloader et le firmware système lui-même résident tous deux dans cette mémoire flash interne, sur toutes les radios FrSky depuis la X9D d'origine.
 
@@ -23,7 +23,7 @@ La série **X20/X20S/X20HD** nécessite une carte SD formatée en FAT32, de 32 G
 
 ## Répertoires de premier niveau {: #top-level-folders }
 
-- **`audio/`** : fichiers audio utilisateur et système, répartis par voix
+- **audio/** : fichiers audio utilisateur et système, répartis par voix
   (`audio/en/gb`, `audio/en/us`, `audio/en/default`). Les fichiers utilisateur
   sont lus par la [fonction spéciale Lire audio](../model-setup/special-functions.md).
   Les fichiers système comprennent `hello.wav` (le message d'accueil
@@ -35,7 +35,7 @@ La série **X20/X20S/X20HD** nécessite une carte SD formatée en FAT32, de 32 G
 
   ![Menu contextuel pour un fichier Wav](../screenshots/system-filemanager-audio.png)
 
-- **`bitmaps/`** : le dossier `bitmaps/models/` est destiné aux images de
+- **bitmaps/** : le dossier `bitmaps/models/` est destiné aux images de
   modèles de l'utilisateur (utilisables dans [Editer modèle](../model-setup/model-edit.md)
   ou dans les assistants de nouveau modèle). `bitmaps/user/` est destiné à
   tout le reste. Format recommandé : BMP 32 bits, 8 bits par couleur, avec
@@ -51,10 +51,10 @@ La série **X20/X20S/X20HD** nécessite une carte SD formatée en FAT32, de 32 G
 
   ![Répertoire /bitmaps/models](../screenshots/system-filemanager-bitmaps.png)
 
-- **`documents/user/`** : documents texte de l'utilisateur, qui peuvent être
+- **documents/user/** : documents texte de l'utilisateur, qui peuvent être
   appelés depuis le widget d'affichage **Texte**.
 
-- **`Firmware/`** : fichiers de mise à jour pour le module RF interne, les
+- **Firmware/** : fichiers de mise à jour pour le module RF interne, les
   modules externes et les autres périphériques (récepteurs, etc.), flashés
   depuis ce répertoire via le S.Port ou en OTA. Le nouveau firmware doit être
   copié ici pendant que la radio est en [mode bootloader](../getting-started/usb-connection-modes.md)
@@ -67,11 +67,11 @@ La série **X20/X20S/X20HD** nécessite une carte SD formatée en FAT32, de 32 G
   
   ![Mise à jour bootloader](../screenshots/system-filemanager-flash-bootloader.png)
 
-- **`I18n/`** : les fichiers de traduction de la langue.
+- **I18n/** : les fichiers de traduction de la langue.
 
-- **`Logs/`** : les journaux de logs.
+- **Logs/** : les journaux de logs.
 
-- **`models/`** : les fichiers de modèles eux-mêmes. Ils ne peuvent pas être
+- **models/** : les fichiers de modèles eux-mêmes. Ils ne peuvent pas être
   modifiés directement ici, mais peuvent être sauvegardés ou partagés. Depuis
   Ethos v1.2.11, le nom du modèle est utilisé comme nom de fichier plutôt que
   `model01.bin` et suivants (par exemple, un modèle nommé « Extra » aura comme
@@ -84,10 +84,10 @@ La série **X20/X20S/X20HD** nécessite une carte SD formatée en FAT32, de 32 G
   v1.1.0 Alpha 17, chaque catégorie de modèles créée par l'utilisateur possède
   son propre sous-dossier.
 
-- **`screenshots/`** : les captures d'écran créées par la [fonction spéciale
+- **screenshots/** : les captures d'écran créées par la [fonction spéciale
   Capture écran](../model-setup/special-functions.md).
 
-- **`scripts/`** : les scripts Lua, éventuellement organisés dans des dossiers
+- **scripts/** : les scripts Lua, éventuellement organisés dans des dossiers
   individuels avec leurs fichiers annexes. Les types de scripts sont les
   **widgets** (voir [Écrans](../displays/index.md)), les **tâches et sources**
   (capteurs personnalisés ou actions après le vol, qui apparaissent
@@ -103,18 +103,18 @@ La série **X20/X20S/X20HD** nécessite une carte SD formatée en FAT32, de 32 G
       mais un script mal écrit peut retarder le démarrage de façon quasi
       indéfinie.
 
-- **`radio.bin`** (dossier racine) : le fichier des paramètres système, créé
+- **radio.bin** (dossier racine) : le fichier des paramètres système, créé
   par la radio elle-même lors de son initialisation. Il doit être sauvegardé
   avec le dossier `models/` avant de mettre à jour le firmware, pour permettre
   un retour vers la version antérieure si nécessaire.
 
-- **`firmware.bin`** (dossier racine) : déposez ici un nouveau fichier de
+- **firmware.bin** (dossier racine) : déposez ici un nouveau fichier de
   firmware de radio pour qu'il soit flashé automatiquement lors de la prochaine
   déconnexion de la radio de l'ordinateur. Le contenu de la carte SD/eMMC et
   celui du disque flash interne peuvent devoir être mis à jour dans la même
   opération.
 
-- **`sdcard.version`** (dossier racine) : la version du contenu de la carte SD,
+- **sdcard.version** (dossier racine) : la version du contenu de la carte SD,
   maintenue par Ethos Suite.
 
 ## Partage de fichiers via Bluetooth

@@ -18,8 +18,8 @@ La barre supérieure affiche le nom du modèle sur la gauche (ainsi que la phase
 
 - l'enregistrement des données actif
 - l'écolage (maître ou élève, selon le cas)
-- RSSI : liaison 2,4 GHz
-- RSSI : liaison 900 MHz (si un module double bande / longue portée est installé)
+- **RSSI** : liaison 2,4 GHz
+- **RSSI** : liaison 900 MHz (si un module double bande / longue portée est installé)
 - le volume sonore
 - l'état de la batterie radio
 

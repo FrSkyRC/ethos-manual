@@ -16,10 +16,10 @@ puissent être régénérées ou complétées entre-temps sans repartir de zéro
 
 Pour chaque menu/section du manuel, il existe une paire de fichiers :
 
-- `manual/macros/<name>.lua` : un script écrit à partir de l'API Lua du
+- **`manual/macros/<name>.lua`** : un script écrit à partir de l'API Lua du
   simulateur (voir ci-dessous) qui navigue jusqu'à un écran précis et appelle
   `simulator.screenshot(path)` à chaque point digne d'être capturé.
-- `manual/<name>.sh` : un enrobage d'une seule ligne qui lance le binaire du
+- **`manual/<name>.sh`** : un enrobage d'une seule ligne qui lance le binaire du
   simulateur pour une radio donnée, dirigé vers cette macro, par exemple :
 
 ```bash
@@ -36,17 +36,17 @@ prend de quelques secondes à plus d'une minute).
 
 Principales options de la ligne de commande :
 
-- `--read-only` : ne conserve aucune modification effectuée pendant l'exécution.
-- `--no-gui` / `--no-audio` : quasi sans interface. Certaines macros nécessitent malgré tout l'interface graphique
+- **`--read-only`** : ne conserve aucune modification effectuée pendant l'exécution.
+- **`--no-gui` / `--no-audio`** : quasi sans interface. Certaines macros nécessitent malgré tout l'interface graphique
   car le simulateur « saute » des étapes sans elle (voir le commentaire dans `screenshots.sh`).
-- `--radio-settings <file>.bin` : les réglages enregistrés de la radio avec lesquels démarrer
+- **`--radio-settings <file>.bin`** : les réglages enregistrés de la radio avec lesquels démarrer
   (c'est ce qui rend les captures d'écran spécifiques à une langue et à une radio, car une
   exécution en allemand utilise un `.bin` allemand).
-- `--sd-directory`, `--flash-directory`, `--documents-directory`,
-  `--audio-directory` : dirigent le simulateur vers les modèles/firmwares/documents/sons
+- **`--sd-directory`, `--flash-directory`, `--documents-directory`,
+  `--audio-directory`** : dirigent le simulateur vers les modèles/firmwares/documents/sons
   qu'il doit voir, afin que les captures d'écran reflètent un contenu délibérément préparé plutôt
   que ce qui se trouve sur une véritable SD card.
-- `--exec <script>.lua` : la macro à exécuter après le démarrage.
+- **`--exec <script>.lua`** : la macro à exécuter après le démarrage.
 
 Chaque famille de radios (X20S, X20 PRO, X20 PRO AW, X18S) possède son propre binaire de
 simulateur et nécessite son propre fichier `--radio-settings` par langue (par exemple

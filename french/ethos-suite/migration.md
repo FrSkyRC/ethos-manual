@@ -7,7 +7,7 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 Passage d'une radio des anciens outils de mise à jour PC séparés vers Ethos Suite,
 pour la première fois.
 
-1. **Assurez-vous d'utiliser au moins la version 1.1.4 d'Ethos**.  La version minimale
+1. **Assurez-vous d'utiliser au moins la version 1.1.4 d'Ethos**. La version minimale
    nécessaire pour flasher le nouveau chargeur de démarrage compatible Ethos Suite
    (format FRSK) directement à partir du [gestionnaire de
    fichiers](../system-setup/file-manager.md). Si ce n'est pas le cas, effectuez d'abord
@@ -31,7 +31,7 @@ pour la première fois.
 7. Démarrez la radio normalement, allez dans **Système → Gestionnaire de fichiers**,
    appuyez sur le fichier `bootloader.frsk` que vous venez de copier et sélectionnez
    l'option **Flash bootloader**.
-8. Téléchargez et installez Ethos Suite.  La page [Utilisation](operation.md) décrit la
+8. Téléchargez et installez Ethos Suite. La page [Utilisation](operation.md) décrit la
    mise à jour du micrologiciel et des fichiers ainsi que les autres fonctionnalités
    d'Ethos Suite à partir de ce point.
 9. Si Ethos Suite ne le fait pas pour vous, il peut être nécessaire de renommer le
