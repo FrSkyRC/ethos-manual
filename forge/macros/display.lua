@@ -141,7 +141,7 @@ simulator.turnRotaryEncoder(9)
 simulator.pressKey(KEY_ENTER)
 simulator.pressKey(KEY_RTN)
 ]]--
-simulator.turnRotaryEncoder(10) --scroll to telem
+simulator.turnRotaryEncoder(12) --scroll to telem
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(0) --scroll to RSSI
 simulator.screenshot("/screenshots/display-change-source.png")
