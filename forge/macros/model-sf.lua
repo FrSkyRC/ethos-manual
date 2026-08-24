@@ -88,7 +88,7 @@ simulator.pressKey(KEY_ENTER) -- y
 simulator.turnRotaryEncoder(1) -- scroll to source
 simulator.pressKey(KEY_ENTER) -- y
 -- 
-simulator.turnRotaryEncoder(11) -- scroll to telem
+simulator.turnRotaryEncoder(12) -- scroll to telem
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(5) --scroll to vfr 2.4
 simulator.pressKey(KEY_ENTER) --y
