@@ -95,7 +95,7 @@ simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 ]]--
 simulator.pressKey(KEY_RTN) -- back to category
-simulator.turnRotaryEncoder(9) -- scroll to telem
+simulator.turnRotaryEncoder(10) -- scroll to telem
 simulator.pressKey(KEY_ENTER) -- y
 simulator.turnRotaryEncoder(36) -- scroll to consumption
 simulator.pressKey(KEY_ENTER) -- y
@@ -231,7 +231,7 @@ simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 ]]--
 simulator.pressKey(KEY_RTN) -- back to category
-simulator.turnRotaryEncoder(8) --scroll to timers
+simulator.turnRotaryEncoder(9) --scroll to timers
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(1) --scroll to timer 2
 simulator.pressKey(KEY_ENTER) --y
