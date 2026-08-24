@@ -541,7 +541,7 @@ $endif$
 \date{$date$}
 $if(version)$
 % [FR] expose la métadonnée "version" à styles.md (pied de page), voir
-% \ifoot{Revision \docversion} plus bas.
+% \ifoot{Révision \docversion} plus bas.
 \newcommand{\docversion}{$version$}
 $endif$
 $if(beamer)$
