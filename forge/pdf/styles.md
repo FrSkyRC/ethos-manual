@@ -137,7 +137,7 @@ header-includes:
   \KOMAoptions{footsepline=true,headsepline=true,footheight=3ex}
   \automark[chapter]{chapter}
   % "Chapitre <n> - <titre>" plutôt que juste "<n> <titre>" dans l'en-tête.
-  \renewcommand*{\chaptermark}[1]{\markboth{Chapitre~\thechapter\ - #1}{}}
+  \renewcommand*{\chaptermark}[1]{\markboth{Chapter~\thechapter\ - #1}{}}
   \ihead{\headmark}
   \makeatletter
   \ohead{\@title}
