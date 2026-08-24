@@ -68,7 +68,7 @@ def replace_missing_images(tex_path):
 
 def main():
     parser = argparse.ArgumentParser(description="Builds the PDF manual from SUMMARY.md via pandoc + xelatex.")
-    parser.add_argument("--output", default="FR.Manuel_Ethos.pdf", help="path of the generated PDF (default: %(default)s)")
+    parser.add_argument("--output", help="path of the generated PDF")
     args = parser.parse_args()
 
     build_book_md()
@@ -96,7 +96,8 @@ def main():
             "book.tex",
         ], check=True)
 
-    os.replace("book.pdf", args.output)
+    if args.output:
+        os.replace("book.pdf", args.output)
 
 
 if __name__ == "__main__":
