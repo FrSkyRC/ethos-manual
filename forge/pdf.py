@@ -9,12 +9,16 @@ import subprocess
 COMMON_FORGE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
+def get_forge_file(filename):
+    result = "./forge/pdf/" + filename
+    if os.path.exists(result):
+        return result
+    return os.path.join(COMMON_FORGE_DIR, "pdf", filename)
+
+
 def build_book_md():
         with open("book.md", "w", encoding="utf-8") as book:
-            styles_md = "./forge/pdf/styles.md"
-            if not os.path.exists(styles_md):
-                styles_md = os.path.join(COMMON_FORGE_DIR, "pdf/styles.md")
-            with open(styles_md, encoding="utf-8") as styles:
+            with open(get_forge_file("styles.md"), encoding="utf-8") as styles:
                 book.write(styles.read())
             with open("SUMMARY.md", encoding="utf-8") as summary:
                 for line in summary.readlines():
@@ -80,9 +84,9 @@ def main():
         "--to", "latex-smart",
         "--number-sections",
         "--highlight-style", "tango",
-        "--template", os.path.join(COMMON_FORGE_DIR, "pdf/template.latex"),
-        "--lua-filter", os.path.join(COMMON_FORGE_DIR, "pdf/admonitions.lua"),
-        "--lua-filter", os.path.join(COMMON_FORGE_DIR, "pdf/typography.lua"),
+        "--template", get_forge_file("template.latex"),
+        "--lua-filter", get_forge_file("admonitions.lua"),
+        "--lua-filter", get_forge_file("typography.lua"),
         "--output", "book.tex",
     ], check=True)
 
