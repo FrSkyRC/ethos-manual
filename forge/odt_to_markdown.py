@@ -11,7 +11,10 @@ Markdown with their original relative path (e.g. "Pictures/xxxx.png"), so
 the Markdown -> assets references stay intact. Some images may be linked rather
 than embedded (xlink:href pointing outside "Pictures/", e.g.
 "../assets/foo.png"); those are resolved relative to the .odt's directory,
-falling back to "<odt_dir>/assets/<basename>", and copied in too.
+falling back to "<odt_dir>/assets/<basename>", and copied in too. Every
+image, embedded or linked, is (re-)saved as a losslessly compressed PNG
+regardless of its original format (this .odt embeds ~200 images as BMP), and
+referenced with a ".png" extension in the Markdown.
 
 This is a pragmatic converter, not a full ODF renderer: styles are
 approximated (bold/italic only, based on the Latin fo:font-weight /
@@ -39,12 +42,14 @@ Example:
 """
 
 import argparse
+import io
 import os
 import re
-import shutil
 import sys
 import zipfile
 import xml.etree.ElementTree as ET
+
+from PIL import Image
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
@@ -134,6 +139,22 @@ MD_ESCAPE_RE = re.compile(r"([\\`*_\[\]])")
 
 def escape_md(text):
     return MD_ESCAPE_RE.sub(r"\\\1", text)
+
+
+def as_png_name(name):
+    """Normalizes a filename's extension to ".png" (e.g. "foo.bmp" ->
+    "foo.png"); left as-is if already ".png"."""
+    root, ext = os.path.splitext(name)
+    return name if ext.lower() == ".png" else root + ".png"
+
+
+def save_as_png(source, dest_path):
+    """Opens an image - from a filesystem path or raw bytes - and (re-)saves
+    it as a losslessly compressed PNG at dest_path, regardless of its
+    original format (e.g. BMP)."""
+    image = Image.open(io.BytesIO(source)) if isinstance(source, (bytes, bytearray)) else Image.open(source)
+    os.makedirs(os.path.dirname(dest_path), exist_ok=True)
+    image.save(dest_path, format="PNG", optimize=True)
 
 
 def wrap_style(text, bold, italic):
@@ -241,20 +262,22 @@ class Converter:
                 self.image_count += 1
                 alt = frame_el.get(q("draw", "name"), "image")
                 if href.startswith("Pictures/"):
-                    # Embedded in the .odt itself; extracted verbatim by convert().
-                    return f"![{alt}]({ASSETS_PLACEHOLDER}/{href})"
+                    # Embedded in the .odt itself; (re-)saved as PNG by convert().
+                    return f"![{alt}]({ASSETS_PLACEHOLDER}/{as_png_name(href)})"
                 # Linked, not embedded: resolve against the .odt's directory,
                 # falling back to "<odt_dir>/assets/<basename>" (this repo's
                 # convention) since such links are saved relative to wherever
                 # the .odt lived when the image was inserted, which may no
-                # longer be its current location.
+                # longer be its current location. Looked up on disk under its
+                # original name/extension, but referenced (and saved) as PNG.
                 basename = os.path.basename(href)
-                if basename not in self.external_images:
+                out_basename = as_png_name(basename)
+                if out_basename not in self.external_images:
                     candidate = os.path.normpath(os.path.join(self.odt_dir, href))
                     if not os.path.isfile(candidate):
                         candidate = os.path.join(self.odt_dir, "assets", basename)
-                    self.external_images[basename] = candidate if os.path.isfile(candidate) else None
-                return f"![{alt}]({ASSETS_PLACEHOLDER}/{basename})"
+                    self.external_images[out_basename] = candidate if os.path.isfile(candidate) else None
+                return f"![{alt}]({ASSETS_PLACEHOLDER}/{out_basename})"
         # Not an image (e.g. a text box): keep any text content it carries.
         # Note: bookmarks inside such a nested frame can end up misattributed
         # to the wrong output block, since this collapses walk()'s own
@@ -550,17 +573,23 @@ def convert(odt_path, output_dir, split_chapters=False, summary=False):
 
         assets_root = os.path.join(output_dir, ASSETS_DIR_NAME)
         extracted = 0
+        converted = 0
         for info in archive.infolist():
             if info.filename.startswith("Pictures/") and not info.is_dir():
-                archive.extract(info, assets_root)
+                dest_name = as_png_name(info.filename)
+                save_as_png(archive.read(info.filename), os.path.join(assets_root, dest_name))
                 extracted += 1
+                if dest_name != info.filename:
+                    converted += 1
 
     missing = []
-    for basename, source in converter.external_images.items():
+    for out_basename, source in converter.external_images.items():
         if source is None:
-            missing.append(basename)
+            missing.append(out_basename)
             continue
-        shutil.copy2(source, os.path.join(assets_root, basename))
+        save_as_png(source, os.path.join(assets_root, out_basename))
+        if not source.lower().endswith(".png"):
+            converted += 1
 
     if split_chapters:
         page_count = len(written) - (2 if summary else 1)  # exclude index.md and, if present, SUMMARY.md
@@ -573,6 +602,8 @@ def convert(odt_path, output_dir, split_chapters=False, summary=False):
     if converter.external_images:
         print(f"Copied {len(converter.external_images) - len(missing)} linked asset(s) "
               f"from {odt_dir} into {assets_root}")
+    if converted:
+        print(f"Converted {converted} non-PNG image(s) (e.g. BMP) to losslessly compressed PNG")
     print(f"Referenced {converter.image_count} image(s) in the Markdown")
     if converter.skipped_shapes:
         print(f"Skipped {converter.skipped_shapes} decorative shape(s) (draw:custom-shape)")
