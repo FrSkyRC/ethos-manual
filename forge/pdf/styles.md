@@ -67,6 +67,11 @@ header-includes:
 - |
   ```{=latex}
   \usepackage{lmodern}
+  % Une image seule dans un paragraphe devient une figure numérotée
+  % (Pandoc, implicit_figures) dès qu'elle a un texte alt ; le numéro
+  % n'apporte rien ici, on garde juste la légende (si elle existe).
+  \usepackage{caption}
+  \captionsetup{labelformat=empty,labelsep=none}
   % Lisse la justification (réduit les gros espaces sur les lignes difficiles à couper)
   \usepackage{microtype}
   \usepackage{xspace}

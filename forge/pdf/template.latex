@@ -313,7 +313,13 @@ $if(graphics)$
   \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
   \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
   \ifdim\@tempa\p@>\p@\def\@tempa{1}\fi% ne jamais agrandir au-delà de la taille naturelle
-  \scalebox{0.75}{\scalebox{\@tempa}{\usebox\pandoc@box}}%
+  % Centre l'image. Une figure numérotée (légende non vide) était déjà
+  % centrée via le \centering émis par Pandoc dans \begin{figure} ; une
+  % image sans légende (texte alt vide) n'est plus encapsulée dans une
+  % figure et perdait ce centrage - donc on le fait ici, pour les deux cas.
+  \par\begingroup\centering
+  \scalebox{0.75}{\scalebox{\@tempa}{\usebox\pandoc@box}}\par
+  \endgroup
 }
 % Set default figure placement to htbp
 \def\fps@figure{htbp}

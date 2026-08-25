@@ -260,7 +260,10 @@ class Converter:
             href = image_el.get(q("xlink", "href"))
             if href:
                 self.image_count += 1
-                alt = frame_el.get(q("draw", "name"), "image")
+                # Empty alt text: the .odt has no real caption for these,
+                # only LibreOffice's auto-generated frame name (e.g. "Image6
+                # Copy 1"), which is meaningless clutter, not a caption.
+                alt = ""
                 if href.startswith("Pictures/"):
                     # Embedded in the .odt itself; (re-)saved as PNG by convert().
                     return f"![{alt}]({ASSETS_PLACEHOLDER}/{as_png_name(href)})"

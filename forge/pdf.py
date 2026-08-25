@@ -16,27 +16,70 @@ def get_forge_file(filename):
     return os.path.join(COMMON_FORGE_DIR, "pdf", filename)
 
 
+def page_anchor_id(link):
+    """Stable pandoc/LaTeX header id for a whole page, derived from its
+    SUMMARY.md path (e.g. "model-setup/rf-system.md" -> "page-model-setup-rf-system").
+    Used as a cross-page link's target when it points at a page as a whole,
+    rather than at one of its {: #anchor}-tagged headings."""
+    stem = re.sub(r'\.md$', '', link)
+    return "page-" + re.sub(r'[^a-zA-Z0-9]+', '-', stem).strip('-').lower()
+
+
 def build_book_md():
+        with open("SUMMARY.md", encoding="utf-8") as summary:
+            summary_lines = summary.readlines()
+        pages = [m.group(3) for line in summary_lines
+                 if (m := re.search(r"^(\s*)\* \[([^\]]+)\]\(([^)]+)\)$", line))]
+
+        # All the source pages get concatenated into one book.md, so a link
+        # from one page to another (by file path, e.g. "../model-setup/rf-system.md",
+        # optionally with a "#some-anchor" suffix) needs to become an
+        # internal PDF cross-reference instead of a dead link to a markdown
+        # file path that doesn't exist as such once compiled. We do this in
+        # two passes: first assign every page a stable anchor id (pass 1),
+        # then rewrite every page's links against that map (pass 2).
+        page_ids = {link: page_anchor_id(link) for link in pages}
+        md_link_re = re.compile(r'\]\(((?:\.\./)*[^()\s]+\.md)(#[^)\s]*)?\)')
+
+        def rewrite_links(content, page_dir):
+            def repl(m):
+                href, fragment = m.group(1), m.group(2)
+                if fragment:
+                    # The fragment matches a {: #id} heading tag, which is
+                    # now a pandoc-native {#id} unique across the whole
+                    # concatenated book (see the anchor conversion below) -
+                    # so the now-meaningless page path can just be dropped.
+                    return f"]({fragment})"
+                target = page_ids.get(os.path.normpath(os.path.join(page_dir, href)).replace(os.sep, "/"))
+                return f"](#{target})" if target else m.group(0)
+            return md_link_re.sub(repl, content)
+
         with open("book.md", "w", encoding="utf-8") as book:
             with open(get_forge_file("styles.md"), encoding="utf-8") as styles:
                 book.write(styles.read())
-            with open("SUMMARY.md", encoding="utf-8") as summary:
-                for line in summary.readlines():
-                    match = re.search(r"^(\s*)\* \[([^\]]+)\]\(([^)]+)\)$", line)
-                    if match:
-                        indent, _, link = match.groups()
-                        with open(link, encoding="utf-8") as page:
-                            content = page.read()
-                            content = re.sub(r'^---\s*\n.*?\n---\s*\n?', '', content, count=1, flags=re.MULTILINE | re.DOTALL) # remove the MD front matter
-                            content = re.sub(r'^(#{1,6}) ', r'\1' + '#' * (len(indent) // 2) + ' ', content, flags=re.MULTILINE) # add heading indentation
-                            content = re.sub(r'\s*\{:\s*#[^}]+\}', '', content, flags=re.MULTILINE) # remove anchors
-                            content = content.replace("../assets/", "./assets/")
-                            content = content.replace("../screenshots/", "./screenshots/")
-                            book.write(content)
-                            if content[-1] != "\n":
-                                book.write("\n")
-                            if content[-2] != "\n":
-                                book.write("\n")
+            for line in summary_lines:
+                match = re.search(r"^(\s*)\* \[([^\]]+)\]\(([^)]+)\)$", line)
+                if match:
+                    indent, _, link = match.groups()
+                    with open(link, encoding="utf-8") as page:
+                        content = page.read()
+                        content = re.sub(r'^---\s*\n.*?\n---\s*\n?', '', content, count=1, flags=re.MULTILINE | re.DOTALL) # remove the MD front matter
+                        content = re.sub(r'\{:\s*#([^}]+?)\s*\}', r'{#\1}', content) # kramdown {: #id} -> pandoc-native {#id}, so it becomes a real, linkable header id instead of being silently dropped
+                        first_heading = re.search(r'^#{1,6} .+$', content, flags=re.MULTILINE)
+                        if first_heading and '{#' not in first_heading.group(0):
+                            # This page's own top heading has no explicit id: give
+                            # it its page_ids[link] one, so links to this page as a
+                            # whole (not to one specific #anchor within it) resolve.
+                            content = content[:first_heading.end()] + f' {{#{page_ids[link]}}}' + content[first_heading.end():]
+                        content = rewrite_links(content, os.path.dirname(link))
+                        content = re.sub(r'^(#{1,6}) ', r'\1' + '#' * (len(indent) // 2) + ' ', content, flags=re.MULTILINE) # add heading indentation
+                        content = content.replace("../assets/", "./assets/")
+                        content = content.replace("../screenshots/", "./screenshots/")
+                        book.write(content)
+                        if content[-1] != "\n":
+                            book.write("\n")
+                        if content[-2] != "\n":
+                            book.write("\n")
 
 
 def replace_missing_images(tex_path):
