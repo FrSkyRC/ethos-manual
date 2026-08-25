@@ -449,6 +449,27 @@ def split_into_sections(chapter_items):
     return intro, sections
 
 
+HEADING_RE = re.compile(r"^(#+)(\s)")
+
+
+def shift_headings(items, by):
+    """Shifts every heading block's level by `by` (negative promotes, e.g.
+    ## -> #), clamped to at least H1. Used so a section file - which starts
+    with its own ## heading - gets that as a proper H1 page title once it's
+    split out into its own file, with anything nested under it shifting up
+    to match."""
+    if not by:
+        return items
+    shifted = []
+    for text, bookmarks in items:
+        m = HEADING_RE.match(text)
+        if m:
+            level = max(1, len(m.group(1)) + by)
+            text = "#" * level + text[len(m.group(1)):]
+        shifted.append((text, bookmarks))
+    return shifted
+
+
 def resolve_links(text, bookmark_target, unresolved, depth=0):
     """Replaces LINK_OPEN/.../LINK_CLOSE markers with real Markdown links,
     pointing wherever their target bookmark ended up. `bookmark_target`
@@ -543,7 +564,8 @@ def convert(odt_path, output_dir, split_chapters=False, summary=False):
                 toc_entries.append(f"- [{title}]({chapter_index_rel})")
                 summary_entries.append(f"* [{title}]({chapter_index_rel})")
                 for subtitle, section_rel, section_items in sections_plan:
-                    write_file(os.path.join(output_dir, *section_rel.split("/")), section_items, depth=1)
+                    write_file(os.path.join(output_dir, *section_rel.split("/")),
+                               shift_headings(section_items, -1), depth=1)
                     toc_entries.append(f"  - [{subtitle}]({section_rel})")
                     summary_entries.append(f"  * [{subtitle}]({section_rel})")
 

@@ -30,7 +30,7 @@ linkcolor: Blue
 citecolor: MidnightBlue
 urlcolor: MidnightBlue
 
-links-as-notes: true
+links-as-notes: false
 numbersections: true
 
 CJKmainfont: Microsoft YaHei
