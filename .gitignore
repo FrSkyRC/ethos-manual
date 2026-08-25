@@ -9,3 +9,5 @@ Thumbs.db
 *.luac
 *.pdf
 *.zip
+SUMMARY.nav.md
+site/

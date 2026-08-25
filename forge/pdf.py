@@ -72,7 +72,7 @@ def build_book_md():
                             # whole (not to one specific #anchor within it) resolve.
                             content = content[:first_heading.end()] + f' {{#{page_ids[link]}}}' + content[first_heading.end():]
                         content = rewrite_links(content, os.path.dirname(link))
-                        content = re.sub(r'^(#{1,6}) ', r'\1' + '#' * (len(indent) // 2) + ' ', content, flags=re.MULTILINE) # add heading indentation
+                        content = re.sub(r'^(#{1,6}) ', r'\1' + '#' * (len(indent) // 4) + ' ', content, flags=re.MULTILINE) # add heading indentation
                         content = content.replace("../assets/", "./assets/")
                         content = content.replace("../screenshots/", "./screenshots/")
                         book.write(content)

@@ -1,0 +1,52 @@
+site_name: Manuel Ethos
+site_description: Documentation utilisateur de l'OS Ethos (FrSky)
+docs_dir: french
+extra_css:
+  - extra.css
+exclude_docs: |
+  forge/
+  SUMMARY.md
+  SUMMARY.nav.md
+
+theme:
+  name: material
+  language: fr
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Passer au thème sombre
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Passer au thème clair
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - content.code.copy
+
+plugins:
+  - search
+  - literate-nav:
+      # Generated from SUMMARY.md by forge/mkdocs_nav.py - re-run it after
+      # editing SUMMARY.md. See that script's docstring for why.
+      nav_file: SUMMARY.nav.md
+  - section-index
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
