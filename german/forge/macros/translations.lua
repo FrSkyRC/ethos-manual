@@ -1,26 +1,26 @@
 TRANSLATIONS = {
   -- in Model / Select
-  Airplane = "Airplane",
-  Glider = "Glider",
+  Airplane = "Motor",
+  Glider = "Segler",
   Heli = "Heli",
   Multirotor = "Multirotor",
-  MultirotorPosition = 490, -- position of "Multirotor" folder in Model / Select
+  MultirotorPosition = 490, -- Position des Ordners „Multirotor“ unter Modell / Auswählen
   -- in Flight Modes
-  FlapsFull = "Flaps Full",
-  FlapsHalf = "Flaps Half",
+  FlapsFull = "Klappen voll",
+  FlapsHalf = "Klappen halb",
   -- in Timers
   BattTimer = "BattTimer",
-  Timer1FilePosition = 228, -- position of "timer-1-elapsed" wav file
-  Timer2FilePosition = 231, -- position of "timer-2-elapsed" wav file
+  Timer1FilePosition = 228, -- Position der WAV-Datei „timer-1-elapsed“
+  Timer2FilePosition = 231, -- Position der WAV-Datei „timer-2-elapsed“
   UpTest = "UpTest",
-  -- in 'How to configure a butterfly (aka Crow) mix'
+  -- „So konfigurieren Sie eine Butterfly- (oder Crow-) Mischer“
   Crowdb = "Crowdb",
   FlapOffset = "FlapOffset",
   EleComp = "EleComp",
   EleCompAdj = "EleCompAdj",
   -- in Model / SF
-  VFRlowFilePosition = 250,  -- position of "vfr-low"
+  VFRlowFilePosition = 250,  -- Position von „VFR-niedrig“
   -- in Model / Select
-  -- VirtualOkXPosition = 553 -- position of Virtual OK on x-axis
+  -- VirtualOkXPosition = 553 -- Position von Virtual OK auf der x-Achse
   VirtualOkXPosition = 405 -- position of Virtual OK on x-axis for DE
 }
