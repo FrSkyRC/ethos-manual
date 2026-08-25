@@ -44,7 +44,7 @@ jobs:
         fc-cache -fv
 
     - name: Build the PDF
-      run: python ../forge/pdf.py --output FR.Manuel_Ethos_26.1.0.pdf
+      run: python ../forge/pdf.py --output FR.Manuel_26.1.0.pdf
       working-directory: ./french
 
     - name: Upload to release
@@ -52,7 +52,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-          file: ./french/FR.Manuel_Ethos_26.1.0.pdf
+          file: ./french/FR.Manuel_26.1.0.pdf
           update_latest_release: true
           overwrite: true
     
