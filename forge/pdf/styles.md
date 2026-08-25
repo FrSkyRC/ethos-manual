@@ -154,7 +154,7 @@ header-includes:
   \newcommand{\pagefootcontent}{\raisebox{-1.2ex}{\thepage~/~\pageref*{LastPage}}}
   % Révision du document en bas de page à gauche (valeur reprise du champ
   % "version" des métadonnées, cf. \docversion défini dans forge/template.latex).
-  \newcommand{\pagefootrevision}{\raisebox{-1.2ex}{Révision~\docversion}}
+  \newcommand{\pagefootrevision}{\raisebox{-1.2ex}{Revision~\docversion}}
   % \ifoot/\ofoot (intérieur/extérieur) alternent gauche/droite selon la
   % parité de page en recto-verso ; \Ifthispageodd (natif KOMA) permet de
   % forcer la révision toujours à gauche et le numéro toujours à droite.
