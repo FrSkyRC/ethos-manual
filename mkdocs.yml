@@ -27,9 +27,11 @@ theme:
   features:
     - navigation.sections
     - navigation.top
+    - navigation.footer
     - navigation.indexes
     - toc.follow
     - search.suggest
+    - search.highlight
     - content.code.copy
 
 plugins:

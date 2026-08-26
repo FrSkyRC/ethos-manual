@@ -36,7 +36,7 @@ ACCESS) et lier votre récepteur.
 ## Étape 2. Identifier les servos/voies requis
 
 | Fonction | Voie |
-|---|---|
+| --- | --- |
 | Roulis (aileron) | : |
 | Tangage (profondeur) | : |
 | Gaz | : |
@@ -152,65 +152,68 @@ l'interrupteur SA, sur la voie 8.
 
 ## Étape 5. Configuration FBL
 
-1. **Installez l'outil de configuration FBL** : par exemple le logiciel
+- **Installez l'outil de configuration FBL** : par exemple le logiciel
    Spirit Settings, sur votre PC.
-2. **Connectez votre récepteur à l'unité FBL** conformément à son schéma de
+
+- **Connectez votre récepteur à l'unité FBL** conformément à son schéma de
    câblage : généralement la sortie « SBUS Out » du récepteur vers le port
    « RUD » de l'unité FBL (notez que certains modèles Spirit nécessitent un
    adaptateur SBUS), ou bien via F.Port1/FBUS.
-3. **Connectez l'unité FBL à votre PC** : à l'aide du câble fourni ou via
+
+- **Connectez l'unité FBL à votre PC** : à l'aide du câble fourni ou via
    Bluetooth, conformément à son manuel.
 
-   !!! danger
-       Ne connectez pas encore de servos !
+    !!! danger
+        Ne connectez pas encore de servos !
 
-4. **Mettez à jour le micrologiciel FBL** si nécessaire, depuis l'onglet
+- **Mettez à jour le micrologiciel FBL** si nécessaire, depuis l'onglet
    Mise à jour de l'outil.
-5. **Configuration générale** (onglet Général du logiciel Spirit Settings) :
-   - Type de récepteur : **Futaba SBUS** ou **FrSky F.Port** (selon le cas),
-     puis redémarrez le système.
-   - Mappage des voies (avec l'ordre AETR de l'assistant) :
 
-     | Fonction | Voie |
-     |---|---|
-     | Gaz | 1 |
-     | Aileron | 2 |
-     | Profondeur | 3 |
-     | Dérive | 4 |
-     | Gyro | 5 |
-     | Pas | 6 |
-     | Banque | 7 |
-     | Rescue/Stabi | 8 |
+- **Configuration générale** (onglet Général du logiciel Spirit Settings) :
 
-     (Cet ordre des voies découle de la façon dont l'unité Spirit
-     interprète la position des voies dans le flux de données SBUS.)
+      - Type de récepteur : **Futaba SBUS** ou **FrSky F.Port** (selon le cas),
+       puis redémarrez le système.
+      - Mappage des voies (avec l'ordre AETR de l'assistant) :
 
-6. **Limites des voies** (onglet Diagnostic) : pour le bon fonctionnement
+       | Fonction | Voie |
+       | --- | --- |
+       | Gaz | 1 |
+       | Aileron | 2 |
+       | Profondeur | 3 |
+       | Dérive | 4 |
+       | Gyro | 5 |
+       | Pas | 6 |
+       | Banque | 7 |
+       | Rescue/Stabi | 8 |
+
+       (Cet ordre des voies découle de la façon dont l'unité Spirit
+       interprète la position des voies dans le flux de données SBUS.)
+
+- **Limites des voies** (onglet Diagnostic) : pour le bon fonctionnement
    de l'unité FBL, les limites des voies radio doivent être calibrées et
    les centres vérifiés :
 
-   - À la radio, assurez-vous d'abord que tous les subtrims et trims sont
-     remis à zéro.
-   - Réglez le manche de pas collectif en position centrale pour obtenir
-     une sortie de exactement 1500 µs dans la page
-     [Sorties](../model-setup/outputs.md).
-   - Mettez l'unité FBL sous tension et vérifiez que les voies aileron,
-     profondeur, pas et dérive sont toutes centrées à 0 % dans l'onglet
-     Diagnostic (l'unité FBL détecte automatiquement la position neutre
-     lors de chaque initialisation).
-   - Déplacez chaque commande jusqu'à ses limites et ajustez les valeurs
-     **Min**/**Max** correspondantes dans Sorties afin d'obtenir une
-     lecture d'exactement +100 %/−100 % dans l'onglet Diagnostic, en
-     vérifiant également que le sens du mouvement des barres correspond à
-     celui des manches.
+      - À la radio, assurez-vous d'abord que tous les subtrims et trims sont
+         remis à zéro.
+      - Réglez le manche de pas collectif en position centrale pour obtenir
+         une sortie de exactement 1500 µs dans la page
+         [Sorties](../model-setup/outputs.md).
+      - Mettez l'unité FBL sous tension et vérifiez que les voies aileron,
+         profondeur, pas et dérive sont toutes centrées à 0 % dans l'onglet
+         Diagnostic (l'unité FBL détecte automatiquement la position neutre
+         lors de chaque initialisation).
+      - Déplacez chaque commande jusqu'à ses limites et ajustez les valeurs
+         **Min**/**Max** correspondantes dans Sorties afin d'obtenir une
+         lecture d'exactement +100 %/−100 % dans l'onglet Diagnostic, en
+         vérifiant également que le sens du mouvement des barres correspond à
+         celui des manches.
 
-   !!! warning
-       N'utilisez jamais les fonctions de subtrim ou de trim de votre
-       émetteur pour ces voies : l'unité Spirit FBL les considérerait comme
-       une commande d'entrée et non comme un calibrage.
+    !!! warning
+        N'utilisez jamais les fonctions de subtrim ou de trim de votre
+        émetteur pour ces voies : l'unité Spirit FBL les considérerait comme
+        une commande d'entrée et non comme un calibrage.
 
-7. Ajustez la valeur de **décalage** du mixage Gain gyroscopique pour vous
-   assurer que le verrouillage de cap (Heading Lock) est atteint.
+- Ajustez la valeur de **décalage** du mixage Gain gyroscopique pour vous assurer que le verrouillage de cap (Heading Lock) est atteint.
 
 Après ces réglages, tout est configuré en ce qui concerne l'émetteur. Vous
 pouvez maintenant continuer avec le reste de la configuration conformément
