@@ -570,7 +570,7 @@ def convert(odt_path, output_dir, split_chapters=False, summary=False):
                     write_file(os.path.join(output_dir, *section_rel.split("/")),
                                shift_headings(section_items, -1), depth=1)
                     toc_entries.append(f"  - [{subtitle}]({section_rel})")
-                    summary_entries.append(f"  * [{subtitle}]({section_rel})")
+                    summary_entries.append(f"    * [{subtitle}]({section_rel})")
 
             index_items = list(preamble_items)
             if not summary:
