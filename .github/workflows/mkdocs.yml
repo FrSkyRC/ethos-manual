@@ -1,0 +1,48 @@
+name: Deploy documentation to GitHub Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [26.1]
+
+# Only one deployment at a time; let an in-progress run finish rather than
+# cancelling it (mirrors GitHub's own recommended Pages workflow).
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - run: pip install -r requirements.txt
+
+      - run: python forge/mkdocs.py
+
+      - run: mkdocs build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
