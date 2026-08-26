@@ -97,10 +97,15 @@ X18S_MACROS = [
   "x18s.lua"
 ]
 
+X20PROAW_MACROS = [
+    "x20proaw.lua"
+]
+
 ALL_MACROS = {
     "X20S_FCC": X20S_MACROS,
     "X20PRO_FCC": X20PRO_MACROS,
     "X18S_FCC": X18S_MACROS,
+    "X20PROAW_FCC": X20PROAW_MACROS,
 }
 
 
@@ -159,6 +164,9 @@ def setup_builddir(release, radio):
         shutil.copy(os.path.join(LOCALIZED_FORGE_DIR, f"{ radio }.bin"), os.path.join(BUILD_DIR, "radio.bin"))
     elif os.path.exists(os.path.join(COMMON_FORGE_DIR, f"{ radio }.bin")):
         shutil.copy(os.path.join(COMMON_FORGE_DIR, f"{ radio }.bin"), os.path.join(BUILD_DIR, "radio.bin"))
+    else:
+        print(f"Missing { radio }.bin!")
+        exit(-1)
 
     for name in BUILD_SOURCE_DIRS:
         if os.path.exists(os.path.join(COMMON_FORGE_DIR, name)):
