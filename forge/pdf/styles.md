@@ -132,6 +132,14 @@ header-includes:
   % The chapter title starts too low on the page: we reduce the space
   % reserved before \chapter (fairly generous by default in KOMA-Script).
   \RedeclareSectionCommand[beforeskip=1ex plus 0.5ex minus 0.2ex]{chapter}
+  % Level-4 headings (####, \subsubsection) default to a large gap above
+  % (~3.25ex) versus below (~1.5ex) in KOMA-Script - reduce both, and to a
+  % more even ratio, so they read as a light subheading rather than a
+  % section break.
+  \RedeclareSectionCommand[
+    beforeskip=1ex plus 0.5ex minus 0.2ex,
+    afterskip=0.5ex plus 0.2ex minus 0.1ex
+  ]{subsubsection}
   % Header: book title on one side, current chapter on the other.
   % The footer separator comes from the "footsepline" class option.
   \usepackage[automark]{scrlayer-scrpage}
