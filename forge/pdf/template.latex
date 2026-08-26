@@ -307,7 +307,7 @@ $if(graphics)$
 \usepackage{graphicx}
 \makeatletter
 \newsavebox\pandoc@box
-\newcommand*\pandocbounded[1]{% scales image to fit in text height/width, then 75% further (demande [FR])
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width, then 75% further
   \sbox\pandoc@box{#1}%
   \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
   \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
@@ -318,7 +318,7 @@ $if(graphics)$
   % image sans légende (texte alt vide) n'est plus encapsulée dans une
   % figure et perdait ce centrage - donc on le fait ici, pour les deux cas.
   \par\begingroup\centering
-  \scalebox{0.75}{\scalebox{\@tempa}{\usebox\pandoc@box}}\par
+  \scalebox{0.6}{\scalebox{\@tempa}{\usebox\pandoc@box}}\par
   \endgroup
 }
 % Set default figure placement to htbp
