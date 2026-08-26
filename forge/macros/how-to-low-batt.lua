@@ -34,6 +34,7 @@ simulator.turnRotaryEncoder(1) --scroll to add lsw button
 simulator.pressKey(KEY_ENTER) --open
 simulator.turnRotaryEncoder(1) --scroll to name
 simulator.pressKey(KEY_ENTER) --open
+--[[
 simulator.touch(470, 395) --B
 simulator.touch(67, 403) --shift
 simulator.touch(78, 357) --a
@@ -44,6 +45,8 @@ simulator.touch(712, 352) --L
 simulator.touch(67, 401) --shift
 simulator.touch(685, 298) --o
 simulator.touch(116, 299) --w
+]]--
+simulator.enterText(translate("Battlow"))
 simulator.touch(732, 450) --ENT
 simulator.turnRotaryEncoder(2) --scroll to fn
 simulator.pressKey(KEY_ENTER) --open
@@ -65,7 +68,7 @@ simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 ]]--
 simulator.pressKey(KEY_RTN) --escape back to category
-simulator.turnRotaryEncoder(8) --scroll to telem
+simulator.turnRotaryEncoder(10) --scroll to telem
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(6) --scroll to 2nd lipo
 simulator.pressKey(KEY_ENTER) --y
@@ -169,7 +172,7 @@ simulator.pressKey(KEY_RTN)
 --simulator.pressKey(KEY_ENTER)
 
 --select lipo sensor
-simulator.turnRotaryEncoder(10) --scroll to telem
+simulator.turnRotaryEncoder(12) --scroll to telem
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(6) --scroll to 2nd lipo
 simulator.pressKey(KEY_ENTER) --y
