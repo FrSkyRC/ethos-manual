@@ -1,19 +1,19 @@
--- Convertit les admonitions au format MkDocs Material :
---   !!! note "Titre"
---       Corps du texte, indenté de 4 espaces...
--- (le titre est optionnel : "!!! note" seul est valide, avec un titre par
--- défaut selon le type) en boîte tcolorbox stylée pour la sortie LaTeX/PDF.
--- Pandoc ne comprend pas cette syntaxe : tout finit comme un seul paragraphe
--- ("!!!", le type, éventuellement le titre entre guillemets, puis le corps).
--- Voir \newtcolorbox{...block} dans styles.md pour le style de chaque type.
+-- Converts MkDocs Material-style admonitions:
+--   !!! note "Title"
+--       Body text, indented by 4 spaces...
+-- (the title is optional: "!!! note" alone is valid, with a default title
+-- per type) into a styled tcolorbox for LaTeX/PDF output.
+-- Pandoc doesn't understand this syntax: it all ends up as a single
+-- paragraph ("!!!", the type, optionally the quoted title, then the body).
+-- See \newtcolorbox{...block} in styles.md for each type's style.
 
 local default_titles = {
   note = "Note",
-  warning = "Attention",
-  tip = "Astuce",
+  warning = "Warning",
+  tip = "Tip",
   danger = "Danger",
   info = "Info",
-  example = "Exemple",
+  example = "Example",
 }
 
 function Para(el)
@@ -29,11 +29,9 @@ function Para(el)
   local title, bodyStart
 
   if inlines[4] and inlines[4].t == "Space" and inlines[5] and inlines[5].t == "Quoted" then
-    -- !!! note "Titre" ...
     title = pandoc.utils.stringify(inlines[5].content)
     bodyStart = (inlines[6] and inlines[6].t == "SoftBreak") and 7 or 6
   elseif inlines[4] and inlines[4].t == "SoftBreak" then
-    -- !!! note (sans titre) -> titre par défaut selon le type
     title = default_titles[kind]
     bodyStart = 5
   else
