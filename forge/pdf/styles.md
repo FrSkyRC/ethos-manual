@@ -32,6 +32,9 @@ urlcolor: MidnightBlue
 
 links-as-notes: false
 numbersections: true
+# Pandoc/KOMA numérotent par défaut jusqu'à \paragraph (niveau 5) ; 2 limite
+# ça à chapitre/section/sous-section (niveaux 1-3), sans numéro au-delà.
+secnumdepth: 2
 
 CJKmainfont: Microsoft YaHei
 mainfont: Inter
