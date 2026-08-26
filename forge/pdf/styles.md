@@ -140,6 +140,11 @@ header-includes:
     beforeskip=1ex plus 0.5ex minus 0.2ex,
     afterskip=0.5ex plus 0.2ex minus 0.1ex
   ]{subsubsection}
+  % In the table of contents, \section entries ("<chapter>.<section>", e.g.
+  % "5.10") only reserve enough width (tocnumwidth) for a single-digit
+  % section number by default; once a chapter has 10+ sections, the title
+  % crowds right up against the number. Widen it to fit two digits.
+  \RedeclareSectionCommand[tocnumwidth=3.4em]{section}
   % Header: book title on one side, current chapter on the other.
   % The footer separator comes from the "footsepline" class option.
   \usepackage[automark]{scrlayer-scrpage}

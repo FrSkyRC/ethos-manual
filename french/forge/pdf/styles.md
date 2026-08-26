@@ -132,6 +132,19 @@ header-includes:
   % Le titre de chapitre commence trop bas sur la page : on réduit l'espace
   % réservé avant \chapter (par défaut assez généreux dans KOMA-Script).
   \RedeclareSectionCommand[beforeskip=1ex plus 0.5ex minus 0.2ex]{chapter}
+  % Les titres de niveau 4 (####, \subsubsection) ont par défaut un grand
+  % espace au-dessus (~3.25ex) contre en dessous (~1.5ex) sous KOMA-Script -
+  % on réduit les deux, avec un ratio plus équilibré, pour que ça se lise
+  % comme un léger sous-titre plutôt qu'une coupure de section.
+  \RedeclareSectionCommand[
+    beforeskip=1ex plus 0.5ex minus 0.2ex,
+    afterskip=0.5ex plus 0.2ex minus 0.1ex
+  ]{subsubsection}
+  % Dans la table des matières, les entrées \section ("<chapitre>.<section>",
+  % ex. "5.10") ne réservent par défaut que la place (tocnumwidth) pour un
+  % numéro de section à un seul chiffre ; dès qu'un chapitre a 10 sections
+  % ou plus, le titre colle au numéro. On l'élargit pour deux chiffres.
+  \RedeclareSectionCommand[tocnumwidth=3.4em]{section}
   % En-tête : titre du livre d'un côté, chapitre en cours de l'autre.
   % Le séparateur de bas de page vient de l'option de classe "footsepline".
   \usepackage[automark]{scrlayer-scrpage}
