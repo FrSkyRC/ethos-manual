@@ -20,20 +20,24 @@ simulator.pressKey(KEY_ENTER) -- open
 simulator.touch(758, 91) -- add cat
 simulator.enterText(translate('Airplane'))
 simulator.screenshot("/screenshots/model-modelselect-create-airplane-folder.png")
---simulator.touch(553, 191) -- Virtual OK
-simulator.touch(translate('VirtualOkXPosition'), 191) -- Virtual OK
+simulator.pressKey(KEY_RTN)
+simulator.turnRotaryEncoder(1) -- scroll to 'OK'
+simulator.pressKey(KEY_ENTER)
 simulator.touch(756, 80) --add cat
 simulator.enterText(translate('Glider'))
---simulator.touch(553, 184) -- Virtual OK
-simulator.touch(translate('VirtualOkXPosition'), 191) -- Virtual OK
+simulator.pressKey(KEY_RTN)
+simulator.turnRotaryEncoder(1) -- scroll to 'OK'
+simulator.pressKey(KEY_ENTER)
 simulator.touch(751, 79) -- add cat
 simulator.enterText(translate('Heli'))
---simulator.touch(553, 193) -- Virtual OK
-simulator.touch(translate('VirtualOkXPosition'), 191) -- Virtual OK
+simulator.pressKey(KEY_RTN)
+simulator.turnRotaryEncoder(1) -- scroll to 'OK'
+simulator.pressKey(KEY_ENTER)
 simulator.touch(755, 84) -- add cat
 simulator.enterText(translate('Multirotor'))
---simulator.touch(553, 191) -- Virtual OK
-simulator.touch(translate('VirtualOkXPosition'), 191) -- Virtual OK
+simulator.pressKey(KEY_RTN)
+simulator.turnRotaryEncoder(1) -- scroll to 'OK'
+simulator.pressKey(KEY_ENTER)
 simulator.touch(translate('MultirotorPosition'), 81) -- tap on Multirotor to open folder options
 simulator.screenshot("/screenshots/model-modelselect-folder-options.png")
 simulator.pressKey(KEY_RTN) -- exit options
