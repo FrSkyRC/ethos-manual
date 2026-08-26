@@ -1,29 +1,49 @@
 site_name: Manuel Ethos
-site_description: Documentation utilisateur de l'OS Ethos (FrSky)
-docs_dir: french
+docs_dir: docs
+# The 4 blocks below, each between a "GENERATED:" marker pair, are rewritten
+# by forge/mkdocs.py from its LANGUAGES table + whichever of those already
+# have a docs/<locale> set up (i.e. have a SUMMARY.md) - re-run it after
+# adding/removing a language, rather than hand-editing these blocks (they'll
+# just get overwritten). Everything else in this file is untouched.
 extra_css:
-  - extra.css
+  # BEGIN GENERATED: EXTRA_CSS
+  - fr/extra.css
+  # END GENERATED: EXTRA_CSS
 exclude_docs: |
-  forge/
-  SUMMARY.md
-  SUMMARY.nav.md
+  # BEGIN GENERATED: EXCLUDE_DOCS
+  fr/forge/
+  fr/SUMMARY.md
+  fr/SUMMARY.nav.md
+  en/forge/
+  en/SUMMARY.md
+  en/SUMMARY.nav.md
+  # END GENERATED: EXCLUDE_DOCS
+
+# Top-level entries here must be named after their locale, capitalized
+# (Fr, En - not "Français"/"English") for plugins.i18n's own nav filtering
+# to recognize and strip them, see below. literate-nav reads each
+# directory's own SUMMARY.nav.md - re-run forge/mkdocs.py after editing one.
+nav:
+  # BEGIN GENERATED: NAV
+  - Fr: fr/
+  - En: en/
+  # END GENERATED: NAV
 
 theme:
   name: material
-  language: fr
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: indigo
       toggle:
         icon: material/brightness-7
-        name: Passer au thème sombre
+        name: Passer au thème sombre / Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: indigo
       toggle:
         icon: material/brightness-4
-        name: Passer au thème clair
+        name: Passer au thème clair / Switch to light mode
   features:
     - navigation.sections
     - navigation.top
@@ -36,8 +56,39 @@ theme:
 
 plugins:
   - search
+  # Builds fr/ and en/ as one site with a language switcher (auto-generated
+  # in the header, no manual extra.alternate needed) while keeping each
+  # page's sidebar nav to just its own language - reconfigure_navigation
+  # (in the plugin) strips the Fr:/En: wrapper above once resolved by
+  # literate-nav. docs_structure: folder requires each top-level folder
+  # name to literally be the locale code, hence docs/fr + docs/en (see
+  # forge/mkdocs.py's LANGUAGES table) rather than docs/french + docs/english.
+  #
+  # fallback_to_default: false is required - true (its default) makes the
+  # plugin mis-resolve some of our plain relative links (e.g.
+  # "../model-setup/telemetry.md" from a French page) against the *other*
+  # language's file instead of its own sibling. We don't want cross-
+  # language fallback anyway (a missing French page should 404, not
+  # silently show the English one).
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: false
+      languages:
+        # BEGIN GENERATED: LANGUAGES
+        - locale: fr
+          name: Français
+          build: true
+          default: true
+          site_name: Manuel Ethos
+          site_description: Documentation utilisateur de l'OS Ethos (FrSky)
+        - locale: en
+          name: English
+          build: true
+          site_name: Ethos Manual
+          site_description: Ethos OS user documentation (FrSky)
+        # END GENERATED: LANGUAGES
   - literate-nav:
-      # Generated from SUMMARY.md by forge/mkdocs_nav.py - re-run it after
+      # Generated from SUMMARY.md by forge/mkdocs.py - re-run it after
       # editing SUMMARY.md. See that script's docstring for why.
       nav_file: SUMMARY.nav.md
   - section-index
