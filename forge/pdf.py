@@ -75,11 +75,12 @@ def build_book_md():
                         content = re.sub(r'^(#{1,6}) ', r'\1' + '#' * (len(indent) // 4) + ' ', content, flags=re.MULTILINE) # add heading indentation
                         content = content.replace("../assets/", "./assets/")
                         content = content.replace("../screenshots/", "./screenshots/")
-                        book.write(content)
-                        if content[-1] != "\n":
-                            book.write("\n")
-                        if content[-2] != "\n":
-                            book.write("\n")
+                        if len(content) > 2:
+                            book.write(content)
+                            if content[-1] != "\n":
+                                book.write("\n")
+                            if content[-2] != "\n":
+                                book.write("\n")
 
 
 def replace_missing_images(tex_path):
