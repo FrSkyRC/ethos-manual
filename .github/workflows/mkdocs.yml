@@ -8,7 +8,7 @@ on:
 # Only one deployment at a time; let an in-progress run finish rather than
 # cancelling it (mirrors GitHub's own recommended Pages workflow).
 concurrency:
-  group: pages
+  group: mkdocs
   cancel-in-progress: false
 
 permissions:

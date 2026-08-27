@@ -20,8 +20,6 @@ TRANSLATIONS = {
   EleCompAdj = "EleCompAdj",
   -- in Model / SF
   VFRlowFilePosition = 250,  -- position of "vfr-low"
-  -- in 'How to low batt'
-  BattLow = "BattLow",
   -- in 'How-to-consumption'
   delta200mAh = "delta200mAh",
   BattLow = "BattLow",
