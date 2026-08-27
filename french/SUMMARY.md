@@ -82,6 +82,3 @@
     * [Barres d'outils](reference/toolbars.md)
 * [Contributing](contributing/index.md)
     * [Screenshot Pipeline](contributing/screenshot-pipeline.md)
-    * [Versioning](contributing/versioning.md)
-    <!-- * [Adding a New Language](contributing/adding-a-language.md) -->
-    <!-- * [Translation Status](contributing/translation-status.md) -->
