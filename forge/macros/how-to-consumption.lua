@@ -109,6 +109,7 @@ simulator.turnRotaryEncoder(1) --scroll to edit
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(1) --scroll to name
 simulator.pressKey(KEY_ENTER) --y
+--[[
 simulator.touch(55, 394) --shift
 simulator.touch(243, 357) --d
 simulator.touch(199, 301) --e
@@ -125,6 +126,8 @@ simulator.touch(70, 400) --shift
 simulator.touch(86, 353) --A
 simulator.touch(64, 402) --shift
 simulator.touch(475, 349) --h
+]]--
+simulator.enterText(translate("delta200mAh"))
 simulator.touch(733, 455) --ENT
 simulator.turnRotaryEncoder(2) --scroll to fn
 simulator.pressKey(KEY_ENTER) --y
@@ -146,7 +149,7 @@ simulator.pressKey(KEY_RTN, 1)
 ]]-- 
 --select consumption sensor
 simulator.pressKey(KEY_RTN) --back to category
-simulator.turnRotaryEncoder(8) --scroll to telem
+simulator.turnRotaryEncoder(10) --scroll to telem
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(18) --scroll to consumption
 simulator.pressKey(KEY_ENTER)
@@ -195,7 +198,7 @@ simulator.pressKey(KEY_RTN)
 --simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(4) --scroll to lsw
 simulator.pressKey(KEY_ENTER)
-simulator.pressKey(KEY_ENTER) --confirm 1st lsw (delat200mAh)
+simulator.pressKey(KEY_ENTER) --confirm 1st lsw (delta200mAh)
 --
 simulator.screenshot("/screenshots/how-to-consumption-sf-play-delta200mAh.png")
 --simulator.turnRotaryEncoder(5)
@@ -222,7 +225,7 @@ simulator.pressKey(KEY_RTN)
 ]]--
 --select consumption sensor
 --simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(10) --scroll to telem
+simulator.turnRotaryEncoder(12) --scroll to telem
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(18) --scroll to consumption sensor
 simulator.pressKey(KEY_ENTER)
@@ -245,6 +248,7 @@ simulator.pressKey(KEY_ENTER) --y
 simulator.touch(571, 91) -- add new lsw button '+'
 simulator.turnRotaryEncoder(1) --scroll to name
 simulator.pressKey(KEY_ENTER) --y
+--[[
 simulator.touch(470, 400) --B
 simulator.touch(79, 403) --shift
 simulator.touch(82, 356) --a
@@ -255,6 +259,8 @@ simulator.touch(711, 353) --L
 simulator.touch(63, 403) --shift
 simulator.touch(680, 308) --o
 simulator.touch(120, 304) --w
+]]--
+simulator.enterText(translate("BattLow"))
 simulator.touch(725, 451) --ENT
 simulator.turnRotaryEncoder(2) --scroll to fn
 simulator.pressKey(KEY_ENTER) --y
@@ -276,7 +282,7 @@ simulator.pressKey(KEY_RTN)
 ]]--
 --select consumption sensor
 simulator.pressKey(KEY_RTN) --back to category
-simulator.turnRotaryEncoder(8) --scroll to telem
+simulator.turnRotaryEncoder(10) --scroll to telem
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(18) --scroll to consumption
 simulator.pressKey(KEY_ENTER)
@@ -368,7 +374,7 @@ simulator.pressKey(KEY_RTN)
 --]]--
 --select consumption sensor
 --simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(10) --scroll to telem
+simulator.turnRotaryEncoder(12) --scroll to telem
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(18) --scroll to consumption sensor
 simulator.pressKey(KEY_ENTER)
