@@ -77,7 +77,7 @@ X20S_MACROS = [
   # lua is done seperately 
   # must be done last because we only want lua icon in menu once
   # os.copy('RADIO:/macros/lua-fn/scripts' 'RADIO:/scripts')
-  #  "model-lua.lua",
+  "model-lua.lua",
   # system
   "system-menu.lua",
   # ui
