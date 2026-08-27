@@ -46,7 +46,7 @@ simulator.touch(67, 401) --shift
 simulator.touch(685, 298) --o
 simulator.touch(116, 299) --w
 ]]--
-simulator.enterText(translate("Battlow"))
+simulator.enterText(translate("BattLow"))
 simulator.touch(732, 450) --ENT
 simulator.turnRotaryEncoder(2) --scroll to fn
 simulator.pressKey(KEY_ENTER) --open
