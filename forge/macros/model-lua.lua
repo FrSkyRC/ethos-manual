@@ -1,6 +1,7 @@
 -- 2025-08-11 enable task example and add comments
 -- 2025-10-20 add simulator.reloadScripts() so that Lua icon loads 
 --
+os.copy('/macros/lua-fn/scripts' '/scripts')
 simulator.reloadScripts() -- reload for the Lua menu
 dofile("common.lua")
 --simulator.setDateTime({year=2024, month=12, day=8, hour=20, min=0, sec=0, lock=true})
@@ -17,3 +18,7 @@ simulator.turnRotaryEncoder(1) -- enable task example
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("/screenshots/model-lua-config.png")
 simulator.pressKey(KEY_RTN, 1)
+
+os.remove('/scripts/demo source')
+os.remove('/scripts/lua task example')
+os.remove('/scripts/source example')
