@@ -4,96 +4,113 @@ translated_from: f37a19af41cd6ab9767ee0c39f708b7f8a1966d6
 
 # Chaîne de production des captures d'écran
 
-Chaque capture d'écran de ce manuel (actuellement environ 590, sous
-`docs/en/assets/`) a été réalisée en scriptant le véritable simulateur Ethos, et non
-à la main. L'installation se trouve dans l'ancien dépôt
-[`ethos-manual`](https://github.com/FrSkyRC/ethos-manual), sous
-`english/manual/`, et n'a **pas encore été portée dans ce dépôt** : cette
-page documente son fonctionnement afin qu'elle puisse l'être, et pour que les captures d'écran
-puissent être régénérées ou complétées entre-temps sans repartir de zéro.
+Chaque capture d'écran de ce manuel (environ 750 pour le français) est produite en pilotant
+par script le véritable simulateur Ethos compilé en WebAssembly, et non prise à la main.
+L'ensemble tourne via `forge/screenshots.py`.
 
-## Structure
+## Lancer une génération
 
-Pour chaque menu/section du manuel, il existe une paire de fichiers :
-
-- **`manual/macros/<name>.lua`** : un script écrit à partir de l'API Lua du
-  simulateur (voir ci-dessous) qui navigue jusqu'à un écran précis et appelle
-  `simulator.screenshot(path)` à chaque point digne d'être capturé.
-- **`manual/<name>.sh`** : un enrobage d'une seule ligne qui lance le binaire du
-  simulateur pour une radio donnée, dirigé vers cette macro, par exemple :
+Se placer dans le dossier de la langue concernée (les chemins de `screenshots.py` sont
+relatifs au répertoire courant), puis :
 
 ```bash
-ETHOS='/mnt/c/Program Files (x86)/FrSky/Ethos'
-"${ETHOS}/X20S/simulator.exe" --read-only --no-gui --no-audio \
-  --radio-settings ./x20s-en.bin --sd-directory ./sd --flash-directory ./flash \
-  --exec ./macros/model-mixes.lua
+cd french
+python ../forge/screenshots.py --release 26.1.0
 ```
 
-`manual/screenshots.sh` exécute chaque macro en séquence pour régénérer
-l'ensemble complet. Des fichiers `.sh` individuels existent par section, afin que
-les captures d'écran d'une seule page puissent être régénérées sans tout relancer (chaque macro
-prend de quelques secondes à plus d'une minute).
+Options utiles :
 
-Principales options de la ligne de commande :
+- **`--release <tag>`** (obligatoire) : la release GitHub `FrSkyRC/ETHOS-Feedback-Community`
+  à utiliser pour le simulateur et les fichiers audio, par exemple `26.1.0` ou `26.1.0-RC7`.
+- **`--radio <clé>`** : limite l'exécution à une seule famille de radio (`X20S_FCC`,
+  `X20PRO_FCC`, `X18S_FCC`, `X20PROAW_FCC`).
+- **`--force`** : force le retéléchargement même si un fichier déjà en cache a moins de 24h
+  (voir plus bas).
+- Un filtre positionnel optionnel (motif shell), par exemple `model-mixes*.lua`, pour ne
+  rejouer qu'une partie des macros d'une radio sans tout relancer.
 
-- **`--read-only`** : ne conserve aucune modification effectuée pendant l'exécution.
-- **`--no-gui` / `--no-audio`** : quasi sans interface. Certaines macros nécessitent malgré tout l'interface graphique
-  car le simulateur « saute » des étapes sans elle (voir le commentaire dans `screenshots.sh`).
-- **`--radio-settings <file>.bin`** : les réglages enregistrés de la radio avec lesquels démarrer
-  (c'est ce qui rend les captures d'écran spécifiques à une langue et à une radio, car une
-  exécution en allemand utilise un `.bin` allemand).
-- **`--sd-directory`, `--flash-directory`, `--documents-directory`,
-  `--audio-directory`** : dirigent le simulateur vers les modèles/firmwares/documents/sons
-  qu'il doit voir, afin que les captures d'écran reflètent un contenu délibérément préparé plutôt
-  que ce qui se trouve sur une véritable SD card.
-- **`--exec <script>.lua`** : la macro à exécuter après le démarrage.
+## Ce qui se passe en coulisses
 
-Chaque famille de radios (X20S, X20 PRO, X20 PRO AW, X18S) possède son propre binaire de
-simulateur et nécessite son propre fichier `--radio-settings` par langue (par exemple
-`x20s-en.bin`, `x20pro-en.bin`), puisque l'interface diffère légèrement d'une radio à
-l'autre et que le fichier de réglages porte également la langue.
+1. **Téléchargements à la demande**, mis en cache dans `forge/.cache/` (retéléchargés
+   automatiquement si le fichier en cache a plus de 24h, sauf avec `--force`) :
+   - `run_wasm.js` depuis `FrSkyRC/ethos-tools` : charge le module WASM sous Node.js et sait y
+     exécuter une macro Lua ;
+   - le simulateur WASM lui-même, propre à chaque radio, depuis les assets de la release
+     GitHub demandée (l'archive `<radio>-WebSimulator.zip`, à ne pas confondre avec
+     `<radio>.zip` qui ne contient que `firmware.bin`) ;
+   - les fichiers audio système par langue (`audio-<code>.zip`, un par langue prise en charge
+     par Ethos, pas seulement celles traduites dans ce dépôt).
+2. **Préparation d'un répertoire de build** (`forge/build/`, recréé à chaque lancement) :
+   les sous-dossiers `models/`, `bitmaps/`, `scripts/`, `documents/`, `firmware/`, `logs/` et
+   `macros/` sont copiés depuis la forge commune (`forge/`) *puis* depuis la forge de la
+   langue courante (`french/forge/`), qui peut donc surcharger n'importe quel fichier commun
+   (typiquement `macros/translations.lua`, voir plus bas). Le fichier `<radio>.bin` (réglages
+   radio de base) est cherché d'abord dans `french/forge/`, puis dans `forge/` en repli.
+3. **Exécution des macros**, une par une, chacune lancée via :
 
-## L'API des macros
+   ```bash
+   node run_wasm.js <radio>.js --root-directory forge/build --macro USER:/macros/<nom>.lua
+   ```
 
-Les macros sont du Lua ordinaire, pilotant un objet global `simulator` :
+   La liste des macros par radio est en dur dans `ALL_MACROS` (`forge/screenshots.py`) :
+   une trentaine pour `X20S_FCC` (une par menu/section), une seule macro « chapeau » pour
+   chacune des trois autres familles (`X20PRO_FCC`, `X18S_FCC`, `X20PROAW_FCC`), qui ne
+   couvrent que les vues propres à ces radios.
+4. **Comparaison aux captures de référence déjà commitées** (voir la section dédiée
+   ci-dessous).
+
+## Les macros
+
+Les fichiers `forge/macros/*.lua` sont du Lua ordinaire pilotant un objet global
+`simulator` (et quelques fonctions `os.*`/`system.*`) :
 
 | Appel | Rôle |
-|---|---|
-| `simulator.loadModel("name.bin")` | Charge un fichier de modèle spécifique avant de naviguer : chaque section du manuel utilise un modèle configuré pour illustrer cette section (voir la liste des modèles ci-dessous). |
-| `simulator.pressKey(KEY_X, [holdSeconds])` | Appuie sur une touche physique : `KEY_ENTER`, `KEY_RTN`, `KEY_MDL`, `KEY_SYS`, `KEY_DISP`, `KEY_PAGE`, etc. Une durée de maintien déclenche un appui long (ouvre les menus contextuels). |
-| `simulator.turnRotaryEncoder(n)` | Déplace l'encodeur de `n` crans (valeur négative = sens inverse) : le moyen principal de déplacer le curseur entre les champs. |
-| `simulator.touch(x, y)` | Touche une coordonnée précise de l'écran : utilisé là où le tactile est le seul moyen d'atteindre un élément (par exemple pour changer la disposition du clavier). |
-| `simulator.setAnalog(channel, value)` | Définit directement la position d'un manche/potentiomètre/curseur (`0` à `3` correspondent aux quatre manches principaux, `ANALOG_LAST_SLIDER` au dernier curseur), afin que les captures d'écran montrent une valeur délibérée et reproductible plutôt que celle par défaut du simulateur. |
-| `simulator.setSwitch(n, position)` | Définit la position d'un interrupteur physique. |
-| `simulator.setDateTime({...})` | Fige l'horloge du simulateur, afin que les horodatages des captures d'écran (et tout élément dépendant du temps) soient reproductibles d'une exécution à l'autre. |
-| `simulator.screenshot(path)` | Capture l'écran courant dans un fichier PNG, relativement au répertoire de travail de la macro (d'où les chemins `../screenshots/...` à l'intérieur de chaque macro). |
-| `simulator.connectUsb()` | Simule un branchement USB, pour capturer le menu USB. |
-| `simulator.sleep(seconds)` | Attend qu'une animation ou une valeur de télémétrie se stabilise avant la capture. |
+| --- | --- |
+| `simulator.loadModel("name.bin")` | Charge un fichier de modèle avant de naviguer : chaque macro utilise un modèle préparé pour illustrer sa section. |
+| `simulator.setReadOnly(true)` | Empêche toute modification persistante pendant l'exécution (posé une fois par `common.lua`). |
+| `simulator.resetAnalogs()` / `simulator.resetSwitches()` | Remet manches/curseurs et interrupteurs à leur état neutre avant de les positionner explicitement. |
+| `simulator.pressKey(KEY_X, [durée])` | Appuie sur une touche physique : `KEY_ENTER`, `KEY_RTN`, `KEY_MDL`, `KEY_SYS`, `KEY_DISP`, `KEY_PAGE`. Une durée déclenche un appui long. |
+| `simulator.turnRotaryEncoder(n)` | Tourne l'encodeur de `n` crans (négatif = sens inverse). |
+| `simulator.touch(x, y)` | Touche une coordonnée précise de l'écran. |
+| `simulator.enterText(...)` | Saisit du texte dans un champ. |
+| `simulator.setAnalog(canal, valeur)` | Positionne directement un manche/potentiomètre/curseur, pour une valeur reproductible plutôt que la valeur par défaut du simulateur. |
+| `simulator.setSwitch(n, position)` | Positionne un interrupteur physique. |
+| `simulator.setDateTime({...})` | Fige l'horloge simulée (posé une fois par `common.lua`, pour un horodatage identique à chaque exécution). |
+| `simulator.connectUsb()` | Simule un branchement USB. |
+| `simulator.advertizeBluetooth()` | Simule la détection Bluetooth. |
+| `simulator.injectSPortFrame({...})` | Injecte une trame de télémétrie S.Port factice (utilisé par `common.lua` pour afficher des valeurs de capteur plausibles sans vrai récepteur). |
+| `simulator.reloadScripts()` | Recharge les scripts Lua utilisateur après en avoir déposé un nouveau. |
+| `simulator.sleep(secondes)` | Attend qu'une animation ou une valeur se stabilise avant la capture. |
+| `simulator.screenshot(chemin)` | Capture l'écran courant en PNG, par exemple `simulator.screenshot("/screenshots/mainview.png")`. |
 
-`manual/macros/common.lua` est chargé via `dofile` par la plupart des macros et ne fait que fixer
-la date et l'heure, afin que chaque macro démarre au même instant simulé.
+`common.lua`, chargé via `dofile("common.lua")` par la plupart des macros, centralise ce qui
+doit être identique à chaque exécution : date/heure figée, mode lecture seule, reset des
+analogiques/interrupteurs, injection de télémétrie factice, et détection du mode de manches
+(`system.getStickMode()`) pour définir `throttleStickIndex`/`elevatorStickIndex`.
 
-## Modèles utilisés par section
+`translations.lua`, chargé par `common.lua`, fournit la fonction `translate(texte)` utilisée
+par les macros pour retrouver un libellé d'interface dans la langue courante (recherche de
+modèle par nom, position d'un dossier dans un menu, etc.) : la version commune
+(`forge/macros/translations.lua`) contient les libellés anglais, et chaque langue peut la
+surcharger (`french/forge/macros/translations.lua` contient les libellés français) grâce au
+mécanisme de copie en deux temps décrit plus haut.
 
-`manual/notes.txt` (repris de manière informelle, pas encore copié dans ce dépôt)
-associe chaque macro au fichier de modèle `.bin` dont elle dépend, et explique pourquoi : par exemple
-`model-mixes.lua` utilise `rarebear.bin`, `model-fm.lua` utilise `zblank.bin` (un
-modèle avec une configuration de phases de vol délibérément vierge), `model-trims.lua` utilise
-`blaster.bin` (configuré avec des trims décalés pour illustrer la plage des trims).
-Le portage des notes de ce fichier vers une véritable documentation ici fait partie du
-travail de phase 2 décrit ci-dessous.
+## Comparaison avec les captures de référence
 
-## Ce qu'implique le portage dans le nouveau dépôt (pas encore fait)
+Une fois toutes les macros exécutées, `copy_screenshots()` compare chaque nouvelle capture
+(`forge/build/screenshots/`) à la référence déjà commitée dans `french/screenshots/` (ou
+`french/assets/` si ce dossier n'existe pas) — **pixel par pixel**, pas octet par octet, pour
+ne pas signaler un changement quand seul l'encodage PNG diffère. Résultat déposé dans
+`forge/build/fail/` :
 
-- Décider si les macros sont réexécutées directement depuis ce dépôt (nécessitant une
-  installation locale du simulateur Ethos, comme le faisait l'ancien dépôt) ou via l'intégration continue avec le
-  simulateur embarqué/téléchargé dans le flux de travail.
-- Restructurer les chemins de sortie plats `../screenshots/...` pour correspondre à la disposition des ressources
-  de ce dépôt, par page et par langue (`docs/<locale>/assets/`).
-- Un fichier `--radio-settings ... .bin` et une exécution de captures d'écran par langue, dès
-  qu'une langue autre que `en` existe : les captures d'écran sont spécifiques à la langue de l'interface et
-  ne peuvent pas être partagées entre langues.
-- Décider quelle proportion des quelque 40 macros existantes reprendre telles quelles plutôt que de les
-  réécrire en fonction de la structure de navigation actuelle de ce dépôt (certaines macros
-  produisent des captures d'écran pour des sections qui ne correspondent plus 1:1 à la
-  disposition des pages de ce manuel).
+- **Nouvelle capture** (pas encore de référence) : copiée telle quelle, recompressée sans
+  perte au passage.
+- **Capture modifiée** (pixels différents) : l'ancienne (`<nom>.ref.png`), la nouvelle
+  (`<nom>.png`) et une image de diff (`<nom>.diff.png`, pixels différents surlignés en vert)
+  sont déposées côte à côte pour comparaison visuelle.
+- **Pixels identiques mais réencodage plus compact** : la référence est directement mise à
+  jour en place (silencieusement, avec le gain affiché dans la sortie), sans rien déposer
+  dans `fail/`.
+
+Si tout est identique, `fail/` reste vide (mais existe toujours, pour que la CI puisse
+vérifier son absence de contenu sans distinguer les deux cas).
