@@ -17,7 +17,7 @@ simulator.pressKey(KEY_MDL) --open model menu
 simulator.pressKey(KEY_PAGE) --2nd page
 simulator.turnRotaryEncoder(1) --scroll to telem
 simulator.pressKey(KEY_ENTER) --y
-simulator.turnRotaryEncoder(13) --scroll to current sensor
+simulator.turnRotaryEncoder(11) --scroll to current sensor
 simulator.screenshot("/screenshots/how-to-consumption-telemetry-current-sensor.png")
 simulator.pressKey(KEY_ENTER) --open
 simulator.turnRotaryEncoder(1) --scroll to edit
@@ -146,7 +146,7 @@ simulator.pressKey(KEY_RTN, 1)
 ]]-- 
 --select consumption sensor
 simulator.pressKey(KEY_RTN) --back to category
-simulator.turnRotaryEncoder(10) --scroll to telem
+simulator.turnRotaryEncoder(8) --scroll to telem
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(18) --scroll to consumption
 simulator.pressKey(KEY_ENTER)
@@ -276,7 +276,7 @@ simulator.pressKey(KEY_RTN)
 ]]--
 --select consumption sensor
 simulator.pressKey(KEY_RTN) --back to category
-simulator.turnRotaryEncoder(10) --scroll to telem
+simulator.turnRotaryEncoder(8) --scroll to telem
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(18) --scroll to consumption
 simulator.pressKey(KEY_ENTER)
