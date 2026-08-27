@@ -343,8 +343,11 @@ simulator.pressKey(KEY_ENTER)
 --
 --simulator.pressKey(KEY_RTN)
 simulator.screenshot("/screenshots/how-to-consumption-sf2-play-battlow.png")
-simulator.turnRotaryEncoder(2) -- scroll to repeat (voice greyed out)
---simulator.turnRotaryEncoder() --scroll to repeat (skip priority)
+if system.getAudioVoice(1):sub(-1) == "/" then
+    simulator.turnRotaryEncoder(2) -- scroll to repeat (voice greyed out)
+else
+    simulator.turnRotaryEncoder(3) -- scroll to repeat
+end
 --set repeat
 simulator.pressKey(KEY_ENTER) --y
 simulator.touch(392, 446) --10s steps
