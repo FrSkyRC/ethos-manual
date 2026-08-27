@@ -45,52 +45,52 @@ RUN_WASM_URL = "https://raw.githubusercontent.com/FrSkyRC/ethos-tools/main/simul
 RELEASE_ASSET_URL = "https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases/download/{release}/{asset}"
 
 X20S_MACROS = [
-  "model-select.lua",
-  "model-edit.lua",
-  "model-fm.lua",
-  "model-mixes.lua",
-  "model-mixes-free.lua",
-  "model-mix-eg.lua",
-  "model-outputs.lua",
-  "model-chview.lua",
-  "model-timers.lua",
-  "model-trims.lua",
-  # "model-rf.lua",
-  "model-checklist.lua",
-  "model-lsw.lua",
-  "model-sf.lua",
-  "model-curves.lua",
-  "model-vars.lua",
-  "model-trainer.lua",
-  "model-blanks.lua",
-  "display.lua",
-  "basic-example.lua",
-  "wing-example.lua",
-  "heli-example.lua",
-  "how-to-low-batt.lua", # how to 1
-  "how-to-consumption.lua", # how to 3
-  "how-to-butterfly.lua", # how to 6
-  "how-to-in-flight-comp.lua", # how to 10
-  "trainer-take-back.lua", # how to 11
-  "how-to-gear-seq.lua", # how to 13
-  "model-lua.lua",
-  # system
-  "system-menu.lua",
-  # ui
-  "user-interface.lua",
-  "mainview.lua",
-  # this must be last due to the Lock SF in topbar.bin
-  "telemetry.lua",
-  "toolbars.lua",
+    "model-select.lua",
+    "model-edit.lua",
+    "model-fm.lua",
+    "model-mixes.lua",
+    "model-mixes-free.lua",
+    "model-mix-eg.lua",
+    "model-outputs.lua",
+    "model-chview.lua",
+    "model-timers.lua",
+    "model-trims.lua",
+    # "model-rf.lua",
+    "model-checklist.lua",
+    "model-lsw.lua",
+    "model-sf.lua",
+    "model-curves.lua",
+    "model-vars.lua",
+    "model-trainer.lua",
+    "model-blanks.lua",
+    "display.lua",
+    "basic-example.lua",
+    "wing-example.lua",
+    "heli-example.lua",
+    "how-to-low-batt.lua", # how to 1
+    "how-to-consumption.lua", # how to 3
+    "how-to-butterfly.lua", # how to 6
+    "how-to-in-flight-comp.lua", # how to 10
+    "trainer-take-back.lua", # how to 11
+    "how-to-gear-seq.lua", # how to 13
+    "model-lua.lua",
+    # system
+    "system-menu.lua",
+    # ui
+    "user-interface.lua",
+    "mainview.lua",
+    # this must be last due to the Lock SF in topbar.bin
+    "telemetry.lua",
+    "toolbars.lua",
 ]
 
 
 X20PRO_MACROS = [
-  "x20pro.lua"
+    "x20pro.lua"
 ]
 
 X18S_MACROS = [
-  "x18s.lua"
+    "x18s.lua"
 ]
 
 X20PROAW_MACROS = [
@@ -167,8 +167,8 @@ def setup_builddir(release, radio):
     for name in BUILD_SOURCE_DIRS:
         if os.path.exists(os.path.join(COMMON_FORGE_DIR, name)):
             shutil.copytree(os.path.join(COMMON_FORGE_DIR, name), os.path.join(BUILD_DIR, name), dirs_exist_ok=True)
-        if os.path.exists(os.path.join(LOCALIZED_FORGE_DIR, name)):
-            shutil.copytree(os.path.join(LOCALIZED_FORGE_DIR, name), os.path.join(BUILD_DIR, name), dirs_exist_ok=True)
+        # if os.path.exists(os.path.join(LOCALIZED_FORGE_DIR, name)):
+        #     shutil.copytree(os.path.join(LOCALIZED_FORGE_DIR, name), os.path.join(BUILD_DIR, name), dirs_exist_ok=True)
 
     audio_cache_dir = os.path.join(CACHE_DIR, "audio", release)
     audio_build_dir = os.path.join(BUILD_DIR, "audio")
