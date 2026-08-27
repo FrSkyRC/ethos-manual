@@ -73,10 +73,6 @@ X20S_MACROS = [
   "how-to-in-flight-comp.lua", # how to 10
   "trainer-take-back.lua", # how to 11
   "how-to-gear-seq.lua", # how to 13
-  # lua
-  # lua is done seperately 
-  # must be done last because we only want lua icon in menu once
-  # os.copy('RADIO:/macros/lua-fn/scripts' 'RADIO:/scripts')
   "model-lua.lua",
   # system
   "system-menu.lua",
