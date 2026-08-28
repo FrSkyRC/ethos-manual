@@ -167,8 +167,8 @@ def setup_builddir(release, radio):
     for name in BUILD_SOURCE_DIRS:
         if os.path.exists(os.path.join(COMMON_FORGE_DIR, name)):
             shutil.copytree(os.path.join(COMMON_FORGE_DIR, name), os.path.join(BUILD_DIR, name), dirs_exist_ok=True)
-        # if os.path.exists(os.path.join(LOCALIZED_FORGE_DIR, name)):
-        #     shutil.copytree(os.path.join(LOCALIZED_FORGE_DIR, name), os.path.join(BUILD_DIR, name), dirs_exist_ok=True)
+        if os.path.exists(os.path.join(LOCALIZED_FORGE_DIR, name)):
+            shutil.copytree(os.path.join(LOCALIZED_FORGE_DIR, name), os.path.join(BUILD_DIR, name), dirs_exist_ok=True)
 
     audio_cache_dir = os.path.join(CACHE_DIR, "audio", release)
     audio_build_dir = os.path.join(BUILD_DIR, "audio")
