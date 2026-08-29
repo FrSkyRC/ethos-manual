@@ -38,7 +38,7 @@ simulator.turnRotaryEncoder(-11) --scroll back to top
 --
 -- start of calculated sensor
 simulator.pressKey(KEY_ENTER) -- open options
-simulator.turnRotaryEncoder(4) --scroll to create calc sensor
+simulator.turnRotaryEncoder(3) --scroll to create calc sensor
 simulator.screenshot("/screenshots/how-to-consumption-create-calc-sensor.png")
 simulator.pressKey(KEY_ENTER) --y
 simulator.turnRotaryEncoder(1) -- scroll to consumption
