@@ -36,8 +36,9 @@ local function telemetryHook(event, line)
     simulator.injectSPortFrame({module=0, band=0, rx=0, physId=0x98, primId=0x10, appId=0x0301, value=cells(6, 0, 3.69, 3.72)}) -- LiPo2 (1+2)
     simulator.injectSPortFrame({module=0, band=0, rx=0, physId=0x98, primId=0x10, appId=0x0301, value=cells(6, 2, 3.71, 3.70)}) -- LiPo2 (3+4)
     simulator.injectSPortFrame({module=0, band=0, rx=0, physId=0x98, primId=0x10, appId=0x0301, value=cells(6, 4, 3.69, 3.71)}) -- LiPo2 (5+6)
-    simulator.injectSPortFrame({module=0, band=0, rx=0, physId=0x98, primId=0x10, appId=0x0200, value=100}) -- VFAS Current = 10.0A
-    simulator.injectSPortFrame({module=0, band=0, rx=0, physId=0x98, primId=0x10, appId=0x0210, value=1000}) -- VFAS Voltage = 10.0V    simulator.injectSPortFrame({module=0, band=0, rx=0, physId=0x98, primId=0x10, appId=0x0100, value=0}) -- Vario Altitude = 0m
+    simulator.injectSPortFrame({module=0, band=0, rx=0, physId=0x98, primId=0x10, appId=0x0200, value=100}) -- VFAS Current = 10.0A -- multiplier 10
+    simulator.injectSPortFrame({module=0, band=0, rx=0, physId=0x98, primId=0x10, appId=0x0210, value=1000}) -- VFAS Voltage = 10.0V  -- multiplier 100  
+    simulator.injectSPortFrame({module=0, band=0, rx=0, physId=0x98, primId=0x10, appId=0x0100, value=0}) -- Vario Altitude = 0m
     simulator.injectSPortFrame({module=0, band=0, rx=0, physId=0x98, primId=0x10, appId=0x0110, value=50}) -- Vario VSpeed = 0.50m/s
   end
 end
