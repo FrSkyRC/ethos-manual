@@ -2,7 +2,7 @@
 -- 2025-10-20 add simulator.reloadScripts() so that Lua icon loads 
 --
 
-dofile("common.lua")
+dofile("common_no_telem.lua")
 
 local LUA_FN_SCRIPTS = {
   "demo-source",
