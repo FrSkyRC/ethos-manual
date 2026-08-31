@@ -66,6 +66,12 @@ NS = {
 
 ASSETS_DIR_NAME = "assets"
 
+# Assets the manual references but the .odt doesn't embed (e.g. the PDF cover
+# logo used by styles.md's \titlehead). Copied into the generated assets/
+# folder next to the images extracted from the .odt; paths are relative to the
+# .odt's parent directory, and a missing one is silently skipped.
+EXTRA_ASSETS = ["../french/assets/ethos-logo-reversed.png"]
+
 # Internal placeholders, resolved to their final value only once we know
 # which output file a piece of content lands in (its assets/ depth, and -
 # for internal cross-reference links - which file the link's target bookmark
@@ -307,17 +313,24 @@ class Converter:
                         bullet = f"{index}." if ordered else "-"
                         lines.append(f"{indent}{bullet} {text}")
                         first_para_done = True
+                        index += 1
                     elif text.strip():
                         lines.append(f"{indent}  {text}")
                 elif tag == "list":
-                    lines.append(self.render_list(child, depth + 1))
+                    # LibreOffice wraps every list level in its own <text:list>,
+                    # including outer levels that carry no bullet of their own
+                    # (a list-item whose only child is the nested list). Those
+                    # "phantom" levels must not add Markdown indentation, or a
+                    # sub-list jumps straight to e.g. 8 spaces and gets parsed
+                    # as an indented code block instead of a nested list.
+                    child_depth = depth + 1 if first_para_done else depth
+                    lines.append(self.render_list(child, child_depth))
                 elif tag == "frame":
                     block = self.render_frame(child)
                     if block:
                         lines.append(f"{indent}  {block}")
             if lines:
                 item_blocks.append("\n".join(lines))
-            index += 1
         return "\n".join(item_blocks)
 
     # ---- tables ----
@@ -572,7 +585,11 @@ def convert(odt_path, output_dir, split_chapters=False, summary=False):
                     toc_entries.append(f"  - [{subtitle}]({section_rel})")
                     summary_entries.append(f"    * [{subtitle}]({section_rel})")
 
-            index_items = list(preamble_items)
+            # The document preamble (everything before the first "# " heading -
+            # old cover matter, author, copyright) is dropped: the top-level
+            # index.md is written empty, to be replaced by a hand-maintained
+            # cover page.
+            index_items = []
             if not summary:
                 # No SUMMARY.md to carry navigation: keep an inline TOC so
                 # index.md stays self-navigable on its own.
@@ -607,6 +624,13 @@ def convert(odt_path, output_dir, split_chapters=False, summary=False):
                 if dest_name != info.filename:
                     converted += 1
 
+    extra_copied = 0
+    for rel in EXTRA_ASSETS:
+        src = os.path.normpath(os.path.join(odt_dir, rel))
+        if os.path.exists(src):
+            save_as_png(src, os.path.join(assets_root, os.path.basename(src)))
+            extra_copied += 1
+
     missing = []
     for out_basename, source in converter.external_images.items():
         if source is None:
@@ -624,6 +648,8 @@ def convert(odt_path, output_dir, split_chapters=False, summary=False):
     else:
         print(f"Wrote {written[0]}")
     print(f"Extracted {extracted} embedded asset(s) to {assets_root}")
+    if extra_copied:
+        print(f"Copied {extra_copied} extra asset(s) (cover logo etc.) into {assets_root}")
     if converter.external_images:
         print(f"Copied {len(converter.external_images) - len(missing)} linked asset(s) "
               f"from {odt_dir} into {assets_root}")
