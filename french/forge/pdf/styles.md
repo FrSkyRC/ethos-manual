@@ -88,8 +88,10 @@ header-includes:
   \newunicodechar{”}{\,»}
   % babel-french traite spécifiquement l'apostrophe typographique (’) comme
   % marqueur d'élision et y insère un espace anormalement large dans ce
-  % document. On la fait pointer vers le glyphe simple (bug absent avec
-  % l'apostrophe ASCII, qui ne déclenche pas ce traitement spécial).
+  % document ; le guillemet simple ouvrant (‘) traîne le même espace. On les
+  % fait pointer vers le glyphe simple (bug absent avec l'apostrophe ASCII,
+  % qui ne déclenche pas ce traitement spécial).
+  \newunicodechar{‘}{\textquotesingle}
   \newunicodechar{’}{\textquotesingle}
   % Boîtes d'admonition façon Material for MkDocs (bandeau de titre coloré +
   % fond teinté), une par type (!!! note "...", !!! warning "...", ...).
