@@ -29,6 +29,9 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      - run: python ../forge/odt_to_markdown.py EN Ethos_User_Manual_26.1.0*.odt --output-dir markdown --split-chapters --summary
+        working-directory: english
+
       - run: python forge/mkdocs.py
 
       - run: mkdocs build
