@@ -84,13 +84,13 @@ LANGUAGES = {
     "french": {
         "locale": "fr",
         "name": "Français",
-        "default": True,
         "site_name": "Manuel Ethos",
         "site_description": "Documentation utilisateur de l'OS Ethos (FrSky)",
     },
     "english": {
         "locale": "en",
         "name": "English",
+        "default": True,
         "site_name": "Ethos Manual",
         "site_description": "Ethos OS user documentation (FrSky)",
     },
