@@ -31,6 +31,7 @@ nav:
 
 theme:
   name: material
+  custom_dir: overrides
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -78,12 +79,12 @@ plugins:
         - locale: fr
           name: Français
           build: true
-          default: true
           site_name: Manuel Ethos
           site_description: Documentation utilisateur de l'OS Ethos (FrSky)
         - locale: en
           name: English
           build: true
+          default: true
           site_name: Ethos Manual
           site_description: Ethos OS user documentation (FrSky)
         # END GENERATED: LANGUAGES

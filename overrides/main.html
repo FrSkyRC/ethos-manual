@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{#
+  Browser-language landing redirect.
+
+  mkdocs-static-i18n has no built-in browser-language detection, so English is
+  the site default (served at the root) and this picks up the rest: a visitor
+  landing on the site root whose browser prefers French is sent on to /fr/.
+  Anyone else - English browser, other language, no JS - stays on the English
+  root. It fires at most once per browser (localStorage), so a bookmark or a
+  manual language choice is always respected afterwards.
+#}
+{% block extrahead %}
+  {{ super() }}
+  <script>
+  (function () {
+    try {
+      if (localStorage.getItem("i18n-auto-redirect")) return;
+      var root = new URL("{{ base_url }}/", location.href).pathname.replace(/\/{2,}/g, "/");
+      var here = location.pathname.replace(/index\.html?$/, "");
+      if (here !== root) return;                       // only act on the site root
+      localStorage.setItem("i18n-auto-redirect", "1");
+      var prefs = navigator.languages || [navigator.language || ""];
+      for (var i = 0; i < prefs.length; i++) {
+        var lang = prefs[i].toLowerCase().slice(0, 2);
+        if (lang === "en") return;                     // English already served here
+        if (lang === "fr") { location.replace(root + "fr/"); return; }
+      }
+    } catch (e) {}
+  })();
+  </script>
+{% endblock %}
