@@ -13,3 +13,4 @@ SUMMARY.nav.md
 site/
 /docs/
 book.*
+.~lock.*#
