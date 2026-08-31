@@ -10,16 +10,9 @@ Le gestionnaire de fichiers permet d'explorer les différents espaces de stockag
 
 ## Organisation du stockage
 
-Appuyez sur **Flash** (ou sur `PAGE` pour changer de disque) pour explorer le disque flash USB virtuel interne de la radio, utilisé pour les bitmaps et les polices du système :
+Appuyez sur `PAGE` pour changer de disque pour explorer les différents disques de la radio.
 
-![Disque "Flash"](../screenshots/system-filemanager-flash.png)
-
-- **`bitmaps/system`** : les bitmaps / icônes utilisées pour les affichages écran et les icônes
-- **`fonts/`** : les fontes correspondant aux différentes langues sélectionnables
-
-Le bootloader et le firmware système lui-même résident tous deux dans cette mémoire flash interne, sur toutes les radios FrSky depuis la X9D d'origine.
-
-La série **X20/X20S/X20HD** nécessite une carte SD formatée en FAT32, de 32 Go ou moins (une SanDisk Ultra Micro SDHC classe 10 de 16 Go est un choix sûr). Les radios **X18** et **X20 Pro/R/RS** utilisent par défaut une mémoire eMMC interne pour le stockage des fichiers (mais une carte SD externe peut être ajoutée en complément). Appuyez sur l'onglet **Radio** pour l'explorer. Ethos créera automatiquement les répertoires `Logs/`, `models/` et `screenshots/` s'ils sont absents. `Firmware/` est une convention manuelle destinée à conserver les fichiers de firmware des périphériques, tels que les récepteurs.
+La série **X20 / X20S / X20HD** nécessite une carte SD formatée en FAT32, de 32 Go ou moins (une SanDisk Ultra Micro SDHC classe 10 de 16 Go est un choix sûr). Les autres radios utilisent par défaut une mémoire eMMC (ou Nand) interne pour le stockage des fichiers (mais une carte SD externe peut être ajoutée en complément). Appuyez sur l'onglet **Radio** pour l'explorer. Ethos créera automatiquement les répertoires `Logs/`, `models/` et `screenshots/` s'ils sont absents. `Firmware/` est une convention manuelle destinée à conserver les fichiers de firmware des périphériques, tels que les récepteurs.
 
 ## Répertoires de premier niveau {: #top-level-folders }
 
@@ -54,7 +47,7 @@ La série **X20/X20S/X20HD** nécessite une carte SD formatée en FAT32, de 32 G
 - **documents/user/** : documents texte de l'utilisateur, qui peuvent être
   appelés depuis le widget d'affichage **Texte**.
 
-- **Firmware/** : fichiers de mise à jour pour le module RF interne, les
+- **firmware/** : fichiers de mise à jour pour le module RF interne, les
   modules externes et les autres périphériques (récepteurs, etc.), flashés
   depuis ce répertoire via le S.Port ou en OTA. Le nouveau firmware doit être
   copié ici pendant que la radio est en [mode bootloader](../getting-started/usb-connection-modes.md)
@@ -67,9 +60,9 @@ La série **X20/X20S/X20HD** nécessite une carte SD formatée en FAT32, de 32 G
   
   ![Mise à jour bootloader](../screenshots/system-filemanager-flash-bootloader.png)
 
-- **I18n/** : les fichiers de traduction de la langue.
+- **i18n/** : les fichiers de traduction de langue.
 
-- **Logs/** : les journaux de logs.
+- **logs/** : les journaux de logs.
 
 - **models/** : les fichiers de modèles eux-mêmes. Ils ne peuvent pas être
   modifiés directement ici, mais peuvent être sauvegardés ou partagés. Depuis
@@ -113,9 +106,6 @@ La série **X20/X20S/X20HD** nécessite une carte SD formatée en FAT32, de 32 G
   déconnexion de la radio de l'ordinateur. Le contenu de la carte SD/eMMC et
   celui du disque flash interne peuvent devoir être mis à jour dans la même
   opération.
-
-- **sdcard.version** (dossier racine) : la version du contenu de la carte SD,
-  maintenue par Ethos Suite.
 
 ## Partage de fichiers via Bluetooth
 
