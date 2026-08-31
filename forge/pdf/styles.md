@@ -11,7 +11,6 @@ papersize: a4
 # Layout
 documentclass: scrreprt
 classoption:
-- twoside
 - footsepline
 - headsepline
 - plainfootsepline
@@ -86,10 +85,12 @@ header-includes:
   \usepackage{newunicodechar}
   \newunicodechar{“}{«\,}
   \newunicodechar{”}{\,»}
-  % babel-french specifically treats the typographic apostrophe (’) as an
-  % elision marker and inserts an abnormally wide space around it in this
-  % document. We point it to the plain glyph instead (bug absent with the
-  % ASCII apostrophe, which doesn't trigger this special handling).
+  % markdown+smart also turns ' ' into typographic single quotes (‘ ’), used
+  % in the text both as quote marks and as apostrophes. In this font setup
+  % they drag an abnormally wide space along with them, so map both to the
+  % plain ASCII apostrophe (not affected, and already the style used for the
+  % closing mark everywhere in the manual).
+  \newunicodechar{‘}{\textquotesingle}
   \newunicodechar{’}{\textquotesingle}
   % Material for MkDocs-style admonition boxes (colored title bar + tinted
   % background), one per type (!!! note "...", !!! warning "...", ...).
@@ -140,6 +141,15 @@ header-includes:
     beforeskip=1ex plus 0.5ex minus 0.2ex,
     afterskip=0.5ex plus 0.2ex minus 0.1ex
   ]{subsubsection}
+  % Level-5 headings (#####, \paragraph) are run-in by default in KOMA-Script
+  % (a negative afterskip, so the following text continues on the same line).
+  % runin=false + a positive afterskip makes them start their own line, like
+  % the other heading levels.
+  \RedeclareSectionCommand[
+    runin=false,
+    beforeskip=1ex plus 0.5ex minus 0.2ex,
+    afterskip=0.5ex plus 0.2ex minus 0.1ex
+  ]{paragraph}
   % In the table of contents, \section entries ("<chapter>.<section>", e.g.
   % "5.10") only reserve enough width (tocnumwidth) for a single-digit
   % section number by default; once a chapter has 10+ sections, the title
@@ -155,7 +165,10 @@ header-includes:
   \KOMAoptions{footsepline=true,headsepline=true,footheight=3ex}
   \automark[chapter]{chapter}
   % "Chapter <n> - <title>" rather than just "<n> <title>" in the header.
-  \renewcommand*{\chaptermark}[1]{\markboth{Chapter~\thechapter\ - #1}{}}
+  % Both \markboth arguments must be set: the class is one-sided (scrreprt),
+  % so \headmark (used by \ihead) reads the *right* mark - leaving it empty
+  % made the chapter name vanish from the header.
+  \renewcommand*{\chaptermark}[1]{\markboth{Chapter~\thechapter\ - #1}{Chapter~\thechapter\ - #1}}
   \ihead{\headmark}
   \makeatletter
   \ohead{\@title}
@@ -168,11 +181,11 @@ header-includes:
   % Document revision at the bottom left of the page (value taken from the
   % "version" metadata field, see \docversion defined in forge/template.latex).
   \newcommand{\pagefootrevision}{\raisebox{-1.2ex}{Revision~\docversion}}
-  % \ifoot/\ofoot (inner/outer) alternate left/right based on page parity
-  % in two-sided mode; \Ifthispageodd (native KOMA) lets us force the
-  % revision always on the left and the page number always on the right.
-  \ifoot[\pagefootrevision]{\Ifthispageodd{\pagefootrevision}{\pagefootcontent}}
-  \ofoot[\pagefootcontent]{\Ifthispageodd{\pagefootcontent}{\pagefootrevision}}
+  % One-sided document (scrreprt, no "twoside"): \ifoot is always the left
+  % foot and \ofoot always the right one, on every page. Revision bottom-left,
+  % total page number bottom-right, with no odd/even alternation.
+  \ifoot{\pagefootrevision}
+  \ofoot{\pagefootcontent}
   % A table (longtable) right before a floating figure can throw off the
   % remaining-space calculation and make the image overflow the bottom of
   % the page (known longtable/floats interaction bug). \FloatBarrier after
@@ -181,8 +194,15 @@ header-includes:
   \usepackage{float}
   \let\origfigure\figure
   \let\endorigfigure\endfigure
+  % [H]: see the longtable/floats bug above.
+  % \let\centering\raggedright: Pandoc emits a \centering inside the body of
+  % every \begin{figure} (image + caption); we neutralise it here, within the
+  % environment's group, to left-align figures like the rest of the text.
+  % singlelinecheck=false so short captions are flushed left too, not centered.
   \renewenvironment{figure}[1][2] {
     \expandafter\origfigure\expandafter[H]
+    \let\centering\raggedright
+    \captionsetup{justification=raggedright,singlelinecheck=false}
   } {
     \endorigfigure
   }

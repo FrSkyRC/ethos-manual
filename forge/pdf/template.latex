@@ -107,10 +107,10 @@ $else$
   \usepackage{unicode-math} % this also loads fontspec
 $endif$
   \defaultfontfeatures{Scale=MatchLowercase}$-- must come before Beamer theme
-  % [FR] Ligatures=TeX + babel-french provoque un espace anormalement large
-  % après chaque apostrophe d'élision (l'écran, d'accueil...) dans les longs
-  % documents. On garde juste Scale=1, sans la ligature TeX pour les guillemets/
-  % apostrophes (déjà gérés indépendamment via header-includes dans styles.md).
+  % Ligatures=TeX + babel-french produce an abnormally wide space after every
+  % elision apostrophe (l'écran, d'accueil...) in long documents. Keep just
+  % Scale=1, without the TeX ligature for quotes/apostrophes (those are handled
+  % separately via header-includes in styles.md).
   \defaultfontfeatures[\rmfamily]{Scale=1}
 \fi
 $if(fontfamily)$
@@ -307,18 +307,18 @@ $if(graphics)$
 \usepackage{graphicx}
 \makeatletter
 \newsavebox\pandoc@box
-\newcommand*\pandocbounded[1]{% scales image to fit in text height/width, then 75% further
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width, then down to 55%
   \sbox\pandoc@box{#1}%
   \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
   \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
   \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
-  \ifdim\@tempa\p@>\p@\def\@tempa{1}\fi% ne jamais agrandir au-delà de la taille naturelle
-  % Centre l'image. Une figure numérotée (légende non vide) était déjà
-  % centrée via le \centering émis par Pandoc dans \begin{figure} ; une
-  % image sans légende (texte alt vide) n'est plus encapsulée dans une
-  % figure et perdait ce centrage - donc on le fait ici, pour les deux cas.
-  \par\begingroup\centering
-  \scalebox{0.6}{\scalebox{\@tempa}{\usebox\pandoc@box}}\par
+  \ifdim\@tempa\p@>\p@\def\@tempa{1}\fi% never enlarge beyond the natural size
+  % Left-align the image. An image with no caption (empty alt text) is no
+  % longer wrapped in a figure, so its alignment is handled here.
+  % For a numbered figure (non-empty caption), see also the
+  % \let\centering\raggedright in \renewenvironment{figure} in styles.md.
+  \par\begingroup\raggedright
+  \scalebox{0.55}{\scalebox{\@tempa}{\usebox\pandoc@box}}\par
   \endgroup
 }
 % Set default figure placement to htbp
@@ -546,8 +546,8 @@ $endif$
 \author{$for(author)$$author$$sep$ \and $endfor$}
 \date{$date$}
 $if(version)$
-% [FR] expose la métadonnée "version" à styles.md (pied de page), voir
-% \ifoot{Revision \docversion} plus bas.
+% Exposes the "version" metadata to styles.md (page footer), see
+% \ifoot{Revision \docversion} below.
 \newcommand{\docversion}{$version$}
 $endif$
 $if(beamer)$
