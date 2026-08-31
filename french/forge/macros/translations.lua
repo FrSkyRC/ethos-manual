@@ -17,9 +17,9 @@ TRANSLATIONS = {
   VFRlowFilePosition = 250,  -- position of "vfr-low"
   -- How to configure a butterfly (aka Crow) mix
   Crowdb = "Zone morte",
-  FlapOffset = "Décalage Volets",
-  EleComp = "Correct. Prof.",
-  EleCompAdj = "EleCompAdj",
+  FlapOffset = "Decalage Volets",
+  EleComp = "Correct.Prof",
+  EleCompAdj = "Correct.Prof.X",
   -- How to low batt
   BattLow = "BattLow",
   -- How to consumption
