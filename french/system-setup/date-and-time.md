@@ -19,4 +19,4 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
   plus rapide, positive si elle est plus lente (plage −500 / +500).
   Vérifiez de nouveau après un ou deux jours et affinez le réglage.
 - **Auto depuis GPS** : lorsque cette option est activée, la date et l'heure
-  sont réglées automatiquement à partir des données d'un capteur GPS distant.
+  sont réglées automatiquement à partir des données des capteurs GPS.
