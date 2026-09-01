@@ -17,16 +17,19 @@ Example:
 
 import argparse
 import fnmatch
+from functools import lru_cache
 import io
+import json
 import os
 import shutil
 import subprocess
 import time
 import urllib.request
 import zipfile
-
 from PIL import Image, ImageChops
 
+GITHUB_REPOSITORY = "FrSkyRC/ETHOS-Feedback-Community"
+PRODUCTS_LIST_URL = "https://www.frsky-rc.com/wp-content/uploads/Downloads/EthosSuite/Products/frsky_products_list.json"
 LOCALIZED_FORGE_DIR = os.path.join(os.getcwd(), "forge")
 COMMON_FORGE_DIR = os.path.dirname(os.path.abspath(__file__))
 CACHE_DIR = os.path.join(COMMON_FORGE_DIR, ".cache")
@@ -124,6 +127,57 @@ def download(url, dest_path, force=False):
     return dest_path
 
 
+def fetch_json(url, headers=None):
+    print(f"GET {url}")
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url, headers=headers or {})) as response:
+            return json.load(response)
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"Failed to fetch {url} ({e.code} {e.reason})") from e
+
+
+def fetch_products_list():
+    return fetch_json(PRODUCTS_LIST_URL)
+
+
+def decode_components_json(release):
+    for asset in release["assets"]:
+        if asset["name"] == "components.json":
+            return fetch_json(asset["browser_download_url"])
+
+
+@lru_cache
+def get_release(version="latest"):
+    ref = "latest" if version == "latest" else f"tags/{version}"
+    return fetch_json(
+        f"https://api.github.com/repos/{GITHUB_REPOSITORY}/releases/{ref}",
+        headers={"Accept": "application/vnd.github+json", "User-Agent": "ethos-manual"},
+    )
+
+
+@lru_cache
+def get_commercial_name(dev_name):
+    products_list = fetch_products_list()
+    for family in products_list.get("families", []):
+        if family.get("name") != "Radio":
+            continue
+        for product in family.get("products", []):
+            if product and product.get("devName") == dev_name:
+                return product.get("name", dev_name)
+    return dev_name
+
+
+def get_component_version(release, radio, component):
+    commercial_name = get_commercial_name(radio)
+    for part in decode_components_json(release):
+        if commercial_name in part["targets"] or radio in part["targets"]:
+            for candidate in part["components"]:
+                if candidate["name"] == component:
+                    return candidate["version"]
+            raise Exception(f"Component {component} not found in this release")
+    raise Exception(f"Radio {radio} ({commercial_name}) not found in this release")
+
+
 def fetch_run_wasm(force=False):
     """Fetches run_wasm.js from ethos-tools (cached in .cache/)."""
     run_wasm_path = os.path.join(CACHE_DIR, "run_wasm.js")
@@ -155,7 +209,9 @@ def fetch_simulator(release, radio, force=False):
     return js_path
 
 
-def setup_builddir(release, radio):
+def setup_builddir(version, radio):
+    release = get_release(version)
+
     if os.path.exists(os.path.join(LOCALIZED_FORGE_DIR, f"{ radio }.bin")):
         shutil.copy(os.path.join(LOCALIZED_FORGE_DIR, f"{ radio }.bin"), os.path.join(BUILD_DIR, "radio.bin"))
     elif os.path.exists(os.path.join(COMMON_FORGE_DIR, f"{ radio }.bin")):
@@ -170,20 +226,22 @@ def setup_builddir(release, radio):
         if os.path.exists(os.path.join(LOCALIZED_FORGE_DIR, name)):
             shutil.copytree(os.path.join(LOCALIZED_FORGE_DIR, name), os.path.join(BUILD_DIR, name), dirs_exist_ok=True)
 
-    audio_cache_dir = os.path.join(CACHE_DIR, "audio", release)
+    audio_cache_dir = os.path.join(CACHE_DIR, "audio", version)
     audio_build_dir = os.path.join(BUILD_DIR, "audio")
+    audio_version = get_component_version(release, radio.split("_")[0], "audio")
+
     for lang in AUDIO_LANGUAGES:
         asset_name = f"audio-{lang}.zip"
-        url = RELEASE_ASSET_URL.format(release=release, asset=asset_name)
+        url = RELEASE_ASSET_URL.format(release=audio_version, asset=asset_name)
         zip_path = download(url, os.path.join(audio_cache_dir, asset_name))
         with zipfile.ZipFile(zip_path) as archive:
             archive.extractall(audio_build_dir)
 
 
-def run_macros(release, radio, macros, force=False):
+def run_macros(version, radio, macros, force=False):
     run_wasm_path = fetch_run_wasm(force=force)
-    js_path = fetch_simulator(release, radio, force=force)
-    setup_builddir(release, radio)
+    js_path = fetch_simulator(version, radio, force=force)
+    setup_builddir(version, radio)
     for macro in macros:
         subprocess.run([
                 "node", run_wasm_path, js_path,
