@@ -1,13 +1,5 @@
-/* =============================================================================
-   Ethos Manual — Brand Colors
-   Sourced directly from ethos.frsky-rc.com: a near-black header (their
-   persistent top bar) with the brand green (#8ec31f, sampled from the logo)
-   and interactive accent green (#78d642) used as accents, not as the header
-   fill -- matching the real site rather than an all-green header.
-   ============================================================================= */
-
 [data-md-color-primary="custom"] {
-  --md-primary-fg-color:         #141414; /* header/top-bar background */
+  --md-primary-fg-color:         #101010; /* header/top-bar background */
   --md-primary-fg-color--light:  #2b2b2b;
   --md-primary-fg-color--dark:   #000000;
   --md-primary-bg-color:         #ffffff;
@@ -19,23 +11,9 @@
   --md-accent-fg-color--transparent: rgba(120, 214, 66, 0.1);
   --md-accent-bg-color:              #ffffff;
   --md-accent-bg-color--light:       rgba(255, 255, 255, 0.7);
-
-  /* Material derives typeset link color -- and, via that, the current-page
-     highlight in the left nav -- from --md-typeset-a-color, which defaults
-     to var(--md-primary-fg-color). Our primary is #141414 (near-black),
-     deliberately dark for the header bar only. Left wired that way it made
-     the active-page nav item invisible against dark mode's dark sidebar
-     (found first) -- but the same root cause breaks light mode too, just
-     less obviously: near-black is still *readable* there, so it doesn't
-     look "broken", it's just indistinguishable from the inactive items'
-     own text color, so the active-page indicator does nothing. This
-     comment already documented the intent ("links, active nav, search
-     highlight") -- this line just makes the wiring match it, in both
-     themes, not dark-mode-only as the first pass did. */
   --md-typeset-a-color: var(--md-accent-fg-color);
 }
 
-/* Admonition callouts pick up the brand green instead of Material's default blue */
 .md-typeset .admonition.note,
 .md-typeset details.note {
   border-color: #8ec31f;
@@ -77,6 +55,15 @@
 .md-tabs__link {
   margin-top: 0.4rem;
   margin-bottom: 0.4rem;
+}
+
+.md-header__button.md-logo {
+  margin: 0 0 0 0.2rem;
+  padding: 0 0 0 0.4rem;
+}
+
+.md-header__button.md-logo img {
+  height: 2rem;
 }
 
 .md-nav--secondary .md-nav__list .md-nav__list {

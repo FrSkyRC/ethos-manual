@@ -40,18 +40,23 @@ nav:
 theme:
   name: material
   custom_dir: overrides
-  # forge/mkdocs.py copies forge/favicon.ico into docs/.
+  # forge/mkdocs.py copies forge/favicon.ico + forge/logo.png into docs/.
   favicon: favicon.ico
+  logo: logo.png
+  # primary/accent "custom" -> the near-black header + brand green from
+  # forge/extra.css ([data-md-color-primary="custom"] etc.).
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Switch to light mode

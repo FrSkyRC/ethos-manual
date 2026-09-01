@@ -8,10 +8,10 @@ produces) - (1) creates docs/<locale>, a link to wherever that SUMMARY.md
 lives, so mkdocs.yml's docs_dir can be a proper child directory of the
 config file, (2) regenerates SUMMARY.nav.md there, the file
 mkdocs-literate-nav actually reads, (3) copies the shared build assets
-(forge/extra.css, forge/favicon.ico) into docs/, and (4) rewrites mkdocs.yml's
-generated blocks (extra_css, exclude_docs, nav, plugins.i18n.languages) to
-match whichever languages are actually set up. Re-run after editing a
-SUMMARY.md, or after adding/removing a language.
+(forge/extra.css, forge/favicon.ico, forge/logo.png) into docs/, and
+(4) rewrites mkdocs.yml's generated blocks (extra_css, exclude_docs, nav,
+plugins.i18n.languages) to match whichever languages are actually set up.
+Re-run after editing a SUMMARY.md, or after adding/removing a language.
 
 --- Why docs/<locale>, not docs/<language folder name> ---
 mkdocs.yml uses the mkdocs-static-i18n plugin (docs_structure: folder) to
@@ -78,9 +78,9 @@ MKDOCS_YML = os.path.join(REPO_ROOT, "mkdocs.yml")
 # Static files bundled with the build, copied into docs/ (the docs_dir) so
 # every language picks them up: extra.css (brand colors + nav tweaks, also
 # referenced from mkdocs.yml's generated extra_css block - a language may
-# still add its own docs/<locale>/extra.css on top) and favicon.ico (wired in
-# via theme.favicon).
-SHARED_ASSETS = ("extra.css", "favicon.ico")
+# still add its own docs/<locale>/extra.css on top), favicon.ico (theme.favicon)
+# and logo.png (theme.logo, the header mark).
+SHARED_ASSETS = ("extra.css", "favicon.ico", "logo.png")
 SHARED_CSS = os.path.join(FORGE_DIR, "extra.css")
 
 # Top-level language folder name -> its metadata. `locale` is required by
