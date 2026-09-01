@@ -619,10 +619,13 @@ def convert(odt_path, output_dir, split_chapters=False, summary=False):
         for info in archive.infolist():
             if info.filename.startswith("Pictures/") and not info.is_dir():
                 dest_name = as_png_name(info.filename)
-                save_as_png(archive.read(info.filename), os.path.join(assets_root, dest_name))
-                extracted += 1
-                if dest_name != info.filename:
-                    converted += 1
+                try:
+                    save_as_png(archive.read(info.filename), os.path.join(assets_root, dest_name))
+                    extracted += 1
+                    if dest_name != info.filename:
+                        converted += 1
+                except Exception as e:
+                    print(f"WARNING: failed to extract {info.filename} from {odt_path}: {e}")
 
     extra_copied = 0
     for rel in EXTRA_ASSETS:
