@@ -1,14 +1,22 @@
 site_name: Manuel Ethos
 docs_dir: docs
+
+# Repo link in the header + per-page "Edit this page" button. Each language is
+# served from docs/<locale>/ (a link to its real source folder), so the raw
+# edit_url would point at a path that doesn't exist - forge/mkdocs_hooks.py
+# rewrites it to the real file, and drops it for generated languages (English).
+repo_url: https://github.com/FrSkyRC/ethos-manual
+repo_name: FrSkyRC/ethos-manual
+edit_uri: edit/26.1/
+hooks:
+  - forge/mkdocs_hooks.py
 # The 4 blocks below, each between a "GENERATED:" marker pair, are rewritten
 # by forge/mkdocs.py from its LANGUAGES table + whichever of those already
 # have a docs/<locale> set up (i.e. have a SUMMARY.md) - re-run it after
 # adding/removing a language, rather than hand-editing these blocks (they'll
 # just get overwritten). Everything else in this file is untouched.
 extra_css:
-  # BEGIN GENERATED: EXTRA_CSS
-  - fr/extra.css
-  # END GENERATED: EXTRA_CSS
+  - extra.css
 exclude_docs: |
   # BEGIN GENERATED: EXCLUDE_DOCS
   fr/forge/
@@ -32,19 +40,21 @@ nav:
 theme:
   name: material
   custom_dir: overrides
+  # forge/mkdocs.py copies forge/favicon.ico into docs/.
+  favicon: favicon.ico
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: indigo
       toggle:
         icon: material/brightness-7
-        name: Passer au thème sombre / Switch to dark mode
+        name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: indigo
       toggle:
         icon: material/brightness-4
-        name: Passer au thème clair / Switch to light mode
+        name: Switch to light mode
   features:
     - navigation.sections
     - navigation.top
@@ -93,6 +103,9 @@ plugins:
       # editing SUMMARY.md. See that script's docstring for why.
       nav_file: SUMMARY.nav.md
   - section-index
+
+extra_css:
+  - extra.css
 
 markdown_extensions:
   - admonition

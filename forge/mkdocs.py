@@ -7,10 +7,11 @@ english/markdown/SUMMARY.md, as forge/odt_to_markdown.py --summary
 produces) - (1) creates docs/<locale>, a link to wherever that SUMMARY.md
 lives, so mkdocs.yml's docs_dir can be a proper child directory of the
 config file, (2) regenerates SUMMARY.nav.md there, the file
-mkdocs-literate-nav actually reads, and (3) rewrites mkdocs.yml's generated
-blocks (extra_css, exclude_docs, nav, plugins.i18n.languages) to match
-whichever languages are actually set up. Re-run after editing a SUMMARY.md,
-or after adding/removing a language.
+mkdocs-literate-nav actually reads, (3) copies the shared build assets
+(forge/extra.css, forge/favicon.ico) into docs/, and (4) rewrites mkdocs.yml's
+generated blocks (extra_css, exclude_docs, nav, plugins.i18n.languages) to
+match whichever languages are actually set up. Re-run after editing a
+SUMMARY.md, or after adding/removing a language.
 
 --- Why docs/<locale>, not docs/<language folder name> ---
 mkdocs.yml uses the mkdocs-static-i18n plugin (docs_structure: folder) to
@@ -65,12 +66,22 @@ Example:
 import argparse
 import os
 import re
+import shutil
 import subprocess
 import sys
 
-REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+FORGE_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.dirname(FORGE_DIR)
 DOCS_DIR = os.path.join(REPO_ROOT, "docs")
 MKDOCS_YML = os.path.join(REPO_ROOT, "mkdocs.yml")
+
+# Static files bundled with the build, copied into docs/ (the docs_dir) so
+# every language picks them up: extra.css (brand colors + nav tweaks, also
+# referenced from mkdocs.yml's generated extra_css block - a language may
+# still add its own docs/<locale>/extra.css on top) and favicon.ico (wired in
+# via theme.favicon).
+SHARED_ASSETS = ("extra.css", "favicon.ico")
+SHARED_CSS = os.path.join(FORGE_DIR, "extra.css")
 
 # Top-level language folder name -> its metadata. `locale` is required by
 # mkdocs-static-i18n's docs_structure: folder (see mkdocs.yml) and must be
@@ -113,6 +124,17 @@ def find_docs_root(name):
         if os.path.isfile(os.path.join(REPO_ROOT, docs_root, "SUMMARY.md")):
             return docs_root
     return None
+
+
+def copy_shared_assets():
+    """Copies the SHARED_ASSETS from forge/ into docs/ (the docs_dir) so every
+    language picks them up."""
+    os.makedirs(DOCS_DIR, exist_ok=True)
+    for name in SHARED_ASSETS:
+        src = os.path.join(FORGE_DIR, name)
+        if os.path.isfile(src):
+            shutil.copyfile(src, os.path.join(DOCS_DIR, name))
+            print(f"Copied forge/{name} -> docs/{name}")
 
 
 def link_locale(locale, docs_root):
@@ -188,11 +210,9 @@ def update_mkdocs_yml(languages):
     with open(MKDOCS_YML, encoding="utf-8") as f:
         content = f.read()
 
-    extra_css, exclude_docs, nav, lang_lines = [], [], [], []
+    exclude_docs, nav, lang_lines = [], [], []
     for name, meta, docs_root in languages:
         locale = meta["locale"]
-        if os.path.isfile(os.path.join(REPO_ROOT, docs_root, "extra.css")):
-            extra_css.append(f"- {locale}/extra.css")
         exclude_docs += [f"{locale}/forge/", f"{locale}/SUMMARY.md", f"{locale}/SUMMARY.nav.md"]
         nav.append(f"- {locale.capitalize()}: {locale}/")
 
@@ -206,7 +226,6 @@ def update_mkdocs_yml(languages):
         if "site_description" in meta:
             lang_lines.append(f"  site_description: {meta['site_description']}")
 
-    content = replace_block(content, "EXTRA_CSS", extra_css)
     content = replace_block(content, "EXCLUDE_DOCS", exclude_docs)
     content = replace_block(content, "NAV", nav)
     content = replace_block(content, "LANGUAGES", lang_lines)
@@ -230,6 +249,8 @@ def main():
         found = [name for name in LANGUAGES if setup_language(name)]
         if not found:
             print("No language folder with a SUMMARY.md found - nothing to set up.")
+
+    copy_shared_assets()
 
     languages = discovered_languages()
     if languages:
