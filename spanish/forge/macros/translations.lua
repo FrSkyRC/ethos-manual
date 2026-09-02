@@ -10,9 +10,22 @@ TRANSLATIONS = {
   FlapsHalf = "Flaps Half",
   -- in Timers
   BattTimer = "BattTimer",
-  TimerFilePosition = 11, -- position of "toùer-1-elapsed" wav file in Model / Timer
+  Timer1FilePosition = 228, -- position of "timer-1-elapsed" wav file
+  Timer2FilePosition = 231, -- position of "timer-2-elapsed" wav file
   UpTest = "UpTest",
   -- in 'How to configure a butterfly (aka Crow) mix'
+    Crowdb = "Crowdb",
   FlapOffset = "FlapOffset",
   EleComp = "EleComp",
+    EleCompAdj = "EleCompAdj",
+  -- in Model / SF
+  VFRlowFilePosition = 250,  -- position of "vfr-low"
+    -- How to low batt
+  BattLow = "BattLow",
+  -- in 'How-to-consumption'
+  delta200mAh = "delta200mAh",
+  BattLow = "BattLow",
+  -- Telemetry
+  MaxPower = "MaxPower",
+  SubtrExample = "SubtrExample",
 }

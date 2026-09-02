@@ -13,16 +13,19 @@ TRANSLATIONS = {
   Timer1FilePosition = 11, -- position of "Atterissage" wav file in Model / Timer
   Timer2FilePosition = 11, -- position of "Atterissage" wav file in Model / Timer
   UpTest = "Chrono Gaz",
-  -- Model / SF
-  VFRlowFilePosition = 250,  -- position of "vfr-low"
   -- How to configure a butterfly (aka Crow) mix
   Crowdb = "Zone morte",
   FlapOffset = "Decalage Volets",
   EleComp = "Correct.Prof",
   EleCompAdj = "Correct.Prof.X",
+    -- Model / SF
+  VFRlowFilePosition = 250,  -- position of "vfr-low"
   -- How to low batt
   BattLow = "BattLow",
   -- How to consumption
   delta200mAh = "delta200mAh",
   BattLow = "BattLow",
+    -- Telemetry
+  MaxPower = "MaxPower",
+  SubtrExample = "SubtrExample",
 }
