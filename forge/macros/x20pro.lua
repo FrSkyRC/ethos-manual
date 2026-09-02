@@ -18,7 +18,7 @@ simulator.pressKey(KEY_RTN) -- back to system menu
 -- sys general
 simulator.turnRotaryEncoder(3) -- scroll to General 
 simulator.pressKey(KEY_ENTER) -- selected
-simulator.turnRotaryEncoder(-13)
+simulator.turnRotaryEncoder(-14) -- scroll back to storage
 simulator.screenshot("/screenshots/system-general-storage.png")
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
