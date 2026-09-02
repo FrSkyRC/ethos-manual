@@ -92,18 +92,18 @@ SHARED_CSS = os.path.join(FORGE_DIR, "extra.css")
 # new language gets its own SUMMARY.md - no other change needed, re-running
 # this script picks it up in docs/ *and* in mkdocs.yml.
 LANGUAGES = {
-    "french": {
-        "locale": "fr",
-        "name": "Français",
-        "site_name": "Manuel Ethos",
-        "site_description": "Documentation utilisateur de l'OS Ethos (FrSky)",
-    },
     "english": {
         "locale": "en",
         "name": "English",
         "default": True,
         "site_name": "Ethos Manual",
         "site_description": "Ethos OS user documentation (FrSky)",
+    },
+    "french": {
+        "locale": "fr",
+        "name": "Français",
+        "site_name": "Manuel Ethos",
+        "site_description": "Documentation utilisateur de l'OS Ethos (FrSky)",
     },
     "german": {"locale": "de", "name": "Deutsch"},
     "italian": {"locale": "it", "name": "Italiano"},
@@ -113,7 +113,7 @@ LANGUAGES = {
 
 # Candidate subpaths (relative to a language's top-level folder) that might
 # hold its own SUMMARY.md, checked in this order.
-DOCS_ROOT_CANDIDATES = ("", "markdown")
+DOCS_ROOT_CANDIDATES = ("markdown", "")
 
 
 def find_docs_root(name):

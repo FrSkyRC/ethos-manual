@@ -8,10 +8,14 @@ simulator.resetSwitches() -- reset all switches
 
 dofile("translations.lua")
 
-function translate(text)
+-- default (optional): value returned when `text` has no translation. When
+-- nil (the default), an untranslated `text` is returned as-is, as before.
+function translate(text, default)
   local entry = TRANSLATIONS[text]
   if entry then
     return entry
+  elseif default ~= nil then
+    return default
   else
     return text
   end

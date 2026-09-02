@@ -74,7 +74,7 @@ simulator.pressKey(KEY_ENTER) -- open wav file list
 --simulator.turnRotaryEncoder(-9) -- select vfrlow
 --simulator.turnRotaryEncoder(1)
 --simulator.turnRotaryEncoder(3) -- scroll to vfr low
-simulator.turnRotaryEncoder(translate("VFRlowFilePosition")) -- scroll to vfr-low.wav
+simulator.turnRotaryEncoder(translate("VFRlowFilePosition", 250)) -- scroll to vfr-low.wav
 simulator.pressKey(KEY_ENTER) -- y
 simulator.screenshot("/screenshots/model-sf-play-audio-add-play-file.png")
 simulator.pressKey(KEY_RTN) -- deselect

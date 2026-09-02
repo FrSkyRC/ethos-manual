@@ -38,7 +38,7 @@ simulator.enterText(translate('Multirotor'))
 simulator.pressKey(KEY_RTN)
 simulator.turnRotaryEncoder(1) -- scroll to 'OK'
 simulator.pressKey(KEY_ENTER)
-simulator.touch(translate('MultirotorPosition'), 81) -- tap on Multirotor to open folder options
+simulator.touch(translate('MultirotorPosition', 490), 81) -- tap on Multirotor to open folder options
 simulator.screenshot("/screenshots/model-modelselect-folder-options.png")
 simulator.pressKey(KEY_RTN) -- exit options
 
