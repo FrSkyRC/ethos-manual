@@ -206,9 +206,13 @@ simulator.turnRotaryEncoder(1) -- scroll to often
 simulator.screenshot("/screenshots/system-general-audio-modes.png")
 simulator.pressKey(KEY_RTN) -- close the dialog
 -- -- bluetooth
-simulator.turnRotaryEncoder(7) -- scroll to end of BT
-simulator.turnRotaryEncoder(-6) -- scroll back to BT
+--simulator.turnRotaryEncoder(7) -- scroll to end of BT
+--simulator.turnRotaryEncoder(-6) -- scroll back to BT
+simulator.turnRotaryEncoder(1) -- scroll to BT
 simulator.pressKey(KEY_ENTER) -- enable BT
+simulator.pressKey(KEY_ENTER) -- yes to continue switching from file t/f
+simulator.turnRotaryEncoder(3) -- scroll to end of BT
+simulator.turnRotaryEncoder(-3) -- scroll back to BT
 simulator.sleep(1)
 simulator.screenshot("/screenshots/system-general-audio-bluetooth-enable.png")
 simulator.turnRotaryEncoder(2) -- scroll to BT search
