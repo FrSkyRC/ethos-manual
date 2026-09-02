@@ -23,4 +23,7 @@ TRANSLATIONS = {
   -- in 'How-to-consumption'
   delta200mAh = "delta200mAh",
   BattLow = "BattLow",
+  -- Telemetry
+  MaxPower = "MaxPower",
+  SubtrExample = "SubtrExample",
 }
