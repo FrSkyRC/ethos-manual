@@ -1,13 +1,13 @@
 TRANSLATIONS = {
   -- in Model / Select
-  Airplane = "Airplane",
-  Glider = "Glider",
-  Heli = "Heli",
-  Multirotor = "Multirotor",
+  Airplane = "Aereo",
+  Glider = "Aliante",
+  Heli = "Elicottero",
+  Multirotor = "Multirotore",
   MultirotorPosition = 490, -- position of "Multirotor" folder in Model / Select
   -- in Flight Modes
-  FlapsFull = "Flaps Full",
-  FlapsHalf = "Flaps Half",
+  FlapsFull = "Flaps 100%",
+  FlapsHalf = "Flaps 50%",
   -- in Timers
   BattTimer = "BattTimer",
   Timer1FilePosition = 228, -- position of "timer-1-elapsed" wav file
@@ -16,18 +16,18 @@ TRANSLATIONS = {
   -- in 'How to configure a butterfly (aka Crow) mix'
   Crowdb = "Crowdb",
   FlapOffset = "FlapOffset",
-  EleComp = "EleComp",
-    EleCompAdj = "EleCompAdj",
+  EleComp = "CompEle",
+    EleCompAdj = "CompEleMod",
   -- in Model / SF
   VFRlowFilePosition = 250,  -- position of "vfr-low"
     -- How to low batt
-  BattLow = "BattLow",
+  BattLow = "BattBassa",
   -- in 'How-to-consumption'
   delta200mAh = "delta200mAh",
-  BattLow = "BattLow",
+  BattLow = "BattBassa",
   -- Telemetry
-  MaxPower = "MaxPower",
-  SubtrExample = "SubtrExample",
+  MaxPower = "PotenzaMax",
+  SubtrExample = "EsempioSubtr",
     -- Basic Example
-  FWexample = "FWexample",
+  FWexample = "EsempioFW",
 }
