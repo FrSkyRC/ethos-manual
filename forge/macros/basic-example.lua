@@ -57,7 +57,7 @@ simulator.touch(757, 303) --p
 simulator.touch(713, 350) --l
 simulator.touch(200, 300) --e
 ]]--
-simulator.enterText(translate('FWexample)'))
+simulator.enterText(translate('FWexample'))
 simulator.touch(738, 449) --ENT
 simulator.screenshot("/screenshots/tut-fw-eg-wiz-name.png")
 simulator.pressKey(KEY_PAGE) --finish model
