@@ -23,6 +23,23 @@ simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- back to main menu
+-- set screen lock on
+simulator.pressKey(KEY_MDL) -- open model menu
+simulator.pressKey(KEY_PAGE) -- 2nd page
+simulator.turnRotaryEncoder(4) -- scroll to sf
+simulator.pressKey(KEY_ENTER) -- open sf
+simulator.turnRotaryEncoder(2) -- scroll to lockscreen
+simulator.pressKey(KEY_ENTER) -- open
+simulator.turnRotaryEncoder(1) -- scroll to edit
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(2) -- scroll to enable
+simulator.pressKey(KEY_ENTER) -- y
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
 simulator.screenshot("/screenshots/topbar.png", {x=0, y=0, w=800, h=90}) -- Top bar
 simulator.screenshot("/screenshots/bottombar.png", {x=0, y=410, w=800, h=70})
 --simulator.touch(510, 33)
