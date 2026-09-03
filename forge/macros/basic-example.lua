@@ -45,6 +45,7 @@ simulator.screenshot("/screenshots/tut-fw-eg-wiz-ch-reassign.png")
 simulator.pressKey(KEY_PAGE)
 simulator.turnRotaryEncoder(1) --scroll to name
 simulator.pressKey(KEY_ENTER)
+--[[
 simulator.touch(316, 356) --F
 simulator.touch(123, 299) --W
 simulator.touch(67, 406) --shift
@@ -55,6 +56,8 @@ simulator.touch(640, 403) --m
 simulator.touch(757, 303) --p
 simulator.touch(713, 350) --l
 simulator.touch(200, 300) --e
+]]--
+simulator.enterText(translate('FWexample)'))
 simulator.touch(738, 449) --ENT
 simulator.screenshot("/screenshots/tut-fw-eg-wiz-name.png")
 simulator.pressKey(KEY_PAGE) --finish model
@@ -323,7 +326,7 @@ simulator.screenshot("/screenshots/tut-fw-eg-mixes-thr-cut.png")
 simulator.turnRotaryEncoder(2) --  scroll to Sticky
 simulator.pressKey(KEY_ENTER) -- set Sticky ON
 simulator.turnRotaryEncoder(-3) -- move cursor off thr cut to allow sim to execute changes
-simulator.sleep(1) -- wait for sim
+simulator.sleep(2) -- wait for sim
 simulator.turnRotaryEncoder(3) -- scroll back to Sticky
 simulator.screenshot("/screenshots/tut-fw-eg-mixes-thr-cut-sticky-on.png")
 simulator.pressKey(KEY_ENTER) -- set Sticky Off
