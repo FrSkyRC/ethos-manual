@@ -28,4 +28,6 @@ TRANSLATIONS = {
     -- Telemetry
   MaxPower = "MaxPower",
   SubtrExample = "SubtrExample",
+    -- Basic Example
+  FWexample = "FWexample",
 }
