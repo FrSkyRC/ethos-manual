@@ -40,6 +40,27 @@ simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
 simulator.pressKey(KEY_RTN)
+-- set master trainer
+simulator.pressKey(KEY_MDL) -- open model menu
+simulator.pressKey(KEY_PAGE) -- 2nd page
+simulator.turnRotaryEncoder(7) -- scroll to trainer
+simulator.pressKey(KEY_ENTER) -- open trainer
+simulator.turnRotaryEncoder(1) -- scroll to add trainer
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(1) -- scroll to cable mode
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(2) -- scroll to mode
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(1) -- scroll to master
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(1) -- scroll to active cond
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(2) -- scroll to always on
+simulator.pressKey(KEY_ENTER) -- y
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN)
 simulator.screenshot("/screenshots/topbar.png", {x=0, y=0, w=800, h=90}) -- Top bar
 simulator.screenshot("/screenshots/bottombar.png", {x=0, y=410, w=800, h=70})
 --simulator.touch(510, 33)
