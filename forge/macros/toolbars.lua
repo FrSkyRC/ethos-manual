@@ -7,6 +7,22 @@ simulator.loadModel("topbar.bin")
 simulator.pressKey(KEY_ENTER)
 simulator.connectUsb()
 simulator.pressKey(KEY_RTN) -- we cancel the USB popup without choosing anything
+-- set up race mode
+simulator.pressKey(KEY_MDL) -- open model menu
+simulator.turnRotaryEncoder(8) -- scroll to RF
+simulator.pressKey(KEY_ENTER) -- open RF
+simulator.turnRotaryEncoder(7) -- scroll to ch range upper
+simulator.pressKey(KEY_ENTER) -- edit
+simulator.turnRotaryEncoder(-1) -- reduce to CH8
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(1) -- scroll to racing mode
+simulator.pressKey(KEY_ENTER) -- edit 
+simulator.turnRotaryEncoder(2) -- scroll to always on
+simulator.pressKey(KEY_ENTER) -- y
+simulator.pressKey(KEY_RTN) -- deselect
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN) -- deselect
+simulator.pressKey(KEY_RTN) -- back to main menu
 simulator.screenshot("/screenshots/topbar.png", {x=0, y=0, w=800, h=90}) -- Top bar
 simulator.screenshot("/screenshots/bottombar.png", {x=0, y=410, w=800, h=70})
 --simulator.touch(510, 33)
