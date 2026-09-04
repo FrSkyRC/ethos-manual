@@ -1,33 +1,33 @@
 TRANSLATIONS = {
   -- in Model / Select
-  Airplane = "Airplane",
-  Glider = "Glider",
+  Airplane = "Avión",
+  Glider = "Planeador",
   Heli = "Heli",
   Multirotor = "Multirotor",
-  MultirotorPosition = 490, -- position of "Multirotor" folder in Model / Select
+  MultirotorPosition = 490, -- posición de la carpeta "Multirotor" en Model / Select
   -- in Flight Modes
-  FlapsFull = "Flaps Full",
-  FlapsHalf = "Flaps Half",
+  FlapsFull = "Flaps abajo",
+  FlapsHalf = "Flaps medio",
   -- in Timers
-  BattTimer = "BattTimer",
-  Timer1FilePosition = 228, -- position of "timer-1-elapsed" wav file
-  Timer2FilePosition = 231, -- position of "timer-2-elapsed" wav file
+  BattTimer = "Crono Batería",
+  Timer1FilePosition = 228, -- posición del archivo wav "timer-1-elapsed"
+  Timer2FilePosition = 231, -- posición del archivo wav "timer-2-elapsed"
   UpTest = "UpTest",
   -- in 'How to configure a butterfly (aka Crow) mix'
     Crowdb = "Crowdb",
-  FlapOffset = "FlapOffset",
-  EleComp = "EleComp",
-    EleCompAdj = "EleCompAdj",
+  FlapOffset = "Offset de Flap",
+  EleComp = "CompElevr",
+    EleCompAdj = "CompEleAdj",
   -- in Model / SF
-  VFRlowFilePosition = 250,  -- position of "vfr-low"
+  VFRlowFilePosition = 250,  -- posición de "vfr-low"
     -- How to low batt
-  BattLow = "BattLow",
+  BattLow = "Batería baja",
   -- in 'How-to-consumption'
   delta200mAh = "delta200mAh",
-  BattLow = "BattLow",
+  BattLow = "Batería baja",
   -- Telemetry
-  MaxPower = "MaxPower",
-  SubtrExample = "SubtrExample",
+  MaxPower = "Max Potencia",
+  SubtrExample = "Ejemplo Resta",
     -- Basic Example
-  FWexample = "FWexample",
+  FWexample = "Ejemplo FW",
 }
