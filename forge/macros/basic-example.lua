@@ -326,7 +326,7 @@ simulator.screenshot("/screenshots/tut-fw-eg-mixes-thr-cut.png")
 simulator.turnRotaryEncoder(2) --  scroll to Sticky
 simulator.pressKey(KEY_ENTER) -- set Sticky ON
 simulator.turnRotaryEncoder(-3) -- move cursor off thr cut to allow sim to execute changes
-simulator.sleep(2) -- wait for sim
+simulator.sleep(3) -- wait for sim
 simulator.turnRotaryEncoder(3) -- scroll back to Sticky
 simulator.screenshot("/screenshots/tut-fw-eg-mixes-thr-cut-sticky-on.png")
 simulator.pressKey(KEY_ENTER) -- set Sticky Off
