@@ -76,7 +76,7 @@ X20S_MACROS = [
     "how-to-in-flight-comp.lua", # how to 10
     "trainer-take-back.lua", # how to 11
     "how-to-gear-seq.lua", # how to 13
-    # "model-lua.lua",
+    "model-lua.lua",
     # system
     "system-menu.lua",
     # ui
