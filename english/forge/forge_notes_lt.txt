@@ -17,3 +17,12 @@ EN master
 
 Todo
 Run the above and accept.
+
+
+
+Notes from Bertrand
+It reloads the angular application (the nutshell)
+The angular application downloads them the WASM
+So ... 2 parts:
+The nutshell and the WASM
+Both discuss with a common protocol, and the WASM first tells to the angular shell what he is able to do (i.e. execute a lua file, record a macro etc.)
