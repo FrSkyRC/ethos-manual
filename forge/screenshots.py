@@ -48,7 +48,6 @@ RUN_WASM_URL = "https://raw.githubusercontent.com/FrSkyRC/ethos-tools/main/simul
 RELEASE_ASSET_URL = "https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases/download/{release}/{asset}"
 
 X20S_MACROS = [
-    "model-select.lua",
     "model-edit.lua",
     "model-fm.lua",
     "model-mixes.lua",
@@ -82,8 +81,10 @@ X20S_MACROS = [
     # ui
     "user-interface.lua",
     "mainview.lua",
-    # this must be last due to the Lock SF in topbar.bin
     "telemetry.lua",
+    # model-select must be 2nd to last because it creates model category folders
+    "model-select.lua",
+    # this must be last due to the Lock SF in topbar.bin
     "toolbars.lua",
 ]
 
