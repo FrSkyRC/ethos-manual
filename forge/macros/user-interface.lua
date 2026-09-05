@@ -35,17 +35,17 @@ simulator.turnRotaryEncoder(2) -- Edit entry in menu
 simulator.pressKey(KEY_ENTER) -- First timer page
 simulator.turnRotaryEncoder(1) -- Cursor on "Name"
 simulator.pressKey(KEY_ENTER) -- Edition of "Name"
-simulator.pressKey(PAGE) -- delete chars
-simulator.pressKey(PAGE) -- delete chars
-simulator.pressKey(PAGE) -- delete chars
-simulator.pressKey(PAGE) -- delete chars
-simulator.pressKey(PAGE) -- delete chars
-simulator.pressKey(PAGE) -- delete chars
-simulator.pressKey(PAGE) -- delete chars
-simulator.pressKey(PAGE) -- delete chars
-simulator.pressKey(PAGE) -- delete chars
-simulator.pressKey(PAGE) -- delete chars
-simulator.pressKey(PAGE) -- delete chars
+simulator.pressKey(KEY_PAGE) -- delete chars
+simulator.pressKey(KEY_PAGE) -- delete chars
+simulator.pressKey(KEY_PAGE) -- delete chars
+simulator.pressKey(KEY_PAGE) -- delete chars
+simulator.pressKey(KEY_PAGE) -- delete chars
+simulator.pressKey(KEY_PAGE) -- delete chars
+simulator.pressKey(KEY_PAGE) -- delete chars
+simulator.pressKey(KEY_PAGE) -- delete chars
+simulator.pressKey(KEY_PAGE) -- delete chars
+simulator.pressKey(KEY_PAGE) -- delete chars
+simulator.pressKey(KEY_PAGE) -- delete chars
 simulator.enterText(translate('TimerName'))
 simulator.touch(64, 407) -- Switch to lowercase
 simulator.screenshot("/screenshots/keyboard-text-azerty.png")
