@@ -30,5 +30,5 @@ TRANSLATIONS = {
   -- Basic Example
   FWexample = "FWexample",
   -- X20Pro
-  V F R low = "V F R low",
+  "V F R low" = "V F R low",
 }
