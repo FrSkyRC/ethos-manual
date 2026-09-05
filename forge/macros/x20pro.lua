@@ -94,8 +94,8 @@ simulator.pressKey(KEY_ENTER)
 --
 simulator.turnRotaryEncoder(1) -- scroll to text
 simulator.pressKey(KEY_ENTER)
-
-simulator.enterText("V F R low")
+--simulator.enterText("V F R low")
+simulator.enterText(translate('VFRlow'))
 simulator.pressKey(KEY_RTN) -- accept name
 
 simulator.screenshot("/screenshots/model-sf-x20pro-play-text.png")
