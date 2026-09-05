@@ -172,7 +172,7 @@ simulator.pressKey(KEY_RTN) -- accept name
 simulator.turnRotaryEncoder(3) -- scroll to source
 simulator.pressKey(KEY_ENTER) -- 
 -- select special value 0
-simulator.turnRotaryEncoder(11) --scroll to special value
+simulator.turnRotaryEncoder(13) --scroll to special value
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) --scroll to 0
 simulator.pressKey(KEY_ENTER)
