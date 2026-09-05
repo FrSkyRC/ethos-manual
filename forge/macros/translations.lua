@@ -31,4 +31,6 @@ TRANSLATIONS = {
   FWexample = "FWexample",
   -- X20Pro
   VFRlow = "V F R low",
+  -- in User Interface
+  TimerName = "BattTimer"
 }
