@@ -5,6 +5,7 @@ TRANSLATIONS = {
   Heli = "Elicottero",
   Multirotor = "Multirotore",
   MultirotorPosition = 490, -- position of "Multirotor" folder in Model / Select
+  GliderFolderPosition = 2, -- position of glider folder in category dropdown
   -- in Flight Modes
   FlapsFull = "Flaps 100%",
   FlapsHalf = "Flaps 50%",

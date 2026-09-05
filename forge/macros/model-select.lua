@@ -63,7 +63,8 @@ simulator.pressKey(KEY_ENTER) -- open options
 simulator.turnRotaryEncoder(3) -- scroll to change folder
 simulator.screenshot("/screenshots/model-modelselect-folder-change-select.png")
 simulator.pressKey(KEY_ENTER) -- --y
-simulator.turnRotaryEncoder(2) -- scroll to 'glider'
+--simulator.turnRotaryEncoder(2) -- scroll to 'glider'
+simulator.turnRotaryEncoder(translate('GliderFolderPosition', 2)) -- scroll to 'glider' in category drop-down
 simulator.screenshot("/screenshots/model-modelselect-folder-change-glider.png")
 -- simulator.pressKey(KEY_ENTER) -- don't actually move 
 -- simulator.touch(84, 80)
