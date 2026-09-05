@@ -21,8 +21,6 @@ TRANSLATIONS = {
   EleCompAdj = "Höhenkomp.Adj",
   -- in Model / SF
   VFRlowFilePosition = 250,  -- Position von „VFR-niedrig“
-      -- How to low batt
-  BattLow = "BattLow",
   -- in 'How-to-consumption'
   delta200mAh = "delta200mAh",
   BattLow = "BattLow",
@@ -31,4 +29,8 @@ TRANSLATIONS = {
   SubtrExample = "SubtrExample",
     -- Basic Example
   FWexample = "FWexample",
+    -- X20Pro
+  VFRlow = "V F R low",
+  -- in User Interface
+  TimerName = "BattTimer"
 }
