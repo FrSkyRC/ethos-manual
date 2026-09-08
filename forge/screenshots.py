@@ -64,6 +64,7 @@ X20S_MACROS = [
     "model-curves.lua",
     "model-vars.lua",
     "model-trainer.lua",
+    "model-glasses.lua",
     "model-blanks.lua",
     "display.lua",
     "basic-example.lua",
