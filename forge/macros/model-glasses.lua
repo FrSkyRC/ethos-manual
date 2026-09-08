@@ -67,7 +67,7 @@ simulator.pressKey(KEY_ENTER) -- y
 --simulator.screenshot("/screenshots/model-glasses-display-widget-1-value.png")
 simulator.turnRotaryEncoder(1) -- scroll to source
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(10) -- scroll to timers
+simulator.turnRotaryEncoder(11) -- scroll to timers
 simulator.pressKey(KEY_ENTER) -- select
 simulator.pressKey(KEY_ENTER) -- select timer 1
 simulator.screenshot("/screenshots/model-glasses-display-widget-1-edit-timer1.png")
@@ -86,7 +86,7 @@ simulator.turnRotaryEncoder(1) -- scroll to value
 simulator.pressKey(KEY_ENTER) -- edit
 simulator.turnRotaryEncoder(1) -- scroll to source
 simulator.pressKey(KEY_ENTER) --edit
-simulator.turnRotaryEncoder(11) -- scroll to telem
+simulator.turnRotaryEncoder(12) -- scroll to telem
 simulator.pressKey(KEY_ENTER) -- select
 simulator.turnRotaryEncoder(5) -- scroll to vfr 2.4g
 simulator.pressKey(KEY_ENTER) -- select
