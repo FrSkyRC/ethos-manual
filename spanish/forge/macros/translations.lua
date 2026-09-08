@@ -30,7 +30,7 @@ TRANSLATIONS = {
     -- Basic Example
   FWexample = "Ejemplo FW",
     -- X20Pro
-  VFRlow = "V F R low",
+  VFRlow = "VFR Bajo",
   -- in User Interface
-  TimerName = "BattTimer"
+  TimerName = "Crono Batería"
 }
