@@ -57,7 +57,7 @@ X20S_MACROS = [
     "model-chview.lua",
     "model-timers.lua",
     "model-trims.lua",
-    # "model-rf.lua",
+    "model-rf.lua",
     "model-checklist.lua",
     "model-lsw.lua",
     "model-sf.lua",
