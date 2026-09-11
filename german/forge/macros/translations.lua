@@ -13,24 +13,24 @@ TRANSLATIONS = {
   BattTimer = "Akkulaufzeit",
   Timer1FilePosition = 228, -- Position der WAV-Datei „timer-1-elapsed“
   Timer2FilePosition = 231, -- Position der WAV-Datei „timer-2-elapsed“
-  UpTest = "UpTest",
+  UpTest = "AufwärtsTest",
   -- „So konfigurieren Sie eine Butterfly- (oder Crow-) Mischer“
   Crowdb = "Totzone",
   FlapOffset = "Klappenoffset",
   EleComp = "Höhenkomp.",
-  EleCompAdj = "Höhenkomp.Adj",
+  EleCompAdj = "Höhenkomp.Jus.",
   -- in Model / SF
   VFRlowFilePosition = 250,  -- Position von „VFR-niedrig“
   -- in 'How-to-consumption'
-  delta200mAh = "delta200mAh",
-  BattLow = "BattLow",
+  delta200mAh = "Delta200mAh",
+  BattLow = "AkkuSchwach",
   -- Telemetry
-  MaxPower = "MaxPower",
-  SubtrExample = "SubtrExample",
+  MaxPower = "MaxLeistung",
+  SubtrExample = "BeispielSubtr.",
     -- Basic Example
-  FWexample = "FWexample",
+  FWexample = "Beispielmodell",
     -- X20Pro
-  VFRlow = "V F R low",
+  VFRlow = "V F R niedrig",
   -- in User Interface
-  TimerName = "BattTimer"
+  TimerName = "Motorlaufzeit"
 }
