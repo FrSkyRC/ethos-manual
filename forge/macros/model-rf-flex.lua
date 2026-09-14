@@ -13,6 +13,7 @@ simulator.turnRotaryEncoder(1) -- scroll to state
 simulator.pressKey(KEY_ENTER) -- enable
 --simulator.turnRotaryEncoder(1) -- scroll to protocol
 simulator.turnRotaryEncoder(2) -- scroll to flex option
+simulator.screenshot("/screenshots/model-rf-flex.png")
 simulator.pressKey(KEY_ENTER) -- open
 simulator.screenshot("/screenshots/model-rf-flex-select-protocol.png")
 simulator.pressKey(KEY_ENTER) -- enabkle fcc
