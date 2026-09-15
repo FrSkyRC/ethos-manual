@@ -90,6 +90,7 @@ simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- exit
 --
 -- now do rx2
+simulator.sleep(4) -- wait 
 simulator.turnRotaryEncoder(-2) -- scroll back to to 900M enable
 simulator.pressKey(KEY_ENTER) -- enable 900M
 simulator.sleep(4) -- wait 
