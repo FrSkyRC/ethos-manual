@@ -11,9 +11,9 @@ simulator.pressKey(KEY_ENTER) -- open rf
 simulator.screenshot("/screenshots/model-rf-home.png")
 simulator.turnRotaryEncoder(2) -- scroll to internal module
 simulator.pressKey(KEY_ENTER) -- open int module 
-simulator.screenshot("/screenshots/model-rf-internal-module.png")
 simulator.turnRotaryEncoder(1) -- scroll to state
 simulator.pressKey(KEY_ENTER) -- turn on int module
+simulator.screenshot("/screenshots/model-rf-internal-module.png")
 simulator.turnRotaryEncoder(1) -- scroll to protocol
 simulator.pressKey(KEY_ENTER) -- open protocol menu
 simulator.screenshot("/screenshots/model-rf-protocol-select-access.png")
