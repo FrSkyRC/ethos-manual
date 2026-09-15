@@ -86,6 +86,7 @@ simulator.turnRotaryEncoder(5)
 simulator.screenshot("/screenshots/model-rf-access-rx1-flight-data-record-3.png")
 simulator.turnRotaryEncoder(7)
 simulator.screenshot("/screenshots/model-rf-access-rx1-flight-data-record-4.png")
+simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- exit
 --
 -- now do rx2
