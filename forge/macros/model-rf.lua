@@ -54,13 +54,12 @@ simulator.screenshot("/screenshots/model-rf-access-rx1-bound.png")
 --
 -- now do rx1 options etc
 simulator.pressKey(KEY_ENTER) -- open rx1 menu
-simulator.sleep(2) -- wait 
-simulator.turnRotaryEncoder(1) -- scroll to options
-simulator.screenshot("/screenshots/model-rf-access-rx1-menu.png")
-simulator.turnRotaryEncoder(3) -- scroll to share
+simulator.sleep(4) -- wait 
+simulator.turnRotaryEncoder(4) -- scroll to share
 simulator.screenshot("/screenshots/model-rf-access-rx1-share.png")
 simulator.turnRotaryEncoder(-3) -- scroll back to options
-simulator.sleep(3) -- wait 
+simulator.screenshot("/screenshots/model-rf-access-rx1-menu.png")
+simulator.sleep(4) -- wait 
 simulator.pressKey(KEY_ENTER) -- open options menu
 simulator.sleep(8) -- wait 
 simulator.screenshot("/screenshots/model-rf-access-rx1-options.png")
