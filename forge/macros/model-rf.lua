@@ -79,7 +79,13 @@ simulator.turnRotaryEncoder(2) -- scroll to data record
 simulator.screenshot("/screenshots/model-rf-access-rx1-flight-data-record-select.png")
 simulator.pressKey(KEY_ENTER) -- open data record
 simulator.sleep(2) -- wait 
-simulator.screenshot("/screenshots/model-rf-access-rx1-flight-data-record.png")
+simulator.screenshot("/screenshots/model-rf-access-rx1-flight-data-record-1.png")
+simulator.turnRotaryEncoder(3)
+simulator.screenshot("/screenshots/model-rf-access-rx1-flight-data-record-2.png")
+simulator.turnRotaryEncoder(5)
+simulator.screenshot("/screenshots/model-rf-access-rx1-flight-data-record-3.png")
+simulator.turnRotaryEncoder(7)
+simulator.screenshot("/screenshots/model-rf-access-rx1-flight-data-record-4.png")
 simulator.pressKey(KEY_RTN) -- exit
 --
 -- now do rx2
