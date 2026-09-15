@@ -208,11 +208,65 @@ simulator.screenshot("/screenshots/model-rf-td-register-registration-ok.png")
 simulator.pressKey(KEY_ENTER) -- accept
 simulator.turnRotaryEncoder(1) -- scroll to rx1
 simulator.screenshot("/screenshots/model-rf-td-rx1.png")
-simulator.pressKey(KEY_ENTER) -- commence bind
-simulator.screenshot("/screenshots/model-rf-td-rx1-bind-waiting-for-rx.png")
-simulator.sleep(4) -- wait 
-simulator.turnRotaryEncoder(1) -- scroll to SR10
-simulator.screenshot("/screenshots/model-rf-td-rx1-select-rx.png")
+--simulator.pressKey(KEY_ENTER) -- commence bind
+--simulator.screenshot("/screenshots/model-rf-td-rx1-bind-waiting-for-rx.png")
+--simulator.sleep(4) -- wait 
+--simulator.turnRotaryEncoder(1) -- scroll to SR10
+--simulator.screenshot("/screenshots/model-rf-td-rx1-select-rx.png")
 
 
 simulator.pressKey(KEY_RTN, 0.6) -- go home
+--
+--now do external module
+dofile("common.lua")
+
+simulator.loadModel("edge 540.bin")
+simulator.setAnalog(throttleStickIndex, -100)
+simulator.pressKey(KEY_ENTER) -- ack alerts
+simulator.pressKey(KEY_MDL) -- open model menu
+simulator.turnRotaryEncoder(8) -- scroll to rf
+simulator.pressKey(KEY_ENTER) -- open rf
+simulator.turnRotaryEncoder(3) -- scroll to external module
+simulator.pressKey(KEY_ENTER) -- enable
+simulator.turnRotaryEncoder(1) -- scroll to state
+simulator.pressKey(KEY_ENTER) -- enable
+simulator.screenshot("/screenshots/model-rf-external-module.png")
+simulator.turnRotaryEncoder(1) -- scroll to type
+simulator.pressKey(KEY_ENTER) -- open menu
+simulator.turnRotaryEncoder(-4) -- scroll back to xjt lite
+simulator.screenshot("/screenshots/model-rf-external-module-options.png")
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(8)
+simulator.turnRotaryEncoder(-7) -- move cursor
+simulator.screenshot("/screenshots/model-rf-external-module-xjt-lite.png")
+simulator.turnRotaryEncoder(1) -- scroll to protocol
+simulator.pressKey(KEY_ENTER) -- open
+simulator.screenshot("/screenshots/model-rf-external-module-xjt-lite-protocol-options.png")
+simulator.pressKey(KEY_RTN) -- exit options
+simulator.turnRotaryEncoder(-1) -- scroll back to type
+simulator.pressKey(KEY_ENTER) -- open menu
+simulator.turnRotaryEncoder(1) -- scroll to r9m lite
+simulator.pressKey(KEY_ENTER) -- y
+simulator.screenshot("/screenshots/model-rf-external-module-r9m-lite.png")
+simulator.turnRotaryEncoder(1) -- scroll to protocol
+simulator.pressKey(KEY_ENTER) -- open menu
+simulator.screenshot("/screenshots/model-rf-external-module-r9m-lite-protocol-options.png")
+simulator.pressKey(KEY_RTN) -- exit
+simulator.turnRotaryEncoder(-1) -- scroll back to type
+simulator.pressKey(KEY_ENTER) -- open menu
+simulator.turnRotaryEncoder(1) -- scroll to r9m lite access
+simulator.pressKey(KEY_ENTER) -- y
+simulator.screenshot("/screenshots/model-rf-external-module-r9m-lite-access.png")
+simulator.pressKey(KEY_ENTER) -- open menu
+simulator.turnRotaryEncoder(1) -- scroll to r9m lite pro access
+simulator.pressKey(KEY_ENTER) -- open menu
+simulator.screenshot("/screenshots/model-rf-external-module-r9m-lite-pro-access.png")
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(1) -- scroll to twin lite pro
+simulator.pressKey(KEY_ENTER) -- open menu
+simulator.screenshot("/screenshots/model-rf-external-module-twin-lite-pro.png")
+simulator.turnRotaryEncoder(1) -- scroll to protocol
+simulator.pressKey(KEY_ENTER) -- open menu
+simulator.screenshot("/screenshots/model-rf-external-module-twin-lite-pro-protocol-options.png")
+
+simulator.pressKey(KEY_RTN, 0.6)
