@@ -32,5 +32,6 @@ TRANSLATIONS = {
     -- X20Pro
   VFRlow = "V F R low",
   -- in User Interface
-  TimerName = "BattTimer"
+  TimerName = "BattTimer",
+  GearDoors = "Portes train",
 }

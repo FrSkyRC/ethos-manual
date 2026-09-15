@@ -32,5 +32,6 @@ TRANSLATIONS = {
     -- X20Pro
   VFRlow = "VFR Bajo",
   -- in User Interface
-  TimerName = "Crono Batería"
+  TimerName = "Crono Batería",
+  GearDoors = "Gear Doors",
 }
