@@ -207,16 +207,17 @@ simulator.screenshot("/screenshots/model-rf-td.png") -- in td mode
 simulator.turnRotaryEncoder(7) -- scroll to register
 --simulator.pressKey(KEY_ENTER) -- y
 simulator.screenshot("/screenshots/model-rf-td-register.png")
-simulator.pressKey(KEY_ENTER) -- y
+--simulator.pressKey(KEY_ENTER) -- y
 --simulator.screenshot("/screenshots/model-rf-td-register-waiting.png") -- still registered in sim so skip
 --simulator.sleep(8) -- wait  -- still registered in sim so skip
-simulator.screenshot("/screenshots/model-rf-td-register-rx-connected.png")
-simulator.sleep(6) -- wait 
-simulator.pressKey(KEY_ENTER)
-simulator.sleep(4) -- wait 
-simulator.screenshot("/screenshots/model-rf-td-register-registration-ok.png")
-simulator.pressKey(KEY_ENTER) -- accept
-simulator.turnRotaryEncoder(1) -- scroll to rx1
+--simulator.screenshot("/screenshots/model-rf-td-register-rx-connected.png")
+--simulator.sleep(6) -- wait 
+--simulator.pressKey(KEY_ENTER)
+--simulator.sleep(4) -- wait 
+--simulator.screenshot("/screenshots/model-rf-td-register-registration-ok.png")
+--simulator.pressKey(KEY_ENTER) -- accept
+simulator.turnRotaryEncoder(5) -- scroll to rx1
+simulator.turnRotaryEncoder(-4) -- scroll to rx1
 simulator.screenshot("/screenshots/model-rf-td-rx1.png")
 --simulator.pressKey(KEY_ENTER) -- commence bind
 --simulator.screenshot("/screenshots/model-rf-td-rx1-bind-waiting-for-rx.png")
