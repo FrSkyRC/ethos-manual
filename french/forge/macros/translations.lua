@@ -16,8 +16,8 @@ TRANSLATIONS = {
   UpTest = "Chrono Gaz",
   -- in 'How to configure a butterfly (aka Crow) mix'
   Crowdb = "Zone morte",
-  FlapOffset = "Decalage Volets",
-  EleComp = "Correct.Prof",
+  FlapOffset = "Décalage Volets",
+  EleComp = "Correct.Prof.",
   EleCompAdj = "Correct.Prof.X",
     -- in Model / SF
   VFRlowFilePosition = 250,  -- position of "vfr-low"
