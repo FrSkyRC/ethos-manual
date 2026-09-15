@@ -55,3 +55,11 @@ if system.getStickMode() == 1 then
     throttleStickIndex = 2
     elevatorStickIndex = 1
 end
+
+function simulatorSleep(duration)
+  while duration > 0 do
+    local sleepTime = math.min(duration, 1.0)
+    simulator.sleep(sleepTime)
+    duration = duration - sleepTime
+  end
+end
