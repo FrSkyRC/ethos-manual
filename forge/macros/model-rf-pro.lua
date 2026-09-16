@@ -36,4 +36,30 @@ simulator.turnRotaryEncoder(2)
 simulator.screenshot("/screenshots/model-rf-pro-900m-register-select.png")
 simulator.turnRotaryEncoder(1)
 simulator.screenshot("/screenshots/model-rf-pro-900m-rx1-select.png")
+simulator.pressKey(KEY_RTN)
+simulator.pressKey(KEY_RTN) -- exit rf
+--
+-- now do tw mode
+simulator.pressKey(KEY_ENTER) -- open rf
+simulator.turnRotaryEncoder(4) -- scroll to protocol
+simulator.pressKey(KEY_ENTER) -- open menu
+simulator.turnRotaryEncoder(2) -- scroll to tw
+simulator.screenshot("/screenshots/model-rf-pro-protocol-select-tw.png")
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(5)
+simulator.turnRotaryEncoder(-5) -- move cursor
+simulator.screenshot("/screenshots/model-rf-pro-protocol-tw.png")
+simulator.turnRotaryEncoder(4) -- scroll to antenna
+simulator.screenshot("/screenshots/model-rf-pro-tw-antenna.png")
+simulator.turnRotaryEncoder(1) -- scroll to 900m
+simulator.pressKey(KEY_ENTER) -- enable
+simulator.screenshot("/screenshots/model-rf-pro-tw-900m.png")
+simulator.pressKey(KEY_ENTER) -- disable
+simulator.pressKey(KEY_ENTER) -- confirm
+simulator.turnRotaryEncoder(8)
+simulator.turnRotaryEncoder(-5) -- move cursor
+simulator.screenshot("/screenshots/model-rf-pro-tw-register-select.png")
+simulator.turnRotaryEncoder(1) -- scroll to rx1
+simulator.screenshot("/screenshots/model-rf-pro-tw-rx1-select.png")
+
 simulator.pressKey(KEY_RTN, 0.6) -- go home
