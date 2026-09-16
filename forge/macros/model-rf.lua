@@ -279,5 +279,11 @@ simulator.screenshot("/screenshots/model-rf-external-module-twin-lite-pro.png")
 simulator.turnRotaryEncoder(1) -- scroll to protocol
 simulator.pressKey(KEY_ENTER) -- open menu
 simulator.screenshot("/screenshots/model-rf-external-module-twin-lite-pro-protocol-options.png")
-
+simulator.turnRotaryEncoder(3) -- scroll to tw mode
+simulator.screenshot("/screenshots/model-rf-external-module-twin-lite-pro-tw-mode-select.png")
+simulator.pressKey(KEY_ENTER) -- y
+simulator.turnRotaryEncoder(5)
+simulator.turnRotaryEncoder(-6)
+simulator.turnRotaryEncoder(1) -- move cursor
+simulator.screenshot("/screenshots/model-rf-external-module-twin-lite-pro-tw-mode.png")
 simulator.pressKey(KEY_RTN, 0.6)
