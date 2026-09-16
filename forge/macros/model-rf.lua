@@ -80,7 +80,7 @@ simulator.screenshot("/screenshots/model-rf-access-rx1-flight-data-record-select
 simulator.pressKey(KEY_ENTER) -- open data record
 simulator.sleep(2) -- wait 
 simulator.screenshot("/screenshots/model-rf-access-rx1-flight-data-record-1.png")
-simulator.sleep(3) -- wait 
+simulator.sleep(2) -- wait 
 simulator.turnRotaryEncoder(3)
 simulator.screenshot("/screenshots/model-rf-access-rx1-flight-data-record-2.png")
 simulator.sleep(2) -- wait 
