@@ -92,7 +92,7 @@ X20S_MACROS = [
 
 X20PRO_MACROS = [
     "x20pro.lua",
-    "model-rf-pro"
+    "model-rf-pro.lua"
 ]
 
 X18S_MACROS = [
