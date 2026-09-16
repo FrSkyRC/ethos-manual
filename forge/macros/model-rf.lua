@@ -29,7 +29,6 @@ simulator.pressKey(KEY_ENTER) -- y
 simulator.screenshot("/screenshots/model-rf-access-register-waiting.png")
 simulatorSleep(8) -- wait 
 simulator.screenshot("/screenshots/model-rf-access-register-rx-connected.png")
-simulatorSleep(6) -- wait 
 simulator.pressKey(KEY_ENTER)
 simulatorSleep(4) -- wait 
 simulator.screenshot("/screenshots/model-rf-access-register-registration-ok.png")
@@ -38,7 +37,7 @@ simulator.turnRotaryEncoder(1) -- scroll to rx1
 simulator.screenshot("/screenshots/model-rf-access-rx1.png")
 simulator.pressKey(KEY_ENTER) -- commence bind
 simulator.screenshot("/screenshots/model-rf-access-rx1-bind-waiting-for-rx.png")
-simulatorSleep(4) -- wait 
+simulatorSleep(5) -- wait 
 simulator.turnRotaryEncoder(1) -- scroll to SR10
 simulator.screenshot("/screenshots/model-rf-access-rx1-select-rx.png")
 simulator.turnRotaryEncoder(1) -- scroll to r9m
@@ -47,21 +46,20 @@ simulator.turnRotaryEncoder(-1) -- scroll back to rx1
 simulator.pressKey(KEY_ENTER) -- select rx
 simulatorSleep(4) -- wait 
 simulator.screenshot("/screenshots/model-rf-access-rx1-bind-ok.png")
-simulatorSleep(4) -- wait 
 -- simulator.screenshot("./screenshot15.png")
 simulator.pressKey(KEY_ENTER) -- accept binding
 simulator.screenshot("/screenshots/model-rf-access-rx1-bound.png")
 --
 -- now do rx1 options etc
 simulator.pressKey(KEY_ENTER) -- open rx1 menu
-simulator.sleep(4) -- wait 
+simulatorSleep(4) -- wait 
 simulator.turnRotaryEncoder(4) -- scroll to share
 simulator.screenshot("/screenshots/model-rf-access-rx1-share.png")
 simulator.turnRotaryEncoder(-3) -- scroll back to options
 simulator.screenshot("/screenshots/model-rf-access-rx1-menu.png")
-simulator.sleep(4) -- wait 
+simulatorSleep(4) -- wait 
 simulator.pressKey(KEY_ENTER) -- open options menu
-simulator.sleep(10) -- wait 
+simulatorSleep(10) -- wait 
 simulator.screenshot("/screenshots/model-rf-access-rx1-options.png")
 simulator.turnRotaryEncoder(4) -- scroll to telemetry port
 --simulator.screenshot("/screenshots/model-rf-access-rx1-telem-port-select.png")
@@ -78,37 +76,37 @@ simulator.pressKey(KEY_ENTER) -- open rx menu
 simulator.turnRotaryEncoder(2) -- scroll to data record
 simulator.screenshot("/screenshots/model-rf-access-rx1-flight-data-record-select.png")
 simulator.pressKey(KEY_ENTER) -- open data record
-simulator.sleep(2) -- wait 
+simulatorSleep(2) -- wait 
 simulator.screenshot("/screenshots/model-rf-access-rx1-flight-data-record-1.png")
-simulator.sleep(2) -- wait 
+simulatorSleep(2) -- wait 
 simulator.turnRotaryEncoder(4)
 simulator.screenshot("/screenshots/model-rf-access-rx1-flight-data-record-2.png")
-simulator.sleep(2) -- wait 
+simulatorSleep(2) -- wait 
 simulator.turnRotaryEncoder(2)
 simulator.screenshot("/screenshots/model-rf-access-rx1-flight-data-record-3.png")
-simulator.sleep(2) -- wait 
+simulatorSleep(2) -- wait 
 simulator.turnRotaryEncoder(2)
 simulator.screenshot("/screenshots/model-rf-access-rx1-flight-data-record-4.png")
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- exit
 --
 -- now do rx2
-simulator.sleep(4) -- wait 
+simulatorSleep(4) -- wait 
 simulator.turnRotaryEncoder(-2) -- scroll back to to 900M enable
 simulator.pressKey(KEY_ENTER) -- enable 900M
-simulator.sleep(4) -- wait 
+simulatorSleep(4) -- wait 
 simulator.turnRotaryEncoder(9) -- scroll fwd to expose screen
 simulator.turnRotaryEncoder(-9) -- scroll back to to 900M enable
 simulator.screenshot("/screenshots/model-rf-access-900M-enable.png")
 simulator.turnRotaryEncoder(5) -- scroll to rx2
 simulator.screenshot("/screenshots/model-rf-access-rx2.png")
 simulator.pressKey(KEY_ENTER) -- commence bind
-simulator.sleep(4) -- wait 
+simulatorSleep(4) -- wait 
 simulator.turnRotaryEncoder(2) -- scroll to r9mini
 simulator.pressKey(KEY_ENTER) -- commence bind
-simulator.sleep(4) -- wait 
+simulatorSleep(4) -- wait 
 simulator.screenshot("/screenshots/model-rf-access-rx2-bind-ok.png")
-simulator.sleep(4) -- wait 
+simulatorSleep(4) -- wait 
 -- simulator.screenshot("./screenshot15.png")
 simulator.pressKey(KEY_ENTER) -- accept binding
 simulator.screenshot("/screenshots/model-rf-access-rx2-bound.png")
@@ -209,11 +207,11 @@ simulator.turnRotaryEncoder(7) -- scroll to register
 simulator.screenshot("/screenshots/model-rf-td-register.png")
 --simulator.pressKey(KEY_ENTER) -- y
 --simulator.screenshot("/screenshots/model-rf-td-register-waiting.png") -- still registered in sim so skip
---simulator.sleep(8) -- wait  -- still registered in sim so skip
+--simulatorSleep(8) -- wait  -- still registered in sim so skip
 --simulator.screenshot("/screenshots/model-rf-td-register-rx-connected.png")
---simulator.sleep(6) -- wait 
+--simulatorSleep(6) -- wait 
 --simulator.pressKey(KEY_ENTER)
---simulator.sleep(4) -- wait 
+--simulatorSleep(4) -- wait 
 --simulator.screenshot("/screenshots/model-rf-td-register-registration-ok.png")
 --simulator.pressKey(KEY_ENTER) -- accept
 simulator.turnRotaryEncoder(5) -- scroll to rx1
@@ -221,7 +219,7 @@ simulator.turnRotaryEncoder(-4) -- scroll to rx1
 simulator.screenshot("/screenshots/model-rf-td-rx1.png")
 --simulator.pressKey(KEY_ENTER) -- commence bind
 --simulator.screenshot("/screenshots/model-rf-td-rx1-bind-waiting-for-rx.png")
---simulator.sleep(4) -- wait 
+--simulatorSleep(4) -- wait 
 --simulator.turnRotaryEncoder(1) -- scroll to SR10
 --simulator.screenshot("/screenshots/model-rf-td-rx1-select-rx.png")
 
