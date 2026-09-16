@@ -53,7 +53,10 @@ simulator.turnRotaryEncoder(4) -- scroll to antenna
 simulator.screenshot("/screenshots/model-rf-pro-tw-antenna.png")
 simulator.turnRotaryEncoder(1) -- scroll to 900m
 simulator.pressKey(KEY_ENTER) -- enable
+simulator.turnRotaryEncoder(8)
+simulator.turnRotaryEncoder(-2) -- move cursor to rx2
 simulator.screenshot("/screenshots/model-rf-pro-tw-900m.png")
+simulator.turnRotaryEncoder(-6) -- move cursor back to 900m
 simulator.pressKey(KEY_ENTER) -- disable
 simulator.pressKey(KEY_ENTER) -- confirm
 simulator.turnRotaryEncoder(8)
