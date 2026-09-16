@@ -34,4 +34,6 @@ simulator.turnRotaryEncoder(-7) -- move cursor
 simulator.screenshot("/screenshots/model-rf-pro-900m-enabled.png")
 simulator.turnRotaryEncoder(2)
 simulator.screenshot("/screenshots/model-rf-pro-900m-register-select.png")
+simulator.turnRotaryEncoder(1)
+simulator.screenshot("/screenshots/model-rf-pro-900m-rx1-select.png")
 simulator.pressKey(KEY_RTN, 0.6) -- go home
