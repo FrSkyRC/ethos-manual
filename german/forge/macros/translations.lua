@@ -33,5 +33,5 @@ TRANSLATIONS = {
   VFRlow = "V F R niedrig",
   -- in User Interface
   TimerName = "Motorlaufzeit",
-  GearDoors = "Gear Doors",
+  GearDoors = "Fahrwerksklappen",
 }
