@@ -61,7 +61,7 @@ simulator.turnRotaryEncoder(-3) -- scroll back to options
 simulator.screenshot("/screenshots/model-rf-access-rx1-menu.png")
 simulator.sleep(4) -- wait 
 simulator.pressKey(KEY_ENTER) -- open options menu
-simulator.sleep(8) -- wait 
+simulator.sleep(10) -- wait 
 simulator.screenshot("/screenshots/model-rf-access-rx1-options.png")
 simulator.turnRotaryEncoder(4) -- scroll to telemetry port
 --simulator.screenshot("/screenshots/model-rf-access-rx1-telem-port-select.png")
@@ -81,7 +81,7 @@ simulator.pressKey(KEY_ENTER) -- open data record
 simulator.sleep(2) -- wait 
 simulator.screenshot("/screenshots/model-rf-access-rx1-flight-data-record-1.png")
 simulator.sleep(2) -- wait 
-simulator.turnRotaryEncoder(3)
+simulator.turnRotaryEncoder(4)
 simulator.screenshot("/screenshots/model-rf-access-rx1-flight-data-record-2.png")
 simulator.sleep(2) -- wait 
 simulator.turnRotaryEncoder(5)
