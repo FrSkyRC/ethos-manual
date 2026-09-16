@@ -84,10 +84,10 @@ simulator.sleep(2) -- wait
 simulator.turnRotaryEncoder(4)
 simulator.screenshot("/screenshots/model-rf-access-rx1-flight-data-record-2.png")
 simulator.sleep(2) -- wait 
-simulator.turnRotaryEncoder(5)
+simulator.turnRotaryEncoder(2)
 simulator.screenshot("/screenshots/model-rf-access-rx1-flight-data-record-3.png")
 simulator.sleep(2) -- wait 
-simulator.turnRotaryEncoder(7)
+simulator.turnRotaryEncoder(2)
 simulator.screenshot("/screenshots/model-rf-access-rx1-flight-data-record-4.png")
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- exit
