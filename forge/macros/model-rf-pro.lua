@@ -22,6 +22,7 @@ simulator.turnRotaryEncoder(6) -- move cursor
 simulator.turnRotaryEncoder(-2) -- move cursor to bind
 simulator.screenshot("/screenshots/model-rf-pro-d16.png") -- in d16 mode
 simulator.pressKey(KEY_ENTER) -- enable bind
+simulator.turnRotaryEncoder(1) -- scroll to ch1-ch8
 simulator.screenshot("/screenshots/model-rf-pro-d16-bind-select-ch1-ch8.png")
 simulator.pressKey(KEY_ENTER) -- y
 simulator.screenshot("/screenshots/model-rf-pro-d16-bind-waiting.png")
