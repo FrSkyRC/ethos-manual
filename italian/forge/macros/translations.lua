@@ -30,8 +30,8 @@ TRANSLATIONS = {
     -- Basic Example
   FWexample = "EsempioFW",
     -- X20Pro
-  VFRlow = "V F R low",
+  VFRlow = "V F R Basso",
   -- in User Interface
-  TimerName = "BattTimer",
-  GearDoors = "Gear Doors",
+  TimerName = "TimerBatt",
+  GearDoors = "Port.Carrello",
 }
