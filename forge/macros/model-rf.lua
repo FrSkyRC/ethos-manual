@@ -287,5 +287,6 @@ simulator.turnRotaryEncoder(-6)
 simulator.turnRotaryEncoder(1) -- move cursor
 simulator.screenshot("/screenshots/model-rf-external-module-twin-lite-pro-tw-mode.png")
 simulator.turnRotaryEncoder(4) -- move cursor
+simulator.pressKey(KEY_ENTER) -- open menu
 simulator.screenshot("/screenshots/model-rf-external-module-twin-lite-pro-tw-mode-power.png")
 simulator.pressKey(KEY_RTN, 0.6)
