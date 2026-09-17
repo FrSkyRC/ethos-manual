@@ -288,7 +288,34 @@ simulator.turnRotaryEncoder(5)
 simulator.turnRotaryEncoder(-6)
 simulator.turnRotaryEncoder(1) -- move cursor
 simulator.screenshot("/screenshots/model-rf-external-module-twin-lite-pro-tw-mode.png")
-simulator.turnRotaryEncoder(4) -- move cursor
-simulator.pressKey(KEY_ENTER) -- open menu
-simulator.screenshot("/screenshots/model-rf-external-module-twin-lite-pro-tw-mode-power.png")
+--simulator.turnRotaryEncoder(4) -- move cursor
+--simulator.pressKey(KEY_ENTER) -- open menu
+--simulator.screenshot("/screenshots/model-rf-external-module-twin-lite-pro-tw-mode-power.png")
+-- now do elrs
+--simulator.pressKey(KEY_RTN)
+--simulator.turnRotaryEncoder(-4)
+simulator.pressKey(KEY_ENTER) -- open protocol menu
+simulator.turnRotaryEncoder(-1) -- scroll back to elrs
+simulator.pressKey(KEY_ENTER) -- y
+simulator.screenshot("/screenshots/model-rf-external-module-twin-lite-pro-elrs.png")
+simulator.turnRotaryEncoder(3) -- scroll to options
+simulator.screenshot("/screenshots/model-rf-external-module-twin-lite-pro-elrs-options-select.png")
+simulator.pressKey(KEY_ENTER) -- open options
+simulator.screenshot("/screenshots/model-rf-external-module-twin-lite-pro-elrs-options.png")
+simulator.turnRotaryEncoder(1) -- scroll to packet rate
+simulator.pressKey(KEY_ENTER) -- open
+simulator.screenshot("/screenshots/model-rf-external-module-twin-lite-pro-elrs-packet-rate.png")
+simulator.pressKey(KEY_RTN) -- exit
+simulator.turnRotaryEncoder(1) -- scroll to telem ratio
+simulator.pressKey(KEY_ENTER) -- open
+simulator.screenshot("/screenshots/model-rf-external-module-twin-lite-pro-elrs-telemetry-ratio.png")
+simulator.pressKey(KEY_RTN) -- exit
+simulator.turnRotaryEncoder(1) -- scroll to switch mode
+simulator.pressKey(KEY_ENTER) -- open
+simulator.screenshot("/screenshots/model-rf-external-module-twin-lite-pro-elrs-switch mode.png")
+simulator.pressKey(KEY_RTN) -- exit 
+simulator.turnRotaryEncoder(4) -- scroll to power
+simulator.pressKey(KEY_ENTER) -- open
+simulator.screenshot("/screenshots/model-rf-external-module-twin-lite-pro-elrs-power.png")
+simulator.pressKey(KEY_RTN) -- exit 
 simulator.pressKey(KEY_RTN, 0.6)
