@@ -301,6 +301,7 @@ simulator.screenshot("/screenshots/model-rf-external-module-twin-lite-pro-elrs.p
 simulator.turnRotaryEncoder(3) -- scroll to options
 simulator.screenshot("/screenshots/model-rf-external-module-twin-lite-pro-elrs-options-select.png")
 simulator.pressKey(KEY_ENTER) -- open options
+simulatorSleep(10) -- wait 
 simulator.screenshot("/screenshots/model-rf-external-module-twin-lite-pro-elrs-options.png")
 simulator.turnRotaryEncoder(1) -- scroll to packet rate
 simulator.pressKey(KEY_ENTER) -- open
