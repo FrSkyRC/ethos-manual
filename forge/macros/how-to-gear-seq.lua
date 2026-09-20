@@ -35,17 +35,18 @@ simulator.touch(76, 355) --a
 simulator.touch(311, 401) --c
 simulator.touch(356, 301) --t
 simulator.touch(157, 356) --s
+
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
 ]]--
-simulator.pressKey(KEY_PAGE)
-simulator.pressKey(KEY_PAGE)
-simulator.pressKey(KEY_PAGE)
-simulator.pressKey(KEY_PAGE)
-simulator.pressKey(KEY_PAGE)
-simulator.pressKey(KEY_PAGE)
-simulator.pressKey(KEY_PAGE)
-simulator.pressKey(KEY_PAGE)
-simulator.pressKey(KEY_PAGE)
-simulator.pressKey(KEY_PAGE)
 simulator.enterText(translate("Retracts"))
 simulator.pressKey(KEY_RTN) --exit
 simulator.screenshot("/screenshots/how-to-seq-gear-ch8.png")
@@ -66,6 +67,23 @@ simulator.pressKey(KEY_ENTER) -- open
 simulator.turnRotaryEncoder(1) -- scroll to edit
 simulator.pressKey(KEY_ENTER) -- y
 simulator.turnRotaryEncoder(1) -- scroll to name
+simulator.pressKey(KEY_ENTER) -- edit
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.enterText(translate("GearSequencer"))
+simulator.pressKey(KEY_RTN) --exit
 simulator.screenshot("/screenshots/how-to-seq-gear-name.png")
 simulator.turnRotaryEncoder(14) -- scroll to bottonm of page
 simulator.turnRotaryEncoder(-3) -- scroll back to op1 menu

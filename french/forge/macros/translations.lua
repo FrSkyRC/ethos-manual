@@ -36,4 +36,5 @@ TRANSLATIONS = {
     -- in How-to-gear-doors
   GearDoors = "Portes train",
   Retracts = "Retracts",
+  GearSequencer ="Gear Sequencer",
 }

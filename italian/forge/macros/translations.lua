@@ -36,4 +36,5 @@ TRANSLATIONS = {
   -- in How-to-gear-doors
   GearDoors = "Port.Carrello",
   Retracts = "Retracts",
+  GearSequencer ="Gear Sequencer",
 }
