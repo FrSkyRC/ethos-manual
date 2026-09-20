@@ -36,6 +36,16 @@ simulator.touch(311, 401) --c
 simulator.touch(356, 301) --t
 simulator.touch(157, 356) --s
 ]]--
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
 simulator.enterText(translate("Retracts"))
 simulator.touch(746, 449) --enter
 simulator.screenshot("/screenshots/how-to-seq-gear-ch8.png")
