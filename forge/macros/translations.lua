@@ -33,5 +33,7 @@ TRANSLATIONS = {
   VFRlow = "V F R low",
   -- in User Interface
   TimerName = "BattTimer",
+  -- in How-to-gear-doors
   GearDoors = "Gear Doors",
+  Retracts = "Retracts",
 }

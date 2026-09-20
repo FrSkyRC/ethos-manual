@@ -33,5 +33,7 @@ TRANSLATIONS = {
   VFRlow = "VFR Bajo",
   -- in User Interface
   TimerName = "Crono Batería",
+  -- in How-to-gear-doors
   GearDoors = "Compuertas tren",
+  Retracts = "Retracts",
 }

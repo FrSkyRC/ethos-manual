@@ -33,5 +33,7 @@ TRANSLATIONS = {
   VFRlow = "V F R Basso",
   -- in User Interface
   TimerName = "TimerBatt",
+  -- in How-to-gear-doors
   GearDoors = "Port.Carrello",
+  Retracts = "Retracts",
 }

@@ -17,7 +17,7 @@ simulator.pressKey(KEY_ENTER) -- edit
 simulator.turnRotaryEncoder(1) -- scroll to name
 simulator.pressKey(KEY_ENTER) -- edit
 simulator.enterText(translate("GearDoors"))
-simulator.pressKey(KEY_ENTER) -- edit
+simulator.pressKey(KEY_ENTER) -- enter
 simulator.screenshot("/screenshots/how-to-seq-gear-ch7.png")
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- exit
@@ -25,6 +25,7 @@ simulator.turnRotaryEncoder(1) -- scroll to ch 8
 simulator.pressKey(KEY_ENTER) -- edit
 simulator.turnRotaryEncoder(1) -- scroll to name
 simulator.pressKey(KEY_ENTER) -- edit
+--[[
 simulator.touch(280, 306) --R
 simulator.touch(70, 402) -- shift
 simulator.touch(209, 307) --e
@@ -34,6 +35,8 @@ simulator.touch(76, 355) --a
 simulator.touch(311, 401) --c
 simulator.touch(356, 301) --t
 simulator.touch(157, 356) --s
+]]--
+simulator.enterText(translate("Retracts"))
 simulator.touch(746, 449) --enter
 simulator.screenshot("/screenshots/how-to-seq-gear-ch8.png")
 simulator.pressKey(KEY_RTN) -- deselect
