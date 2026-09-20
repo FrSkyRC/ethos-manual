@@ -459,7 +459,6 @@ simulator.touch(737, 398)
 simulator.touch(737, 398)
 simulator.touch(737, 398)
 simulator.touch(737, 398)
-]]--
 simulator.touch(277, 302) --R
 simulator.touch(57, 403) --shift
 simulator.touch(196, 307) --e
@@ -469,6 +468,8 @@ simulator.touch(84, 351) --a
 simulator.touch(316, 405) --c
 simulator.touch(364, 306) --t
 simulator.touch(159, 356) --s
+]]--
+simulator.enterText(translate("Retracts"))
 simulator.touch(749, 447) --ENT
 simulator.pressKey(KEY_RTN) --end edit
 simulator.turnRotaryEncoder(3) -- scroll to source
