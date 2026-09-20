@@ -36,5 +36,5 @@ TRANSLATIONS = {
     -- in How-to-gear-doors
   GearDoors = "FW-Klappen",
   Retracts = "Einzieh-FW",
-  GearSequencer ="Gear Sequencer",
+  GearSequencer ="FW-Sequenzer",
 }
