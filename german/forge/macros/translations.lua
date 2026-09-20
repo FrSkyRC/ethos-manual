@@ -35,5 +35,5 @@ TRANSLATIONS = {
   TimerName = "Motorlaufzeit",
     -- in How-to-gear-doors
   GearDoors = "FW-Klappen",
-  Retracts = "Retracts",
+  Retracts = "Einzieh-FW",
 }
