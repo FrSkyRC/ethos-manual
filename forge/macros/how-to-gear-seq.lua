@@ -17,7 +17,7 @@ simulator.pressKey(KEY_ENTER) -- edit
 simulator.turnRotaryEncoder(1) -- scroll to name
 simulator.pressKey(KEY_ENTER) -- edit
 simulator.enterText(translate("GearDoors"))
-simulator.pressKey(KEY_ENTER) -- enter
+simulator.pressKey(KEY_RTN) --exit
 simulator.screenshot("/screenshots/how-to-seq-gear-ch7.png")
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- exit
@@ -36,8 +36,18 @@ simulator.touch(311, 401) --c
 simulator.touch(356, 301) --t
 simulator.touch(157, 356) --s
 ]]--
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
+simulator.pressKey(KEY_PAGE)
 simulator.enterText(translate("Retracts"))
-simulator.touch(746, 449) --enter
+simulator.pressKey(KEY_RTN) --exit
 simulator.screenshot("/screenshots/how-to-seq-gear-ch8.png")
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) --exit to channels
