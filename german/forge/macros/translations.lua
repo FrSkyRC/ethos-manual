@@ -38,5 +38,5 @@ TRANSLATIONS = {
   Retracts = "Einzieh-FW",
   GearSequencer = "FW-Sequenzer",
   -- in Model / Vars
-  Camber = "Camber",
+  Camber = "Wölbklappen",
 }
