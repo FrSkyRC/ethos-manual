@@ -35,8 +35,8 @@ TRANSLATIONS = {
   TimerName = "TimerBatt",
   -- in How-to-gear-doors
   GearDoors = "Port.Carrello",
-  Retracts = "Retracts",
-  GearSequencer = "Gear Sequencer",
+  Retracts = "Carrelli",
+  GearSequencer = "Sequencer Carrelli",
   -- in Model / Vars
   Camber = "Camber",
 }
