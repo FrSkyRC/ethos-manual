@@ -36,7 +36,7 @@ TRANSLATIONS = {
   -- in How-to-gear-doors
   GearDoors = "Gear Doors",
   Retracts = "Retracts",
-  GearSequencer ="Gear Sequencer",
+  GearSequencer = "Gear Sequencer",
   -- in Model / Vars
   Camber = "Camber",
 }
