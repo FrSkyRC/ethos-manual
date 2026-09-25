@@ -35,8 +35,8 @@ TRANSLATIONS = {
   TimerName = "Crono Batería",
   -- in How-to-gear-doors
   GearDoors = "Compuertas tren",
-  Retracts = "Retracts",
-  GearSequencer = "Gear Sequencer",
+  Retracts = "Retractil",
+  GearSequencer = "Secuenciador tren",
   -- in Model / Vars
-  Camber = "Camber",
+  Camber = "Curvatura",
 }
