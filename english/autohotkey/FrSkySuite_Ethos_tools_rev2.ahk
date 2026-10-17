@@ -258,8 +258,8 @@ try {
         SendEvent "{Enter}" ; back to Ethos
 
         MsgBox ("Script has completed.")
-        ;ProcessClose(appName)
-        ;ExitApp()
+        ProcessClose(appName)
+        ExitApp()
 
 
 } catch Error as err {

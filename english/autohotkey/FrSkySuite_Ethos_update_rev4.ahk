@@ -245,8 +245,8 @@ try {
         SendEvent "{Tab}" ; switch to left content page
         SendEvent "{Enter}" ; back to Ethos
         MsgBox ("Script has completed.")
-        ;ProcessClose(appName)
-        ;ExitApp()
+        ProcessClose(appName)
+        ExitApp()
 
 } catch Error as err {
     MsgBox("Failed to run the script sequence.`nError: " err.Message)
