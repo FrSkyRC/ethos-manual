@@ -177,12 +177,12 @@ try {
 
     ; --- Screenshot Devices / Ethos / manage ethos ---
         ; Define the path and name for screenshot
-        targetPath := ScreenshotsPath "\suite-devices-ethos-manage-ethos-fw-update_successful.png"        
+        targetPath := ScreenshotsPath "\suite-devices-ethos-manage-ethos-fw-update-successful.png"        
         ; Call the standalone save function, it handles its own error messages
         CaptureActiveWindow(targetPath)
 
         SendEvent "{Tab}" ; switch focus to 'Close' button
-        SendEvent "{Enter}" ; accept fw-update_successful
+        SendEvent "{Enter}" ; accept fw-update-successful
         Send "{Up 8}" ; step back to exit
         SendEvent "{Enter}" ; exit to devices / ethos home 
 
