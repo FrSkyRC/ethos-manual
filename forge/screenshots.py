@@ -136,7 +136,7 @@ def download(url, dest_path, force=False):
             return dest_path
 
     os.makedirs(os.path.dirname(dest_path), exist_ok=True)
-    print(f"Download {url}")
+    print(f"GET {url}")
     try:
         with urllib.request.urlopen(url) as response, open(dest_path, "wb") as dest:
             dest.write(response.read())
@@ -236,7 +236,6 @@ def setup_builddir(version, radio):
         shutil.copy(os.path.join(COMMON_FORGE_DIR, f"{ radio }.bin"), os.path.join(BUILD_DIR, "radio.bin"))
     else:
         print(f"Missing { radio }.bin!")
-        exit(-1)
 
     for name in BUILD_SOURCE_DIRS:
         if os.path.exists(os.path.join(COMMON_FORGE_DIR, name)):
