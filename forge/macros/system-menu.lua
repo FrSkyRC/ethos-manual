@@ -226,16 +226,16 @@ simulator.turnRotaryEncoder(1) -- scroll to select device
 simulator.screenshot("/screenshots/system-general-audio-bluetooth-device-selected.png")
 simulator.pressKey(KEY_ENTER) -- select
 simulator.screenshot("/screenshots/system-general-audio-bluetooth-connecting.png")
-simulator.sleep(5)
-simulator.screenshot("/screenshots/system-general-audio-bluetooth-connected.png")
+simulator.sleep(2.5)
+simulator.screenshot("/screenshots/system-general-audio-bluetooth-connected-ok.png")
 --simulator.pressKey(KEY_ENTER) -- tap ok -- remove due to change to toast
-simulator.sleep(1) -- wait
---simulator.screenshot("/screenshots/system-general-audio-bluetooth-connected-ok.png")
+simulator.sleep(2) -- wait
+simulator.screenshot("/screenshots/system-general-audio-bluetooth-connected.png")
 --simulator.turnRotaryEncoder(1) -- scroll to speaker mute
 --simulator.screenshot("/screenshots/system-general-audio-speaker-mute.png")
 --simulator.sleep(5) -- wait
--- show disconnect
 --simulator.turnRotaryEncoder(-1) -- scroll to back to device
+-- show disconnect
 simulator.pressKey(KEY_ENTER) -- open dialog
 simulator.turnRotaryEncoder(1) -- scroll to disconnect option
 simulator.screenshot("/screenshots/system-general-audio-bluetooth-disconnect-select.png")
@@ -257,7 +257,7 @@ simulator.screenshot("/screenshots/system-general-haptic-options.png")
 simulator.pressKey(KEY_RTN) -- close the haptic-options menu
 -- -- top toolbar
 simulator.turnRotaryEncoder(8) -- scroll to see all 'top toolbar'
-simulator.turnRotaryEncoder(-5) -- move cursor back
+simulator.turnRotaryEncoder(-6) -- move cursor back
 simulator.screenshot("/screenshots/system-general-topbar.png")
 -- -- misc
 simulator.turnRotaryEncoder(3) -- scroll to 'select model at power on'
