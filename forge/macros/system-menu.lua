@@ -230,12 +230,12 @@ simulator.sleep(5)
 simulator.screenshot("/screenshots/system-general-audio-bluetooth-connected.png")
 ;simulator.pressKey(KEY_ENTER) -- tap ok -- remove due to change to toast
 simulator.sleep(1) -- wait
-simulator.screenshot("/screenshots/system-general-audio-bluetooth-connected-ok.png")
-simulator.turnRotaryEncoder(1) -- scroll to speaker mute
-simulator.screenshot("/screenshots/system-general-audio-speaker-mute.png")
+;simulator.screenshot("/screenshots/system-general-audio-bluetooth-connected-ok.png")
+;simulator.turnRotaryEncoder(1) -- scroll to speaker mute
+;simulator.screenshot("/screenshots/system-general-audio-speaker-mute.png")
 --simulator.sleep(5) -- wait
 -- show disconnect
-simulator.turnRotaryEncoder(-1) -- scroll to back to device
+;simulator.turnRotaryEncoder(-1) -- scroll to back to device
 simulator.pressKey(KEY_ENTER) -- open dialog
 simulator.turnRotaryEncoder(1) -- scroll to disconnect option
 simulator.screenshot("/screenshots/system-general-audio-bluetooth-disconnect-select.png")
