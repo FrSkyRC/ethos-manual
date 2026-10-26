@@ -228,7 +228,7 @@ simulator.pressKey(KEY_ENTER) -- select
 simulator.screenshot("/screenshots/system-general-audio-bluetooth-connecting.png")
 simulator.sleep(5)
 simulator.screenshot("/screenshots/system-general-audio-bluetooth-connected.png")
-simulator.pressKey(KEY_ENTER) -- tap ok
+;simulator.pressKey(KEY_ENTER) -- tap ok -- remove due to change to toast
 simulator.sleep(1) -- wait
 simulator.screenshot("/screenshots/system-general-audio-bluetooth-connected-ok.png")
 simulator.turnRotaryEncoder(1) -- scroll to speaker mute
