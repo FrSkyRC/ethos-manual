@@ -35,6 +35,26 @@ try {
     ; --- Close alert if it exists ---
     ;SendEvent("{Tab}{Enter}")
     ;Sleep(300) ; Ensure alert closes
+
+    ; --- Resize window ---
+    targetTitle := "FrSky Suite 2.0.2"
+    if WinWait(targetTitle, , 10) {
+        WinRestore(targetTitle) ; Ensure not maximized
+        WinActivate(targetTitle) ; Bring to front
+        Sleep(100) ; Let activation settle
+
+        ; Use "unset" for X and Y so the window stays put, 
+        ; and changes ONLY Width (1800) and Height (1040)
+        WinMove(unset, unset, 1800, 1040, targetTitle)
+        
+        ; Give Windows 500ms to redraw the inner interface elements at the
+        ; new larger resolution before snapping the screenshot.
+        Sleep(500) 
+    } else {
+        MsgBox("Window '" targetTitle "' not found.")
+        return
+    }
+
 /*
     ; *** Enable the mock radio ***
         SendEvent "{Tab}" ; switch to left content page
@@ -136,11 +156,45 @@ try {
         ; Call the standalone save function, it handles its own error messages
         CaptureActiveWindow(targetPath)
 
+        ;Click 294,533 ; click add image button
+        Click 284,503 ; click receivers
+        Sleep(250) 
+        Click 310,769 ; click tw series
+        Sleep(250) 
+        Click 335,913 ; click tw sr12
+        Sleep(1000) 
+
+    ; --- Screenshot Product List page TW SR12 ---
+        ; Define the path and name for screenshot
+        targetPath := ScreenshotsPath "\suite-misc-product-list-twsr12.png"        
+        ; Call the standalone save function, it handles its own error messages
+        CaptureActiveWindow(targetPath)
+
+        Click 35,147 ; click ethos home
+        Sleep(250) 
+
+
+
+/*
+        Click 674,332 ; click tw sr12 download
+        Sleep(250) 
+        SendEvent "{Enter}" ; select default folder
+        Sleep(1000) 
+
+    ; --- Screenshot Product List page TW SR12 ---
+        ; Define the path and name for screenshot
+        targetPath := ScreenshotsPath "\suite-misc-product-list-twsr12-downloaded.png"        
+        ; Call the standalone save function, it handles its own error messages
+        CaptureActiveWindow(targetPath)
+
+        ;MsgBox("Check mouse click")
+*/
+
     ; *** do the DFU Flasher section ***
     ; ***
         ;SendEvent "{Down 10}" ; step to 'DFU Flasher' button
-        ;Send "{Down 10}" ; step to 'DFU Flasher' button
-        SendEvent "{Down}" ; step to 'DFU Flasher' button
+        Send "{Down 10}" ; step to 'DFU Flasher' button
+        ;SendEvent "{Down}" ; step to 'DFU Flasher' button
         Sleep(250) 
         SendEvent "{Enter}" ; open 'DFU Flasher'
         Sleep(1000) ; wait for website to load

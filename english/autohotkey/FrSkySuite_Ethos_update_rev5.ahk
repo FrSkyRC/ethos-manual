@@ -36,6 +36,25 @@ try {
     ;SendEvent("{Tab}{Enter}")
     ;Sleep(300) ; Ensure alert closes
 
+    ; --- Resize window ---
+    targetTitle := "FrSky Suite 2.0.2"
+    if WinWait(targetTitle, , 10) {
+        WinRestore(targetTitle) ; Ensure not maximized
+        WinActivate(targetTitle) ; Bring to front
+        Sleep(100) ; Let activation settle
+
+        ; Use "unset" for X and Y so the window stays put, 
+        ; and changes ONLY Width (1800) and Height (1040)
+        WinMove(unset, unset, 1800, 1040, targetTitle)
+        
+        ; Give Windows 500ms to redraw the inner interface elements at the
+        ; new larger resolution before snapping the screenshot.
+        Sleep(500) 
+    } else {
+        MsgBox("Window '" targetTitle "' not found.")
+        return
+    }
+
     ; *** Screenshot Devices / Ethos / home with no radio connected ***
         ; Define the path and name for screenshot
         targetPath := ScreenshotsPath "\suite-devices-ethos-home-no-radio.png"
