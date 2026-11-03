@@ -35,9 +35,9 @@ simulator.turnRotaryEncoder(1) -- scroll to Alice
 simulator.screenshot("/screenshots/model-glasses-base-config-engo.png")
 simulator.pressKey(KEY_ENTER) -- select alice
 simulator.sleep(1) -- wait
-simulator.screenshot("/screenshots/model-glasses-base-config-connected-ok.png")
-simulator.pressKey(KEY_ENTER) -- ack connected
-simulator.sleep(1) -- wait
+--simulator.screenshot("/screenshots/model-glasses-base-config-connected-ok.png")
+--simulator.pressKey(KEY_ENTER) -- ack connected
+--simulator.sleep(1) -- wait
 simulator.screenshot("/screenshots/model-glasses-base-config-connected.png")
 simulator.pressKey(KEY_ENTER) -- open
 simulator.turnRotaryEncoder(1) -- scroll to delete
