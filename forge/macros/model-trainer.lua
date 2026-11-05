@@ -108,6 +108,7 @@ simulator.sleep(1) -- wait
 --simulator.pressKey(KEY_ENTER) -- ack connected
 --simulator.sleep(1) -- wait
 simulator.screenshot("/screenshots/model-trainer-bt-master-connected.png")
+simulator.sleep(3) -- wait for toast to disappear
 simulator.pressKey(KEY_ENTER) -- open
 simulator.turnRotaryEncoder(1) -- scroll to delete
 simulator.screenshot("/screenshots/model-trainer-bt-master-disconnect-select.png")
