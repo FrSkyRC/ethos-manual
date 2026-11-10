@@ -1,18 +1,9 @@
 #!/bin/python3
 
-"""Generates screenshots by driving Ethos' WASM simulator.
-
-Downloads on demand:
-- the run_wasm.js tool from the FrSkyRC/ethos-tools repository (simulation/
-  directory), which loads the WASM module in Node.js and can run a Lua
-  macro in it;
-- the WASM simulator for a given radio, from the assets of a
-  FrSkyRC/ETHOS-Feedback-Community release (the "<radio>-WebSimulator.zip"
-  archive, not to be confused with "<radio>.zip" which only contains
-  firmware.bin).
+"""Checks differences between FrsKY Suite new screenshots and those in the assets folder
 
 Example:
-    python forge/screenshots.py --release 26.1.0-RC7
+    python forge/suitediffs.py
 """
 
 import argparse
@@ -29,11 +20,11 @@ import zipfile
 from PIL import Image, ImageChops
 
 GITHUB_REPOSITORY = "FrSkyRC/ETHOS-Feedback-Community"
-PRODUCTS_LIST_URL = "https://www.frsky-rc.com/wp-content/uploads/Downloads/EthosSuite/Products/frsky_products_list.json"
+#PRODUCTS_LIST_URL = "https://www.frsky-rc.com/wp-content/uploads/Downloads/EthosSuite/Products/frsky_products_list.json"
 LOCALIZED_FORGE_DIR = os.path.join(os.getcwd(), "forge")
 COMMON_FORGE_DIR = os.path.dirname(os.path.abspath(__file__))
 CACHE_DIR = os.path.join(COMMON_FORGE_DIR, ".cache")
-SIMULATION_DIR = os.path.join(CACHE_DIR, "simulation")
+#SIMULATION_DIR = os.path.join(CACHE_DIR, "simulation")
 BUILD_DIR = os.path.join(LOCALIZED_FORGE_DIR, "build")
 SCREENSHOTS_DIR = os.path.join(LOCALIZED_FORGE_DIR, "..", "screenshots")
 if not os.path.exists(SCREENSHOTS_DIR):
@@ -41,12 +32,12 @@ if not os.path.exists(SCREENSHOTS_DIR):
 FAIL_DIR = os.path.join(BUILD_DIR, "fail")
 
 # Source sub-directories copied as-is from forge/ into build/.
-BUILD_SOURCE_DIRS = ("models", "bitmaps", "scripts", "documents", "firmware", "logs", "macros")
-AUDIO_LANGUAGES = ("de", "en", "es", "fr", "it")
+#BUILD_SOURCE_DIRS = ("models", "bitmaps", "scripts", "documents", "firmware", "logs", "macros")
+#AUDIO_LANGUAGES = ("de", "en", "es", "fr", "it")
 
-RUN_WASM_URL = "https://raw.githubusercontent.com/FrSkyRC/ethos-tools/main/simulation/run_wasm.js"
-RELEASE_ASSET_URL = "https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases/download/{release}/{asset}"
-
+#RUN_WASM_URL = "https://raw.githubusercontent.com/FrSkyRC/ethos-tools/main/simulation/run_wasm.js"
+#RELEASE_ASSET_URL = "https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases/download/{release}/{asset}"
+"""
 X20S_MACROS = [
     "model-edit.lua",
     "model-fm.lua",
@@ -124,11 +115,11 @@ ALL_MACROS = {
     "XERS_FCC": XERS_MACROS,    
     "X20S_FLEX": X20SFLEX_MACROS,
 }
-
+"""
 
 ONE_DAY_SECONDS = 24 * 60 * 60
 
-
+"""
 def download(url, dest_path, force=False):
     if not force and os.path.exists(dest_path):
         age = time.time() - os.path.getmtime(dest_path)
@@ -265,7 +256,7 @@ def run_macros(version, radio, macros, force=False):
                 "--root-directory", BUILD_DIR,
                 "--macro", f'USER:/macros/{macro}',
             ], check=True, cwd=BUILD_DIR)
-
+"""
 
 def save_diff_image(ref_path, new_path, diff_path):
     """Saves a copy of the new screenshot with every pixel that differs from
