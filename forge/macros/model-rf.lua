@@ -31,8 +31,8 @@ simulatorSleep(8) -- wait
 simulator.screenshot("/screenshots/model-rf-access-register-rx-connected.png")
 simulator.pressKey(KEY_ENTER)
 simulatorSleep(4) -- wait 
-simulator.screenshot("/screenshots/model-rf-access-register-registration-ok.png")
-simulator.pressKey(KEY_ENTER) -- accept
+--simulator.screenshot("/screenshots/model-rf-access-register-registration-ok.png")
+--simulator.pressKey(KEY_ENTER) -- accept
 simulator.turnRotaryEncoder(1) -- scroll to rx1
 simulator.screenshot("/screenshots/model-rf-access-rx1.png")
 simulator.pressKey(KEY_ENTER) -- commence bind
@@ -45,9 +45,9 @@ simulator.screenshot("/screenshots/model-rf-access-rx1-select-rx2.png")
 simulator.turnRotaryEncoder(-1) -- scroll back to rx1
 simulator.pressKey(KEY_ENTER) -- select rx
 simulatorSleep(4) -- wait 
-simulator.screenshot("/screenshots/model-rf-access-rx1-bind-ok.png")
+--simulator.screenshot("/screenshots/model-rf-access-rx1-bind-ok.png")
 -- simulator.screenshot("./screenshot15.png")
-simulator.pressKey(KEY_ENTER) -- accept binding
+--simulator.pressKey(KEY_ENTER) -- accept binding
 simulator.screenshot("/screenshots/model-rf-access-rx1-bound.png")
 --
 -- now do rx2
@@ -65,10 +65,10 @@ simulatorSleep(4) -- wait
 simulator.turnRotaryEncoder(2) -- scroll to r9mini
 simulator.pressKey(KEY_ENTER) -- commence bind
 simulatorSleep(4) -- wait 
-simulator.screenshot("/screenshots/model-rf-access-rx2-bind-ok.png")
-simulatorSleep(4) -- wait 
+--simulator.screenshot("/screenshots/model-rf-access-rx2-bind-ok.png")
+--simulatorSleep(4) -- wait 
 -- simulator.screenshot("./screenshot15.png")
-simulator.pressKey(KEY_ENTER) -- accept binding
+--simulator.pressKey(KEY_ENTER) -- accept binding
 simulator.screenshot("/screenshots/model-rf-access-rx2-bound.png")
 --
 -- now do rx1 options etc
