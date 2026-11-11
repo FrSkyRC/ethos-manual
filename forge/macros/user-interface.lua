@@ -209,7 +209,7 @@ simulator.pressKey(KEY_ENTER) --y select var
 --
 simulator.pressKey(KEY_ENTER, 0.6)
 --simulator.turnRotaryEncoder(4) -- scroll to options
-simulator.turnRotaryEncoder(2) -- scroll to options
+simulator.turnRotaryEncoder(3) -- scroll to options
 simulator.pressKey(KEY_ENTER) -- Var source options
 simulator.screenshot("/screenshots/source-var-options.png")
 simulator.pressKey(KEY_RTN) -- close the options menu
