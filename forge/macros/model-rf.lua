@@ -33,19 +33,21 @@ simulator.pressKey(KEY_ENTER)
 simulatorSleep(4) -- wait 
 simulator.screenshot("/screenshots/model-rf-access-register-registration-ok.png")
 --simulator.pressKey(KEY_ENTER) -- accept
+simulatorSleep(4) -- wait for toast to disappear
 simulator.turnRotaryEncoder(1) -- scroll to rx1
 simulator.screenshot("/screenshots/model-rf-access-rx1.png")
-simulator.pressKey(KEY_ENTER) -- commence bind
-simulator.screenshot("/screenshots/model-rf-access-rx1-bind-waiting-for-rx.png")
-simulatorSleep(5) -- wait 
+simulator.pressKey(KEY_ENTER) -- select rx1
+simulatorSleep(4) -- wait 
+--simulator.screenshot("/screenshots/model-rf-access-rx1-bind-waiting-for-rx.png")
 simulator.turnRotaryEncoder(1) -- scroll to SR10
 simulator.screenshot("/screenshots/model-rf-access-rx1-select-rx.png")
 simulator.turnRotaryEncoder(1) -- scroll to r9m
 simulator.screenshot("/screenshots/model-rf-access-rx1-select-rx2.png")
 simulator.turnRotaryEncoder(-1) -- scroll back to rx1
 simulator.pressKey(KEY_ENTER) -- select rx
-simulatorSleep(4) -- wait 
+simulatorSleep(1) -- wait 
 simulator.screenshot("/screenshots/model-rf-access-rx1-bind-ok.png")
+simulatorSleep(4) -- wait for toast to disappear
 -- simulator.screenshot("./screenshot15.png")
 --simulator.pressKey(KEY_ENTER) -- accept binding
 simulator.screenshot("/screenshots/model-rf-access-rx1-bound.png")
@@ -64,9 +66,9 @@ simulator.pressKey(KEY_ENTER) -- commence bind
 simulatorSleep(4) -- wait 
 simulator.turnRotaryEncoder(2) -- scroll to r9mini
 simulator.pressKey(KEY_ENTER) -- commence bind
-simulatorSleep(4) -- wait 
+simulatorSleep(1) -- wait 
 simulator.screenshot("/screenshots/model-rf-access-rx2-bind-ok.png")
---simulatorSleep(4) -- wait 
+simulatorSleep(4) -- wait for toast to disappear
 -- simulator.screenshot("./screenshot15.png")
 --simulator.pressKey(KEY_ENTER) -- accept binding
 simulator.screenshot("/screenshots/model-rf-access-rx2-bound.png")
@@ -216,7 +218,7 @@ simulator.screenshot("/screenshots/model-rf-td-register.png")
 --simulatorSleep(6) -- wait 
 --simulator.pressKey(KEY_ENTER)
 --simulatorSleep(4) -- wait 
-simulator.screenshot("/screenshots/model-rf-td-register-registration-ok.png")
+--simulator.screenshot("/screenshots/model-rf-td-register-registration-ok.png")
 --simulator.pressKey(KEY_ENTER) -- accept
 simulator.turnRotaryEncoder(5) -- scroll to rx1
 simulator.turnRotaryEncoder(-4) -- scroll to rx1
