@@ -42,10 +42,10 @@ simulator.screenshot("/screenshots/model-telemetry-discover-new-sensors-searchin
 simulator.sleep(25) -- wait 
 simulator.screenshot("/screenshots/model-telemetry-discover-new-sensors-result.png")
 -- after discovery focus is still on [+] menu
-simulator.pressKey(KEY_ENTER) -- open
-simulator.turnRotaryEncoder(2) -- scroll to stop discovery option
-simulator.screenshot("/screenshots/model-telemetry-stop-discovery-select.png")
-simulator.pressKey(KEY_ENTER) -- stop discovery
+--simulator.pressKey(KEY_ENTER) -- open
+--simulator.turnRotaryEncoder(2) -- scroll to stop discovery option
+--simulator.screenshot("/screenshots/model-telemetry-stop-discovery-select.png")
+--simulator.pressKey(KEY_ENTER) -- stop discovery
 --
 -- after stop discovery focus is still on [+] menu
 --
