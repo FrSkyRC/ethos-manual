@@ -65,7 +65,7 @@ simulator.pressKey(KEY_RTN) -- back to telem list
 --
 -- vfr sensor
 --
-simulator.turnRotaryEncoder(5) -- scroll to vfr
+simulator.turnRotaryEncoder(2) -- scroll to vfr
 simulator.screenshot("/screenshots/model-telemetry-edit-vfr-sensor-select.png")
 simulator.pressKey(KEY_ENTER) -- open edit options
 simulator.turnRotaryEncoder(1) -- scroll to edit
@@ -76,9 +76,14 @@ simulator.screenshot("/screenshots/model-telemetry-edit-vfr-sensor-2.png")
 simulator.pressKey(KEY_RTN) -- deselect
 simulator.pressKey(KEY_RTN) -- back to telem list
 --
+-- rx vfr sensor
+--
+simulator.turnRotaryEncoder(1) -- scroll to rx vfr
+simulator.screenshot("/screenshots/model-telemetry-edit-rx-vfr-sensor-select.png")
+--
 --adc2 sensor
 --
-simulator.turnRotaryEncoder(14) -- scroll to adc2
+simulator.turnRotaryEncoder(6) -- scroll to adc2
 simulator.pressKey(KEY_ENTER) -- open edit options
 simulator.turnRotaryEncoder(1) -- scroll to edit
 simulator.screenshot("/screenshots/model-telemetry-edit-adc2-sensor-select.png")
@@ -92,7 +97,7 @@ simulator.pressKey(KEY_RTN) -- back to telem list
 -- 
 -- vspeed sensor
 --
-simulator.turnRotaryEncoder(-8) -- scroll to vspeed
+simulator.turnRotaryEncoder(-1) -- scroll to vspeed
 simulator.pressKey(KEY_ENTER) -- open edit options
 simulator.turnRotaryEncoder(1) -- scroll to edit
 simulator.pressKey(KEY_ENTER) -- edit
@@ -193,7 +198,7 @@ simulator.turnRotaryEncoder(1) -- scroll to current sensor
 simulator.pressKey(KEY_ENTER)
 simulator.turnRotaryEncoder(1) -- scroll to voltage source
 simulator.pressKey(KEY_ENTER)
-simulator.turnRotaryEncoder(3) -- scroll to vfas sensor
+simulator.turnRotaryEncoder(2) -- scroll to vfas sensor
 simulator.pressKey(KEY_ENTER)
 simulator.screenshot("/screenshots/model-telemetry-calculated-sensor-power-2.png")
 simulator.turnRotaryEncoder(-9) -- scroll back to function
@@ -257,7 +262,7 @@ simulator.pressKey(KEY_ENTER) -- confirm
 simulator.pressKey(KEY_ENTER) -- edit source
 simulator.turnRotaryEncoder(11) -- scroll to source category telem
 simulator.pressKey(KEY_ENTER) -- y
-simulator.turnRotaryEncoder(21) -- scroll to vfas
+simulator.turnRotaryEncoder(6) -- scroll to vfas
 simulator.pressKey(KEY_ENTER) -- y
 --
 simulator.turnRotaryEncoder(1) -- scroll to add action
@@ -271,7 +276,7 @@ simulator.turnRotaryEncoder(1) -- scroll to source
 simulator.pressKey(KEY_ENTER) -- edit source
 simulator.turnRotaryEncoder(11) -- scroll to source category telem
 simulator.pressKey(KEY_ENTER) -- y
-simulator.turnRotaryEncoder(13) -- scroll to current
+simulator.turnRotaryEncoder(5) -- scroll to current
 simulator.pressKey(KEY_ENTER) --
 --
 simulator.turnRotaryEncoder(1) -- scroll to add
