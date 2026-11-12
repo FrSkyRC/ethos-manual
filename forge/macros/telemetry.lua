@@ -39,7 +39,7 @@ simulator.screenshot("/screenshots/model-telemetry-discover-new-sensors-select.p
 simulator.pressKey(KEY_ENTER) -- enable
 simulator.sleep(10) -- wait to get going
 simulator.screenshot("/screenshots/model-telemetry-discover-new-sensors-searching.png")
-simulator.sleep(25) -- wait 
+simulator.sleep(30) -- wait 
 simulator.screenshot("/screenshots/model-telemetry-discover-new-sensors-result.png")
 -- after discovery focus is still on [+] menu
 --simulator.pressKey(KEY_ENTER) -- open
