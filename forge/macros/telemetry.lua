@@ -28,10 +28,18 @@ simulator.turnRotaryEncoder(1) -- scroll to first sensor
 simulator.turnRotaryEncoder(-1) -- scroll to [+] menu
 simulator.pressKey(KEY_ENTER) -- open
 simulator.screenshot("/screenshots/model-telemetry-tab-options.png")
-simulator.turnRotaryEncoder(2) -- scroll to discover option
- 
+simulator.turnRotaryEncoder(5) -- scroll to delete option
+simulator.pressKey(KEY_ENTER) -- select
+simulator.pressKey(KEY_ENTER) -- confirm delete
+simulator.sleep(1) -- wait 
+
+simulator.pressKey(KEY_ENTER) -- open menu
+simulator.turnRotaryEncoder(2) -- scroll to discover option 
 simulator.screenshot("/screenshots/model-telemetry-discover-new-sensors-select.png")
 simulator.pressKey(KEY_ENTER) -- enable
+simulator.sleep(10) -- wait to get going
+simulator.screenshot("/screenshots/model-telemetry-discover-new-sensors-searching.png")
+simulator.sleep(25) -- wait 
 simulator.screenshot("/screenshots/model-telemetry-discover-new-sensors-result.png")
 -- after discovery focus is still on [+] menu
 simulator.pressKey(KEY_ENTER) -- open
