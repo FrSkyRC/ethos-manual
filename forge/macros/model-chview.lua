@@ -13,7 +13,8 @@ simulator.loadModel("blaster.bin")
 
 simulator.setAnalog(throttleStickIndex, -70)
 --simulator.setAnalog(ANALOG_LAST_SLIDER, (-0.0 * 100 / 1024))
-simulator.setAnalog(ANALOG_LAST_SLIDER, -1024)
+--simulator.setAnalog(ANALOG_LAST_SLIDER, -1024)
+simulator.setAnalog(ANALOG_LAST_SLIDER, -100)
 simulator.setAnalog(elevatorStickIndex, -10) -- thr
 simulator.sleep(1) -- wait for adc values
 simulator.pressKey(KEY_ENTER) -- ack alert
