@@ -55,7 +55,6 @@ try {
         return
     }
 
-/*
     ; *** Enable the mock radio ***
         SendEvent "{Tab}" ; switch to left content page
         Sleep(300)
@@ -67,7 +66,7 @@ try {
         SendEvent "{Tab}" ; switch to right content page
         Sleep(250) 
         ;SendEvent "{Down 6}" ; step to mock radio settings
-        Send "{Down 6}" ; step to mock radio settings
+        Send "{Down 6}" ; step to mock radio settings        
         SendEvent "{Enter}" ; open mock radio settings
         SendEvent "{Down}" ; step to mock radio enable
         SendEvent "{Enter}" ; enable mock radio
@@ -80,12 +79,13 @@ try {
         ; --- The script continues here if "Yes" is clicked ---
         SendEvent "{Tab}" ; switch to left nav panel
         Send "{Up 14}" ; step back to Ethos tab
-        Sleep(250) 
+        Sleep(250)
         SendEvent "{Enter}" ; open Ethos tab
-*/
+        Sleep(1000)         
+
     ; *** do the ECOS section ***
     ; ***
-        SendEvent "{Tab}" ; switch to left content page
+        ;SendEvent "{Tab}" ; switch to left content page
         ;SendEvent "{Down 6}" ; step to 'ECOS' button
         Send "{Down 6}" ; step to 'ECOS' button
         Sleep(250) 
@@ -137,10 +137,19 @@ try {
         ; Call the standalone save function, it handles its own error messages
         CaptureActiveWindow(targetPath)
 
-        SendEvent "{Down}" ; step around to exit
+        ; now enable the y-axis for txbatt
+        Click 533, 180 ; click on y axis tool
+        Sleep(1000) ; wait 
+        
+    ; --- Screenshot Tools / Log viewer page with log and y-axis ---
+        ; Define the path and name for screenshot
+        targetPath := ScreenshotsPath "\suite-misc-log viewer-log-y-axis.png"        
+        ; Call the standalone save function, it handles its own error messages
+        CaptureActiveWindow(targetPath)
+
+        SendEvent "{Down 8}" ; step around to exit
         SendEvent "{Enter}" ; exit to log viewer main 
         SendEvent "{Tab}" ; switch to left content page and home
-
 
     ; *** do the Product List section ***
     ; ***
@@ -157,12 +166,23 @@ try {
         CaptureActiveWindow(targetPath)
 
         ;Click 294,533 ; click add image button
-        Click 284,503 ; click receivers
+        ;Click 284,503 ; click receivers
+        ;Sleep(250) 
+        ;Click 310,769 ; click tw series
+        ;Sleep(250) 
+        ;Click 335,913 ; click tw sr12
+        ;Sleep(1000) 
+        SendEvent "{Tab}" ; switch to right content page and home
+        Send "{Down 9}" ; step to 'Receivers' button
         Sleep(250) 
-        Click 310,769 ; click tw series
+        SendEvent "{Enter}" ; open 'Receivers List'
+        Send "{Down 7}" ; step to 'TW Receivers' button
         Sleep(250) 
-        Click 335,913 ; click tw sr12
-        Sleep(1000) 
+        SendEvent "{Enter}" ; open 'TW Receivers List'
+        Send "{Down 13}" ; step to 'TW SR12' button
+        Sleep(250) 
+        SendEvent "{Enter}" ; open 'TW SR12'
+        Sleep(1000) ; wait for website to load
 
     ; --- Screenshot Product List page TW SR12 ---
         ; Define the path and name for screenshot
@@ -170,8 +190,9 @@ try {
         ; Call the standalone save function, it handles its own error messages
         CaptureActiveWindow(targetPath)
 
-        Click 35,147 ; click ethos home
-        Sleep(250) 
+        ;Click 35,147 ; click ethos home
+        ;Sleep(250) 
+        SendEvent "{Tab}" ; switch to left content page and home
 
 
 

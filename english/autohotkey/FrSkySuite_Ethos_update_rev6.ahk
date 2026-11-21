@@ -112,11 +112,15 @@ try {
         Send "{Down 10}" ; step to firmware drop-down
         Sleep(250)
         SendEvent "{Enter}" ; open firmware drop-down
-        SendEvent "{Down 2}" ; step to 'Write firmware and system files"
+        ;SendEvent "{Down 2}" ; step to 'Write firmware and system files"
+        SendEvent "{Down 1}" ; step to 'Write all components"
+        Sleep(250)
+        SendEvent "{Up 1}" ; step back to 'Write outdated components"
         Sleep(1000) ; wait 
 
     ; --- Screenshot Devices / Ethos / manage ethos ---
         ; Define the path and name for screenshot
+        ;targetPath := ScreenshotsPath "\suite-devices-ethos-manage-ethos-update-fw-select.png"        
         targetPath := ScreenshotsPath "\suite-devices-ethos-manage-ethos-update-fw-select.png"        
         ; Call the standalone save function, it handles its own error messages
         CaptureActiveWindow(targetPath)
@@ -176,7 +180,10 @@ try {
         ;MsgBox("step to firmware drop-down")    
         SendEvent "{Enter}" ; open firmware drop-down
         ;MsgBox("open firmware drop-down")
-        SendEvent "{Down 2}" ; step to 'Write firmware and system files"
+        ;SendEvent "{Down 2}" ; step to 'Write firmware and system files"
+        SendEvent "{Down 1}" ; step to 'Write all components"
+        Sleep(250)
+        SendEvent "{Up 1}" ; step back to 'Write outdated components"
         ;MsgBox("step to fw and system files")
 
         SendEvent "{Enter}" ; yes to update fw and system files
@@ -189,7 +196,7 @@ try {
     
         SendEvent "{Tab 2}" ; switch focus to 'continue updating' button
         SendEvent "{Enter}" ; enable 'continue updating' button
-        Sleep(16000) ; wait for simulated firmware flash process
+        Sleep(30000) ; wait for simulated firmware flash process
 
 
     ; --- Screenshot Devices / Ethos / manage ethos ---
