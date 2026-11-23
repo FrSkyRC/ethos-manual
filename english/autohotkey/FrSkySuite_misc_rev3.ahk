@@ -139,8 +139,10 @@ try {
 
         ; now enable the y-axis for txbatt
         Click 533, 180 ; click on y axis tool
+        Sleep(250) 
+        Click 1243,477 ; click in main chart to show all curves normally
         Sleep(1000) ; wait 
-        
+
     ; --- Screenshot Tools / Log viewer page with log and y-axis ---
         ; Define the path and name for screenshot
         targetPath := ScreenshotsPath "\suite-misc-log viewer-log-y-axis.png"        
